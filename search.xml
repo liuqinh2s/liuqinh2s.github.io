@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title><![CDATA[Leetcode 804 Unique Morse Code]]></title>
-    <url>%2Fblog%2F2018%2F08%2F07%2Fleetcode-804-Unique-Morse-Code-Words%2F</url>
+    <title><![CDATA[Leetcode 804 Unique Morse Code Words]]></title>
+    <url>%2Fblog%2F2018%2F08%2F08%2FLeetcode-804-Unique-Morse-Code-Words%2F</url>
     <content type="text"><![CDATA[804. Unique Morse Code WordsInternational Morse Code defines a standard encoding where each letter is mapped to a series of dots and dashes, as follows: &quot;a&quot; maps to &quot;.-&quot;, &quot;b&quot;maps to &quot;-...&quot;, &quot;c&quot; maps to &quot;-.-.&quot;, and so on. For convenience, the full table for the 26 letters of the English alphabet is given below: 1[&quot;.-&quot;,&quot;-...&quot;,&quot;-.-.&quot;,&quot;-..&quot;,&quot;.&quot;,&quot;..-.&quot;,&quot;--.&quot;,&quot;....&quot;,&quot;..&quot;,&quot;.---&quot;,&quot;-.-&quot;,&quot;.-..&quot;,&quot;--&quot;,&quot;-.&quot;,&quot;---&quot;,&quot;.--.&quot;,&quot;--.-&quot;,&quot;.-.&quot;,&quot;...&quot;,&quot;-&quot;,&quot;..-&quot;,&quot;...-&quot;,&quot;.--&quot;,&quot;-..-&quot;,&quot;-.--&quot;,&quot;--..&quot;] Now, given a list of words, each word can be written as a concatenation of the Morse code of each letter. For example, “cab” can be written as “-.-.-….-“, (which is the concatenation “-.-.” + “-…” + “.-“). We’ll call such a concatenation, the transformation of a word. Return the number of different transformations among all words we have. 1234567891011Example:Input: words = [&quot;gin&quot;, &quot;zen&quot;, &quot;gig&quot;, &quot;msg&quot;]Output: 2Explanation: The transformation of each word is:&quot;gin&quot; -&gt; &quot;--...-.&quot;&quot;zen&quot; -&gt; &quot;--...-.&quot;&quot;gig&quot; -&gt; &quot;--...--.&quot;&quot;msg&quot; -&gt; &quot;--...--.&quot;There are 2 different transformations, &quot;--...-.&quot; and &quot;--...--.&quot;. Note: The length of words will be at most 100. Each words[i] will have length in range [1, 12]. words[i] will only consist of lowercase letters. Java Code1234567891011121314class Solution&#123; public int uniqueMorseRepresentations(String[] words)&#123; String[] Morse=&#123;".-","-...","-.-.","-..",".","..-.","--.","....","..",".---","-.-",".-..","--","-.","---",".--.","--.-",".-.","...","-","..-","...-",".--","-..-","-.--","--.."&#125;; Set&lt;String&gt; set = new HashSet(); for(String word : words)&#123; StringBuilder code = new StringBuilder(); for(char c:word.toCharArray())&#123; code.append(Morse[c-'a']); &#125; set.add(code.toString()); &#125; return set.size(); &#125;&#125; 这里用到的数据结构是HashSet，Set用来存放无序的、不重复的数据。]]></content>
       <categories>
         <category>ACM</category>
@@ -123,20 +123,20 @@
       </categories>
   </entry>
   <entry>
-    <title><![CDATA[mathjax常用公式记录]]></title>
-    <url>%2Fblog%2F2018%2F04%2F30%2Fmathjax%E5%B8%B8%E7%94%A8%E5%85%AC%E5%BC%8F%E8%AE%B0%E5%BD%95%2F</url>
-    <content type="text"><![CDATA[角度记法 度数：$60^\circ$，$60^\circ$ 度数分：$60^\prime$，$60^\prime$ 弧度：$\frac{\pi}{2}$，$\frac{\pi}{2}$ 角度记法：$\angle A$，$\angle A$]]></content>
-      <categories>
-        <category>LaTex</category>
-      </categories>
-  </entry>
-  <entry>
     <title><![CDATA[Leetcode Algorithm 274. H-Index]]></title>
     <url>%2Fblog%2F2018%2F04%2F30%2FLeetcode-Algorithm-274.H-Index%2F</url>
     <content type="text"><![CDATA[Given an array of citations (each citation is a non-negative integer) of a researcher, write a function to compute the researcher’s h-index. According to the definition of h-index on Wikipedia: “A scientist has index h if h of his/her N papers have at least h citations each, and the other N − h papers have no more than h citations each.” For example, given citations = [3, 0, 6, 1, 5], which means the researcher has 5 papers in total and each of them had received 3, 0, 6, 1, 5 citations respectively. Since the researcher has 3 papers with at least 3 citations each and the remaining two with no more than 3 citations each, his h-index is 3. Note: If there are several possible values for h, the maximum one is taken as the h-index. Credits:Special thanks to @jianchao.li.fighter for adding this problem and creating all test cases. 看了维基百科的解说之后，我发现这题还是挺简单的，思路就是排序，如果用C++解这题，我就直接用std::sort了。 C++代码如下： 1234567891011121314151617181920class Solution &#123;public: int hIndex(vector&lt;int&gt;&amp; citations) &#123; if(citations.size()&lt;=0)&#123; return 0; &#125; std::sort(citations.begin(), citations.end(), compare); int result = citations[0]; for(int i=0;i&lt;citations.size();i++)&#123; if(i&lt;citations[i])&#123; result = i+1; &#125; &#125; return result; &#125; static bool compare(int i, int j)&#123; return i&gt;j; &#125;&#125;;]]></content>
       <categories>
         <category>ACM</category>
         <category>Leetcode</category>
+      </categories>
+  </entry>
+  <entry>
+    <title><![CDATA[mathjax常用公式记录]]></title>
+    <url>%2Fblog%2F2018%2F04%2F30%2Fmathjax%E5%B8%B8%E7%94%A8%E5%85%AC%E5%BC%8F%E8%AE%B0%E5%BD%95%2F</url>
+    <content type="text"><![CDATA[角度记法 度数：$60^\circ$，$60^\circ$ 度数分：$60^\prime$，$60^\prime$ 弧度：$\frac{\pi}{2}$，$\frac{\pi}{2}$ 角度记法：$\angle A$，$\angle A$]]></content>
+      <categories>
+        <category>LaTex</category>
       </categories>
   </entry>
   <entry>
