@@ -63,13 +63,6 @@
     </url>
 
     <url>
-        <loc>http://liuqinh2s.github.io/blog/categories/ACM/Leetcode/</loc>
-        <lastmod>2018-04-30T07:41:17.558Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>http://liuqinh2s.github.io/blog/categories/Java/</loc>
         <lastmod>2018-05-01T09:02:28.929Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -197,14 +190,14 @@
 
     <url>
         <loc>http://liuqinh2s.github.io/blog/categories/ACM/</loc>
-        <lastmod>2018-08-08T00:01:16.680Z</lastmod>
+        <lastmod>2018-08-08T01:58:19.627Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
-        <loc>http://liuqinh2s.github.io/blog/categories/ACM/leetcode/</loc>
-        <lastmod>2018-08-08T00:01:16.680Z</lastmod>
+        <loc>http://liuqinh2s.github.io/blog/categories/ACM/Leetcode/</loc>
+        <lastmod>2018-08-08T01:58:19.627Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
