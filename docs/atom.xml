@@ -1,0 +1,533 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>liuqinh2s&#39; blog</title>
+  
+  
+  <link href="/blog/atom.xml" rel="self"/>
+  
+  <link href="http://liuqinh2s.github.io/blog/"/>
+  <updated>2018-06-10T13:50:23.150Z</updated>
+  <id>http://liuqinh2s.github.io/blog/</id>
+  
+  <author>
+    <name>liuqinh2s</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>《代码整洁之道》读书笔记--第2章:有意义的命名</title>
+    <link href="http://liuqinh2s.github.io/blog/2018/06/10/%E3%80%8A%E4%BB%A3%E7%A0%81%E6%95%B4%E6%B4%81%E4%B9%8B%E9%81%93%E3%80%8B%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0-%E7%AC%AC2%E7%AB%A0-%E6%9C%89%E6%84%8F%E4%B9%89%E7%9A%84%E5%91%BD%E5%90%8D/"/>
+    <id>http://liuqinh2s.github.io/blog/2018/06/10/《代码整洁之道》读书笔记-第2章-有意义的命名/</id>
+    <published>2018-06-10T10:19:48.000Z</published>
+    <updated>2018-06-10T13:50:23.150Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;我们写代码的时候需要不停的命名，项目、类、函数、变量 等等都要命名。而命名关乎程序的可读性，而程序的可读性又至关重要（代码是写给人看的）。&lt;/p&gt;
+&lt;h2 id=&quot;名副其实&quot;&gt;&lt;a href=&quot;#名副其实&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="读书笔记" scheme="http://liuqinh2s.github.io/blog/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
+    
+      <category term="《代码整洁之道》" scheme="http://liuqinh2s.github.io/blog/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E3%80%8A%E4%BB%A3%E7%A0%81%E6%95%B4%E6%B4%81%E4%B9%8B%E9%81%93%E3%80%8B/"/>
+    
+    
+      <category term="代码规范" scheme="http://liuqinh2s.github.io/blog/tags/%E4%BB%A3%E7%A0%81%E8%A7%84%E8%8C%83/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>SQL必知必会</title>
+    <link href="http://liuqinh2s.github.io/blog/2018/06/03/SQL%E5%BF%85%E7%9F%A5%E5%BF%85%E4%BC%9A/"/>
+    <id>http://liuqinh2s.github.io/blog/2018/06/03/SQL必知必会/</id>
+    <published>2018-06-02T16:00:00.000Z</published>
+    <updated>2018-06-18T08:12:29.007Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;学数据库预备条件&quot;&gt;&lt;a href=&quot;#学数据库预备条件&quot; class=&quot;headerlink&quot; title=&quot;学数据库预备条件&quot;&gt;&lt;/a&gt;学数据库预备条件&lt;/h2&gt;&lt;p&gt;首先你得
+        
+      
+    
+    </summary>
+    
+      <category term="SQL" scheme="http://liuqinh2s.github.io/blog/categories/SQL/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>哲学思考</title>
+    <link href="http://liuqinh2s.github.io/blog/2018/06/03/%E5%93%B2%E5%AD%A6%E6%80%9D%E8%80%83/"/>
+    <id>http://liuqinh2s.github.io/blog/2018/06/03/哲学思考/</id>
+    <published>2018-06-02T16:00:00.000Z</published>
+    <updated>2018-06-03T04:48:44.520Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;ol&gt;
+&lt;li&gt;&lt;p&gt;量变和质变，可怕的唯一真理，连物理规律都难逃其魔爪，牛顿的经典力学不过是，量子力学的质变，相对论则是对牛顿力学的更宏大尺度上的补充。细胞只有简单的生理活动，但由细胞组成的生物，却发展出更加复杂、系统的生理活动，最后达到人这种具有智慧的水平，能够认识抽象。&lt;
+        
+      
+    
+    </summary>
+    
+      <category term="哲学" scheme="http://liuqinh2s.github.io/blog/categories/%E5%93%B2%E5%AD%A6/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>APUE读书笔记 — File I/O</title>
+    <link href="http://liuqinh2s.github.io/blog/2018/05/28/APUE%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0%E2%80%94File-IO/"/>
+    <id>http://liuqinh2s.github.io/blog/2018/05/28/APUE读书笔记—File-IO/</id>
+    <published>2018-05-27T16:00:00.000Z</published>
+    <updated>2018-06-03T03:19:44.410Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;p&gt;这章将的是文件IO，其中有几个非常重要的概念：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;File
+        
+      
+    
+    </summary>
+    
+      <category term="Unix" scheme="http://liuqinh2s.github.io/blog/categories/Unix/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>APUE读书笔记--Unix System Overview</title>
+    <link href="http://liuqinh2s.github.io/blog/2018/05/22/APUE%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0--Unix-System-Overview/"/>
+    <id>http://liuqinh2s.github.io/blog/2018/05/22/APUE读书笔记--Unix-System-Overview/</id>
+    <published>2018-05-21T16:00:00.000Z</published>
+    <updated>2018-05-25T09:15:47.231Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;1-1-Introduction&quot;&gt;&lt;a href=&quot;#1-1-Introduction&quot; class=&quot;headerlink&quot; title=&quot;1.1    Introduction&quot;&gt;&lt;/a&gt;1.1    Introduction&lt;/h2&gt;&lt;p&gt;All
+        
+      
+    
+    </summary>
+    
+      <category term="Unix" scheme="http://liuqinh2s.github.io/blog/categories/Unix/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>投奔vim系列之--NerdTree插件的使用</title>
+    <link href="http://liuqinh2s.github.io/blog/2018/05/14/%E6%8A%95%E5%A5%94vim%E7%B3%BB%E5%88%97%E4%B9%8B--NerdTree%E6%8F%92%E4%BB%B6%E7%9A%84%E4%BD%BF%E7%94%A8/"/>
+    <id>http://liuqinh2s.github.io/blog/2018/05/14/投奔vim系列之--NerdTree插件的使用/</id>
+    <published>2018-05-13T16:00:00.000Z</published>
+    <updated>2018-05-17T08:23:07.278Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;NERDTree的使用&quot;&gt;&lt;a href=&quot;#NERDTree的使用&quot; class=&quot;headerlink&quot; title=&quot;NERDTree的使用&quot;&gt;&lt;/a&gt;NERDTree的使用&lt;/h2&gt;&lt;h3 id=&quot;切换工作台和目录&quot;&gt;&lt;a
+        
+      
+    
+    </summary>
+    
+      <category term="vim" scheme="http://liuqinh2s.github.io/blog/categories/vim/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Linux Shell 配色</title>
+    <link href="http://liuqinh2s.github.io/blog/2018/05/08/Linux-Shell-%E9%85%8D%E8%89%B2/"/>
+    <id>http://liuqinh2s.github.io/blog/2018/05/08/Linux-Shell-配色/</id>
+    <published>2018-05-07T16:00:00.000Z</published>
+    <updated>2018-05-08T08:33:55.427Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;早就想自己给bash配个色，但是一直没空学习这方面的知识，今天抽个空，搞了一点点。&lt;/p&gt;
+&lt;h2 id=&quot;切换shell&quot;&gt;&lt;a href=&quot;#切换shell&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="Linux" scheme="http://liuqinh2s.github.io/blog/categories/Linux/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>对区块链以及未来的一些思考</title>
+    <link href="http://liuqinh2s.github.io/blog/2018/05/07/%E5%AF%B9%E5%8C%BA%E5%9D%97%E9%93%BE%E4%BB%A5%E5%8F%8A%E6%9C%AA%E6%9D%A5%E7%9A%84%E4%B8%80%E4%BA%9B%E6%80%9D%E8%80%83/"/>
+    <id>http://liuqinh2s.github.io/blog/2018/05/07/对区块链以及未来的一些思考/</id>
+    <published>2018-05-06T16:00:00.000Z</published>
+    <updated>2018-05-07T09:42:58.093Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;有个用户痛点，我来描述一下：当你更改了手机号，it’s a disaster!
+        
+      
+    
+    </summary>
+    
+      <category term="区块链" scheme="http://liuqinh2s.github.io/blog/categories/%E5%8C%BA%E5%9D%97%E9%93%BE/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>用ipfs发布博客</title>
+    <link href="http://liuqinh2s.github.io/blog/2018/05/04/%E7%94%A8ipfs%E5%8F%91%E5%B8%83%E5%8D%9A%E5%AE%A2/"/>
+    <id>http://liuqinh2s.github.io/blog/2018/05/04/用ipfs发布博客/</id>
+    <published>2018-05-03T16:00:00.000Z</published>
+    <updated>2018-05-07T04:28:13.734Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;ipfs是一个p2p的网络&lt;/p&gt;
+&lt;h2 id=&quot;常用ipfs命令&quot;&gt;&lt;a href=&quot;#常用ipfs命令&quot; class=&quot;headerlink&quot; title=&quot;常用ipfs命令&quot;&gt;&lt;/a&gt;常用ipfs命令&lt;/h2&gt;&lt;figure class=&quot;highlight
+        
+      
+    
+    </summary>
+    
+      <category term="区块链" scheme="http://liuqinh2s.github.io/blog/categories/%E5%8C%BA%E5%9D%97%E9%93%BE/"/>
+    
+      <category term="ipfs" scheme="http://liuqinh2s.github.io/blog/categories/%E5%8C%BA%E5%9D%97%E9%93%BE/ipfs/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Android通讯录深入研究</title>
+    <link href="http://liuqinh2s.github.io/blog/2018/05/03/Android%E9%80%9A%E8%AE%AF%E5%BD%95%E6%B7%B1%E5%85%A5%E7%A0%94%E7%A9%B6/"/>
+    <id>http://liuqinh2s.github.io/blog/2018/05/03/Android通讯录深入研究/</id>
+    <published>2018-05-02T16:00:00.000Z</published>
+    <updated>2018-06-10T01:05:53.024Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;The &lt;code&gt;DISPLAY_NAME&lt;/code&gt; can be fetched either from Contacts &lt;code&gt;database/ContactsContract.Data&amp;#39; OR
+        
+      
+    
+    </summary>
+    
+      <category term="Android" scheme="http://liuqinh2s.github.io/blog/categories/Android/"/>
+    
+      <category term="通讯录" scheme="http://liuqinh2s.github.io/blog/categories/Android/%E9%80%9A%E8%AE%AF%E5%BD%95/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Volley库StringRequest编码问题</title>
+    <link href="http://liuqinh2s.github.io/blog/2018/05/03/Volley%E5%BA%93StringRequest%E7%BC%96%E7%A0%81%E9%97%AE%E9%A2%98/"/>
+    <id>http://liuqinh2s.github.io/blog/2018/05/03/Volley库StringRequest编码问题/</id>
+    <published>2018-05-02T16:00:00.000Z</published>
+    <updated>2018-05-03T12:48:43.238Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;最近在做的一个工作是：从一个URL地址读取一系列手机联系人资料，保持到手机通讯录里面。&lt;/p&gt;
+&lt;p&gt;项目使用了Volley库，FastJson库，遇到的一个bug是编码错误，FastJson在进行从String到bean的解析的时候，编码不正确导致的出错，这个时候，先检查
+        
+      
+    
+    </summary>
+    
+      <category term="Android" scheme="http://liuqinh2s.github.io/blog/categories/Android/"/>
+    
+      <category term="Volley库" scheme="http://liuqinh2s.github.io/blog/categories/Android/Volley%E5%BA%93/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Java Servlet 学习笔记</title>
+    <link href="http://liuqinh2s.github.io/blog/2018/05/01/Java-Servlet-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    <id>http://liuqinh2s.github.io/blog/2018/05/01/Java-Servlet-学习笔记/</id>
+    <published>2018-04-30T16:00:00.000Z</published>
+    <updated>2018-05-01T09:02:28.929Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;blockquote&gt;
+&lt;p&gt;The difference between servlets and JSP is that servlets typically embed HTML inside Java code, while JSPs embed Java code
+        
+      
+    
+    </summary>
+    
+      <category term="Java" scheme="http://liuqinh2s.github.io/blog/categories/Java/"/>
+    
+      <category term="Java web" scheme="http://liuqinh2s.github.io/blog/categories/Java/Java-web/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Leetcode Algorithm 274. H-Index</title>
+    <link href="http://liuqinh2s.github.io/blog/2018/04/30/Leetcode-Algorithm-274.H-Index/"/>
+    <id>http://liuqinh2s.github.io/blog/2018/04/30/Leetcode-Algorithm-274.H-Index/</id>
+    <published>2018-04-29T16:00:00.000Z</published>
+    <updated>2018-04-30T07:41:17.558Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;Given an array of citations (each citation is a non-negative integer) of a researcher, write a function to compute the researcher’s
+        
+      
+    
+    </summary>
+    
+      <category term="ACM" scheme="http://liuqinh2s.github.io/blog/categories/ACM/"/>
+    
+      <category term="Leetcode" scheme="http://liuqinh2s.github.io/blog/categories/ACM/Leetcode/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>mathjax常用公式记录</title>
+    <link href="http://liuqinh2s.github.io/blog/2018/04/30/mathjax%E5%B8%B8%E7%94%A8%E5%85%AC%E5%BC%8F%E8%AE%B0%E5%BD%95/"/>
+    <id>http://liuqinh2s.github.io/blog/2018/04/30/mathjax常用公式记录/</id>
+    <published>2018-04-29T16:00:00.000Z</published>
+    <updated>2018-04-30T06:57:18.698Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;角度记法&quot;&gt;&lt;a href=&quot;#角度记法&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="LaTex" scheme="http://liuqinh2s.github.io/blog/categories/LaTex/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>椭圆规</title>
+    <link href="http://liuqinh2s.github.io/blog/2018/04/30/%E6%A4%AD%E5%9C%86%E8%A7%84/"/>
+    <id>http://liuqinh2s.github.io/blog/2018/04/30/椭圆规/</id>
+    <published>2018-04-29T16:00:00.000Z</published>
+    <updated>2018-04-30T06:51:08.635Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;利用简单定义的椭圆规&quot;&gt;&lt;a href=&quot;#利用简单定义的椭圆规&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="数学" scheme="http://liuqinh2s.github.io/blog/categories/%E6%95%B0%E5%AD%A6/"/>
+    
+      <category term="解析几何" scheme="http://liuqinh2s.github.io/blog/categories/%E6%95%B0%E5%AD%A6/%E8%A7%A3%E6%9E%90%E5%87%A0%E4%BD%95/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>UML图</title>
+    <link href="http://liuqinh2s.github.io/blog/2018/04/28/UML%E5%9B%BE/"/>
+    <id>http://liuqinh2s.github.io/blog/2018/04/28/UML图/</id>
+    <published>2018-04-27T16:00:00.000Z</published>
+    <updated>2018-08-07T11:59:06.704Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;从一个示例开始看懂UML图&quot;&gt;&lt;a href=&quot;#从一个示例开始看懂UML图&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="编程范式" scheme="http://liuqinh2s.github.io/blog/categories/%E7%BC%96%E7%A8%8B%E8%8C%83%E5%BC%8F/"/>
+    
+      <category term="面向对象编程" scheme="http://liuqinh2s.github.io/blog/categories/%E7%BC%96%E7%A8%8B%E8%8C%83%E5%BC%8F/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>数学基础公式推导</title>
+    <link href="http://liuqinh2s.github.io/blog/2018/04/25/%E6%95%B0%E5%AD%A6%E5%9F%BA%E7%A1%80%E5%85%AC%E5%BC%8F%E6%8E%A8%E5%AF%BC/"/>
+    <id>http://liuqinh2s.github.io/blog/2018/04/25/数学基础公式推导/</id>
+    <published>2018-04-24T16:00:00.000Z</published>
+    <updated>2018-04-27T04:00:26.760Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;今天看到下面这个公式，突然想我好像不会推导啊：&lt;/p&gt;
+&lt;p&gt;$\sin(\beta-\alpha) = \sin\beta\cos\alpha - \cos\beta\sin\alpha$&lt;/p&gt;
+&lt;p&gt;遂想如何推导，在youtube上找了一个视频：&lt;a
+        
+      
+    
+    </summary>
+    
+      <category term="数学" scheme="http://liuqinh2s.github.io/blog/categories/%E6%95%B0%E5%AD%A6/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Hexo+Markdown+MathJax搭建个人博客</title>
+    <link href="http://liuqinh2s.github.io/blog/2018/04/25/Hexo+Markdown+MathJax%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/"/>
+    <id>http://liuqinh2s.github.io/blog/2018/04/25/Hexo+Markdown+MathJax搭建个人博客/</id>
+    <published>2018-04-24T16:00:00.000Z</published>
+    <updated>2018-04-25T04:52:20.655Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;为什么搭建个人博客&quot;&gt;&lt;a href=&quot;#为什么搭建个人博客&quot; class=&quot;headerlink&quot; title=&quot;为什么搭建个人博客&quot;&gt;&lt;/a&gt;为什么搭建个人博客&lt;/h2&gt;&lt;p&gt;其实有想过用简书写博客，但简书不支持
+        
+      
+    
+    </summary>
+    
+      <category term="projects" scheme="http://liuqinh2s.github.io/blog/categories/projects/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Java OutputStream flush</title>
+    <link href="http://liuqinh2s.github.io/blog/2018/02/27/Java-OutputStream-flush/"/>
+    <id>http://liuqinh2s.github.io/blog/2018/02/27/Java-OutputStream-flush/</id>
+    <published>2018-02-26T16:00:00.000Z</published>
+    <updated>2018-04-24T01:10:11.280Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;FileOutPutStream继承OutputStream，并不提供flush()方法的重写，所以无论内容多少，write都会将二进制流直接传递给底层操作系统的I/O，flush无效果。而Buffered系列的输入输出流函数单从Buffered这个单词就可以看出他们是使用
+        
+      
+    
+    </summary>
+    
+      <category term="Java" scheme="http://liuqinh2s.github.io/blog/categories/Java/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>新概念英语四 lesson 03 Matterhorn Man</title>
+    <link href="http://liuqinh2s.github.io/blog/2018/02/25/%E6%96%B0%E6%A6%82%E5%BF%B5%E8%8B%B1%E8%AF%AD%E5%9B%9B-lesson-03-Matterhorn-Man/"/>
+    <id>http://liuqinh2s.github.io/blog/2018/02/25/新概念英语四-lesson-03-Matterhorn-Man/</id>
+    <published>2018-02-24T16:00:00.000Z</published>
+    <updated>2018-04-23T14:10:45.534Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;生词：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;climber （这个单词要注意发音，b 是不发音的）&lt;/li&gt;
+&lt;li&gt;alpinist 登山运动员&lt;/li&gt;
+&lt;li&gt;route 路&lt;/li&gt;
+&lt;li&gt;summit 最高，顶点&lt;/li&gt;
+&lt;li&gt;sought seek 的过去式,
+        
+      
+    
+    </summary>
+    
+      <category term="新概念英语四" scheme="http://liuqinh2s.github.io/blog/categories/%E6%96%B0%E6%A6%82%E5%BF%B5%E8%8B%B1%E8%AF%AD%E5%9B%9B/"/>
+    
+    
+  </entry>
+  
+</feed>
