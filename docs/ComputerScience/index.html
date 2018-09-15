@@ -1,0 +1,1193 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="en">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/blog/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/blog/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/blog/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/blog/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="https://wx4.sinaimg.cn/mw690/006zFO3ggy1flfabofnt8j300w00wdfl.jpg?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="https://wx2.sinaimg.cn/mw690/006zFO3ggy1flfadbgxwej300g00g0rz.jpg?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/blog/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+  <link rel="alternate" href="/blog/atom.xml" title="liuqinh2s' blog" type="application/atom+xml" />
+
+
+
+
+
+
+<meta name="description" content="信息科学是一门有趣的科学，我们的宇宙充满着各种各样的信息，而且信息量及其庞大，我觉得信息是宇宙、意识等复杂事物的本质（另一个本质是：量变与质变），虚拟世界与真实世界的唯一区别便是：  信息量的大小（目前来看完全不在一个数量级） 寄生关系（真实世界的真实这个属性并非绝对，而是相对，虚拟世界与所寄生的母世界相比，母世界的真实属性就更高）  好了哲思就写到这里，让我们回到脚踏实地的现在，信息科学发展到现">
+<meta property="og:type" content="website">
+<meta property="og:title" content="信息科学">
+<meta property="og:url" content="http://liuqinh2s.github.io/blog/ComputerScience/index.html">
+<meta property="og:site_name" content="liuqinh2s&#39; blog">
+<meta property="og:description" content="信息科学是一门有趣的科学，我们的宇宙充满着各种各样的信息，而且信息量及其庞大，我觉得信息是宇宙、意识等复杂事物的本质（另一个本质是：量变与质变），虚拟世界与真实世界的唯一区别便是：  信息量的大小（目前来看完全不在一个数量级） 寄生关系（真实世界的真实这个属性并非绝对，而是相对，虚拟世界与所寄生的母世界相比，母世界的真实属性就更高）  好了哲思就写到这里，让我们回到脚踏实地的现在，信息科学发展到现">
+<meta property="og:locale" content="en">
+<meta property="og:image" content="https://i.loli.net/2018/03/25/5ab6fab31181c.jpg">
+<meta property="og:image" content="https://i.loli.net/2018/03/25/5ab6fdd8398c7.png">
+<meta property="og:updated_time" content="2018-06-03T04:24:27.919Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="信息科学">
+<meta name="twitter:description" content="信息科学是一门有趣的科学，我们的宇宙充满着各种各样的信息，而且信息量及其庞大，我觉得信息是宇宙、意识等复杂事物的本质（另一个本质是：量变与质变），虚拟世界与真实世界的唯一区别便是：  信息量的大小（目前来看完全不在一个数量级） 寄生关系（真实世界的真实这个属性并非绝对，而是相对，虚拟世界与所寄生的母世界相比，母世界的真实属性就更高）  好了哲思就写到这里，让我们回到脚踏实地的现在，信息科学发展到现">
+<meta name="twitter:image" content="https://i.loli.net/2018/03/25/5ab6fab31181c.jpg">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/blog/',
+    scheme: 'Gemini',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://liuqinh2s.github.io/blog/ComputerScience/"/>
+
+
+
+
+
+  <title>信息科学 | liuqinh2s' blog</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="en">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/blog/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">liuqinh2s' blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/blog/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/blog/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            About
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-computer-science">
+          <a href="/blog/ComputerScience/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-bug"></i> <br />
+            
+            Computer Science
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-life-experience">
+          <a href="/blog/LifeExperience/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-bank"></i> <br />
+            
+            Life Experience
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-math">
+          <a href="/blog/Math/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-coffee"></i> <br />
+            
+            Math
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            Search
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off"
+             placeholder="Searching..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+    
+    
+    <div class="post-block page">
+      <header class="post-header">
+
+	<h1 class="post-title" itemprop="name headline">信息科学</h1>
+
+
+
+</header>
+
+      
+      
+      
+      <div class="post-body">
+        
+        
+          <p>信息科学是一门有趣的科学，我们的宇宙充满着各种各样的信息，而且信息量及其庞大，我觉得信息是宇宙、意识等复杂事物的本质（另一个本质是：量变与质变），虚拟世界与真实世界的唯一区别便是：</p>
+<ol>
+<li>信息量的大小（目前来看完全不在一个数量级）</li>
+<li>寄生关系（真实世界的真实这个属性并非绝对，而是相对，虚拟世界与所寄生的母世界相比，母世界的真实属性就更高）</li>
+</ol>
+<p>好了哲思就写到这里，让我们回到脚踏实地的现在，信息科学发展到现在，最突出的部分便是计算机的发展。一个码农和计算机的纪元正火热开启，条条大路通 Computer Science。现如今编程自然不用纸带+打孔，裸机跑程序。我们的工作建立在前人的工作之上。让我们看看我们现在要学习的是什么：</p>
+<h2 id="基础理论课"><a href="#基础理论课" class="headerlink" title="基础理论课"></a>基础理论课</h2><ol>
+<li>数据结构和算法</li>
+<li>操作系统</li>
+<li>计算机组成原理与汇编</li>
+<li>计算机网络</li>
+</ol>
+<p>我列出这四门课，是因为你国内本科结束之后，考研初试要考的就是这四门课。复试的话会涉及到更深入的一点东西，比如：编译原理、软件工程、人工智能、多媒体技术、信号处理。</p>
+<p>这里推荐一本书：</p>
+<p>中文叫：<a href="https://book.douban.com/subject/5333562/" target="_blank" rel="noopener">深入理解计算机系统</a><br>英文叫：<a href="https://book.douban.com/subject/26344642/" target="_blank" rel="noopener">Computer Systems: A Programmer’s Perspective</a>，简称 CSAPP。</p>
+<blockquote>
+<ol>
+<li>有能力的话，尽量看英文版</li>
+<li>看书要做笔记</li>
+<li>习题不要略过，一定要做</li>
+</ol>
+</blockquote>
+<p>这是 CMU（Carnegie Mellon University，卡内基梅隆大学）的计算机入门教材，这本教材对应的课程是 CS 213 ，是很多课程的先修课。</p>
+<p><img src="https://i.loli.net/2018/03/25/5ab6fab31181c.jpg" alt="先修课"></p>
+<p><a href="https://www.zhihu.com/question/20402534/answer/124950081" target="_blank" rel="noopener">如何阅读《深入理解计算机系统》这本书？</a></p>
+<p>看完知乎答主的回答，我们需要注意的是这门课也有一个先修课，是一门编程语言 C0（C 语言的子集），对应的课程是 CS 122，或者你学 Python 也行。CMU一般是给大二学生开这个课，学过C以后就可以上了。</p>
+<p>这本书之所以成为圣经般的入门书，就是因为：</p>
+<ol>
+<li>突出原理</li>
+<li>知识点涵盖非常全</li>
+<li>讲的非常棒（可以说计算机组成原理部分比专门讲这个的书讲的更好，操作系统部分比专门讲操作系统的书讲得好，这完全就是可怕的存在）</li>
+</ol>
+<h2 id="理论之外"><a href="#理论之外" class="headerlink" title="理论之外"></a>理论之外</h2><p>然而仅仅是学习上面的理论是完全不够的。</p>
+<p>我这里要讲的是 ACM，<code>ACM国际大学生程序设计竞赛（ACM International Collegiate Programming Contest, ICPC）</code>的简称，由 ACM（Association for Computing Machinery，（美国）计算机协会）主办。</p>
+<p><img src="https://i.loli.net/2018/03/25/5ab6fdd8398c7.png" alt="ACM logo"></p>
+<p>为什么 ACM 如此重要（以及 ACM 的大奖对本科生找工作的分量这么重），因为编程活动所要依赖的只有一个：抽象和逻辑能力，这就是为什么其实编程可以从小学开始（没有过高的知识门槛）。计算机科学的诸多课程，就是由先辈们靠着抽象和逻辑搭建起来的知识大厦，这些知识和经验是叶，而你抽象和逻辑能力（或者说依靠计算机解决问题的能力）是根。练习 ACM 就跟武术世界里面的李小龙每天练拳一样，是基本功。</p>
+<p>练习 ACM 一般用 Online Judge 系统，这里我推荐几个：</p>
+<ul>
+<li><a href="http://poj.org/" target="_blank" rel="noopener">北京大学的在线裁判系统，简称POJ</a></li>
+<li><a href="http://acm.hdu.edu.cn/" target="_blank" rel="noopener">杭州电子科技大学的在线裁判系统</a></li>
+<li><a href="https://leetcode.com/" target="_blank" rel="noopener">leetcode</a></li>
+</ul>
+<h2 id="ACM之外"><a href="#ACM之外" class="headerlink" title="ACM之外"></a>ACM之外</h2><p>ACM自然跟真正的应用程序的编写是不一样的，当你真正步入开发的时候，你会发现还有非常多的东西要学，一个看似简单的APP，其架构却是非常复杂的，代码量也远超你的想象。那么如何上手学习呢，你也不可能一步登天，一上来就开发一款应用啊。答案自然是：<strong>一个功能，一个功能的实现，慢慢积累，有点像搭积木</strong>。你不要觉得仅实现一个功能会拿不出手，初学者就是这样积累起来的，所以你大可以把你实现的那些小东西都整理好（这也就是我下面会写到的，做好编程札记），<strong>文档和代码都好好保存，因为编程最忌讳的就是重复工作，从零做起</strong>。</p>
+<h2 id="脱离-Windows-的襁褓"><a href="#脱离-Windows-的襁褓" class="headerlink" title="脱离 Windows 的襁褓"></a>脱离 Windows 的襁褓</h2><p>很多人喜欢争论 Linux 和 Windows，就像各种语言之间的争论一样，无休无止。但同样很多人喜欢说，Windows 和 Linux 无所谓，真正的开发者都是什么好用用什么，主要看需求。</p>
+<p>而这里我要说的，跟这些都不一样，对于初学者我的建议一定是：<strong>脱离 Windows 的襁褓</strong>。否则你将很难对计算机的 CLI（Command Line Interface）产生直观性的体验。Linux 让你更贴近事物的原理，让你看的更加清楚，让你脱离不动脑子傻瓜式的鼠标点点点。而之所以那些高手喜欢说 Windows 很好用，没必要用 Linux，是因为他们都是脱离了低级层次，已经到达更高层次的人，他们当然无所谓，Windows 早已蒙蔽不了他们的双眼。这是一种看山还是山，看水还是水的境界。而你不经过历练，是不会到达这个境界的。</p>
+<p>不要一见到命令行就恐惧，正如你不应该一见到英文网站和资料就恐惧一样，这种回避绝对是有害的。</p>
+<p>对于初学者，Linux比mac os x好，因为mac也可以点点点。</p>
+<blockquote>
+<p>当然如果你已经脱离了低级层次，那么我绝对更推荐你用windows，其次是mac，最后是linux。别问我为什么，原因简单到我不想说：支持力度哪家强？（这里说的支持力度包括操作系统层面和应用开发层面）</p>
+</blockquote>
+<h2 id="编程心得"><a href="#编程心得" class="headerlink" title="编程心得"></a>编程心得</h2><p>其实我早就想写一个系列，就叫：<strong>编程心得</strong>，这个里面放上很多编程中的细节问题，就跟网上的笔试面试经典一样，其实这些东西虽然吸收的快，但有些东西还是必须经过亲力亲为才能真正体会到，但我并不反对直接看这种东西，否则我就不必花心思去写了。直接看前人总结的经验非常有好处，这就像武侠世界里的传输内力，人类之所以发展起了文明，就是因为知识的传递非常迅速而有效，我们根本不需要做任何事之前都需要自己做过一遍才知道怎么做，我们往往都借助他人的经验。</p>
+<p>说到这个话题，我觉得有必要强调一下，<strong>编程札记</strong> 这个东西，一直以来我都十分建议，不管是工作还是学习，都要做好记录，特别是重要的点，一定要记下来，比如实现一个东西的时候遇到的困难，以及如何解决的整个过程，有哪些关键点，等等。写这个东西是为了便于回顾，以及衡量自己的工作量。</p>
+<blockquote>
+<p>学而时习之，不亦说乎</p>
+</blockquote>
+<p>目前免费的云笔记首推：有道云笔记，虽然用的没有为知笔记爽，对于穷学生来说还是比较友好的。另外人家后台是网易，而且跟网易云音乐、有道词典、网易公开课、网易云课堂、网易严选等等产品构成了一个网易的高口碑生态链，所以你一定程度上不用担心它关门倒闭。</p>
+<h2 id="LaTex-和-Markdown"><a href="#LaTex-和-Markdown" class="headerlink" title="LaTex 和 Markdown"></a>LaTex 和 Markdown</h2><p>说到文档和笔记的编写，就得推这两个东西了：LaTex是学术界写论文的标准（现在微软的word软件似乎也有一席之地了，毕竟LaTex比word难用多了，特别是对非计算机类的学者来说），排版效果非常棒，我感觉，出版社出版，维基百科词条，也都用得上LaTex。Markdown是github上文档的标准，也是网络上各种野生博主的写作标准，最最关键的点是，mathjax这个组织，让Markdown的便捷和LaTex的强大结合起来了，你可以在Markdown中插入用LaTex书写的数学公式。<strong>这也是我不用简书的原因，简书虽然有Markdown，却不支持mathjax，公式贴图可以啊，但你总不至于写个上下标都贴图吧。</strong></p>
+<p>关于LaTax的手册，我还是希望大家自己去找，在这个时代一定要把自己的搜索能力练起来，特别是寻找 <strong>最权威的资料，最一手的信息</strong>，因为这样你才有可能在比特币刚诞生不久的时候就了解到它，当然很多人会说其实他们早就知道这个东西，只不过一直不想去深入了解。</p>
+<p>当然我也不会吝啬于分享，我先讲讲我如何找这份资料：首先使用google搜索引擎，其次使用英文搜索，输入 <code>LaTex math symbols</code>，我得到的第一条就很不错：<a href="https://web.ift.uib.no/Teori/KURS/WRK/TeX/symALL.html" target="_blank" rel="noopener">LaTex Math Symbols</a>，第二条也不错：<a href="https://reu.dimacs.rutgers.edu/Symbols.pdf" target="_blank" rel="noopener">LATEX Mathematical Symbols</a></p>
+<p>至于要不要把它们加进你的书签，我的建议是这类东西没必要加，你可以仔细思考一下这个搜索有什么特别的，对，他加了 <code>math</code> 这个关键信息，如果你只是单纯的搜索 <code>LaTex</code> 那么你将得到大量无关的信息，但其实你平常用的时候经常就只是用到数学方面的东西。</p>
+<h2 id="访问全球网"><a href="#访问全球网" class="headerlink" title="访问全球网"></a>访问全球网</h2><p>众所周知，我们处于一个国域网当中，如果你想看看外面的世界，必须要学会翻墙。互联网时代，这是必备技能。目前我用的是 <strong>搬瓦工+shadowsocks</strong>。</p>
+<h2 id="Java"><a href="#Java" class="headerlink" title="Java"></a>Java</h2><ul>
+<li><a href="../2018/02/27/Java-OutputStream-flush">Java OutputStream flush</a></li>
+</ul>
+<h2 id="C"><a href="#C" class="headerlink" title="C++"></a>C++</h2><ul>
+<li><a href="../2017/10/19/Inside-the-C++-Object-Model-系列笔记--Object-Lessons">Inside the C++ Object Model 系列笔记 一 – Object Lessons</a></li>
+<li><a href="../2017/10/19/Inside-the-C++-Object-Model-系列笔记--The-Semantics-of-constructors">Inside the C++ Object Model 系列笔记 二 – The Semantics of constructors</a></li>
+<li><a href="../2017/10/21/Inside-the-C++-Object-Model-系列笔记--The-Semantics-of-Data">Inside the C++ Object Model 系列笔记 三 – The Semantics of Data</a></li>
+<li><a href="../2017/10/23/Inside-the-C++-Object-Model-系列笔记--The-Semantics-of-Function">Inside the C++ Object Model 系列笔记 四 – The Semantics of Function</a></li>
+</ul>
+<h2 id="PeKing-University-Online-Judge"><a href="#PeKing-University-Online-Judge" class="headerlink" title="PeKing University Online Judge"></a>PeKing University Online Judge</h2><p>这个POJ相比于 leetcode 的不同就是：</p>
+<p>出现的年代比 leetcode 这种更早，考察的范围比 leetcode 更广<br>需要自己处理输入输出，以及更宽泛的发挥空间（要编写一个完整的程序，包括头文件或者引用了哪些库），而 leetcode 则一般只给出一个函数，让你填写完整。</p>
+<ul>
+<li><a href="../2018/01/20/POJ-1001-Exponentiation">POJ 1001 Exponentiation</a></li>
+<li><a href="../2018/01/21/POJ-1002-487-3279">POJ 1002 487 3279</a></li>
+<li><a href="../2018/01/21/POJ-1003-Hangover">POJ 1003 Hangover</a></li>
+<li><a href="../2018/01/21/POJ-1004-Financial-Management">POJ 1004 Financial Management</a></li>
+<li><a href="../2018/01/21/POJ-1005-I-Think-I-Need-a-Houseboat">POJ 1005 I Think I Need a Houseboat</a></li>
+<li><a href="../2018/02/15/POJ-1006-Biorhythms">POJ 1006 Biorhythms</a></li>
+<li><a href="../2018/02/21/POJ-1007-DNA-sorting">POJ 1007 DNA sorting</a></li>
+<li><a href="../2018/02/22/POJ-1008-Maya-Calendar">POJ 1008 Maya Calendar</a></li>
+<li><a href="../2018/02/24/POJ-1009-Edge-Detection">POJ 1009 Edge Detection</a></li>
+</ul>
+<h2 id="leetcode-刷题"><a href="#leetcode-刷题" class="headerlink" title="leetcode 刷题"></a>leetcode 刷题</h2><p>leetcode是一个 Online Judge 网站，在线练习编程，尤其是练习数据结构和算法相关的题。</p>
+<p>刷OJ对于锻炼自己的计算机思维，算法能力，对常用编程语言的数据结构部分的熟练使用，都是非常有帮助的。</p>
+<p>这个系列中，我将提供leetcode上 <strong>所有免费题目的答案</strong>，并提供 <strong>详细的解答思路</strong>，所使用的编程语言有：<strong>Python、C++、Java、JavaScript</strong>。</p>
+<h3 id="一些建议："><a href="#一些建议：" class="headerlink" title="一些建议："></a>一些建议：</h3><ol>
+<li>按照AC（accepted）率从高到低刷题，这样就会从易到难，提供一个进步的缓冲空间，不至于一上来就被打击到。不过其实 AC 率并不真实，因为 leetcode 比较出名的缘故，所以很多题都可以在网上找到答案和解题思路。leetcode给每道题都配备了难度信息，有 Easy、Medium、Hard 三个难度等级。你也可以按照这个从易到难刷题。</li>
+<li>按照算法和数据结构体系，逐个模块的掌握，leetcode已经按照 <strong>数据结构、公司、最受欢迎</strong> 等等属性给题目做了划分，而且会提示哪些题目是类似的，另外网上也有不少按算法和数据结构总结的解答电子书可以参照。</li>
+<li>做不出来的时候可以看leetcode网站上的 Discuss 和 Solutions ，有不少大神的解题方法和精简代码。当然也可以在互联网上搜索，有很多讲解leetcode的博客。</li>
+</ol>
+<p>我的这份教程将从 <code>String</code> 模块开始，按照 AC 率刷题。</p>
+<h3 id="String"><a href="#String" class="headerlink" title="String"></a>String</h3><ul>
+<li><a href="">632. Smallest Range</a></li>
+</ul>
+<h3 id="未整理部分"><a href="#未整理部分" class="headerlink" title="未整理部分"></a>未整理部分</h3><ul>
+<li><a href="">2. Add Two Numbers</a></li>
+<li><a href="">3. Longest Substring Without Repeating Characters</a></li>
+<li><a href="">13. Roman to Integer</a></li>
+<li><a href="">22. Generate Parentheses</a></li>
+<li><a href="">34. Search for a Range</a></li>
+<li><a href="">383. Ransom Note</a></li>
+<li><a href="">541. Reverse String II</a></li>
+<li><a href="">583. Delete Operation for Two Strings</a></li>
+<li><a href="">606. Construct String from Binary Tree</a></li>
+<li><a href="">657. Judge Route Circle</a></li>
+<li><a href="">551. Student Attendance Record I</a></li>
+</ul>
+
+        
+      </div>
+      
+      
+      
+    </div>
+    
+    
+    
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+    <div class="comments" id="comments">
+      <div id="lv-container" data-id="city" data-uid="MTAyMC8zNTc5MC8xMjMyNg=="></div>
+    </div>
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="https://wx4.sinaimg.cn/mw690/006zFO3gly1flf4xnd5q9j30ku0ku75r.jpg"
+                alt="liuqinh2s" />
+            
+              <p class="site-author-name" itemprop="name">liuqinh2s</p>
+              <p class="site-description motion-element" itemprop="description">Computer Science is not a magic</br>To be a hacker</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/blog/archives">
+              
+                  <span class="site-state-item-count">44</span>
+                  <span class="site-state-item-name">posts</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/blog/categories/index.html">
+                  <span class="site-state-item-count">29</span>
+                  <span class="site-state-item-name">categories</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/blog/tags/index.html">
+                  <span class="site-state-item-count">6</span>
+                  <span class="site-state-item-name">tags</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+            <div class="feed-link motion-element">
+              <a href="/blog/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/liuqinh2s" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://www.douban.com/people/liuqinh2s/" target="_blank" title="豆瓣">
+                      
+                        <i class="fa fa-fw fa-globe"></i>豆瓣</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://www.zhihu.com/people/liuqinh2s/activities" target="_blank" title="知乎">
+                      
+                        <i class="fa fa-fw fa-globe"></i>知乎</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://music.163.com/#/user/home?id=86569513" target="_blank" title="网易云音乐">
+                      
+                        <i class="fa fa-fw fa-globe"></i>网易云音乐</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+            <div class="links-of-blogroll motion-element links-of-blogroll-block">
+              <div class="links-of-blogroll-title">
+                <i class="fa  fa-fw fa-link"></i>
+                Links
+              </div>
+              <ul class="links-of-blogroll-list">
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://lianera.github.io" title="liam" target="_blank">liam</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://zengxiaoluan.com/" title="曾小乱" target="_blank">曾小乱</a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#基础理论课"><span class="nav-number">1.</span> <span class="nav-text">基础理论课</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#理论之外"><span class="nav-number">2.</span> <span class="nav-text">理论之外</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ACM之外"><span class="nav-number">3.</span> <span class="nav-text">ACM之外</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#脱离-Windows-的襁褓"><span class="nav-number">4.</span> <span class="nav-text">脱离 Windows 的襁褓</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#编程心得"><span class="nav-number">5.</span> <span class="nav-text">编程心得</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#LaTex-和-Markdown"><span class="nav-number">6.</span> <span class="nav-text">LaTex 和 Markdown</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#访问全球网"><span class="nav-number">7.</span> <span class="nav-text">访问全球网</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Java"><span class="nav-number">8.</span> <span class="nav-text">Java</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#C"><span class="nav-number">9.</span> <span class="nav-text">C++</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#PeKing-University-Online-Judge"><span class="nav-number">10.</span> <span class="nav-text">PeKing University Online Judge</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#leetcode-刷题"><span class="nav-number">11.</span> <span class="nav-text">leetcode 刷题</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#一些建议："><span class="nav-number">11.1.</span> <span class="nav-text">一些建议：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#String"><span class="nav-number">11.2.</span> <span class="nav-text">String</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#未整理部分"><span class="nav-number">11.3.</span> <span class="nav-text">未整理部分</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">liuqinh2s</span>
+
+  
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+    
+      <span class="post-meta-item-text">Site words total count&#58;</span>
+    
+    <span title="Site words total count">85.3k</span>
+  
+</div>
+
+
+  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Gemini</a> v5.1.4</div>
+
+
+
+
+        
+<div class="busuanzi-count">
+  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="site-uv">
+      <i class="fa fa-user"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+      
+    </span>
+  
+
+  
+    <span class="site-pv">
+      <i class="fa fa-eye"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+      
+    </span>
+  
+</div>
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/blog/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/blog/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/blog/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/blog/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/blog/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/blog/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/blog/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/blog/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/blog/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/blog/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/blog/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/blog/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/blog/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+    <script type="text/javascript">
+      (function(d, s) {
+        var j, e = d.getElementsByTagName(s)[0];
+        if (typeof LivereTower === 'function') { return; }
+        j = d.createElement(s);
+        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+        j.async = true;
+        e.parentNode.insertBefore(j, e);
+      })(document, 'script');
+    </script>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/blog/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
+
+  
+
+  
+
+</body>
+</html>
