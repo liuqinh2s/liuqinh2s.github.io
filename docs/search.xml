@@ -123,20 +123,20 @@
       </categories>
   </entry>
   <entry>
+    <title><![CDATA[mathjax常用公式记录]]></title>
+    <url>%2Fblog%2F2018%2F04%2F30%2Fmathjax%E5%B8%B8%E7%94%A8%E5%85%AC%E5%BC%8F%E8%AE%B0%E5%BD%95%2F</url>
+    <content type="text"><![CDATA[角度记法 度数：$60^\circ$，$60^\circ$ 度数分：$60^\prime$，$60^\prime$ 弧度：$\frac{\pi}{2}$，$\frac{\pi}{2}$ 角度记法：$\angle A$，$\angle A$]]></content>
+      <categories>
+        <category>LaTex</category>
+      </categories>
+  </entry>
+  <entry>
     <title><![CDATA[Leetcode Algorithm 274. H-Index]]></title>
     <url>%2Fblog%2F2018%2F04%2F30%2FLeetcode-Algorithm-274.H-Index%2F</url>
     <content type="text"><![CDATA[Given an array of citations (each citation is a non-negative integer) of a researcher, write a function to compute the researcher’s h-index. According to the definition of h-index on Wikipedia: “A scientist has index h if h of his/her N papers have at least h citations each, and the other N − h papers have no more than h citations each.” For example, given citations = [3, 0, 6, 1, 5], which means the researcher has 5 papers in total and each of them had received 3, 0, 6, 1, 5 citations respectively. Since the researcher has 3 papers with at least 3 citations each and the remaining two with no more than 3 citations each, his h-index is 3. Note: If there are several possible values for h, the maximum one is taken as the h-index. Credits:Special thanks to @jianchao.li.fighter for adding this problem and creating all test cases. 看了维基百科的解说之后，我发现这题还是挺简单的，思路就是排序，如果用C++解这题，我就直接用std::sort了。 C++代码如下： 1234567891011121314151617181920class Solution &#123;public: int hIndex(vector&lt;int&gt;&amp; citations) &#123; if(citations.size()&lt;=0)&#123; return 0; &#125; std::sort(citations.begin(), citations.end(), compare); int result = citations[0]; for(int i=0;i&lt;citations.size();i++)&#123; if(i&lt;citations[i])&#123; result = i+1; &#125; &#125; return result; &#125; static bool compare(int i, int j)&#123; return i&gt;j; &#125;&#125;;]]></content>
       <categories>
         <category>ACM</category>
         <category>Leetcode</category>
-      </categories>
-  </entry>
-  <entry>
-    <title><![CDATA[mathjax常用公式记录]]></title>
-    <url>%2Fblog%2F2018%2F04%2F30%2Fmathjax%E5%B8%B8%E7%94%A8%E5%85%AC%E5%BC%8F%E8%AE%B0%E5%BD%95%2F</url>
-    <content type="text"><![CDATA[角度记法 度数：$60^\circ$，$60^\circ$ 度数分：$60^\prime$，$60^\prime$ 弧度：$\frac{\pi}{2}$，$\frac{\pi}{2}$ 角度记法：$\angle A$，$\angle A$]]></content>
-      <categories>
-        <category>LaTex</category>
       </categories>
   </entry>
   <entry>
@@ -226,18 +226,18 @@
       </categories>
   </entry>
   <entry>
-    <title><![CDATA[POJ-1003-Hangover]]></title>
-    <url>%2Fblog%2F2018%2F01%2F21%2FPOJ-1003-Hangover%2F</url>
-    <content type="text"><![CDATA[这一题 AC 的速度还是挺快的，题目本身也是很简单： C++ 代码： 123456789101112131415161718192021222324252627282930#include &lt;iostream&gt;#include &lt;string&gt;#include &lt;sstream&gt;using namespace std;string double2Str(const double &amp;double_temp)&#123; stringstream ss; ss &lt;&lt; double_temp; string str; ss &gt;&gt; str; return str;&#125;int main()&#123; double x; cin &gt;&gt; x; //对浮点数只能使用大于、小于号进行比较，不能使用等号和不等号，我这里直接把 double 转成字符串，就可以用不等号比较了 //根据输入条件的限制，可以这样写：x&gt;0.01。 while(double2Str(x)!="0")&#123; int i=2; double sum=1.0/i; while(sum &lt; x)&#123; i++; sum += 1.0/i; &#125; cout &lt;&lt; i-1 &lt;&lt; " card(s)" &lt;&lt; endl; cin &gt;&gt; x; &#125; return 0;&#125;]]></content>
+    <title><![CDATA[POJ 1003 Hangover]]></title>
+    <url>%2Fblog%2F2018%2F01%2F21%2FPOJ-1004-Financial-Management%2F</url>
+    <content type="text"><![CDATA[这一题简单的有点过分了，一度让我有点怀疑，但当我直接提交 AC 的那一刻，才发现还真是就这么简单。 C++ 代码： 123456789101112#include &lt;iostream&gt; using namespace std;int main()&#123; double x; double sum; while(cin &gt;&gt; x)&#123; sum += x; &#125; cout &lt;&lt; "$" &lt;&lt; sum/12 &lt;&lt; endl; return 0;&#125;]]></content>
       <categories>
         <category>ACM</category>
         <category>POJ</category>
       </categories>
   </entry>
   <entry>
-    <title><![CDATA[POJ 1003 Hangover]]></title>
-    <url>%2Fblog%2F2018%2F01%2F21%2FPOJ-1004-Financial-Management%2F</url>
-    <content type="text"><![CDATA[这一题简单的有点过分了，一度让我有点怀疑，但当我直接提交 AC 的那一刻，才发现还真是就这么简单。 C++ 代码： 123456789101112#include &lt;iostream&gt; using namespace std;int main()&#123; double x; double sum; while(cin &gt;&gt; x)&#123; sum += x; &#125; cout &lt;&lt; "$" &lt;&lt; sum/12 &lt;&lt; endl; return 0;&#125;]]></content>
+    <title><![CDATA[POJ-1003-Hangover]]></title>
+    <url>%2Fblog%2F2018%2F01%2F21%2FPOJ-1003-Hangover%2F</url>
+    <content type="text"><![CDATA[这一题 AC 的速度还是挺快的，题目本身也是很简单： C++ 代码： 123456789101112131415161718192021222324252627282930#include &lt;iostream&gt;#include &lt;string&gt;#include &lt;sstream&gt;using namespace std;string double2Str(const double &amp;double_temp)&#123; stringstream ss; ss &lt;&lt; double_temp; string str; ss &gt;&gt; str; return str;&#125;int main()&#123; double x; cin &gt;&gt; x; //对浮点数只能使用大于、小于号进行比较，不能使用等号和不等号，我这里直接把 double 转成字符串，就可以用不等号比较了 //根据输入条件的限制，可以这样写：x&gt;0.01。 while(double2Str(x)!="0")&#123; int i=2; double sum=1.0/i; while(sum &lt; x)&#123; i++; sum += 1.0/i; &#125; cout &lt;&lt; i-1 &lt;&lt; " card(s)" &lt;&lt; endl; cin &gt;&gt; x; &#125; return 0;&#125;]]></content>
       <categories>
         <category>ACM</category>
         <category>POJ</category>
