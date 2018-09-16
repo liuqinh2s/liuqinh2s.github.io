@@ -78,21 +78,21 @@
       </categories>
   </entry>
   <entry>
-    <title><![CDATA[Android通讯录深入研究]]></title>
-    <url>%2Fblog%2F2018%2F05%2F03%2FAndroid%E9%80%9A%E8%AE%AF%E5%BD%95%E6%B7%B1%E5%85%A5%E7%A0%94%E7%A9%B6%2F</url>
-    <content type="text"><![CDATA[The DISPLAY_NAME can be fetched either from Contacts database/ContactsContract.Data&#39; OR &#39;database/ContactsContract.CommonDataKinds.StructuredName&#39; OR &#39;database/RawContactsEntity. In the later 2 cases you will be able to fetch the DISPLAY_NAME using RAW_CONTACT_ID Couple of Key pointers: Contacts._ID = Data.CONTACT_ID RawContacts._ID = Data.RAW_CONTACT_ID RawContacts.CONTACT_ID = Contacts._ID RawContactsEntity._ID = RawContacts._ID Sounds confusing?? Let me try… The Contacts database is divided into 3 tables contacts, raw contacts, and data. Each table contains column (_ID) which is an auto incremented primary key. data table contains all the contact info like phone number, mail id, address etc. The raw contacts points to the actual contact created. Hence we use the raw contacts while adding a contact. The user cannot add any data in the contacts table. The data in this table is populated internally due to aggregation of contacts. The reason your logic worked for some of the contacts is: _ID for contacts, raw contacts remains same until there is any contact aggregation taking place. Lets say you add two contacts with same name abc. Here the _ID for raw contacts increments twice while _ID for contacts increments only once as these two contacts gets merged due to the aggregation of contacts The best approach to fetch the info in your case is by using ContactsContract.RawContactsEntity ( an outer join of the raw_contacts table with the data table) 这里还有一篇文章，写的比较详细：http://android-contact-id-vs-raw-contact-id.blogspot.jp/ 官方文档： https://developer.android.com/reference/android/provider/ContactsContract https://developer.android.com/reference/android/provider/ContactsContract.Data]]></content>
-      <categories>
-        <category>Android</category>
-        <category>通讯录</category>
-      </categories>
-  </entry>
-  <entry>
     <title><![CDATA[Volley库StringRequest编码问题]]></title>
     <url>%2Fblog%2F2018%2F05%2F03%2FVolley%E5%BA%93StringRequest%E7%BC%96%E7%A0%81%E9%97%AE%E9%A2%98%2F</url>
     <content type="text"><![CDATA[最近在做的一个工作是：从一个URL地址读取一系列手机联系人资料，保持到手机通讯录里面。 项目使用了Volley库，FastJson库，遇到的一个bug是编码错误，FastJson在进行从String到bean的解析的时候，编码不正确导致的出错，这个时候，先检查了URL的编码是UTF-8的，然后Android Studio的程序源文件也是UTF-8的，那就只有一个可能了，网络传输过程中的编码错误。 google一下发现早就有人在stackoverflow上问过这个问题了： How to get Android Volley StringRequest GET to return responses in UTF-8 encoding How can I get Android Volley StringRequest GET to return responses in UTF-8 encoding? It only seems to return responses in ISO-8859-1. Is it possible to get it to accept a UTF-8 string? StringRequest call HttpHeaderParser.parseCharset(response.headers) to get charset from response headers, is ‘Content-Type’ in headers don`t contains ‘charset’ the default charset return as ‘ISO-8859-1’. StringRequest.java 12345678910protected Response&lt;String&gt; parseNetworkResponse(NetworkResponse response) &#123; String parsed; try &#123; parsed = new String(response.data, HttpHeaderParser.parseCharset(response.headers)); &#125; catch (UnsupportedEncodingException var4) &#123; parsed = new String(response.data); &#125; return Response.success(parsed, HttpHeaderParser.parseCacheHeaders(response));&#125; HttpHeaderParser.java 123456789101112131415161718192021222324public static String parseCharset(Map&lt;String, String&gt; headers, String defaultCharset) &#123; String contentType = headers.get(HTTP.CONTENT_TYPE); if (contentType != null) &#123; String[] params = contentType.split(";"); for (int i = 1; i &lt; params.length; i++) &#123; String[] pair = params[i].trim().split("="); if (pair.length == 2) &#123; if (pair[0].equals("charset")) &#123; return pair[1]; &#125; &#125; &#125; &#125; return defaultCharset;&#125;/** * Returns the charset specified in the Content-Type of this header, * or the HTTP default (ISO-8859-1) if none can be found. */public static String parseCharset(Map&lt;String, String&gt; headers) &#123; return parseCharset(headers, HTTP.DEFAULT_CONTENT_CHARSET);&#125; so, you can parse to ‘UTF-8’ in 2 ways: tell your webServer to add ‘Content-Type’ with ‘charset=UTF-8’ in headers Create a subclass of StringRequest and override parseNetworkResponse method 意思是定制一个MyStringRequest类，继承StringRequest类，重载parseNetworkResponse即可： 12345678910protected Response&lt;String&gt; parseNetworkResponse(NetworkResponse response) &#123; String parsed; try &#123; parsed = new String(response.data, "utf-8"); &#125; catch (UnsupportedEncodingException var4) &#123; parsed = new String(response.data); &#125; return Response.success(parsed, HttpHeaderParser.parseCacheHeaders(response));&#125;]]></content>
       <categories>
         <category>Android</category>
         <category>Volley库</category>
+      </categories>
+  </entry>
+  <entry>
+    <title><![CDATA[Android通讯录深入研究]]></title>
+    <url>%2Fblog%2F2018%2F05%2F03%2FAndroid%E9%80%9A%E8%AE%AF%E5%BD%95%E6%B7%B1%E5%85%A5%E7%A0%94%E7%A9%B6%2F</url>
+    <content type="text"><![CDATA[The DISPLAY_NAME can be fetched either from Contacts database/ContactsContract.Data&#39; OR &#39;database/ContactsContract.CommonDataKinds.StructuredName&#39; OR &#39;database/RawContactsEntity. In the later 2 cases you will be able to fetch the DISPLAY_NAME using RAW_CONTACT_ID Couple of Key pointers: Contacts._ID = Data.CONTACT_ID RawContacts._ID = Data.RAW_CONTACT_ID RawContacts.CONTACT_ID = Contacts._ID RawContactsEntity._ID = RawContacts._ID Sounds confusing?? Let me try… The Contacts database is divided into 3 tables contacts, raw contacts, and data. Each table contains column (_ID) which is an auto incremented primary key. data table contains all the contact info like phone number, mail id, address etc. The raw contacts points to the actual contact created. Hence we use the raw contacts while adding a contact. The user cannot add any data in the contacts table. The data in this table is populated internally due to aggregation of contacts. The reason your logic worked for some of the contacts is: _ID for contacts, raw contacts remains same until there is any contact aggregation taking place. Lets say you add two contacts with same name abc. Here the _ID for raw contacts increments twice while _ID for contacts increments only once as these two contacts gets merged due to the aggregation of contacts The best approach to fetch the info in your case is by using ContactsContract.RawContactsEntity ( an outer join of the raw_contacts table with the data table) 这里还有一篇文章，写的比较详细：http://android-contact-id-vs-raw-contact-id.blogspot.jp/ 官方文档： https://developer.android.com/reference/android/provider/ContactsContract https://developer.android.com/reference/android/provider/ContactsContract.Data]]></content>
+      <categories>
+        <category>Android</category>
+        <category>通讯录</category>
       </categories>
   </entry>
   <entry>
@@ -105,12 +105,12 @@
       </categories>
   </entry>
   <entry>
-    <title><![CDATA[Leetcode Algorithm 274. H-Index]]></title>
-    <url>%2Fblog%2F2018%2F04%2F30%2FLeetcode-Algorithm-274.H-Index%2F</url>
-    <content type="text"><![CDATA[Given an array of citations (each citation is a non-negative integer) of a researcher, write a function to compute the researcher’s h-index. According to the definition of h-index on Wikipedia: “A scientist has index h if h of his/her N papers have at least h citations each, and the other N − h papers have no more than h citations each.” For example, given citations = [3, 0, 6, 1, 5], which means the researcher has 5 papers in total and each of them had received 3, 0, 6, 1, 5 citations respectively. Since the researcher has 3 papers with at least 3 citations each and the remaining two with no more than 3 citations each, his h-index is 3. Note: If there are several possible values for h, the maximum one is taken as the h-index. Credits:Special thanks to @jianchao.li.fighter for adding this problem and creating all test cases. 看了维基百科的解说之后，我发现这题还是挺简单的，思路就是排序，如果用C++解这题，我就直接用std::sort了。 C++代码如下： 1234567891011121314151617181920class Solution &#123;public: int hIndex(vector&lt;int&gt;&amp; citations) &#123; if(citations.size()&lt;=0)&#123; return 0; &#125; std::sort(citations.begin(), citations.end(), compare); int result = citations[0]; for(int i=0;i&lt;citations.size();i++)&#123; if(i&lt;citations[i])&#123; result = i+1; &#125; &#125; return result; &#125; static bool compare(int i, int j)&#123; return i&gt;j; &#125;&#125;;]]></content>
+    <title><![CDATA[椭圆规]]></title>
+    <url>%2Fblog%2F2018%2F04%2F30%2F%E6%A4%AD%E5%9C%86%E8%A7%84%2F</url>
+    <content type="text"><![CDATA[利用简单定义的椭圆规椭圆大家高中的时候都学过，椭圆有两个中心，椭圆轨迹上的点到这两个中心的距离加起来就是长轴的长度。 利用参数式的椭圆规 $\overline{AP}=a$，$\overline{BP}=b$，P点所绘制的就是椭圆了。画圆规时先固定十字底座，旋转时A点保持在纵轴滑动，B点保持在横轴滑动，当规臂完成$360^\circ$时，P点的轨迹即为椭圆，且此椭圆的长半轴是 a，短半轴是 b。 下面讲讲原理： 若以十字中心为原点，十字横向为x轴，纵向为y轴，设定一个直角坐标系，并设 $\theta$ 为以x轴为始边，规臂$\overline{AP}$为终边的广义角，不难看出来P点的坐标是 $(a\cos\theta, b\sin\theta)$，即方程式为：$\frac{x^2}{a^2}+\frac{y^2}{b^2}=1$ 的椭圆方程式。其中a为长半轴的长度，b为短半轴的长度。]]></content>
       <categories>
-        <category>ACM</category>
-        <category>Leetcode</category>
+        <category>数学</category>
+        <category>解析几何</category>
       </categories>
   </entry>
   <entry>
@@ -122,12 +122,12 @@
       </categories>
   </entry>
   <entry>
-    <title><![CDATA[椭圆规]]></title>
-    <url>%2Fblog%2F2018%2F04%2F30%2F%E6%A4%AD%E5%9C%86%E8%A7%84%2F</url>
-    <content type="text"><![CDATA[利用简单定义的椭圆规椭圆大家高中的时候都学过，椭圆有两个中心，椭圆轨迹上的点到这两个中心的距离加起来就是长轴的长度。 利用参数式的椭圆规 $\overline{AP}=a$，$\overline{BP}=b$，P点所绘制的就是椭圆了。画圆规时先固定十字底座，旋转时A点保持在纵轴滑动，B点保持在横轴滑动，当规臂完成$360^\circ$时，P点的轨迹即为椭圆，且此椭圆的长半轴是 a，短半轴是 b。 下面讲讲原理： 若以十字中心为原点，十字横向为x轴，纵向为y轴，设定一个直角坐标系，并设 $\theta$ 为以x轴为始边，规臂$\overline{AP}$为终边的广义角，不难看出来P点的坐标是 $(a\cos\theta, b\sin\theta)$，即方程式为：$\frac{x^2}{a^2}+\frac{y^2}{b^2}=1$ 的椭圆方程式。其中a为长半轴的长度，b为短半轴的长度。]]></content>
+    <title><![CDATA[Leetcode Algorithm 274. H-Index]]></title>
+    <url>%2Fblog%2F2018%2F04%2F30%2FLeetcode-Algorithm-274.H-Index%2F</url>
+    <content type="text"><![CDATA[Given an array of citations (each citation is a non-negative integer) of a researcher, write a function to compute the researcher’s h-index. According to the definition of h-index on Wikipedia: “A scientist has index h if h of his/her N papers have at least h citations each, and the other N − h papers have no more than h citations each.” For example, given citations = [3, 0, 6, 1, 5], which means the researcher has 5 papers in total and each of them had received 3, 0, 6, 1, 5 citations respectively. Since the researcher has 3 papers with at least 3 citations each and the remaining two with no more than 3 citations each, his h-index is 3. Note: If there are several possible values for h, the maximum one is taken as the h-index. Credits:Special thanks to @jianchao.li.fighter for adding this problem and creating all test cases. 看了维基百科的解说之后，我发现这题还是挺简单的，思路就是排序，如果用C++解这题，我就直接用std::sort了。 C++代码如下： 1234567891011121314151617181920class Solution &#123;public: int hIndex(vector&lt;int&gt;&amp; citations) &#123; if(citations.size()&lt;=0)&#123; return 0; &#125; std::sort(citations.begin(), citations.end(), compare); int result = citations[0]; for(int i=0;i&lt;citations.size();i++)&#123; if(i&lt;citations[i])&#123; result = i+1; &#125; &#125; return result; &#125; static bool compare(int i, int j)&#123; return i&gt;j; &#125;&#125;;]]></content>
       <categories>
-        <category>数学</category>
-        <category>解析几何</category>
+        <category>ACM</category>
+        <category>Leetcode</category>
       </categories>
   </entry>
   <entry>
@@ -208,9 +208,9 @@
       </categories>
   </entry>
   <entry>
-    <title><![CDATA[POJ-1003-Hangover]]></title>
-    <url>%2Fblog%2F2018%2F01%2F21%2FPOJ-1003-Hangover%2F</url>
-    <content type="text"><![CDATA[这一题 AC 的速度还是挺快的，题目本身也是很简单： C++ 代码： 123456789101112131415161718192021222324252627282930#include &lt;iostream&gt;#include &lt;string&gt;#include &lt;sstream&gt;using namespace std;string double2Str(const double &amp;double_temp)&#123; stringstream ss; ss &lt;&lt; double_temp; string str; ss &gt;&gt; str; return str;&#125;int main()&#123; double x; cin &gt;&gt; x; //对浮点数只能使用大于、小于号进行比较，不能使用等号和不等号，我这里直接把 double 转成字符串，就可以用不等号比较了 //根据输入条件的限制，可以这样写：x&gt;0.01。 while(double2Str(x)!="0")&#123; int i=2; double sum=1.0/i; while(sum &lt; x)&#123; i++; sum += 1.0/i; &#125; cout &lt;&lt; i-1 &lt;&lt; " card(s)" &lt;&lt; endl; cin &gt;&gt; x; &#125; return 0;&#125;]]></content>
+    <title><![CDATA[POJ 1005 I Think I Need a Houseboat]]></title>
+    <url>%2Fblog%2F2018%2F01%2F21%2FPOJ-1005-I-Think-I-Need-a-Houseboat%2F</url>
+    <content type="text"><![CDATA[这一题也很简单，直接上代码： C++ 代码： 1234567891011121314151617181920212223#include &lt;iostream&gt;#include &lt;cmath&gt;using namespace std;int main()&#123; const double PI = 3.141592653589793; int n; double x; double y; double area; int year; cin &gt;&gt; n; int i=1; while(n--)&#123; cin &gt;&gt; x &gt;&gt; y; area = PI*(x*x+y*y)/2; year = area/50 + 1; cout &lt;&lt; "Property " &lt;&lt; i &lt;&lt; ": This property will begin eroding in year " &lt;&lt; year &lt;&lt; "." &lt;&lt; endl; i++; &#125; cout &lt;&lt; "END OF OUTPUT." &lt;&lt; endl; return 0;&#125;]]></content>
       <categories>
         <category>ACM</category>
         <category>POJ</category>
@@ -226,18 +226,18 @@
       </categories>
   </entry>
   <entry>
-    <title><![CDATA[POJ 1002 487 3279]]></title>
-    <url>%2Fblog%2F2018%2F01%2F21%2FPOJ-1002-487-3279%2F</url>
-    <content type="text"><![CDATA[这一题看似很简单，却有着很多限制，我也是搞了很久。刚开始的时候我是用了很多 c++11 的东西，然后一直报 Compile Error，但我本地编译是不会有错的，查出几点： vector&lt;vector&gt;会报错，但 c++11可以这样写，以前的老编译器只能这么写：vector&lt;vector &gt;to_string()函数无法使用，这是 c++11 新出的。for(int x:result)这种写法直到 c++11 才支持。POJ 上的编译器是比较老的，所以无法使用 c++11 的新特性。 这还不算，后来一直报 Time Limit Exceeded，上网查资料发现，要把 cin 输入改成 getchar 接收输入，终于 AC。还有就是在勾选 language 的时候，一定要用 G++，不要用 C++，如果你选 C++，会报如下错误： 123456Compile ErrorMain.cppF:\temp\18069972.33777\Main.cpp(16) : error C2057: expected constant expressionF:\temp\18069972.33777\Main.cpp(16) : error C2466: cannot allocate an array of constant size 0F:\temp\18069972.33777\Main.cpp(16) : error C2133: &apos;data&apos; : unknown size C++代码： 12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758596061626364#include &lt;iostream&gt; #include &lt;cstdio&gt;#include &lt;cstdlib&gt;#include &lt;string&gt; #include &lt;algorithm&gt;#include &lt;vector&gt;#include &lt;utility&gt;#include &lt;sstream&gt;using namespace std;int main()&#123; int n; char ch; scanf("%d",&amp;n); int data[n]; int size = n; while(n--)&#123; ch = getchar(); //过滤空行 if(ch=='\n')&#123; n++; continue; &#125; int num = 0; while(ch!='\n')&#123; if(ch&gt;='0' &amp;&amp; ch&lt;='9')&#123; num = num*10 + ch - '0'; &#125;else if(ch &gt;= 'A' &amp;&amp; ch &lt;= 'P')&#123; num = num*10 + (ch - 'A')/3 + 2; &#125;else if(ch &gt;= 'R' &amp;&amp; ch &lt;= 'Y')&#123; num = num*10 + (ch - 'Q')/3 + 7; &#125; ch = getchar(); &#125; data[n]=num; &#125; // qsort(data, size, sizeof(int), compare); sort(data, data+size); // for(int i=0;i&lt;size;i++)&#123; // cout &lt;&lt; data[i] &lt;&lt; endl; // &#125; int count=1; int index=0; for(int i=1;i&lt;size;++i)&#123; if(data[i]==data[i-1])&#123; count++; index=i; &#125;else&#123; if(count!=1)&#123; printf("%03d-%04d %d\n",data[i-1]/10000,data[i-1]%10000,count); // cout &lt;&lt; setfill('0') &lt;&lt; setw(3) &lt;&lt; data[i-1]/10000 &lt;&lt; '-' &lt;&lt; setfill('0') &lt;&lt; setw(4) &lt;&lt; data[i-1]%10000 &lt;&lt; ' ' &lt;&lt; count &lt;&lt; endl; count=1; &#125; &#125; if(i==size-1 &amp;&amp; count!=1)&#123; printf("%03d-%04d %d\n",data[i-1]/10000,data[i-1]%10000,count); count=1; &#125; &#125; if(index==0)&#123; cout &lt;&lt; "No duplicates." &lt;&lt; endl; &#125; return 0;&#125;]]></content>
+    <title><![CDATA[POJ-1003-Hangover]]></title>
+    <url>%2Fblog%2F2018%2F01%2F21%2FPOJ-1003-Hangover%2F</url>
+    <content type="text"><![CDATA[这一题 AC 的速度还是挺快的，题目本身也是很简单： C++ 代码： 123456789101112131415161718192021222324252627282930#include &lt;iostream&gt;#include &lt;string&gt;#include &lt;sstream&gt;using namespace std;string double2Str(const double &amp;double_temp)&#123; stringstream ss; ss &lt;&lt; double_temp; string str; ss &gt;&gt; str; return str;&#125;int main()&#123; double x; cin &gt;&gt; x; //对浮点数只能使用大于、小于号进行比较，不能使用等号和不等号，我这里直接把 double 转成字符串，就可以用不等号比较了 //根据输入条件的限制，可以这样写：x&gt;0.01。 while(double2Str(x)!="0")&#123; int i=2; double sum=1.0/i; while(sum &lt; x)&#123; i++; sum += 1.0/i; &#125; cout &lt;&lt; i-1 &lt;&lt; " card(s)" &lt;&lt; endl; cin &gt;&gt; x; &#125; return 0;&#125;]]></content>
       <categories>
         <category>ACM</category>
         <category>POJ</category>
       </categories>
   </entry>
   <entry>
-    <title><![CDATA[POJ 1005 I Think I Need a Houseboat]]></title>
-    <url>%2Fblog%2F2018%2F01%2F21%2FPOJ-1005-I-Think-I-Need-a-Houseboat%2F</url>
-    <content type="text"><![CDATA[这一题也很简单，直接上代码： C++ 代码： 1234567891011121314151617181920212223#include &lt;iostream&gt;#include &lt;cmath&gt;using namespace std;int main()&#123; const double PI = 3.141592653589793; int n; double x; double y; double area; int year; cin &gt;&gt; n; int i=1; while(n--)&#123; cin &gt;&gt; x &gt;&gt; y; area = PI*(x*x+y*y)/2; year = area/50 + 1; cout &lt;&lt; "Property " &lt;&lt; i &lt;&lt; ": This property will begin eroding in year " &lt;&lt; year &lt;&lt; "." &lt;&lt; endl; i++; &#125; cout &lt;&lt; "END OF OUTPUT." &lt;&lt; endl; return 0;&#125;]]></content>
+    <title><![CDATA[POJ 1002 487 3279]]></title>
+    <url>%2Fblog%2F2018%2F01%2F21%2FPOJ-1002-487-3279%2F</url>
+    <content type="text"><![CDATA[这一题看似很简单，却有着很多限制，我也是搞了很久。刚开始的时候我是用了很多 c++11 的东西，然后一直报 Compile Error，但我本地编译是不会有错的，查出几点： vector&lt;vector&gt;会报错，但 c++11可以这样写，以前的老编译器只能这么写：vector&lt;vector &gt;to_string()函数无法使用，这是 c++11 新出的。for(int x:result)这种写法直到 c++11 才支持。POJ 上的编译器是比较老的，所以无法使用 c++11 的新特性。 这还不算，后来一直报 Time Limit Exceeded，上网查资料发现，要把 cin 输入改成 getchar 接收输入，终于 AC。还有就是在勾选 language 的时候，一定要用 G++，不要用 C++，如果你选 C++，会报如下错误： 123456Compile ErrorMain.cppF:\temp\18069972.33777\Main.cpp(16) : error C2057: expected constant expressionF:\temp\18069972.33777\Main.cpp(16) : error C2466: cannot allocate an array of constant size 0F:\temp\18069972.33777\Main.cpp(16) : error C2133: &apos;data&apos; : unknown size C++代码： 12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758596061626364#include &lt;iostream&gt; #include &lt;cstdio&gt;#include &lt;cstdlib&gt;#include &lt;string&gt; #include &lt;algorithm&gt;#include &lt;vector&gt;#include &lt;utility&gt;#include &lt;sstream&gt;using namespace std;int main()&#123; int n; char ch; scanf("%d",&amp;n); int data[n]; int size = n; while(n--)&#123; ch = getchar(); //过滤空行 if(ch=='\n')&#123; n++; continue; &#125; int num = 0; while(ch!='\n')&#123; if(ch&gt;='0' &amp;&amp; ch&lt;='9')&#123; num = num*10 + ch - '0'; &#125;else if(ch &gt;= 'A' &amp;&amp; ch &lt;= 'P')&#123; num = num*10 + (ch - 'A')/3 + 2; &#125;else if(ch &gt;= 'R' &amp;&amp; ch &lt;= 'Y')&#123; num = num*10 + (ch - 'Q')/3 + 7; &#125; ch = getchar(); &#125; data[n]=num; &#125; // qsort(data, size, sizeof(int), compare); sort(data, data+size); // for(int i=0;i&lt;size;i++)&#123; // cout &lt;&lt; data[i] &lt;&lt; endl; // &#125; int count=1; int index=0; for(int i=1;i&lt;size;++i)&#123; if(data[i]==data[i-1])&#123; count++; index=i; &#125;else&#123; if(count!=1)&#123; printf("%03d-%04d %d\n",data[i-1]/10000,data[i-1]%10000,count); // cout &lt;&lt; setfill('0') &lt;&lt; setw(3) &lt;&lt; data[i-1]/10000 &lt;&lt; '-' &lt;&lt; setfill('0') &lt;&lt; setw(4) &lt;&lt; data[i-1]%10000 &lt;&lt; ' ' &lt;&lt; count &lt;&lt; endl; count=1; &#125; &#125; if(i==size-1 &amp;&amp; count!=1)&#123; printf("%03d-%04d %d\n",data[i-1]/10000,data[i-1]%10000,count); count=1; &#125; &#125; if(index==0)&#123; cout &lt;&lt; "No duplicates." &lt;&lt; endl; &#125; return 0;&#125;]]></content>
       <categories>
         <category>ACM</category>
         <category>POJ</category>
