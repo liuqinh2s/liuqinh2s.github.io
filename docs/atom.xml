@@ -6,7 +6,7 @@
   <link href="/blog/atom.xml" rel="self"/>
   
   <link href="http://liuqinh2s.github.io/blog/"/>
-  <updated>2018-09-20T04:15:51.344Z</updated>
+  <updated>2018-09-20T06:13:03.138Z</updated>
   <id>http://liuqinh2s.github.io/blog/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="http://liuqinh2s.github.io/blog/2018/09/20/wsl%20oh%20my%20zsh%20%E5%AD%97%E4%BD%93%E9%97%AE%E9%A2%98/"/>
     <id>http://liuqinh2s.github.io/blog/2018/09/20/wsl oh my zsh 字体问题/</id>
     <published>2018-09-19T16:00:00.000Z</published>
-    <updated>2018-09-20T04:15:51.344Z</updated>
+    <updated>2018-09-20T06:13:03.138Z</updated>
     
     <summary type="html">
     
@@ -35,6 +35,8 @@
       
     
     </summary>
+    
+      <category term="解决的问题" scheme="http://liuqinh2s.github.io/blog/categories/%E8%A7%A3%E5%86%B3%E7%9A%84%E9%97%AE%E9%A2%98/"/>
     
     
       <category term="windows环境" scheme="http://liuqinh2s.github.io/blog/tags/windows%E7%8E%AF%E5%A2%83/"/>
@@ -258,30 +260,6 @@
   </entry>
   
   <entry>
-    <title>mathjax常用公式记录</title>
-    <link href="http://liuqinh2s.github.io/blog/2018/04/30/mathjax%E5%B8%B8%E7%94%A8%E5%85%AC%E5%BC%8F%E8%AE%B0%E5%BD%95/"/>
-    <id>http://liuqinh2s.github.io/blog/2018/04/30/mathjax常用公式记录/</id>
-    <published>2018-04-29T16:00:00.000Z</published>
-    <updated>2018-09-19T11:26:52.936Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h2 id=&quot;角度记法&quot;&gt;&lt;a href=&quot;#角度记法&quot; class=&quot;headerlink&quot;
-        
-      
-    
-    </summary>
-    
-      <category term="LaTex" scheme="http://liuqinh2s.github.io/blog/categories/LaTex/"/>
-    
-    
-  </entry>
-  
-  <entry>
     <title>椭圆规</title>
     <link href="http://liuqinh2s.github.io/blog/2018/04/30/%E6%A4%AD%E5%9C%86%E8%A7%84/"/>
     <id>http://liuqinh2s.github.io/blog/2018/04/30/椭圆规/</id>
@@ -303,6 +281,30 @@
       <category term="数学" scheme="http://liuqinh2s.github.io/blog/categories/%E6%95%B0%E5%AD%A6/"/>
     
       <category term="解析几何" scheme="http://liuqinh2s.github.io/blog/categories/%E6%95%B0%E5%AD%A6/%E8%A7%A3%E6%9E%90%E5%87%A0%E4%BD%95/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>mathjax常用公式记录</title>
+    <link href="http://liuqinh2s.github.io/blog/2018/04/30/mathjax%E5%B8%B8%E7%94%A8%E5%85%AC%E5%BC%8F%E8%AE%B0%E5%BD%95/"/>
+    <id>http://liuqinh2s.github.io/blog/2018/04/30/mathjax常用公式记录/</id>
+    <published>2018-04-29T16:00:00.000Z</published>
+    <updated>2018-09-19T11:26:52.936Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;角度记法&quot;&gt;&lt;a href=&quot;#角度记法&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="LaTex" scheme="http://liuqinh2s.github.io/blog/categories/LaTex/"/>
     
     
   </entry>
