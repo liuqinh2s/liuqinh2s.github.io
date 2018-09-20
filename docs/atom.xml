@@ -104,6 +104,30 @@
   </entry>
   
   <entry>
+    <title>APUE读书笔记--Unix System Overview</title>
+    <link href="http://liuqinh2s.github.io/blog/2018/05/22/APUE%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0--Unix%20System%20Overview/"/>
+    <id>http://liuqinh2s.github.io/blog/2018/05/22/APUE读书笔记--Unix System Overview/</id>
+    <published>2018-05-21T16:00:00.000Z</published>
+    <updated>2018-09-20T12:57:28.695Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;1-1-Introduction&quot;&gt;&lt;a href=&quot;#1-1-Introduction&quot; class=&quot;headerlink&quot; title=&quot;1.1    Introduction&quot;&gt;&lt;/a&gt;1.1    Introduction&lt;/h2&gt;&lt;p&gt;All
+        
+      
+    
+    </summary>
+    
+      <category term="Unix" scheme="http://liuqinh2s.github.io/blog/categories/Unix/"/>
+    
+    
+  </entry>
+  
+  <entry>
     <title>Linux Shell 配色</title>
     <link href="http://liuqinh2s.github.io/blog/2018/05/08/Linux-Shell-%E9%85%8D%E8%89%B2/"/>
     <id>http://liuqinh2s.github.io/blog/2018/05/08/Linux-Shell-配色/</id>
@@ -509,32 +533,6 @@
 &lt;ol&gt;
 &lt;li&gt;要注意 C++ 的 switch 不能使用 string，所以只好写成 if 来判断了。&lt;/li&gt;
 &lt;li&gt;另外一个值得注意的地方是，空格会中断标准输入，所以不能使用一个 string 来装下一行输入，而是分别用 string
-        
-      
-    
-    </summary>
-    
-      <category term="ACM" scheme="http://liuqinh2s.github.io/blog/categories/ACM/"/>
-    
-      <category term="POJ" scheme="http://liuqinh2s.github.io/blog/categories/ACM/POJ/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>POJ 1007 DNA sorting</title>
-    <link href="http://liuqinh2s.github.io/blog/2018/02/21/POJ-1007-DNA-sorting/"/>
-    <id>http://liuqinh2s.github.io/blog/2018/02/21/POJ-1007-DNA-sorting/</id>
-    <published>2018-02-20T16:00:00.000Z</published>
-    <updated>2018-06-10T11:59:35.570Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;这道题有点尴尬，刚开始一直没看懂，主要是先入为主，以为是对每一串字符串做排序，最后发现居然是根据每一串 DNA
         
       
     

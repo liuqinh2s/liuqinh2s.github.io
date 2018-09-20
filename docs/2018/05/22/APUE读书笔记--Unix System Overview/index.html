@@ -1,0 +1,1487 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="en">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/blog/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/blog/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/blog/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/blog/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="https://wx4.sinaimg.cn/mw690/006zFO3ggy1flfabofnt8j300w00wdfl.jpg?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="https://wx2.sinaimg.cn/mw690/006zFO3ggy1flfadbgxwej300g00g0rz.jpg?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/blog/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+  <link rel="alternate" href="/blog/atom.xml" title="liuqinh2s' blog" type="application/atom+xml" />
+
+
+
+
+
+
+<meta name="description" content="1.1    IntroductionAll operating systems provide services for programs they run. Typical services include executing a new program, opening a file, reading a file, allocating a region of memory, gettin">
+<meta property="og:type" content="article">
+<meta property="og:title" content="APUE读书笔记--Unix System Overview">
+<meta property="og:url" content="http://liuqinh2s.github.io/blog/2018/05/22/APUE读书笔记--Unix System Overview/index.html">
+<meta property="og:site_name" content="liuqinh2s&#39; blog">
+<meta property="og:description" content="1.1    IntroductionAll operating systems provide services for programs they run. Typical services include executing a new program, opening a file, reading a file, allocating a region of memory, gettin">
+<meta property="og:locale" content="en">
+<meta property="og:image" content="https://i.loli.net/2018/05/22/5b03742b0a818.png">
+<meta property="og:image" content="https://i.loli.net/2018/05/23/5b04b995bf5e1.png">
+<meta property="og:image" content="https://i.loli.net/2018/05/25/5b07d2d3861c0.png">
+<meta property="og:updated_time" content="2018-09-20T12:57:28.695Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="APUE读书笔记--Unix System Overview">
+<meta name="twitter:description" content="1.1    IntroductionAll operating systems provide services for programs they run. Typical services include executing a new program, opening a file, reading a file, allocating a region of memory, gettin">
+<meta name="twitter:image" content="https://i.loli.net/2018/05/22/5b03742b0a818.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/blog/',
+    scheme: 'Pisces',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://liuqinh2s.github.io/blog/2018/05/22/APUE读书笔记--Unix System Overview/"/>
+
+
+
+
+
+  <title>APUE读书笔记--Unix System Overview | liuqinh2s' blog</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="en">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/blog/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">liuqinh2s' blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/blog/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/blog/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            About
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-computer-science">
+          <a href="/blog/ComputerScience/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-bug"></i> <br />
+            
+            Computer Science
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-life-experience">
+          <a href="/blog/LifeExperience/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-bank"></i> <br />
+            
+            Life Experience
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-math">
+          <a href="/blog/Math/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-coffee"></i> <br />
+            
+            Math
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            Search
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off"
+             placeholder="Searching..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://liuqinh2s.github.io/blog/blog/2018/05/22/APUE读书笔记--Unix System Overview/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="liuqinh2s">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="https://wx4.sinaimg.cn/mw690/006zFO3gly1flf4xnd5q9j30ku0ku75r.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="liuqinh2s' blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">APUE读书笔记--Unix System Overview</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-05-22T00:00:00+08:00">
+                2018-05-22
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/blog/categories/Unix/" itemprop="url" rel="index">
+                    <span itemprop="name">Unix</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="page-pv"><i class="fa fa-file-o"></i>
+            <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>
+            </span>
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Words count in article&#58;</span>
+                
+                <span title="Words count in article">
+                  12,245
+                </span>
+              
+
+              
+
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="1-1-Introduction"><a href="#1-1-Introduction" class="headerlink" title="1.1    Introduction"></a>1.1    Introduction</h2><p>All operating systems provide services for programs they run. Typical services include executing a new program, opening a file, reading a file, allocating a region of memory, getting the current time of day, and so on. The focus of this text is to describe the services provided by various versions of the UNIX operating system. 所有的操作系统都提供一些服务让程序能够在其上运行，典型的服务包括：执行一个新程序，打开一个文件，读取一个文件，分配一块内存，获取当前时间，等等。 这本书所关注的重点就是众多种类的unix操作系统能提供服务。</p>
+<p>Describing the UNIX System in a strictly linear fashion, without any forward references to terms that haven’t been described yet, is nearly impossible (and would probably be boring). 这里道出了一个众所周知的难题，想要线性的给读者讲授一个新课程，在讲授一个知识点时却又不引进任何其他的未知概念，这几乎是不可能的。</p>
+<blockquote>
+<p>但我认为能不能做到，不用去管，做教育的就是要尽可能的降低学习者的难度，将新知识点尽可能的用学习者已有的知识结构描述清楚。所以我们可以看到我们的课程都是有选修课的。</p>
+</blockquote>
+<h2 id="1-2-Unix-Architecture"><a href="#1-2-Unix-Architecture" class="headerlink" title="1.2    Unix Architecture"></a>1.2    Unix Architecture</h2><p><img src="https://i.loli.net/2018/05/22/5b03742b0a818.png" width="50%"></p>
+<ul>
+<li>内核（kernel）：In a strict sense, an operating system can be defined as the software that <strong>controls the hardware resources of the computer</strong> and <strong>provides an environment under which programs can run</strong>. Generally, we call this software the kernel, since it is <strong>relatively small and resides at the core of the environment</strong>. 内核控制硬件资源，并给其上的程序提供运行环境，内核相对（相对是指相对于上面这张图，整个软件环境：包括内核、系统调用、公用函数库、shell(命令解释器)、应用程序）来说比较小，并处于整个环境的中心。</li>
+<li>系统调用（system calls）：<strong>The interface to the kernel</strong> is a layer of software called the system calls . 系统调用是内核对外的接口。</li>
+<li>Libraries of common functions are built on top of the system call interface, but applications are free to use both. The shell is a special application that provides an interface for running other applications. 公共库是建立在系统调用之上的，但应用程序既可以使用公共库也可以使用系统调用。shell是一种特殊的应用程序，给执行命令(运行其他程序)提供接口。</li>
+</ul>
+<h2 id="1-3-Logging-In"><a href="#1-3-Logging-In" class="headerlink" title="1.3    Logging In"></a>1.3    Logging In</h2><h3 id="Login-Name"><a href="#Login-Name" class="headerlink" title="Login Name"></a>Login Name</h3><p><strong>口令文件（password file）</strong> ：当我们使用用户名和密码登陆unix的时候，系统会在<code>/etc/passwd</code>文件(password file，又叫：口令文件)中查找我们的用户名，口令文件中每个条目占一行，格式是：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">登录名:加密过的密码:user ID:group ID:注解:home目录:shell</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>不过加密过的密码现在也不显示在这个文件里了，而是用一个<code>*</code>号或者<code>x</code>号之类的取代，home目录又称为起始目录，新开一个shell，<code>pwd</code>一下，就是home目录。</p>
+</blockquote>
+<p>例子：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sar:x:205:105:Stephen Rago:/home/sar:/bin/ksh</span><br></pre></td></tr></table></figure>
+<p>登录名是sar，加密过的密码是<code>x</code>（不显示在这里），user ID是205，group ID是105，注解是Stephen Rago，home目录是<code>/home/sar</code>，使用的shell是<code>/bin/ksh</code></p>
+<h3 id="Shells"><a href="#Shells" class="headerlink" title="Shells"></a>Shells</h3><p>A shell is a command-line interpreter that reads user input and executes commands. The user input to a shell is normally from the terminal (an interactive shell) or sometimes from a file (called a shell script). shell是一种命令解释器，可以读取用户的输入，并执行命令，用户可以交互式的输入命令，也可以把命令预先全部写在一个文本文件（shell脚本）中让shell执行。</p>
+<p>常见的shell有：</p>
+<p><img src="https://i.loli.net/2018/05/23/5b04b995bf5e1.png" width="70%"></p>
+<p>The system knows which shell to execute for us based on the final field in our entry in the password file. 系统是通过口令文件的最后一个字段知道我们登陆时使用哪个shell。</p>
+<p><code>bash</code>的全称是<code>Bourne-again shell</code></p>
+<p>The Bourne-again shell is the GNU shell provided with all Linux systems. It was designed to be POSIX conformant, while still remaining compatible with the Bourne shell. It supports features from both the C shell and the Korn shell.</p>
+<h2 id="1-4-Files-and-Directories"><a href="#1-4-Files-and-Directories" class="headerlink" title="1.4     Files and Directories"></a>1.4     Files and Directories</h2><h3 id="File-System"><a href="#File-System" class="headerlink" title="File System"></a>File System</h3><ul>
+<li><strong>根目录（root）</strong>：The UNIX file system is a hierarchical arrangement of directories and files. Everything starts in the directory called root, whose name is the single character /. unix文件系统是目录和文件的层级安排，所有东西都从一个叫root的目录开始，root的名字是一个单字符：<code>/</code>。</li>
+<li><strong>目录（directory）</strong>：A directory is a file that contains directory entries. Logically, we can think of each directory entry as containing a filename along with a structure of information describing the attributes of the file. The attributes of a file are such things as the type of file (regular file, directory), the size of the file, the owner of the file, permissions for the file (whether other users may access this file), and when the file was last modified. 目录是一个包含目录条目的文件。逻辑上，我们可以认为每一个目录条目包含一个文件名和一个描述文件属性的结构信息。文件属性包括：文件类型（普通文件还是目录），文件大小，文件所属者，文件权限（其他用户是否能访问），文件最后被修改的时间。</li>
+</ul>
+<blockquote>
+<p>The stat and fstat functions return a structure of information containing all the attributes of a file. <code>stat</code>和<code>fstat</code>函数可以返回一个结构信息，包含文件的所有属性。</p>
+</blockquote>
+<blockquote>
+<p>We make a distinction between the logical view of a directory entry and the way it is actually stored on disk. Most implementations of UNIX file systems don’t store attributes in the directory entries themselves, because of the difficulty of keeping them in synch when a file has multiple hard links. 也就是说上面目录条目只是逻辑上的，实际上在硬盘存储上并不是直接将目录条目中的那些属性存储在目录文件中的，因为如果文件有硬链接的话，很难让这些属性信息保持同步。</p>
+</blockquote>
+<h3 id="Filename"><a href="#Filename" class="headerlink" title="Filename"></a>Filename</h3><p><strong>文件名</strong>：The names in a directory are called filenames. The only two characters that cannot appear in a filename are the slash character (/) and the null character. The slash separates the filenames that form a pathname (described next) and the null character terminates a pathname. Nevertheless, it’s good practice to restrict the characters in a filename to a subset of the normal printing characters. (If we use some of the shell’s special characters in the filename, we have to use the shell’s quoting mechanism to reference the filename, and this can get complicated.) Indeed, for portability, POSIX.1 recommends restricting filenames to consist of the following characters: letters (a-z, A-Z), numbers (0-9), period (.), dash (-), and underscore (<em>).<br>一个目录中的诸多名字（包括文件和目录）称为文件名，只有两个字符不能出现在文件名中：<code>斜杠/(slash)</code>和<code>空字符(null character)</code>，斜杠用来分割<code>路径名(pathname)</code>中的文件名，空字符用来结束一个路径名（实际上编程语言中字符串就是由空字符来结束的）。然而，我们命名文件的时候最好不要使用一些乱七八糟的字符，如果我们使用了shell的特殊字符，我们就必须使用shell的引用机制去引用文件名。实际上，为了可移植性，POSIX.1标准推荐严格使用以下字符来命名文件：字母(a-z, A-Z)，数字(0-9)，点(.)，中杠(-)，下划线(</em>)。</p>
+<p>Two filenames are automatically created whenever a new directory is created: . (called dot) and .. (called dot-dot). Dot refers to the current directory, and dot-dot refers to the parent directory. In the root directory, dot-dot is the same as dot. 有两个文件名在目录被创建的时候自动创建：<code>.</code>和<code>..</code>，<code>.</code>指向当前目录，<code>..</code>指向父目录，在根目录中，<code>..</code>和<code>.</code>一样（都指向当前目录）。</p>
+<blockquote>
+<p>The Research UNIX System and some older UNIX System V file systems restricted a filename to 14 characters. BSD versions extended this limit to 255 characters. Today, almost all commercial UNIX file systems support at least 255-character filenames. 现如今的unix文件系统都支持至少255字符的文件名。</p>
+</blockquote>
+<h3 id="Pathname"><a href="#Pathname" class="headerlink" title="Pathname"></a>Pathname</h3><p>A sequence of one or more filenames, separated by slashes and optionally starting with a slash, forms a pathname. A pathname that begins with a slash is called an absolute pathname; otherwise, it’s called a relative pathname. Relative pathnames refer to files relative to the current directory. 一系列的由斜杠分割而开的文件名组成一个路径名，一个路径名可以由一个斜杠开始，这叫做：<code>绝对路径</code>，反之就是相对路径，相对路径是相对于当前路径的。</p>
+<h3 id="Example"><a href="#Example" class="headerlink" title="Example"></a>Example</h3><p>Listing the names of all the files in a directory is not difficult. There is a bare-bones implementation of the ls(1) command:</p>
+<blockquote>
+<p>Figure 1.3 List all the files in a directory </p>
+</blockquote>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">"apue.h"</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;dirent.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">int</span> argc, <span class="keyword">char</span> *argv[])</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">   DIR *dp;</span><br><span class="line">   <span class="class"><span class="keyword">struct</span> <span class="title">dirent</span> *<span class="title">dirp</span>;</span></span><br><span class="line">   <span class="keyword">if</span> (argc != <span class="number">2</span>)</span><br><span class="line">       err_quit(<span class="string">"usage: ls directory_name"</span>);</span><br><span class="line">   <span class="keyword">if</span> ((dp = opendir(argv[<span class="number">1</span>])) == <span class="literal">NULL</span>)</span><br><span class="line">       err_sys(<span class="string">"can’t open %s"</span>, argv[<span class="number">1</span>]);</span><br><span class="line">   <span class="keyword">while</span> ((dirp = readdir(dp)) != <span class="literal">NULL</span>)</span><br><span class="line">       <span class="built_in">printf</span>(<span class="string">"%s\n"</span>, dirp-&gt;d_name);</span><br><span class="line">    closedir(dp);</span><br><span class="line">    <span class="built_in">exit</span>(<span class="number">0</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>The notation ls(1) is the normal way to reference a particular entry in the UNIX system manuals. It refers to the entry for ls in Section 1. The sections are normally numbered 1 through 8, and all the entries within each section are arranged alphabetically. Throughout this text, we assume that you have a copy of the manuals for your UNIX system.  熟悉unix的人应该都知道，unix有个man命令，可以查看其它命令的说明书，当然也可以<code>man man</code>查看自己的说明书。 man命令有8个section，每个section里的条目按照字幕顺序排列。</p>
+<blockquote>
+<p>Historically, UNIX systems lumped all eight sections together into what was called the UNIX Programmer’s Manual. As the page count increased, the trend changed to distributing the sections among separate manuals: <strong>one for users, one for programmers, and one for system administrators</strong>, for example. Some UNIX systems further divide the manual pages within a given section, using an uppercase letter. For example, all the standard input/output (I/O) functions in AT&amp;T [1990e] are indicated as being in Section 3S, as in fopen(3S). Other systems have replaced the numeric sections with alphabetic ones, such as C for commands. </p>
+</blockquote>
+<p>Today, most manuals are distributed in electronic form. If your manuals are online, the way to see the manual pages for the ls command would be something like </p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">man 1 ls</span><br></pre></td></tr></table></figure>
+<p>or</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">man -s1 ls</span><br></pre></td></tr></table></figure>
+<p>Figure 1.3 is a program that just prints the name of every file in a directory, and nothing else. If the source file is named myls.c, we compile it into the default a.out executable file by running </p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cc myls.c</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>Historically, cc(1) is the C compiler. On systems with the GNU C compilation system, the C </p>
+<p>compiler is gcc(1). Here, cc is usually linked to gcc. </p>
+</blockquote>
+<p>但在实际的操作过程中，遇到了如下错误：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">Undefined symbols for architecture x86_64:</span><br><span class="line">  &quot;_err_quit&quot;, referenced from:</span><br><span class="line">      _main in fig1-457251.o</span><br><span class="line">  &quot;_err_sys&quot;, referenced from:</span><br><span class="line">      _main in fig1-457251.o</span><br><span class="line">ld: symbol(s) not found for architecture x86_64</span><br><span class="line">clang: error: linker command failed with exit code 1 (use -v to see invocation)</span><br></pre></td></tr></table></figure>
+<p>这是个链接错误，具体的解决办法请看这篇博客：<a href="https://my.oschina.net/alextuan/blog/530425" target="_blank" rel="noopener">OS X下UNIX环境高级编程（第三版）学习日志－第一章ChapterI，编译apue包与第一个例程</a></p>
+<ul>
+<li>When the program is done, it calls the function exit with an argument of 0. The function exit terminates a program. By convention, an argument of 0 means OK, and an argument between 1 and 255 means that an error occurred.  <strong>0代表OK，1到255代表各种类型的错误</strong>。</li>
+</ul>
+<h3 id="Working-Directory"><a href="#Working-Directory" class="headerlink" title="Working Directory"></a>Working Directory</h3><p><strong>工作目录（working directory）</strong>：Every process has a working directory, sometimes called the <strong>current working directory</strong>. This is the directory from which all relative pathnames are interpreted. A process can change its working directory with the <code>chdir</code> function.  每个进程都有一个工作目录，又叫做：当前工作目录，相对路径就是相对于当前工作目录的来解释的，可以调用<code>chdir</code>函数来改变工作目录。</p>
+<p>For example, the relative pathname doc/memo/joe refers to the file or directory joe, in the directory memo, in the directory doc, which must be a directory within the working directory. From looking just at this pathname, we know that both doc and memo have to be directories, but we can’t tell whether joe is a file or a directory. The pathname /usr/lib/lint is an absolute pathname that refers to the file or directory lint in the directory lib, in the directory usr, which is in the root directory.  这里有趣的一点是，我们无法判断joe是文件还是目录。</p>
+<h3 id="Home-Directory"><a href="#Home-Directory" class="headerlink" title="Home Directory"></a>Home Directory</h3><p>When we log in, the working directory is set to our <strong>home directory</strong>. Our home directory is obtained from our entry in the <strong>password file</strong> (Section 1.3).  当我们登陆的时候，工作目录会设定为home目录，而我们的home目录设置在口令文件中。</p>
+<h2 id="1-5-Input-and-Output"><a href="#1-5-Input-and-Output" class="headerlink" title="1.5    Input and Output"></a>1.5    Input and Output</h2><h3 id="File-Descriptors"><a href="#File-Descriptors" class="headerlink" title="File Descriptors"></a>File Descriptors</h3><p><strong>文件描述符（file descriptor）</strong>：File descriptors are normally small non-negative integers that the kernel uses to identify the files accessed by a process. Whenever it opens an existing file or creates a new file, the kernel returns a file descriptor that we use when we want to read or write the file.  文件描述符是一个小的非负整数，内核用它来标识正在被进程访问的文件。打开或者创建文件的时候内核会返回一个文件描述符，我们可以使用这个文件描述符来对文件进行读写。</p>
+<h3 id="Standard-Input-Standard-Output-and-Standard-Error"><a href="#Standard-Input-Standard-Output-and-Standard-Error" class="headerlink" title="Standard Input, Standard Output, and Standard Error"></a>Standard Input, Standard Output, and Standard Error</h3><p><strong>标准输入，标准输出，标准错误</strong>：By convention, all shells open three descriptors whenever a new program is run: standard input, standard output, and standard error. If nothing special is done, as in the simple command </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ls</span><br></pre></td></tr></table></figure>
+<p>then <strong>all three are connected to the terminal</strong>. Most shells provide a way to redirect any or all of these three descriptors to any file. For example, </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ls &gt; file.list</span><br></pre></td></tr></table></figure>
+<p>executes the ls command with its standard output redirected to the file named </p>
+<p>file.list. </p>
+<p><strong>按照惯例，当新程序运行的时候，shell会打开三个文件描述符：标准输入，标准输出，标准错误。如果没有进行指明，那么三个文件描述符都会连接到终端。</strong></p>
+<h3 id="Unbuffered-I-O"><a href="#Unbuffered-I-O" class="headerlink" title="Unbuffered I/O"></a>Unbuffered I/O</h3><p>Unbuffered I/O is provided by the functions <code>open</code>, <code>read</code>,<code>write</code>, <code>lseek</code>, and <code>close</code>. These functions all work with file descriptors. <strong>unbuffered I/O</strong>意思是系统不提供buffer管理，要你自己申请buffer，并传递给系统函数。</p>
+<h3 id="Example-1"><a href="#Example-1" class="headerlink" title="Example"></a>Example</h3><p>If we’re willing to read from the standard input and write to the standard output, then the program in Figure 1.4 copies any regular file on a UNIX system. </p>
+<blockquote>
+<p>Figure 1.4 Copy standard input to standard output </p>
+</blockquote>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">"apue.h"</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> BUFFSIZE 4096</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> n;</span><br><span class="line">    <span class="keyword">char</span> buf[BUFFSIZE];</span><br><span class="line">    <span class="keyword">while</span> ((n = read(STDIN_FILENO, buf, BUFFSIZE)) &gt; <span class="number">0</span>)</span><br><span class="line">        <span class="keyword">if</span> (write(STDOUT_FILENO, buf, n) != n)</span><br><span class="line">            err_sys(<span class="string">"write error"</span>);</span><br><span class="line">    <span class="keyword">if</span> (n &lt; <span class="number">0</span>)</span><br><span class="line">        err_sys(<span class="string">"read error"</span>);</span><br><span class="line">true<span class="built_in">exit</span>(<span class="number">0</span>); </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>下面是对程序的解释：</p>
+<p>The <code>&lt;unistd.h&gt;</code> header, included by <code>apue.h</code>, and the two constants <code>STDIN_FILENO</code> and <code>STDOUT_FILENO</code> are part of the POSIX standard (about which we’ll have a lot more to say in the next chapter). This header contains function prototypes for many of the UNIX system services, such as the <code>read</code> and <code>write</code> functions that we call. </p>
+<p>The constants STDIN_FILENO and STDOUT_FILENO are defined in &lt;unistd.h&gt; and specify the file descriptors for standard input and standard output. <strong>These values are 0 and 1, respectively, as required by POSIX.1</strong>, but we’ll use the names for readability. POSIX.1标准：<strong>标准输入是0，标准输出是1，标准错误是2</strong>。</p>
+<p>The <code>read</code> function returns the number of bytes that are read, and this value is used as the number of bytes to <code>write</code>. When the end of the input file is encountered, read returns 0 and the program stops. If a read error occurs, read returns −1. Most of the system functions return −1 when an error occurs.  <code>read</code>函数返回的是读入字节的个数，把这个返回值传给<code>write</code>函数，就可以读多少写多少了，当遇到输入文件结束时，read函数返回0，当遇到错误时，read函数返回-1。<strong>许多系统函数返回-1，当它们遇到错误时</strong>。</p>
+<p>If we compile the program into the standard name (a.out) and execute it as </p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./a.out &gt; data</span><br></pre></td></tr></table></figure>
+<p>standard input is the terminal, standard output is redirected to the file data, and standard error is also the terminal. <strong>If this output file doesn’t exist, the shell creates it by default</strong>. The program copies lines that we type to the standard output <strong>until we type the end-of-file character (usually Control-D)</strong>. </p>
+<p>If we run </p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./a.out &lt; infile &gt; outfile</span><br></pre></td></tr></table></figure>
+<p>then the file named infile will be copied to the file named outfile. </p>
+<p>如果文件不存在，shell默认给我们创建一个。标准输入和标准错误都是终端，我们可以一直输入，直到输入一个文件结束符，也就是<code>ctrl+d</code>。</p>
+<h3 id="Standard-I-O"><a href="#Standard-I-O" class="headerlink" title="Standard I/O"></a>Standard I/O</h3><p>The standard I/O functions provide a buffered interface to the unbuffered I/O functions. <strong>Using standard I/O relieves us from having to choose optimal buffer sizes</strong>, such as the BUFFSIZE constant in Figure 1.4. The standard I/O functions also simplify dealing with lines of input (a common occurrence in UNIX applications). <strong>The <code>fgets</code> function, for example, reads an entire line. The read function, in contrast, reads a specified number of bytes</strong>. As we shall see in Section 5.4, the standard I/O library provides functions that let us control the style of buffering used by the library. 标准I/O函数给unbuffered I/O 函数提供了缓冲接口，使用标准I/O函数可以让我们从优化buffer大小中解脱出来，举个例子，<code>fgets</code>函数直接读取一整行，而<code>read</code>函数读取固定个数的字节。</p>
+<p>The most common standard I/O function is <code>printf</code>. In programs that call printf, we’ll always include &lt;stdio.h&gt;—normally by including apue.h—as this header contains the function prototypes for all the standard I/O functions. </p>
+<h3 id="Example-2"><a href="#Example-2" class="headerlink" title="Example"></a>Example</h3><p>The program in Figure 1.5, which we’ll examine in more detail in Section 5.8, is like the previous program that called read and write. This program copies standard input to standard output and can copy any regular file. </p>
+<blockquote>
+<p>Figure 1.5 Copy standard input to standard output, using standard I/O </p>
+</blockquote>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">"apue.h"</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">true<span class="keyword">int</span> c;</span><br><span class="line">    <span class="keyword">while</span> ((c = getc(<span class="built_in">stdin</span>)) != EOF)</span><br><span class="line">    	<span class="keyword">if</span> (putc(c, <span class="built_in">stdout</span>) == EOF)</span><br><span class="line">    		err_sys(<span class="string">"output error"</span>);</span><br><span class="line">    <span class="keyword">if</span> (ferror(<span class="built_in">stdin</span>))</span><br><span class="line">    	err_sys(<span class="string">"input error"</span>);</span><br><span class="line">true<span class="built_in">exit</span>(<span class="number">0</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><strong>The function getc reads one character at a time, and this character is written by putc</strong>. After the last byte of input has been read, getc returns the constant EOF (defined in &lt;stdio.h&gt;). The standard I/O constants stdin and stdout are also defined in the &lt;stdio.h&gt; header and refer to the standard input and standard output. </p>
+<h2 id="1-6-Programs-and-Processes"><a href="#1-6-Programs-and-Processes" class="headerlink" title="1.6    Programs and Processes"></a>1.6    Programs and Processes</h2><h3 id="Program"><a href="#Program" class="headerlink" title="Program"></a>Program</h3><p>A program is an executable file residing on disk in a directory. A program is read into memory and is executed by the kernel as a result of one of the <strong>seven exec functions</strong>. </p>
+<h3 id="Processes-and-Process-ID"><a href="#Processes-and-Process-ID" class="headerlink" title="Processes and Process ID"></a>Processes and Process ID</h3><p>An executing instance of a program is called a <strong>process</strong>, a term used on almost every page of this text. Some operating systems use the term <strong>task</strong> to refer to a program that is being executed.  程序运行的一个实例叫做：进程，也有些操作系统使用：task这个术语来描述被执行的程序。</p>
+<p>The UNIX System guarantees that every process has a unique numeric identifier called the process ID. The process ID is always a non-negative integer. unix系统保证每个进程都有独一无二的进程ID，这个进程ID是一个非负整数。</p>
+<h3 id="Example-3"><a href="#Example-3" class="headerlink" title="Example"></a>Example</h3><p>The program in Figure 1.6 prints its process ID. </p>
+<blockquote>
+<p>Figure 1.6 Print the process ID  </p>
+</blockquote>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">"apue.h"</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"hello world from process ID %ld\n"</span>, (<span class="keyword">long</span>)getpid());</span><br><span class="line">    <span class="built_in">exit</span>(<span class="number">0</span>); </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>输出结果：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">➜  apue.3e ./fig1.6</span><br><span class="line">hello world from process ID 8080</span><br><span class="line">➜  apue.3e ./fig1.6</span><br><span class="line">hello world from process ID 8086</span><br></pre></td></tr></table></figure>
+<h3 id="Process-Control"><a href="#Process-Control" class="headerlink" title="Process Control"></a>Process Control</h3><p>There are three primary functions for process control: <code>fork</code>, <code>exec</code>, and <code>waitpid</code>. (The exec function has seven variants, but we often refer to them collectively as simply the exec function.)  有三个进程控制的基本函数：<code>fork</code>，<code>exec</code>和<code>waitpid</code>，虽然exec函数有7种变体，但我们往往简单的用一个exec来表示它们。</p>
+<h3 id="Example-4"><a href="#Example-4" class="headerlink" title="Example"></a>Example</h3><p>The process control features of the UNIX System are demonstrated using a simple program (Figure 1.7) that reads commands from standard input and executes the commands. This is a bare-bones implementation of a shell-like program. </p>
+<blockquote>
+<p>Figure 1.7 Read commands from standard input and execute them </p>
+</blockquote>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">"include/apue.h"</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;sys/wait.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">char</span>    buf[MAXLINE];   <span class="comment">/* from apue.h */</span></span><br><span class="line">    <span class="keyword">pid_t</span>   pid;</span><br><span class="line">    <span class="keyword">int</span>     status;</span><br><span class="line"></span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"%% "</span>);  <span class="comment">/* print prompt (printf requires %% to print %) */</span></span><br><span class="line">    <span class="keyword">while</span> (fgets(buf, MAXLINE, <span class="built_in">stdin</span>) != <span class="literal">NULL</span>) &#123;</span><br><span class="line">        <span class="keyword">if</span> (buf[<span class="built_in">strlen</span>(buf) - <span class="number">1</span>] == <span class="string">'\n'</span>)</span><br><span class="line">            buf[<span class="built_in">strlen</span>(buf) - <span class="number">1</span>] = <span class="number">0</span>; <span class="comment">/* replace newline with null */</span></span><br><span class="line">        <span class="keyword">if</span> ((pid = fork()) &lt; <span class="number">0</span>) &#123;</span><br><span class="line">            err_sys(<span class="string">"fork error"</span>);</span><br><span class="line">        &#125; <span class="keyword">else</span> <span class="keyword">if</span> (pid == <span class="number">0</span>) &#123;      <span class="comment">/* child */</span></span><br><span class="line">            execlp(buf, buf, (<span class="keyword">char</span> *)<span class="number">0</span>);</span><br><span class="line">            <span class="comment">// or</span></span><br><span class="line">            <span class="comment">// execlp(buf, buf, (char *)NULL);</span></span><br><span class="line">            err_ret(<span class="string">"couldn’t execute: %s"</span>, buf);</span><br><span class="line">            <span class="built_in">exit</span>(<span class="number">127</span>);</span><br><span class="line">truetrue&#125;</span><br><span class="line">        <span class="comment">/* parent */</span></span><br><span class="line">        <span class="keyword">if</span> ((pid = waitpid(pid, &amp;status, <span class="number">0</span>)) &lt; <span class="number">0</span>)</span><br><span class="line">            err_sys(<span class="string">"waitpid error"</span>);</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">"%% "</span>);</span><br><span class="line">true&#125;</span><br><span class="line">true<span class="built_in">exit</span>(<span class="number">0</span>); </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>There are several features to consider in this 30-line program. </p>
+<ul>
+<li>We use the standard I/O function fgets to read one line at a time from the standard input. When we type the end-of-file character (which is often Control-D) as the first character of a line, fgets returns a null pointer, the loop stops, and the process terminates. In Chapter 18, we describe all the special terminal characters—end of file, backspace one character, erase entire line, and so on—and how to change them.  我们使用了标准I/O函数<code>fgets</code>来一次读取标准输入的一行。当我们直接输入一个EOF时，fgets返回一个空指针，循环停止，进程终止。在第18章，我们将讲述特殊终止符，比如：end of file，backspace one character, erase entire line, 等等，以及如何改变它们。</li>
+<li>Because each line returned by fgets is terminated with a newline character, followed by a null byte, we use the standard C function strlen to calculate the length of the string, and then replace the newline with a null byte. We do this because the execlp function wants a null-terminated argument, not a newline-terminated argument.  因为fgets返回的每一行都被一个换行符终止，换行符之后是一个空字符，我们使用标准C函数<code>strlen</code>来计算string的长度，然后将换行符替换成空字符（这样末尾就两个空字符了）。我们这样做是因为<code>execlp</code>函数希望有一个空字符来作为结尾参数，而不是一个换行符。</li>
+<li>We call fork to create a new process, which is a copy of the caller. We say that the caller is the parent and that the newly created process is the child. Then fork returns the non-negative process ID of the new child process to the parent, and returns 0 to the child. Because fork creates a new process, we say that it is called once—by the parent—but returns twice—in the parent and in the child.  我们调用<code>fork</code>创建一个新进程，这个新进程是调用进程的一个复制。我们说，调用者是父进程，新创建出来的进程是子进程。<strong>然后fork返回子进程的非负进程ID给父进程，并返回0给子进程</strong>。因为fork创建了一个新进程，<strong>我们说它调用了一次（被父进程），但是返回了两次</strong>，在父进程和子进程里面。</li>
+<li>In the child, we call execlp to execute the command that was read from the standard input. This replaces the child process with the new program file. The combination of fork followed by exec is called spawning a new process on some operating systems. In the UNIX System, the two parts are separated into individual functions. We’ll say a lot more about these functions in Chapter 8.  在子进程中，我们调用<code>execlp</code>来执行从标注输入中读取来的命令。这就把子进程替换成了新执行的程序。fork后面跟个exec这种结合方式被叫做 <strong>spawning a new process</strong> 在某些操作系统中。在unix系统中，这两部分被分别放到了两个单独的函数中。我们将在第8章中讨论更多的这类函数。</li>
+<li>Because the child calls execlp to execute the new program file, the parent wants to wait for the child to terminate. This is done by calling waitpid, specifying which process to wait for: the pid argument, which is the process ID of the child. The waitpid function also returns the termination status of the child—the status variable—but in this simple program, we don’t do anything with this value. We could examine it to determine how the child terminated.  因为子进程调用了<code>execlp</code>来执行新程序文件，父进程想要等子进程结束。通过调用<code>waitpid</code>可以完成这个任务，用<code>pid</code>（子进程的进程ID）参数来明确需要等待哪个进程。<code>waitpid</code>函数同样也返回子进程的终止状态（记录在status这个参数），但在这个简单的程序里，我们没有用到这个值。我们通过这个值得知子进程是如何结束的。</li>
+<li>The most fundamental limitation of this program is that we can’t pass arguments to the command we execute. We can’t, for example, specify the name of a directory to list. We can execute ls only on the working directory. To allow arguments would require that we parse the input line, separating the arguments by some convention, probably spaces or tabs, and then pass each argument as a separate parameter to the execlp function. Nevertheless, this program is still a useful demonstration of the UNIX System’s process control functions.  这个程序最大的限制就是，我们不能传递参数给我们要执行的命令。比如，我们不能给定一个目录给list程序（展示目录下的所有目录和文件的程序）。我们只能在当前目录下执行ls。如果要允许传递参数，就需要我们分析输入行，按照惯例，比如空格或者制表符，把参数分割开来，然后把参数传给execlp函数。不管怎么说，这个程序已经很好的展示了unix系统是如何控制函数的。</li>
+</ul>
+<p>If we run this program, we get the following result. Note that our program has a different prompt—the percent sign—to distinguish it from the shell’s prompt. </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">➜  apue.3e ./fig1.7</span><br><span class="line">% pwd</span><br><span class="line">/Users/liuqinh2s/Downloads/apue.3e</span><br><span class="line">% who</span><br><span class="line">liuqinh2s console  May 21 12:09</span><br><span class="line">liuqinh2s ttys000  May 21 12:10</span><br><span class="line">% date</span><br><span class="line">2018年 5月24日 星期四 15时26分59秒 CST</span><br><span class="line">% %                                                                                                                                                                                                         ➜  apue.3e</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>The notation ˆD is used to indicate a control character. Control characters are special characters formed by holding down the control key—often labeled Control or Ctrl—on your keyboard and then pressing another key at the same time. <strong>Control-D, or ˆD, is the default end-of-file character</strong>. We’ll see many more control characters when we discuss terminal I/O in Chapter 18.  <code>^D</code>这种记法用于表示控制字符，控制字符是一类特殊的字符，由<code>ctrl</code>键加一个其他键组成，<code>Control-D</code>或者说<code>^D</code>是默认的文件终止符。我们将在第18章讨论输入输出终止符的时候看到更多的控制字符。</p>
+</blockquote>
+<h3 id="Threads-and-Thread-IDs"><a href="#Threads-and-Thread-IDs" class="headerlink" title="Threads and Thread IDs"></a>Threads and Thread IDs</h3><p>Usually, a process has only one thread of control—one set of machine instructions executing at a time. Some problems are easier to solve when more than one thread of control can operate on different parts of the problem. Additionally, multiple threads of control can exploit the parallelism possible on multiprocessor systems. </p>
+<p>All threads within a process share the same address space, file descriptors, stacks, and process-related attributes. Each thread executes on its own stack, although any thread can access the stacks of other threads in the same process. Because they can access the same memory, the threads need to synchronize access to shared data among themselves to avoid inconsistencies.  属于同一个进程的多个线程共享同一块内存空间，文件描述符，栈，以及和进程相关的属性。每个线程都在自己的栈里面执行，但每个线程又能访问其他线程的栈（同属于一个进程的多个线程）。因为它们能访问同一块内存，所以为了避免不一致性，需要保护好临界资源。</p>
+<p>Like processes, threads are identified by IDs. <strong>Thread IDs, however, are local to a process</strong>. A thread ID from one process has no meaning in another process. We use thread IDs to refer to specific threads as we manipulate the threads within a process.  就像进程一样，线程也用ID标识。<strong>然而线程ID是局部的，只在某个进程内有效，出了这个进程，对其他进程来说这个线程ID就没有任何意义了。</strong></p>
+<blockquote>
+<p>threads were added to the UNIX System long after the process model was established </p>
+</blockquote>
+<h2 id="1-7-Error-Handling"><a href="#1-7-Error-Handling" class="headerlink" title="1.7    Error Handling"></a>1.7    Error Handling</h2><p>When an error occurs in one of the UNIX System functions, a negative value is often returned, and the integer <strong>errno</strong> is usually set to a value that tells why. For example, the open function returns either a non-negative file descriptor if all is OK or −1 if an error occurs. An error from open has about 15 possible errno values, such as file doesn’t exist, permission problem, and so on. Some functions use a convention other than returning a negative value. For example, most functions that return a pointer to an object return a null pointer to indicate an error.  当unix系统函数出错时，会返回一个负数，整形变量<strong>errno</strong>会设置为一个值，这个值告诉我们为什么出错。例如，open函数返回一个非负的文件描述符，如果成功的话，如果出现错误则返回一个-1。open函数返回的错误有15个可能的errno值，比如：文件不存在，权限问题，等等。有些函数使用另一个传统而非返回一个负数。例如，很多函数返回一个对象指针，或者一个空指针如果出现错误。</p>
+<p>The file &lt;errno.h&gt; defines the symbol errno and constants for each value that errno can assume. Each of these constants begins with the character E. Also, the first page of Section 2 of the UNIX system manuals, named intro(2), usually lists all these error constants. For example, if errno is equal to the constant EACCES, this indicates a permission problem, such as insufficient permission to open the requested file.  <code>&lt;errno.h&gt;</code>文件定义了变量errno和一系列常量（errno可能的值）。每个常量都以字符<code>E</code>开头。unix系统手册<code>intro(2)</code>展示了这些常量。例如，如果errno等于常量EACCES，就表示是权限问题，没有足够的权限去打开这个文件。</p>
+<blockquote>
+<p>On Linux, the error constants are listed in the errno(3) manual page. </p>
+</blockquote>
+<p>POSIX and ISO C define errno as a symbol expanding into a modifiable lvalue of type integer. This can be either an integer that contains the error number or a function that returns a pointer to the error number. The historical definition is </p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">extern</span> <span class="keyword">int</span> errno;</span><br></pre></td></tr></table></figure>
+<p>But in an environment that supports threads, the process address space is shared among multiple threads, and each thread needs its own local copy of errno to prevent one thread from interfering with another. Linux, for example, supports multithreaded access to errno by defining it as </p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">extern</span> <span class="keyword">int</span> *__errno_location(<span class="keyword">void</span>); </span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> errno (*__errno_location())</span></span><br></pre></td></tr></table></figure>
+<p>POSIX和ISO C把errno定义为一个可以修改的左值。可以定义为一个整形值，也可以定义为一个指针，指针指向错误码（String类型）。如果是多线程环境下，每个线程都有自己的一个errno拷贝。通过宏定义把errno给替换成函数：<code>int *__errno_location(void);</code>了。</p>
+<p>There are two rules to be aware of with respect to errno. First, its value is never cleared by a routine if an error does not occur. Therefore, we should examine its value only when the return value from a function indicates that an error occurred. Second, the value of errno is never set to 0 by any of the functions, and none of the constants defined in &lt;errno.h&gt; has a value of 0.  第一，如果没有出错，errno的值不会被重置，因此，我们只有在函数返回出错的时候才检查errno；第二，errno不会等于0。</p>
+<p>Two functions are defined by the C standard to help with printing error messages. </p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;string.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">char</span> *<span class="title">strerror</span><span class="params">(<span class="keyword">int</span> errnum)</span></span>;	<span class="comment">//Returns: pointer to message string</span></span><br></pre></td></tr></table></figure>
+<p>This function maps errnum, which is typically the errno value, into an error message string and returns a pointer to the string. </p>
+<p>The perror function produces an error message on the standard error, based on the current value of errno, and returns. </p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">perror</span><span class="params">(<span class="keyword">const</span> <span class="keyword">char</span>* msg)</span></span>;</span><br></pre></td></tr></table></figure>
+<p>It outputs the string pointed to by msg, followed by a colon and a space, followed by the error message corresponding to the value of errno, followed by a newline. </p>
+<h3 id="Example-5"><a href="#Example-5" class="headerlink" title="Example"></a>Example</h3><p>Figure 1.8 shows the use of these two error functions. </p>
+<blockquote>
+<p>Figure 1.8 Demonstrate strerror and perror </p>
+</blockquote>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">"apue.h"</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;errno.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">int</span> argc, <span class="keyword">char</span> *argv[])</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="built_in">fprintf</span>(<span class="built_in">stderr</span>, <span class="string">"EACCES: %s\n"</span>, strerror(EACCES));</span><br><span class="line">    errno = ENOENT;</span><br><span class="line">    perror(argv[<span class="number">0</span>]);</span><br><span class="line">    <span class="built_in">exit</span>(<span class="number">0</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>输出结果：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">➜  apue.3e ./fig1.8</span><br><span class="line">EACCES: Permission denied</span><br><span class="line">./fig1.8: No such file or directory</span><br><span class="line">➜  apue.3e</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>argv[0] 表示输入的第一个参数，也就是命令名</p>
+</blockquote>
+<h3 id="Error-Recovery"><a href="#Error-Recovery" class="headerlink" title="Error Recovery"></a>Error Recovery</h3><p>The errors defined in &lt;errno.h&gt; can be divided into two categories: fatal and nonfatal. A fatal error has no recovery action. The best we can do is print an error message on the user’s screen or to a log file, and then exit. Nonfatal errors, on the other hand, can sometimes be dealt with more robustly. Most nonfatal errors are temporary, such as a resource shortage, and might not occur when there is less activity on the system.  定义在<code>&lt;errno.h&gt;</code>中的错误可以分为两类：fatal和nonfatal，致命和非致命。致命错误没有恢复动作，我们最多能做的就是把错误信息在用户显示屏上打印出来，或者写到log文件里，然后退出。非致命错误，可以更妥善的处理，许多非致命错误都是暂时的，比如：资源短缺，当系统活动较少时这类错误可能不会发生。</p>
+<p>Resource-related nonfatal errors include <strong>EAGAIN, ENFILE, ENOBUFS, ENOLCK, ENOSPC, EWOULDBLOCK</strong>, and sometimes <strong>ENOMEM</strong>. <strong>EBUSY</strong> can be treated as nonfatal when it indicates that a shared resource is in use. Sometimes, <strong>EINTR</strong> can be treated as a nonfatal error when it interrupts a slow system call (more on this in Section 10.5).  </p>
+<p>The typical recovery action for a resource-related nonfatal error is to delay and retry later. This technique can be applied in other circumstances. For example, if an error indicates that a network connection is no longer functioning, it might be possible for the application to delay a short time and then reestablish the connection. Some applications use an exponential backoff algorithm, waiting a longer period of time in each subsequent iteration.  <strong>典型的资源相关性非致命错误的处理办法是先等一下，之后再重试。</strong></p>
+<p><strong>Ultimately, it is up to the application developer to determine the cases where an application can recover from an error. If a reasonable recovery strategy can be used, we can improve the robustness of our application by avoiding an abnormal exit. </strong></p>
+<h2 id="1-8-User-Identification"><a href="#1-8-User-Identification" class="headerlink" title="1.8    User Identification"></a>1.8    User Identification</h2><h3 id="User-ID"><a href="#User-ID" class="headerlink" title="User ID"></a>User ID</h3><p>The user ID from our entry in the password file is a numeric value that identifies us to the system. This user ID is assigned by the system administrator when our login name is assigned, and we cannot change it. The user ID is normally assigned to be unique for every user. We’ll see how the kernel uses the user ID to check whether we have the appropriate permissions to perform certain operations.  用户ID来自口令文件中对应的条目，它是以数字的形式帮助系统对我们进行标识。用户ID是系统管理员给我们分配的（当分配登录名时，同时也必须分配用户ID），我们自己无法改。每个人的用户ID应该是唯一的，内核使用用户ID来检查我们是否有合适的权限来进行一个操作。</p>
+<p>We call the user whose user ID is 0 either root or the superuser. The entry in the password file normally has a login name of root, and we refer to the special privileges of this user as superuser privileges. As we’ll see in Chapter 4, if a process has superuser privileges, most file permission checks are bypassed. Some operating system functions are restricted to the superuser. The superuser has free rein over the system.  我们把用户ID为0的用户称为：<strong>root</strong>或者<strong>superuser</strong>。口令文件中有一个条目的登录名是root，root用户拥有特殊权限。拥有superuser特权的进程可以自由的使用任意文件，而且有些操作系统函数是只对superuser开放的。superuser拥有对系统的绝对的权限（可以把系统弄残）。</p>
+<blockquote>
+<p>Client versions of Mac OS X ship with the superuser account disabled; server versions ship with the account already enabled. Instructions are available on Apple’s Web site describing how to enable it. See <a href="http://support.apple.com/kb/HT1528" target="_blank" rel="noopener">http://support.apple.com/kb/HT1528</a>. </p>
+</blockquote>
+<h3 id="Group-ID"><a href="#Group-ID" class="headerlink" title="Group ID"></a>Group ID</h3><p>Our entry in the password file also specifies our numeric group ID. This, too, is assigned by the system administrator when our login name is assigned. Typically, the password file contains multiple entries that specify the same group ID. Groups are normally used to collect users together into projects or departments. This allows the sharing of resources, such as files, among members of the same group. We’ll see in Section 4.5 that we can set the permissions on a file so that all members of a group can access the file, whereas others outside the group cannot.  Group ID的作用就是让相同组的人共享资源。</p>
+<p>There is also a group file that maps group names into numeric group IDs. The group file is usually <code>/etc/group</code>. </p>
+<p>The use of numeric user IDs and numeric group IDs for permissions is historical. With every file on disk, the file system stores both the user ID and the group ID of a file’s owner. Storing both of these values requires only four bytes, assuming that each is stored as a two-byte integer. If the full ASCII login name and group name were used instead, additional disk space would be required. In addition, comparing strings during permission checks is more expensive than comparing integers.  使用数字的用户ID和组ID是有历史原因的。对于每个存放在磁盘上的文件，文件系统都存储了该文件的拥有者的用户ID和组ID。存储这两个数字需要4字节（每个2字节），如果使用ASCII编码的登录名和组名，需要多用掉很多额外的磁盘空间。另外在检查权限是否合格时，整形数字比较要比字符串比较更快。</p>
+<p>Users, however, work better with names than with numbers, so the password file maintains the mapping between login names and user IDs, and the group file provides the mapping between group names and group IDs. The ls -l command, for example, prints the login name of the owner of a file, using the password file to map the numeric user ID into the corresponding login name.  然而对于用户来说名字比数字更好记，所以password file和group file分别记录了登录名和用户ID的映射，组名和组ID的映射。使用<code>ls -l</code>命令，可以看到打印出了文件所属者和所属的组，其原理就是查找了password file和group file，把相应的数字ID换成名字。</p>
+<blockquote>
+<p>Early UNIX systems used 16-bit integers to represent user and group IDs. Contemporary UNIX systems use 32-bit integers. </p>
+</blockquote>
+<h3 id="Example-6"><a href="#Example-6" class="headerlink" title="Example"></a>Example</h3><p>The program in Figure 1.9 prints the user ID and the group ID. </p>
+<blockquote>
+<p>Figure 1.9 Print user ID and group ID  </p>
+</blockquote>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">"apue.h"</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">true<span class="built_in">printf</span>(<span class="string">"uid = %d, gid = %d\n"</span>, getuid(), getgid());</span><br><span class="line">true<span class="built_in">exit</span>(<span class="number">0</span>); </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="Supplementary-Group-IDs"><a href="#Supplementary-Group-IDs" class="headerlink" title="Supplementary Group IDs"></a>Supplementary Group IDs</h3><p><strong>附加组（supplementary group）</strong>：In addition to the group ID specified in the password file for a login name, most versions of the UNIX System allow a user to belong to other groups. This practice started with 4.2BSD, which allowed a user to belong to up to 16 additional groups. These supplementary group IDs are obtained at login time by reading the file /etc/group and finding the first 16 entries that list the user as a member. As we shall see in the next chapter, POSIX requires that a system support at least 8 supplementary groups per process, but most systems support at least 16.  许多unix系统允许用户属于多个组，最多16个。主组，也就是登陆时的默认组记录在<code>/etc/passwd</code>中。</p>
+<p><code>/etc/group</code>格式如下：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">_analyticsusers:*:250:_analyticsd,_networkd,_timed</span><br><span class="line">_analyticsd:*:263:_analyticsd</span><br></pre></td></tr></table></figure>
+<p>解释：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">组名:口令:组ID:组内用户列表</span><br></pre></td></tr></table></figure>
+<h2 id="1-9-Signal"><a href="#1-9-Signal" class="headerlink" title="1.9    Signal"></a>1.9    Signal</h2><p>Signals are a technique used to notify a process that some condition has occurred. For example, if a process divides by zero, the signal whose name is SIGFPE (floating-point exception) is sent to the process. The process has three choices for dealing with the signal.  信号是一种用来通知进程发生了某些事的技术。举个例子：当进程除以0时，就会有一个SIGFPE (floating-point exception)发送到这个进程。进程处理信号有三种选择：</p>
+<ol>
+<li>Ignore the signal. This option isn’t recommended for signals that denote a hardware exception, such as dividing by zero or referencing memory outside the address space of the process, as the results are undefined.  忽视信号。如果是硬件异常不推荐这个选择，例如：被0除，引用进程外的内存，因为这些结果都是不确定的。</li>
+<li>Let the default action occur. For a divide-by-zero condition, the default is to terminate the process.  让默认动作出现，比如被0除的情况下，默认是终止该进程。</li>
+<li>Provide a function that is called when the signal occurs (this is called ‘‘catching’’ the signal). By providing a function of our own, we’ll know when the signal occurs and we can handle it as we wish.  我们自己提供一个函数捕获信号，这样我们就能让程序以我们的意愿处理异常。</li>
+</ol>
+<p>Many conditions generate signals. Two terminal keys, called the <strong>interrupt key</strong>— often the <strong>DELETE</strong> key or <strong>Control-C</strong>—and the <strong>quit key</strong>—often <strong>Control-backslash</strong>—are used to interrupt the currently running process. Another way to generate a signal is by calling the <code>kill</code> function. <strong>We can call this function from a process to send a signal to another process. Naturally, there are limitations: we have to be the owner of the other process (or the superuser) to be able to send it a signal</strong>.    很多条件下可以生成信号，终端键有两种，interrupt key（delete键或者ctrl+c）和 quit key（ctrl+\）。另一个生成信号的方法是调用<code>kill</code>函数，我们可以在一个进程里调用kill函数来结束另一个线程，但我们需要有权限（如果我们是另一个进程的拥有者，或者是超级用户，就可以）。</p>
+<h3 id="Example-7"><a href="#Example-7" class="headerlink" title="Example"></a>Example</h3><p>Recall the bare-bones shell example (Figure 1.7). If we invoke this program and press the interrupt key, the process terminates because the default action for this signal, named SIGINT, is to terminate the process. The process hasn’t told the kernel to do anything other than the default with this signal, so the process terminates.  如果直接执行Figure 1.7的代码，我们按下中断键，程序就会终止，因为这个SIGINT信号的默认动作就是终止进程。</p>
+<p>To catch this signal, the program needs to call the signal function, specifying the name of the function to call when the SIGINT signal is generated. The function is named sig_int; when it’s called, it just prints a message and a new prompt. Adding 11 lines to the program in Figure 1.7 gives us the version in Figure 1.10. (The 11 new lines are indicated with a plus sign at the beginning of the line.)  为了捕获这个信号，程序需要调用一个信号函数。我们给它命名为：<code>sig_int</code>函数，在捕获到<strong>SIGINT</strong>信号之后，打印信息并打印一个新的提示符。下面的程序相比Figure 1.7多了11行，用<code>+</code>号标识了。</p>
+<blockquote>
+<p>Figure 1.10 Read commands from standard input and execute them </p>
+</blockquote>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line">  <span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">"include/apue.h"</span></span></span><br><span class="line">  <span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;sys/wait.h&gt;</span></span></span><br><span class="line">  </span><br><span class="line">+ <span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">sig_int</span><span class="params">(<span class="keyword">int</span>)</span></span>;	<span class="comment">/* our signal-catching function */</span></span><br><span class="line">+</span><br><span class="line">  <span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span></span></span><br><span class="line"><span class="function">  </span>&#123;</span><br><span class="line">      <span class="keyword">char</span>    buf[MAXLINE];   <span class="comment">/* from apue.h */</span></span><br><span class="line">      <span class="keyword">pid_t</span>   pid;</span><br><span class="line">      <span class="keyword">int</span>     status;</span><br><span class="line">  </span><br><span class="line">  +	  <span class="keyword">if</span>(signal(SIGINT, sig_int) == SIG_ERR)</span><br><span class="line">          err_sys(<span class="string">"signal error"</span>);</span><br><span class="line">    </span><br><span class="line">      <span class="built_in">printf</span>(<span class="string">"%% "</span>);  <span class="comment">/* print prompt (printf requires %% to print %) */</span></span><br><span class="line">      <span class="keyword">while</span> (fgets(buf, MAXLINE, <span class="built_in">stdin</span>) != <span class="literal">NULL</span>) &#123;</span><br><span class="line">          <span class="keyword">if</span> (buf[<span class="built_in">strlen</span>(buf) - <span class="number">1</span>] == <span class="string">'\n'</span>)</span><br><span class="line">              buf[<span class="built_in">strlen</span>(buf) - <span class="number">1</span>] = <span class="number">0</span>; <span class="comment">/* replace newline with null */</span></span><br><span class="line">          <span class="keyword">if</span> ((pid = fork()) &lt; <span class="number">0</span>) &#123;</span><br><span class="line">              err_sys(<span class="string">"fork error"</span>);</span><br><span class="line">          &#125; <span class="keyword">else</span> <span class="keyword">if</span> (pid == <span class="number">0</span>) &#123;      <span class="comment">/* child */</span></span><br><span class="line">              execlp(buf, buf, (<span class="keyword">char</span> *)<span class="number">0</span>);</span><br><span class="line">              err_ret(<span class="string">"couldn’t execute: %s"</span>, buf);</span><br><span class="line">              <span class="built_in">exit</span>(<span class="number">127</span>);</span><br><span class="line">truetrue  &#125;</span><br><span class="line">          <span class="comment">/* parent */</span></span><br><span class="line">          <span class="keyword">if</span> ((pid = waitpid(pid, &amp;status, <span class="number">0</span>)) &lt; <span class="number">0</span>)</span><br><span class="line">              err_sys(<span class="string">"waitpid error"</span>);</span><br><span class="line">          <span class="built_in">printf</span>(<span class="string">"%% "</span>);</span><br><span class="line">true  &#125;</span><br><span class="line">true  <span class="built_in">exit</span>(<span class="number">0</span>); </span><br><span class="line">  &#125;</span><br><span class="line">+</span><br><span class="line">+ <span class="function"><span class="keyword">void</span> <span class="title">sig_int</span><span class="params">(<span class="keyword">int</span> signo)</span></span>&#123;</span><br><span class="line">+     <span class="built_in">printf</span>(<span class="string">"interrupt\n%% "</span>);</span><br><span class="line">+ &#125;</span><br></pre></td></tr></table></figure>
+<h2 id="1-10-Time-Values"><a href="#1-10-Time-Values" class="headerlink" title="1.10    Time Values"></a>1.10    Time Values</h2><p>Historically, UNIX systems have maintained two different time values: </p>
+<ol>
+<li><p><strong>Calendar time</strong>. This value counts the number of seconds since the <strong>Epoch: 00:00:00 January 1, 1970,Coordinated Universal Time (UTC)</strong>. (Older manuals refer to UTC as Greenwich Mean Time.) These time values are used to record the time when a file was last modified, for example. </p>
+<p>The primitive system data type <code>time_t</code> holds these time values. </p>
+</li>
+<li><p><strong>Process time</strong>. This is also called CPU time and measures the central processor resources used by a process. Process time is measured in clock ticks, which have historically been 50, 60, or 100 ticks per second. </p>
+<p>The primitive system data type <code>clock_t</code> holds these time values. (We’ll show how to obtain the number of clock ticks per second with the <code>sysconf</code> function in Section 2.5.4.) </p>
+</li>
+</ol>
+<p>有两种类型的时间：<strong>日历时间</strong>和<strong>进程时间</strong>，日历时间也就是UTC。</p>
+<p>When we measure the execution time of a process, as in Section 3.9, we’ll see that the UNIX System maintains three values for a process: </p>
+<ul>
+<li>Clock time </li>
+<li>User CPU time </li>
+<li>System CPU time </li>
+</ul>
+<p>The clock time, sometimes called <strong>wall clock time</strong>, is the amount of time the process takes to run, and its value depends on the number of other processes being run on the system. Whenever we report the clock time, the measurements are made with no other activities on the system. </p>
+<p>The user CPU time is the CPU time attributed to user instructions. The system CPU time is the CPU time attributed to the kernel when it executes on behalf of the process. For example, whenever a process executes a system service, such as read or write, the time spent within the kernel performing that system service is charged to the process. The sum of user CPU time and system CPU time is often called the CPU time. </p>
+<p>度量进程执行时间，有三种：</p>
+<ol>
+<li>墙上时钟，也就是进程执行花费的总时间。</li>
+<li>用户CPU时间，是用户模式（非内核）下的CPU使用时间</li>
+<li>系统CPU时间，是进程进入内核执行的CPU使用时间</li>
+</ol>
+<p>It is easy to measure the clock time, user time, and system time of any process: simply execute the time(1) command, with the argument to the time command being the command we want to measure. For example: </p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> cd /usr/include</span><br><span class="line"><span class="meta">$</span> time -p grep _POSIX_SOURCE */*.h &gt; /dev/null</span><br></pre></td></tr></table></figure>
+<p>结果：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">real    0m0.81s</span><br><span class="line">user    0m0.11s</span><br><span class="line">sys     0m0.07s</span><br></pre></td></tr></table></figure>
+<p>The output format from the time command depends on the shell being used, because some shells don’t run /usr/bin/time, but instead have a separate built-in function to measure the time it takes commands to run.  time命令的输出格式取决于使用什么shell，因为有些shell并不运行：<code>/usr/bin/time</code>，而是运行自己内置的一个time函数。</p>
+<h2 id="1-11-System-Calls-and-Library-Functions"><a href="#1-11-System-Calls-and-Library-Functions" class="headerlink" title="1.11    System Calls and Library Functions"></a>1.11    System Calls and Library Functions</h2><p>All operating systems provide service points through which programs request services from the kernel. All implementations of the UNIX System provide a well-defined, limited number of entry points directly into the kernel called system calls (recall Figure 1.1). Version 7 of the Research UNIX System provided about 50 system calls, 4.4BSD provided about 110, and SVR4 had around 120. The exact number of system calls varies depending on the operating system version. More recent systems have seen incredible growth in the number of supported system calls. Linux 3.2.0 has 380 system calls and FreeBSD 8.0 has over 450.  随着时间的推移，系统调用越来越多，可见系统是越来越完善的。</p>
+<p>The system call interface has always been documented in Section 2 of the UNIX Programmer’s Manual. Its definition is in the C language, no matter which implementation technique is actually used on any given system to invoke a system call. This differs from many older operating systems, which traditionally defined the kernel entry points in the assembly language of the machine.  <strong>系统调用的文档总是在unix编程手册的第二个章节里。它是用C语言定义的</strong>，不管系统具体是如何实现系统调用的。这一点与很多老操作系统不同（老操作系统使用汇编语言定义内核接口）</p>
+<p>The technique used on UNIX systems is for each system call to have a function of the same name in the standard C library. The user process calls this function, using the standard C calling sequence. This function then invokes the appropriate kernel service, using whatever technique is required on the system. For example, the function may put one or more of the C arguments into general registers and then execute some machine instruction that generates a software interrupt in the kernel. For our purposes, we can consider the system calls to be C functions.  每个系统调用都对应一个相同名字的函数在标准C库里。用户进程调用这个函数，然后这个函数调用相应的内核服务。举个例子，这个函数可能会把一个或多个C参数放到通用寄存器，并执行机器指令在内核中产生一个软件中断。从我们的角度看，我们可以直接认为系统调用就是C函数。</p>
+<p>Section 3 of the UNIX Programmer’s Manual defines the general-purpose library functions available to programmers. These functions aren’t entry points into the kernel, although they may invoke one or more of the kernel’s system calls. For example, the printf function may use the write system call to output a string, but the strcpy (copy a string) and atoi (convert ASCII to integer) functions don’t involve the kernel at all.  在<strong>unix编程手册第三章定义了通用库函数给程序员。这些函数不是内核入口，虽然它们可能会调用一个或几个内核的系统调用</strong>。举个例子，<code>printf</code>函数可能会使用<code>write</code>系统调用来输出一个字符串，但是<code>strcpy</code>（拷贝一个字符串）和<code>atoi</code>（吧ASCII字符转成整形）函数根本没有调用内核。</p>
+<p>From an implementor’s point of view, the distinction between a system call and a library function is fundamental. From a user’s perspective, however, the difference is not as critical. From our perspective in this text, both system calls and library functions appear as normal C functions. Both exist to provide services for application programs. We should realize, however, that we can replace the library functions, if desired, whereas the system calls usually cannot be replaced.  从实现者的角度来看，系统调用和库函数的区别是很大的。然而从使用者的角度来看，这个区别并不重要。在这本书中，在我们看来，系统调用和库函数都以C函数的形式出现。两者的存在都是为了给应用开发者提供服务。然而我们应该意识到，<strong>虽然我们能替换库函数（如果我们想这样做），但系统调用不能被替换</strong>。</p>
+<p>Consider the memory allocation function malloc as an example. There are many ways to do memory allocation and its associated garbage collection (best fit, first fit, and so on). No single technique is optimal for all programs. The UNIX system call that handles memory allocation, sbrk(2), is not a general-purpose memory manager. It increases or decreases the address space of the process by a specified number of bytes. How that space is managed is up to the process. The memory allocation function, malloc(3), implements one particular type of allocation. If we don’t like its operation, we can define our own malloc function, which will probably use the sbrk system call. In fact, numerous software packages implement their own memory allocation algorithms with the sbrk system call. Figure 1.11 shows the relationship between the application, the malloc function, and the sbrk system call.  让我们来看看内存分配函数<code>malloc</code>这个例子。有很多内存分配和相关的垃圾回收方法（最好适应算法，最先适应算法，等等）。没有哪个技术是对所有程序优化的。<strong>unix系统调用<code>sbrk(2)</code>不是一个通用的存储管理器。它给进程增加和减少内存空间都是固定的字节数。怎么管理空间其实还要取决于进程自己。内存分配函数<code>malloc(3)</code>，实现了特定类型的分配。如果我们不喜欢它的做法，我们可以定义自己的malloc函数，但也是要用到sbrk系统调用的。实际上大量的软件包都通过直接使用sbrk系统调用实现了自己的内存管理算法</strong>。图1.11展示了应用，malloc函数，和sbrk系统调用之间的关系。</p>
+<p>&lt;img src=”<a href="https://i.loli.net/2018/05/25/5b07647fc7597.png&quot;" target="_blank" rel="noopener">https://i.loli.net/2018/05/25/5b07647fc7597.png&quot;</a>, width=”70%”&gt;</p>
+<p>Here we have a clean separation of duties: the system call in the kernel allocates an additional chunk of space on behalf of the process. The malloc library function manages this space from user level.  这里职责是分明的：系统调用代表进程在内核里分配了额外的一块空间。malloc库函数在用户层级上管理这块空间。</p>
+<p>Another example to illustrate the difference between a system call and a library function is the interface the UNIX System provides to determine the current time and date. Some operating systems provide one system call to return the time and another to return the date. Any special handling, such as the switch to or from daylight saving time, is handled by the kernel or requires human intervention. The UNIX System, in contrast, provides a single system call that returns the number of seconds since the Epoch: midnight, January 1, 1970, Coordinated Universal Time. Any interpretation of this value, such as converting it to a human-readable time and date using the local time zone, is left to the user process. The standard C library provides routines to handle most cases. These library routines handle such details as the various algorithms for daylight saving time.  另一个描述系统调用和库函数不同的例子是当前时间和日期。某些操作系统提供一个系统调用返回时间，另一个系统调用返回日期。任何特殊的处理，比如正常时制与夏令时的切换，需要内核的处理或者认为干预。Unix系统则相反，只提供一个系统调用，返回UTC（UTC是指从1970年的第一秒开始算起到现在经过的总时间）。任何对UTC这个值的解释，例如把它转成人类可读的时间日期使用当地时间，就留给了用户进程。标准C库提供了诸多例程来处理大多数情况。这些库例程处理这些细节，就像大多数算法处理夏令时切换一样。</p>
+<p>An application can either make a system call or call a library routine. Also realize that many library routines invoke a system call. This is shown in Figure 1.12.  一个应用可以使用系统调用或者调用库例程，同样要意识到许多库例程调用了系统调用。</p>
+<p>Another difference between system calls and library functions is that system calls usually <strong>provide a minimal interface</strong>, whereas library functions often <strong>provide more elaborate functionality</strong>. We’ve seen this already in the difference between the sbrk system call and the malloc library function. We’ll see this difference again later, when we compare the unbuffered I/O functions (Chapter 3) and the standard I/O functions (Chapter 5).  另一个系统调用和库函数的区别就是，系统调用往往只提供一个很小的接口，然而库函数经常提供更多精细的功能。</p>
+<p><img src="https://i.loli.net/2018/05/25/5b07d2d3861c0.png" width="70%"></p>
+<p>The process control system calls (<strong>fork, exec, and waitpid</strong>) are usually invoked by the user’s application code directly. (Recall the bare-bones shell in Figure 1.7.) But some library routines exist to simplify certain common cases: the <strong>system</strong> and <strong>popen</strong> library routines, for example. In Section 8.13, we’ll show an implementation of the system function that invokes the basic process control system calls. We’ll enhance this example in Section 10.18 to handle signals correctly. </p>
+<p>To define the interface to the UNIX System that most programmers use, we have to describe both the system calls and some of the library functions. If we described only the sbrk system call, for example, we would skip the more programmer-friendly malloc library function that many applications use. <strong>In this text, we’ll use the term function to refer to both system calls and library functions, except when the distinction is necessary.</strong> </p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/blog/2018/05/08/Linux-Shell-配色/" rel="next" title="Linux Shell 配色">
+                <i class="fa fa-chevron-left"></i> Linux Shell 配色
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/blog/2018/06/10/《代码整洁之道》读书笔记-第2章-有意义的命名/" rel="prev" title="《代码整洁之道》读书笔记--第2章:有意义的命名">
+                《代码整洁之道》读书笔记--第2章:有意义的命名 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+    <div class="comments" id="comments">
+      <div id="lv-container" data-id="city" data-uid="MTAyMC8zNTc5MC8xMjMyNg=="></div>
+    </div>
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="https://wx4.sinaimg.cn/mw690/006zFO3gly1flf4xnd5q9j30ku0ku75r.jpg"
+                alt="liuqinh2s" />
+            
+              <p class="site-author-name" itemprop="name">liuqinh2s</p>
+              <p class="site-description motion-element" itemprop="description">Computer Science is not a magic</br>To be a hacker</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/blog/archives">
+              
+                  <span class="site-state-item-count">41</span>
+                  <span class="site-state-item-name">posts</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/blog/categories/index.html">
+                  <span class="site-state-item-count">27</span>
+                  <span class="site-state-item-name">categories</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/blog/tags/index.html">
+                  <span class="site-state-item-count">8</span>
+                  <span class="site-state-item-name">tags</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+            <div class="feed-link motion-element">
+              <a href="/blog/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/liuqinh2s" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://www.douban.com/people/liuqinh2s/" target="_blank" title="豆瓣">
+                      
+                        <i class="fa fa-fw fa-globe"></i>豆瓣</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://www.zhihu.com/people/liuqinh2s/activities" target="_blank" title="知乎">
+                      
+                        <i class="fa fa-fw fa-globe"></i>知乎</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://music.163.com/#/user/home?id=86569513" target="_blank" title="网易云音乐">
+                      
+                        <i class="fa fa-fw fa-globe"></i>网易云音乐</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+            <div class="links-of-blogroll motion-element links-of-blogroll-block">
+              <div class="links-of-blogroll-title">
+                <i class="fa  fa-fw fa-link"></i>
+                Links
+              </div>
+              <ul class="links-of-blogroll-list">
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://lianera.github.io" title="liam" target="_blank">liam</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://zengxiaoluan.com/" title="曾小乱" target="_blank">曾小乱</a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-1-Introduction"><span class="nav-number">1.</span> <span class="nav-text">1.1    Introduction</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-2-Unix-Architecture"><span class="nav-number">2.</span> <span class="nav-text">1.2    Unix Architecture</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-3-Logging-In"><span class="nav-number">3.</span> <span class="nav-text">1.3    Logging In</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Login-Name"><span class="nav-number">3.1.</span> <span class="nav-text">Login Name</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Shells"><span class="nav-number">3.2.</span> <span class="nav-text">Shells</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-4-Files-and-Directories"><span class="nav-number">4.</span> <span class="nav-text">1.4     Files and Directories</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#File-System"><span class="nav-number">4.1.</span> <span class="nav-text">File System</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Filename"><span class="nav-number">4.2.</span> <span class="nav-text">Filename</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Pathname"><span class="nav-number">4.3.</span> <span class="nav-text">Pathname</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Example"><span class="nav-number">4.4.</span> <span class="nav-text">Example</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Working-Directory"><span class="nav-number">4.5.</span> <span class="nav-text">Working Directory</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Home-Directory"><span class="nav-number">4.6.</span> <span class="nav-text">Home Directory</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-5-Input-and-Output"><span class="nav-number">5.</span> <span class="nav-text">1.5    Input and Output</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#File-Descriptors"><span class="nav-number">5.1.</span> <span class="nav-text">File Descriptors</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Standard-Input-Standard-Output-and-Standard-Error"><span class="nav-number">5.2.</span> <span class="nav-text">Standard Input, Standard Output, and Standard Error</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Unbuffered-I-O"><span class="nav-number">5.3.</span> <span class="nav-text">Unbuffered I/O</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Example-1"><span class="nav-number">5.4.</span> <span class="nav-text">Example</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Standard-I-O"><span class="nav-number">5.5.</span> <span class="nav-text">Standard I/O</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Example-2"><span class="nav-number">5.6.</span> <span class="nav-text">Example</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-6-Programs-and-Processes"><span class="nav-number">6.</span> <span class="nav-text">1.6    Programs and Processes</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Program"><span class="nav-number">6.1.</span> <span class="nav-text">Program</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Processes-and-Process-ID"><span class="nav-number">6.2.</span> <span class="nav-text">Processes and Process ID</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Example-3"><span class="nav-number">6.3.</span> <span class="nav-text">Example</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Process-Control"><span class="nav-number">6.4.</span> <span class="nav-text">Process Control</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Example-4"><span class="nav-number">6.5.</span> <span class="nav-text">Example</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Threads-and-Thread-IDs"><span class="nav-number">6.6.</span> <span class="nav-text">Threads and Thread IDs</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-7-Error-Handling"><span class="nav-number">7.</span> <span class="nav-text">1.7    Error Handling</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Example-5"><span class="nav-number">7.1.</span> <span class="nav-text">Example</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Error-Recovery"><span class="nav-number">7.2.</span> <span class="nav-text">Error Recovery</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-8-User-Identification"><span class="nav-number">8.</span> <span class="nav-text">1.8    User Identification</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#User-ID"><span class="nav-number">8.1.</span> <span class="nav-text">User ID</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Group-ID"><span class="nav-number">8.2.</span> <span class="nav-text">Group ID</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Example-6"><span class="nav-number">8.3.</span> <span class="nav-text">Example</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Supplementary-Group-IDs"><span class="nav-number">8.4.</span> <span class="nav-text">Supplementary Group IDs</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-9-Signal"><span class="nav-number">9.</span> <span class="nav-text">1.9    Signal</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Example-7"><span class="nav-number">9.1.</span> <span class="nav-text">Example</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-10-Time-Values"><span class="nav-number">10.</span> <span class="nav-text">1.10    Time Values</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-11-System-Calls-and-Library-Functions"><span class="nav-number">11.</span> <span class="nav-text">1.11    System Calls and Library Functions</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">liuqinh2s</span>
+
+  
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+    
+      <span class="post-meta-item-text">Site words total count&#58;</span>
+    
+    <span title="Site words total count">70.9k</span>
+  
+</div>
+
+
+  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Pisces</a> v5.1.4</div>
+
+
+
+
+        
+<div class="busuanzi-count">
+  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="site-uv">
+      <i class="fa fa-user"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+      
+    </span>
+  
+
+  
+    <span class="site-pv">
+      <i class="fa fa-eye"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+      
+    </span>
+  
+</div>
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/blog/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/blog/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/blog/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/blog/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/blog/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/blog/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/blog/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/blog/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/blog/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/blog/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/blog/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/blog/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/blog/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+    <script type="text/javascript">
+      (function(d, s) {
+        var j, e = d.getElementsByTagName(s)[0];
+        if (typeof LivereTower === 'function') { return; }
+        j = d.createElement(s);
+        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+        j.async = true;
+        e.parentNode.insertBefore(j, e);
+      })(document, 'script');
+    </script>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/blog/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
+
+  
+
+  
+
+</body>
+</html>
