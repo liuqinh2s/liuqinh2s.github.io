@@ -5,7 +5,7 @@
   
 
 
-<html class="theme-next mist use-motion" lang="en">
+<html class="theme-next pisces use-motion" lang="en">
 <head>
   <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -89,7 +89,7 @@
 <meta property="og:site_name" content="liuqinh2s&#39; blog">
 <meta property="og:description" content="我们写代码的时候需要不停的命名，项目、类、函数、变量 等等都要命名。而命名关乎程序的可读性，而程序的可读性又至关重要（代码是写给人看的）。 名副其实一个很重要的原则是：如果命名需要注释来补充，那就不算名副其实。 举个例子： 1int d;  //消逝的时间，以日计 名称d什么也没说，如果其他很多地方要用到这个变量那就十分糟糕了，因为用的人不一定想的起来d是什么意思（如果只是局部变量局部使用，那它的">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2018-09-19T11:26:52.954Z">
+<meta property="og:updated_time" content="2018-09-19T11:46:25.641Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="《代码整洁之道》读书笔记--第2章:有意义的命名">
 <meta name="twitter:description" content="我们写代码的时候需要不停的命名，项目、类、函数、变量 等等都要命名。而命名关乎程序的可读性，而程序的可读性又至关重要（代码是写给人看的）。 名副其实一个很重要的原则是：如果命名需要注释来补充，那就不算名副其实。 举个例子： 1int d;  //消逝的时间，以日计 名称d什么也没说，如果其他很多地方要用到这个变量那就十分糟糕了，因为用的人不一定想的起来d是什么意思（如果只是局部变量局部使用，那它的">
@@ -100,7 +100,7 @@
   var NexT = window.NexT || {};
   var CONFIG = {
     root: '/blog/',
-    scheme: 'Mist',
+    scheme: 'Pisces',
     version: '5.1.4',
     sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
     fancybox: true,
@@ -398,7 +398,7 @@
                   <span class="post-meta-item-text">Words count in article&#58;</span>
                 
                 <span title="Words count in article">
-                  5,085
+                  5,123
                 </span>
               
 
@@ -427,7 +427,7 @@
 <h2 id="名副其实"><a href="#名副其实" class="headerlink" title="名副其实"></a>名副其实</h2><p>一个很重要的原则是：<strong>如果命名需要注释来补充，那就不算名副其实。</strong></p>
 <p>举个例子：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">int d;  //消逝的时间，以日计</span><br></pre></td></tr></table></figure>
-<p>名称<code>d</code>什么也没说，如果其他很多地方要用到这个变量那就十分糟糕了，因为用的人不一定想的起来<code>d</code>是什么意思（如果只是局部变量局部使用，那它的罪孽会轻一点，如果是全局变量或者类的成员变量那这简直就是大坑）。<strong>其实我们很容易发现，注释没法像好的命名一样方便，因为我们不会在写代码的时候看到一个不懂的命名就去找它的定义处的注释，这样会浪费很多时间</strong>。所以好的命名就应该能自己说明自己是什么。</p>
+<p>名称<code>d</code>什么也没说，如果其他很多地方要用到这个变量那就十分糟糕了，因为用的人不一定想的起来<code>d</code>是什么意思（如果只是局部变量局部使用，那它的罪孽会轻一点，如果是全局变量或者类的成员变量那这简直就是大坑）。<strong>其实我们很容易发现，注释没法像好的命名一样方便，因为我们不会在写代码的时候看到一个不懂的命名就去找它的定义处的注释，这样会浪费很多时间。另外如果写成注释就还需要维护注释，如果注释和代码不一致的情况那就变成了一种误导。</strong>。所以好的命名就应该能自己说明自己是什么。</p>
 <p>好的命名如下：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">int elapsedTimeInDays;</span><br><span class="line">int daysSinceCreation;</span><br><span class="line">int daysSinceModification;</span><br><span class="line">int fileAgeInDays;</span><br></pre></td></tr></table></figure>
 <p>下面我们看一段代码：</p>
@@ -551,8 +551,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/blog/2018/06/03/哲学思考/" rel="next" title="哲学思考">
-                <i class="fa fa-chevron-left"></i> 哲学思考
+              <a href="/blog/2018/05/08/Linux-Shell-配色/" rel="next" title="Linux Shell 配色">
+                <i class="fa fa-chevron-left"></i> Linux Shell 配色
               </a>
             
           </div>
@@ -560,6 +560,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/blog/2018/09/19/2018-06-12-《代码整洁之道》读书笔记-第3章-函数/" rel="prev" title="2018-06-12-《代码整洁之道》读书笔记-第3章-函数">
+                2018-06-12-《代码整洁之道》读书笔记-第3章-函数 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -656,7 +660,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/blog/categories/index.html">
-                  <span class="site-state-item-count">29</span>
+                  <span class="site-state-item-count">25</span>
                   <span class="site-state-item-name">categories</span>
                 </a>
               </div>
@@ -667,7 +671,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/blog/tags/index.html">
-                  <span class="site-state-item-count">6</span>
+                  <span class="site-state-item-count">8</span>
                   <span class="site-state-item-name">tags</span>
                 </a>
               </div>
@@ -787,7 +791,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">85.0k</span>
+    <span title="Site words total count">60.0k</span>
   
 </div>
 
@@ -800,7 +804,7 @@
 
 
 
-  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Mist</a> v5.1.4</div>
+  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Pisces</a> v5.1.4</div>
 
 
 
@@ -919,6 +923,13 @@
 
   
   
+
+
+  <script type="text/javascript" src="/blog/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/blog/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
 
   
   <script type="text/javascript" src="/blog/js/src/scrollspy.js?v=5.1.4"></script>

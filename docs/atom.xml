@@ -6,7 +6,7 @@
   <link href="/blog/atom.xml" rel="self"/>
   
   <link href="http://liuqinh2s.github.io/blog/"/>
-  <updated>2018-09-19T11:26:52.954Z</updated>
+  <updated>2018-09-19T13:57:59.255Z</updated>
   <id>http://liuqinh2s.github.io/blog/</id>
   
   <author>
@@ -17,11 +17,137 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>2018-09-19-wsl修改右键bash图标</title>
+    <link href="http://liuqinh2s.github.io/blog/2018/09/19/2018-09-19-wsl%E4%BF%AE%E6%94%B9%E5%8F%B3%E9%94%AEbash%E5%9B%BE%E6%A0%87/"/>
+    <id>http://liuqinh2s.github.io/blog/2018/09/19/2018-09-19-wsl修改右键bash图标/</id>
+    <published>2018-09-19T13:21:54.248Z</published>
+    <updated>2018-09-19T13:57:59.255Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;使用 windows subsystem for linux (简称：WSL) 的时候，遇到一个小问题，在文件管理器中右键，唤出bash，发现图标不对：&lt;/p&gt;
+&lt;p&gt;&lt;img
+        
+      
+    
+    </summary>
+    
+    
+      <category term="windows环境" scheme="http://liuqinh2s.github.io/blog/tags/windows%E7%8E%AF%E5%A2%83/"/>
+    
+      <category term="wsl" scheme="http://liuqinh2s.github.io/blog/tags/wsl/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Leetcode 804 Unique Morse Code Words</title>
+    <link href="http://liuqinh2s.github.io/blog/2018/09/19/2018-08-07-Leetcode-804-Unique-Morse-Code-Words/"/>
+    <id>http://liuqinh2s.github.io/blog/2018/09/19/2018-08-07-Leetcode-804-Unique-Morse-Code-Words/</id>
+    <published>2018-09-19T11:26:52.894Z</published>
+    <updated>2018-09-19T11:26:52.895Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;804-Unique-Morse-Code-Words&quot;&gt;&lt;a href=&quot;#804-Unique-Morse-Code-Words&quot; class=&quot;headerlink&quot; title=&quot;804. Unique Morse Code
+        
+      
+    
+    </summary>
+    
+      <category term="ACM" scheme="http://liuqinh2s.github.io/blog/categories/ACM/"/>
+    
+      <category term="Leetcode" scheme="http://liuqinh2s.github.io/blog/categories/ACM/Leetcode/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>计算机专业修养</title>
+    <link href="http://liuqinh2s.github.io/blog/2018/09/19/2018-06-24-%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%B8%93%E4%B8%9A%E4%BF%AE%E5%85%BB/"/>
+    <id>http://liuqinh2s.github.io/blog/2018/09/19/2018-06-24-计算机专业修养/</id>
+    <published>2018-09-19T11:26:52.893Z</published>
+    <updated>2018-09-19T11:26:52.894Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>《APUE》笔记--第二章：文件和目录</title>
+    <link href="http://liuqinh2s.github.io/blog/2018/09/19/2018-06-23-%E3%80%8AAPUE%E3%80%8B%E7%AC%94%E8%AE%B0-%E7%AC%AC%E4%BA%8C%E7%AB%A0%EF%BC%9A%E6%96%87%E4%BB%B6%E5%92%8C%E7%9B%AE%E5%BD%95/"/>
+    <id>http://liuqinh2s.github.io/blog/2018/09/19/2018-06-23-《APUE》笔记-第二章：文件和目录/</id>
+    <published>2018-09-19T11:26:52.892Z</published>
+    <updated>2018-09-19T11:26:52.892Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;文件类型&quot;&gt;&lt;a href=&quot;#文件类型&quot; class=&quot;headerlink&quot; title=&quot;文件类型&quot;&gt;&lt;/a&gt;文件类型&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;普通文件（regular
+        
+      
+    
+    </summary>
+    
+      <category term="读书笔记" scheme="http://liuqinh2s.github.io/blog/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
+    
+      <category term="《Advance Programming in the Unix Environment》" scheme="http://liuqinh2s.github.io/blog/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E3%80%8AAdvance-Programming-in-the-Unix-Environment%E3%80%8B/"/>
+    
+    
+      <category term="操作系统" scheme="http://liuqinh2s.github.io/blog/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>2018-06-12-《代码整洁之道》读书笔记-第3章-函数</title>
+    <link href="http://liuqinh2s.github.io/blog/2018/09/19/2018-06-12-%E3%80%8A%E4%BB%A3%E7%A0%81%E6%95%B4%E6%B4%81%E4%B9%8B%E9%81%93%E3%80%8B%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0-%E7%AC%AC3%E7%AB%A0-%E5%87%BD%E6%95%B0/"/>
+    <id>http://liuqinh2s.github.io/blog/2018/09/19/2018-06-12-《代码整洁之道》读书笔记-第3章-函数/</id>
+    <published>2018-09-19T11:26:52.890Z</published>
+    <updated>2018-09-19T11:26:52.891Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;在编程的早年岁月，系统由程序和子程序组成。后来，在Fortran和PL/1的年代，系统由程序、子程序和函数组成。如今，只有函数存活下来。函数是所有程序中的第一组代码。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;在计算机领域，很多问题都是历史原因引起的，比如千年虫。因为计算机的
+        
+      
+    
+    </summary>
+    
+      <category term="读书笔记" scheme="http://liuqinh2s.github.io/blog/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
+    
+      <category term="《代码整洁之道》" scheme="http://liuqinh2s.github.io/blog/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E3%80%8A%E4%BB%A3%E7%A0%81%E6%95%B4%E6%B4%81%E4%B9%8B%E9%81%93%E3%80%8B/"/>
+    
+    
+      <category term="代码规范" scheme="http://liuqinh2s.github.io/blog/tags/%E4%BB%A3%E7%A0%81%E8%A7%84%E8%8C%83/"/>
+    
+  </entry>
+  
+  <entry>
     <title>《代码整洁之道》读书笔记--第2章:有意义的命名</title>
     <link href="http://liuqinh2s.github.io/blog/2018/06/10/%E3%80%8A%E4%BB%A3%E7%A0%81%E6%95%B4%E6%B4%81%E4%B9%8B%E9%81%93%E3%80%8B%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0-%E7%AC%AC2%E7%AB%A0-%E6%9C%89%E6%84%8F%E4%B9%89%E7%9A%84%E5%91%BD%E5%90%8D/"/>
     <id>http://liuqinh2s.github.io/blog/2018/06/10/《代码整洁之道》读书笔记-第2章-有意义的命名/</id>
     <published>2018-06-10T10:19:48.000Z</published>
-    <updated>2018-09-19T11:26:52.954Z</updated>
+    <updated>2018-09-19T11:46:25.641Z</updated>
     
     <summary type="html">
     
@@ -42,129 +168,6 @@
     
     
       <category term="代码规范" scheme="http://liuqinh2s.github.io/blog/tags/%E4%BB%A3%E7%A0%81%E8%A7%84%E8%8C%83/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>哲学思考</title>
-    <link href="http://liuqinh2s.github.io/blog/2018/06/03/%E5%93%B2%E5%AD%A6%E6%80%9D%E8%80%83/"/>
-    <id>http://liuqinh2s.github.io/blog/2018/06/03/哲学思考/</id>
-    <published>2018-06-02T16:00:00.000Z</published>
-    <updated>2018-09-19T11:26:52.952Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;ol&gt;
-&lt;li&gt;&lt;p&gt;量变和质变，可怕的唯一真理，连物理规律都难逃其魔爪，牛顿的经典力学不过是，量子力学的质变，相对论则是对牛顿力学的更宏大尺度上的补充。细胞只有简单的生理活动，但由细胞组成的生物，却发展出更加复杂、系统的生理活动，最后达到人这种具有智慧的水平，能够认识抽象。&lt;
-        
-      
-    
-    </summary>
-    
-      <category term="哲学" scheme="http://liuqinh2s.github.io/blog/categories/%E5%93%B2%E5%AD%A6/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>SQL必知必会</title>
-    <link href="http://liuqinh2s.github.io/blog/2018/06/03/SQL%E5%BF%85%E7%9F%A5%E5%BF%85%E4%BC%9A/"/>
-    <id>http://liuqinh2s.github.io/blog/2018/06/03/SQL必知必会/</id>
-    <published>2018-06-02T16:00:00.000Z</published>
-    <updated>2018-09-19T11:26:52.951Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h2 id=&quot;学数据库预备条件&quot;&gt;&lt;a href=&quot;#学数据库预备条件&quot; class=&quot;headerlink&quot; title=&quot;学数据库预备条件&quot;&gt;&lt;/a&gt;学数据库预备条件&lt;/h2&gt;&lt;p&gt;首先你得
-        
-      
-    
-    </summary>
-    
-      <category term="SQL" scheme="http://liuqinh2s.github.io/blog/categories/SQL/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>APUE读书笔记 — File I/O</title>
-    <link href="http://liuqinh2s.github.io/blog/2018/05/28/APUE%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0%E2%80%94File-IO/"/>
-    <id>http://liuqinh2s.github.io/blog/2018/05/28/APUE读书笔记—File-IO/</id>
-    <published>2018-05-27T16:00:00.000Z</published>
-    <updated>2018-09-19T11:26:52.950Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;p&gt;这章将的是文件IO，其中有几个非常重要的概念：&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;File
-        
-      
-    
-    </summary>
-    
-      <category term="Unix" scheme="http://liuqinh2s.github.io/blog/categories/Unix/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>APUE读书笔记--Unix System Overview</title>
-    <link href="http://liuqinh2s.github.io/blog/2018/05/22/APUE%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0--Unix-System-Overview/"/>
-    <id>http://liuqinh2s.github.io/blog/2018/05/22/APUE读书笔记--Unix-System-Overview/</id>
-    <published>2018-05-21T16:00:00.000Z</published>
-    <updated>2018-09-19T11:26:52.948Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h2 id=&quot;1-1-Introduction&quot;&gt;&lt;a href=&quot;#1-1-Introduction&quot; class=&quot;headerlink&quot; title=&quot;1.1    Introduction&quot;&gt;&lt;/a&gt;1.1    Introduction&lt;/h2&gt;&lt;p&gt;All
-        
-      
-    
-    </summary>
-    
-      <category term="Unix" scheme="http://liuqinh2s.github.io/blog/categories/Unix/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>投奔vim系列之--NerdTree插件的使用</title>
-    <link href="http://liuqinh2s.github.io/blog/2018/05/14/%E6%8A%95%E5%A5%94vim%E7%B3%BB%E5%88%97%E4%B9%8B--NerdTree%E6%8F%92%E4%BB%B6%E7%9A%84%E4%BD%BF%E7%94%A8/"/>
-    <id>http://liuqinh2s.github.io/blog/2018/05/14/投奔vim系列之--NerdTree插件的使用/</id>
-    <published>2018-05-13T16:00:00.000Z</published>
-    <updated>2018-09-19T11:26:52.947Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h2 id=&quot;NERDTree的使用&quot;&gt;&lt;a href=&quot;#NERDTree的使用&quot; class=&quot;headerlink&quot; title=&quot;NERDTree的使用&quot;&gt;&lt;/a&gt;NERDTree的使用&lt;/h2&gt;&lt;h3 id=&quot;切换工作台和目录&quot;&gt;&lt;a
-        
-      
-    
-    </summary>
-    
-      <category term="vim" scheme="http://liuqinh2s.github.io/blog/categories/vim/"/>
-    
     
   </entry>
   
@@ -325,6 +328,30 @@
   </entry>
   
   <entry>
+    <title>mathjax常用公式记录</title>
+    <link href="http://liuqinh2s.github.io/blog/2018/04/30/mathjax%E5%B8%B8%E7%94%A8%E5%85%AC%E5%BC%8F%E8%AE%B0%E5%BD%95/"/>
+    <id>http://liuqinh2s.github.io/blog/2018/04/30/mathjax常用公式记录/</id>
+    <published>2018-04-29T16:00:00.000Z</published>
+    <updated>2018-09-19T11:26:52.936Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;角度记法&quot;&gt;&lt;a href=&quot;#角度记法&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="LaTex" scheme="http://liuqinh2s.github.io/blog/categories/LaTex/"/>
+    
+    
+  </entry>
+  
+  <entry>
     <title>椭圆规</title>
     <link href="http://liuqinh2s.github.io/blog/2018/04/30/%E6%A4%AD%E5%9C%86%E8%A7%84/"/>
     <id>http://liuqinh2s.github.io/blog/2018/04/30/椭圆规/</id>
@@ -346,30 +373,6 @@
       <category term="数学" scheme="http://liuqinh2s.github.io/blog/categories/%E6%95%B0%E5%AD%A6/"/>
     
       <category term="解析几何" scheme="http://liuqinh2s.github.io/blog/categories/%E6%95%B0%E5%AD%A6/%E8%A7%A3%E6%9E%90%E5%87%A0%E4%BD%95/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>mathjax常用公式记录</title>
-    <link href="http://liuqinh2s.github.io/blog/2018/04/30/mathjax%E5%B8%B8%E7%94%A8%E5%85%AC%E5%BC%8F%E8%AE%B0%E5%BD%95/"/>
-    <id>http://liuqinh2s.github.io/blog/2018/04/30/mathjax常用公式记录/</id>
-    <published>2018-04-29T16:00:00.000Z</published>
-    <updated>2018-09-19T11:26:52.936Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h2 id=&quot;角度记法&quot;&gt;&lt;a href=&quot;#角度记法&quot; class=&quot;headerlink&quot;
-        
-      
-    
-    </summary>
-    
-      <category term="LaTex" scheme="http://liuqinh2s.github.io/blog/categories/LaTex/"/>
     
     
   </entry>
