@@ -6,7 +6,7 @@
   <link href="/blog/atom.xml" rel="self"/>
   
   <link href="http://liuqinh2s.github.io/blog/"/>
-  <updated>2018-09-19T13:57:59.255Z</updated>
+  <updated>2018-09-20T03:10:57.306Z</updated>
   <id>http://liuqinh2s.github.io/blog/</id>
   
   <author>
@@ -17,11 +17,11 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>2018-09-19-wsl修改右键bash图标</title>
-    <link href="http://liuqinh2s.github.io/blog/2018/09/19/2018-09-19-wsl%E4%BF%AE%E6%94%B9%E5%8F%B3%E9%94%AEbash%E5%9B%BE%E6%A0%87/"/>
-    <id>http://liuqinh2s.github.io/blog/2018/09/19/2018-09-19-wsl修改右键bash图标/</id>
-    <published>2018-09-19T13:21:54.248Z</published>
-    <updated>2018-09-19T13:57:59.255Z</updated>
+    <title>wsl修改右键bash图标</title>
+    <link href="http://liuqinh2s.github.io/blog/2018/09/19/wsl%E4%BF%AE%E6%94%B9%E5%8F%B3%E9%94%AEbash%E5%9B%BE%E6%A0%87/"/>
+    <id>http://liuqinh2s.github.io/blog/2018/09/19/wsl修改右键bash图标/</id>
+    <published>2018-09-18T16:00:00.000Z</published>
+    <updated>2018-09-20T03:10:57.306Z</updated>
     
     <summary type="html">
     
@@ -40,105 +40,6 @@
       <category term="windows环境" scheme="http://liuqinh2s.github.io/blog/tags/windows%E7%8E%AF%E5%A2%83/"/>
     
       <category term="wsl" scheme="http://liuqinh2s.github.io/blog/tags/wsl/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Leetcode 804 Unique Morse Code Words</title>
-    <link href="http://liuqinh2s.github.io/blog/2018/09/19/2018-08-07-Leetcode-804-Unique-Morse-Code-Words/"/>
-    <id>http://liuqinh2s.github.io/blog/2018/09/19/2018-08-07-Leetcode-804-Unique-Morse-Code-Words/</id>
-    <published>2018-09-19T11:26:52.894Z</published>
-    <updated>2018-09-19T11:26:52.895Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h2 id=&quot;804-Unique-Morse-Code-Words&quot;&gt;&lt;a href=&quot;#804-Unique-Morse-Code-Words&quot; class=&quot;headerlink&quot; title=&quot;804. Unique Morse Code
-        
-      
-    
-    </summary>
-    
-      <category term="ACM" scheme="http://liuqinh2s.github.io/blog/categories/ACM/"/>
-    
-      <category term="Leetcode" scheme="http://liuqinh2s.github.io/blog/categories/ACM/Leetcode/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>计算机专业修养</title>
-    <link href="http://liuqinh2s.github.io/blog/2018/09/19/2018-06-24-%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%B8%93%E4%B8%9A%E4%BF%AE%E5%85%BB/"/>
-    <id>http://liuqinh2s.github.io/blog/2018/09/19/2018-06-24-计算机专业修养/</id>
-    <published>2018-09-19T11:26:52.893Z</published>
-    <updated>2018-09-19T11:26:52.894Z</updated>
-    
-    <summary type="html">
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>《APUE》笔记--第二章：文件和目录</title>
-    <link href="http://liuqinh2s.github.io/blog/2018/09/19/2018-06-23-%E3%80%8AAPUE%E3%80%8B%E7%AC%94%E8%AE%B0-%E7%AC%AC%E4%BA%8C%E7%AB%A0%EF%BC%9A%E6%96%87%E4%BB%B6%E5%92%8C%E7%9B%AE%E5%BD%95/"/>
-    <id>http://liuqinh2s.github.io/blog/2018/09/19/2018-06-23-《APUE》笔记-第二章：文件和目录/</id>
-    <published>2018-09-19T11:26:52.892Z</published>
-    <updated>2018-09-19T11:26:52.892Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h2 id=&quot;文件类型&quot;&gt;&lt;a href=&quot;#文件类型&quot; class=&quot;headerlink&quot; title=&quot;文件类型&quot;&gt;&lt;/a&gt;文件类型&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;普通文件（regular
-        
-      
-    
-    </summary>
-    
-      <category term="读书笔记" scheme="http://liuqinh2s.github.io/blog/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
-    
-      <category term="《Advance Programming in the Unix Environment》" scheme="http://liuqinh2s.github.io/blog/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E3%80%8AAdvance-Programming-in-the-Unix-Environment%E3%80%8B/"/>
-    
-    
-      <category term="操作系统" scheme="http://liuqinh2s.github.io/blog/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>2018-06-12-《代码整洁之道》读书笔记-第3章-函数</title>
-    <link href="http://liuqinh2s.github.io/blog/2018/09/19/2018-06-12-%E3%80%8A%E4%BB%A3%E7%A0%81%E6%95%B4%E6%B4%81%E4%B9%8B%E9%81%93%E3%80%8B%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0-%E7%AC%AC3%E7%AB%A0-%E5%87%BD%E6%95%B0/"/>
-    <id>http://liuqinh2s.github.io/blog/2018/09/19/2018-06-12-《代码整洁之道》读书笔记-第3章-函数/</id>
-    <published>2018-09-19T11:26:52.890Z</published>
-    <updated>2018-09-19T11:26:52.891Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;在编程的早年岁月，系统由程序和子程序组成。后来，在Fortran和PL/1的年代，系统由程序、子程序和函数组成。如今，只有函数存活下来。函数是所有程序中的第一组代码。&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;在计算机领域，很多问题都是历史原因引起的，比如千年虫。因为计算机的
-        
-      
-    
-    </summary>
-    
-      <category term="读书笔记" scheme="http://liuqinh2s.github.io/blog/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
-    
-      <category term="《代码整洁之道》" scheme="http://liuqinh2s.github.io/blog/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E3%80%8A%E4%BB%A3%E7%A0%81%E6%95%B4%E6%B4%81%E4%B9%8B%E9%81%93%E3%80%8B/"/>
-    
-    
-      <category term="代码规范" scheme="http://liuqinh2s.github.io/blog/tags/%E4%BB%A3%E7%A0%81%E8%A7%84%E8%8C%83/"/>
     
   </entry>
   
@@ -328,30 +229,6 @@
   </entry>
   
   <entry>
-    <title>mathjax常用公式记录</title>
-    <link href="http://liuqinh2s.github.io/blog/2018/04/30/mathjax%E5%B8%B8%E7%94%A8%E5%85%AC%E5%BC%8F%E8%AE%B0%E5%BD%95/"/>
-    <id>http://liuqinh2s.github.io/blog/2018/04/30/mathjax常用公式记录/</id>
-    <published>2018-04-29T16:00:00.000Z</published>
-    <updated>2018-09-19T11:26:52.936Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h2 id=&quot;角度记法&quot;&gt;&lt;a href=&quot;#角度记法&quot; class=&quot;headerlink&quot;
-        
-      
-    
-    </summary>
-    
-      <category term="LaTex" scheme="http://liuqinh2s.github.io/blog/categories/LaTex/"/>
-    
-    
-  </entry>
-  
-  <entry>
     <title>椭圆规</title>
     <link href="http://liuqinh2s.github.io/blog/2018/04/30/%E6%A4%AD%E5%9C%86%E8%A7%84/"/>
     <id>http://liuqinh2s.github.io/blog/2018/04/30/椭圆规/</id>
@@ -373,6 +250,30 @@
       <category term="数学" scheme="http://liuqinh2s.github.io/blog/categories/%E6%95%B0%E5%AD%A6/"/>
     
       <category term="解析几何" scheme="http://liuqinh2s.github.io/blog/categories/%E6%95%B0%E5%AD%A6/%E8%A7%A3%E6%9E%90%E5%87%A0%E4%BD%95/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>mathjax常用公式记录</title>
+    <link href="http://liuqinh2s.github.io/blog/2018/04/30/mathjax%E5%B8%B8%E7%94%A8%E5%85%AC%E5%BC%8F%E8%AE%B0%E5%BD%95/"/>
+    <id>http://liuqinh2s.github.io/blog/2018/04/30/mathjax常用公式记录/</id>
+    <published>2018-04-29T16:00:00.000Z</published>
+    <updated>2018-09-19T11:26:52.936Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;角度记法&quot;&gt;&lt;a href=&quot;#角度记法&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="LaTex" scheme="http://liuqinh2s.github.io/blog/categories/LaTex/"/>
     
     
   </entry>
@@ -529,6 +430,114 @@
     </summary>
     
       <category term="新概念英语四" scheme="http://liuqinh2s.github.io/blog/categories/%E6%96%B0%E6%A6%82%E5%BF%B5%E8%8B%B1%E8%AF%AD%E5%9B%9B/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>POJ 1008 Maya Calendar</title>
+    <link href="http://liuqinh2s.github.io/blog/2018/02/24/POJ-1009-Edge-Detection/"/>
+    <id>http://liuqinh2s.github.io/blog/2018/02/24/POJ-1009-Edge-Detection/</id>
+    <published>2018-02-23T16:00:00.000Z</published>
+    <updated>2018-09-19T11:26:52.927Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;这一题花了不少时间，首先是题目没看懂，然后搜了很久的资料，才看懂了。&lt;/p&gt;
+&lt;p&gt;边缘检测是图像处理里面的基础，这题用的边缘检测就是最简单的边缘检测，根据周边八个像素点和此像素点差值
+        
+      
+    
+    </summary>
+    
+      <category term="ACM" scheme="http://liuqinh2s.github.io/blog/categories/ACM/"/>
+    
+      <category term="POJ" scheme="http://liuqinh2s.github.io/blog/categories/ACM/POJ/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>POJ 1008 Maya Calendar</title>
+    <link href="http://liuqinh2s.github.io/blog/2018/02/22/POJ-1008-Maya-Calendar/"/>
+    <id>http://liuqinh2s.github.io/blog/2018/02/22/POJ-1008-Maya-Calendar/</id>
+    <published>2018-02-21T16:00:00.000Z</published>
+    <updated>2018-09-19T11:26:52.926Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;这一题的话：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;要注意 C++ 的 switch 不能使用 string，所以只好写成 if 来判断了。&lt;/li&gt;
+&lt;li&gt;另外一个值得注意的地方是，空格会中断标准输入，所以不能使用一个 string 来装下一行输入，而是分别用 string
+        
+      
+    
+    </summary>
+    
+      <category term="ACM" scheme="http://liuqinh2s.github.io/blog/categories/ACM/"/>
+    
+      <category term="POJ" scheme="http://liuqinh2s.github.io/blog/categories/ACM/POJ/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>POJ 1007 DNA sorting</title>
+    <link href="http://liuqinh2s.github.io/blog/2018/02/21/POJ-1007-DNA-sorting/"/>
+    <id>http://liuqinh2s.github.io/blog/2018/02/21/POJ-1007-DNA-sorting/</id>
+    <published>2018-02-20T16:00:00.000Z</published>
+    <updated>2018-09-19T11:26:52.925Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;这道题有点尴尬，刚开始一直没看懂，主要是先入为主，以为是对每一串字符串做排序，最后发现居然是根据每一串 DNA
+        
+      
+    
+    </summary>
+    
+      <category term="ACM" scheme="http://liuqinh2s.github.io/blog/categories/ACM/"/>
+    
+      <category term="POJ" scheme="http://liuqinh2s.github.io/blog/categories/ACM/POJ/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>POJ 1006 Biorhythms</title>
+    <link href="http://liuqinh2s.github.io/blog/2018/02/15/POJ-1006-Biorhythms/"/>
+    <id>http://liuqinh2s.github.io/blog/2018/02/15/POJ-1006-Biorhythms/</id>
+    <published>2018-02-14T16:00:00.000Z</published>
+    <updated>2018-09-19T11:26:52.924Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;同余&quot;&gt;&lt;a href=&quot;#同余&quot; class=&quot;headerlink&quot; title=&quot;同余&quot;&gt;&lt;/a&gt;同余&lt;/h2&gt;&lt;p&gt;两个整数 a, b，若它们除以正整数 m所得的余数相等，则称 a,b对于模 m 同余，记作：$a \equiv b (mod\quad
+        
+      
+    
+    </summary>
+    
+      <category term="ACM" scheme="http://liuqinh2s.github.io/blog/categories/ACM/"/>
+    
+      <category term="POJ" scheme="http://liuqinh2s.github.io/blog/categories/ACM/POJ/"/>
     
     
   </entry>
