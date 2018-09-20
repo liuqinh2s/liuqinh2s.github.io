@@ -1,7 +1,6 @@
 ---
 title: Math
 date: 2018-04-27 16:07:48
-comment: false
 ---
 
 >数学是科学的王冠

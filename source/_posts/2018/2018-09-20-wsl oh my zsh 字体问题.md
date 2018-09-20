@@ -5,7 +5,7 @@ categories:
 tags:
 	- windows环境
 	- wsl
-comments: true
+comments: false
 ---
 
 ## 安装 oh my zsh 
