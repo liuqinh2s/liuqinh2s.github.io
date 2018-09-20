@@ -13,6 +13,9 @@
     <title><![CDATA[wsl修改右键bash图标]]></title>
     <url>%2Fblog%2F2018%2F09%2F19%2Fwsl%E4%BF%AE%E6%94%B9%E5%8F%B3%E9%94%AEbash%E5%9B%BE%E6%A0%87%2F</url>
     <content type="text"><![CDATA[使用 windows subsystem for linux (简称：WSL) 的时候，遇到一个小问题，在文件管理器中右键，唤出bash，发现图标不对： 点击之后可以看到调用的是哪个程序： google一下：windows 右键图标，搜到百度经验：https://jingyan.baidu.com/article/7c6fb428321b4a80642c90fd.html，照着修改就行了。 如图： 那么改成什么呢？google一下：wsl bash icon，搜到：https://github.com/Microsoft/WSL/issues/1269，然后又在这个页面找到了这个：https://github.com/cmderdev/cmder/issues/1063#issuecomment-401947209 把icon换成： 1C:\Program Files\WindowsApps\CanonicalGroupLimited.UbuntuonWindows_1804.2018.817.0_x64__79rhkp1fndgsc\ubuntu.exe 再点击右键，就能看到这个图标了。 除了修改右键显示的icon，还可以修改右键显示的名字，以及运行的目标程序。 改为： 1C:\Program Files\WindowsApps\CanonicalGroupLimited.UbuntuonWindows_1804.2018.817.0_x64__79rhkp1fndgsc\ubuntu.exe 但发现无法把工作目录定到当前右键的目录，需要加一个run： 1C:\Program Files\WindowsApps\CanonicalGroupLimited.UbuntuonWindows_1804.2018.817.0_x64__79rhkp1fndgsc\ubuntu.exe run]]></content>
+      <categories>
+        <category>解决的问题</category>
+      </categories>
       <tags>
         <tag>windows环境</tag>
         <tag>wsl</tag>
@@ -83,20 +86,20 @@
       </categories>
   </entry>
   <entry>
+    <title><![CDATA[mathjax常用公式记录]]></title>
+    <url>%2Fblog%2F2018%2F04%2F30%2Fmathjax%E5%B8%B8%E7%94%A8%E5%85%AC%E5%BC%8F%E8%AE%B0%E5%BD%95%2F</url>
+    <content type="text"><![CDATA[角度记法 度数：$60^\circ$，$60^\circ$ 度数分：$60^\prime$，$60^\prime$ 弧度：$\frac{\pi}{2}$，$\frac{\pi}{2}$ 角度记法：$\angle A$，$\angle A$]]></content>
+      <categories>
+        <category>LaTex</category>
+      </categories>
+  </entry>
+  <entry>
     <title><![CDATA[椭圆规]]></title>
     <url>%2Fblog%2F2018%2F04%2F30%2F%E6%A4%AD%E5%9C%86%E8%A7%84%2F</url>
     <content type="text"><![CDATA[利用简单定义的椭圆规椭圆大家高中的时候都学过，椭圆有两个中心，椭圆轨迹上的点到这两个中心的距离加起来就是长轴的长度。 利用参数式的椭圆规 $\overline{AP}=a$，$\overline{BP}=b$，P点所绘制的就是椭圆了。画圆规时先固定十字底座，旋转时A点保持在纵轴滑动，B点保持在横轴滑动，当规臂完成$360^\circ$时，P点的轨迹即为椭圆，且此椭圆的长半轴是 a，短半轴是 b。 下面讲讲原理： 若以十字中心为原点，十字横向为x轴，纵向为y轴，设定一个直角坐标系，并设 $\theta$ 为以x轴为始边，规臂$\overline{AP}$为终边的广义角，不难看出来P点的坐标是 $(a\cos\theta, b\sin\theta)$，即方程式为：$\frac{x^2}{a^2}+\frac{y^2}{b^2}=1$ 的椭圆方程式。其中a为长半轴的长度，b为短半轴的长度。]]></content>
       <categories>
         <category>数学</category>
         <category>解析几何</category>
-      </categories>
-  </entry>
-  <entry>
-    <title><![CDATA[mathjax常用公式记录]]></title>
-    <url>%2Fblog%2F2018%2F04%2F30%2Fmathjax%E5%B8%B8%E7%94%A8%E5%85%AC%E5%BC%8F%E8%AE%B0%E5%BD%95%2F</url>
-    <content type="text"><![CDATA[角度记法 度数：$60^\circ$，$60^\circ$ 度数分：$60^\prime$，$60^\prime$ 弧度：$\frac{\pi}{2}$，$\frac{\pi}{2}$ 角度记法：$\angle A$，$\angle A$]]></content>
-      <categories>
-        <category>LaTex</category>
       </categories>
   </entry>
   <entry>
@@ -204,18 +207,18 @@
       </categories>
   </entry>
   <entry>
-    <title><![CDATA[POJ 1002 487 3279]]></title>
-    <url>%2Fblog%2F2018%2F01%2F21%2FPOJ-1002-487-3279%2F</url>
-    <content type="text"><![CDATA[这一题看似很简单，却有着很多限制，我也是搞了很久。刚开始的时候我是用了很多 c++11 的东西，然后一直报 Compile Error，但我本地编译是不会有错的，查出几点： vector&lt;vector&gt;会报错，但 c++11可以这样写，以前的老编译器只能这么写：vector&lt;vector &gt;to_string()函数无法使用，这是 c++11 新出的。for(int x:result)这种写法直到 c++11 才支持。POJ 上的编译器是比较老的，所以无法使用 c++11 的新特性。 这还不算，后来一直报 Time Limit Exceeded，上网查资料发现，要把 cin 输入改成 getchar 接收输入，终于 AC。还有就是在勾选 language 的时候，一定要用 G++，不要用 C++，如果你选 C++，会报如下错误： 123456Compile ErrorMain.cppF:\temp\18069972.33777\Main.cpp(16) : error C2057: expected constant expressionF:\temp\18069972.33777\Main.cpp(16) : error C2466: cannot allocate an array of constant size 0F:\temp\18069972.33777\Main.cpp(16) : error C2133: &apos;data&apos; : unknown size C++代码： 12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758596061626364#include &lt;iostream&gt; #include &lt;cstdio&gt;#include &lt;cstdlib&gt;#include &lt;string&gt; #include &lt;algorithm&gt;#include &lt;vector&gt;#include &lt;utility&gt;#include &lt;sstream&gt;using namespace std;int main()&#123; int n; char ch; scanf("%d",&amp;n); int data[n]; int size = n; while(n--)&#123; ch = getchar(); //过滤空行 if(ch=='\n')&#123; n++; continue; &#125; int num = 0; while(ch!='\n')&#123; if(ch&gt;='0' &amp;&amp; ch&lt;='9')&#123; num = num*10 + ch - '0'; &#125;else if(ch &gt;= 'A' &amp;&amp; ch &lt;= 'P')&#123; num = num*10 + (ch - 'A')/3 + 2; &#125;else if(ch &gt;= 'R' &amp;&amp; ch &lt;= 'Y')&#123; num = num*10 + (ch - 'Q')/3 + 7; &#125; ch = getchar(); &#125; data[n]=num; &#125; // qsort(data, size, sizeof(int), compare); sort(data, data+size); // for(int i=0;i&lt;size;i++)&#123; // cout &lt;&lt; data[i] &lt;&lt; endl; // &#125; int count=1; int index=0; for(int i=1;i&lt;size;++i)&#123; if(data[i]==data[i-1])&#123; count++; index=i; &#125;else&#123; if(count!=1)&#123; printf("%03d-%04d %d\n",data[i-1]/10000,data[i-1]%10000,count); // cout &lt;&lt; setfill('0') &lt;&lt; setw(3) &lt;&lt; data[i-1]/10000 &lt;&lt; '-' &lt;&lt; setfill('0') &lt;&lt; setw(4) &lt;&lt; data[i-1]%10000 &lt;&lt; ' ' &lt;&lt; count &lt;&lt; endl; count=1; &#125; &#125; if(i==size-1 &amp;&amp; count!=1)&#123; printf("%03d-%04d %d\n",data[i-1]/10000,data[i-1]%10000,count); count=1; &#125; &#125; if(index==0)&#123; cout &lt;&lt; "No duplicates." &lt;&lt; endl; &#125; return 0;&#125;]]></content>
+    <title><![CDATA[POJ-1003-Hangover]]></title>
+    <url>%2Fblog%2F2018%2F01%2F21%2FPOJ-1003-Hangover%2F</url>
+    <content type="text"><![CDATA[这一题 AC 的速度还是挺快的，题目本身也是很简单： C++ 代码： 123456789101112131415161718192021222324252627282930#include &lt;iostream&gt;#include &lt;string&gt;#include &lt;sstream&gt;using namespace std;string double2Str(const double &amp;double_temp)&#123; stringstream ss; ss &lt;&lt; double_temp; string str; ss &gt;&gt; str; return str;&#125;int main()&#123; double x; cin &gt;&gt; x; //对浮点数只能使用大于、小于号进行比较，不能使用等号和不等号，我这里直接把 double 转成字符串，就可以用不等号比较了 //根据输入条件的限制，可以这样写：x&gt;0.01。 while(double2Str(x)!="0")&#123; int i=2; double sum=1.0/i; while(sum &lt; x)&#123; i++; sum += 1.0/i; &#125; cout &lt;&lt; i-1 &lt;&lt; " card(s)" &lt;&lt; endl; cin &gt;&gt; x; &#125; return 0;&#125;]]></content>
       <categories>
         <category>ACM</category>
         <category>POJ</category>
       </categories>
   </entry>
   <entry>
-    <title><![CDATA[POJ-1003-Hangover]]></title>
-    <url>%2Fblog%2F2018%2F01%2F21%2FPOJ-1003-Hangover%2F</url>
-    <content type="text"><![CDATA[这一题 AC 的速度还是挺快的，题目本身也是很简单： C++ 代码： 123456789101112131415161718192021222324252627282930#include &lt;iostream&gt;#include &lt;string&gt;#include &lt;sstream&gt;using namespace std;string double2Str(const double &amp;double_temp)&#123; stringstream ss; ss &lt;&lt; double_temp; string str; ss &gt;&gt; str; return str;&#125;int main()&#123; double x; cin &gt;&gt; x; //对浮点数只能使用大于、小于号进行比较，不能使用等号和不等号，我这里直接把 double 转成字符串，就可以用不等号比较了 //根据输入条件的限制，可以这样写：x&gt;0.01。 while(double2Str(x)!="0")&#123; int i=2; double sum=1.0/i; while(sum &lt; x)&#123; i++; sum += 1.0/i; &#125; cout &lt;&lt; i-1 &lt;&lt; " card(s)" &lt;&lt; endl; cin &gt;&gt; x; &#125; return 0;&#125;]]></content>
+    <title><![CDATA[POJ 1002 487 3279]]></title>
+    <url>%2Fblog%2F2018%2F01%2F21%2FPOJ-1002-487-3279%2F</url>
+    <content type="text"><![CDATA[这一题看似很简单，却有着很多限制，我也是搞了很久。刚开始的时候我是用了很多 c++11 的东西，然后一直报 Compile Error，但我本地编译是不会有错的，查出几点： vector&lt;vector&gt;会报错，但 c++11可以这样写，以前的老编译器只能这么写：vector&lt;vector &gt;to_string()函数无法使用，这是 c++11 新出的。for(int x:result)这种写法直到 c++11 才支持。POJ 上的编译器是比较老的，所以无法使用 c++11 的新特性。 这还不算，后来一直报 Time Limit Exceeded，上网查资料发现，要把 cin 输入改成 getchar 接收输入，终于 AC。还有就是在勾选 language 的时候，一定要用 G++，不要用 C++，如果你选 C++，会报如下错误： 123456Compile ErrorMain.cppF:\temp\18069972.33777\Main.cpp(16) : error C2057: expected constant expressionF:\temp\18069972.33777\Main.cpp(16) : error C2466: cannot allocate an array of constant size 0F:\temp\18069972.33777\Main.cpp(16) : error C2133: &apos;data&apos; : unknown size C++代码： 12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758596061626364#include &lt;iostream&gt; #include &lt;cstdio&gt;#include &lt;cstdlib&gt;#include &lt;string&gt; #include &lt;algorithm&gt;#include &lt;vector&gt;#include &lt;utility&gt;#include &lt;sstream&gt;using namespace std;int main()&#123; int n; char ch; scanf("%d",&amp;n); int data[n]; int size = n; while(n--)&#123; ch = getchar(); //过滤空行 if(ch=='\n')&#123; n++; continue; &#125; int num = 0; while(ch!='\n')&#123; if(ch&gt;='0' &amp;&amp; ch&lt;='9')&#123; num = num*10 + ch - '0'; &#125;else if(ch &gt;= 'A' &amp;&amp; ch &lt;= 'P')&#123; num = num*10 + (ch - 'A')/3 + 2; &#125;else if(ch &gt;= 'R' &amp;&amp; ch &lt;= 'Y')&#123; num = num*10 + (ch - 'Q')/3 + 7; &#125; ch = getchar(); &#125; data[n]=num; &#125; // qsort(data, size, sizeof(int), compare); sort(data, data+size); // for(int i=0;i&lt;size;i++)&#123; // cout &lt;&lt; data[i] &lt;&lt; endl; // &#125; int count=1; int index=0; for(int i=1;i&lt;size;++i)&#123; if(data[i]==data[i-1])&#123; count++; index=i; &#125;else&#123; if(count!=1)&#123; printf("%03d-%04d %d\n",data[i-1]/10000,data[i-1]%10000,count); // cout &lt;&lt; setfill('0') &lt;&lt; setw(3) &lt;&lt; data[i-1]/10000 &lt;&lt; '-' &lt;&lt; setfill('0') &lt;&lt; setw(4) &lt;&lt; data[i-1]%10000 &lt;&lt; ' ' &lt;&lt; count &lt;&lt; endl; count=1; &#125; &#125; if(i==size-1 &amp;&amp; count!=1)&#123; printf("%03d-%04d %d\n",data[i-1]/10000,data[i-1]%10000,count); count=1; &#125; &#125; if(index==0)&#123; cout &lt;&lt; "No duplicates." &lt;&lt; endl; &#125; return 0;&#125;]]></content>
       <categories>
         <category>ACM</category>
         <category>POJ</category>
