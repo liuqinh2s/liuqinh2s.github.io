@@ -6,7 +6,7 @@
   <link href="/blog/atom.xml" rel="self"/>
   
   <link href="http://liuqinh2s.github.io/blog/"/>
-  <updated>2018-09-20T03:10:57.306Z</updated>
+  <updated>2018-09-20T04:15:51.344Z</updated>
   <id>http://liuqinh2s.github.io/blog/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>wsl oh my zsh 字符乱码问题</title>
+    <link href="http://liuqinh2s.github.io/blog/2018/09/20/wsl%20oh%20my%20zsh%20%E5%AD%97%E4%BD%93%E9%97%AE%E9%A2%98/"/>
+    <id>http://liuqinh2s.github.io/blog/2018/09/20/wsl oh my zsh 字体问题/</id>
+    <published>2018-09-19T16:00:00.000Z</published>
+    <updated>2018-09-20T04:15:51.344Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;安装-oh-my-zsh&quot;&gt;&lt;a href=&quot;#安装-oh-my-zsh&quot; class=&quot;headerlink&quot; title=&quot;安装 oh my zsh&quot;&gt;&lt;/a&gt;安装 oh my zsh&lt;/h2&gt;&lt;p&gt;首先检查自己有没有zsh：&lt;/p&gt;
+&lt;figure
+        
+      
+    
+    </summary>
+    
+    
+      <category term="windows环境" scheme="http://liuqinh2s.github.io/blog/tags/windows%E7%8E%AF%E5%A2%83/"/>
+    
+      <category term="wsl" scheme="http://liuqinh2s.github.io/blog/tags/wsl/"/>
+    
+  </entry>
   
   <entry>
     <title>wsl修改右键bash图标</title>
@@ -504,32 +531,6 @@
         
         
           &lt;p&gt;这道题有点尴尬，刚开始一直没看懂，主要是先入为主，以为是对每一串字符串做排序，最后发现居然是根据每一串 DNA
-        
-      
-    
-    </summary>
-    
-      <category term="ACM" scheme="http://liuqinh2s.github.io/blog/categories/ACM/"/>
-    
-      <category term="POJ" scheme="http://liuqinh2s.github.io/blog/categories/ACM/POJ/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>POJ 1006 Biorhythms</title>
-    <link href="http://liuqinh2s.github.io/blog/2018/02/15/POJ-1006-Biorhythms/"/>
-    <id>http://liuqinh2s.github.io/blog/2018/02/15/POJ-1006-Biorhythms/</id>
-    <published>2018-02-14T16:00:00.000Z</published>
-    <updated>2018-09-19T11:26:52.924Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h2 id=&quot;同余&quot;&gt;&lt;a href=&quot;#同余&quot; class=&quot;headerlink&quot; title=&quot;同余&quot;&gt;&lt;/a&gt;同余&lt;/h2&gt;&lt;p&gt;两个整数 a, b，若它们除以正整数 m所得的余数相等，则称 a,b对于模 m 同余，记作：$a \equiv b (mod\quad
         
       
     
