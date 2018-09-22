@@ -1,5 +1,5 @@
 ---
-title: APUE读书笔记--Unix System Overview
+title: APUE-3rd 读书笔记 -- Unix System Overview
 date: 2018-05-22
 categories: [Unix]
 comments: true
@@ -516,13 +516,13 @@ _analyticsd:*:263:_analyticsd
 
 ## 1.9    Signal
 
-Signals are a technique used to notify a process that some condition has occurred. For example, if a process divides by zero, the signal whose name is SIGFPE (floating-point exception) is sent to the process. The process has three choices for dealing with the signal.  信号是一种用来通知进程发生了某些事的技术。举个例子：当进程除以0时，就会有一个SIGFPE (floating-point exception)发送到这个进程。进程处理信号有三种选择：
+**Signals are a technique used to notify a process that some condition has occurred**. For example, if a process divides by zero, the signal whose name is SIGFPE (floating-point exception) is sent to the process. The process has three choices for dealing with the signal.  信号是一种用来通知进程发生了某些事的技术。举个例子：当进程除以0时，就会有一个SIGFPE (floating-point exception)发送到这个进程。进程处理信号有三种选择：
 
 1. Ignore the signal. This option isn’t recommended for signals that denote a hardware exception, such as dividing by zero or referencing memory outside the address space of the process, as the results are undefined.  忽视信号。如果是硬件异常不推荐这个选择，例如：被0除，引用进程外的内存，因为这些结果都是不确定的。
 2. Let the default action occur. For a divide-by-zero condition, the default is to terminate the process.  让默认动作出现，比如被0除的情况下，默认是终止该进程。
 3. Provide a function that is called when the signal occurs (this is called ‘‘catching’’ the signal). By providing a function of our own, we’ll know when the signal occurs and we can handle it as we wish.  我们自己提供一个函数捕获信号，这样我们就能让程序以我们的意愿处理异常。
 
-Many conditions generate signals. Two terminal keys, called the **interrupt key**— often the **DELETE** key or **Control-C**—and the **quit key**—often **Control-backslash**—are used to interrupt the currently running process. Another way to generate a signal is by calling the `kill` function. **We can call this function from a process to send a signal to another process. Naturally, there are limitations: we have to be the owner of the other process (or the superuser) to be able to send it a signal**.    很多条件下可以生成信号，终端键有两种，interrupt key（delete键或者ctrl+c）和 quit key（ctrl+\）。另一个生成信号的方法是调用`kill`函数，我们可以在一个进程里调用kill函数来结束另一个线程，但我们需要有权限（如果我们是另一个进程的拥有者，或者是超级用户，就可以）。
+Many conditions generate signals. Two terminal keys, called the **interrupt key**— often the **DELETE** key or **Control-C**—and the **quit key**—often **Control-backslash**—are used to interrupt the currently running process. Another way to generate a signal is by calling the `kill` function. **We can call this function from a process to send a signal to another process. Naturally, there are limitations: we have to be the owner of the other process (or the superuser) to be able to send it a signal**.    很多条件下可以生成信号，终端键有两种，interrupt key（delete键或者ctrl+c）和 quit key（ctrl+\）。另一个生成信号的方法是调用`kill`函数，我们可以在一个进程里调用kill函数来结束另一个进程，但我们需要有权限（如果我们是另一个进程的拥有者，或者是超级用户，就可以）。
 
 ### Example
 
@@ -642,7 +642,7 @@ An application can either make a system call or call a library routine. Also rea
 
 Another difference between system calls and library functions is that system calls usually **provide a minimal interface**, whereas library functions often **provide more elaborate functionality**. We’ve seen this already in the difference between the sbrk system call and the malloc library function. We’ll see this difference again later, when we compare the unbuffered I/O functions (Chapter 3) and the standard I/O functions (Chapter 5).  另一个系统调用和库函数的区别就是，系统调用往往只提供一个很小的接口，然而库函数经常提供更多精细的功能。
 
-<img src="https://i.loli.net/2018/05/25/5b07d2d3861c0.png" width="70%">
+<img src="/images/APUE-3rd-Figure 1.11.png" width="70%">
 
 The process control system calls (**fork, exec, and waitpid**) are usually invoked by the user’s application code directly. (Recall the bare-bones shell in Figure 1.7.) But some library routines exist to simplify certain common cases: the **system** and **popen** library routines, for example. In Section 8.13, we’ll show an implementation of the system function that invokes the basic process control system calls. We’ll enhance this example in Section 10.18 to handle signals correctly. 
 

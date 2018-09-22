@@ -83,17 +83,17 @@
 
 <meta name="description" content="1.1    IntroductionAll operating systems provide services for programs they run. Typical services include executing a new program, opening a file, reading a file, allocating a region of memory, gettin">
 <meta property="og:type" content="article">
-<meta property="og:title" content="APUE读书笔记--Unix System Overview">
-<meta property="og:url" content="http://liuqinh2s.github.io/blog/2018/05/22/APUE读书笔记--Unix System Overview/index.html">
+<meta property="og:title" content="APUE-3rd 读书笔记 -- Unix System Overview">
+<meta property="og:url" content="http://liuqinh2s.github.io/blog/2018/05/22/APUE-3rd-读书笔记--Unix System Overview/index.html">
 <meta property="og:site_name" content="liuqinh2s&#39; blog">
 <meta property="og:description" content="1.1    IntroductionAll operating systems provide services for programs they run. Typical services include executing a new program, opening a file, reading a file, allocating a region of memory, gettin">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="https://i.loli.net/2018/05/22/5b03742b0a818.png">
 <meta property="og:image" content="https://i.loli.net/2018/05/23/5b04b995bf5e1.png">
-<meta property="og:image" content="https://i.loli.net/2018/05/25/5b07d2d3861c0.png">
-<meta property="og:updated_time" content="2018-09-20T12:57:28.695Z">
+<meta property="og:image" content="http://liuqinh2s.github.io/images/APUE-3rd-Figure%201.11.png">
+<meta property="og:updated_time" content="2018-09-22T03:04:51.552Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="APUE读书笔记--Unix System Overview">
+<meta name="twitter:title" content="APUE-3rd 读书笔记 -- Unix System Overview">
 <meta name="twitter:description" content="1.1    IntroductionAll operating systems provide services for programs they run. Typical services include executing a new program, opening a file, reading a file, allocating a region of memory, gettin">
 <meta name="twitter:image" content="https://i.loli.net/2018/05/22/5b03742b0a818.png">
 
@@ -125,13 +125,13 @@
 
 
 
-  <link rel="canonical" href="http://liuqinh2s.github.io/blog/2018/05/22/APUE读书笔记--Unix System Overview/"/>
+  <link rel="canonical" href="http://liuqinh2s.github.io/blog/2018/05/22/APUE-3rd-读书笔记--Unix System Overview/"/>
 
 
 
 
 
-  <title>APUE读书笔记--Unix System Overview | liuqinh2s' blog</title>
+  <title>APUE-3rd 读书笔记 -- Unix System Overview | liuqinh2s' blog</title>
   
 
 
@@ -302,7 +302,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://liuqinh2s.github.io/blog/blog/2018/05/22/APUE读书笔记--Unix System Overview/">
+    <link itemprop="mainEntityOfPage" href="http://liuqinh2s.github.io/blog/blog/2018/05/22/APUE-3rd-读书笔记--Unix System Overview/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="liuqinh2s">
@@ -319,7 +319,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">APUE读书笔记--Unix System Overview</h1>
+          <h1 class="post-title" itemprop="name headline">APUE-3rd 读书笔记 -- Unix System Overview</h1>
         
 
         <div class="post-meta">
@@ -606,13 +606,13 @@
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">_analyticsusers:*:250:_analyticsd,_networkd,_timed</span><br><span class="line">_analyticsd:*:263:_analyticsd</span><br></pre></td></tr></table></figure>
 <p>解释：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">组名:口令:组ID:组内用户列表</span><br></pre></td></tr></table></figure>
-<h2 id="1-9-Signal"><a href="#1-9-Signal" class="headerlink" title="1.9    Signal"></a>1.9    Signal</h2><p>Signals are a technique used to notify a process that some condition has occurred. For example, if a process divides by zero, the signal whose name is SIGFPE (floating-point exception) is sent to the process. The process has three choices for dealing with the signal.  信号是一种用来通知进程发生了某些事的技术。举个例子：当进程除以0时，就会有一个SIGFPE (floating-point exception)发送到这个进程。进程处理信号有三种选择：</p>
+<h2 id="1-9-Signal"><a href="#1-9-Signal" class="headerlink" title="1.9    Signal"></a>1.9    Signal</h2><p><strong>Signals are a technique used to notify a process that some condition has occurred</strong>. For example, if a process divides by zero, the signal whose name is SIGFPE (floating-point exception) is sent to the process. The process has three choices for dealing with the signal.  信号是一种用来通知进程发生了某些事的技术。举个例子：当进程除以0时，就会有一个SIGFPE (floating-point exception)发送到这个进程。进程处理信号有三种选择：</p>
 <ol>
 <li>Ignore the signal. This option isn’t recommended for signals that denote a hardware exception, such as dividing by zero or referencing memory outside the address space of the process, as the results are undefined.  忽视信号。如果是硬件异常不推荐这个选择，例如：被0除，引用进程外的内存，因为这些结果都是不确定的。</li>
 <li>Let the default action occur. For a divide-by-zero condition, the default is to terminate the process.  让默认动作出现，比如被0除的情况下，默认是终止该进程。</li>
 <li>Provide a function that is called when the signal occurs (this is called ‘‘catching’’ the signal). By providing a function of our own, we’ll know when the signal occurs and we can handle it as we wish.  我们自己提供一个函数捕获信号，这样我们就能让程序以我们的意愿处理异常。</li>
 </ol>
-<p>Many conditions generate signals. Two terminal keys, called the <strong>interrupt key</strong>— often the <strong>DELETE</strong> key or <strong>Control-C</strong>—and the <strong>quit key</strong>—often <strong>Control-backslash</strong>—are used to interrupt the currently running process. Another way to generate a signal is by calling the <code>kill</code> function. <strong>We can call this function from a process to send a signal to another process. Naturally, there are limitations: we have to be the owner of the other process (or the superuser) to be able to send it a signal</strong>.    很多条件下可以生成信号，终端键有两种，interrupt key（delete键或者ctrl+c）和 quit key（ctrl+\）。另一个生成信号的方法是调用<code>kill</code>函数，我们可以在一个进程里调用kill函数来结束另一个线程，但我们需要有权限（如果我们是另一个进程的拥有者，或者是超级用户，就可以）。</p>
+<p>Many conditions generate signals. Two terminal keys, called the <strong>interrupt key</strong>— often the <strong>DELETE</strong> key or <strong>Control-C</strong>—and the <strong>quit key</strong>—often <strong>Control-backslash</strong>—are used to interrupt the currently running process. Another way to generate a signal is by calling the <code>kill</code> function. <strong>We can call this function from a process to send a signal to another process. Naturally, there are limitations: we have to be the owner of the other process (or the superuser) to be able to send it a signal</strong>.    很多条件下可以生成信号，终端键有两种，interrupt key（delete键或者ctrl+c）和 quit key（ctrl+\）。另一个生成信号的方法是调用<code>kill</code>函数，我们可以在一个进程里调用kill函数来结束另一个进程，但我们需要有权限（如果我们是另一个进程的拥有者，或者是超级用户，就可以）。</p>
 <h3 id="Example-7"><a href="#Example-7" class="headerlink" title="Example"></a>Example</h3><p>Recall the bare-bones shell example (Figure 1.7). If we invoke this program and press the interrupt key, the process terminates because the default action for this signal, named SIGINT, is to terminate the process. The process hasn’t told the kernel to do anything other than the default with this signal, so the process terminates.  如果直接执行Figure 1.7的代码，我们按下中断键，程序就会终止，因为这个SIGINT信号的默认动作就是终止进程。</p>
 <p>To catch this signal, the program needs to call the signal function, specifying the name of the function to call when the SIGINT signal is generated. The function is named sig_int; when it’s called, it just prints a message and a new prompt. Adding 11 lines to the program in Figure 1.7 gives us the version in Figure 1.10. (The 11 new lines are indicated with a plus sign at the beginning of the line.)  为了捕获这个信号，程序需要调用一个信号函数。我们给它命名为：<code>sig_int</code>函数，在捕获到<strong>SIGINT</strong>信号之后，打印信息并打印一个新的提示符。下面的程序相比Figure 1.7多了11行，用<code>+</code>号标识了。</p>
 <blockquote>
@@ -659,7 +659,7 @@
 <p>Another example to illustrate the difference between a system call and a library function is the interface the UNIX System provides to determine the current time and date. Some operating systems provide one system call to return the time and another to return the date. Any special handling, such as the switch to or from daylight saving time, is handled by the kernel or requires human intervention. The UNIX System, in contrast, provides a single system call that returns the number of seconds since the Epoch: midnight, January 1, 1970, Coordinated Universal Time. Any interpretation of this value, such as converting it to a human-readable time and date using the local time zone, is left to the user process. The standard C library provides routines to handle most cases. These library routines handle such details as the various algorithms for daylight saving time.  另一个描述系统调用和库函数不同的例子是当前时间和日期。某些操作系统提供一个系统调用返回时间，另一个系统调用返回日期。任何特殊的处理，比如正常时制与夏令时的切换，需要内核的处理或者认为干预。Unix系统则相反，只提供一个系统调用，返回UTC（UTC是指从1970年的第一秒开始算起到现在经过的总时间）。任何对UTC这个值的解释，例如把它转成人类可读的时间日期使用当地时间，就留给了用户进程。标准C库提供了诸多例程来处理大多数情况。这些库例程处理这些细节，就像大多数算法处理夏令时切换一样。</p>
 <p>An application can either make a system call or call a library routine. Also realize that many library routines invoke a system call. This is shown in Figure 1.12.  一个应用可以使用系统调用或者调用库例程，同样要意识到许多库例程调用了系统调用。</p>
 <p>Another difference between system calls and library functions is that system calls usually <strong>provide a minimal interface</strong>, whereas library functions often <strong>provide more elaborate functionality</strong>. We’ve seen this already in the difference between the sbrk system call and the malloc library function. We’ll see this difference again later, when we compare the unbuffered I/O functions (Chapter 3) and the standard I/O functions (Chapter 5).  另一个系统调用和库函数的区别就是，系统调用往往只提供一个很小的接口，然而库函数经常提供更多精细的功能。</p>
-<p><img src="https://i.loli.net/2018/05/25/5b07d2d3861c0.png" width="70%"></p>
+<p><img src="/images/APUE-3rd-Figure 1.11.png" width="70%"></p>
 <p>The process control system calls (<strong>fork, exec, and waitpid</strong>) are usually invoked by the user’s application code directly. (Recall the bare-bones shell in Figure 1.7.) But some library routines exist to simplify certain common cases: the <strong>system</strong> and <strong>popen</strong> library routines, for example. In Section 8.13, we’ll show an implementation of the system function that invokes the basic process control system calls. We’ll enhance this example in Section 10.18 to handle signals correctly. </p>
 <p>To define the interface to the UNIX System that most programmers use, we have to describe both the system calls and some of the library functions. If we described only the sbrk system call, for example, we would skip the more programmer-friendly malloc library function that many applications use. <strong>In this text, we’ll use the term function to refer to both system calls and library functions, except when the distinction is necessary.</strong> </p>
 
