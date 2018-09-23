@@ -104,11 +104,11 @@
   </entry>
   
   <entry>
-    <title>APUE-3rd 读书笔记 -- Unix System Overview</title>
-    <link href="http://liuqinh2s.github.io/blog/2018/05/22/APUE-3rd-%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0--Unix%20System%20Overview/"/>
-    <id>http://liuqinh2s.github.io/blog/2018/05/22/APUE-3rd-读书笔记--Unix System Overview/</id>
-    <published>2018-05-21T16:00:00.000Z</published>
-    <updated>2018-09-23T01:16:45.995Z</updated>
+    <title>APUE-3rd 读书笔记 — File I/O</title>
+    <link href="http://liuqinh2s.github.io/blog/2018/05/28/APUE-3rd-%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0%20%E2%80%94%20File%20I:O/"/>
+    <id>http://liuqinh2s.github.io/blog/2018/05/28/APUE-3rd-读书笔记 — File I:O/</id>
+    <published>2018-05-27T16:00:00.000Z</published>
+    <updated>2018-09-23T01:24:49.062Z</updated>
     
     <summary type="html">
     
@@ -116,7 +116,33 @@
       
         
         
-          &lt;h2 id=&quot;1-1-Introduction&quot;&gt;&lt;a href=&quot;#1-1-Introduction&quot; class=&quot;headerlink&quot; title=&quot;1.1    Introduction&quot;&gt;&lt;/a&gt;1.1    Introduction&lt;/h2&gt;&lt;p&gt;All
+          &lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;p&gt;这章将的是文件IO，其中有几个非常重要的概念：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;File
+        
+      
+    
+    </summary>
+    
+      <category term="Unix" scheme="http://liuqinh2s.github.io/blog/categories/Unix/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>APUE-3rd 读书笔记 -- Unix System Overview</title>
+    <link href="http://liuqinh2s.github.io/blog/2018/05/22/APUE-3rd-%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0--Unix%20System%20Overview/"/>
+    <id>http://liuqinh2s.github.io/blog/2018/05/22/APUE-3rd-读书笔记--Unix System Overview/</id>
+    <published>2018-05-21T16:00:00.000Z</published>
+    <updated>2018-09-23T01:27:32.117Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot;
         
       
     
@@ -204,32 +230,6 @@
   </entry>
   
   <entry>
-    <title>Android通讯录深入研究</title>
-    <link href="http://liuqinh2s.github.io/blog/2018/05/03/Android%E9%80%9A%E8%AE%AF%E5%BD%95%E6%B7%B1%E5%85%A5%E7%A0%94%E7%A9%B6/"/>
-    <id>http://liuqinh2s.github.io/blog/2018/05/03/Android通讯录深入研究/</id>
-    <published>2018-05-02T16:00:00.000Z</published>
-    <updated>2018-06-10T01:05:53.024Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;The &lt;code&gt;DISPLAY_NAME&lt;/code&gt; can be fetched either from Contacts &lt;code&gt;database/ContactsContract.Data&amp;#39; OR
-        
-      
-    
-    </summary>
-    
-      <category term="Android" scheme="http://liuqinh2s.github.io/blog/categories/Android/"/>
-    
-      <category term="通讯录" scheme="http://liuqinh2s.github.io/blog/categories/Android/%E9%80%9A%E8%AE%AF%E5%BD%95/"/>
-    
-    
-  </entry>
-  
-  <entry>
     <title>Volley库StringRequest编码问题</title>
     <link href="http://liuqinh2s.github.io/blog/2018/05/03/Volley%E5%BA%93StringRequest%E7%BC%96%E7%A0%81%E9%97%AE%E9%A2%98/"/>
     <id>http://liuqinh2s.github.io/blog/2018/05/03/Volley库StringRequest编码问题/</id>
@@ -252,6 +252,32 @@
       <category term="Android" scheme="http://liuqinh2s.github.io/blog/categories/Android/"/>
     
       <category term="Volley库" scheme="http://liuqinh2s.github.io/blog/categories/Android/Volley%E5%BA%93/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Android通讯录深入研究</title>
+    <link href="http://liuqinh2s.github.io/blog/2018/05/03/Android%E9%80%9A%E8%AE%AF%E5%BD%95%E6%B7%B1%E5%85%A5%E7%A0%94%E7%A9%B6/"/>
+    <id>http://liuqinh2s.github.io/blog/2018/05/03/Android通讯录深入研究/</id>
+    <published>2018-05-02T16:00:00.000Z</published>
+    <updated>2018-06-10T01:05:53.024Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;The &lt;code&gt;DISPLAY_NAME&lt;/code&gt; can be fetched either from Contacts &lt;code&gt;database/ContactsContract.Data&amp;#39; OR
+        
+      
+    
+    </summary>
+    
+      <category term="Android" scheme="http://liuqinh2s.github.io/blog/categories/Android/"/>
+    
+      <category term="通讯录" scheme="http://liuqinh2s.github.io/blog/categories/Android/%E9%80%9A%E8%AE%AF%E5%BD%95/"/>
     
     
   </entry>
@@ -310,6 +336,30 @@
   </entry>
   
   <entry>
+    <title>mathjax常用公式记录</title>
+    <link href="http://liuqinh2s.github.io/blog/2018/04/30/mathjax%E5%B8%B8%E7%94%A8%E5%85%AC%E5%BC%8F%E8%AE%B0%E5%BD%95/"/>
+    <id>http://liuqinh2s.github.io/blog/2018/04/30/mathjax常用公式记录/</id>
+    <published>2018-04-29T16:00:00.000Z</published>
+    <updated>2018-04-30T06:57:18.698Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;角度记法&quot;&gt;&lt;a href=&quot;#角度记法&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="LaTex" scheme="http://liuqinh2s.github.io/blog/categories/LaTex/"/>
+    
+    
+  </entry>
+  
+  <entry>
     <title>Leetcode Algorithm 274. H-Index</title>
     <link href="http://liuqinh2s.github.io/blog/2018/04/30/Leetcode-Algorithm-274.H-Index/"/>
     <id>http://liuqinh2s.github.io/blog/2018/04/30/Leetcode-Algorithm-274.H-Index/</id>
@@ -331,30 +381,6 @@
       <category term="ACM" scheme="http://liuqinh2s.github.io/blog/categories/ACM/"/>
     
       <category term="Leetcode" scheme="http://liuqinh2s.github.io/blog/categories/ACM/Leetcode/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>mathjax常用公式记录</title>
-    <link href="http://liuqinh2s.github.io/blog/2018/04/30/mathjax%E5%B8%B8%E7%94%A8%E5%85%AC%E5%BC%8F%E8%AE%B0%E5%BD%95/"/>
-    <id>http://liuqinh2s.github.io/blog/2018/04/30/mathjax常用公式记录/</id>
-    <published>2018-04-29T16:00:00.000Z</published>
-    <updated>2018-04-30T06:57:18.698Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h2 id=&quot;角度记法&quot;&gt;&lt;a href=&quot;#角度记法&quot; class=&quot;headerlink&quot;
-        
-      
-    
-    </summary>
-    
-      <category term="LaTex" scheme="http://liuqinh2s.github.io/blog/categories/LaTex/"/>
     
     
   </entry>
@@ -504,35 +530,6 @@
         
           &lt;p&gt;这一题花了不少时间，首先是题目没看懂，然后搜了很久的资料，才看懂了。&lt;/p&gt;
 &lt;p&gt;边缘检测是图像处理里面的基础，这题用的边缘检测就是最简单的边缘检测，根据周边八个像素点和此像素点差值
-        
-      
-    
-    </summary>
-    
-      <category term="ACM" scheme="http://liuqinh2s.github.io/blog/categories/ACM/"/>
-    
-      <category term="POJ" scheme="http://liuqinh2s.github.io/blog/categories/ACM/POJ/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>POJ 1008 Maya Calendar</title>
-    <link href="http://liuqinh2s.github.io/blog/2018/02/22/POJ-1008-Maya-Calendar/"/>
-    <id>http://liuqinh2s.github.io/blog/2018/02/22/POJ-1008-Maya-Calendar/</id>
-    <published>2018-02-21T16:00:00.000Z</published>
-    <updated>2018-06-10T11:59:41.465Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;这一题的话：&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;要注意 C++ 的 switch 不能使用 string，所以只好写成 if 来判断了。&lt;/li&gt;
-&lt;li&gt;另外一个值得注意的地方是，空格会中断标准输入，所以不能使用一个 string 来装下一行输入，而是分别用 string
         
       
     

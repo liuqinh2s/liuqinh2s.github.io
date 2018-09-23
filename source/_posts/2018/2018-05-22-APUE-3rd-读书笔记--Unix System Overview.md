@@ -5,6 +5,19 @@ categories: [Unix]
 comments: true
 ---
 
+## 前言
+
+Unix系统中非常重要的概念：
+- 内核
+- 系统调用
+- 库函数
+- shell
+- 文件、目录、路径、工作路径、权限管理
+- 文件描述符
+- 进程、线程
+- 错误处理
+- 信号
+
 ## 1.1    Introduction
 
 All operating systems provide services for programs they run. Typical services include executing a new program, opening a file, reading a file, allocating a region of memory, getting the current time of day, and so on. The focus of this text is to describe the services provided by various versions of the UNIX operating system. 所有的操作系统都提供一些服务让程序能够在其上运行，典型的服务包括：执行一个新程序，打开一个文件，读取一个文件，分配一块内存，获取当前时间，等等。 这本书所关注的重点就是众多种类的unix操作系统能提供服务。
