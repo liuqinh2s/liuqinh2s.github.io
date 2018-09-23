@@ -17,20 +17,26 @@ Describing the UNIX System in a strictly linear fashion, without any forward ref
 
 <img src="https://i.loli.net/2018/05/22/5b03742b0a818.png" width="50%">
 
-- 内核（kernel）：In a strict sense, an operating system can be defined as the software that **controls the hardware resources of the computer** and **provides an environment under which programs can run**. Generally, we call this software the kernel, since it is **relatively small and resides at the core of the environment**. 内核控制硬件资源，并给其上的程序提供运行环境，内核相对（相对是指相对于上面这张图，整个软件环境：包括内核、系统调用、公用函数库、shell(命令解释器)、应用程序）来说比较小，并处于整个环境的中心。
+- 内核（kernel）：In a strict sense, an operating system can be defined as the software that **controls the hardware resources of the computer** and **provides an environment under which programs can run**. Generally, we call this software the `kernel`, since it is **relatively small and resides at the core of the environment**. 内核控制硬件资源，并给其上的程序提供运行环境，内核相对（相对是指相对于上面这张图，整个软件环境：包括内核、系统调用、公用函数库、shell(命令解释器)、应用程序）来说比较小，并处于整个环境的中心。
 - 系统调用（system calls）：**The interface to the kernel** is a layer of software called the system calls . 系统调用是内核对外的接口。
 - Libraries of common functions are built on top of the system call interface, but applications are free to use both. The shell is a special application that provides an interface for running other applications. 公共库是建立在系统调用之上的，但应用程序既可以使用公共库也可以使用系统调用。shell是一种特殊的应用程序，给执行命令(运行其他程序)提供接口。
+
+In a broad sense, an operating system consists of the kernel and all the other software that makes a computer useful and gives the computer its personality. This other software includes system utilities, applications, shells, libraries of common functions, and so on.
+
+For example, Linux is the kernel used by the GNU operating system. Some people refer to this combination as the GNU/Linux operating system, but it is more commonly referred to as simply Linux. Although this usage may not be correct in a strict sense, it is understandable, given the dual meaning of the phrase operating system. (It also has the advantage of being more succinct.)
 
 ## 1.3    Logging In
 
 ### Login Name
 
+When we log in to a UNIX system, we enter our login name, followed by our password. The system then looks up our login name in its password file, usually the file /etc/passwd. If we look at our entry in the password file, we see that it’s composed of seven colon-separated fields: the login name, encrypted password, numeric user ID (205), numeric group ID (105), a comment field, home directory (/home/sar), and shell program (/bin/ksh).
 **口令文件（password file）** ：当我们使用用户名和密码登陆unix的时候，系统会在`/etc/passwd`文件(password file，又叫：口令文件)中查找我们的用户名，口令文件中每个条目占一行，格式是：
 
 ```
 登录名:加密过的密码:user ID:group ID:注解:home目录:shell
 ```
 
+All contemporary systems have moved the encrypted password to a different file. In Chapter 6, we’ll look at these files and some functions to access them.
 >不过加密过的密码现在也不显示在这个文件里了，而是用一个`*`号或者`x`号之类的取代，home目录又称为起始目录，新开一个shell，`pwd`一下，就是home目录。
 
 例子：
@@ -68,8 +74,8 @@ The Bourne-again shell is the GNU shell provided with all Linux systems. It was 
 
 ### Filename
 
-**文件名**：The names in a directory are called filenames. The only two characters that cannot appear in a filename are the slash character (/) and the null character. The slash separates the filenames that form a pathname (described next) and the null character terminates a pathname. Nevertheless, it’s good practice to restrict the characters in a filename to a subset of the normal printing characters. (If we use some of the shell’s special characters in the filename, we have to use the shell’s quoting mechanism to reference the filename, and this can get complicated.) Indeed, for portability, POSIX.1 recommends restricting filenames to consist of the following characters: letters (a-z, A-Z), numbers (0-9), period (.), dash (-), and underscore (_).
-一个目录中的诸多名字（包括文件和目录）称为文件名，只有两个字符不能出现在文件名中：`斜杠/(slash)`和`空字符(null character)`，斜杠用来分割`路径名(pathname)`中的文件名，空字符用来结束一个路径名（实际上编程语言中字符串就是由空字符来结束的）。然而，我们命名文件的时候最好不要使用一些乱七八糟的字符，如果我们使用了shell的特殊字符，我们就必须使用shell的引用机制去引用文件名。实际上，为了可移植性，POSIX.1标准推荐严格使用以下字符来命名文件：字母(a-z, A-Z)，数字(0-9)，点(.)，中杠(-)，下划线(_)。
+**文件名**：The names in a directory are called filenames. The only two characters that cannot appear in a filename are the slash character (/) and the null character. The slash separates the filenames that form a pathname (described next) and the null character terminates a pathname. Nevertheless, it’s good practice to restrict the characters in a filename to a subset of the normal printing characters. (If we use some of the shell’s special characters in the filename, we have to use the shell’s quoting mechanism to reference the filename, and this can get complicated.) Indeed, for portability, POSIX.1 recommends restricting filenames to consist of the following characters: letters (a-z, A-Z), numbers (0-9), period (.), dash (-), and underscore (\_).
+一个目录中的诸多名字（包括文件和目录）称为文件名，只有两个字符不能出现在文件名中：`斜杠/(slash)`和`空字符(null character)`，斜杠用来分割`路径名(pathname)`中的文件名，空字符用来结束一个路径名（实际上编程语言中字符串就是由空字符来结束的）。然而，我们命名文件的时候最好不要使用一些乱七八糟的字符，如果我们使用了shell的特殊字符，我们就必须使用shell的引用机制去引用文件名。实际上，为了可移植性，POSIX.1标准推荐严格使用以下字符来命名文件：字母(a-z, A-Z)，数字(0-9)，点(.)，中杠(-)，下划线(\_)。
 
 Two filenames are automatically created whenever a new directory is created: . (called dot) and .. (called dot-dot). Dot refers to the current directory, and dot-dot refers to the parent directory. In the root directory, dot-dot is the same as dot. 有两个文件名在目录被创建的时候自动创建：`.`和`..`，`.`指向当前目录，`..`指向父目录，在根目录中，`..`和`.`一样（都指向当前目录）。
 
@@ -126,9 +132,7 @@ Figure 1.3 is a program that just prints the name of every file in a directory, 
 cc myls.c
 ```
 
-> Historically, cc(1) is the C compiler. On systems with the GNU C compilation system, the C 
->
-> compiler is gcc(1). Here, cc is usually linked to gcc. 
+> Historically, cc(1) is the C compiler. On systems with the GNU C compilation system, the C compiler is gcc(1). Here, cc is usually linked to gcc. 
 
 但在实际的操作过程中，遇到了如下错误：
 
@@ -143,6 +147,20 @@ clang: error: linker command failed with exit code 1 (use -v to see invocation)
 ```
 
 这是个链接错误，具体的解决办法请看这篇博客：[OS X下UNIX环境高级编程（第三版）学习日志－第一章ChapterI，编译apue包与第一个例程](https://my.oschina.net/alextuan/blog/530425)
+
+实际上要先单独编译`myls.c`，使用命令：
+
+```
+gcc -c myls.c
+```
+
+得到`myls.o`，然后与依赖的其他目标文件组合成一个可执行文件，我们可以把本书要用到的所有依赖组合成一个静态库，在apue源代码的根目录下面`make`一下，编译完成后就可以在lib目录下找到静态库：`libapue.a`了。使用命令：
+
+```
+gcc -o myls myls.o -Llib -lapue
+```
+
+>如果编译失败，使用`make clean`可以清空编译结果，然后就可以使用`make`重新编译了。不要将程序命名为`.cpp`文件，这样的话即便你使用gcc编译`myls.cpp`，也会出错，更不要使用g++去编译`myls.cpp`，因为库是用gcc编译的。
 
 - When the program is done, it calls the function exit with an argument of 0. The function exit terminates a program. By convention, an argument of 0 means OK, and an argument between 1 and 255 means that an error occurred.  **0代表OK，1到255代表各种类型的错误**。
 
@@ -632,17 +650,17 @@ From an implementor’s point of view, the distinction between a system call and
 
 Consider the memory allocation function malloc as an example. There are many ways to do memory allocation and its associated garbage collection (best fit, first fit, and so on). No single technique is optimal for all programs. The UNIX system call that handles memory allocation, sbrk(2), is not a general-purpose memory manager. It increases or decreases the address space of the process by a specified number of bytes. How that space is managed is up to the process. The memory allocation function, malloc(3), implements one particular type of allocation. If we don’t like its operation, we can define our own malloc function, which will probably use the sbrk system call. In fact, numerous software packages implement their own memory allocation algorithms with the sbrk system call. Figure 1.11 shows the relationship between the application, the malloc function, and the sbrk system call.  让我们来看看内存分配函数`malloc`这个例子。有很多内存分配和相关的垃圾回收方法（最好适应算法，最先适应算法，等等）。没有哪个技术是对所有程序优化的。**unix系统调用`sbrk(2)`不是一个通用的存储管理器。它给进程增加和减少内存空间都是固定的字节数。怎么管理空间其实还要取决于进程自己。内存分配函数`malloc(3)`，实现了特定类型的分配。如果我们不喜欢它的做法，我们可以定义自己的malloc函数，但也是要用到sbrk系统调用的。实际上大量的软件包都通过直接使用sbrk系统调用实现了自己的内存管理算法**。图1.11展示了应用，malloc函数，和sbrk系统调用之间的关系。
 
-<img src="https://i.loli.net/2018/05/25/5b07647fc7597.png", width="70%">
+<img src="../../../../images/APUE-3rd-Figure 1.11.png" width="70%">
 
 Here we have a clean separation of duties: the system call in the kernel allocates an additional chunk of space on behalf of the process. The malloc library function manages this space from user level.  这里职责是分明的：系统调用代表进程在内核里分配了额外的一块空间。malloc库函数在用户层级上管理这块空间。
 
-Another example to illustrate the difference between a system call and a library function is the interface the UNIX System provides to determine the current time and date. Some operating systems provide one system call to return the time and another to return the date. Any special handling, such as the switch to or from daylight saving time, is handled by the kernel or requires human intervention. The UNIX System, in contrast, provides a single system call that returns the number of seconds since the Epoch: midnight, January 1, 1970, Coordinated Universal Time. Any interpretation of this value, such as converting it to a human-readable time and date using the local time zone, is left to the user process. The standard C library provides routines to handle most cases. These library routines handle such details as the various algorithms for daylight saving time.  另一个描述系统调用和库函数不同的例子是当前时间和日期。某些操作系统提供一个系统调用返回时间，另一个系统调用返回日期。任何特殊的处理，比如正常时制与夏令时的切换，需要内核的处理或者认为干预。Unix系统则相反，只提供一个系统调用，返回UTC（UTC是指从1970年的第一秒开始算起到现在经过的总时间）。任何对UTC这个值的解释，例如把它转成人类可读的时间日期使用当地时间，就留给了用户进程。标准C库提供了诸多例程来处理大多数情况。这些库例程处理这些细节，就像大多数算法处理夏令时切换一样。
+Another example to illustrate the difference between a system call and a library function is the interface the UNIX System provides to determine the current time and date. Some operating systems provide one system call to return the time and another to return the date. Any special handling, such as the switch to or from daylight saving time, is handled by the kernel or requires human intervention. The UNIX System, in contrast, provides a single system call that returns the number of seconds since the Epoch: midnight, January 1, 1970, Coordinated Universal Time. Any interpretation of this value, such as converting it to a human-readable time and date using the local time zone, is left to the user process. The standard C library provides routines to handle most cases. These library routines handle such details as the various algorithms for daylight saving time.  另一个描述系统调用和库函数不同的例子是当前时间和日期。某些操作系统提供一个系统调用返回时间，另一个系统调用返回日期。任何特殊的处理，比如正常时制与夏令时的切换，需要内核的处理或者人为干预。Unix系统则相反，只提供一个系统调用，返回UTC（UTC是指从1970年的第一秒开始算起到现在经过的总时间）。任何对UTC这个值的解释，例如把它转成人类可读的时间日期使用当地时间，就留给了用户进程。标准C库提供了诸多例程来处理大多数情况。这些库例程处理这些细节，就像大多数算法处理夏令时切换一样。
 
 An application can either make a system call or call a library routine. Also realize that many library routines invoke a system call. This is shown in Figure 1.12.  一个应用可以使用系统调用或者调用库例程，同样要意识到许多库例程调用了系统调用。
 
 Another difference between system calls and library functions is that system calls usually **provide a minimal interface**, whereas library functions often **provide more elaborate functionality**. We’ve seen this already in the difference between the sbrk system call and the malloc library function. We’ll see this difference again later, when we compare the unbuffered I/O functions (Chapter 3) and the standard I/O functions (Chapter 5).  另一个系统调用和库函数的区别就是，系统调用往往只提供一个很小的接口，然而库函数经常提供更多精细的功能。
 
-<img src="/images/APUE-3rd-Figure 1.11.png" width="70%">
+<img src="../../../../images/APUE-3rd-Figure 1.12.png" width="70%">
 
 The process control system calls (**fork, exec, and waitpid**) are usually invoked by the user’s application code directly. (Recall the bare-bones shell in Figure 1.7.) But some library routines exist to simplify certain common cases: the **system** and **popen** library routines, for example. In Section 8.13, we’ll show an implementation of the system function that invokes the basic process control system calls. We’ll enhance this example in Section 10.18 to handle signals correctly. 
 
