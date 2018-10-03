@@ -81,13 +81,14 @@
 
 
 
-<meta name="description" content="前言这章将的是文件IO，其中有几个非常重要的概念：  File Desriptors，文件描述符 current file offset，当前文件偏移量 File Sharing Data Structure，文件共享数据模型 file descriptor flags ，文件描述位 file status flags ，文件状态位  File Descriptors 对内核来说，所有 打开的文件">
+<meta name="description" content="前言这章讲的是文件IO，其中有几个非常重要的概念：  File Desriptors，文件描述符 current file offset，当前文件偏移量 File Sharing Data Structure，文件共享数据模型 file descriptor flags ，文件描述位 file status flags ，文件状态位  File Descriptors 对内核来说，所有 打开的文件">
 <meta property="og:type" content="article">
 <meta property="og:title" content="APUE-3rd 读书笔记 — File I&#x2F;O">
 <meta property="og:url" content="http://liuqinh2s.github.io/blog/2018/05/28/APUE-3rd-读书笔记 — File I:O/index.html">
 <meta property="og:site_name" content="liuqinh2s&#39; blog">
-<meta property="og:description" content="前言这章将的是文件IO，其中有几个非常重要的概念：  File Desriptors，文件描述符 current file offset，当前文件偏移量 File Sharing Data Structure，文件共享数据模型 file descriptor flags ，文件描述位 file status flags ，文件状态位  File Descriptors 对内核来说，所有 打开的文件">
+<meta property="og:description" content="前言这章讲的是文件IO，其中有几个非常重要的概念：  File Desriptors，文件描述符 current file offset，当前文件偏移量 File Sharing Data Structure，文件共享数据模型 file descriptor flags ，文件描述位 file status flags ，文件状态位  File Descriptors 对内核来说，所有 打开的文件">
 <meta property="og:locale" content="en">
+<meta property="og:image" content="http://liuqinh2s.github.io/blog/images/APUE-3rd-Figure%203.6.png">
 <meta property="og:image" content="https://i.loli.net/2018/05/30/5b0e51e54c6d1.png">
 <meta property="og:image" content="https://i.loli.net/2018/05/30/5b0e5b6638838.png">
 <meta property="og:image" content="https://i.loli.net/2018/05/30/5b0e6c0a52034.png">
@@ -95,11 +96,11 @@
 <meta property="og:image" content="https://i.loli.net/2018/05/31/5b0f4c0dc6161.png">
 <meta property="og:image" content="https://i.loli.net/2018/05/31/5b0f4c6873af3.png">
 <meta property="og:image" content="https://i.loli.net/2018/05/31/5b0f4cf6d20f6.png">
-<meta property="og:updated_time" content="2018-09-23T01:24:49.062Z">
+<meta property="og:updated_time" content="2018-09-23T11:43:39.607Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="APUE-3rd 读书笔记 — File I&#x2F;O">
-<meta name="twitter:description" content="前言这章将的是文件IO，其中有几个非常重要的概念：  File Desriptors，文件描述符 current file offset，当前文件偏移量 File Sharing Data Structure，文件共享数据模型 file descriptor flags ，文件描述位 file status flags ，文件状态位  File Descriptors 对内核来说，所有 打开的文件">
-<meta name="twitter:image" content="https://i.loli.net/2018/05/30/5b0e51e54c6d1.png">
+<meta name="twitter:description" content="前言这章讲的是文件IO，其中有几个非常重要的概念：  File Desriptors，文件描述符 current file offset，当前文件偏移量 File Sharing Data Structure，文件共享数据模型 file descriptor flags ，文件描述位 file status flags ，文件状态位  File Descriptors 对内核来说，所有 打开的文件">
+<meta name="twitter:image" content="http://liuqinh2s.github.io/blog/images/APUE-3rd-Figure%203.6.png">
 
 
 
@@ -394,7 +395,7 @@
                   <span class="post-meta-item-text">Words count in article&#58;</span>
                 
                 <span title="Words count in article">
-                  10,484
+                  11,889
                 </span>
               
 
@@ -419,7 +420,7 @@
       
 
       
-        <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>这章将的是文件IO，其中有几个非常重要的概念：</p>
+        <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>这章讲的是文件IO，其中有几个非常重要的概念：</p>
 <ol>
 <li>File Desriptors，文件描述符</li>
 <li>current file offset，当前文件偏移量</li>
@@ -428,12 +429,9 @@
 <li>file status flags ，文件状态位</li>
 </ol>
 <h2 id="File-Descriptors"><a href="#File-Descriptors" class="headerlink" title="File Descriptors"></a>File Descriptors</h2><ul>
-<li><p>对内核来说，所有 <strong>打开的文件</strong> 都使用file descriptor引用。</p>
-</li>
-<li><p>文件描述符是一个非负整数。当我们打开一个存在的文件或者创建一个新文件，内核返回一个文件描述符给进程。</p>
-</li>
-<li><p>当我们想要读或者写一个文件，我们通过文件描述符来确定这个文件，文件描述符是被open或者creat返回的，然后作为read或者write的一个参数。</p>
-</li>
+<li>对内核来说，所有 <strong>打开的文件</strong> 都使用file descriptor引用。</li>
+<li>文件描述符是一个非负整数。当我们打开一个存在的文件或者创建一个新文件，内核返回一个文件描述符给进程。</li>
+<li>当我们想要读或者写一个文件，我们通过文件描述符来确定这个文件，文件描述符是被open或者creat返回的，然后作为read或者write的一个参数。</li>
 </ul>
 <blockquote>
 <p>文件描述符都使用尽可能小的非负整数，File descriptors range from 0 through OPEN_MAX−1. </p>
@@ -441,8 +439,8 @@
 <p>有三个magic number，0代表STDIN_FILENO，1代表STDOUT_FILENO，2代表STDERR_FILENO。虽然这已经是POSIX.1所定义的标准，但为了程序的可读性，还是不建议直接写数字。这三个常量定义在<code>&lt;unistd.h&gt;</code>中。</p>
 <h2 id="open-and-openat-Functions"><a href="#open-and-openat-Functions" class="headerlink" title="open and openat Functions"></a>open and openat Functions</h2><p>A file is opened or created by calling either the open function or the openat function. </p>
 <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;fcntl.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">open</span><span class="params">(<span class="keyword">const</span> <span class="keyword">char</span> *path, <span class="keyword">int</span> oflag, ... <span class="comment">/* mode_t mode */</span> )</span></span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">openat</span><span class="params">(<span class="keyword">int</span> fd, <span class="keyword">const</span> <span class="keyword">char</span> *path, <span class="keyword">int</span> oflag, ... <span class="comment">/* mode_t mode */</span> )</span></span>;</span><br><span class="line"><span class="comment">// Both return: file descriptor if OK, −1 on error</span></span><br></pre></td></tr></table></figure>
-<p>最后一个参数是<code>…</code>，这是ISO C定义剩下的多个参数的方式。对这些函数来说，只有当新文件被创建时，最后一个参数才被使用，后面我们会讲。在这个原型中我们把这个参数写作一个注释。</p>
-<p>path这个参数是要打开或者要创建的文件的名字。这个函数有多种操作，定在在oflag参数里。这个参数由下列一个或者多个定义在<code>&lt;fcntl.h&gt;</code>头文件中的常量通过或操作构成：</p>
+<p>最后一个参数是<code>...</code>，这是ISO C定义剩下的多个参数的方式。对这些函数来说，只有当新文件被创建时，最后一个参数才被使用，后面我们会讲。在这个原型中我们把这个参数写作一个注释。</p>
+<p>path这个参数是要打开或者要创建的文件的名字。这个函数有多种操作，定在在oflag参数里。这个参数由下列一个或者多个定义在<code>&lt;fcntl.h&gt;</code>头文件中的常量通过 <strong>或(一种逻辑操作)</strong> 操作构成：</p>
 <p>O_RDONLY    Open for reading only</p>
 <p>O_WRONLY    Open for writing only</p>
 <p>O_RDWR    Open for reading and writing</p>
@@ -495,7 +493,7 @@
 <blockquote>
 <p>Most modern file systems support a maximum of 255 characters for filenames. Because filenames are usually shorter than this limit, this constraint tends to not present problems for most applications. </p>
 </blockquote>
-<h3 id="creat-Function"><a href="#creat-Function" class="headerlink" title="creat Function"></a>creat Function</h3><p>A new file can also be created by calling the creat function. </p>
+<h2 id="creat-Function"><a href="#creat-Function" class="headerlink" title="creat Function"></a>creat Function</h2><p>A new file can also be created by calling the creat function. </p>
 <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;fcntl.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">creat</span><span class="params">(<span class="keyword">const</span> <span class="keyword">char</span> *path, <span class="keyword">mode_t</span> mode)</span></span>;</span><br><span class="line"><span class="comment">// Returns: file descriptor opened for write-only if OK, −1 on error</span></span><br></pre></td></tr></table></figure>
 <p>Note that this function is equivalent to </p>
 <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">open(path, O_WRONLY | O_CREAT | O_TRUNC, mode);</span><br></pre></td></tr></table></figure>
@@ -505,27 +503,20 @@
 <p>We’ll show how to specify mode in Section 4.5 when we describe a file’s access permissions in detail. </p>
 <p>One deficiency with creat is that the file is opened only for writing. Before the new version of open was provided, if we were creating a temporary file that we wanted to write and then read back, we had to call creat, close, and then open. A better way is to use the open function, as in </p>
 <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">open(path, O_RDWR | O_CREAT | O_TRUNC, mode);</span><br></pre></td></tr></table></figure>
-<h3 id="close-Function"><a href="#close-Function" class="headerlink" title="close Function"></a>close Function</h3><p>An open file is closed by calling the close function. </p>
+<h2 id="close-Function"><a href="#close-Function" class="headerlink" title="close Function"></a>close Function</h2><p>An open file is closed by calling the close function. </p>
 <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;unistd.h&gt; </span></span></span><br><span class="line"></span><br><span class="line"><span class="comment">// Returns: 0 if OK, −1 on error</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">close</span><span class="params">(<span class="keyword">int</span> fd)</span></span>;</span><br></pre></td></tr></table></figure>
 <p>Closing a file also releases any record locks that the process may have on the file. We’ll discuss this point further in Section 14.3.  关闭一个文件同样会释放进程对该文件的所有锁。</p>
 <p>When a process terminates, all of its open files are closed automatically by the kernel. Many programs take advantage of this fact and don’t explicitly close open files. See the program in Figure 1.4, for example.  当一个进程终止，所有它打开的文件都会被内核自动关闭。许多程序利用了这一点，不明确关闭文件。</p>
-<h3 id="lseek-Function"><a href="#lseek-Function" class="headerlink" title="lseek Function"></a>lseek Function</h3><p>Every open file has an associated ‘‘current file offset,’’ normally a non-negative integer that measures the number of bytes from the beginning of the file. (We describe some exceptions to the ‘‘non-negative’’ qualifier later in this section.) Read and write operations normally start at the current file offset and cause the offset to be incremented by the number of bytes read or written. By default, this offset is initialized to 0 when a file is opened, unless the O_APPEND option is specified.  每个打开的文件都与 “current file offset”关联，正常情况下它是一个非负整形数，表示从文件开始到目前位置的字节数。读和写操作都是从 current file offset开始的，并且会让offset增加，随着读和写的进行。默认的，当文件被打开时，这个位移初始化时0，除非指明了O_APPEND选项。</p>
+<h2 id="lseek-Function"><a href="#lseek-Function" class="headerlink" title="lseek Function"></a>lseek Function</h2><p>Every open file has an associated “current file offset,” normally a non-negative integer that measures the number of bytes from the beginning of the file. (We describe some exceptions to the ‘‘non-negative’’ qualifier later in this section.) Read and write operations normally start at the current file offset and cause the offset to be incremented by the number of bytes read or written. By default, this offset is initialized to 0 when a file is opened, unless the O_APPEND option is specified.  每个打开的文件都与 “current file offset”关联，正常情况下它是一个非负整形数，表示从文件开始到目前位置的字节数。读和写操作都是从 current file offset开始的，并且会让offset增加，随着读和写的进行。默认的，当文件被打开时，这个位移初始化时0，除非指明了O_APPEND选项。</p>
 <p>An open file’s offset can be set explicitly by calling lseek.  通过调用 lseek函数，一个打开的文件的offset可以被设定。</p>
 <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;unistd.h&gt;</span></span></span><br><span class="line"><span class="keyword">off_t</span> lseek(<span class="keyword">int</span> fd, <span class="keyword">off_t</span> offset, <span class="keyword">int</span> whence);</span><br><span class="line"><span class="comment">// Returns: new file offset if OK, −1 on error</span></span><br></pre></td></tr></table></figure>
 <p>The interpretation of the offset depends on the value of the whence argument. </p>
 <ul>
-<li><p>If whence is SEEK_SET, the file’s offset is set to offset bytes from the beginning of </p>
-<p>the file. </p>
-</li>
-<li><p>If whence is SEEK_CUR, the file’s offset is set to its current value plus the offset. </p>
-<p>The offset can be positive or negative. </p>
-</li>
-<li><p>If whence is SEEK_END, the file’s offset is set to the size of the file plus the offset. </p>
-<p>The offset can be positive or negative.</p>
-</li>
+<li>If whence is SEEK_SET, the file’s offset is set to offset bytes from the beginning of the file. </li>
+<li>If whence is SEEK_CUR, the file’s offset is set to its current value plus the offset. The offset can be positive or negative. </li>
+<li>If whence is SEEK_END, the file’s offset is set to the size of the file plus the offset. The offset can be positive or negative.</li>
 </ul>
-<p>Because a successful call to lseek returns the new file offset, we can seek zero bytes </p>
-<p>from the current position to determine the current offset: </p>
+<p>Because a successful call to lseek returns the new file offset, we can seek zero bytes from the current position to determine the current offset: </p>
 <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">off_t</span>    currpos;</span><br><span class="line">currpos = lseek(fd, <span class="number">0</span>, SEEK_CUR);</span><br></pre></td></tr></table></figure>
 <p>This technique can also be used to determine if a file is capable of seeking. If the file descriptor refers to a pipe, FIFO, or socket, lseek sets errno to <strong>ESPIPE</strong> and returns −1.  </p>
 <blockquote>
@@ -548,7 +539,56 @@
 <blockquote>
 <p>Figure 3.2  Create a file with a hole in it </p>
 </blockquote>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">"apue.h"</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;fcntl.h&gt;</span></span></span><br><span class="line"><span class="keyword">char</span>    buf1[] = <span class="string">"abcdefghij"</span>;</span><br><span class="line"><span class="keyword">char</span>    buf2[] = <span class="string">"ABCDEFGHIJ"</span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">true<span class="keyword">int</span> fd;</span><br><span class="line">    <span class="keyword">if</span> ((fd = creat(<span class="string">"file.hole"</span>, FILE_MODE)) &lt; <span class="number">0</span>)</span><br><span class="line">    	err_sys(<span class="string">"creat error"</span>);</span><br><span class="line">    <span class="keyword">if</span> (write(fd, buf1, <span class="number">10</span>) != <span class="number">10</span>)</span><br><span class="line">    	err_sys(<span class="string">"buf1 write error"</span>);</span><br><span class="line">    <span class="comment">/* offset now = 10 */</span></span><br><span class="line">    <span class="keyword">if</span> (lseek(fd, <span class="number">16384</span>, SEEK_SET) == <span class="number">-1</span>)</span><br><span class="line">    	err_sys(<span class="string">"lseek error"</span>);</span><br><span class="line">    <span class="comment">/* offset now = 16384 */</span></span><br><span class="line">    <span class="keyword">if</span> (write(fd, buf2, <span class="number">10</span>) != <span class="number">10</span>)</span><br><span class="line">        err_sys(<span class="string">"buf2 write error"</span>);</span><br><span class="line">    <span class="comment">/* offset now = 16394 */</span></span><br><span class="line">true<span class="built_in">exit</span>(<span class="number">0</span>); </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">"apue.h"</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;fcntl.h&gt;</span></span></span><br><span class="line"><span class="keyword">char</span>    buf1[] = <span class="string">"abcdefghij"</span>;</span><br><span class="line"><span class="keyword">char</span>    buf2[] = <span class="string">"ABCDEFGHIJ"</span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> fd;</span><br><span class="line">    <span class="keyword">if</span> ((fd = creat(<span class="string">"file.hole"</span>, FILE_MODE)) &lt; <span class="number">0</span>)</span><br><span class="line">    	err_sys(<span class="string">"creat error"</span>);</span><br><span class="line">    <span class="keyword">if</span> (write(fd, buf1, <span class="number">10</span>) != <span class="number">10</span>)</span><br><span class="line">    	err_sys(<span class="string">"buf1 write error"</span>);</span><br><span class="line">    <span class="comment">/* offset now = 10 */</span></span><br><span class="line">    <span class="keyword">if</span> (lseek(fd, <span class="number">16384</span>, SEEK_SET) == <span class="number">-1</span>)</span><br><span class="line">    	err_sys(<span class="string">"lseek error"</span>);</span><br><span class="line">    <span class="comment">/* offset now = 16384 */</span></span><br><span class="line">    <span class="keyword">if</span> (write(fd, buf2, <span class="number">10</span>) != <span class="number">10</span>)</span><br><span class="line">        err_sys(<span class="string">"buf2 write error"</span>);</span><br><span class="line">    <span class="comment">/* offset now = 16394 */</span></span><br><span class="line">    <span class="built_in">exit</span>(<span class="number">0</span>); </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="read-Function"><a href="#read-Function" class="headerlink" title="read Function"></a>read Function</h2><p>Data is read from an open file with the read function.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">#include &lt;unistd.h&gt;</span><br><span class="line">ssize_t read(int fd, void *buf, size_t nbytes);</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>Returns: numbers of bytes read, 0 if end of file, -1 on error</p>
+</blockquote>
+<p>If the read is successful, the number of bytes read is returned. If the end of file is encountered, 0 is returned.</p>
+<p>There are several cases in which the number of bytes actually read is less than the amount requested: 有以下几种情况，read读取的字节会比指定的字节数少</p>
+<ul>
+<li>When reading from a regular file, if the end of file is reached before the requested number of bytes has been read. For example, if 30 bytes remain until the end of file and we try to read 100 bytes, read returns 30. The next time we call read, it will return 0 (end of file).</li>
+<li>When reading from a terminal device. Normally, up to one line is read at a time. (We’ll see how to change this default in Chapter 18.)</li>
+<li>When reading from a network. Buffering within the network may cause less than the requested amount to be returned.</li>
+<li>When reading from a pipe or FIFO. If the pipe contains fewer bytes than requested, read will return only what is available.</li>
+<li>When reading from a record-oriented device. Some record-oriented devices, such as magnetic tape, can return up to a single record at a time.</li>
+<li>When interrupted by a signal and a partial amount of data has already been read. We discuss this further in Section 10.5.</li>
+</ul>
+<p>The read operation starts at the file’s current offset. Before a successful return, the offset is incremented by the number of bytes actually read. read操作是从文件的当前偏移量开始的。在成功返回前，偏移量会随读取的字节增加。</p>
+<p>POSIX.1 changed the prototype for this function in several ways. The classic definition is</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">int read(int fd, char *buf, unsigned nbytes);</span><br></pre></td></tr></table></figure>
+<ul>
+<li>First, the second argument was changed from char <em> to void </em> to be consistent<br>with ISO C: the type void * is used for generic pointers.</li>
+<li>Next, the return value was required to be a signed integer (ssize_t) to return a positive byte count, 0 (for end of file), or −1 (for an error).</li>
+<li>Finally, the third argument historically has been an unsigned integer, to allow a 16-bit implementation to read or write up to 65,534 bytes at a time. With the 1990 POSIX.1 standard, the primitive system data type ssize_t was introduced to provide the signed return value, and the unsigned size_t was used for the third argument. (Recall the SSIZE_MAX constant from Section 2.5.2.)</li>
+</ul>
+<h2 id="write-Function"><a href="#write-Function" class="headerlink" title="write Function"></a>write Function</h2><p>Data is written to an open file with the write function.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">#include &lt;unistd.h&gt;</span><br><span class="line">ssize_t write(int fd, const void *buf, size_t nbytes);</span><br></pre></td></tr></table></figure>
+<p>The return value is usually equal to the nbytes argument; otherwise, an error has occurred. A common cause for a write error is either filling up a disk or exceeding the file size limit for a given process (Section 7.11 and Exercise 10.11). 返回值一般会等于<code>nbytes</code>这个参数的大小，否则就是出错了。一般导致写错误的原因是磁盘满了或者超出给定进程的文件大小限制。</p>
+<p>For a regular file, the write operation starts at the file’s current offset. If the O_APPEND option was specified when the file was opened, the file’s offset is set to the current end of file before each write operation. After a successful write, the file’s offset is incremented by the number of bytes actually written.</p>
+<h2 id="I-O-Efficiency"><a href="#I-O-Efficiency" class="headerlink" title="I/O Efficiency"></a>I/O Efficiency</h2><p>The program in Figure 3.5 copies a file, using only the read and write functions.</p>
+<blockquote>
+<p>Figure 3.5 Copy standard input to standard output</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">#include &quot;apue.h&quot;</span><br><span class="line">#define BUFFSIZE 4096</span><br><span class="line">int main(void)</span><br><span class="line">&#123;</span><br><span class="line">    int     n;</span><br><span class="line">    char    buf[BUFFSIZE];</span><br><span class="line">    while ((n = read(STDIN_FILENO, buf, BUFFSIZE)) &gt; 0)</span><br><span class="line">        if (write(STDOUT_FILENO, buf, n) != n)</span><br><span class="line">            err_sys(&quot;write error&quot;);</span><br><span class="line">    if (n &lt; 0)</span><br><span class="line">        err_sys(&quot;read error&quot;);</span><br><span class="line">    exit(0);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>The following caveats apply to this program.</p>
+<ul>
+<li>It reads from standard input and writes to standard output, assuming that these have been set up by the shell before this program is executed. Indeed, all normal UNIX system shells provide a way to open a file for reading on standard input and to create (or rewrite) a file on standard output. This prevents the program from having to open the input and output files, and allows the user to take advantage of the shell’s I/O redirection facilities.</li>
+<li>The program doesn’t close the input file or output file. Instead, the program uses the feature of the UNIX kernel that closes all open file descriptors in a process when that process terminates.</li>
+<li>This example works for both text files and binary files, since there is no difference between the two to the UNIX kernel.</li>
+</ul>
+<p>One question we haven’t answered, however, is how we chose the BUFFSIZE value. Before answering that, let’s run the program using different values for BUFFSIZE. Figure 3.6 shows the results for reading a 516,581,760-byte file, using 20 different buffer sizes.</p>
+<p><img src="../../../../images/APUE-3rd-Figure 3.6.png" width="70%"></p>
+<p>The file was read using the program shown in Figure 3.5, with standard output redirected to /dev/null. The file system used for this test was the Linux ext4 file system with 4,096-byte blocks. (The st_blksize value, which we describe in Section 4.12, is 4,096.) This accounts for the minimum in the system time occurring at the few timing measurements starting around a BUFFSIZE of 4,096. Increasing the buffer size beyond this limit has little positive effect.</p>
+<p>Most file systems support some kind of read-ahead to improve performance. When sequential reads are detected, the system tries to read in more data than an application requests, assuming that the application will read it shortly. The effect of read-ahead can be seen in Figure 3.6, where the elapsed time for buffer sizes as small as 32 bytes is as good as the elapsed time for larger buffer sizes.</p>
+<p>We’ll return to this timing example later in the text. In Section 3.14, we show the effect of synchronous writes; in Section 5.8, we compare these unbuffered I/O times with the standard I/O library.</p>
+<blockquote>
+<p>Beware when trying to measure the performance of programs that read and write files. The operating system will try to cache the file incore, so if you measure the performance of the program repeatedly, the successive timings will likely be better than the first. This improvement occurs because the first run causes the file to be entered into the system’s cache, and successive runs access the file from the system’s cache instead of from the disk. (The term incore means in main memory. Back in the day, a computer’s main memory was built out of ferrite core. This is where the phrase ‘‘core dump’’ comes from: the main memory image of a program stored in a file on disk for diagnosis.)</p>
+</blockquote>
+<blockquote>
+<p>In the tests reported in Figure 3.6, each run with a different buffer size was made using a different copy of the file so that the current run didn’t find the data in the cache from the previous run. The files are large enough that they all don’t remain in the cache (the test system was configured with 6 GB of RAM).</p>
+</blockquote>
 <h2 id="File-Sharing"><a href="#File-Sharing" class="headerlink" title="File Sharing"></a>File Sharing</h2><p>The UNIX System supports the sharing of open files among different processes. Before describing the dup function, we need to describe this sharing. To do this, we’ll examine the data structures used by the kernel for all I/O. </p>
 <blockquote>
 <p>The following description is conceptual; it may or may not match a particular implementation. Refer to Bach [1986] for a discussion of these structures in System V. McKusick et al. [1996] describe these structures in 4.4BSD. McKusick and Neville-Neil [2005] cover FreeBSD 5.2. For a similar discussion of Solaris, see McDougall and Mauro [2007]. The Linux 2.6 kernel architecture is discussed in Bovet and Cesati [2006]. </p>
@@ -593,7 +633,7 @@
 <p>Given these data structures, we now need to be more specific about what happens with certain operations that we’ve already described. </p>
 <ul>
 <li>After each write is complete, the current file offset in the file table entry is incremented by the number of bytes written. If this causes the current file offset to exceed the current file size, the current file size in the i-node table entry is set to the current file offset (for example, the file is extended). </li>
-<li>If a file is opened with the O_APPEND flag, a corresponding flag is set in the file status flags of the file table entry. Each time a write is performed for a file with this append flag set, the current file offset in the file table entry is first set to the current file size from the i-node table entry. This forces every write to be appended to the current end of file. </li>
+<li>If a file is opened with the O_APPEND flag, a corresponding flag is set in the file status flags of the file table entry. Each time a write is performed for a file with this append flag set, the current file offset in the file table entry is first set to the current file size from the i-node table entry. This forces every write to be appended to the current end of file. 如果一个文件打开时使用<code>O_APPEND</code>标志，相应的标志会设置到文件表项的文件状态符。每次进行写操作时，文件表项就会首先将当前文件偏移量设置为i结点表项的当前文件大小。这样就可以强制每次都写到文件末尾了。</li>
 <li>If a file is positioned to its current end of file using lseek, all that happens is the current file offset in the file table entry is set to the current file size from the i-node table entry. (Note that this is not the same as if the file was opened with the O_APPEND flag, as we will see in Section 3.11.) </li>
 <li>The lseek function modifies only the current file offset in the file table entry. No I/O takes place. </li>
 </ul>
@@ -610,10 +650,8 @@
 <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;unistd.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="comment">// Returns: number of bytes read, 0 if end of file, −1 on error</span></span><br><span class="line"><span class="keyword">ssize_t</span> pread(<span class="keyword">int</span> fd, <span class="keyword">void</span> *buf, <span class="keyword">size_t</span> nbytes, <span class="keyword">off_t</span> offset);</span><br><span class="line"></span><br><span class="line"><span class="comment">// Returns: number of bytes written if OK, −1 on error</span></span><br><span class="line"><span class="keyword">ssize_t</span> pwrite(<span class="keyword">int</span> fd, <span class="keyword">const</span> <span class="keyword">void</span> *buf, <span class="keyword">size_t</span> nbytes, <span class="keyword">off_t</span> offset);</span><br></pre></td></tr></table></figure>
 <p>Calling pread is equivalent to calling lseek followed by a call to read, with the following exceptions. </p>
 <ul>
-<li><p>There is no way to interrupt the two operations that occur when we call pread. </p>
-</li>
-<li><p>The current file offset is not updated. </p>
-</li>
+<li>There is no way to interrupt the two operations that occur when we call pread. </li>
+<li>The current file offset is not updated. </li>
 </ul>
 <p>Calling pwrite is equivalent to calling lseek followed by a call to write, with similar exceptions. </p>
 <h3 id="Creating-a-File"><a href="#Creating-a-File" class="headerlink" title="Creating a File"></a>Creating a File</h3><p>We saw another example of an atomic operation when we described the O_CREAT and O_EXCL options for the open function. When both of these options are specified, the open will fail if the file already exists. We also said that the check for the existence of the file and the creation of the file was performed as an atomic operation. If we didn’t have this atomic operation, we might try </p>
@@ -891,7 +929,7 @@
               
                 <a href="/blog/archives">
               
-                  <span class="site-state-item-count">42</span>
+                  <span class="site-state-item-count">43</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -902,7 +940,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/blog/categories/index.html">
-                  <span class="site-state-item-count">27</span>
+                  <span class="site-state-item-count">28</span>
                   <span class="site-state-item-name">categories</span>
                 </a>
               </div>
@@ -913,7 +951,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/blog/tags/index.html">
-                  <span class="site-state-item-count">8</span>
+                  <span class="site-state-item-count">9</span>
                   <span class="site-state-item-name">tags</span>
                 </a>
               </div>
@@ -999,7 +1037,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#File-Descriptors"><span class="nav-number">2.</span> <span class="nav-text">File Descriptors</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#open-and-openat-Functions"><span class="nav-number">3.</span> <span class="nav-text">open and openat Functions</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Filename-and-Pathname-Truncation"><span class="nav-number">3.1.</span> <span class="nav-text">Filename and Pathname Truncation</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#creat-Function"><span class="nav-number">3.2.</span> <span class="nav-text">creat Function</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#close-Function"><span class="nav-number">3.3.</span> <span class="nav-text">close Function</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#lseek-Function"><span class="nav-number">3.4.</span> <span class="nav-text">lseek Function</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Example"><span class="nav-number">3.5.</span> <span class="nav-text">Example</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Example-1"><span class="nav-number">3.6.</span> <span class="nav-text">Example</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#File-Sharing"><span class="nav-number">4.</span> <span class="nav-text">File Sharing</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Atomic-Operations"><span class="nav-number">5.</span> <span class="nav-text">Atomic Operations</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Appending-to-a-File"><span class="nav-number">5.1.</span> <span class="nav-text">Appending to a File</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#pread-and-pwrite-Functions"><span class="nav-number">5.2.</span> <span class="nav-text">pread and pwrite Functions</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Creating-a-File"><span class="nav-number">5.3.</span> <span class="nav-text">Creating a File</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#dup-and-dup2-Functions"><span class="nav-number">6.</span> <span class="nav-text">dup and dup2 Functions</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#sync-fsync-and-fdatasync-Functions"><span class="nav-number">7.</span> <span class="nav-text">sync, fsync, and fdatasync Functions</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#fcntl-Function"><span class="nav-number">8.</span> <span class="nav-text">fcntl Function</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Example-2"><span class="nav-number">8.1.</span> <span class="nav-text">Example</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Example-3"><span class="nav-number">8.2.</span> <span class="nav-text">Example</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ioctl-Function"><span class="nav-number">9.</span> <span class="nav-text">ioctl Function</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#dev-fd"><span class="nav-number">10.</span> <span class="nav-text">/dev/fd</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Summary"><span class="nav-number">11.</span> <span class="nav-text">Summary</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Exercises"><span class="nav-number">12.</span> <span class="nav-text">Exercises</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#File-Descriptors"><span class="nav-number">2.</span> <span class="nav-text">File Descriptors</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#open-and-openat-Functions"><span class="nav-number">3.</span> <span class="nav-text">open and openat Functions</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Filename-and-Pathname-Truncation"><span class="nav-number">3.1.</span> <span class="nav-text">Filename and Pathname Truncation</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#creat-Function"><span class="nav-number">4.</span> <span class="nav-text">creat Function</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#close-Function"><span class="nav-number">5.</span> <span class="nav-text">close Function</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#lseek-Function"><span class="nav-number">6.</span> <span class="nav-text">lseek Function</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Example"><span class="nav-number">6.1.</span> <span class="nav-text">Example</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Example-1"><span class="nav-number">6.2.</span> <span class="nav-text">Example</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#read-Function"><span class="nav-number">7.</span> <span class="nav-text">read Function</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#write-Function"><span class="nav-number">8.</span> <span class="nav-text">write Function</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#I-O-Efficiency"><span class="nav-number">9.</span> <span class="nav-text">I/O Efficiency</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#File-Sharing"><span class="nav-number">10.</span> <span class="nav-text">File Sharing</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Atomic-Operations"><span class="nav-number">11.</span> <span class="nav-text">Atomic Operations</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Appending-to-a-File"><span class="nav-number">11.1.</span> <span class="nav-text">Appending to a File</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#pread-and-pwrite-Functions"><span class="nav-number">11.2.</span> <span class="nav-text">pread and pwrite Functions</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Creating-a-File"><span class="nav-number">11.3.</span> <span class="nav-text">Creating a File</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#dup-and-dup2-Functions"><span class="nav-number">12.</span> <span class="nav-text">dup and dup2 Functions</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#sync-fsync-and-fdatasync-Functions"><span class="nav-number">13.</span> <span class="nav-text">sync, fsync, and fdatasync Functions</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#fcntl-Function"><span class="nav-number">14.</span> <span class="nav-text">fcntl Function</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Example-2"><span class="nav-number">14.1.</span> <span class="nav-text">Example</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Example-3"><span class="nav-number">14.2.</span> <span class="nav-text">Example</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ioctl-Function"><span class="nav-number">15.</span> <span class="nav-text">ioctl Function</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#dev-fd"><span class="nav-number">16.</span> <span class="nav-text">/dev/fd</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Summary"><span class="nav-number">17.</span> <span class="nav-text">Summary</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Exercises"><span class="nav-number">18.</span> <span class="nav-text">Exercises</span></a></li></ol></div>
             
 
           </div>
@@ -1033,7 +1071,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">81.9k</span>
+    <span title="Site words total count">86.7k</span>
   
 </div>
 

@@ -7,7 +7,7 @@ comments: true
 
 ## 前言
 
-这章将的是文件IO，其中有几个非常重要的概念：
+这章讲的是文件IO，其中有几个非常重要的概念：
 
 1. File Desriptors，文件描述符
 2. current file offset，当前文件偏移量
@@ -20,9 +20,7 @@ comments: true
 ## File Descriptors
 
 - 对内核来说，所有 **打开的文件** 都使用file descriptor引用。
-
 - 文件描述符是一个非负整数。当我们打开一个存在的文件或者创建一个新文件，内核返回一个文件描述符给进程。
-
 - 当我们想要读或者写一个文件，我们通过文件描述符来确定这个文件，文件描述符是被open或者creat返回的，然后作为read或者write的一个参数。
 
 > 文件描述符都使用尽可能小的非负整数，File descriptors range from 0 through OPEN_MAX−1. 
@@ -40,9 +38,9 @@ int openat(int fd, const char *path, int oflag, ... /* mode_t mode */ );
 // Both return: file descriptor if OK, −1 on error
 ```
 
-最后一个参数是`…`，这是ISO C定义剩下的多个参数的方式。对这些函数来说，只有当新文件被创建时，最后一个参数才被使用，后面我们会讲。在这个原型中我们把这个参数写作一个注释。
+最后一个参数是`...`，这是ISO C定义剩下的多个参数的方式。对这些函数来说，只有当新文件被创建时，最后一个参数才被使用，后面我们会讲。在这个原型中我们把这个参数写作一个注释。
 
-path这个参数是要打开或者要创建的文件的名字。这个函数有多种操作，定在在oflag参数里。这个参数由下列一个或者多个定义在`<fcntl.h>`头文件中的常量通过或操作构成：
+path这个参数是要打开或者要创建的文件的名字。这个函数有多种操作，定在在oflag参数里。这个参数由下列一个或者多个定义在`<fcntl.h>`头文件中的常量通过 **或(一种逻辑操作)** 操作构成：
 
 O_RDONLY	Open for reading only
 
@@ -116,7 +114,7 @@ If _POSIX_NO_TRUNC is in effect, errno is set to ENAMETOOLONG, and an error stat
 
 > Most modern file systems support a maximum of 255 characters for filenames. Because filenames are usually shorter than this limit, this constraint tends to not present problems for most applications. 
 
-### creat Function
+## creat Function
 
 A new file can also be created by calling the creat function. 
 
@@ -142,7 +140,7 @@ One deficiency with creat is that the file is opened only for writing. Before th
 open(path, O_RDWR | O_CREAT | O_TRUNC, mode);
 ```
 
-### close Function
+## close Function
 
 An open file is closed by calling the close function. 
 
@@ -157,9 +155,9 @@ Closing a file also releases any record locks that the process may have on the f
 
 When a process terminates, all of its open files are closed automatically by the kernel. Many programs take advantage of this fact and don’t explicitly close open files. See the program in Figure 1.4, for example.  当一个进程终止，所有它打开的文件都会被内核自动关闭。许多程序利用了这一点，不明确关闭文件。
 
-### lseek Function
+## lseek Function
 
-Every open file has an associated ‘‘current file offset,’’ normally a non-negative integer that measures the number of bytes from the beginning of the file. (We describe some exceptions to the ‘‘non-negative’’ qualifier later in this section.) Read and write operations normally start at the current file offset and cause the offset to be incremented by the number of bytes read or written. By default, this offset is initialized to 0 when a file is opened, unless the O_APPEND option is specified.  每个打开的文件都与 "current file offset"关联，正常情况下它是一个非负整形数，表示从文件开始到目前位置的字节数。读和写操作都是从 current file offset开始的，并且会让offset增加，随着读和写的进行。默认的，当文件被打开时，这个位移初始化时0，除非指明了O_APPEND选项。
+Every open file has an associated “current file offset,” normally a non-negative integer that measures the number of bytes from the beginning of the file. (We describe some exceptions to the ‘‘non-negative’’ qualifier later in this section.) Read and write operations normally start at the current file offset and cause the offset to be incremented by the number of bytes read or written. By default, this offset is initialized to 0 when a file is opened, unless the O_APPEND option is specified.  每个打开的文件都与 "current file offset"关联，正常情况下它是一个非负整形数，表示从文件开始到目前位置的字节数。读和写操作都是从 current file offset开始的，并且会让offset增加，随着读和写的进行。默认的，当文件被打开时，这个位移初始化时0，除非指明了O_APPEND选项。
 
 An open file’s offset can be set explicitly by calling lseek.  通过调用 lseek函数，一个打开的文件的offset可以被设定。
 
@@ -171,21 +169,11 @@ off_t lseek(int fd, off_t offset, int whence);
 
 The interpretation of the offset depends on the value of the whence argument. 
 
-- If whence is SEEK_SET, the file’s offset is set to offset bytes from the beginning of 
+- If whence is SEEK_SET, the file’s offset is set to offset bytes from the beginning of the file. 
+- If whence is SEEK_CUR, the file’s offset is set to its current value plus the offset. The offset can be positive or negative. 
+- If whence is SEEK_END, the file’s offset is set to the size of the file plus the offset. The offset can be positive or negative.
 
-  the file. 
-
-- If whence is SEEK_CUR, the file’s offset is set to its current value plus the offset. 
-
-  The offset can be positive or negative. 
-
-- If whence is SEEK_END, the file’s offset is set to the size of the file plus the offset. 
-
-  The offset can be positive or negative.
-
-Because a successful call to lseek returns the new file offset, we can seek zero bytes 
-
-from the current position to determine the current offset: 
+Because a successful call to lseek returns the new file offset, we can seek zero bytes from the current position to determine the current offset: 
 
 ```C
 off_t    currpos;
@@ -240,7 +228,7 @@ char    buf1[] = "abcdefghij";
 char    buf2[] = "ABCDEFGHIJ";
 int main(void)
 {
-	int fd;
+    int fd;
     if ((fd = creat("file.hole", FILE_MODE)) < 0)
     	err_sys("creat error");
     if (write(fd, buf1, 10) != 10)
@@ -252,9 +240,99 @@ int main(void)
     if (write(fd, buf2, 10) != 10)
         err_sys("buf2 write error");
     /* offset now = 16394 */
-	exit(0); 
+    exit(0); 
 }
 ```
+
+## read Function
+
+Data is read from an open file with the read function.
+
+```
+#include <unistd.h>
+ssize_t read(int fd, void *buf, size_t nbytes);
+```
+
+>Returns: numbers of bytes read, 0 if end of file, -1 on error
+
+If the read is successful, the number of bytes read is returned. If the end of file is encountered, 0 is returned.
+
+There are several cases in which the number of bytes actually read is less than the amount requested: 有以下几种情况，read读取的字节会比指定的字节数少
+
+- When reading from a regular file, if the end of file is reached before the requested number of bytes has been read. For example, if 30 bytes remain until the end of file and we try to read 100 bytes, read returns 30. The next time we call read, it will return 0 (end of file).
+- When reading from a terminal device. Normally, up to one line is read at a time. (We’ll see how to change this default in Chapter 18.)
+- When reading from a network. Buffering within the network may cause less than the requested amount to be returned.
+- When reading from a pipe or FIFO. If the pipe contains fewer bytes than requested, read will return only what is available.
+- When reading from a record-oriented device. Some record-oriented devices, such as magnetic tape, can return up to a single record at a time.
+- When interrupted by a signal and a partial amount of data has already been read. We discuss this further in Section 10.5.
+
+The read operation starts at the file’s current offset. Before a successful return, the offset is incremented by the number of bytes actually read. read操作是从文件的当前偏移量开始的。在成功返回前，偏移量会随读取的字节增加。
+
+POSIX.1 changed the prototype for this function in several ways. The classic definition is
+
+```
+int read(int fd, char *buf, unsigned nbytes);
+```
+
+- First, the second argument was changed from char * to void * to be consistent
+with ISO C: the type void * is used for generic pointers.
+- Next, the return value was required to be a signed integer (ssize_t) to return a positive byte count, 0 (for end of file), or −1 (for an error).
+- Finally, the third argument historically has been an unsigned integer, to allow a 16-bit implementation to read or write up to 65,534 bytes at a time. With the 1990 POSIX.1 standard, the primitive system data type ssize_t was introduced to provide the signed return value, and the unsigned size_t was used for the third argument. (Recall the SSIZE_MAX constant from Section 2.5.2.)
+
+## write Function
+
+Data is written to an open file with the write function.
+
+```
+#include <unistd.h>
+ssize_t write(int fd, const void *buf, size_t nbytes);
+```
+
+The return value is usually equal to the nbytes argument; otherwise, an error has occurred. A common cause for a write error is either filling up a disk or exceeding the file size limit for a given process (Section 7.11 and Exercise 10.11). 返回值一般会等于`nbytes`这个参数的大小，否则就是出错了。一般导致写错误的原因是磁盘满了或者超出给定进程的文件大小限制。
+
+For a regular file, the write operation starts at the file’s current offset. If the O_APPEND option was specified when the file was opened, the file’s offset is set to the current end of file before each write operation. After a successful write, the file’s offset is incremented by the number of bytes actually written.
+
+## I/O Efficiency
+
+The program in Figure 3.5 copies a file, using only the read and write functions.
+
+>Figure 3.5 Copy standard input to standard output
+
+```
+#include "apue.h"
+#define BUFFSIZE 4096
+int main(void)
+{
+    int     n;
+    char    buf[BUFFSIZE];
+    while ((n = read(STDIN_FILENO, buf, BUFFSIZE)) > 0)
+        if (write(STDOUT_FILENO, buf, n) != n)
+            err_sys("write error");
+    if (n < 0)
+        err_sys("read error");
+    exit(0);
+}
+```
+
+The following caveats apply to this program.
+
+- It reads from standard input and writes to standard output, assuming that these have been set up by the shell before this program is executed. Indeed, all normal UNIX system shells provide a way to open a file for reading on standard input and to create (or rewrite) a file on standard output. This prevents the program from having to open the input and output files, and allows the user to take advantage of the shell’s I/O redirection facilities.
+- The program doesn’t close the input file or output file. Instead, the program uses the feature of the UNIX kernel that closes all open file descriptors in a process when that process terminates.
+- This example works for both text files and binary files, since there is no difference between the two to the UNIX kernel.
+
+One question we haven’t answered, however, is how we chose the BUFFSIZE value. Before answering that, let’s run the program using different values for BUFFSIZE. Figure 3.6 shows the results for reading a 516,581,760-byte file, using 20 different buffer sizes.
+
+<img src="../../../../images/APUE-3rd-Figure 3.6.png" width="70%">
+
+The file was read using the program shown in Figure 3.5, with standard output redirected to /dev/null. The file system used for this test was the Linux ext4 file system with 4,096-byte blocks. (The st_blksize value, which we describe in Section 4.12, is 4,096.) This accounts for the minimum in the system time occurring at the few timing measurements starting around a BUFFSIZE of 4,096. Increasing the buffer size beyond this limit has little positive effect.
+
+Most file systems support some kind of read-ahead to improve performance. When sequential reads are detected, the system tries to read in more data than an application requests, assuming that the application will read it shortly. The effect of read-ahead can be seen in Figure 3.6, where the elapsed time for buffer sizes as small as 32 bytes is as good as the elapsed time for larger buffer sizes.
+
+We’ll return to this timing example later in the text. In Section 3.14, we show the effect of synchronous writes; in Section 5.8, we compare these unbuffered I/O times with the standard I/O library.
+
+>Beware when trying to measure the performance of programs that read and write files. The operating system will try to cache the file incore, so if you measure the performance of the program repeatedly, the successive timings will likely be better than the first. This improvement occurs because the first run causes the file to be entered into the system’s cache, and successive runs access the file from the system’s cache instead of from the disk. (The term incore means in main memory. Back in the day, a computer’s main memory was built out of ferrite core. This is where the phrase ‘‘core dump’’ comes from: the main memory image of a program stored in a file on disk for diagnosis.)
+
+>In the tests reported in Figure 3.6, each run with a different buffer size was made using a different copy of the file so that the current run didn’t find the data in the cache from the previous run. The files are large enough that they all don’t remain in the cache (the test system was configured with 6 GB of RAM).
 
 ## File Sharing
 
@@ -300,7 +378,7 @@ We assume here that the first process has the file open on descriptor 3 and that
 Given these data structures, we now need to be more specific about what happens with certain operations that we’ve already described. 
 
 - After each write is complete, the current file offset in the file table entry is incremented by the number of bytes written. If this causes the current file offset to exceed the current file size, the current file size in the i-node table entry is set to the current file offset (for example, the file is extended). 
-- If a file is opened with the O_APPEND flag, a corresponding flag is set in the file status flags of the file table entry. Each time a write is performed for a file with this append flag set, the current file offset in the file table entry is first set to the current file size from the i-node table entry. This forces every write to be appended to the current end of file. 
+- If a file is opened with the O_APPEND flag, a corresponding flag is set in the file status flags of the file table entry. Each time a write is performed for a file with this append flag set, the current file offset in the file table entry is first set to the current file size from the i-node table entry. This forces every write to be appended to the current end of file. 如果一个文件打开时使用`O_APPEND`标志，相应的标志会设置到文件表项的文件状态符。每次进行写操作时，文件表项就会首先将当前文件偏移量设置为i结点表项的当前文件大小。这样就可以强制每次都写到文件末尾了。
 - If a file is positioned to its current end of file using lseek, all that happens is the current file offset in the file table entry is set to the current file size from the i-node table entry. (Note that this is not the same as if the file was opened with the O_APPEND flag, as we will see in Section 3.11.) 
 - The lseek function modifies only the current file offset in the file table entry. No I/O takes place. 
 
@@ -348,7 +426,6 @@ ssize_t pwrite(int fd, const void *buf, size_t nbytes, off_t offset);
 Calling pread is equivalent to calling lseek followed by a call to read, with the following exceptions. 
 
 - There is no way to interrupt the two operations that occur when we call pread. 
-
 - The current file offset is not updated. 
 
 Calling pwrite is equivalent to calling lseek followed by a call to write, with similar exceptions. 

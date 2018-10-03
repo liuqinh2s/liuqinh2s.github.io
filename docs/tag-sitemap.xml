@@ -38,14 +38,21 @@
 
     <url>
         <loc>http://liuqinh2s.github.io/blog/tags/windows%E7%8E%AF%E5%A2%83/</loc>
-        <lastmod>2018-09-20T12:34:01.312Z</lastmod>
+        <lastmod>2018-09-27T11:48:38.413Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>http://liuqinh2s.github.io/blog/tags/wsl/</loc>
-        <lastmod>2018-09-20T12:34:01.312Z</lastmod>
+        <lastmod>2018-09-27T11:48:38.413Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://liuqinh2s.github.io/blog/tags/%E4%BF%A1%E6%81%AF%E8%AE%B0%E6%B3%95/</loc>
+        <lastmod>2018-10-03T08:01:54.530Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
