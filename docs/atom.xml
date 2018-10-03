@@ -6,7 +6,7 @@
   <link href="/blog/atom.xml" rel="self"/>
   
   <link href="http://liuqinh2s.github.io/blog/"/>
-  <updated>2018-10-03T08:01:54.530Z</updated>
+  <updated>2018-10-03T08:05:41.207Z</updated>
   <id>http://liuqinh2s.github.io/blog/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="http://liuqinh2s.github.io/blog/2018/09/27/%E6%B5%AE%E7%82%B9%E6%95%B0%E5%8E%9F%E7%90%86/"/>
     <id>http://liuqinh2s.github.io/blog/2018/09/27/浮点数原理/</id>
     <published>2018-09-26T16:00:00.000Z</published>
-    <updated>2018-10-03T08:01:54.530Z</updated>
+    <updated>2018-10-03T08:05:41.207Z</updated>
     
     <summary type="html">
     
@@ -36,7 +36,7 @@
     
     </summary>
     
-      <category term="[object Object]" scheme="http://liuqinh2s.github.io/blog/categories/object-Object/"/>
+      <category term="《Computer Systems：A Programmer&#39;s Perspective》" scheme="http://liuqinh2s.github.io/blog/categories/%E3%80%8AComputer-Systems%EF%BC%9AA-Programmer-s-Perspective%E3%80%8B/"/>
     
     
       <category term="信息记法" scheme="http://liuqinh2s.github.io/blog/tags/%E4%BF%A1%E6%81%AF%E8%AE%B0%E6%B3%95/"/>
@@ -257,6 +257,32 @@
   </entry>
   
   <entry>
+    <title>Android通讯录深入研究</title>
+    <link href="http://liuqinh2s.github.io/blog/2018/05/03/Android%E9%80%9A%E8%AE%AF%E5%BD%95%E6%B7%B1%E5%85%A5%E7%A0%94%E7%A9%B6/"/>
+    <id>http://liuqinh2s.github.io/blog/2018/05/03/Android通讯录深入研究/</id>
+    <published>2018-05-02T16:00:00.000Z</published>
+    <updated>2018-06-10T01:05:53.024Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;The &lt;code&gt;DISPLAY_NAME&lt;/code&gt; can be fetched either from Contacts &lt;code&gt;database/ContactsContract.Data&amp;#39; OR
+        
+      
+    
+    </summary>
+    
+      <category term="Android" scheme="http://liuqinh2s.github.io/blog/categories/Android/"/>
+    
+      <category term="通讯录" scheme="http://liuqinh2s.github.io/blog/categories/Android/%E9%80%9A%E8%AE%AF%E5%BD%95/"/>
+    
+    
+  </entry>
+  
+  <entry>
     <title>Volley库StringRequest编码问题</title>
     <link href="http://liuqinh2s.github.io/blog/2018/05/03/Volley%E5%BA%93StringRequest%E7%BC%96%E7%A0%81%E9%97%AE%E9%A2%98/"/>
     <id>http://liuqinh2s.github.io/blog/2018/05/03/Volley库StringRequest编码问题/</id>
@@ -284,32 +310,6 @@
   </entry>
   
   <entry>
-    <title>Android通讯录深入研究</title>
-    <link href="http://liuqinh2s.github.io/blog/2018/05/03/Android%E9%80%9A%E8%AE%AF%E5%BD%95%E6%B7%B1%E5%85%A5%E7%A0%94%E7%A9%B6/"/>
-    <id>http://liuqinh2s.github.io/blog/2018/05/03/Android通讯录深入研究/</id>
-    <published>2018-05-02T16:00:00.000Z</published>
-    <updated>2018-06-10T01:05:53.024Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;The &lt;code&gt;DISPLAY_NAME&lt;/code&gt; can be fetched either from Contacts &lt;code&gt;database/ContactsContract.Data&amp;#39; OR
-        
-      
-    
-    </summary>
-    
-      <category term="Android" scheme="http://liuqinh2s.github.io/blog/categories/Android/"/>
-    
-      <category term="通讯录" scheme="http://liuqinh2s.github.io/blog/categories/Android/%E9%80%9A%E8%AE%AF%E5%BD%95/"/>
-    
-    
-  </entry>
-  
-  <entry>
     <title>Java Servlet 学习笔记</title>
     <link href="http://liuqinh2s.github.io/blog/2018/05/01/Java-Servlet-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
     <id>http://liuqinh2s.github.io/blog/2018/05/01/Java-Servlet-学习笔记/</id>
@@ -332,6 +332,32 @@
       <category term="Java" scheme="http://liuqinh2s.github.io/blog/categories/Java/"/>
     
       <category term="Java web" scheme="http://liuqinh2s.github.io/blog/categories/Java/Java-web/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>椭圆规</title>
+    <link href="http://liuqinh2s.github.io/blog/2018/04/30/%E6%A4%AD%E5%9C%86%E8%A7%84/"/>
+    <id>http://liuqinh2s.github.io/blog/2018/04/30/椭圆规/</id>
+    <published>2018-04-29T16:00:00.000Z</published>
+    <updated>2018-04-30T06:51:08.635Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;利用简单定义的椭圆规&quot;&gt;&lt;a href=&quot;#利用简单定义的椭圆规&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="数学" scheme="http://liuqinh2s.github.io/blog/categories/%E6%95%B0%E5%AD%A6/"/>
+    
+      <category term="解析几何" scheme="http://liuqinh2s.github.io/blog/categories/%E6%95%B0%E5%AD%A6/%E8%A7%A3%E6%9E%90%E5%87%A0%E4%BD%95/"/>
     
     
   </entry>
@@ -387,32 +413,6 @@
   </entry>
   
   <entry>
-    <title>椭圆规</title>
-    <link href="http://liuqinh2s.github.io/blog/2018/04/30/%E6%A4%AD%E5%9C%86%E8%A7%84/"/>
-    <id>http://liuqinh2s.github.io/blog/2018/04/30/椭圆规/</id>
-    <published>2018-04-29T16:00:00.000Z</published>
-    <updated>2018-04-30T06:51:08.635Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h2 id=&quot;利用简单定义的椭圆规&quot;&gt;&lt;a href=&quot;#利用简单定义的椭圆规&quot; class=&quot;headerlink&quot;
-        
-      
-    
-    </summary>
-    
-      <category term="数学" scheme="http://liuqinh2s.github.io/blog/categories/%E6%95%B0%E5%AD%A6/"/>
-    
-      <category term="解析几何" scheme="http://liuqinh2s.github.io/blog/categories/%E6%95%B0%E5%AD%A6/%E8%A7%A3%E6%9E%90%E5%87%A0%E4%BD%95/"/>
-    
-    
-  </entry>
-  
-  <entry>
     <title>UML图</title>
     <link href="http://liuqinh2s.github.io/blog/2018/04/28/UML%E5%9B%BE/"/>
     <id>http://liuqinh2s.github.io/blog/2018/04/28/UML图/</id>
@@ -439,30 +439,6 @@
   </entry>
   
   <entry>
-    <title>Hexo+Markdown+MathJax搭建个人博客</title>
-    <link href="http://liuqinh2s.github.io/blog/2018/04/25/Hexo+Markdown+MathJax%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/"/>
-    <id>http://liuqinh2s.github.io/blog/2018/04/25/Hexo+Markdown+MathJax搭建个人博客/</id>
-    <published>2018-04-24T16:00:00.000Z</published>
-    <updated>2018-04-25T04:52:20.655Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h2 id=&quot;为什么搭建个人博客&quot;&gt;&lt;a href=&quot;#为什么搭建个人博客&quot; class=&quot;headerlink&quot; title=&quot;为什么搭建个人博客&quot;&gt;&lt;/a&gt;为什么搭建个人博客&lt;/h2&gt;&lt;p&gt;其实有想过用简书写博客，但简书不支持
-        
-      
-    
-    </summary>
-    
-      <category term="projects" scheme="http://liuqinh2s.github.io/blog/categories/projects/"/>
-    
-    
-  </entry>
-  
-  <entry>
     <title>数学基础公式推导</title>
     <link href="http://liuqinh2s.github.io/blog/2018/04/25/%E6%95%B0%E5%AD%A6%E5%9F%BA%E7%A1%80%E5%85%AC%E5%BC%8F%E6%8E%A8%E5%AF%BC/"/>
     <id>http://liuqinh2s.github.io/blog/2018/04/25/数学基础公式推导/</id>
@@ -484,6 +460,30 @@
     </summary>
     
       <category term="数学" scheme="http://liuqinh2s.github.io/blog/categories/%E6%95%B0%E5%AD%A6/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Hexo+Markdown+MathJax搭建个人博客</title>
+    <link href="http://liuqinh2s.github.io/blog/2018/04/25/Hexo+Markdown+MathJax%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/"/>
+    <id>http://liuqinh2s.github.io/blog/2018/04/25/Hexo+Markdown+MathJax搭建个人博客/</id>
+    <published>2018-04-24T16:00:00.000Z</published>
+    <updated>2018-04-25T04:52:20.655Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;为什么搭建个人博客&quot;&gt;&lt;a href=&quot;#为什么搭建个人博客&quot; class=&quot;headerlink&quot; title=&quot;为什么搭建个人博客&quot;&gt;&lt;/a&gt;为什么搭建个人博客&lt;/h2&gt;&lt;p&gt;其实有想过用简书写博客，但简书不支持
+        
+      
+    
+    </summary>
+    
+      <category term="projects" scheme="http://liuqinh2s.github.io/blog/categories/projects/"/>
     
     
   </entry>
