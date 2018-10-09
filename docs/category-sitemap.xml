@@ -168,13 +168,6 @@
     </url>
 
     <url>
-        <loc>http://liuqinh2s.github.io/blog/categories/Unix/</loc>
-        <lastmod>2018-09-23T11:43:39.607Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>http://liuqinh2s.github.io/blog/categories/%E8%A7%A3%E5%86%B3%E7%9A%84%E9%97%AE%E9%A2%98/</loc>
         <lastmod>2018-09-27T11:48:38.413Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -191,6 +184,13 @@
     <url>
         <loc>http://liuqinh2s.github.io/blog/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E3%80%8AComputer-Systems-A-Programmer-s-Perspective%E3%80%8B/</loc>
         <lastmod>2018-10-03T08:09:31.259Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://liuqinh2s.github.io/blog/categories/Unix/</loc>
+        <lastmod>2018-10-09T11:30:14.466Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
