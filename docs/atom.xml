@@ -6,7 +6,7 @@
   <link href="/blog/atom.xml" rel="self"/>
   
   <link href="http://liuqinh2s.github.io/blog/"/>
-  <updated>2018-10-03T08:09:31.259Z</updated>
+  <updated>2018-10-09T15:08:56.297Z</updated>
   <id>http://liuqinh2s.github.io/blog/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>程序的机器级别表示</title>
+    <link href="http://liuqinh2s.github.io/blog/2018/10/08/%E7%A8%8B%E5%BA%8F%E7%9A%84%E6%9C%BA%E5%99%A8%E7%BA%A7%E8%A1%A8%E7%A4%BA/"/>
+    <id>http://liuqinh2s.github.io/blog/2018/10/08/程序的机器级表示/</id>
+    <published>2018-10-07T16:00:00.000Z</published>
+    <updated>2018-10-09T15:08:56.297Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;从编译C语言文件说起&quot;&gt;&lt;a href=&quot;#从编译C语言文件说起&quot; class=&quot;headerlink&quot; title=&quot;从编译C语言文件说起&quot;&gt;&lt;/a&gt;从编译C语言文件说起&lt;/h2&gt;&lt;figure class=&quot;highlight
+        
+      
+    
+    </summary>
+    
+      <category term="读书笔记" scheme="http://liuqinh2s.github.io/blog/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
+    
+      <category term="《CSAPP》" scheme="http://liuqinh2s.github.io/blog/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E3%80%8ACSAPP%E3%80%8B/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>浮点数原理</title>
@@ -365,30 +391,6 @@
   </entry>
   
   <entry>
-    <title>mathjax常用公式记录</title>
-    <link href="http://liuqinh2s.github.io/blog/2018/04/30/mathjax%E5%B8%B8%E7%94%A8%E5%85%AC%E5%BC%8F%E8%AE%B0%E5%BD%95/"/>
-    <id>http://liuqinh2s.github.io/blog/2018/04/30/mathjax常用公式记录/</id>
-    <published>2018-04-29T16:00:00.000Z</published>
-    <updated>2018-04-30T06:57:18.698Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h2 id=&quot;角度记法&quot;&gt;&lt;a href=&quot;#角度记法&quot; class=&quot;headerlink&quot;
-        
-      
-    
-    </summary>
-    
-      <category term="LaTex" scheme="http://liuqinh2s.github.io/blog/categories/LaTex/"/>
-    
-    
-  </entry>
-  
-  <entry>
     <title>Leetcode Algorithm 274. H-Index</title>
     <link href="http://liuqinh2s.github.io/blog/2018/04/30/Leetcode-Algorithm-274.H-Index/"/>
     <id>http://liuqinh2s.github.io/blog/2018/04/30/Leetcode-Algorithm-274.H-Index/</id>
@@ -410,6 +412,30 @@
       <category term="ACM" scheme="http://liuqinh2s.github.io/blog/categories/ACM/"/>
     
       <category term="Leetcode" scheme="http://liuqinh2s.github.io/blog/categories/ACM/Leetcode/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>mathjax常用公式记录</title>
+    <link href="http://liuqinh2s.github.io/blog/2018/04/30/mathjax%E5%B8%B8%E7%94%A8%E5%85%AC%E5%BC%8F%E8%AE%B0%E5%BD%95/"/>
+    <id>http://liuqinh2s.github.io/blog/2018/04/30/mathjax常用公式记录/</id>
+    <published>2018-04-29T16:00:00.000Z</published>
+    <updated>2018-04-30T06:57:18.698Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;角度记法&quot;&gt;&lt;a href=&quot;#角度记法&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="LaTex" scheme="http://liuqinh2s.github.io/blog/categories/LaTex/"/>
     
     
   </entry>
@@ -441,6 +467,30 @@
   </entry>
   
   <entry>
+    <title>Hexo+Markdown+MathJax搭建个人博客</title>
+    <link href="http://liuqinh2s.github.io/blog/2018/04/25/Hexo+Markdown+MathJax%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/"/>
+    <id>http://liuqinh2s.github.io/blog/2018/04/25/Hexo+Markdown+MathJax搭建个人博客/</id>
+    <published>2018-04-24T16:00:00.000Z</published>
+    <updated>2018-04-25T04:52:20.655Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;为什么搭建个人博客&quot;&gt;&lt;a href=&quot;#为什么搭建个人博客&quot; class=&quot;headerlink&quot; title=&quot;为什么搭建个人博客&quot;&gt;&lt;/a&gt;为什么搭建个人博客&lt;/h2&gt;&lt;p&gt;其实有想过用简书写博客，但简书不支持
+        
+      
+    
+    </summary>
+    
+      <category term="projects" scheme="http://liuqinh2s.github.io/blog/categories/projects/"/>
+    
+    
+  </entry>
+  
+  <entry>
     <title>数学基础公式推导</title>
     <link href="http://liuqinh2s.github.io/blog/2018/04/25/%E6%95%B0%E5%AD%A6%E5%9F%BA%E7%A1%80%E5%85%AC%E5%BC%8F%E6%8E%A8%E5%AF%BC/"/>
     <id>http://liuqinh2s.github.io/blog/2018/04/25/数学基础公式推导/</id>
@@ -467,30 +517,6 @@
   </entry>
   
   <entry>
-    <title>Hexo+Markdown+MathJax搭建个人博客</title>
-    <link href="http://liuqinh2s.github.io/blog/2018/04/25/Hexo+Markdown+MathJax%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/"/>
-    <id>http://liuqinh2s.github.io/blog/2018/04/25/Hexo+Markdown+MathJax搭建个人博客/</id>
-    <published>2018-04-24T16:00:00.000Z</published>
-    <updated>2018-04-25T04:52:20.655Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h2 id=&quot;为什么搭建个人博客&quot;&gt;&lt;a href=&quot;#为什么搭建个人博客&quot; class=&quot;headerlink&quot; title=&quot;为什么搭建个人博客&quot;&gt;&lt;/a&gt;为什么搭建个人博客&lt;/h2&gt;&lt;p&gt;其实有想过用简书写博客，但简书不支持
-        
-      
-    
-    </summary>
-    
-      <category term="projects" scheme="http://liuqinh2s.github.io/blog/categories/projects/"/>
-    
-    
-  </entry>
-  
-  <entry>
     <title>Java OutputStream flush</title>
     <link href="http://liuqinh2s.github.io/blog/2018/02/27/Java-OutputStream-flush/"/>
     <id>http://liuqinh2s.github.io/blog/2018/02/27/Java-OutputStream-flush/</id>
@@ -510,36 +536,6 @@
     </summary>
     
       <category term="Java" scheme="http://liuqinh2s.github.io/blog/categories/Java/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>新概念英语四 lesson 03 Matterhorn Man</title>
-    <link href="http://liuqinh2s.github.io/blog/2018/02/25/%E6%96%B0%E6%A6%82%E5%BF%B5%E8%8B%B1%E8%AF%AD%E5%9B%9B-lesson-03-Matterhorn-Man/"/>
-    <id>http://liuqinh2s.github.io/blog/2018/02/25/新概念英语四-lesson-03-Matterhorn-Man/</id>
-    <published>2018-02-24T16:00:00.000Z</published>
-    <updated>2018-04-23T14:10:45.534Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;生词：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;climber （这个单词要注意发音，b 是不发音的）&lt;/li&gt;
-&lt;li&gt;alpinist 登山运动员&lt;/li&gt;
-&lt;li&gt;route 路&lt;/li&gt;
-&lt;li&gt;summit 最高，顶点&lt;/li&gt;
-&lt;li&gt;sought seek 的过去式,
-        
-      
-    
-    </summary>
-    
-      <category term="新概念英语四" scheme="http://liuqinh2s.github.io/blog/categories/%E6%96%B0%E6%A6%82%E5%BF%B5%E8%8B%B1%E8%AF%AD%E5%9B%9B/"/>
     
     
   </entry>
