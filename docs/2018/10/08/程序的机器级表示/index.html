@@ -98,7 +98,10 @@
 <meta property="og:image" content="http://liuqinh2s.github.io/blog/images/2018/mov指令.png">
 <meta property="og:image" content="http://liuqinh2s.github.io/blog/images/2018/汇编栈操作.png">
 <meta property="og:image" content="http://liuqinh2s.github.io/blog/images/2018/算术和逻辑操作指令.png">
-<meta property="og:updated_time" content="2018-10-09T15:08:56.297Z">
+<meta property="og:image" content="http://liuqinh2s.github.io/blog/images/2018/扩展乘除操作.png">
+<meta property="og:image" content="http://liuqinh2s.github.io/blog/images/2018/流程控制指令.png">
+<meta property="og:image" content="http://liuqinh2s.github.io/blog/images/2018/set指令.png">
+<meta property="og:updated_time" content="2018-10-10T09:50:18.495Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="程序的机器级别表示">
 <meta name="twitter:description" content="从编译C语言文件说起1$ gcc -01 -o p p1.c p2.c 使用了gcc命令来编译，也可以简单写作：cc。 优化层级为1，1级是最低的，层级越高程序优化越好，但增加了编译时间，也使调试变得更难，且跟源程序差异很大不便于理解。 编译的流程是：  预处理器（preprocessor）把诸如：#include、#define、#if、#else、#elif、#ifdef、endif等预编译指">
@@ -408,7 +411,7 @@
                   <span class="post-meta-item-text">Words count in article&#58;</span>
                 
                 <span title="Words count in article">
-                  1,750
+                  2,188
                 </span>
               
 
@@ -504,7 +507,7 @@
 <p><img src="../../../../images/2018/x86-64寄存器.jpg" alt="x86-64寄存器"></p>
 <p>前六个寄存器称为通用寄存器，有其特定的用途：</p>
 <ul>
-<li>%rax(%eax) 用于做累加</li>
+<li>%rax(%eax) 用于做累加，过程调用返回值</li>
 <li>%rcx(%ecx) 用于计数</li>
 <li>%rdx(%edx) 用于保存数据</li>
 <li>%rbx(%ebx) 用于做内存查找的基础地址</li>
@@ -521,6 +524,22 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">movl (%esp), %ebp  把%esp指向的内存地址中的值读到%eax中</span><br><span class="line">addl $4, %esp      增加栈指针</span><br></pre></td></tr></table></figure>
 <h2 id="算术和逻辑操作"><a href="#算术和逻辑操作" class="headerlink" title="算术和逻辑操作"></a>算术和逻辑操作</h2><p>load effective address，leal指令，实际上是一个movl指令。</p>
 <p><img src="../../../../images/2018/算术和逻辑操作指令.png" alt="算术和逻辑操作指令"></p>
+<p>多个操作数的指令，注意一下两个操作数的顺序即可</p>
+<h3 id="位移操作"><a href="#位移操作" class="headerlink" title="位移操作"></a>位移操作</h3><p>位移的值是用一个单字节来表示，且数值只能是0到31，所以这个字节只有低五位才会被考虑。</p>
+<h3 id="扩展乘除指令"><a href="#扩展乘除指令" class="headerlink" title="扩展乘除指令"></a>扩展乘除指令</h3><p><img src="../../../../images/2018/扩展乘除操作.png" alt="扩展乘除操作"></p>
+<h2 id="控制"><a href="#控制" class="headerlink" title="控制"></a>控制</h2><h3 id="状态码"><a href="#状态码" class="headerlink" title="状态码"></a>状态码</h3><p>使用单比特的状态码来描述算数和逻辑运算的状态。最常用的状态码如下：</p>
+<ul>
+<li>CF: carry flag 进位符，用来表示最高位的进位。通常用来检测无符号运算的溢出</li>
+<li>ZF: zero flag，零标志符，最近的操作产生了0</li>
+<li>SF: sign flag，符号位，最近的操作产生了负数</li>
+<li>OF: overflow flag，溢出符，补码溢出，正负都可以，表示有符号溢出</li>
+</ul>
+<p><img src="../../../../images/2018/流程控制指令.png" alt="流程控制指令"></p>
+<p>举个例子：t=a+b，a、b、t都是整形数。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">CF: (unsigned)t&lt;(unsigned)a       无符号溢出</span><br><span class="line">ZF: (t==0)                        零</span><br><span class="line">SF: (t&lt;0)                         负数</span><br><span class="line">OF: (a&lt;0 == b&lt;0) &amp;&amp; (t&lt;0 != a&lt;0)  有符号溢出</span><br></pre></td></tr></table></figure>
+<p>leal操作不会改变状态码，因为这个指令只是用来计算地址。除此之外表3.7中的所有操作都可能改变状态码。例如逻辑操作：XOR，会使CF和OF置零，移位操作会使CF置为最后一个移位出去的bit，但OF要置零。自增和自减指令会设置OF和ZF，不设置CF。</p>
+<p>CMP指令类似于SUB指令，但只修改状态码而不改变其他寄存器，如果两个操作数相等，ZF就会被设置；TEST指令类似于AND指令，但只修改状态码而不改变其他寄存器，如果两个操作数是重复的： testl %eax,%eax，作用是检测%eax是0，还是正数，还是负数。</p>
+<p><img src="../../../../images/2018/set指令.png" alt="set指令"></p>
 
       
     </div>
@@ -747,7 +766,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#从编译C语言文件说起"><span class="nav-number">1.</span> <span class="nav-text">从编译C语言文件说起</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#例子"><span class="nav-number">2.</span> <span class="nav-text">例子</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#汇编代码的格式"><span class="nav-number">3.</span> <span class="nav-text">汇编代码的格式</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#ATT和intel汇编格式"><span class="nav-number">3.1.</span> <span class="nav-text">ATT和intel汇编格式</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数据格式"><span class="nav-number">4.</span> <span class="nav-text">数据格式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#访问数据"><span class="nav-number">5.</span> <span class="nav-text">访问数据</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#操作数指示符"><span class="nav-number">5.1.</span> <span class="nav-text">操作数指示符</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#mov指令"><span class="nav-number">5.2.</span> <span class="nav-text">mov指令</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#算术和逻辑操作"><span class="nav-number">6.</span> <span class="nav-text">算术和逻辑操作</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#从编译C语言文件说起"><span class="nav-number">1.</span> <span class="nav-text">从编译C语言文件说起</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#例子"><span class="nav-number">2.</span> <span class="nav-text">例子</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#汇编代码的格式"><span class="nav-number">3.</span> <span class="nav-text">汇编代码的格式</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#ATT和intel汇编格式"><span class="nav-number">3.1.</span> <span class="nav-text">ATT和intel汇编格式</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数据格式"><span class="nav-number">4.</span> <span class="nav-text">数据格式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#访问数据"><span class="nav-number">5.</span> <span class="nav-text">访问数据</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#操作数指示符"><span class="nav-number">5.1.</span> <span class="nav-text">操作数指示符</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#mov指令"><span class="nav-number">5.2.</span> <span class="nav-text">mov指令</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#算术和逻辑操作"><span class="nav-number">6.</span> <span class="nav-text">算术和逻辑操作</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#位移操作"><span class="nav-number">6.1.</span> <span class="nav-text">位移操作</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#扩展乘除指令"><span class="nav-number">6.2.</span> <span class="nav-text">扩展乘除指令</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#控制"><span class="nav-number">7.</span> <span class="nav-text">控制</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#状态码"><span class="nav-number">7.1.</span> <span class="nav-text">状态码</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -781,7 +800,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">88.5k</span>
+    <span title="Site words total count">88.9k</span>
   
 </div>
 
