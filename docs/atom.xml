@@ -6,7 +6,7 @@
   <link href="/blog/atom.xml" rel="self"/>
   
   <link href="http://liuqinh2s.github.io/blog/"/>
-  <updated>2018-10-10T09:50:18.495Z</updated>
+  <updated>2018-10-12T10:05:24.339Z</updated>
   <id>http://liuqinh2s.github.io/blog/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="http://liuqinh2s.github.io/blog/2018/10/08/%E7%A8%8B%E5%BA%8F%E7%9A%84%E6%9C%BA%E5%99%A8%E7%BA%A7%E8%A1%A8%E7%A4%BA/"/>
     <id>http://liuqinh2s.github.io/blog/2018/10/08/程序的机器级表示/</id>
     <published>2018-10-07T16:00:00.000Z</published>
-    <updated>2018-10-10T09:50:18.495Z</updated>
+    <updated>2018-10-12T10:05:24.339Z</updated>
     
     <summary type="html">
     
@@ -391,30 +391,6 @@
   </entry>
   
   <entry>
-    <title>mathjax常用公式记录</title>
-    <link href="http://liuqinh2s.github.io/blog/2018/04/30/mathjax%E5%B8%B8%E7%94%A8%E5%85%AC%E5%BC%8F%E8%AE%B0%E5%BD%95/"/>
-    <id>http://liuqinh2s.github.io/blog/2018/04/30/mathjax常用公式记录/</id>
-    <published>2018-04-29T16:00:00.000Z</published>
-    <updated>2018-10-10T06:21:01.217Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h2 id=&quot;角度记法&quot;&gt;&lt;a href=&quot;#角度记法&quot; class=&quot;headerlink&quot;
-        
-      
-    
-    </summary>
-    
-      <category term="LaTex" scheme="http://liuqinh2s.github.io/blog/categories/LaTex/"/>
-    
-    
-  </entry>
-  
-  <entry>
     <title>Leetcode Algorithm 274. H-Index</title>
     <link href="http://liuqinh2s.github.io/blog/2018/04/30/Leetcode-Algorithm-274.H-Index/"/>
     <id>http://liuqinh2s.github.io/blog/2018/04/30/Leetcode-Algorithm-274.H-Index/</id>
@@ -436,6 +412,30 @@
       <category term="ACM" scheme="http://liuqinh2s.github.io/blog/categories/ACM/"/>
     
       <category term="Leetcode" scheme="http://liuqinh2s.github.io/blog/categories/ACM/Leetcode/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>mathjax常用公式记录</title>
+    <link href="http://liuqinh2s.github.io/blog/2018/04/30/mathjax%E5%B8%B8%E7%94%A8%E5%85%AC%E5%BC%8F%E8%AE%B0%E5%BD%95/"/>
+    <id>http://liuqinh2s.github.io/blog/2018/04/30/mathjax常用公式记录/</id>
+    <published>2018-04-29T16:00:00.000Z</published>
+    <updated>2018-10-10T06:21:01.217Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;角度记法&quot;&gt;&lt;a href=&quot;#角度记法&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="LaTex" scheme="http://liuqinh2s.github.io/blog/categories/LaTex/"/>
     
     
   </entry>
