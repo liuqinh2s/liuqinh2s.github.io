@@ -88,7 +88,7 @@
 <meta property="og:site_name" content="liuqinh2s&#39; blog">
 <meta property="og:description" content="线性代数是一个整体，各个模块之间联系密不可分。 一、行列式、矩阵 二、向量组、方程组 三、特征值、二次型 命题重点在二和三。 难点在矩阵和向量组秩的等式和不等式的研究、分块矩阵 例题：设n阶矩阵A、B乘积可交换，$\xi_1,\xi_2,\cdots,\xi_{r_1}、\eta_1,\eta_2,\cdots,\eta_{r_2}$分别是AX=0,BX=0的一个基础解系，且对于n阶矩阵C、D，有">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2018-10-10T06:21:01.170Z">
+<meta property="og:updated_time" content="2018-04-25T10:42:56.319Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="线性代数笔记--线性代数复习核心思想">
 <meta name="twitter:description" content="线性代数是一个整体，各个模块之间联系密不可分。 一、行列式、矩阵 二、向量组、方程组 三、特征值、二次型 命题重点在二和三。 难点在矩阵和向量组秩的等式和不等式的研究、分块矩阵 例题：设n阶矩阵A、B乘积可交换，$\xi_1,\xi_2,\cdots,\xi_{r_1}、\eta_1,\eta_2,\cdots,\eta_{r_2}$分别是AX=0,BX=0的一个基础解系，且对于n阶矩阵C、D，有">
@@ -428,8 +428,8 @@
 <p>三、特征值、二次型</p>
 <p>命题重点在二和三。</p>
 <p>难点在矩阵和向量组<br>秩的等式和不等式的研究、分块矩阵</p>
-<p>例题：设n阶矩阵A、B乘积可交换，$\xi_1,\xi_2,\cdots,\xi_{r_1}、\eta_1,\eta_2,\cdots,\eta_{r_2}$分别是AX=0,BX=0的一个基础解系，且对于n阶矩阵C、D，有r(CA+DB)=n,<br>（I）证明$r\begin{pmatrix}A\B\end{pmatrix}=n$，且$\xi_1,\cdots,\xi_{r_1},\eta_1,\cdots,\eta_{r_2}$无关；<br>（II）证明$\xi_1,\cdots,\xi_{r_2},\eta_1,\cdots,\eta_{r_2}$是ABX=0的一个基础解系。<br>1.是解，2.无关，3.<strong>S=n-r，S是基础解系的个数，是自由变量的个数，也就是总变量-秩（有效方程个数，也即约束的个数）</strong><br><strong>矩阵越乘秩越小</strong><br>（I）<br>$n=r(CA+DB)=r\left((C D)\begin{pmatrix}A\B\end{pmatrix}\right)\leq r\begin{pmatrix}A\B\end{pmatrix}\leq n\Rightarrow r\begin{pmatrix}A\B\end{pmatrix}=n列满秩$</p>
-<p>$\Rightarrow \begin{pmatrix}A\B\end{pmatrix}X=0只有零解\Rightarrow AX=0与BX=0没有非零公共解\Rightarrow \xi_i(i=1,2,\cdots,r_1)均不可由\eta_1,\eta_2,\cdots,\eta_{r_2}表出，因若不然，\xi_i=k_1\eta_1+k_2\eta_2+\cdots+k_{r_2}\eta_{r_2}，则有公共非零解，矛盾，同理可得，\eta_i(i=1,2,\cdots,r_1)均不可由\xi_1,\xi_2,\cdots,\xi_{r_2}表出，故\xi_1,\cdots,\xi_{r_1},\eta_1,\cdots,\eta_{r_2}$无关<br>（II）<br>显然，$B\eta_j=0,j=1,2,\cdots,r_2\Rightarrow AB\eta_j=0\Rightarrow\eta_j是ABX=0的解；又AB=BA，A\xi_i=0\Rightarrow BA\xi_i=AB\xi_i=0\Rightarrow\xi_i也是ABX=0的解$<br>$r(AB)\geq r(A)+r(B)-n=n-r_1+n-r_2-n=n-(r_1+r_2)$<br>$ABX=0的S=n-r(AB)\leq r_1+r_2，基础解系中至多r_1+r_2个向量，又根据第一问的证明，显然S\geq r_1+r_2，至少r_1+r_2个，恰有r_1+r_2个解向量$</p>
+<p>例题：设n阶矩阵A、B乘积可交换，$\xi_1,\xi_2,\cdots,\xi_{r_1}、\eta_1,\eta_2,\cdots,\eta_{r_2}$分别是AX=0,BX=0的一个基础解系，且对于n阶矩阵C、D，有r(CA+DB)=n,<br>（I）证明$r\begin{pmatrix}A\\B\end{pmatrix}=n$，且$\xi_1,\cdots,\xi_{r_1},\eta_1,\cdots,\eta_{r_2}$无关；<br>（II）证明$\xi_1,\cdots,\xi_{r_2},\eta_1,\cdots,\eta_{r_2}$是ABX=0的一个基础解系。<br>1.是解，2.无关，3.<strong>S=n-r，S是基础解系的个数，是自由变量的个数，也就是总变量-秩（有效方程个数，也即约束的个数）</strong><br><strong>矩阵越乘秩越小</strong><br>（I）<br>$n=r(CA+DB)=r\left((C D)\begin{pmatrix}A\\B\end{pmatrix}\right)\leq r\begin{pmatrix}A\\B\end{pmatrix}\leq n\Rightarrow r\begin{pmatrix}A\\B\end{pmatrix}=n列满秩$</p>
+<p>$\Rightarrow \begin{pmatrix}A\\B\end{pmatrix}X=0只有零解\Rightarrow AX=0与BX=0没有非零公共解\Rightarrow \xi_i(i=1,2,\cdots,r_1)均不可由\eta_1,\eta_2,\cdots,\eta_{r_2}表出，因若不然，\xi_i=k_1\eta_1+k_2\eta_2+\cdots+k_{r_2}\eta_{r_2}，则有公共非零解，矛盾，同理可得，\eta_i(i=1,2,\cdots,r_1)均不可由\xi_1,\xi_2,\cdots,\xi_{r_2}表出，故\xi_1,\cdots,\xi_{r_1},\eta_1,\cdots,\eta_{r_2}$无关<br>（II）<br>显然，$B\eta_j=0,j=1,2,\cdots,r_2\Rightarrow AB\eta_j=0\Rightarrow\eta_j是ABX=0的解；又AB=BA，A\xi_i=0\Rightarrow BA\xi_i=AB\xi_i=0\Rightarrow\xi_i也是ABX=0的解$<br>$r(AB)\geq r(A)+r(B)-n=n-r_1+n-r_2-n=n-(r_1+r_2)$<br>$ABX=0的S=n-r(AB)\leq r_1+r_2，基础解系中至多r_1+r_2个向量，又根据第一问的证明，显然S\geq r_1+r_2，至少r_1+r_2个，恰有r_1+r_2个解向量$</p>
 
       
     </div>
@@ -454,14 +454,18 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/blog/2016/09/30/线性代数笔记--基础篇：行列式、矩阵的本质/" rel="next" title="线性代数笔记--基础篇：行列式、矩阵的本质">
+                <i class="fa fa-chevron-left"></i> 线性代数笔记--基础篇：行列式、矩阵的本质
+              </a>
+            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/blog/2016/09/30/线性代数笔记--基础篇：行列式、矩阵的本质/" rel="prev" title="线性代数笔记--基础篇：行列式、矩阵的本质">
-                线性代数笔记--基础篇：行列式、矩阵的本质 <i class="fa fa-chevron-right"></i>
+              <a href="/blog/2017/01/01/从windows转用macOSX记录/" rel="prev" title="从 windows 转用 mac OS X 记录">
+                从 windows 转用 mac OS X 记录 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -665,7 +669,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">92.4k</span>
+    <span title="Site words total count">92.7k</span>
   
 </div>
 
