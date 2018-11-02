@@ -1,7 +1,6 @@
 ---
 title: Hexo+Markdown+MathJax搭建个人博客
-date: 2018-04-25
-categories: [projects]
+categories: [项目]
 comments: true
 ---
 
