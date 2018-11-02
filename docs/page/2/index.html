@@ -411,14 +411,15 @@
         
           
           项目初始化命令
+
 安装vue-cli: npm install -g vue-cli
 初始化项目: vue init webpack my-project
 进入项目: cd my-project
 安装依赖: npm install
 运行项目: npm run dev
 
-项目目录结构最重要的几个东西：
-
+项目目录结构
+最重要的几个东西
           ...
           <!--noindex-->
           <div class="post-button text-center">
@@ -569,7 +570,7 @@
                   <span class="post-meta-item-text">Words count in article&#58;</span>
                 
                 <span title="Words count in article">
-                  1,440
+                  1,535
                 </span>
               
 
@@ -595,11 +596,10 @@
 
       
         
-          
-          Y86指令集体系结构Y86指令集基本上是IA32指令集的一个子集。这个指令集就是我们处理器实现的目标。如下图：
-
-IA32的movl指令分成了4个不同指令：irmovl、rrmovl、mrmovl和rmmovl，i表示立即数Immediate，r表示寄存器Register，m表示存储器Memmory
-          ...
+          <h2 id="y86指令集体系结构"><a class="header-anchor" href="#y86指令集体系结构">¶</a>Y86指令集体系结构</h2>
+<p>Y86指令集基本上是IA32指令集的一个子集。这个指令集就是我们处理器实现的目标。如下图：</p>
+<p><img src="../../images/2018/Y86%E6%8C%87%E4%BB%A4%E9%9B%86.png" alt="Y86指令集"></p>
+<p>IA32的movl指令分成了4个不同指令：irmovl、rrmovl、mrmovl和rmmovl，i表示立即数Immediate，r表示寄存器Register，m表示存储器Memmory。第一个字母表示源，第二个字母表示目的。</p>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/blog/2018/10/13/处理器体系结构/#more" rel="contents">
@@ -672,7 +672,7 @@ IA32的movl指令分成了4个不同指令：irmovl、rrmovl、mrmovl和rmmovl�
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/blog/2018/10/08/程序的机器级表示/" itemprop="url">程序的机器级别表示</a></h1>
+                <a class="post-title-link" href="/blog/2018/10/08/程序的机器级表示/" itemprop="url">程序的机器级表示</a></h1>
         
 
         <div class="post-meta">
@@ -749,7 +749,7 @@ IA32的movl指令分成了4个不同指令：irmovl、rrmovl、mrmovl和rmmovl�
                   <span class="post-meta-item-text">Words count in article&#58;</span>
                 
                 <span title="Words count in article">
-                  6,037
+                  6,040
                 </span>
               
 
@@ -776,12 +776,13 @@ IA32的movl指令分成了4个不同指令：irmovl、rrmovl、mrmovl和rmmovl�
       
         
           
-          从编译C语言文件说起1$ gcc -01 -o p p1.c p2.c
+          ¶从编译C语言文件说起
+1$ gcc -01 -o p p1.c p2.c
 使用了gcc命令来编译，也可以简单写作：cc。
 优化层级为1，1级是最低的，层级越高程序优化越好，但增加了编译时间，也使调试变得更难，且跟源程序差异很大不便于理解。
 编译的流程是：
 
-预处理器（preprocessor）把诸如：
+预处理器（preprocessor）把诸
           ...
           <!--noindex-->
           <div class="post-button text-center">
@@ -932,7 +933,7 @@ IA32的movl指令分成了4个不同指令：irmovl、rrmovl、mrmovl和rmmovl�
                   <span class="post-meta-item-text">Words count in article&#58;</span>
                 
                 <span title="Words count in article">
-                  3,442
+                  3,441
                 </span>
               
 
@@ -1128,11 +1129,13 @@ rounding：when a number cannot be
       
         
           
-          安装 oh my zsh首先检查自己有没有zsh：
+          ¶安装 oh my zsh
+首先检查自己有没有zsh：
 1cat /etc/shells
 如果有的话就下载oh my zsh
-设置默认shell1chsh -s /bin/zsh
-有可能会遇到设置不成功的问题，那么我们可以手动修改/etc/passwd，找到自己那一条配置信息，把默认shell改成/bi
+¶设置默认shell
+1chsh -s /bin/zsh
+有可能会遇到设置不成功的问题，那么我们可以手动修改/etc/passwd，找到自己那一条配置信息，把默认shell改
           ...
           <!--noindex-->
           <div class="post-button text-center">
@@ -1354,7 +1357,7 @@ rounding：when a number cannot be
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">98.2k</span>
+    <span title="Site words total count">99.8k</span>
   
 </div>
 

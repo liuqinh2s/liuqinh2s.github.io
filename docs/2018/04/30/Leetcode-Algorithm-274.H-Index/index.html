@@ -426,7 +426,8 @@
 <p>According to the <a href="https://en.wikipedia.org/wiki/H-index" target="_blank" rel="noopener">definition of h-index on Wikipedia</a>: “A scientist has index h if h of his/her N papers have <strong>at least</strong> h citations each, and the other N − h papers have <strong>no more than</strong> h citations each.”</p>
 <p>For example, given <code>citations = [3, 0, 6, 1, 5]</code>, which means the researcher has <code>5</code> papers in total and each of them had received <code>3, 0, 6, 1, 5</code> citations respectively. Since the researcher has <code>3</code> papers with <strong>at least</strong> <code>3</code> citations each and the remaining two with <strong>no more than</strong> <code>3</code> citations each, his h-index is <code>3</code>.</p>
 <p><strong>Note:</strong> If there are several possible values for <code>h</code>, the maximum one is taken as the h-index.</p>
-<p><strong>Credits:</strong><br>Special thanks to @jianchao.li.fighter for adding this problem and creating all test cases.</p>
+<p><strong>Credits:</strong><br>
+Special thanks to @jianchao.li.fighter for adding this problem and creating all test cases.</p>
 <p>看了维基百科的解说之后，我发现这题还是挺简单的，思路就是排序，如果用C++解这题，我就直接用std::sort了。</p>
 <p>C++代码如下：</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">hIndex</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&amp; citations)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(citations.size()&lt;=<span class="number">0</span>)&#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="built_in">std</span>::sort(citations.begin(), citations.end(), compare);</span><br><span class="line">        <span class="keyword">int</span> result = citations[<span class="number">0</span>];</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;citations.size();i++)&#123;</span><br><span class="line">            <span class="keyword">if</span>(i&lt;citations[i])&#123;</span><br><span class="line">                result = i+<span class="number">1</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> result;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">static</span> <span class="keyword">bool</span> <span class="title">compare</span><span class="params">(<span class="keyword">int</span> i, <span class="keyword">int</span> j)</span></span>&#123;</span><br><span class="line">        <span class="keyword">return</span> i&gt;j;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
@@ -454,8 +455,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/blog/2018/04/28/UML图/" rel="next" title="UML图">
-                <i class="fa fa-chevron-left"></i> UML图
+              <a href="/blog/2018/04/30/mathjax常用公式记录/" rel="next" title="mathjax常用公式记录">
+                <i class="fa fa-chevron-left"></i> mathjax常用公式记录
               </a>
             
           </div>
@@ -464,8 +465,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/blog/2018/04/30/mathjax常用公式记录/" rel="prev" title="mathjax常用公式记录">
-                mathjax常用公式记录 <i class="fa fa-chevron-right"></i>
+              <a href="/blog/2018/04/30/椭圆规/" rel="prev" title="椭圆规">
+                椭圆规 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -669,7 +670,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">98.2k</span>
+    <span title="Site words total count">99.8k</span>
   
 </div>
 

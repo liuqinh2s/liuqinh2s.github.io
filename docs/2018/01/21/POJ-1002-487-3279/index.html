@@ -81,17 +81,17 @@
 
 
 
-<meta name="description" content="这一题看似很简单，却有着很多限制，我也是搞了很久。刚开始的时候我是用了很多 c++11 的东西，然后一直报 Compile Error，但我本地编译是不会有错的，查出几点： vector&amp;lt;vector&amp;gt;会报错，但 c++11可以这样写，以前的老编译器只能这么写：vector&amp;lt;vector &amp;gt;to_string()函数无法使用，这是 c++11 新出的。for(int x:r">
+<meta name="description" content="这一题看似很简单，却有着很多限制，我也是搞了很久。刚开始的时候我是用了很多 c++11 的东西，然后一直报 Compile Error，但我本地编译是不会有错的，查出几点： vector&amp;lt;vector&amp;gt;会报错，但 c11可以这样写，以前的老编译器只能这么写：vector&amp;lt;vector &amp;gt; to_string()函数无法使用，这是 c11 新出的。 for(int x:res">
 <meta property="og:type" content="article">
 <meta property="og:title" content="POJ 1002 487 3279">
 <meta property="og:url" content="http://liuqinh2s.github.io/blog/2018/01/21/POJ-1002-487-3279/index.html">
 <meta property="og:site_name" content="liuqinh2s&#39; blog">
-<meta property="og:description" content="这一题看似很简单，却有着很多限制，我也是搞了很久。刚开始的时候我是用了很多 c++11 的东西，然后一直报 Compile Error，但我本地编译是不会有错的，查出几点： vector&amp;lt;vector&amp;gt;会报错，但 c++11可以这样写，以前的老编译器只能这么写：vector&amp;lt;vector &amp;gt;to_string()函数无法使用，这是 c++11 新出的。for(int x:r">
+<meta property="og:description" content="这一题看似很简单，却有着很多限制，我也是搞了很久。刚开始的时候我是用了很多 c++11 的东西，然后一直报 Compile Error，但我本地编译是不会有错的，查出几点： vector&amp;lt;vector&amp;gt;会报错，但 c11可以这样写，以前的老编译器只能这么写：vector&amp;lt;vector &amp;gt; to_string()函数无法使用，这是 c11 新出的。 for(int x:res">
 <meta property="og:locale" content="en">
 <meta property="og:updated_time" content="2018-11-01T06:42:02.806Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="POJ 1002 487 3279">
-<meta name="twitter:description" content="这一题看似很简单，却有着很多限制，我也是搞了很久。刚开始的时候我是用了很多 c++11 的东西，然后一直报 Compile Error，但我本地编译是不会有错的，查出几点： vector&amp;lt;vector&amp;gt;会报错，但 c++11可以这样写，以前的老编译器只能这么写：vector&amp;lt;vector &amp;gt;to_string()函数无法使用，这是 c++11 新出的。for(int x:r">
+<meta name="twitter:description" content="这一题看似很简单，却有着很多限制，我也是搞了很久。刚开始的时候我是用了很多 c++11 的东西，然后一直报 Compile Error，但我本地编译是不会有错的，查出几点： vector&amp;lt;vector&amp;gt;会报错，但 c11可以这样写，以前的老编译器只能这么写：vector&amp;lt;vector &amp;gt; to_string()函数无法使用，这是 c11 新出的。 for(int x:res">
 
 
 
@@ -397,7 +397,7 @@
                   <span class="post-meta-item-text">Words count in article&#58;</span>
                 
                 <span title="Words count in article">
-                  531
+                  527
                 </span>
               
 
@@ -423,7 +423,10 @@
 
       
         <p>这一题看似很简单，却有着很多限制，我也是搞了很久。刚开始的时候我是用了很多 c++11 的东西，然后一直报 Compile Error，但我本地编译是不会有错的，查出几点：</p>
-<p>vector&lt;vector<int>&gt;会报错，但 c++11可以这样写，以前的老编译器只能这么写：vector&lt;vector<int> &gt;<br>to_string()函数无法使用，这是 c++11 新出的。<br>for(int x:result)这种写法直到 c++11 才支持。<br>POJ 上的编译器是比较老的，所以无法使用 c++11 的新特性。</int></int></p>
+<p>vector&lt;vector<int>&gt;会报错，但 c<ins>11可以这样写，以前的老编译器只能这么写：vector&lt;vector<int> &gt;<br>
+to_string()函数无法使用，这是 c</int></ins>11 新出的。<br>
+for(int x:result)这种写法直到 c<ins>11 才支持。<br>
+POJ 上的编译器是比较老的，所以无法使用 c</ins>11 的新特性。</int></p>
 <p>这还不算，后来一直报 Time Limit Exceeded，上网查资料发现，要把 cin 输入改成 getchar 接收输入，终于 AC。还有就是在勾选 language 的时候，一定要用 G++，不要用 C++，如果你选 C++，会报如下错误：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">Compile Error</span><br><span class="line"></span><br><span class="line">Main.cpp</span><br><span class="line">F:\temp\18069972.33777\Main.cpp(16) : error C2057: expected constant expression</span><br><span class="line">F:\temp\18069972.33777\Main.cpp(16) : error C2466: cannot allocate an array of constant size 0</span><br><span class="line">F:\temp\18069972.33777\Main.cpp(16) : error C2133: &apos;data&apos; : unknown size</span><br></pre></td></tr></table></figure>
 <p>C++代码：</p>
@@ -452,8 +455,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/blog/2018/01/20/POJ-1001-Exponentiation/" rel="next" title="POJ 1001 Exponentiation">
-                <i class="fa fa-chevron-left"></i> POJ 1001 Exponentiation
+              <a href="/blog/2018/01/21/POJ-1003-Hangover/" rel="next" title="POJ-1003-Hangover">
+                <i class="fa fa-chevron-left"></i> POJ-1003-Hangover
               </a>
             
           </div>
@@ -462,8 +465,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/blog/2018/01/21/POJ-1003-Hangover/" rel="prev" title="POJ-1003-Hangover">
-                POJ-1003-Hangover <i class="fa fa-chevron-right"></i>
+              <a href="/blog/2018/01/21/POJ-1005-I-Think-I-Need-a-Houseboat/" rel="prev" title="POJ 1005 I Think I Need a Houseboat">
+                POJ 1005 I Think I Need a Houseboat <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -667,7 +670,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">98.2k</span>
+    <span title="Site words total count">99.8k</span>
   
 </div>
 

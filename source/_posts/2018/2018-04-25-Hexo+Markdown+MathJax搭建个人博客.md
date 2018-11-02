@@ -137,14 +137,14 @@ mathjax:
 
 >注意`per_page`不能是true，一定要是false。
 
-#### 解决 markdown 与 mathjax 的冲突
+<h4 id="3.2.3">解决 markdown 与 mathjax 的冲突</h4>
 
-为了解决 `markdown` 下划线转义成 `<em>` 标签（HTML标签），从而导致 `mathjax` 的下标无法使用，这个问题，我们修改 `marked.js` 文件，如果你使用的是 `sublime text` 或者 `Atom` 编辑器，`cmd+o`打开你的博客目录，然后 `cmd+p` 输入你要在此目录下找的文件名：`marked.js` 就可以找到这个文件。这个文件的是：`node_modules/marked/lib/marked.js`。把文件中的：
+为了解决 `markdown` 下划线转义成 `<em>` 标签（HTML标签），从而导致 `mathjax` 的下标无法使用，这个问题，我们修改 `marked.js` 文件，如果你使用的是 `sublime text` 或者 `Atom` 编辑器，`cmd+o`打开你的博客目录，然后 `cmd+p` 输入你要在此目录下找的文件名：`marked.js` 就可以找到这个文件。这个文件的是：`node_modules/marked/lib/marked.js`。
 
 总共发现 mathjax 中的三处冲突：
 
-1. `_`变成了`<em>`
-2. `\\`变成了单个`\`
+1. `_`变成了`<em>`，造成数学公式下标无法显示
+2. `\\`变成了单个`\`，数学公式`\begin{case}...\end{case}`之间换行需要用到`\\`
 3. `< xxx >`大于号小于号之间会新增一个 `#""`
 
 将
@@ -247,3 +247,20 @@ git config --global user.email "your_email@example.com"
 然后就是调 next 主题，把自己喜欢的特性用上。
 
 然后就是加上 `不蒜子`，百度统计这类统计工具，和 disqus 评论等等。
+
+## 遇到的问题以及解决方案
+
+### 如何使用HTML锚点
+
+如果不了解HTML锚点，可以参考这个：
+
+- [w3school -- HTML 链接](http://www.w3school.com.cn/html/html_links.asp)
+- [百度百科 -- 锚点](https://baike.baidu.com/item/%E9%94%9A%E7%82%B9)。HTML可以在页面内跳转，只需要定义一个锚点，访问的时候 **将 `#` 符号和锚名称添加到 URL 的末端**。
+
+markdown本身是没有这个功能的，所以我们直接把标题用HTML写出来就行了。标题的对应是 `#` 到 `######` 总共6级，分别对应 `<h1>` 到 `<h6>`。
+
+举个例子：`<h4 id="3.2.3">解决 markdown 与 mathjax 的冲突</h4>`
+
+这里要注意的是：**不要使用`name`属性，而必须使用`id`属性，否则会不起作用**
+
+

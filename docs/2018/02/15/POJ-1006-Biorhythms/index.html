@@ -81,17 +81,17 @@
 
 
 
-<meta name="description" content="同余两个整数 a, b，若它们除以正整数 m所得的余数相等，则称 a,b对于模 m 同余，记作：$a \equiv b (mod\quad m)$。最先引用同余的概念与”$\equiv$”符号的是德国数学家 高斯。 中国剩余定理在《孙子算经》中有这样一个问题：“今有物不知其数，三三数之剩二（除以3余2），五五数之剩三（除以5余3），七七数之剩二（除以7余2），问物几何？”这个问题称为“孙子问题”，">
+<meta name="description" content="¶同余 两个整数 a, b，若它们除以正整数 m所得的余数相等，则称 a,b对于模 m 同余，记作：$a \equiv b (mod\quad m)$。最先引用同余的概念与”$\equiv$”符号的是德国数学家 高斯。 ¶中国剩余定理 在《孙子算经》中有这样一个问题：“今有物不知其数，三三数之剩二（除以3余2），五五数之剩三（除以5余3），七七数之剩二（除以7余2），问物几何？”这个问题称为“孙子">
 <meta property="og:type" content="article">
 <meta property="og:title" content="POJ 1006 Biorhythms">
 <meta property="og:url" content="http://liuqinh2s.github.io/blog/2018/02/15/POJ-1006-Biorhythms/index.html">
 <meta property="og:site_name" content="liuqinh2s&#39; blog">
-<meta property="og:description" content="同余两个整数 a, b，若它们除以正整数 m所得的余数相等，则称 a,b对于模 m 同余，记作：$a \equiv b (mod\quad m)$。最先引用同余的概念与”$\equiv$”符号的是德国数学家 高斯。 中国剩余定理在《孙子算经》中有这样一个问题：“今有物不知其数，三三数之剩二（除以3余2），五五数之剩三（除以5余3），七七数之剩二（除以7余2），问物几何？”这个问题称为“孙子问题”，">
+<meta property="og:description" content="¶同余 两个整数 a, b，若它们除以正整数 m所得的余数相等，则称 a,b对于模 m 同余，记作：$a \equiv b (mod\quad m)$。最先引用同余的概念与”$\equiv$”符号的是德国数学家 高斯。 ¶中国剩余定理 在《孙子算经》中有这样一个问题：“今有物不知其数，三三数之剩二（除以3余2），五五数之剩三（除以5余3），七七数之剩二（除以7余2），问物几何？”这个问题称为“孙子">
 <meta property="og:locale" content="en">
 <meta property="og:updated_time" content="2018-11-01T06:42:02.806Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="POJ 1006 Biorhythms">
-<meta name="twitter:description" content="同余两个整数 a, b，若它们除以正整数 m所得的余数相等，则称 a,b对于模 m 同余，记作：$a \equiv b (mod\quad m)$。最先引用同余的概念与”$\equiv$”符号的是德国数学家 高斯。 中国剩余定理在《孙子算经》中有这样一个问题：“今有物不知其数，三三数之剩二（除以3余2），五五数之剩三（除以5余3），七七数之剩二（除以7余2），问物几何？”这个问题称为“孙子问题”，">
+<meta name="twitter:description" content="¶同余 两个整数 a, b，若它们除以正整数 m所得的余数相等，则称 a,b对于模 m 同余，记作：$a \equiv b (mod\quad m)$。最先引用同余的概念与”$\equiv$”符号的是德国数学家 高斯。 ¶中国剩余定理 在《孙子算经》中有这样一个问题：“今有物不知其数，三三数之剩二（除以3余2），五五数之剩三（除以5余3），七七数之剩二（除以7余2），问物几何？”这个问题称为“孙子">
 
 
 
@@ -422,9 +422,13 @@
       
 
       
-        <h2 id="同余"><a href="#同余" class="headerlink" title="同余"></a>同余</h2><p>两个整数 a, b，若它们除以正整数 m所得的余数相等，则称 a,b对于模 m 同余，记作：$a \equiv b (mod\quad m)$。最先引用同余的概念与”$\equiv$”符号的是德国数学家 高斯。</p>
-<h2 id="中国剩余定理"><a href="#中国剩余定理" class="headerlink" title="中国剩余定理"></a>中国剩余定理</h2><p>在《孙子算经》中有这样一个问题：“今有物不知其数，三三数之剩二（除以3余2），五五数之剩三（除以5余3），七七数之剩二（除以7余2），问物几何？”这个问题称为“孙子问题”，该问题的一般解法国际上称为“中国剩余定理”。具体解法分三步：</p>
-<p>找出三个数：从3和5的公倍数中找出被7除余1的最小数15，从3和7的公倍数中找出被5除余1 的最小数21，最后从5和7的公倍数中找出除3余1的最小数70。<br>用15乘以2（2为最终结果除以7的余数），用21乘以3（3为最终结果除以5的余数），同理，用70乘以2（2为最终结果除以3的余数），然后把三个乘积相加（15<em>2+21</em>3+70*2）得到和233。<br>用233除以3，5，7三个数的最小公倍数105，得到余数23，即233%105=23。这个余数23就是符合条件的最小数。</p>
+        <h2 id="同余"><a class="header-anchor" href="#同余">¶</a>同余</h2>
+<p>两个整数 a, b，若它们除以正整数 m所得的余数相等，则称 a,b对于模 m 同余，记作：$a \equiv b (mod\quad m)$。最先引用同余的概念与”$\equiv$”符号的是德国数学家 高斯。</p>
+<h2 id="中国剩余定理"><a class="header-anchor" href="#中国剩余定理">¶</a>中国剩余定理</h2>
+<p>在《孙子算经》中有这样一个问题：“今有物不知其数，三三数之剩二（除以3余2），五五数之剩三（除以5余3），七七数之剩二（除以7余2），问物几何？”这个问题称为“孙子问题”，该问题的一般解法国际上称为“中国剩余定理”。具体解法分三步：</p>
+<p>找出三个数：从3和5的公倍数中找出被7除余1的最小数15，从3和7的公倍数中找出被5除余1 的最小数21，最后从5和7的公倍数中找出除3余1的最小数70。<br>
+用15乘以2（2为最终结果除以7的余数），用21乘以3（3为最终结果除以5的余数），同理，用70乘以2（2为最终结果除以3的余数），然后把三个乘积相加（15<em>2+21</em>3+70*2）得到和233。<br>
+用233除以3，5，7三个数的最小公倍数105，得到余数23，即233%105=23。这个余数23就是符合条件的最小数。</p>
 <p>为什么要这么做呢？</p>
 <p>这就牵涉到一个最基本数学定理，如果有a%b=c,则有(a+kb)%b=c(k为非零整数)，换句话说，如果一个除法运算的余数为c，那么被除数与k倍的除数相加（或相减）的和（差）再与除数相除，余数不变。这就是上面提到的同余。</p>
 <p>以此定理为依据，如果n2是3的倍数，n1+n2就依然满足除以3余2。同理，如果n3也是3的倍数，那么n1+n2+n3的和就满足除以3余2。这是从n1的角度考虑的，再从n2，n3的角度出发，我们可推导出以下三点：</p>
@@ -446,7 +450,8 @@
 <li>如果 a%b=c , 则有 (a+kb)%b=c (k为非零整数)。</li>
 <li>如果 a%b=c，那么 (a*k)%b=kc (k为大于零的整数)。</li>
 </ul>
-<h2 id="解题代码"><a href="#解题代码" class="headerlink" title="解题代码"></a>解题代码</h2><p>最后我们再来看看我们这道题，如何使用中国剩余定理来得到时间复杂度 O(1) 的解。</p>
+<h2 id="解题代码"><a class="header-anchor" href="#解题代码">¶</a>解题代码</h2>
+<p>最后我们再来看看我们这道题，如何使用中国剩余定理来得到时间复杂度 O(1) 的解。</p>
 <p>已知(n+d)%23=p; (n+d)%28=e; (n+d)%33=i</p>
 <p>使33×28×a被23除余1，用33×28×8=5544；</p>
 <p>使23×33×b被28除余1，用23×33×19=14421；</p>
@@ -455,7 +460,8 @@
 <p>又23、28、33互质，即lcm(23,28,33)= 21252;</p>
 <p>所以有n=（5544×p+14421×e+1288×i-d）%21252</p>
 <p>本题所求的是最小整数解，避免n为负，因此最后结果为n= [n+21252]% 21252</p>
-<p>那么最终求解n的表达式就是：<br>n=(5544p+14421e+1288*i-d+21252)%21252</p>
+<p>那么最终求解n的表达式就是：<br>
+n=(5544p+14421e+1288*i-d+21252)%21252</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> P 23</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> E 28</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> I 33</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> C 21252</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> p, e, i, d;</span><br><span class="line">    <span class="keyword">int</span> count=<span class="number">1</span>;</span><br><span class="line">    <span class="keyword">int</span> J=E*I;</span><br><span class="line">    <span class="keyword">int</span> K=P*I;</span><br><span class="line">    <span class="keyword">int</span> H=P*E;</span><br><span class="line">    <span class="keyword">int</span> j;</span><br><span class="line">    <span class="keyword">int</span> k;</span><br><span class="line">    <span class="keyword">int</span> h;</span><br><span class="line">    <span class="keyword">for</span>(j=J;j%P!=<span class="number">1</span>;j+=J);</span><br><span class="line">    <span class="keyword">for</span>(k=K;k%E!=<span class="number">1</span>;k+=K);</span><br><span class="line">    <span class="keyword">for</span>(h=H;h%I!=<span class="number">1</span>;h+=H);</span><br><span class="line">    <span class="comment">// cout &lt;&lt; j &lt;&lt; endl;</span></span><br><span class="line">    <span class="comment">// cout &lt;&lt; k &lt;&lt; endl;</span></span><br><span class="line">    <span class="comment">// cout &lt;&lt; h &lt;&lt; endl;</span></span><br><span class="line">    <span class="keyword">while</span> (<span class="built_in">cin</span> &gt;&gt; p &gt;&gt; e &gt;&gt; i &gt;&gt; d) &#123;</span><br><span class="line">        <span class="keyword">if</span>(p==<span class="number">-1</span>)&#123;</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">int</span> result = (j*p+k*e+h*i-d+C)%C;</span><br><span class="line">        <span class="keyword">if</span>(result==<span class="number">0</span>)</span><br><span class="line">            result = C;</span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; <span class="string">"Case "</span>&lt;&lt; count &lt;&lt; <span class="string">": the next triple peak occurs in "</span> &lt;&lt; result &lt;&lt; <span class="string">" days."</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">        count++;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
       
@@ -481,8 +487,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/blog/2018/01/21/POJ-1005-I-Think-I-Need-a-Houseboat/" rel="next" title="POJ 1005 I Think I Need a Houseboat">
-                <i class="fa fa-chevron-left"></i> POJ 1005 I Think I Need a Houseboat
+              <a href="/blog/2018/01/21/POJ-1004-Financial-Management/" rel="next" title="POJ 1003 Hangover">
+                <i class="fa fa-chevron-left"></i> POJ 1003 Hangover
               </a>
             
           </div>
@@ -687,7 +693,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#同余"><span class="nav-number">1.</span> <span class="nav-text">同余</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#中国剩余定理"><span class="nav-number">2.</span> <span class="nav-text">中国剩余定理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#解题代码"><span class="nav-number">3.</span> <span class="nav-text">解题代码</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#同余"><span class="nav-number">1.</span> <span class="nav-text">¶同余</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#中国剩余定理"><span class="nav-number">2.</span> <span class="nav-text">¶中国剩余定理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#解题代码"><span class="nav-number">3.</span> <span class="nav-text">¶解题代码</span></a></li></ol></div>
             
 
           </div>
@@ -721,7 +727,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">98.2k</span>
+    <span title="Site words total count">99.8k</span>
   
 </div>
 

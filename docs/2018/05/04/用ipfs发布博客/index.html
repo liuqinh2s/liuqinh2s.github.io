@@ -81,17 +81,17 @@
 
 
 
-<meta name="description" content="ipfs是一个p2p的网络 常用ipfs命令123ipfs add -r mysite// 通过上一步可以得到很多个哈希值（每个目录和文件都有一个），把根目录对应的哈希值拿出来用ipfs name publish QmZyenFLZtm9rk2B98ZqRAFYRkzhqyUruKBSsdZUnKk9ek 第二步实际上是把这个站点的根目录映射到了你的 ipfs id 上面，你的这个id是固定的。之">
+<meta name="description" content="ipfs是一个p2p的网络 ¶常用ipfs命令 123ipfs add -r mysite// 通过上一步可以得到很多个哈希值（每个目录和文件都有一个），把根目录对应的哈希值拿出来用ipfs name publish QmZyenFLZtm9rk2B98ZqRAFYRkzhqyUruKBSsdZUnKk9ek 第二步实际上是把这个站点的根目录映射到了你的 ipfs id 上面，你的这个id是固定的">
 <meta property="og:type" content="article">
 <meta property="og:title" content="用ipfs发布博客">
 <meta property="og:url" content="http://liuqinh2s.github.io/blog/2018/05/04/用ipfs发布博客/index.html">
 <meta property="og:site_name" content="liuqinh2s&#39; blog">
-<meta property="og:description" content="ipfs是一个p2p的网络 常用ipfs命令123ipfs add -r mysite// 通过上一步可以得到很多个哈希值（每个目录和文件都有一个），把根目录对应的哈希值拿出来用ipfs name publish QmZyenFLZtm9rk2B98ZqRAFYRkzhqyUruKBSsdZUnKk9ek 第二步实际上是把这个站点的根目录映射到了你的 ipfs id 上面，你的这个id是固定的。之">
+<meta property="og:description" content="ipfs是一个p2p的网络 ¶常用ipfs命令 123ipfs add -r mysite// 通过上一步可以得到很多个哈希值（每个目录和文件都有一个），把根目录对应的哈希值拿出来用ipfs name publish QmZyenFLZtm9rk2B98ZqRAFYRkzhqyUruKBSsdZUnKk9ek 第二步实际上是把这个站点的根目录映射到了你的 ipfs id 上面，你的这个id是固定的">
 <meta property="og:locale" content="en">
 <meta property="og:updated_time" content="2018-11-01T06:42:02.808Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="用ipfs发布博客">
-<meta name="twitter:description" content="ipfs是一个p2p的网络 常用ipfs命令123ipfs add -r mysite// 通过上一步可以得到很多个哈希值（每个目录和文件都有一个），把根目录对应的哈希值拿出来用ipfs name publish QmZyenFLZtm9rk2B98ZqRAFYRkzhqyUruKBSsdZUnKk9ek 第二步实际上是把这个站点的根目录映射到了你的 ipfs id 上面，你的这个id是固定的。之">
+<meta name="twitter:description" content="ipfs是一个p2p的网络 ¶常用ipfs命令 123ipfs add -r mysite// 通过上一步可以得到很多个哈希值（每个目录和文件都有一个），把根目录对应的哈希值拿出来用ipfs name publish QmZyenFLZtm9rk2B98ZqRAFYRkzhqyUruKBSsdZUnKk9ek 第二步实际上是把这个站点的根目录映射到了你的 ipfs id 上面，你的这个id是固定的">
 
 
 
@@ -423,17 +423,20 @@
 
       
         <p>ipfs是一个p2p的网络</p>
-<h2 id="常用ipfs命令"><a href="#常用ipfs命令" class="headerlink" title="常用ipfs命令"></a>常用ipfs命令</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">ipfs add -r mysite</span><br><span class="line">// 通过上一步可以得到很多个哈希值（每个目录和文件都有一个），把根目录对应的哈希值拿出来用</span><br><span class="line">ipfs name publish QmZyenFLZtm9rk2B98ZqRAFYRkzhqyUruKBSsdZUnKk9ek</span><br></pre></td></tr></table></figure>
+<h2 id="常用ipfs命令"><a class="header-anchor" href="#常用ipfs命令">¶</a>常用ipfs命令</h2>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">ipfs add -r mysite</span><br><span class="line">// 通过上一步可以得到很多个哈希值（每个目录和文件都有一个），把根目录对应的哈希值拿出来用</span><br><span class="line">ipfs name publish QmZyenFLZtm9rk2B98ZqRAFYRkzhqyUruKBSsdZUnKk9ek</span><br></pre></td></tr></table></figure>
 <p>第二步实际上是把这个站点的根目录映射到了你的 <code>ipfs id</code> 上面，你的这个id是固定的。之后你每次更新这个站点下的内容都要 <code>ipfs add -r mysite</code> 一次，然后把根目录对应的哈希值重新映射到你的 ipfs id 上。</p>
 <p>然后你访问ipfs站点的时候，可以这样访问：<code>https://ipfs.io/ipns/your_ipfs_id</code>，如果你的浏览器装了ipfs插件就可以自动解析这个网址，从而直接用ipfs协议来访问站点了。</p>
 <blockquote>
 <p>注意your_ipfs_id是指你的ipfs id，你可以用命令<code>ipfs id</code>查看你的id是什么，相信我的读者不会蠢到直接复制粘贴your_ipfs_id。</p>
 </blockquote>
-<h2 id="hexo生成的博客，缺失css和js的问题"><a href="#hexo生成的博客，缺失css和js的问题" class="headerlink" title="hexo生成的博客，缺失css和js的问题"></a>hexo生成的博客，缺失css和js的问题</h2><p>在hexo的config里面，有个root，这个root就是用来给css和js等资源指定目录的，所以你要改成：<code>/ipns/your_ipfs_id/</code></p>
+<h2 id="hexo生成的博客-缺失css和js的问题"><a class="header-anchor" href="#hexo生成的博客-缺失css和js的问题">¶</a>hexo生成的博客，缺失css和js的问题</h2>
+<p>在hexo的config里面，有个root，这个root就是用来给css和js等资源指定目录的，所以你要改成：<code>/ipns/your_ipfs_id/</code></p>
 <p>如果你想同时在git pages上面，和ipfs上面发布你的博客，那么root这个属性必定就冲突了，因为在git pages上面发布的时候，直接填<code>/</code>就行了（他是直接发布在像：<code>liuqinh2s.github.io</code>，这个域名后面，也就是子域名的根目录，不像ipfs那样会加个<code>/ipns/your_ipfs_id</code>这种目录）。那么你就只能搞两个博客工程了，新发布博客的时候，就要同时修改两个地方。</p>
 <p>比如我是这样做的，我建了一个ipfs文件夹，里面存放我所有发布在ipfs上的资源，所以我会把我的博客复制一份到这个文件夹里面，更新博客的时候，复制一份博客文件到这边，git pages那边要发布一次，然后ipfs这边也要发布一次。</p>
 <p>访问我的ipfs站点：<a href="https://ipfs.io/ipns/QmT7mga4wwTLNFCrtt1FbvLgmxTWZyKGRsrnFZNMoHdEJa/" target="_blank" rel="noopener">https://ipfs.io/ipns/QmT7mga4wwTLNFCrtt1FbvLgmxTWZyKGRsrnFZNMoHdEJa/</a></p>
-<h2 id="使用脚本自动化push"><a href="#使用脚本自动化push" class="headerlink" title="使用脚本自动化push"></a>使用脚本自动化push</h2><p>为了实现自动push，我自己写了个脚本，可以同时把博客push到git pages和ipfs上：<a href="https://gist.github.com/liuqinh2s/0864ed7799b161bb2f048b4fab867d5a" target="_blank" rel="noopener">https://gist.github.com/liuqinh2s/0864ed7799b161bb2f048b4fab867d5a</a></p>
+<h2 id="使用脚本自动化push"><a class="header-anchor" href="#使用脚本自动化push">¶</a>使用脚本自动化push</h2>
+<p>为了实现自动push，我自己写了个脚本，可以同时把博客push到git pages和ipfs上：<a href="https://gist.github.com/liuqinh2s/0864ed7799b161bb2f048b4fab867d5a" target="_blank" rel="noopener">https://gist.github.com/liuqinh2s/0864ed7799b161bb2f048b4fab867d5a</a></p>
 <p>在你的博客目录下新建一个<code>push.sh</code>，然后把代码复制粘贴，保存，以后每次push的时候执行：<code>bash push.sh</code></p>
 
       
@@ -665,7 +668,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#常用ipfs命令"><span class="nav-number">1.</span> <span class="nav-text">常用ipfs命令</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#hexo生成的博客，缺失css和js的问题"><span class="nav-number">2.</span> <span class="nav-text">hexo生成的博客，缺失css和js的问题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#使用脚本自动化push"><span class="nav-number">3.</span> <span class="nav-text">使用脚本自动化push</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#常用ipfs命令"><span class="nav-number">1.</span> <span class="nav-text">¶常用ipfs命令</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#hexo生成的博客-缺失css和js的问题"><span class="nav-number">2.</span> <span class="nav-text">¶hexo生成的博客，缺失css和js的问题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#使用脚本自动化push"><span class="nav-number">3.</span> <span class="nav-text">¶使用脚本自动化push</span></a></li></ol></div>
             
 
           </div>
@@ -699,7 +702,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">98.2k</span>
+    <span title="Site words total count">99.8k</span>
   
 </div>
 

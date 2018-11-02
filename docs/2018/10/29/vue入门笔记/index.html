@@ -81,17 +81,17 @@
 
 
 
-<meta name="description" content="项目初始化命令 安装vue-cli: npm install -g vue-cli 初始化项目: vue init webpack my-project 进入项目: cd my-project 安装依赖: npm install 运行项目: npm run dev  项目目录结构最重要的几个东西：  index.html：项目根视图 main.js App.vue src目录  单文件项目(Sin">
+<meta name="description" content="项目初始化命令  安装vue-cli: npm install -g vue-cli 初始化项目: vue init webpack my-project 进入项目: cd my-project 安装依赖: npm install 运行项目: npm run dev  项目目录结构 最重要的几个东西：  index.html：项目根视图 main.js App.vue src目录  单文件项目(S">
 <meta property="og:type" content="article">
 <meta property="og:title" content="vue入门重点笔记（可作为面试考察点）">
 <meta property="og:url" content="http://liuqinh2s.github.io/blog/2018/10/29/vue入门笔记/index.html">
 <meta property="og:site_name" content="liuqinh2s&#39; blog">
-<meta property="og:description" content="项目初始化命令 安装vue-cli: npm install -g vue-cli 初始化项目: vue init webpack my-project 进入项目: cd my-project 安装依赖: npm install 运行项目: npm run dev  项目目录结构最重要的几个东西：  index.html：项目根视图 main.js App.vue src目录  单文件项目(Sin">
+<meta property="og:description" content="项目初始化命令  安装vue-cli: npm install -g vue-cli 初始化项目: vue init webpack my-project 进入项目: cd my-project 安装依赖: npm install 运行项目: npm run dev  项目目录结构 最重要的几个东西：  index.html：项目根视图 main.js App.vue src目录  单文件项目(S">
 <meta property="og:locale" content="en">
 <meta property="og:updated_time" content="2018-11-01T06:46:32.799Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="vue入门重点笔记（可作为面试考察点）">
-<meta name="twitter:description" content="项目初始化命令 安装vue-cli: npm install -g vue-cli 初始化项目: vue init webpack my-project 进入项目: cd my-project 安装依赖: npm install 运行项目: npm run dev  项目目录结构最重要的几个东西：  index.html：项目根视图 main.js App.vue src目录  单文件项目(Sin">
+<meta name="twitter:description" content="项目初始化命令  安装vue-cli: npm install -g vue-cli 初始化项目: vue init webpack my-project 进入项目: cd my-project 安装依赖: npm install 运行项目: npm run dev  项目目录结构 最重要的几个东西：  index.html：项目根视图 main.js App.vue src目录  单文件项目(S">
 
 
 
@@ -411,21 +411,24 @@
       
 
       
-        <h1 id="项目初始化命令"><a href="#项目初始化命令" class="headerlink" title="项目初始化命令"></a>项目初始化命令</h1><ol>
+        <h1>项目初始化命令</h1>
+<ol>
 <li>安装vue-cli: <code>npm install -g vue-cli</code></li>
 <li>初始化项目: <code>vue init webpack my-project</code></li>
 <li>进入项目: <code>cd my-project</code></li>
 <li>安装依赖: <code>npm install</code></li>
 <li>运行项目: <code>npm run dev</code></li>
 </ol>
-<h1 id="项目目录结构"><a href="#项目目录结构" class="headerlink" title="项目目录结构"></a>项目目录结构</h1><p>最重要的几个东西：</p>
+<h1>项目目录结构</h1>
+<p>最重要的几个东西：</p>
 <ol>
 <li>index.html：项目根视图</li>
 <li>main.js</li>
 <li>App.vue</li>
 <li>src目录</li>
 </ol>
-<h1 id="单文件项目-Single-Page-Application"><a href="#单文件项目-Single-Page-Application" class="headerlink" title="单文件项目(Single Page Application)"></a>单文件项目(Single Page Application)</h1><p>vue组件：包含三个部分</p>
+<h1>单文件项目(Single Page Application)</h1>
+<p>vue组件：包含三个部分</p>
 <ul>
 <li>template：视图</li>
 <li>script：逻辑</li>
@@ -442,7 +445,7 @@
 <p>语法：</p>
 <ol>
 <li>可以根据data中返回的值，动态渲染文本。</li>
-<li>只能是单行语句。比如<code>if(0&lt;10){return &#39;对的&#39;} else{return &#39;错的&#39;}</code>和<code>let a = 10</code>都不能使用。</li>
+<li>只能是单行语句。比如<code>if(0&lt;10){return '对的'} else{return '错的'}</code>和<code>let a = 10</code>都不能使用。</li>
 <li>不能作用在HTML属性上，遇到这种情况应该使用<code>v-bind</code>指令。</li>
 </ol>
 <ul>
@@ -457,7 +460,9 @@
 <p>computed和methods的区别：computed是基于依赖缓存的，如果依赖没有变，就直接返回上次计算的结果。methods则每次都进行计算，浪费性能。</p>
 <p><code>v-model</code>双向数据绑定，常用的场景有：输入框给data里的变量赋值，然后用另一个标签显示这个变量，也就是这个变量是可读可写的。</p>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"text"</span> <span class="attr">v-model</span>=<span class="string">"msg"</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<h2 id="父子组件数据交互"><a href="#父子组件数据交互" class="headerlink" title="父子组件数据交互"></a>父子组件数据交互</h2><p>父 -&gt; 子：props<br>数据传递类型限制（验证）</p>
+<h2 id="父子组件数据交互"><a class="header-anchor" href="#父子组件数据交互">¶</a>父子组件数据交互</h2>
+<p>父 -&gt; 子：props<br>
+数据传递类型限制（验证）</p>
 <ul>
 <li>数据类型验证</li>
 <li>多数据类型验证</li>
@@ -500,8 +505,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/blog/2018/11/01/CSS Flex 布局/" rel="prev" title="CSS Flex 布局">
-                CSS Flex 布局 <i class="fa fa-chevron-right"></i>
+              <a href="/blog/2018/11/01/CSS布局/" rel="prev" title="CSS布局">
+                CSS布局 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -696,7 +701,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#项目初始化命令"><span class="nav-number">1.</span> <span class="nav-text">项目初始化命令</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#项目目录结构"><span class="nav-number">2.</span> <span class="nav-text">项目目录结构</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#单文件项目-Single-Page-Application"><span class="nav-number">3.</span> <span class="nav-text">单文件项目(Single Page Application)</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#父子组件数据交互"><span class="nav-number">3.1.</span> <span class="nav-text">父子组件数据交互</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#undefined"><span class="nav-number">1.</span> <span class="nav-text">项目初始化命令</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#undefined"><span class="nav-number">2.</span> <span class="nav-text">项目目录结构</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#undefined"><span class="nav-number">3.</span> <span class="nav-text">单文件项目(Single Page Application)</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#父子组件数据交互"><span class="nav-number">3.1.</span> <span class="nav-text">¶父子组件数据交互</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -730,7 +735,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">98.2k</span>
+    <span title="Site words total count">99.8k</span>
   
 </div>
 
