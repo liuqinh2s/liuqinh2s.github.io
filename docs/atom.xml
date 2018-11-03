@@ -6,7 +6,7 @@
   <link href="/blog/atom.xml" rel="self"/>
   
   <link href="http://liuqinh2s.github.io/blog/"/>
-  <updated>2018-11-02T06:24:27.549Z</updated>
+  <updated>2018-11-03T06:27:50.239Z</updated>
   <id>http://liuqinh2s.github.io/blog/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="http://liuqinh2s.github.io/blog/2018/11/02/Java%20Web%20%E5%AE%9E%E6%88%98/"/>
     <id>http://liuqinh2s.github.io/blog/2018/11/02/Java Web 实战/</id>
     <published>2018-11-01T16:00:00.000Z</published>
-    <updated>2018-11-02T06:24:27.549Z</updated>
+    <updated>2018-11-03T06:27:50.239Z</updated>
     
     <summary type="html">
     
@@ -38,20 +38,16 @@
   </entry>
   
   <entry>
-    <title>CSS Flex 布局</title>
-    <link href="http://liuqinh2s.github.io/blog/2018/11/01/CSS%20Flex%20%E5%B8%83%E5%B1%80/"/>
-    <id>http://liuqinh2s.github.io/blog/2018/11/01/CSS Flex 布局/</id>
+    <title>CSS传统布局</title>
+    <link href="http://liuqinh2s.github.io/blog/2018/11/01/CSS%E4%BC%A0%E7%BB%9F%E5%B8%83%E5%B1%80/"/>
+    <id>http://liuqinh2s.github.io/blog/2018/11/01/CSS传统布局/</id>
     <published>2018-10-31T16:00:00.000Z</published>
-    <updated>2018-11-02T06:27:05.336Z</updated>
+    <updated>2018-11-02T06:25:55.316Z</updated>
     
     <summary type="html">
     
-      &lt;h2 id=&quot;flex布局是什么？&quot;&gt;&lt;a class=&quot;header-anchor&quot; href=&quot;#flex布局是什么？&quot;&gt;¶&lt;/a&gt;Flex布局是什么？&lt;/h2&gt;
-&lt;p&gt;Flex 是 Flexible Box 的缩写，意味 “弹性布局”。&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;flex影响的是其内元素的布局方式，而非影响这个容器自己所处的位置。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;任何容器都可以指定为flex布局。&lt;/p&gt;
+      &lt;h2 id=&quot;display&quot;&gt;&lt;a class=&quot;header-anchor&quot; href=&quot;#display&quot;&gt; &lt;/a&gt;display&lt;/h2&gt;
+&lt;p&gt;&lt;code&gt;display&lt;/code&gt;是CSS中最重要的用于控制布局的属性。&lt;strong&gt;每个元素都有一个默认的display值&lt;/strong&gt;，这与元素的类型有关。对于大多数元素它们的默认值通常是&lt;code&gt;block&lt;/code&gt;或&lt;code&gt;inline&lt;/code&gt;。一个block元素通常被叫做块级元素。一个inline元素通常被叫做行内元素。&lt;/p&gt;
     
     </summary>
     
@@ -63,41 +59,20 @@
   </entry>
   
   <entry>
-    <title>前端学习攻略</title>
-    <link href="http://liuqinh2s.github.io/blog/2018/11/01/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E6%94%BB%E7%95%A5/"/>
-    <id>http://liuqinh2s.github.io/blog/2018/11/01/前端学习攻略/</id>
+    <title>CSS Flex 布局</title>
+    <link href="http://liuqinh2s.github.io/blog/2018/11/01/CSS%20Flex%20%E5%B8%83%E5%B1%80/"/>
+    <id>http://liuqinh2s.github.io/blog/2018/11/01/CSS Flex 布局/</id>
     <published>2018-10-31T16:00:00.000Z</published>
-    <updated>2018-11-02T06:26:38.625Z</updated>
+    <updated>2018-11-02T06:27:05.336Z</updated>
     
     <summary type="html">
     
-      &lt;p&gt;官方文档：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;http://www.w3school.com.cn/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;w3school&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://developer.mozilla.org/zh-CN/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;MDN Web Docs&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
+      &lt;h2 id=&quot;flex布局是什么？&quot;&gt;&lt;a class=&quot;header-anchor&quot; href=&quot;#flex布局是什么？&quot;&gt; &lt;/a&gt;Flex布局是什么？&lt;/h2&gt;
+&lt;p&gt;Flex 是 Flexible Box 的缩写，意味 “弹性布局”。&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;不用刻意跑到这两个网站里去搜索，直接google即可。一般搜索结果里前几个就是这两个网站。&lt;/p&gt;
+&lt;p&gt;flex影响的是其内元素的布局方式，而非影响这个容器自己所处的位置。&lt;/p&gt;
 &lt;/blockquote&gt;
-    
-    </summary>
-    
-      <category term="前端" scheme="http://liuqinh2s.github.io/blog/categories/%E5%89%8D%E7%AB%AF/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>CSS传统布局</title>
-    <link href="http://liuqinh2s.github.io/blog/2018/11/01/CSS%E4%BC%A0%E7%BB%9F%E5%B8%83%E5%B1%80/"/>
-    <id>http://liuqinh2s.github.io/blog/2018/11/01/CSS传统布局/</id>
-    <published>2018-10-31T16:00:00.000Z</published>
-    <updated>2018-11-02T06:25:55.316Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;display&quot;&gt;&lt;a class=&quot;header-anchor&quot; href=&quot;#display&quot;&gt;¶&lt;/a&gt;display&lt;/h2&gt;
-&lt;p&gt;&lt;code&gt;display&lt;/code&gt;是CSS中最重要的用于控制布局的属性。&lt;strong&gt;每个元素都有一个默认的display值&lt;/strong&gt;，这与元素的类型有关。对于大多数元素它们的默认值通常是&lt;code&gt;block&lt;/code&gt;或&lt;code&gt;inline&lt;/code&gt;。一个block元素通常被叫做块级元素。一个inline元素通常被叫做行内元素。&lt;/p&gt;
+&lt;p&gt;任何容器都可以指定为flex布局。&lt;/p&gt;
     
     </summary>
     
@@ -129,6 +104,31 @@
       <category term="前端" scheme="http://liuqinh2s.github.io/blog/categories/%E5%89%8D%E7%AB%AF/"/>
     
       <category term="CSS" scheme="http://liuqinh2s.github.io/blog/categories/%E5%89%8D%E7%AB%AF/CSS/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>前端学习攻略</title>
+    <link href="http://liuqinh2s.github.io/blog/2018/11/01/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E6%94%BB%E7%95%A5/"/>
+    <id>http://liuqinh2s.github.io/blog/2018/11/01/前端学习攻略/</id>
+    <published>2018-10-31T16:00:00.000Z</published>
+    <updated>2018-11-02T06:26:38.625Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;官方文档：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.w3school.com.cn/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;w3school&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://developer.mozilla.org/zh-CN/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;MDN Web Docs&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;不用刻意跑到这两个网站里去搜索，直接google即可。一般搜索结果里前几个就是这两个网站。&lt;/p&gt;
+&lt;/blockquote&gt;
+    
+    </summary>
+    
+      <category term="前端" scheme="http://liuqinh2s.github.io/blog/categories/%E5%89%8D%E7%AB%AF/"/>
     
     
   </entry>
@@ -169,7 +169,7 @@
     
     <summary type="html">
     
-      &lt;h2 id=&quot;y86指令集体系结构&quot;&gt;&lt;a class=&quot;header-anchor&quot; href=&quot;#y86指令集体系结构&quot;&gt;¶&lt;/a&gt;Y86指令集体系结构&lt;/h2&gt;
+      &lt;h2 id=&quot;y86指令集体系结构&quot;&gt;&lt;a class=&quot;header-anchor&quot; href=&quot;#y86指令集体系结构&quot;&gt; &lt;/a&gt;Y86指令集体系结构&lt;/h2&gt;
 &lt;p&gt;Y86指令集基本上是IA32指令集的一个子集。这个指令集就是我们处理器实现的目标。如下图：&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;../../images/2018/Y86%E6%8C%87%E4%BB%A4%E9%9B%86.png&quot; alt=&quot;Y86指令集&quot;&gt;&lt;/p&gt;
 &lt;p&gt;IA32的movl指令分成了4个不同指令：irmovl、rrmovl、mrmovl和rmmovl，i表示立即数Immediate，r表示寄存器Register，m表示存储器Memmory。第一个字母表示源，第二个字母表示目的。&lt;/p&gt;
@@ -196,7 +196,7 @@
       
         
         
-          &lt;h2 id=&quot;从编译c语言文件说起&quot;&gt;&lt;a class=&quot;header-anchor&quot; href=&quot;#从编译c语言文件说起&quot;&gt;¶&lt;/a&gt;从编译C语言文件说起&lt;/h2&gt;
+          &lt;h2 id=&quot;从编译c语言文件说起&quot;&gt;&lt;a class=&quot;header-anchor&quot; href=&quot;#从编译c语言文件说起&quot;&gt; &lt;/a&gt;从编译C语言文件说起&lt;/h2&gt;
 &lt;figure class=&quot;highlight c&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td
         
       
@@ -252,7 +252,7 @@
       
         
         
-          &lt;h2 id=&quot;安装-oh-my-zsh&quot;&gt;&lt;a class=&quot;header-anchor&quot; href=&quot;#安装-oh-my-zsh&quot;&gt;¶&lt;/a&gt;安装 oh my zsh&lt;/h2&gt;
+          &lt;h2 id=&quot;安装-oh-my-zsh&quot;&gt;&lt;a class=&quot;header-anchor&quot; href=&quot;#安装-oh-my-zsh&quot;&gt; &lt;/a&gt;安装 oh my zsh&lt;/h2&gt;
 &lt;p&gt;首先检查自己有没有zsh：&lt;/p&gt;
 &lt;figure class=&quot;highlight
         
@@ -312,7 +312,7 @@
         
         
           &lt;p&gt;我们写代码的时候需要不停的命名，项目、类、函数、变量 等等都要命名。而命名关乎程序的可读性，而程序的可读性又至关重要（代码是写给人看的）。&lt;/p&gt;
-&lt;h2 id=&quot;名副其实&quot;&gt;&lt;a class=&quot;header-anchor&quot;
+&lt;h2 id=&quot;名副其实&quot;&gt;&lt;a class=&quot;header-anchor&quot; href=&quot;#名副其实&quot;&gt;
         
       
     
@@ -340,7 +340,7 @@
       
         
         
-          &lt;h2 id=&quot;前言&quot;&gt;&lt;a class=&quot;header-anchor&quot; href=&quot;#前言&quot;&gt;¶&lt;/a&gt;前言&lt;/h2&gt;
+          &lt;h2 id=&quot;前言&quot;&gt;&lt;a class=&quot;header-anchor&quot; href=&quot;#前言&quot;&gt; &lt;/a&gt;前言&lt;/h2&gt;
 &lt;p&gt;这章讲的是文件IO，其中有几个非常重要的概念：&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;File Desriptors，文件描述符&lt;/li&gt;
@@ -368,7 +368,7 @@
       
         
         
-          &lt;h2 id=&quot;前言&quot;&gt;&lt;a class=&quot;header-anchor&quot;
+          &lt;h2 id=&quot;前言&quot;&gt;&lt;a class=&quot;header-anchor&quot; href=&quot;#前言&quot;&gt;
         
       
     
@@ -393,7 +393,7 @@
         
         
           &lt;p&gt;早就想自己给bash配个色，但是一直没空学习这方面的知识，今天抽个空，搞了一点点。&lt;/p&gt;
-&lt;h2 id=&quot;切换shell&quot;&gt;&lt;a class=&quot;header-anchor&quot;
+&lt;h2 id=&quot;切换shell&quot;&gt;&lt;a class=&quot;header-anchor&quot; href=&quot;#切换shell&quot;&gt;
         
       
     
@@ -442,7 +442,7 @@
         
         
           &lt;p&gt;ipfs是一个p2p的网络&lt;/p&gt;
-&lt;h2 id=&quot;常用ipfs命令&quot;&gt;&lt;a class=&quot;header-anchor&quot; href=&quot;#常用ipfs命令&quot;&gt;¶&lt;/a&gt;常用ipfs命令&lt;/h2&gt;
+&lt;h2 id=&quot;常用ipfs命令&quot;&gt;&lt;a class=&quot;header-anchor&quot; href=&quot;#常用ipfs命令&quot;&gt; &lt;/a&gt;常用ipfs命令&lt;/h2&gt;
 &lt;figure class=&quot;highlight
         
       

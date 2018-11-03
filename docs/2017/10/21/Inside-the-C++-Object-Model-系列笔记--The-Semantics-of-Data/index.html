@@ -81,18 +81,18 @@
 
 
 
-<meta name="description" content="C++对象模型的细节，讨论了 data members 的处理。 ¶空类在内存中有空间吗 一个实例引出的思考： 1234class X&amp;#123;&amp;#125;;class Y:virtual public X&amp;#123;&amp;#125;;class Z:virtual public X&amp;#123;&amp;#125;;class A:public Y, public Z&amp;#123;&amp;#125;; 猜猜size">
+<meta name="description" content="C++对象模型的细节，讨论了 data members 的处理。  空类在内存中有空间吗 一个实例引出的思考： 1234class X&amp;#123;&amp;#125;;class Y:virtual public X&amp;#123;&amp;#125;;class Z:virtual public X&amp;#123;&amp;#125;;class A:public Y, public Z&amp;#123;&amp;#125;; 猜猜size">
 <meta name="keywords" content="C++">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Inside the C++ Object Model 系列笔记 三 -- The Semantics of Data">
 <meta property="og:url" content="http://liuqinh2s.github.io/blog/2017/10/21/Inside-the-C++-Object-Model-系列笔记--The-Semantics-of-Data/index.html">
 <meta property="og:site_name" content="liuqinh2s&#39; blog">
-<meta property="og:description" content="C++对象模型的细节，讨论了 data members 的处理。 ¶空类在内存中有空间吗 一个实例引出的思考： 1234class X&amp;#123;&amp;#125;;class Y:virtual public X&amp;#123;&amp;#125;;class Z:virtual public X&amp;#123;&amp;#125;;class A:public Y, public Z&amp;#123;&amp;#125;; 猜猜size">
+<meta property="og:description" content="C++对象模型的细节，讨论了 data members 的处理。  空类在内存中有空间吗 一个实例引出的思考： 1234class X&amp;#123;&amp;#125;;class Y:virtual public X&amp;#123;&amp;#125;;class Z:virtual public X&amp;#123;&amp;#125;;class A:public Y, public Z&amp;#123;&amp;#125;; 猜猜size">
 <meta property="og:locale" content="en">
 <meta property="og:updated_time" content="2018-11-01T06:42:02.805Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Inside the C++ Object Model 系列笔记 三 -- The Semantics of Data">
-<meta name="twitter:description" content="C++对象模型的细节，讨论了 data members 的处理。 ¶空类在内存中有空间吗 一个实例引出的思考： 1234class X&amp;#123;&amp;#125;;class Y:virtual public X&amp;#123;&amp;#125;;class Z:virtual public X&amp;#123;&amp;#125;;class A:public Y, public Z&amp;#123;&amp;#125;; 猜猜size">
+<meta name="twitter:description" content="C++对象模型的细节，讨论了 data members 的处理。  空类在内存中有空间吗 一个实例引出的思考： 1234class X&amp;#123;&amp;#125;;class Y:virtual public X&amp;#123;&amp;#125;;class Z:virtual public X&amp;#123;&amp;#125;;class A:public Y, public Z&amp;#123;&amp;#125;; 猜猜size">
 
 
 
@@ -424,7 +424,7 @@
 
       
         <p>C++对象模型的细节，讨论了 data members 的处理。</p>
-<h2 id="空类在内存中有空间吗"><a class="header-anchor" href="#空类在内存中有空间吗">¶</a>空类在内存中有空间吗</h2>
+<h2 id="空类在内存中有空间吗"><a class="header-anchor" href="#空类在内存中有空间吗"> </a>空类在内存中有空间吗</h2>
 <p>一个实例引出的思考：</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">X</span>&#123;</span>&#125;;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Y</span>:</span><span class="keyword">virtual</span> <span class="keyword">public</span> X&#123;&#125;;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Z</span>:</span><span class="keyword">virtual</span> <span class="keyword">public</span> X&#123;&#125;;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">A</span>:</span><span class="keyword">public</span> Y, <span class="keyword">public</span> Z&#123;&#125;;</span><br></pre></td></tr></table></figure>
 <p>猜猜sizeof上面各个类都为多少？</p>
@@ -436,7 +436,7 @@
 如果不插入这一个字节呢？哼哼，那对X的对象取地址的结果是什么？两个不同的X对象间地址的比较怎么办？</p>
 <p>我们再来看Y和Z。首先我们要明白的是实现虚继承，将要带来一些额外的负担——额外需要一个某种形式的指针。到目前为止，对于一个32位的机器来说Y、Z的大小应该为5，而不是8或者4。我们需要再考虑两点因素：内存对齐（alignment—）和编译器的优化。</p>
 <p>空类也有1Byte的大小，因为这样才能使得这个class的2个objects在内存中有独一无二的地址。</p>
-<h2 id="the-binding-of-a-data-member"><a class="header-anchor" href="#the-binding-of-a-data-member">¶</a>The Binding of a Data Member</h2>
+<h2 id="the-binding-of-a-data-member"><a class="header-anchor" href="#the-binding-of-a-data-member"> </a>The Binding of a Data Member</h2>
 <p>考虑下面这样的代码：</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">extern</span> <span class="keyword">float</span> x;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Point3d</span>&#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">truePoint3d(<span class="keyword">float</span>, <span class="keyword">float</span>, <span class="keyword">float</span>);</span><br><span class="line">true<span class="comment">//问题是 x 到底是哪个 x 呢</span></span><br><span class="line">true<span class="function"><span class="keyword">float</span> <span class="title">X</span><span class="params">()</span> <span class="keyword">const</span> </span>&#123;<span class="keyword">return</span> x;&#125;</span><br><span class="line">true<span class="function"><span class="keyword">void</span> <span class="title">X</span><span class="params">(<span class="keyword">float</span> new_x)</span> <span class="keyword">const</span></span>&#123;x = new_x;&#125;</span><br><span class="line"><span class="keyword">private</span>:</span><br><span class="line">true<span class="keyword">float</span> x;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>对member functions本身的分析会直到整个class的声明都出现了才开始（直到看到代表 class 结束的}右大括号）。所以class的 member functions 可以引用声明在后面的成员，C 语言就做不到。</p>
@@ -448,7 +448,7 @@ class中的typedef并不具备这个性质。<br>
 而 f2 绑定的 length 类型才是 string。</p>
 <p>所以，对于 typedef 需要防御性的程序风格:<br>
 始终把 nested type 声明(即 typedef)放在 class 起始处!</p>
-<h2 id="data-member-layout"><a class="header-anchor" href="#data-member-layout">¶</a>Data Member Layout</h2>
+<h2 id="data-member-layout"><a class="header-anchor" href="#data-member-layout"> </a>Data Member Layout</h2>
 <p>C<ins>只保证处于同一个 access section（也就是private,public,protected片段）的数据，一定会以声明的次序出现在内存布局当中(要求较晚出现的数据成员处在较大的内存地址中)。<br>
 C</ins>标准只提供了这一点点的保证。<br>
 允许编译器将多个Acess Section的顺序自由排列，而不必在乎它们的声明次序。但似乎没有编译器这样做。<br>
@@ -456,7 +456,7 @@ C</ins>标准只提供了这一点点的保证。<br>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">X</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">   <span class="keyword">int</span> i;</span><br><span class="line">   <span class="keyword">int</span> j;</span><br><span class="line"><span class="keyword">private</span>:</span><br><span class="line">   <span class="keyword">int</span> k;</span><br><span class="line">   <span class="keyword">int</span> n;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>数据 i 一定在 j 之前，k 一定在 n 之前。具体什么顺序就看编译器了。</p>
 <p>传统上，vptr被安放在所有被明确声明的member的最后，不过也有些编译器把vptr放在最前面(MSVC<ins>就是把 vptr 放在最前面，而 G</ins> 是把 vptr 放在最后面)。</p>
-<h2 id="access-of-a-data-member"><a class="header-anchor" href="#access-of-a-data-member">¶</a>Access of a Data Member</h2>
+<h2 id="access-of-a-data-member"><a class="header-anchor" href="#access-of-a-data-member"> </a>Access of a Data Member</h2>
 <p>在C++中，直观上来说，由一个对象存取一个member会比由一个指针存取一个member更快捷。<br>
 但是对于经由一个对象来存取和由一个指针来存取一个静态的 member 来说，是完全一样的，都会被编译器所扩展。</p>
 <p>经由 member selection operators（也就是 “.” 运算符）对一个 static data member 进行存取操作只是一种语法上的便宜行事而已。member 其实并不在 class object 中，因此存取并不需要通过 class object。</p>
@@ -464,20 +464,20 @@ C</ins>标准只提供了这一点点的保证。<br>
 <p>foo().static_member = 100;</p>
 <p>foo()返回一个类型为 X 的对象，含有一个 static_member，foo()其实可以不用求值而直接访 问这个静态成员，但是 C++标准保证了 foo()会被求值，可能的代码扩展为:</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">(<span class="keyword">void</span>) foo();</span><br><span class="line">X::static_member = <span class="number">100</span>;</span><br></pre></td></tr></table></figure>
-<h2 id="static-data-members"><a class="header-anchor" href="#static-data-members">¶</a>static data members</h2>
+<h2 id="static-data-members"><a class="header-anchor" href="#static-data-members"> </a>static data members</h2>
 <p>如果有两个 class ，每个都声明了一个 static member freelist，那么当他们都被放在程序的 data segment时，就会导致名称冲突。编译器的解决方法是暗中对每一个 static data member 编码（这种手法有个很美的名称：name-mangling），以获得一个独一无二的程序识别代码。有多少种编译器就有多少种 name-mangling 做法！通常不外乎是表格啦，语法措辞啦等等。任何 name-mangling 都有两个要点：</p>
 <ol>
 <li>一种算法，推导出独一无二的名称。</li>
 <li>万一编译系统（或环境工具）必须和使用者交谈，那些独一无二的名称可以轻易被推导回原来的名称。</li>
 </ol>
-<h2 id="nonstatic-data-members"><a class="header-anchor" href="#nonstatic-data-members">¶</a>nonstatic data members</h2>
+<h2 id="nonstatic-data-members"><a class="header-anchor" href="#nonstatic-data-members"> </a>nonstatic data members</h2>
 <p>Nonstatic data members are stored directly within each class object and cannot be accessed except through an explicit or implicit class object. An implicit class object is present whenever the programmer directly accesses a nonstatic data member within a member function. For example, in the following code:</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">Point3d</span><br><span class="line">Point3d::translate( <span class="keyword">const</span> Point3d &amp;pt ) &#123;</span><br><span class="line">   x += pt.x;</span><br><span class="line">   y += pt.y;</span><br><span class="line">   z += pt.z;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>the seemingly direct access of x, y, and z is actually carried out through an implicit class object represented<br>
 by the this pointer. Internally, the function is augmented as follows:</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// internal augmentation of member function</span></span><br><span class="line">  Point3d</span><br><span class="line">  Point3d::translate( <span class="keyword">const</span> Point3d* <span class="keyword">this</span>, <span class="keyword">const</span> Point3d &amp;pt ) &#123;</span><br><span class="line">     <span class="keyword">this</span>-&gt;x += pt.x;</span><br><span class="line">     <span class="keyword">this</span>-&gt;y += pt.y;</span><br><span class="line">     <span class="keyword">this</span>-&gt;z += pt.z;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>地址：&amp;origin._y;和&amp;origin + ( &amp;Point3d::_y - 1 );是一样的。指向 data member 的指针，其 offset 值总是被加上1。这样可以使编译系统区分出 “一个指针 data member 的指针，用以指向 class 的第一个 member”和“一个指向 data member 的指针，但是没有指向任何 member”两种情况(成员指针也需要有个表示 NULL 的方式，0 相当于用来表示 NULL 了，其它的就都要加上 1 了)。</p>
-<h2 id="inheritance-and-the-data-member"><a class="header-anchor" href="#inheritance-and-the-data-member">¶</a>Inheritance and the Data Member</h2>
+<h2 id="inheritance-and-the-data-member"><a class="header-anchor" href="#inheritance-and-the-data-member"> </a>Inheritance and the Data Member</h2>
 <p>C++ Standard 保证:“出现在派生类中的 base class subobject 有其完整原样性!” 子类会被放在父类的对齐空白字节之后，因为父类的完整性必须得以保证，父类的对齐空白字节 也是父类的一部分，也是不可分割的。</p>
 <p>请看下面例子：</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">X</span>&#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="keyword">int</span> x;</span><br><span class="line">    <span class="keyword">char</span> c;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">X2</span>:</span><span class="keyword">public</span> X</span><br><span class="line">&#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="keyword">char</span>  c2;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
@@ -518,8 +518,8 @@ C++ Standard 并未明确 base classes 的特定排列次序，但是目前的�
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/blog/2017/10/19/Inside-the-C++-Object-Model-系列笔记--The-Semantics-of-constructors/" rel="next" title="Inside the C++ Object Model 系列笔记 二 -- The Semantics of constructors">
-                <i class="fa fa-chevron-left"></i> Inside the C++ Object Model 系列笔记 二 -- The Semantics of constructors
+              <a href="/blog/2017/10/19/Inside-the-C++-Object-Model-系列笔记--Object-Lessons/" rel="next" title="Inside the C++ Object Model 系列笔记 一 -- Object Lessons">
+                <i class="fa fa-chevron-left"></i> Inside the C++ Object Model 系列笔记 一 -- Object Lessons
               </a>
             
           </div>
@@ -724,7 +724,7 @@ C++ Standard 并未明确 base classes 的特定排列次序，但是目前的�
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#空类在内存中有空间吗"><span class="nav-number">1.</span> <span class="nav-text">¶空类在内存中有空间吗</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#the-binding-of-a-data-member"><span class="nav-number">2.</span> <span class="nav-text">¶The Binding of a Data Member</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#data-member-layout"><span class="nav-number">3.</span> <span class="nav-text">¶Data Member Layout</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#access-of-a-data-member"><span class="nav-number">4.</span> <span class="nav-text">¶Access of a Data Member</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#static-data-members"><span class="nav-number">5.</span> <span class="nav-text">¶static data members</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#nonstatic-data-members"><span class="nav-number">6.</span> <span class="nav-text">¶nonstatic data members</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#inheritance-and-the-data-member"><span class="nav-number">7.</span> <span class="nav-text">¶Inheritance and the Data Member</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#空类在内存中有空间吗"><span class="nav-number">1.</span> <span class="nav-text"> 空类在内存中有空间吗</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#the-binding-of-a-data-member"><span class="nav-number">2.</span> <span class="nav-text"> The Binding of a Data Member</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#data-member-layout"><span class="nav-number">3.</span> <span class="nav-text"> Data Member Layout</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#access-of-a-data-member"><span class="nav-number">4.</span> <span class="nav-text"> Access of a Data Member</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#static-data-members"><span class="nav-number">5.</span> <span class="nav-text"> static data members</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#nonstatic-data-members"><span class="nav-number">6.</span> <span class="nav-text"> nonstatic data members</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#inheritance-and-the-data-member"><span class="nav-number">7.</span> <span class="nav-text"> Inheritance and the Data Member</span></a></li></ol></div>
             
 
           </div>
@@ -758,7 +758,7 @@ C++ Standard 并未明确 base classes 的特定排列次序，但是目前的�
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">99.8k</span>
+    <span title="Site words total count">100.0k</span>
   
 </div>
 

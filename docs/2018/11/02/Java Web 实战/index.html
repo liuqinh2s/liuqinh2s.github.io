@@ -89,7 +89,7 @@
 <meta property="og:site_name" content="liuqinh2s&#39; blog">
 <meta property="og:description" content="我正在做一个社交网站，目前暂定叫做：圈子。这个项目从产品到UI到前端、后端全部都由我一个人操刀。 后端使用了 Spring + SpringMVC + Mybatis 的框架组合，据说 SpringBoot 很流行，后面我会学一下。前端使用了 Vue 框架。产品设计移动端优先，使用了 墨刀 这款工具。">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2018-11-02T06:24:27.549Z">
+<meta property="og:updated_time" content="2018-11-03T06:27:50.239Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="社交网站 -- 圈子">
 <meta name="twitter:description" content="我正在做一个社交网站，目前暂定叫做：圈子。这个项目从产品到UI到前端、后端全部都由我一个人操刀。 后端使用了 Spring + SpringMVC + Mybatis 的框架组合，据说 SpringBoot 很流行，后面我会学一下。前端使用了 Vue 框架。产品设计移动端优先，使用了 墨刀 这款工具。">
@@ -427,10 +427,10 @@
 <li>数据库设计</li>
 <li>前端开发，后端开发</li>
 </ol>
-<h1>后端开发</h1>
-<h2 id="数据库安装"><a class="header-anchor" href="#数据库安装">¶</a>数据库安装</h2>
+<h2 id="后端开发"><a class="header-anchor" href="#后端开发"> </a>后端开发</h2>
+<h3 id="数据库安装"><a class="header-anchor" href="#数据库安装"> </a>数据库安装</h3>
 <p>数据库的安装也是大坑之一，装个MySQL5.7不容易。参考了这篇文章：<a href="https://my.oschina.net/Laily/blog/713023" target="_blank" rel="noopener">CentOS 7 yum 安装 MySQL5.7</a></p>
-<h2 id="框架搭建"><a class="header-anchor" href="#框架搭建">¶</a>框架搭建</h2>
+<h3 id="框架搭建"><a class="header-anchor" href="#框架搭建"> </a>框架搭建</h3>
 <p>关于后台搭框架的过程，可以参考这篇文章：<a href="https://blog.csdn.net/GallenZhang/article/details/51932152" target="_blank" rel="noopener">SSM框架整合（IntelliJ IDEA + maven + Spring + SpringMVC + MyBatis）</a></p>
 <p>要注意的几点：</p>
 <ul>
@@ -440,12 +440,12 @@
 <li>第三方库（非Maven远程托管的库）一定要放到 <code>src -&gt; main -&gt; webapp -&gt; WEB-INF -&gt; lib</code> 目录下（没有就自己创建），否则在build的时候你会发现target中的lib没有第三方库（其实build过程对这些库的处理方式就是简单的拷贝，你手动拷贝也是可以的，但自动化才是最好的）</li>
 </ul>
 <p>然后就是多熟悉一下配置，弄好自己需要的配置，弄清楚配置可以做哪些事，这很重要。</p>
-<h3 id="第三方库的管理问题"><a class="header-anchor" href="#第三方库的管理问题">¶</a>第三方库的管理问题</h3>
+<h4 id="第三方库的管理问题"><a class="header-anchor" href="#第三方库的管理问题"> </a>第三方库的管理问题</h4>
 <p>第三方库老是报错：<code>classNotfound</code>，这个库是用来发短信的：</p>
 <p>在pom.xml中：</p>
 <figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>sms<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>sms<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">version</span>&gt;</span>2.6.3<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">scope</span>&gt;</span>system<span class="tag">&lt;/<span class="name">scope</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">systemPath</span>&gt;</span>$&#123;basedir&#125;/src/main/webapp/WEB-INF/lib/CCP_REST_SMS_SDK_JAVA_v2.6.3r.jar<span class="tag">&lt;/<span class="name">systemPath</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <p>systemPath一开始我填的是${basedir}/lib/CCP_REST_SMS_SDK_JAVA_v2.6.3r.jar，始终是不行，我看了target里面的lib，没拷贝进去，就算我手动拷贝jar包进去还是classNotfound，后来换成这个路径存放jar之后终于能自动拷贝进target里面，问题也修复了。</p>
-<h2 id="mybatis-generator"><a class="header-anchor" href="#mybatis-generator">¶</a>mybatis-generator</h2>
+<h3 id="mybatis-generator"><a class="header-anchor" href="#mybatis-generator"> </a>mybatis-generator</h3>
 <p>数据库设计好之后，可以使用mybatis自动生成数据库操作相关的部分：<code>mapper</code>、<code>mapping</code>和<code>dao</code>。可以参考这篇文章：<a href="https://www.cnblogs.com/lichenwei/p/4145696.html" target="_blank" rel="noopener">使用Mybatis-Generator自动生成Dao、Model、Mapping相关文件</a></p>
 <p>下面三个文件放到同一目录，运行指令：<code>java -jar mybatis-generator-core-1.3.7.jar -configfile generatorConfig.xml -overwrite</code></p>
 <ul>
@@ -456,13 +456,13 @@
 <blockquote>
 <p>遇到的坑是overwrite实际上会出问题，如果想重新生成，还是应该先删掉生成的文件，再重新生成，如果覆盖可能会出问题。</p>
 </blockquote>
-<h2 id="gitignore"><a class="header-anchor" href="#gitignore">¶</a>.gitignore</h2>
+<h3 id="gitignore"><a class="header-anchor" href="#gitignore"> </a>.gitignore</h3>
 <p>使用intellj idea的插件.ignore来自动生成，选择java, maven, jetbrains, macosx等选项，生成相应的忽略项。</p>
 <ol>
 <li>如果你有自己下载的第三方jar包，想通过git来维护，必须注释掉java选项生成的*.jar忽略项。</li>
 <li>下载后的项目还要自己配置tomcat才能运行，要手动添加Artifacts，并手动标识resource文件夹。</li>
 </ol>
-<h1>参考资料：</h1>
+<h2 id="参考资料："><a class="header-anchor" href="#参考资料："> </a>参考资料：</h2>
 <ul>
 <li><a href="http://www.voidcn.com/article/p-qtmqetyl-ug.html" target="_blank" rel="noopener">获取用户IP</a></li>
 </ul>
@@ -496,8 +496,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/blog/2018/11/01/CSS Flex 布局/" rel="next" title="CSS Flex 布局">
-                <i class="fa fa-chevron-left"></i> CSS Flex 布局
+              <a href="/blog/2018/11/01/CSS传统布局/" rel="next" title="CSS传统布局">
+                <i class="fa fa-chevron-left"></i> CSS传统布局
               </a>
             
           </div>
@@ -698,7 +698,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#undefined"><span class="nav-number">1.</span> <span class="nav-text">后端开发</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#数据库安装"><span class="nav-number">1.1.</span> <span class="nav-text">¶数据库安装</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#框架搭建"><span class="nav-number">1.2.</span> <span class="nav-text">¶框架搭建</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#第三方库的管理问题"><span class="nav-number">1.2.1.</span> <span class="nav-text">¶第三方库的管理问题</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#mybatis-generator"><span class="nav-number">1.3.</span> <span class="nav-text">¶mybatis-generator</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#gitignore"><span class="nav-number">1.4.</span> <span class="nav-text">¶.gitignore</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#undefined"><span class="nav-number">2.</span> <span class="nav-text">参考资料：</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#后端开发"><span class="nav-number">1.</span> <span class="nav-text"> 后端开发</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#数据库安装"><span class="nav-number">1.1.</span> <span class="nav-text"> 数据库安装</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#框架搭建"><span class="nav-number">1.2.</span> <span class="nav-text"> 框架搭建</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#第三方库的管理问题"><span class="nav-number">1.2.1.</span> <span class="nav-text"> 第三方库的管理问题</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#mybatis-generator"><span class="nav-number">1.3.</span> <span class="nav-text"> mybatis-generator</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#gitignore"><span class="nav-number">1.4.</span> <span class="nav-text"> .gitignore</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参考资料："><span class="nav-number">2.</span> <span class="nav-text"> 参考资料：</span></a></li></ol></div>
             
 
           </div>
@@ -732,7 +732,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">99.8k</span>
+    <span title="Site words total count">100.0k</span>
   
 </div>
 

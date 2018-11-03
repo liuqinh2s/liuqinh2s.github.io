@@ -137,7 +137,7 @@ mathjax:
 
 >注意`per_page`不能是true，一定要是false。
 
-<h4 id="3.2.3">解决 markdown 与 mathjax 的冲突</h4>
+#### 解决 markdown 与 mathjax 的冲突
 
 为了解决 `markdown` 下划线转义成 `<em>` 标签（HTML标签），从而导致 `mathjax` 的下标无法使用，这个问题，我们修改 `marked.js` 文件，如果你使用的是 `sublime text` 或者 `Atom` 编辑器，`cmd+o`打开你的博客目录，然后 `cmd+p` 输入你要在此目录下找的文件名：`marked.js` 就可以找到这个文件。这个文件的是：`node_modules/marked/lib/marked.js`。
 
@@ -262,5 +262,24 @@ markdown本身是没有这个功能的，所以我们直接把标题用HTML写�
 举个例子：`<h4 id="3.2.3">解决 markdown 与 mathjax 的冲突</h4>`
 
 这里要注意的是：**不要使用`name`属性，而必须使用`id`属性，否则会不起作用**
+
+实际上可以使用一个markdown插件来实现：上标、下标、锚点、脚注。
+
+```
+npm un hexo-renderer-marked --save
+npm i hexo-renderer-markdown-it --save
+```
+
+锚点的用法，其实可以先`hexo g`一下，然后看看生成的HTML长什么样，就知道改怎么引用锚点了，经我观察，空格会被渲染成`-`，比如一个四级标题：
+
+```
+#### 解决 markdown 与 mathjax 的冲突
+```
+
+会被渲染成：
+
+```html
+<h4 id="解决-markdown-与-mathjax-的冲突"><a class="header-anchor" href="#解决-markdown-与-mathjax-的冲突">¶</a>解决 markdown 与 mathjax 的冲突</h4>
+```
 
 

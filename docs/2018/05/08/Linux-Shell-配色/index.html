@@ -81,19 +81,19 @@
 
 
 
-<meta name="description" content="早就想自己给bash配个色，但是一直没空学习这方面的知识，今天抽个空，搞了一点点。 ¶切换shell 切换shell，分临时和永久。 临时：输入命令：bash或者zsh都行，shell调用shell，一层套一层，按ctrl+d或者输入exit可以退出。 永久：输入命令：chsh -s /bin/bash  chsh意思就是change shell，使用man chsh进行查看  ¶修改prompt">
+<meta name="description" content="早就想自己给bash配个色，但是一直没空学习这方面的知识，今天抽个空，搞了一点点。  切换shell 切换shell，分临时和永久。 临时：输入命令：bash或者zsh都行，shell调用shell，一层套一层，按ctrl+d或者输入exit可以退出。 永久：输入命令：chsh -s /bin/bash  chsh意思就是change shell，使用man chsh进行查看   修改prompt">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Linux Shell 配色">
 <meta property="og:url" content="http://liuqinh2s.github.io/blog/2018/05/08/Linux-Shell-配色/index.html">
 <meta property="og:site_name" content="liuqinh2s&#39; blog">
-<meta property="og:description" content="早就想自己给bash配个色，但是一直没空学习这方面的知识，今天抽个空，搞了一点点。 ¶切换shell 切换shell，分临时和永久。 临时：输入命令：bash或者zsh都行，shell调用shell，一层套一层，按ctrl+d或者输入exit可以退出。 永久：输入命令：chsh -s /bin/bash  chsh意思就是change shell，使用man chsh进行查看  ¶修改prompt">
+<meta property="og:description" content="早就想自己给bash配个色，但是一直没空学习这方面的知识，今天抽个空，搞了一点点。  切换shell 切换shell，分临时和永久。 临时：输入命令：bash或者zsh都行，shell调用shell，一层套一层，按ctrl+d或者输入exit可以退出。 永久：输入命令：chsh -s /bin/bash  chsh意思就是change shell，使用man chsh进行查看   修改prompt">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="https://i.loli.net/2018/05/08/5af13dcea3fa6.png">
 <meta property="og:image" content="https://upload-images.jianshu.io/upload_images/1233651-e586f58eae66c4ee.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/700">
 <meta property="og:updated_time" content="2018-11-01T06:42:02.809Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Linux Shell 配色">
-<meta name="twitter:description" content="早就想自己给bash配个色，但是一直没空学习这方面的知识，今天抽个空，搞了一点点。 ¶切换shell 切换shell，分临时和永久。 临时：输入命令：bash或者zsh都行，shell调用shell，一层套一层，按ctrl+d或者输入exit可以退出。 永久：输入命令：chsh -s /bin/bash  chsh意思就是change shell，使用man chsh进行查看  ¶修改prompt">
+<meta name="twitter:description" content="早就想自己给bash配个色，但是一直没空学习这方面的知识，今天抽个空，搞了一点点。  切换shell 切换shell，分临时和永久。 临时：输入命令：bash或者zsh都行，shell调用shell，一层套一层，按ctrl+d或者输入exit可以退出。 永久：输入命令：chsh -s /bin/bash  chsh意思就是change shell，使用man chsh进行查看   修改prompt">
 <meta name="twitter:image" content="https://i.loli.net/2018/05/08/5af13dcea3fa6.png">
 
 
@@ -415,14 +415,14 @@
 
       
         <p>早就想自己给bash配个色，但是一直没空学习这方面的知识，今天抽个空，搞了一点点。</p>
-<h2 id="切换shell"><a class="header-anchor" href="#切换shell">¶</a>切换shell</h2>
+<h2 id="切换shell"><a class="header-anchor" href="#切换shell"> </a>切换shell</h2>
 <p>切换shell，分临时和永久。</p>
 <p>临时：输入命令：<code>bash</code>或者<code>zsh</code>都行，shell调用shell，一层套一层，按<code>ctrl+d</code>或者输入<code>exit</code>可以退出。<br>
 永久：输入命令：<code>chsh -s /bin/bash</code></p>
 <blockquote>
 <p>chsh意思就是change shell，使用<code>man chsh</code>进行查看</p>
 </blockquote>
-<h2 id="修改prompt"><a class="header-anchor" href="#修改prompt">¶</a>修改prompt</h2>
+<h2 id="修改prompt"><a class="header-anchor" href="#修改prompt"> </a>修改prompt</h2>
 <p>prompt也就是提示符，首先就是要修改这个，什么样的提示符才是一个好的提示符呢？我觉得首要的是要短，太长的提示符占了命令的空间。其次提示符还必须显示用户名和机器名，因为只有这样才能在你远程登录的时候与远程shell区分开。机器名最好是缩写。然后我就得出了我自己的提示符的前缀：<code>liuqinh2s@mbp</code>，然后我觉得得加个短路径，不要求绝对路径，这样太占空间，只需要加个当前文件夹即可。这样进一步修改之后，我的提示符变成了：<code>liuqinh2s@mbp:~</code>，最后需要添加一个普通用户和超级用户的区分，普通用户用：<code>$</code>，超级用户用<code>#</code>，所以我的提示符最终的样子是：<code>liuqinh2s@mbp:~$</code>，注意<code>$</code>后面我加了一个空格，这样看起来比较舒服，提示符和命令的界限一目了然。</p>
 <p>但其实还是不清晰，我就给prompt上了个颜色。</p>
 <p>最后就变成这样啦：</p>
@@ -437,9 +437,9 @@
 <p>export的作用就是让子进程也继承环境变量</p>
 <p>如果你用的是mac的话，在home目录的<code>.bash_profile</code>中修改就可以了</p>
 <p>下面是配置代码的讲解：</p>
-<h3 id="bash转义序列"><a class="header-anchor" href="#bash转义序列">¶</a>Bash转义序列</h3>
+<h3 id="bash转义序列"><a class="header-anchor" href="#bash转义序列"> </a>Bash转义序列</h3>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">\a     an ASCII bell character (07)</span><br><span class="line">\d     the date in &quot;Weekday Month Date&quot; format (e.g., &quot;Tue May 26&quot;)</span><br><span class="line">\D&#123;format&#125;</span><br><span class="line">       the format is passed to strftime(3) and the result is inserted into the prompt string; an empty format results in a locale-</span><br><span class="line">       specific time representation.  The braces are required</span><br><span class="line">\e     an ASCII escape character (033)</span><br><span class="line">\h     the hostname up to the first `.&apos;</span><br><span class="line">\H     the hostname</span><br><span class="line">\j     the number of jobs currently managed by the shell</span><br><span class="line">\l     the basename of the shell&apos;s terminal device name</span><br><span class="line">\n     newline</span><br><span class="line">\r     carriage return</span><br><span class="line">\s     the name of the shell, the basename of $0 (the portion following the final slash)</span><br><span class="line">\t     the current time in 24-hour HH:MM:SS format</span><br><span class="line">\T     the current time in 12-hour HH:MM:SS format</span><br><span class="line">\@     the current time in 12-hour am/pm format</span><br><span class="line">\A     the current time in 24-hour HH:MM format</span><br><span class="line">\u     the username of the current user</span><br><span class="line">\v     the version of bash (e.g., 2.00)</span><br><span class="line">\V     the release of bash, version + patch level (e.g., 2.00.0)</span><br><span class="line">\w     the current working directory, with $HOME abbreviated with a tilde (uses the value of the PROMPT_DIRTRIM variable)</span><br><span class="line">\W     the basename of the current working directory, with $HOME abbreviated with a tilde</span><br><span class="line">\!     the history number of this command</span><br><span class="line">\#     the command number of this command</span><br><span class="line">\$     if the effective UID is 0, a #, otherwise a $</span><br><span class="line">\nnn   the character corresponding to the octal number nnn</span><br><span class="line">\\     a backslash</span><br><span class="line">\[     begin a sequence of non-printing characters, which could be used to embed a terminal control sequence into the prompt</span><br><span class="line">\]     end a sequence of non-printing characters</span><br></pre></td></tr></table></figure>
-<h3 id="变更prompt颜色"><a class="header-anchor" href="#变更prompt颜色">¶</a>变更prompt颜色</h3>
+<h3 id="变更prompt颜色"><a class="header-anchor" href="#变更prompt颜色"> </a>变更prompt颜色</h3>
 <p>首先，大家必须以[与]作为色彩代码的描述范围。对于Bash，这代表两个括号间的字符为非输出字符。</p>
 <p>Bash需要在此基础上估算字符数量，以备后续输出。如果不将色彩代码纳入[与]之间，那么Bash会将全部字符都计为文本字符并在下一行中进行打包。</p>
 <p>另外，在括号内的非输出序列中，我们需要输入\e[或者\033[指定彩色prompt的起点。二者的作用相同，都负责指定该反义序列的起始位置。</p>
@@ -484,7 +484,7 @@
 <p>当然，这里建议各位将背景信息与其它信息分隔开来：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">\[\e[42m\]\[\e[1;36m\]</span><br></pre></td></tr></table></figure>
 <p>在使用普通文本属性（0）时，终端中可能出现一些乱码。如果遇到这种问题，大家最好避免使用0值指定普通属性——由于属于默认值，我们无需额外指定。</p>
-<h2 id="配置ls和grep的颜色"><a class="header-anchor" href="#配置ls和grep的颜色">¶</a>配置ls和grep的颜色</h2>
+<h2 id="配置ls和grep的颜色"><a class="header-anchor" href="#配置ls和grep的颜色"> </a>配置ls和grep的颜色</h2>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"># Tell ls to be colourful</span><br><span class="line"> export CLICOLOR=1</span><br><span class="line"> export LSCOLORS=Exfxcxdxbxegedabagacad</span><br><span class="line"></span><br><span class="line"> # Tell grep to highlight matches</span><br><span class="line"> export GREP_OPTIONS=&apos;--color=auto’</span><br></pre></td></tr></table></figure>
 <ul>
 <li>
@@ -726,7 +726,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#切换shell"><span class="nav-number">1.</span> <span class="nav-text">¶切换shell</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#修改prompt"><span class="nav-number">2.</span> <span class="nav-text">¶修改prompt</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#bash转义序列"><span class="nav-number">2.1.</span> <span class="nav-text">¶Bash转义序列</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#变更prompt颜色"><span class="nav-number">2.2.</span> <span class="nav-text">¶变更prompt颜色</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#配置ls和grep的颜色"><span class="nav-number">3.</span> <span class="nav-text">¶配置ls和grep的颜色</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#切换shell"><span class="nav-number">1.</span> <span class="nav-text"> 切换shell</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#修改prompt"><span class="nav-number">2.</span> <span class="nav-text"> 修改prompt</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#bash转义序列"><span class="nav-number">2.1.</span> <span class="nav-text"> Bash转义序列</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#变更prompt颜色"><span class="nav-number">2.2.</span> <span class="nav-text"> 变更prompt颜色</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#配置ls和grep的颜色"><span class="nav-number">3.</span> <span class="nav-text"> 配置ls和grep的颜色</span></a></li></ol></div>
             
 
           </div>
@@ -760,7 +760,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">99.8k</span>
+    <span title="Site words total count">100.0k</span>
   
 </div>
 
