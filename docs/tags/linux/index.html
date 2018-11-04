@@ -84,7 +84,7 @@
 <meta name="description" content="Computer Science is not a magicTo be a hacker">
 <meta property="og:type" content="website">
 <meta property="og:title" content="liuqinh2s&#39; blog">
-<meta property="og:url" content="http://liuqinh2s.github.io/blog/tags/Linux/index.html">
+<meta property="og:url" content="http://liuqinh2s.github.io/blog/tags/linux/index.html">
 <meta property="og:site_name" content="liuqinh2s&#39; blog">
 <meta property="og:description" content="Computer Science is not a magicTo be a hacker">
 <meta property="og:locale" content="en">
@@ -120,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://liuqinh2s.github.io/blog/tags/Linux/"/>
+  <link rel="canonical" href="http://liuqinh2s.github.io/blog/tags/linux/"/>
 
 
 
 
 
-  <title>Tag: Linux | liuqinh2s' blog</title>
+  <title>Tag: linux | liuqinh2s' blog</title>
   
 
 
@@ -300,7 +300,7 @@
 
     <div id="posts" class="posts-collapse">
       <div class="collection-title">
-        <h1>Linux<small>Tag</small>
+        <h1>linux<small>Tag</small>
         </h1>
       </div>
 
@@ -312,65 +312,9 @@
 
       <h2 class="post-title">
         
-            <a class="post-title-link" href="/blog/2018/11/04/Linux Shell 编程/" itemprop="url">
+            <a class="post-title-link" href="/blog/2018/11/04/Linux入门教程/" itemprop="url">
               
-                <span itemprop="name">Linux Shell 编程</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-11-04T00:00:00+08:00"
-              content="2018-11-04" >
-          11-04
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-      
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/blog/2018/11/04/Linux服务器运维/" itemprop="url">
-              
-                <span itemprop="name">Linux 服务器运维</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-11-04T00:00:00+08:00"
-              content="2018-11-04" >
-          11-04
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-      
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/blog/2018/11/04/vim相关/" itemprop="url">
-              
-                <span itemprop="name">vim相关</span>
+                <span itemprop="name">Linux 入门教程</span>
               
             </a>
         
@@ -1050,6 +994,71 @@
 
     // handle and trigger popup window;
     $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
+
+  
+
+  
+
+</body>
+</html>
+unction(e) {
       e.stopPropagation();
       if (isfetched === false) {
         searchFunc(path, 'local-search-input', 'local-search-result');
