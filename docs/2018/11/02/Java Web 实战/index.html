@@ -89,7 +89,7 @@
 <meta property="og:site_name" content="liuqinh2s&#39; blog">
 <meta property="og:description" content="我正在做一个社交网站，目前暂定叫做：圈子。这个项目从产品到UI到前端、后端全部都由我一个人操刀。 后端使用了 Spring + SpringMVC + Mybatis 的框架组合，据说 SpringBoot 很流行，后面我会学一下。前端使用了 Vue 框架。产品设计移动端优先，使用了 墨刀 这款工具。">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2018-11-03T06:27:50.239Z">
+<meta property="og:updated_time" content="2018-11-04T04:24:29.772Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="社交网站 -- 圈子">
 <meta name="twitter:description" content="我正在做一个社交网站，目前暂定叫做：圈子。这个项目从产品到UI到前端、后端全部都由我一个人操刀。 后端使用了 Spring + SpringMVC + Mybatis 的框架组合，据说 SpringBoot 很流行，后面我会学一下。前端使用了 Vue 框架。产品设计移动端优先，使用了 墨刀 这款工具。">
@@ -229,6 +229,16 @@
               <i class="menu-item-icon fa fa-fw fa-coffee"></i> <br />
             
             Math
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-note">
+          <a href="/blog/notes/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-book"></i> <br />
+            
+            Note
           </a>
         </li>
       
@@ -387,7 +397,7 @@
                   <span class="post-meta-item-text">Words count in article&#58;</span>
                 
                 <span title="Words count in article">
-                  949
+                  3,496
                 </span>
               
 
@@ -428,8 +438,39 @@
 <li>前端开发，后端开发</li>
 </ol>
 <h2 id="后端开发"><a class="header-anchor" href="#后端开发"> </a>后端开发</h2>
-<h3 id="数据库安装"><a class="header-anchor" href="#数据库安装"> </a>数据库安装</h3>
-<p>数据库的安装也是大坑之一，装个MySQL5.7不容易。参考了这篇文章：<a href="https://my.oschina.net/Laily/blog/713023" target="_blank" rel="noopener">CentOS 7 yum 安装 MySQL5.7</a></p>
+<h3 id="服务器上安装java"><a class="header-anchor" href="#服务器上安装java"> </a>服务器上安装Java</h3>
+<p>不使用open-jdk，去oracle官网下载jdk。</p>
+<p>这里遇到的一个问题是，在官网点击accept之后，复制到下载链接，然后在服务器上wget该下载地址，发现不到一秒就下载完了，但是下载的文件不能解压！上网搜了一通，有不少人是在tar上找原因，说参数怎么怎么改，但试了多种参数搭配，查看了参数的说明，还是没解决问题，后来看到有人也遇到了相同的问题，结果是因为认证的问题，用浏览器下载的时候下载链接会多一个后缀。具体如下：</p>
+<p>如果直接复制下载链接，得到的是：<a href="http://download.oracle.com/otn-pub/java/jdk/10.0.2+13/19aef61b38124481863b1413dce1855f/jdk-10.0.2_linux-x64_bin.tar.gz" target="_blank" rel="noopener">http://download.oracle.com/otn-pub/java/jdk/10.0.2+13/19aef61b38124481863b1413dce1855f/jdk-10.0.2_linux-x64_bin.tar.gz</a></p>
+<p>通过chrome浏览器点击下载，然后ctrl+j打开下载界面（chrome://downloads），得到的真正的下载链接是：<a href="http://download.oracle.com/otn-pub/java/jdk/10.0.2+13/19aef61b38124481863b1413dce1855f/jdk-10.0.2_linux-x64_bin.tar.gz?AuthParam=1532949475_ca242a7f9181fc9c51d63b20d1465ae1" target="_blank" rel="noopener">http://download.oracle.com/otn-pub/java/jdk/10.0.2+13/19aef61b38124481863b1413dce1855f/jdk-10.0.2_linux-x64_bin.tar.gz?AuthParam=1532949475_ca242a7f9181fc9c51d63b20d1465ae1</a></p>
+<p>可以看到多了<code>?AuthParam=1532949475_ca242a7f9181fc9c51d63b20d1465ae1</code>这一段。</p>
+<p>其实先用chrome点击一下下载，然后通过下载界面获取真正的下载链接，以前也是干过的，因为很多时候一个下载链接或者按钮并非真正的下载链接，而往往是一个js或者php来触发下载动作，同时完成对下载者的认证。<strong>所以，以后下载的时候还是先用chrome获取到真正的链接比较好</strong>。</p>
+<p>这里再记录一个myeclipse破解过程中的一个问题，破解包里面有个crack.jar，用jdk10是会报错的！后来把jdk换成了1.8就可以了。</p>
+<p>下载好jdk之后，就是配置Java环境了。配置很简单，首选/etc/profile。</p>
+<p>在文件最后添加：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">JAVA_HOME=/usr/bin/jdk1.8.0_181/bin</span><br><span class="line">export PATH=$PATH:$JAVA_HOME</span><br></pre></td></tr></table></figure>
+<p>要注意的有两点，一是路径要到bin目录，因为可执行的java和javac文件都是在bin目录下；二是使用变量要加$，定义变量则不需要。</p>
+<p>最后要注意的就是export命令的意思，stackoverflow一下：<strong><code>export</code> makes the variable available to sub-processes.</strong></p>
+<p>翻译成中文就是说：export让子进程可以使用该变量。如果你不用export，那么你在shell里再新开其他shell，环境变量就都没了。</p>
+<p>最后还得谈谈对PATH这个东西的一点深入理解。我居然蠢到以为只要把jdk整个目录扔到/usr/bin下面就能使用java和javac了，实际上只有PATH下的一层目录可以，子目录是不行的！为什么不做成子目录也可以扫描到？因为那样这个PATH机制就失去了意义，既然你子目录都可以扫，那我拿根目录做PATH，然后程序随便扔哪不就行了。从另一个角度来看，你遍历子目录找可执行文件是很耗时的，也是不科学的，因为将会有很多重名的文件，你让shell怎么知道你要执行哪个文件？而同一层目录的文件是不允许同名的，不存在冲突。</p>
+<p>最后一个问题是为什么要配置环境变量，其实当然也可以不配置，配置的好处是可以省去那一串长长的路径。</p>
+<h3 id="tomcat配置"><a class="header-anchor" href="#tomcat配置"> </a>tomcat配置</h3>
+<p>首先是去官网下载，下载一个tar.gz格式的，然后解压，然后也是配置环境，其实tomcat不用配置成环境变量也行，因为网站开关的次数是非常少的。</p>
+<p>这里唯一要注意的问题就是你的服务器端口要打开，默认是8080端口。我一般买了服务器之后先把除ssh之外的所有端口统统关了。</p>
+<h3 id="mysql配置"><a class="header-anchor" href="#mysql配置"> </a>mysql配置</h3>
+<p>mysql也需要去官网下载，这里记录一个问题，mysql8.0会与jdbc不兼容，所以版本太高也是容易出问题的，我换成mysql5.7就好了。</p>
+<p>另外我在安装了centOS服务器上安装mysql也是费了很多功夫，刚开始是想去官网手动下载安装以及配置，刚开始的时候是参照这个博客：<a href="https://blog.csdn.net/Cryhelyxx/article/details/49757217" target="_blank" rel="noopener">64位centos6.7安装mysql-5.7.9-linux-glibc2.5-x86_64.tar.gz</a>。实在太麻烦了，而且配置过程中遇到太多的问题，我后来想linux的安装不是都统一用安装命令解决吗。于是我又上网翻，找到了这个教程：<a href="https://my.oschina.net/Laily/blog/713023" target="_blank" rel="noopener">CentOS 7 yum 安装 MySQL5.7</a>。总算是照着弄完了。但也同样遇到一个问题，就是官网上已经没有5.7版本的链接，只有8.0版本的。没关系下载的接口并没有撤，只要照着教程里的链接下载就行了：<code>wget http://repo.mysql.com//mysql57-community-release-el7-8.noarch.rpm</code></p>
+<p>最后总结一下安装和配置的方法论：</p>
+<ol>
+<li>找到下载源，一般是去官网找，但也有找不到的情况，比如下载低版本的时候，比如找jdk的时候，我一般google关键字：jdk1.8 oracle，如果是想找最新的则输入：java oracle。tomcat则比较好，多个版本都提供而且一直都在更新。mysql则比较坑一点，在官网的yum下载入口中根本就没有低版本的链接。这时候只好找找看别人的教程里的安装低版本时候的链接，说不定那些下载链接都还有效。</li>
+<li>配置，一般主要是配置环境变量，然后像mysql这种还需要初始化，但如果使用linux安装命令的话很多东西就都自动配置好了，所以最好不要自己去配置，除非你有充足的时间，想要学习一下配置过程。</li>
+</ol>
+<h3 id="远程连接mysql"><a class="header-anchor" href="#远程连接mysql"> </a>远程连接mysql</h3>
+<p>用navicat远程连接mysql的时候遇到的问题：错误号：1130.</p>
+<p>是因为权限问题造成的，解决办法：</p>
+<p>进入mysql:<code>mysql -u root -p</code><br>
+在mysql控制台中输入：<code>GRANT ALL PRIVILEGES ON *.* TO 'myuser'@'%' IDENTIFIED BY 'mypassword' WITH GRANT OPTION;</code></p>
+<p>其中*.*代表ip，这样写就是允许所有IP，然后myuser填你要登录的用户，%这里本来是填登录的设备，使用%表示任何设备都可以，mypassword填该用户对应的密码。</p>
 <h3 id="框架搭建"><a class="header-anchor" href="#框架搭建"> </a>框架搭建</h3>
 <p>关于后台搭框架的过程，可以参考这篇文章：<a href="https://blog.csdn.net/GallenZhang/article/details/51932152" target="_blank" rel="noopener">SSM框架整合（IntelliJ IDEA + maven + Spring + SpringMVC + MyBatis）</a></p>
 <p>要注意的几点：</p>
@@ -462,6 +503,64 @@
 <li>如果你有自己下载的第三方jar包，想通过git来维护，必须注释掉java选项生成的*.jar忽略项。</li>
 <li>下载后的项目还要自己配置tomcat才能运行，要手动添加Artifacts，并手动标识resource文件夹。</li>
 </ol>
+<h2 id="用户模块的逻辑"><a class="header-anchor" href="#用户模块的逻辑"> </a>用户模块的逻辑</h2>
+<h3 id="注册"><a class="header-anchor" href="#注册"> </a>注册</h3>
+<h4 id="请求参数校验"><a class="header-anchor" href="#请求参数校验"> </a>请求参数校验</h4>
+<ol>
+<li>基本逻辑：注册必须先注销，检查session的keyId（keyId即数据库中的用户名），如果存在keyId，则是登录状态，系统拒绝服务。</li>
+<li>用户名不能为空</li>
+<li>手机号不能为空</li>
+<li>用户名不能是已被占用的</li>
+<li>手机号不能是已被占用的</li>
+<li>密码不能为空</li>
+<li>确认密码要与密码一致</li>
+<li>图形验证码不正确</li>
+<li>短信验证码错误</li>
+<li>短信验证码过期</li>
+</ol>
+<h4 id="添加用户"><a class="header-anchor" href="#添加用户"> </a>添加用户</h4>
+<ol>
+<li>设置用户ID</li>
+<li>设置用户名</li>
+<li>设置密码</li>
+<li>设置手机</li>
+<li>设置添加时间</li>
+<li>设置更新时间</li>
+<li>设置verifyCode（用于给密码加密）</li>
+</ol>
+<blockquote>
+<p>手机号只能与一个账号绑定，一个账号只能绑定一个手机号，因而也可以用手机号登陆</p>
+</blockquote>
+<blockquote>
+<p>密码使用MD5加密，由<code>用户ID</code>+<code>前端传过来的密码</code>+<code>verifyCode</code>拼成。其中前端传过来的密码也需要经过MD5加密。</p>
+</blockquote>
+<blockquote>
+<p>后端加密的意义在于防止拖库</p>
+</blockquote>
+<blockquote>
+<p>verifyCode的生成使用当前UNIX时间戳减去一个随机数，得到的long型整数，再拼接用户的手机号进行MD5加密</p>
+</blockquote>
+<blockquote>
+<p>前端密码加密的意义在于，用户多站点使用同一密码，防止用户的其他账号被盗（社会学攻击）</p>
+</blockquote>
+<blockquote>
+<p>前端加密并不能防止HTTP劫持，所以要防止盗号还是必须使用HTTPS协议</p>
+</blockquote>
+<h4 id="维护session"><a class="header-anchor" href="#维护session"> </a>维护session</h4>
+<blockquote>
+<p>维护session的时候要去掉用户密码和verifyCode，其他的字段都可以设置进session</p>
+</blockquote>
+<h2 id="数据库重复插入问题"><a class="header-anchor" href="#数据库重复插入问题"> </a>数据库重复插入问题</h2>
+<p>由于网络原因，客户可能连续推送了两条重复的数据，两条数据时间间隔非常小，因此导致了我们的</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">if(用户不存在)</span><br><span class="line">&#123;</span><br><span class="line">    xxxxx</span><br><span class="line">    存储用户到数据库</span><br><span class="line">&#125;</span><br><span class="line">else</span><br><span class="line">&#123;</span><br><span class="line">    重复推送，不采取任何措施</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>这个操作还没有执行完毕，第二条拥有相同数据的线程已经进入并通过了if的检验，导致数据库存储了两条相同的数据。后来我自己写了个100并发的多线程测试程序，发现100条相同数据中有40条被插入到了数据库里！天啦噜！！！因此确定了是多线程的并发导致了程序的判断逻辑失效。</p>
+<p>考虑使用synchronized对方法添加同步锁，但是这样会导致其他正常数据的推送线程也被阻塞，影响效率。因此不采用。</p>
+<p>即想提高效率不对方法添加synchronized，又想保证数据准确性，最后使用synchronized(siteId + uid) 在Controller层加锁(保证了只有重复数据被加锁,在Controller使用的原因是因为事务会在Service调用完毕才被提交，我实验过在Service同步，150并发会出现2条重复数据，因为事务还没来得及提交)</p>
+<p>这种加同步锁的方法在<br>
+负载均衡下的多台应用服务器会失效<br>
+！因为就算Spring保证了对象是单例的，但是多台服务器肯定是多个对象！因此synchronized将无效。解决方法是在数据库层对该对接公司的唯一记录加select锁，这样就能保证数据的不重复性，但是会降低该公司推送数据的效率(相当于逐条推送)，但是公司与公司之间还是并行推送的。还有一个方法就是将业务逻辑写入存储过程，然后对存储过程加锁，这种方法太麻烦了，需求有变动就必须去修改存储过程，但是效率要比前者高得多。</p>
+<p>总结：</p>
+<p>在service层加锁会导致所有用户操作受阻，在controller针对用户id加锁可以锁住重复操作。但多台服务器的情况下会失效。</p>
 <h2 id="参考资料："><a class="header-anchor" href="#参考资料："> </a>参考资料：</h2>
 <ul>
 <li><a href="http://www.voidcn.com/article/p-qtmqetyl-ug.html" target="_blank" rel="noopener">获取用户IP</a></li>
@@ -505,6 +604,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/blog/2018/11/03/mac osx 与 linux 的一些区别/" rel="prev" title="mac osx 与 linux 的一些区别">
+                mac osx 与 linux 的一些区别 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -590,7 +693,7 @@
               
                 <a href="/blog/archives">
               
-                  <span class="site-state-item-count">51</span>
+                  <span class="site-state-item-count">63</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -601,7 +704,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/blog/categories/index.html">
-                  <span class="site-state-item-count">31</span>
+                  <span class="site-state-item-count">38</span>
                   <span class="site-state-item-name">categories</span>
                 </a>
               </div>
@@ -612,7 +715,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/blog/tags/index.html">
-                  <span class="site-state-item-count">10</span>
+                  <span class="site-state-item-count">16</span>
                   <span class="site-state-item-name">tags</span>
                 </a>
               </div>
@@ -698,7 +801,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#后端开发"><span class="nav-number">1.</span> <span class="nav-text"> 后端开发</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#数据库安装"><span class="nav-number">1.1.</span> <span class="nav-text"> 数据库安装</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#框架搭建"><span class="nav-number">1.2.</span> <span class="nav-text"> 框架搭建</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#第三方库的管理问题"><span class="nav-number">1.2.1.</span> <span class="nav-text"> 第三方库的管理问题</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#mybatis-generator"><span class="nav-number">1.3.</span> <span class="nav-text"> mybatis-generator</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#gitignore"><span class="nav-number">1.4.</span> <span class="nav-text"> .gitignore</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参考资料："><span class="nav-number">2.</span> <span class="nav-text"> 参考资料：</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#后端开发"><span class="nav-number">1.</span> <span class="nav-text"> 后端开发</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#服务器上安装java"><span class="nav-number">1.1.</span> <span class="nav-text"> 服务器上安装Java</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#tomcat配置"><span class="nav-number">1.2.</span> <span class="nav-text"> tomcat配置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#mysql配置"><span class="nav-number">1.3.</span> <span class="nav-text"> mysql配置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#远程连接mysql"><span class="nav-number">1.4.</span> <span class="nav-text"> 远程连接mysql</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#框架搭建"><span class="nav-number">1.5.</span> <span class="nav-text"> 框架搭建</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#第三方库的管理问题"><span class="nav-number">1.5.1.</span> <span class="nav-text"> 第三方库的管理问题</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#mybatis-generator"><span class="nav-number">1.6.</span> <span class="nav-text"> mybatis-generator</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#gitignore"><span class="nav-number">1.7.</span> <span class="nav-text"> .gitignore</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#用户模块的逻辑"><span class="nav-number">2.</span> <span class="nav-text"> 用户模块的逻辑</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#注册"><span class="nav-number">2.1.</span> <span class="nav-text"> 注册</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#请求参数校验"><span class="nav-number">2.1.1.</span> <span class="nav-text"> 请求参数校验</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#添加用户"><span class="nav-number">2.1.2.</span> <span class="nav-text"> 添加用户</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#维护session"><span class="nav-number">2.1.3.</span> <span class="nav-text"> 维护session</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数据库重复插入问题"><span class="nav-number">3.</span> <span class="nav-text"> 数据库重复插入问题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参考资料："><span class="nav-number">4.</span> <span class="nav-text"> 参考资料：</span></a></li></ol></div>
             
 
           </div>
@@ -732,7 +835,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">100.0k</span>
+    <span title="Site words total count">113.7k</span>
   
 </div>
 

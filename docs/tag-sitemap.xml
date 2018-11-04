@@ -59,7 +59,49 @@
 
     <url>
         <loc>http://liuqinh2s.github.io/blog/tags/Java/</loc>
-        <lastmod>2018-11-03T06:27:50.239Z</lastmod>
+        <lastmod>2018-11-04T04:24:29.772Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://liuqinh2s.github.io/blog/tags/linux/</loc>
+        <lastmod>2018-11-04T07:12:40.523Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://liuqinh2s.github.io/blog/tags/Unix/</loc>
+        <lastmod>2018-11-04T07:14:22.484Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://liuqinh2s.github.io/blog/tags/Linux/</loc>
+        <lastmod>2018-11-04T07:40:05.381Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://liuqinh2s.github.io/blog/tags/%E7%BC%96%E8%BE%91%E5%99%A8/</loc>
+        <lastmod>2018-11-04T07:42:22.875Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://liuqinh2s.github.io/blog/tags/git/</loc>
+        <lastmod>2018-11-04T08:09:38.996Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://liuqinh2s.github.io/blog/tags/IDE/</loc>
+        <lastmod>2018-11-04T08:12:01.100Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>

@@ -231,6 +231,16 @@
           </a>
         </li>
       
+        
+        <li class="menu-item menu-item-note">
+          <a href="/blog/notes/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-book"></i> <br />
+            
+            Note
+          </a>
+        </li>
+      
 
       
         <li class="menu-item menu-item-search">
@@ -298,7 +308,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://liuqinh2s.github.io/blog/blog/2018/10/29/vue入门笔记/">
+    <link itemprop="mainEntityOfPage" href="http://liuqinh2s.github.io/blog/blog/2018/11/04/pom.xml详解/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="liuqinh2s">
@@ -317,7 +327,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/blog/2018/10/29/vue入门笔记/" itemprop="url">vue入门重点笔记（可作为面试考察点）</a></h1>
+                <a class="post-title-link" href="/blog/2018/11/04/pom.xml详解/" itemprop="url">pom.xml详解</a></h1>
         
 
         <div class="post-meta">
@@ -329,8 +339,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-10-29T00:00:00+08:00">
-                2018-10-29
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-11-04T00:00:00+08:00">
+                2018-11-04
               </time>
             
 
@@ -352,8 +362,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/blog/categories/前端/" itemprop="url" rel="index">
-                    <span itemprop="name">前端</span>
+                  <a href="/blog/categories/Unix/" itemprop="url" rel="index">
+                    <span itemprop="name">Unix</span>
                   </a>
                 </span>
 
@@ -383,7 +393,7 @@
                   <span class="post-meta-item-text">Words count in article&#58;</span>
                 
                 <span title="Words count in article">
-                  538
+                  1,494
                 </span>
               
 
@@ -410,20 +420,16 @@
       
         
           
-          项目初始化命令
+          POM, Project Object Model，项目对象模型，是Maven的配置文件。
 
-安装vue-cli: npm install -g vue-cli
-初始化项目: vue init webpack my-project
-进入项目: cd my-project
-安装依赖: npm install
-运行项目: npm run dev
+什么是xml?
 
-项目目录结构
-最重要的几个东西
+ POM配置一览
+123456789101112131415161718192021222324252627282930313233343536373839404142&lt;projec
           ...
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/blog/2018/10/29/vue入门笔记/#more" rel="contents">
+            <a class="btn" href="/blog/2018/11/04/pom.xml详解/#more" rel="contents">
               Read more &raquo;
             </a>
           </div>
@@ -474,7 +480,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://liuqinh2s.github.io/blog/blog/2018/10/13/处理器体系结构/">
+    <link itemprop="mainEntityOfPage" href="http://liuqinh2s.github.io/blog/blog/2018/11/04/vim相关/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="liuqinh2s">
@@ -493,7 +499,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/blog/2018/10/13/处理器体系结构/" itemprop="url">处理器体系结构</a></h1>
+                <a class="post-title-link" href="/blog/2018/11/04/vim相关/" itemprop="url">vim相关</a></h1>
         
 
         <div class="post-meta">
@@ -505,8 +511,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-10-13T00:00:00+08:00">
-                2018-10-13
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-11-04T00:00:00+08:00">
+                2018-11-04
               </time>
             
 
@@ -528,19 +534,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/blog/categories/读书笔记/" itemprop="url" rel="index">
-                    <span itemprop="name">读书笔记</span>
-                  </a>
-                </span>
-
-                
-                
-                  , 
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/blog/categories/读书笔记/《CSAPP》/" itemprop="url" rel="index">
-                    <span itemprop="name">《CSAPP》</span>
+                  <a href="/blog/categories/Linux/" itemprop="url" rel="index">
+                    <span itemprop="name">Linux</span>
                   </a>
                 </span>
 
@@ -570,7 +565,7 @@
                   <span class="post-meta-item-text">Words count in article&#58;</span>
                 
                 <span title="Words count in article">
-                  1,535
+                  830
                 </span>
               
 
@@ -596,13 +591,21 @@
 
       
         
-          <h2 id="y86指令集体系结构"><a class="header-anchor" href="#y86指令集体系结构"> </a>Y86指令集体系结构</h2>
-<p>Y86指令集基本上是IA32指令集的一个子集。这个指令集就是我们处理器实现的目标。如下图：</p>
-<p><img src="../../images/2018/Y86%E6%8C%87%E4%BB%A4%E9%9B%86.png" alt="Y86指令集"></p>
-<p>IA32的movl指令分成了4个不同指令：irmovl、rrmovl、mrmovl和rmmovl，i表示立即数Immediate，r表示寄存器Register，m表示存储器Memmory。第一个字母表示源，第二个字母表示目的。</p>
+          
+          vim的配置文件位于：~/.vimrc，文件使用VimScript语法来编写。
+.vimrc文件分为三个部分，分别是：
+
+Vundle插件管理部分
+Vim编辑器配置部分
+Vim插件配置部分
+
+ NERDTree的使用
+ 切换工作台和目录
+1234ctrl+w+h    光标focus左侧树形目录ct
+          ...
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/blog/2018/10/13/处理器体系结构/#more" rel="contents">
+            <a class="btn" href="/blog/2018/11/04/vim相关/#more" rel="contents">
               Read more &raquo;
             </a>
           </div>
@@ -653,7 +656,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://liuqinh2s.github.io/blog/blog/2018/10/08/程序的机器级表示/">
+    <link itemprop="mainEntityOfPage" href="http://liuqinh2s.github.io/blog/blog/2018/11/04/Linux Shell 编程/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="liuqinh2s">
@@ -672,7 +675,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/blog/2018/10/08/程序的机器级表示/" itemprop="url">程序的机器级表示</a></h1>
+                <a class="post-title-link" href="/blog/2018/11/04/Linux Shell 编程/" itemprop="url">Linux Shell 编程</a></h1>
         
 
         <div class="post-meta">
@@ -684,8 +687,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-10-08T00:00:00+08:00">
-                2018-10-08
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-11-04T00:00:00+08:00">
+                2018-11-04
               </time>
             
 
@@ -707,19 +710,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/blog/categories/读书笔记/" itemprop="url" rel="index">
-                    <span itemprop="name">读书笔记</span>
-                  </a>
-                </span>
-
-                
-                
-                  , 
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/blog/categories/读书笔记/《CSAPP》/" itemprop="url" rel="index">
-                    <span itemprop="name">《CSAPP》</span>
+                  <a href="/blog/categories/Linux/" itemprop="url" rel="index">
+                    <span itemprop="name">Linux</span>
                   </a>
                 </span>
 
@@ -749,7 +741,7 @@
                   <span class="post-meta-item-text">Words count in article&#58;</span>
                 
                 <span title="Words count in article">
-                  6,040
+                  2,871
                 </span>
               
 
@@ -776,17 +768,13 @@
       
         
           
-           从编译C语言文件说起
-1$ gcc -01 -o p p1.c p2.c
-使用了gcc命令来编译，也可以简单写作：cc。
-优化层级为1，1级是最低的，层级越高程序优化越好，但增加了编译时间，也使调试变得更难，且跟源程序差异很大不便于理解。
-编译的流程是：
+           Shell脚本学习笔记规范
 
-预处理器（preprocessor）把诸
+在书写Shell命令的时候，我没有加命令提示符。比如zsh的提示符：➜ myshell，或者bash的提示符：bash-3.2$。因为往往很多读者，直接把命令提示符(promt)也作为命令的一部分直接复制粘贴输入到命令行中了。所以新手读者需要注意这一点，以及知道什么是
           ...
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/blog/2018/10/08/程序的机器级表示/#more" rel="contents">
+            <a class="btn" href="/blog/2018/11/04/Linux Shell 编程/#more" rel="contents">
               Read more &raquo;
             </a>
           </div>
@@ -837,7 +825,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://liuqinh2s.github.io/blog/blog/2018/09/27/浮点数原理/">
+    <link itemprop="mainEntityOfPage" href="http://liuqinh2s.github.io/blog/blog/2018/11/04/Linux入门教程/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="liuqinh2s">
@@ -856,7 +844,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/blog/2018/09/27/浮点数原理/" itemprop="url">浮点数原理</a></h1>
+                <a class="post-title-link" href="/blog/2018/11/04/Linux入门教程/" itemprop="url">Linux 入门教程</a></h1>
         
 
         <div class="post-meta">
@@ -868,8 +856,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-09-27T00:00:00+08:00">
-                2018-09-27
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-11-04T00:00:00+08:00">
+                2018-11-04
               </time>
             
 
@@ -891,19 +879,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/blog/categories/读书笔记/" itemprop="url" rel="index">
-                    <span itemprop="name">读书笔记</span>
-                  </a>
-                </span>
-
-                
-                
-                  , 
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/blog/categories/读书笔记/《Computer-Systems-A-Programmer-s-Perspective》/" itemprop="url" rel="index">
-                    <span itemprop="name">《Computer Systems:A Programmer's Perspective》</span>
+                  <a href="/blog/categories/linux/" itemprop="url" rel="index">
+                    <span itemprop="name">linux</span>
                   </a>
                 </span>
 
@@ -933,7 +910,7 @@
                   <span class="post-meta-item-text">Words count in article&#58;</span>
                 
                 <span title="Words count in article">
-                  3,441
+                  574
                 </span>
               
 
@@ -960,13 +937,14 @@
       
         
           
-          浮点数的作用：区别于整形数，用来表示小数。可以用来表示很大的数，或者非常接近0的小数，或者近似的做实数计算，浮点数的一般形式：$x\times 2^y$。
-IEEE（pronounced “Eye-Triple-Eee”）浮点数标准。
-rounding：when a number cannot be
+          这是我亲自写的一份教程（没有参考任何其他人），我认为的最合适的入门应该学些什么，请耐心阅读吧。
+概念：目录，路径，相对路径，绝对路径，文件系统，文件，环境变量
+cd（change directory）后接目录，如：
+cd /opt 或者 cd /opt/都行，直接用cd则切换到你的用户目录，Linu
           ...
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/blog/2018/09/27/浮点数原理/#more" rel="contents">
+            <a class="btn" href="/blog/2018/11/04/Linux入门教程/#more" rel="contents">
               Read more &raquo;
             </a>
           </div>
@@ -1017,7 +995,7 @@ rounding：when a number cannot be
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://liuqinh2s.github.io/blog/blog/2018/09/20/wsl oh my zsh 字体问题/">
+    <link itemprop="mainEntityOfPage" href="http://liuqinh2s.github.io/blog/blog/2018/11/04/编译原理笔记/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="liuqinh2s">
@@ -1036,7 +1014,7 @@ rounding：when a number cannot be
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/blog/2018/09/20/wsl oh my zsh 字体问题/" itemprop="url">wsl oh my zsh 字符乱码问题</a></h1>
+                <a class="post-title-link" href="/blog/2018/11/04/编译原理笔记/" itemprop="url">编译原理笔记</a></h1>
         
 
         <div class="post-meta">
@@ -1048,8 +1026,8 @@ rounding：when a number cannot be
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-09-20T00:00:00+08:00">
-                2018-09-20
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-11-04T00:00:00+08:00">
+                2018-11-04
               </time>
             
 
@@ -1071,8 +1049,8 @@ rounding：when a number cannot be
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/blog/categories/解决的问题/" itemprop="url" rel="index">
-                    <span itemprop="name">解决的问题</span>
+                  <a href="/blog/categories/编译原理/" itemprop="url" rel="index">
+                    <span itemprop="name">编译原理</span>
                   </a>
                 </span>
 
@@ -1102,7 +1080,7 @@ rounding：when a number cannot be
                   <span class="post-meta-item-text">Words count in article&#58;</span>
                 
                 <span title="Words count in article">
-                  153
+                  1,551
                 </span>
               
 
@@ -1129,17 +1107,27 @@ rounding：when a number cannot be
       
         
           
-           安装 oh my zsh
-首先检查自己有没有zsh：
-1cat /etc/shells
-如果有的话就下载oh my zsh
- 设置默认shell
-1chsh -s /bin/zsh
-有可能会遇到设置不成功的问题，那么我们可以手动修改/etc/passwd，找到自己那一条配置信息，把默认shell改
+           编译原理知识点
+总共六个阶段：
+
+词法分析
+语法分析
+语义分析
+中间代码生成
+代码优化
+目标代码生成
+
+
+DFA（确定有穷自动机） 和 NFA（非确定有穷自动机）
+区别就是，NFA 可以包含多个状态作为一个集，从这个集中跳到下一个集。而 DAF 是单个单个的状态，从一个状态跳到下一个状态。
+
+
+
+
           ...
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/blog/2018/09/20/wsl oh my zsh 字体问题/#more" rel="contents">
+            <a class="btn" href="/blog/2018/11/04/编译原理笔记/#more" rel="contents">
               Read more &raquo;
             </a>
           </div>
@@ -1181,7 +1169,7 @@ rounding：when a number cannot be
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/blog/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/blog/">1</a><span class="page-number current">2</span><a class="page-number" href="/blog/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/blog/page/11/">11</a><a class="extend next" rel="next" href="/blog/page/3/"><i class="fa fa-angle-right"></i></a>
+    <a class="extend prev" rel="prev" href="/blog/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/blog/">1</a><span class="page-number current">2</span><a class="page-number" href="/blog/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/blog/page/13/">13</a><a class="extend next" rel="next" href="/blog/page/3/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 
@@ -1231,7 +1219,7 @@ rounding：when a number cannot be
               
                 <a href="/blog/archives">
               
-                  <span class="site-state-item-count">51</span>
+                  <span class="site-state-item-count">63</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -1242,7 +1230,7 @@ rounding：when a number cannot be
               
               <div class="site-state-item site-state-categories">
                 <a href="/blog/categories/index.html">
-                  <span class="site-state-item-count">31</span>
+                  <span class="site-state-item-count">38</span>
                   <span class="site-state-item-name">categories</span>
                 </a>
               </div>
@@ -1253,7 +1241,7 @@ rounding：when a number cannot be
               
               <div class="site-state-item site-state-tags">
                 <a href="/blog/tags/index.html">
-                  <span class="site-state-item-count">10</span>
+                  <span class="site-state-item-count">16</span>
                   <span class="site-state-item-name">tags</span>
                 </a>
               </div>
@@ -1357,7 +1345,7 @@ rounding：when a number cannot be
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">100.0k</span>
+    <span title="Site words total count">113.7k</span>
   
 </div>
 
