@@ -51,13 +51,6 @@
     </url>
 
     <url>
-        <loc>http://liuqinh2s.github.io/blog/tags/Java/</loc>
-        <lastmod>2018-11-04T04:24:29.772Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>http://liuqinh2s.github.io/blog/tags/linux/</loc>
         <lastmod>2018-11-04T07:12:40.523Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -102,6 +95,13 @@
     <url>
         <loc>http://liuqinh2s.github.io/blog/tags/%E4%BF%A1%E6%81%AF%E8%AE%B0%E6%B3%95/</loc>
         <lastmod>2018-11-05T03:24:05.235Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://liuqinh2s.github.io/blog/tags/Java/</loc>
+        <lastmod>2018-11-05T03:31:24.951Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
