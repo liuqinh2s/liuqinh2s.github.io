@@ -81,16 +81,17 @@
 
 
 
-<meta name="description" content="Computer Science is not a magicTo be a hacker">
-<meta property="og:type" content="website">
-<meta property="og:title" content="liuqinh2s&#39; blog">
-<meta property="og:url" content="http://liuqinh2s.github.io/blog/categories/读书笔记/《Computer-Systems-A-Programmer-s-Perspective》/index.html">
+<meta name="description" content="基本概念   什么是存储例程？ 存储例程是一组sql语句，通过在查询中调用一个指定的名称来执行这些sql语句命令。   为什么要使用存储例程？ 有时候我们的服务同时有web版，桌面版，移动版，他们都和数据库进行交互来完成数据的存取工作。现在要修改其中一个查询sql语句，那么我们可能要同时修改他们中对应的查询sql语句，这是一种重复劳动！另外把sql语句放在web或桌面程序中很容易遭到sql注入攻">
+<meta property="og:type" content="article">
+<meta property="og:title" content="mysql存储过程">
+<meta property="og:url" content="http://liuqinh2s.github.io/blog/2018/11/05/mysql存储过程/index.html">
 <meta property="og:site_name" content="liuqinh2s&#39; blog">
-<meta property="og:description" content="Computer Science is not a magicTo be a hacker">
+<meta property="og:description" content="基本概念   什么是存储例程？ 存储例程是一组sql语句，通过在查询中调用一个指定的名称来执行这些sql语句命令。   为什么要使用存储例程？ 有时候我们的服务同时有web版，桌面版，移动版，他们都和数据库进行交互来完成数据的存取工作。现在要修改其中一个查询sql语句，那么我们可能要同时修改他们中对应的查询sql语句，这是一种重复劳动！另外把sql语句放在web或桌面程序中很容易遭到sql注入攻">
 <meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2018-11-05T01:34:22.881Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="liuqinh2s&#39; blog">
-<meta name="twitter:description" content="Computer Science is not a magicTo be a hacker">
+<meta name="twitter:title" content="mysql存储过程">
+<meta name="twitter:description" content="基本概念   什么是存储例程？ 存储例程是一组sql语句，通过在查询中调用一个指定的名称来执行这些sql语句命令。   为什么要使用存储例程？ 有时候我们的服务同时有web版，桌面版，移动版，他们都和数据库进行交互来完成数据的存取工作。现在要修改其中一个查询sql语句，那么我们可能要同时修改他们中对应的查询sql语句，这是一种重复劳动！另外把sql语句放在web或桌面程序中很容易遭到sql注入攻">
 
 
 
@@ -120,13 +121,13 @@
 
 
 
-  <link rel="canonical" href="http://liuqinh2s.github.io/blog/categories/读书笔记/《Computer-Systems-A-Programmer-s-Perspective》/"/>
+  <link rel="canonical" href="http://liuqinh2s.github.io/blog/2018/11/05/mysql存储过程/"/>
 
 
 
 
 
-  <title>Category: 《Computer Systems:A Programmer's Perspective》 | liuqinh2s' blog</title>
+  <title>mysql存储过程 | liuqinh2s' blog</title>
   
 
 
@@ -145,7 +146,7 @@
     
   
 
-  <div class="container sidebar-position-left ">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -293,55 +294,249 @@
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block category">
+  <div id="posts" class="posts-expand">
+    
 
-    <div id="posts" class="posts-collapse">
-      <div class="collection-title">
-        <h1>《Computer Systems:A Programmer's Perspective》<small>Category</small>
-        </h1>
-      </div>
+  
 
-      
-        
+  
+  
+  
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://liuqinh2s.github.io/blog/blog/2018/11/05/mysql存储过程/">
 
-      <h2 class="post-title">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="liuqinh2s">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="https://wx4.sinaimg.cn/mw690/006zFO3gly1flf4xnd5q9j30ku0ku75r.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="liuqinh2s' blog">
+    </span>
+
+    
+      <header class="post-header">
+
         
-            <a class="post-title-link" href="/blog/2018/09/27/浮点数原理/" itemprop="url">
-              
-                <span itemprop="name">浮点数原理</span>
-              
-            </a>
         
-      </h2>
+          <h1 class="post-title" itemprop="name headline">mysql存储过程</h1>
+        
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-09-27T00:00:00+08:00"
-              content="2018-09-27" >
-          09-27
-        </time>
-      </div>
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-11-05T00:00:00+08:00">
+                2018-11-05
+              </time>
+            
 
-    </header>
-  </article>
+            
 
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/blog/categories/数据库/" itemprop="url" rel="index">
+                    <span itemprop="name">数据库</span>
+                  </a>
+                </span>
+
+                
+                
+                  , 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/blog/categories/数据库/mysql/" itemprop="url" rel="index">
+                    <span itemprop="name">mysql</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="page-pv"><i class="fa fa-eye"></i>
+            <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>
+            </span>
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Words count in article&#58;</span>
+                
+                <span title="Words count in article">
+                  855
+                </span>
+              
+
+              
+
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="基本概念"><a class="header-anchor" href="#基本概念"> </a>基本概念</h2>
+<ol>
+<li>
+<p>什么是存储例程？</p>
+<p>存储例程是一组sql语句，通过在查询中调用一个指定的名称来执行这些sql语句命令。</p>
+</li>
+<li>
+<p>为什么要使用存储例程？</p>
+<p>有时候我们的服务同时有web版，桌面版，移动版，他们都和数据库进行交互来完成数据的存取工作。现在要修改其中一个查询sql语句，那么我们可能要同时修改他们中对应的查询sql语句，这是一种重复劳动！另外把sql语句放在web或桌面程序中很容易遭到sql注入攻击破坏。而存储例程正好可以帮助我们解决这个问题。</p>
+</li>
+<li>
+<p>存储过程（stored procedure）、存储例程（stored routine）和存储函数的区别？</p>
+<p>Mysql存储例程实际上包括了存储过程和存储函数，它们被统称为存储例程。其中存储过程主要完成select、insert、delete、update等工作，而存储函数只完成select工作。</p>
+</li>
+</ol>
+<h2 id="语法"><a class="header-anchor" href="#语法"> </a>语法</h2>
+<h3 id="基本结构"><a class="header-anchor" href="#基本结构"> </a>基本结构</h3>
+<p>创建存储过程和存储函数：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">create procedure 存储过程名 (参数)</span><br><span class="line">create function 存储函数名 (参数)</span><br></pre></td></tr></table></figure>
+<p>一个完整的存储过程例子如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">DELIMITER //</span><br><span class="line">CREATE PROCEDURE 存储过程名(OUT s int)</span><br><span class="line">BEGIN</span><br><span class="line">SELECT COUNT(*) INTO s FROM user;</span><br><span class="line">END //</span><br><span class="line">DELIMITER ;</span><br></pre></td></tr></table></figure>
+<p>语法解析：</p>
+<ol>
+<li>这里需要注意的是<code>DELIMITER //</code>和<code>DELIMITER ;</code>两句，<code>DELIMITER</code>是分隔符的意思，因为mysql默认以<code>;</code>为分隔符，如果我们没有声明分隔符，那么编译器会把存储过程当成SQL语句处理，存储过程的编译就会报错，所以要事先用<code>DELIMITER</code>关键字声明当前分隔符，这样MySQL才会将<code>;</code>当做存储过程中的代码，不会执行这些代码。<strong>最后用完之后要把分隔符还原</strong>。知道了这语法的意思，你就会知道，为啥有的时候有人代码写成：<code>DELIMITER $$</code>，因为分隔符完全可以自己设定啊，唯一要担心的就是与关键字冲突。<code>//</code>在mysql里面并不是注释符，mysql的注释符是<code>--</code>。</li>
+<li>存储过程有三种类型的参数：<code>IN</code>、<code>OUT</code>、<code>INOUT</code>，顾名思义，<code>IN</code>类型的参数只能用作输入，<code>OUT</code>类型的参数只能用作输出，<code>INOUT</code>类型的参数可以输入输出。</li>
+<li>过程体的开始和结束使用<code>BEGIN</code>和<code>END</code>标识。</li>
+</ol>
+<h3 id="变量"><a class="header-anchor" href="#变量"> </a>变量</h3>
+<h4 id="定义"><a class="header-anchor" href="#定义"> </a>定义</h4>
+<p>局部变量定义一定要放在存储过程体的开始</p>
+<p><code>DECLARE variable_name [,variable_name...] datatype [DEFAULT value];</code></p>
+<p>其中<code>datatype</code>为MySQL的数据类型，例如：int、float、varchar、date</p>
+<p>例如：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">DECLARE l_int int unsigned default 4000000;</span><br><span class="line">DECLARE l_numeric number(8,2) DEFAULT 9.95;</span><br><span class="line">DECLARE l_date date DEFAULT &apos;1997-12-31&apos;;</span><br><span class="line">DECLARE l_datetime datetime DEFAULT &apos;1997-12-31 23:59:59&apos;</span><br><span class="line">DECLARE l_varchar varchar DEFAULT &apos;This will not be padded&apos;</span><br></pre></td></tr></table></figure>
+<h4 id="赋值"><a class="header-anchor" href="#赋值"> </a>赋值</h4>
+<p><code>SET 变量名=表达式值[,variable_name=expression...];</code></p>
+<p>用户变量名以@开头</p>
+<h4 id="注释"><a class="header-anchor" href="#注释"> </a>注释</h4>
+<ul>
+<li>单行注释：<code>--</code></li>
+<li>多行注释：<code>/**/</code></li>
+</ul>
+<h2 id="存储过程的查询"><a class="header-anchor" href="#存储过程的查询"> </a>存储过程的查询</h2>
+<p>我们想知道一个数据库下有哪些表，可以用<code>show tables;</code>进行查看，那么我们要想看某个数据库下有哪些存储过程，用什么命令呢？</p>
+<p><code>show procedure status where db=&quot;数据库名&quot;;</code></p>
+<p>db这个名字是不能改的。</p>
+<p>如果想知道详细的存储过程，是不是也可以像操作表一样用<code>describe 表名;</code>进行查看呢？</p>
+<p><code>show create procedure 数据库.存储过程名;</code></p>
 
       
     </div>
+    
+    
+    
 
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/blog/2018/11/05/mysql问题集合/" rel="next" title="mysql问题集合">
+                <i class="fa fa-chevron-left"></i> mysql问题集合
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/blog/2018/11/05/mysql查询性能优化/" rel="prev" title="mysql查询性能优化">
+                mysql查询性能优化 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
 
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -349,6 +544,15 @@
 
 
           
+
+  
+    <div class="comments" id="comments">
+      <div id="lv-container" data-id="city" data-uid="MTAyMC8zNTc5MC8xMjMyNg=="></div>
+    </div>
+
+  
+
+
 
         </div>
         
@@ -369,8 +573,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -389,7 +602,7 @@
               
                 <a href="/blog/archives">
               
-                  <span class="site-state-item-count">63</span>
+                  <span class="site-state-item-count">67</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -400,7 +613,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/blog/categories/index.html">
-                  <span class="site-state-item-count">38</span>
+                  <span class="site-state-item-count">40</span>
                   <span class="site-state-item-name">categories</span>
                 </a>
               </div>
@@ -488,6 +701,22 @@
       </section>
 
       
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#基本概念"><span class="nav-number">1.</span> <span class="nav-text"> 基本概念</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#语法"><span class="nav-number">2.</span> <span class="nav-text"> 语法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#基本结构"><span class="nav-number">2.1.</span> <span class="nav-text"> 基本结构</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#变量"><span class="nav-number">2.2.</span> <span class="nav-text"> 变量</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#定义"><span class="nav-number">2.2.1.</span> <span class="nav-text"> 定义</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#赋值"><span class="nav-number">2.2.2.</span> <span class="nav-text"> 赋值</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#注释"><span class="nav-number">2.2.3.</span> <span class="nav-text"> 注释</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#存储过程的查询"><span class="nav-number">3.</span> <span class="nav-text"> 存储过程的查询</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
 
       
 
@@ -515,7 +744,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">114.1k</span>
+    <span title="Site words total count">118.7k</span>
   
 </div>
 
@@ -656,6 +885,10 @@
 
 
   
+  <script type="text/javascript" src="/blog/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/blog/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
@@ -684,6 +917,17 @@
 
 
 
+  
+    <script type="text/javascript">
+      (function(d, s) {
+        var j, e = d.getElementsByTagName(s)[0];
+        if (typeof LivereTower === 'function') { return; }
+        j = d.createElement(s);
+        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+        j.async = true;
+        e.parentNode.insertBefore(j, e);
+      })(document, 'script');
+    </script>
   
 
 
