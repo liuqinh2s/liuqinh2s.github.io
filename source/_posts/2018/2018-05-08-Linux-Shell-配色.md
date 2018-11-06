@@ -1,7 +1,7 @@
 ---
 title: Linux Shell 配色
 date: 2018-05-08
-categories: [Linux]
+categories: [Unix, Linux]
 comments: true
 ---
 

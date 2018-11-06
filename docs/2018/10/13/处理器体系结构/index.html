@@ -81,12 +81,12 @@
 
 
 
-<meta name="description" content="Y86指令集体系结构 Y86指令集基本上是IA32指令集的一个子集。这个指令集就是我们处理器实现的目标。如下图：  IA32的movl指令分成了4个不同指令：irmovl、rrmovl、mrmovl和rmmovl，i表示立即数Immediate，r表示寄存器Register，m表示存储器Memmory。第一个字母表示源，第二个字母表示目的。 这里不实现的功能有：  存储器引用方式是简单的基址+偏">
+<meta name="description" content="阅读这篇文章必须要对汇编码有足够的了解，如果你对IA32汇编码还不够了解，可以先看看这篇文章：程序的机器级表示  Y86指令集体系结构 Y86指令集基本上是IA32指令集的一个子集。这个指令集就是我们处理器实现的目标。如下图：  IA32的movl指令分成了4个不同指令：irmovl、rrmovl、mrmovl和rmmovl，i表示立即数Immediate，r表示寄存器Register，m表示存储">
 <meta property="og:type" content="article">
 <meta property="og:title" content="处理器体系结构">
 <meta property="og:url" content="http://liuqinh2s.github.io/blog/2018/10/13/处理器体系结构/index.html">
 <meta property="og:site_name" content="liuqinh2s&#39; blog">
-<meta property="og:description" content="Y86指令集体系结构 Y86指令集基本上是IA32指令集的一个子集。这个指令集就是我们处理器实现的目标。如下图：  IA32的movl指令分成了4个不同指令：irmovl、rrmovl、mrmovl和rmmovl，i表示立即数Immediate，r表示寄存器Register，m表示存储器Memmory。第一个字母表示源，第二个字母表示目的。 这里不实现的功能有：  存储器引用方式是简单的基址+偏">
+<meta property="og:description" content="阅读这篇文章必须要对汇编码有足够的了解，如果你对IA32汇编码还不够了解，可以先看看这篇文章：程序的机器级表示  Y86指令集体系结构 Y86指令集基本上是IA32指令集的一个子集。这个指令集就是我们处理器实现的目标。如下图：  IA32的movl指令分成了4个不同指令：irmovl、rrmovl、mrmovl和rmmovl，i表示立即数Immediate，r表示寄存器Register，m表示存储">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="http://liuqinh2s.github.io/blog/images/2018/Y86%E6%8C%87%E4%BB%A4%E9%9B%86.png">
 <meta property="og:image" content="http://liuqinh2s.github.io/blog/images/2018/%E6%8C%87%E4%BB%A4%E7%BC%96%E7%A0%81.png">
@@ -101,10 +101,10 @@
 <meta property="og:image" content="http://liuqinh2s.github.io/blog/images/2018/%E5%AD%97%E7%BA%A7%E5%BC%82%E6%88%96%E7%94%B5%E8%B7%AF.png">
 <meta property="og:image" content="http://liuqinh2s.github.io/blog/images/2018/%E5%AD%97%E7%BA%A7%E5%A4%9A%E8%B7%AF%E5%A4%8D%E7%94%A8%E7%94%B5%E8%B7%AF.png">
 <meta property="og:image" content="http://liuqinh2s.github.io/blog/images/2018/%E5%9B%9B%E8%B7%AF%E5%A4%8D%E7%94%A8%E5%99%A8.png">
-<meta property="og:updated_time" content="2018-11-05T03:31:06.199Z">
+<meta property="og:updated_time" content="2018-11-05T03:54:45.237Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="处理器体系结构">
-<meta name="twitter:description" content="Y86指令集体系结构 Y86指令集基本上是IA32指令集的一个子集。这个指令集就是我们处理器实现的目标。如下图：  IA32的movl指令分成了4个不同指令：irmovl、rrmovl、mrmovl和rmmovl，i表示立即数Immediate，r表示寄存器Register，m表示存储器Memmory。第一个字母表示源，第二个字母表示目的。 这里不实现的功能有：  存储器引用方式是简单的基址+偏">
+<meta name="twitter:description" content="阅读这篇文章必须要对汇编码有足够的了解，如果你对IA32汇编码还不够了解，可以先看看这篇文章：程序的机器级表示  Y86指令集体系结构 Y86指令集基本上是IA32指令集的一个子集。这个指令集就是我们处理器实现的目标。如下图：  IA32的movl指令分成了4个不同指令：irmovl、rrmovl、mrmovl和rmmovl，i表示立即数Immediate，r表示寄存器Register，m表示存储">
 <meta name="twitter:image" content="http://liuqinh2s.github.io/blog/images/2018/Y86%E6%8C%87%E4%BB%A4%E9%9B%86.png">
 
 
@@ -421,7 +421,7 @@
                   <span class="post-meta-item-text">Words count in article&#58;</span>
                 
                 <span title="Words count in article">
-                  1,440
+                  1,489
                 </span>
               
 
@@ -446,7 +446,8 @@
       
 
       
-        <h2 id="y86指令集体系结构"><a class="header-anchor" href="#y86指令集体系结构"> </a>Y86指令集体系结构</h2>
+        <p>阅读这篇文章必须要对汇编码有足够的了解，如果你对IA32汇编码还不够了解，可以先看看这篇文章：<a href="../../08/%E7%A8%8B%E5%BA%8F%E7%9A%84%E6%9C%BA%E5%99%A8%E7%BA%A7%E8%A1%A8%E7%A4%BA">程序的机器级表示</a></p>
+<h2 id="y86指令集体系结构"><a class="header-anchor" href="#y86指令集体系结构"> </a>Y86指令集体系结构</h2>
 <p>Y86指令集基本上是IA32指令集的一个子集。这个指令集就是我们处理器实现的目标。如下图：</p>
 <p><img src="../../../../images/2018/Y86%E6%8C%87%E4%BB%A4%E9%9B%86.png" alt="Y86指令集"></p>
 <p>IA32的movl指令分成了4个不同指令：irmovl、rrmovl、mrmovl和rmmovl，i表示立即数Immediate，r表示寄存器Register，m表示存储器Memmory。第一个字母表示源，第二个字母表示目的。</p>
@@ -463,7 +464,7 @@
 <h3 id="指令编码"><a class="header-anchor" href="#指令编码"> </a>指令编码</h3>
 <p>与IA32一样使用小端编码。</p>
 <p><img src="../../../../images/2018/%E6%8C%87%E4%BB%A4%E7%BC%96%E7%A0%81.png" alt="指令编码"></p>
-<p>每条指令的第一个字节表明指令的类型，这个字节分为两部分，每部分4位：高4位是代码（code）部分，低4位是功能（function）部分。代码值为 0~0xB。可以观察到，<code>rrmvol</code>与条件传送指令有同样的指令代码，可以把它看作是一个无条件传送，就好像jmp指令是无条件跳转一样，它们的功能代码都是0。</p>
+<p>每条指令的第一个字节表明指令的类型，这个字节分为两部分，每部分4位：高4位是代码（code）部分，低4位是功能（function）部分。代码值为 0~0xB。可以观察到，<code>rrmovl</code>与条件传送指令有同样的指令代码，可以把它看作是一个无条件传送，就好像jmp指令是无条件跳转一样，它们的功能代码都是0。</p>
 <p>寄存器编码如下：</p>
 <p><img src="../../../../images/2018/%E5%AF%84%E5%AD%98%E5%99%A8%E7%BC%96%E7%A0%81.png" alt="寄存器编码"></p>
 <p>举个例子：用16进制表示指令 <code>rmmvol %esp, 0x12345(%edx)</code>的字节编码。</p>
@@ -640,7 +641,7 @@
               
                 <a href="/blog/archives">
               
-                  <span class="site-state-item-count">67</span>
+                  <span class="site-state-item-count">69</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -651,7 +652,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/blog/categories/index.html">
-                  <span class="site-state-item-count">40</span>
+                  <span class="site-state-item-count">41</span>
                   <span class="site-state-item-name">categories</span>
                 </a>
               </div>
@@ -662,7 +663,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/blog/tags/index.html">
-                  <span class="site-state-item-count">16</span>
+                  <span class="site-state-item-count">15</span>
                   <span class="site-state-item-name">tags</span>
                 </a>
               </div>
@@ -782,7 +783,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">118.3k</span>
+    <span title="Site words total count">122.6k</span>
   
 </div>
 

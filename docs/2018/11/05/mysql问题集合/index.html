@@ -88,7 +88,7 @@
 <meta property="og:site_name" content="liuqinh2s&#39; blog">
 <meta property="og:description" content="删除操作 delete from table where id not in (select id from table where name1=) 这样直接又查又写是不行的，只能造个临时表 1093 - You can’t specify target table ‘contacts’ for update in FROM clause delete from table where id n">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2018-11-05T01:48:19.772Z">
+<meta property="og:updated_time" content="2018-11-05T03:40:11.557Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="mysql问题集合">
 <meta name="twitter:description" content="删除操作 delete from table where id not in (select id from table where name1=) 这样直接又查又写是不行的，只能造个临时表 1093 - You can’t specify target table ‘contacts’ for update in FROM clause delete from table where id n">
@@ -407,7 +407,7 @@
                   <span class="post-meta-item-text">Words count in article&#58;</span>
                 
                 <span title="Words count in article">
-                  1,361
+                  1,420
                 </span>
               
 
@@ -477,67 +477,13 @@ ON (<a href="http://product.id" target="_blank" rel="noopener">product.id</a> = 
 WHERE product_details.id=2;</li>
 </ol>
 <p>用例子来理解最好不过了：</p>
-<p>mysql&gt; SELECT * FROM product LEFT JOIN product_details<br>
-ON (<a href="http://product.id" target="_blank" rel="noopener">product.id</a> = product_details.id);<br>
-±—±-------±-----±-------±------+<br>
-| id | amount | id   | weight | exist |<br>
-±—±-------±-----±-------±------+<br>
-|  1 |    100 | NULL |   NULL |  NULL |<br>
-|  2 |    200 |    2 |     22 |     0 |<br>
-|  3 |    300 | NULL |   NULL |  NULL |<br>
-|  4 |    400 |    4 |     44 |     1 |<br>
-±—±-------±-----±-------±------+<br>
-4 rows in set (0.00 sec)</p>
-<p>mysql&gt; SELECT * FROM product LEFT JOIN product_details<br>
-ON (<a href="http://product.id" target="_blank" rel="noopener">product.id</a> = product_details.id)<br>
-AND product_details.id=2;<br>
-±—±-------±-----±-------±------+<br>
-| id | amount | id   | weight | exist |<br>
-±—±-------±-----±-------±------+<br>
-|  1 |    100 | NULL |   NULL |  NULL |<br>
-|  2 |    200 |    2 |     22 |     0 |<br>
-|  3 |    300 | NULL |   NULL |  NULL |<br>
-|  4 |    400 | NULL |   NULL |  NULL |<br>
-±—±-------±-----±-------±------+<br>
-4 rows in set (0.00 sec)</p>
-<p>mysql&gt; SELECT * FROM product LEFT JOIN product_details<br>
-ON (<a href="http://product.id" target="_blank" rel="noopener">product.id</a> = product_details.id)<br>
-WHERE product_details.id=2;<br>
-±—±-------±—±-------±------+<br>
-| id | amount | id | weight | exist |<br>
-±—±-------±—±-------±------+<br>
-|  2 |    200 |  2 |     22 |     0 |<br>
-±—±-------±—±-------±------+<br>
-1 row in set (0.01 sec)</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line">mysql&gt; SELECT * FROM product LEFT JOIN product_details</span><br><span class="line">       ON (product.id = product_details.id);</span><br><span class="line">+----+--------+------+--------+-------+</span><br><span class="line">| id | amount | id   | weight | exist |</span><br><span class="line">+----+--------+------+--------+-------+</span><br><span class="line">|  1 |    100 | NULL |   NULL |  NULL |</span><br><span class="line">|  2 |    200 |    2 |     22 |     0 |</span><br><span class="line">|  3 |    300 | NULL |   NULL |  NULL |</span><br><span class="line">|  4 |    400 |    4 |     44 |     1 |</span><br><span class="line">+----+--------+------+--------+-------+</span><br><span class="line">4 rows in set (0.00 sec)</span><br><span class="line"></span><br><span class="line">mysql&gt; SELECT * FROM product LEFT JOIN product_details</span><br><span class="line">       ON (product.id = product_details.id)</span><br><span class="line">       AND product_details.id=2;</span><br><span class="line">+----+--------+------+--------+-------+</span><br><span class="line">| id | amount | id   | weight | exist |</span><br><span class="line">+----+--------+------+--------+-------+</span><br><span class="line">|  1 |    100 | NULL |   NULL |  NULL |</span><br><span class="line">|  2 |    200 |    2 |     22 |     0 |</span><br><span class="line">|  3 |    300 | NULL |   NULL |  NULL |</span><br><span class="line">|  4 |    400 | NULL |   NULL |  NULL |</span><br><span class="line">+----+--------+------+--------+-------+</span><br><span class="line">4 rows in set (0.00 sec)</span><br><span class="line"> </span><br><span class="line">mysql&gt; SELECT * FROM product LEFT JOIN product_details</span><br><span class="line">       ON (product.id = product_details.id)</span><br><span class="line">       WHERE product_details.id=2;</span><br><span class="line">+----+--------+----+--------+-------+</span><br><span class="line">| id | amount | id | weight | exist |</span><br><span class="line">+----+--------+----+--------+-------+</span><br><span class="line">|  2 |    200 |  2 |     22 |     0 |</span><br><span class="line">+----+--------+----+--------+-------+</span><br><span class="line">1 row in set (0.01 sec)</span><br></pre></td></tr></table></figure>
 <p>第一条查询使用 ON 条件决定了从 LEFT JOIN的 product_details表中检索符合的所有数据行。<br>
 第二条查询做了简单的LEFT JOIN，然后使用 WHERE 子句从 LEFT JOIN的数据中过滤掉不符合条件的数据行。<br>
 再来看一些示例：</p>
-<p>mysql&gt;<br>
-mysql&gt; SELECT * FROM product LEFT JOIN product_details<br>
-ON <a href="http://product.id" target="_blank" rel="noopener">product.id</a> = product_details.id<br>
-AND product.amount=100;<br>
-±—±-------±-----±-------±------+<br>
-| id | amount | id   | weight | exist |<br>
-±—±-------±-----±-------±------+<br>
-|  1 |    100 | NULL |   NULL |  NULL |<br>
-|  2 |    200 | NULL |   NULL |  NULL |<br>
-|  3 |    300 | NULL |   NULL |  NULL |<br>
-|  4 |    400 | NULL |   NULL |  NULL |<br>
-±—±-------±-----±-------±------+<br>
-4 rows in set (0.00 sec)</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">mysql&gt;</span><br><span class="line">mysql&gt; SELECT * FROM product LEFT JOIN product_details</span><br><span class="line">       ON product.id = product_details.id</span><br><span class="line">       AND product.amount=100;</span><br><span class="line">+----+--------+------+--------+-------+</span><br><span class="line">| id | amount | id   | weight | exist |</span><br><span class="line">+----+--------+------+--------+-------+</span><br><span class="line">|  1 |    100 | NULL |   NULL |  NULL |</span><br><span class="line">|  2 |    200 | NULL |   NULL |  NULL |</span><br><span class="line">|  3 |    300 | NULL |   NULL |  NULL |</span><br><span class="line">|  4 |    400 | NULL |   NULL |  NULL |</span><br><span class="line">+----+--------+------+--------+-------+</span><br><span class="line">4 rows in set (0.00 sec)</span><br></pre></td></tr></table></figure>
 <p>所有来自product表的数据行都被检索到了，但没有在product_details表中匹配到记录（<a href="http://product.id" target="_blank" rel="noopener">product.id</a> = product_details.id AND product.amount=100 条件并没有匹配到任何数据）</p>
-<p>mysql&gt; SELECT * FROM product LEFT JOIN product_details<br>
-ON (<a href="http://product.id" target="_blank" rel="noopener">product.id</a> = product_details.id)<br>
-AND product.amount=200;<br>
-±—±-------±-----±-------±------+<br>
-| id | amount | id   | weight | exist |<br>
-±—±-------±-----±-------±------+<br>
-|  1 |    100 | NULL |   NULL |  NULL |<br>
-|  2 |    200 |    2 |     22 |     0 |<br>
-|  3 |    300 | NULL |   NULL |  NULL |<br>
-|  4 |    400 | NULL |   NULL |  NULL |<br>
-±—±-------±-----±-------±------+<br>
-4 rows in set (0.01 sec)</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">mysql&gt; SELECT * FROM product LEFT JOIN product_details</span><br><span class="line">       ON (product.id = product_details.id)</span><br><span class="line">       AND product.amount=200;</span><br><span class="line">+----+--------+------+--------+-------+</span><br><span class="line">| id | amount | id   | weight | exist |</span><br><span class="line">+----+--------+------+--------+-------+</span><br><span class="line">|  1 |    100 | NULL |   NULL |  NULL |</span><br><span class="line">|  2 |    200 |    2 |     22 |     0 |</span><br><span class="line">|  3 |    300 | NULL |   NULL |  NULL |</span><br><span class="line">|  4 |    400 | NULL |   NULL |  NULL |</span><br><span class="line">+----+--------+------+--------+-------+</span><br><span class="line">4 rows in set (0.01 sec)</span><br></pre></td></tr></table></figure>
 <p>有来自product表的数据行都被检索到了，但没有在product_details表中匹配到记录（<a href="http://product.id" target="_blank" rel="noopener">product.id</a> = product_details.id AND product.amount=100 条件并没有匹配到任何数据）</p>
 <p>提问：能不能先where再on，因为先where再on可以提高效率。就拿根据宝贝ID跨表查询宝贝名来说，如果能先用where筛选出需要的宝贝ID在去查询宝贝名的话就能节省查询次数，而如果是先用on直接把所有宝贝ID对应的宝贝名查出来，再where过滤不符合条件的宝贝ID，这样第一步的on操作就做了一些无用功。</p>
 <h2 id="中文显示问题"><a class="header-anchor" href="#中文显示问题"> </a>中文显示问题</h2>
@@ -568,8 +514,8 @@ AND product.amount=200;<br>
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/blog/2018/11/05/程序员修炼之道（从小工到专家）/" rel="next" title="程序员修炼之道（从小工到专家）">
-                <i class="fa fa-chevron-left"></i> 程序员修炼之道（从小工到专家）
+              <a href="/blog/2018/11/05/mysql查询性能优化/" rel="next" title="mysql查询性能优化">
+                <i class="fa fa-chevron-left"></i> mysql查询性能优化
               </a>
             
           </div>
@@ -577,6 +523,10 @@ AND product.amount=200;<br>
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/blog/2018/11/05/程序员修炼之道（从小工到专家）/" rel="prev" title="程序员修炼之道（从小工到专家）">
+                程序员修炼之道（从小工到专家） <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -662,7 +612,7 @@ AND product.amount=200;<br>
               
                 <a href="/blog/archives">
               
-                  <span class="site-state-item-count">67</span>
+                  <span class="site-state-item-count">69</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -673,7 +623,7 @@ AND product.amount=200;<br>
               
               <div class="site-state-item site-state-categories">
                 <a href="/blog/categories/index.html">
-                  <span class="site-state-item-count">40</span>
+                  <span class="site-state-item-count">41</span>
                   <span class="site-state-item-name">categories</span>
                 </a>
               </div>
@@ -684,7 +634,7 @@ AND product.amount=200;<br>
               
               <div class="site-state-item site-state-tags">
                 <a href="/blog/tags/index.html">
-                  <span class="site-state-item-count">16</span>
+                  <span class="site-state-item-count">15</span>
                   <span class="site-state-item-name">tags</span>
                 </a>
               </div>
@@ -804,7 +754,7 @@ AND product.amount=200;<br>
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">118.3k</span>
+    <span title="Site words total count">122.6k</span>
   
 </div>
 

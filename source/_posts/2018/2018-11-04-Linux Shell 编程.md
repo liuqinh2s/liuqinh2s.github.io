@@ -1,8 +1,8 @@
 ---
 title: Linux Shell 编程
-categories: [Linux]
+categories: [Unix, Linux]
 comments: true
-tags: [Linux]
+tags: [Unix, Linux]
 ---
 
 ## Shell脚本学习笔记规范

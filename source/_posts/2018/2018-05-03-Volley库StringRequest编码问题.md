@@ -1,7 +1,7 @@
 ---
 title: Volley库StringRequest编码问题
 date: 2018-05-03
-categories: [Android, Volley库]
+categories: [Java, Android, Volley库]
 comments: true
 ---
 
