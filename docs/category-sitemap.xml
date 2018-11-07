@@ -210,22 +210,8 @@
     </url>
 
     <url>
-        <loc>http://liuqinh2s.github.io/blog/categories/Java/Java-web/</loc>
-        <lastmod>2018-11-05T08:09:47.968Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>http://liuqinh2s.github.io/blog/categories/Java/Android/%E9%80%9A%E8%AE%AF%E5%BD%95/</loc>
         <lastmod>2018-11-05T08:10:22.295Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://liuqinh2s.github.io/blog/categories/Java/</loc>
-        <lastmod>2018-11-05T08:10:27.806Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
@@ -275,6 +261,20 @@
     <url>
         <loc>http://liuqinh2s.github.io/blog/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E3%80%8A%E7%BC%96%E7%A8%8B%E7%8F%A0%E7%8E%91%E3%80%8B/</loc>
         <lastmod>2018-11-07T07:19:13.037Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://liuqinh2s.github.io/blog/categories/Java/</loc>
+        <lastmod>2018-11-07T08:43:03.198Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://liuqinh2s.github.io/blog/categories/Java/Java-web/</loc>
+        <lastmod>2018-11-07T08:43:03.198Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
