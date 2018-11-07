@@ -308,7 +308,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://liuqinh2s.github.io/blog/blog/2018/11/05/编程珠玑系列笔记1/">
+    <link itemprop="mainEntityOfPage" href="http://liuqinh2s.github.io/blog/blog/2018/11/05/mysql存储过程/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="liuqinh2s">
@@ -327,7 +327,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/blog/2018/11/05/编程珠玑系列笔记1/" itemprop="url">编程珠玑系列笔记 -- 第一章 开篇</a></h1>
+                <a class="post-title-link" href="/blog/2018/11/05/mysql存储过程/" itemprop="url">mysql存储过程</a></h1>
         
 
         <div class="post-meta">
@@ -362,8 +362,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/blog/categories/读书笔记/" itemprop="url" rel="index">
-                    <span itemprop="name">读书笔记</span>
+                  <a href="/blog/categories/数据库/" itemprop="url" rel="index">
+                    <span itemprop="name">数据库</span>
                   </a>
                 </span>
 
@@ -373,8 +373,8 @@
                 
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/blog/categories/读书笔记/《编程珠玑》/" itemprop="url" rel="index">
-                    <span itemprop="name">《编程珠玑》</span>
+                  <a href="/blog/categories/数据库/mysql/" itemprop="url" rel="index">
+                    <span itemprop="name">mysql</span>
                   </a>
                 </span>
 
@@ -404,7 +404,7 @@
                   <span class="post-meta-item-text">Words count in article&#58;</span>
                 
                 <span title="Words count in article">
-                  3,627
+                  855
                 </span>
               
 
@@ -431,15 +431,19 @@
       
         
           
-          本书的中心思想：对实例研究的深入思考不仅有趣，而且可以获得实际的益处。
-规律和智慧都隐藏在实例之中，而我们通过实例来窥探它们。实例是道的载体。
- 开篇
-明确问题，一旦问题明确，这场战役就成功了90%。
-简单的程序通常比具有相同功能的复杂程序更可靠、更安全、更健壮、更高效，而且易于实现和维护。因为简单
+           基本概念
+
+
+什么是存储例程？
+存储例程是一组sql语句，通过在查询中调用一个指定的名称来执行这些sql语句命令。
+
+
+为什么要使用存储例程？
+有时候我们的服务同时有web版，桌面版，移动版，他们都和数据库进行交互来完成数据的存取工作。现在要修改其中一个查询sql语句，那么我们可能要同时修改他们中
           ...
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/blog/2018/11/05/编程珠玑系列笔记1/#more" rel="contents">
+            <a class="btn" href="/blog/2018/11/05/mysql存储过程/#more" rel="contents">
               Read more &raquo;
             </a>
           </div>
@@ -490,7 +494,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://liuqinh2s.github.io/blog/blog/2018/11/04/什么是回调/">
+    <link itemprop="mainEntityOfPage" href="http://liuqinh2s.github.io/blog/blog/2018/11/05/mysql问题集合/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="liuqinh2s">
@@ -509,7 +513,188 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/blog/2018/11/04/什么是回调/" itemprop="url">什么是回调</a></h1>
+                <a class="post-title-link" href="/blog/2018/11/05/mysql问题集合/" itemprop="url">mysql问题集合</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-11-05T00:00:00+08:00">
+                2018-11-05
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/blog/categories/数据库/" itemprop="url" rel="index">
+                    <span itemprop="name">数据库</span>
+                  </a>
+                </span>
+
+                
+                
+                  , 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/blog/categories/数据库/mysql/" itemprop="url" rel="index">
+                    <span itemprop="name">mysql</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Words count in article&#58;</span>
+                
+                <span title="Words count in article">
+                  1,420
+                </span>
+              
+
+              
+
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+           删除操作
+delete from table where id not in (select id from table where name1=)
+这样直接又查又写是不行的，只能造个临时表
+1093 - You can’t specify target table ‘contacts’ for 
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/blog/2018/11/05/mysql问题集合/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://liuqinh2s.github.io/blog/blog/2018/11/04/编译原理笔记/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="liuqinh2s">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="https://wx4.sinaimg.cn/mw690/006zFO3gly1flf4xnd5q9j30ku0ku75r.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="liuqinh2s' blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/blog/2018/11/04/编译原理笔记/" itemprop="url">编译原理笔记</a></h1>
         
 
         <div class="post-meta">
@@ -544,8 +729,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/blog/categories/编程概念/" itemprop="url" rel="index">
-                    <span itemprop="name">编程概念</span>
+                  <a href="/blog/categories/编译原理/" itemprop="url" rel="index">
+                    <span itemprop="name">编译原理</span>
                   </a>
                 </span>
 
@@ -575,7 +760,7 @@
                   <span class="post-meta-item-text">Words count in article&#58;</span>
                 
                 <span title="Words count in article">
-                  2,398
+                  1,551
                 </span>
               
 
@@ -602,12 +787,27 @@
       
         
           
-          
-打个比方，有一家旅馆提供叫醒服务，但是要求旅客自己决定叫醒的方法。可以是打客房电话，也可以是派服务员去敲门，睡得死怕耽误事的，还可以要求往自己头上浇盆水。这里，“叫醒”这个行为是旅馆提供的，相当于库函数，但是叫醒的方式是由旅客决定并告诉旅馆的，也就是回调函数。而旅客告诉旅馆怎么叫醒自己的动作，也就
+           编译原理知识点
+总共六个阶段：
+
+词法分析
+语法分析
+语义分析
+中间代码生成
+代码优化
+目标代码生成
+
+
+DFA（确定有穷自动机） 和 NFA（非确定有穷自动机）
+区别就是，NFA 可以包含多个状态作为一个集，从这个集中跳到下一个集。而 DAF 是单个单个的状态，从一个状态跳到下一个状态。
+
+
+
+
           ...
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/blog/2018/11/04/什么是回调/#more" rel="contents">
+            <a class="btn" href="/blog/2018/11/04/编译原理笔记/#more" rel="contents">
               Read more &raquo;
             </a>
           </div>
@@ -846,7 +1046,7 @@ mac: command+option+L
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://liuqinh2s.github.io/blog/blog/2018/11/04/git 使用技巧/">
+    <link itemprop="mainEntityOfPage" href="http://liuqinh2s.github.io/blog/blog/2018/11/04/vim相关/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="liuqinh2s">
@@ -865,7 +1065,7 @@ mac: command+option+L
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/blog/2018/11/04/git 使用技巧/" itemprop="url">git 使用技巧</a></h1>
+                <a class="post-title-link" href="/blog/2018/11/04/vim相关/" itemprop="url">vim相关</a></h1>
         
 
         <div class="post-meta">
@@ -900,8 +1100,8 @@ mac: command+option+L
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/blog/categories/工具/" itemprop="url" rel="index">
-                    <span itemprop="name">工具</span>
+                  <a href="/blog/categories/Unix/" itemprop="url" rel="index">
+                    <span itemprop="name">Unix</span>
                   </a>
                 </span>
 
@@ -911,8 +1111,8 @@ mac: command+option+L
                 
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/blog/categories/工具/git/" itemprop="url" rel="index">
-                    <span itemprop="name">git</span>
+                  <a href="/blog/categories/Unix/Linux/" itemprop="url" rel="index">
+                    <span itemprop="name">Linux</span>
                   </a>
                 </span>
 
@@ -942,7 +1142,7 @@ mac: command+option+L
                   <span class="post-meta-item-text">Words count in article&#58;</span>
                 
                 <span title="Words count in article">
-                  466
+                  830
                 </span>
               
 
@@ -969,193 +1169,20 @@ mac: command+option+L
       
         
           
-           git 建立远程项目
-git 是多人写作的版本控制系统，而我却把它用成了单人版本控制系统，真是罪过罪过。上一次用多人 git 的时候，连添加远端库的步骤都没弄清。其实很简单，你在本地做了一个项目之后，远端的项目还没捡起来，或者才新建的一个空的远端项目，这个时候你特别想把本地项目和远端项目关联起来，
+          vim的配置文件位于：~/.vimrc，文件使用VimScript语法来编写。
+.vimrc文件分为三个部分，分别是：
+
+Vundle插件管理部分
+Vim编辑器配置部分
+Vim插件配置部分
+
+ NERDTree的使用
+ 切换工作台和目录
+1234ctrl+w+h    光标focus左侧树形目录ct
           ...
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/blog/2018/11/04/git 使用技巧/#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://liuqinh2s.github.io/blog/blog/2018/11/04/精通一款编辑器之sublime text 3/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="liuqinh2s">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="https://wx4.sinaimg.cn/mw690/006zFO3gly1flf4xnd5q9j30ku0ku75r.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="liuqinh2s' blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/blog/2018/11/04/精通一款编辑器之sublime text 3/" itemprop="url">精通一款编辑器之sublime text 3</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-11-04T00:00:00+08:00">
-                2018-11-04
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/blog/categories/工具/" itemprop="url" rel="index">
-                    <span itemprop="name">工具</span>
-                  </a>
-                </span>
-
-                
-                
-                  , 
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/blog/categories/工具/编辑器/" itemprop="url" rel="index">
-                    <span itemprop="name">编辑器</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">Words count in article&#58;</span>
-                
-                <span title="Words count in article">
-                  678
-                </span>
-              
-
-              
-
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-           编辑器常用功能
-
-格式化代码：格式化代码可以让你不用管代码的格式，可以放肆的写程序，你可以少敲很多空格，不用关心代码的格式问题，机器给出的代码格式风格统一且漂亮，一键解决你的格式问题，真是提高码代码效率的非常重要的功能。
-查找文件：查找文件是在集成开发的时候非常重要的功能，当文件多起来的时候，快速
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/blog/2018/11/04/精通一款编辑器之sublime text 3/#more" rel="contents">
+            <a class="btn" href="/blog/2018/11/04/vim相关/#more" rel="contents">
               Read more &raquo;
             </a>
           </div>
@@ -1247,7 +1274,7 @@ git 是多人写作的版本控制系统，而我却把它用成了单人版本�
               
                 <a href="/blog/archives">
               
-                  <span class="site-state-item-count">69</span>
+                  <span class="site-state-item-count">70</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -1373,7 +1400,7 @@ git 是多人写作的版本控制系统，而我却把它用成了单人版本�
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">122.6k</span>
+    <span title="Site words total count">124.3k</span>
   
 </div>
 
