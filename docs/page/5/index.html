@@ -308,7 +308,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://liuqinh2s.github.io/blog/blog/2018/11/04/Linux入门教程/">
+    <link itemprop="mainEntityOfPage" href="http://liuqinh2s.github.io/blog/blog/2018/11/04/pom.xml详解/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="liuqinh2s">
@@ -327,7 +327,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/blog/2018/11/04/Linux入门教程/" itemprop="url">Linux 入门教程</a></h1>
+                <a class="post-title-link" href="/blog/2018/11/04/pom.xml详解/" itemprop="url">pom.xml详解</a></h1>
         
 
         <div class="post-meta">
@@ -362,8 +362,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/blog/categories/Unix/" itemprop="url" rel="index">
-                    <span itemprop="name">Unix</span>
+                  <a href="/blog/categories/Java/" itemprop="url" rel="index">
+                    <span itemprop="name">Java</span>
                   </a>
                 </span>
 
@@ -373,8 +373,8 @@
                 
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/blog/categories/Unix/Linux/" itemprop="url" rel="index">
-                    <span itemprop="name">Linux</span>
+                  <a href="/blog/categories/Java/Java-web/" itemprop="url" rel="index">
+                    <span itemprop="name">Java web</span>
                   </a>
                 </span>
 
@@ -404,7 +404,7 @@
                   <span class="post-meta-item-text">Words count in article&#58;</span>
                 
                 <span title="Words count in article">
-                  574
+                  2,738
                 </span>
               
 
@@ -430,15 +430,13 @@
 
       
         
-          
-          这是我亲自写的一份教程（没有参考任何其他人），我认为的最合适的入门应该学些什么，请耐心阅读吧。
-概念：目录，路径，相对路径，绝对路径，文件系统，文件，环境变量
-cd（change directory）后接目录，如：
-cd /opt 或者 cd /opt/都行，直接用cd则切换到你的用户目录，Linu
-          ...
+          <p>POM, Project Object Model，项目对象模型，是Maven的配置文件。</p>
+<blockquote>
+<p><a href="https://zh.wikipedia.org/zh-hans/XML" target="_blank" rel="noopener">什么是xml?</a></p>
+</blockquote>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/blog/2018/11/04/Linux入门教程/#more" rel="contents">
+            <a class="btn" href="/blog/2018/11/04/pom.xml详解/#more" rel="contents">
               Read more &raquo;
             </a>
           </div>
@@ -489,7 +487,7 @@ cd /opt 或者 cd /opt/都行，直接用cd则切换到你的用户目录，Linu
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://liuqinh2s.github.io/blog/blog/2018/11/04/Linux服务器运维/">
+    <link itemprop="mainEntityOfPage" href="http://liuqinh2s.github.io/blog/blog/2018/11/04/Linux Shell 编程/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="liuqinh2s">
@@ -508,7 +506,7 @@ cd /opt 或者 cd /opt/都行，直接用cd则切换到你的用户目录，Linu
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/blog/2018/11/04/Linux服务器运维/" itemprop="url">Linux 服务器运维</a></h1>
+                <a class="post-title-link" href="/blog/2018/11/04/Linux Shell 编程/" itemprop="url">Linux Shell 编程</a></h1>
         
 
         <div class="post-meta">
@@ -585,7 +583,7 @@ cd /opt 或者 cd /opt/都行，直接用cd则切换到你的用户目录，Linu
                   <span class="post-meta-item-text">Words count in article&#58;</span>
                 
                 <span title="Words count in article">
-                  127
+                  2,871
                 </span>
               
 
@@ -612,17 +610,192 @@ cd /opt 或者 cd /opt/都行，直接用cd则切换到你的用户目录，Linu
       
         
           
-           添加用户
-添加用户：useradd xxx
-密码：passwd xxx
-添加用户进 sudoers
-修改 /etc/sudoers 文件，首先改权限：sudo chmod u+w /etc/sudoers，然后再用 vi /etc/sudoers。
-理解这个表达式的意义：
-1ALL ALL=(AL
+           Shell脚本学习笔记规范
+
+在书写Shell命令的时候，我没有加命令提示符。比如zsh的提示符：➜ myshell，或者bash的提示符：bash-3.2$。因为往往很多读者，直接把命令提示符(promt)也作为命令的一部分直接复制粘贴输入到命令行中了。所以新手读者需要注意这一点，以及知道什么是
           ...
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/blog/2018/11/04/Linux服务器运维/#more" rel="contents">
+            <a class="btn" href="/blog/2018/11/04/Linux Shell 编程/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://liuqinh2s.github.io/blog/blog/2018/11/04/git 使用技巧/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="liuqinh2s">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="https://wx4.sinaimg.cn/mw690/006zFO3gly1flf4xnd5q9j30ku0ku75r.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="liuqinh2s' blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/blog/2018/11/04/git 使用技巧/" itemprop="url">git 使用技巧</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-11-04T00:00:00+08:00">
+                2018-11-04
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/blog/categories/工具/" itemprop="url" rel="index">
+                    <span itemprop="name">工具</span>
+                  </a>
+                </span>
+
+                
+                
+                  , 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/blog/categories/工具/git/" itemprop="url" rel="index">
+                    <span itemprop="name">git</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Words count in article&#58;</span>
+                
+                <span title="Words count in article">
+                  466
+                </span>
+              
+
+              
+
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+           git 建立远程项目
+git 是多人写作的版本控制系统，而我却把它用成了单人版本控制系统，真是罪过罪过。上一次用多人 git 的时候，连添加远端库的步骤都没弄清。其实很简单，你在本地做了一个项目之后，远端的项目还没捡起来，或者才新建的一个空的远端项目，这个时候你特别想把本地项目和远端项目关联起来，
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/blog/2018/11/04/git 使用技巧/#more" rel="contents">
               Read more &raquo;
             </a>
           </div>
@@ -1002,177 +1175,11 @@ ctrl+e：移到命令尾
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://liuqinh2s.github.io/blog/blog/2018/11/02/Java Web 实战/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="liuqinh2s">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="https://wx4.sinaimg.cn/mw690/006zFO3gly1flf4xnd5q9j30ku0ku75r.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="liuqinh2s' blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/blog/2018/11/02/Java Web 实战/" itemprop="url">社交网站 -- 圈子</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-11-02T00:00:00+08:00">
-                2018-11-02
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/blog/categories/项目/" itemprop="url" rel="index">
-                    <span itemprop="name">项目</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">Words count in article&#58;</span>
-                
-                <span title="Words count in article">
-                  3,402
-                </span>
-              
-
-              
-
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <p>我正在做一个社交网站，目前暂定叫做：圈子。这个项目从产品到UI到前端、后端全部都由我一个人操刀。</p>
-<p>后端使用了 <code>Spring + SpringMVC + Mybatis</code> 的框架组合，据说 <code>SpringBoot</code> 很流行，后面我会学一下。前端使用了 <code>Vue</code> 框架。产品设计移动端优先，使用了 <code>墨刀</code> 这款工具。</p>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/blog/2018/11/02/Java Web 实战/#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/blog/page/4/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/blog/">1</a><span class="space">&hellip;</span><a class="page-number" href="/blog/page/4/">4</a><span class="page-number current">5</span><a class="page-number" href="/blog/page/6/">6</a><span class="space">&hellip;</span><a class="page-number" href="/blog/page/15/">15</a><a class="extend next" rel="next" href="/blog/page/6/"><i class="fa fa-angle-right"></i></a>
+    <a class="extend prev" rel="prev" href="/blog/page/4/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/blog/">1</a><span class="space">&hellip;</span><a class="page-number" href="/blog/page/4/">4</a><span class="page-number current">5</span><a class="page-number" href="/blog/page/6/">6</a><span class="space">&hellip;</span><a class="page-number" href="/blog/page/16/">16</a><a class="extend next" rel="next" href="/blog/page/6/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 
@@ -1222,7 +1229,7 @@ ctrl+e：移到命令尾
               
                 <a href="/blog/archives">
               
-                  <span class="site-state-item-count">75</span>
+                  <span class="site-state-item-count">76</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -1233,7 +1240,7 @@ ctrl+e：移到命令尾
               
               <div class="site-state-item site-state-categories">
                 <a href="/blog/categories/index.html">
-                  <span class="site-state-item-count">42</span>
+                  <span class="site-state-item-count">43</span>
                   <span class="site-state-item-name">categories</span>
                 </a>
               </div>
@@ -1244,7 +1251,7 @@ ctrl+e：移到命令尾
               
               <div class="site-state-item site-state-tags">
                 <a href="/blog/tags/index.html">
-                  <span class="site-state-item-count">15</span>
+                  <span class="site-state-item-count">16</span>
                   <span class="site-state-item-name">tags</span>
                 </a>
               </div>
@@ -1348,7 +1355,7 @@ ctrl+e：移到命令尾
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">132.0k</span>
+    <span title="Site words total count">132.4k</span>
   
 </div>
 

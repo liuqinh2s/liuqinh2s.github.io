@@ -1,8 +1,9 @@
 ---
-title: APUE-3rd 读书笔记 -- Unix System Overview
+title: 《APUE-3rd》 读书笔记 -- Unix System Overview
 date: 2018-05-22
-categories: [Unix]
+categories: [读书笔记, 《APUE-3rd》]
 comments: true
+tags: [Unix, Linux]
 ---
 
 ## 前言

@@ -26,3 +26,50 @@ Shell scripting hearkens back to the classic UNIX philosophy of breaking complex
 3.色彩模型：RGB，CMYK（颜料的三原色：C青，M品，Y黄，+K黑，应用于印刷工业）。RGB是加色模型，CMYK是减色模型。HSV（H是色相即色调，S是饱和度（取值0~100%），V是亮度值Value（取值0~100%））。YUV。
 
 和分治算法比较类似，但不同的是分治算法把原问题划归为几个相互独立的子问题，从而一一解决，而动态规划则是针对子问题有重叠的情况的一种解决方案。
+
+## 2018-11-19
+
+看了某人的spring boot代码，发现后台的错误码和错误信息管理的一个优雅的做法：使用一个枚举类封装这两个属性，并使构造函数私有化。代码如下：
+
+```java
+public enum ExceptionMsg {
+    SUCCESS("000000", "操作成功"),
+    FAILED("999999", "操作失败"),
+    ParamError("000001", "参数错误！"),
+
+    LoginNameOrPassWordError("000100", "用户名或者密码错误！"),
+    EmailUsed("000101", "该邮箱已被注册"),
+    UserNameUsed("000102", "该登录名称已存在"),
+    EmailNotRegister("000103", "该邮箱地址未注册"),
+    LinkOutdated("000104", "该链接已过期，请重新请求"),
+    PassWordError("000105", "密码输入错误"),
+    UserNameLengthLimit("000106", "用户名长度超限"),
+    LoginNameNotExists("000107", "该用户未注册"),
+    UserNameSame("000108", "新用户名与原用户名一致"),
+
+    FavoritesNameIsNull("000200", "收藏夹名称不能为空"),
+    FavoritesNameUsed("000201", "收藏夹名称已被创建"),
+
+    CollectExist("000300", "该文章已被收藏"),
+
+    FileEmpty("000400", "上传文件为空"),
+    LimitPictureSize("000401", "图片大小必须小于2M"),
+    LimitPictureType("000402", "图片格式必须为'jpg'、'png'、'jpge'、'gif'、'bmp'");
+
+    private ExceptionMsg(String code, String msg) {
+        this.code = code;
+        this.msg = msg;
+    }
+
+    private String code;
+    private String msg;
+
+    public String getCode() {
+        return code;
+    }
+
+    public String getMsg() {
+        return msg;
+    }
+}
+```
