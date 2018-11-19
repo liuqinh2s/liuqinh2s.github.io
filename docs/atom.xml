@@ -6,7 +6,7 @@
   <link href="/blog/atom.xml" rel="self"/>
   
   <link href="http://liuqinh2s.github.io/blog/"/>
-  <updated>2018-11-07T07:19:13.037Z</updated>
+  <updated>2018-11-16T03:30:57.836Z</updated>
   <id>http://liuqinh2s.github.io/blog/</id>
   
   <author>
@@ -15,6 +15,143 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Java注解</title>
+    <link href="http://liuqinh2s.github.io/blog/2018/11/16/Java%E6%B3%A8%E8%A7%A3/"/>
+    <id>http://liuqinh2s.github.io/blog/2018/11/16/Java注解/</id>
+    <published>2018-11-15T16:00:00.000Z</published>
+    <updated>2018-11-16T03:30:57.836Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;注解语法&quot;&gt;&lt;a class=&quot;header-anchor&quot; href=&quot;#注解语法&quot;&gt; &lt;/a&gt;注解语法&lt;/h2&gt;
+&lt;p&gt;同class和interface一样，注解也可以用于类的定义，它是在Java SE 5.0版本中开始引入的概念。&lt;/p&gt;
+&lt;h2
+        
+      
+    
+    </summary>
+    
+      <category term="Java" scheme="http://liuqinh2s.github.io/blog/categories/Java/"/>
+    
+    
+      <category term="Java" scheme="http://liuqinh2s.github.io/blog/tags/Java/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Java反射</title>
+    <link href="http://liuqinh2s.github.io/blog/2018/11/14/Java%E5%8F%8D%E5%B0%84/"/>
+    <id>http://liuqinh2s.github.io/blog/2018/11/14/Java反射/</id>
+    <published>2018-11-13T16:00:00.000Z</published>
+    <updated>2018-11-14T02:03:09.088Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;最近在学习spring boot 框架，IOC非常依赖Java反射，所以顺带回顾一下Java反射&lt;/p&gt;
+&lt;h2 id=&quot;什么是反射？&quot;&gt;&lt;a class=&quot;header-anchor&quot; href=&quot;#什么是反射？&quot;&gt;
+        
+      
+    
+    </summary>
+    
+      <category term="Java" scheme="http://liuqinh2s.github.io/blog/categories/Java/"/>
+    
+    
+      <category term="Java" scheme="http://liuqinh2s.github.io/blog/tags/Java/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>YAML语法</title>
+    <link href="http://liuqinh2s.github.io/blog/2018/11/12/YAML%E8%AF%AD%E6%B3%95/"/>
+    <id>http://liuqinh2s.github.io/blog/2018/11/12/YAML语法/</id>
+    <published>2018-11-11T16:00:00.000Z</published>
+    <updated>2018-11-12T03:05:10.100Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;在学Spring Boot的时候，application.yml使用的就是YAML语法，顺便过来学习一下，有过JSON、XML的基础，应该可以学的很快。&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://zh.wikipedia.org/wiki/YAML&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="配置语言" scheme="http://liuqinh2s.github.io/blog/categories/%E9%85%8D%E7%BD%AE%E8%AF%AD%E8%A8%80/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>spring boot 配置文件</title>
+    <link href="http://liuqinh2s.github.io/blog/2018/11/09/spring%20boot%20%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6/"/>
+    <id>http://liuqinh2s.github.io/blog/2018/11/09/spring boot 配置文件/</id>
+    <published>2018-11-08T16:00:00.000Z</published>
+    <updated>2018-11-13T07:48:53.168Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;spring
+        
+      
+    
+    </summary>
+    
+      <category term="Java" scheme="http://liuqinh2s.github.io/blog/categories/Java/"/>
+    
+      <category term="Java web" scheme="http://liuqinh2s.github.io/blog/categories/Java/Java-web/"/>
+    
+    
+      <category term="Java" scheme="http://liuqinh2s.github.io/blog/tags/Java/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>spring boot 入门笔记</title>
+    <link href="http://liuqinh2s.github.io/blog/2018/11/08/spring%20boot%20%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    <id>http://liuqinh2s.github.io/blog/2018/11/08/spring boot 学习笔记/</id>
+    <published>2018-11-07T16:00:00.000Z</published>
+    <updated>2018-11-09T02:40:22.858Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;&lt;a href=&quot;https://www.bilibili.com/video/av20965295/?p=6&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;B站上学Spring Boot&lt;/a&gt;&lt;/p&gt;
+&lt;h2
+        
+      
+    
+    </summary>
+    
+      <category term="Java" scheme="http://liuqinh2s.github.io/blog/categories/Java/"/>
+    
+      <category term="Java web" scheme="http://liuqinh2s.github.io/blog/categories/Java/Java-web/"/>
+    
+    
+      <category term="Java" scheme="http://liuqinh2s.github.io/blog/tags/Java/"/>
+    
+  </entry>
   
   <entry>
     <title>编程珠玑系列笔记 -- 第二章 啊哈！算法</title>
@@ -32,6 +169,34 @@
           &lt;p&gt;本书的另一个中心思想显而易见：&lt;strong&gt;良好的算法是程序性能提升的关键。&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;下面还是通过探讨几个实例，来领会一下算法的重要性。&lt;/p&gt;
 &lt;h2 id=&quot;三个问题&quot;&gt;&lt;a class=&quot;header-anchor&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="读书笔记" scheme="http://liuqinh2s.github.io/blog/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
+    
+      <category term="《编程珠玑》" scheme="http://liuqinh2s.github.io/blog/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E3%80%8A%E7%BC%96%E7%A8%8B%E7%8F%A0%E7%8E%91%E3%80%8B/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>编程珠玑系列笔记 -- 第一章 开篇</title>
+    <link href="http://liuqinh2s.github.io/blog/2018/11/05/%E7%BC%96%E7%A8%8B%E7%8F%A0%E7%8E%91%E7%B3%BB%E5%88%97%E7%AC%94%E8%AE%B01/"/>
+    <id>http://liuqinh2s.github.io/blog/2018/11/05/编程珠玑系列笔记1/</id>
+    <published>2018-11-04T16:00:00.000Z</published>
+    <updated>2018-11-07T07:02:31.829Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;本书的中心思想：&lt;strong&gt;对实例研究的深入思考不仅有趣，而且可以获得实际的益处。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;规律和智慧都隐藏在实例之中，而我们通过实例来窥探它们。实例是道的载体。&lt;/p&gt;
+&lt;h2 id=&quot;开篇&quot;&gt;&lt;a class=&quot;header-anchor&quot;
         
       
     
@@ -72,11 +237,11 @@
   </entry>
   
   <entry>
-    <title>编程珠玑系列笔记 -- 第一章 开篇</title>
-    <link href="http://liuqinh2s.github.io/blog/2018/11/05/%E7%BC%96%E7%A8%8B%E7%8F%A0%E7%8E%91%E7%B3%BB%E5%88%97%E7%AC%94%E8%AE%B01/"/>
-    <id>http://liuqinh2s.github.io/blog/2018/11/05/编程珠玑系列笔记1/</id>
+    <title>mysql查询性能优化</title>
+    <link href="http://liuqinh2s.github.io/blog/2018/11/05/mysql%E6%9F%A5%E8%AF%A2%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/"/>
+    <id>http://liuqinh2s.github.io/blog/2018/11/05/mysql查询性能优化/</id>
     <published>2018-11-04T16:00:00.000Z</published>
-    <updated>2018-11-07T07:02:31.829Z</updated>
+    <updated>2018-11-05T01:35:20.755Z</updated>
     
     <summary type="html">
     
@@ -84,43 +249,15 @@
       
         
         
-          &lt;p&gt;本书的中心思想：&lt;strong&gt;对实例研究的深入思考不仅有趣，而且可以获得实际的益处。&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;规律和智慧都隐藏在实例之中，而我们通过实例来窥探它们。实例是道的载体。&lt;/p&gt;
-&lt;h2 id=&quot;开篇&quot;&gt;&lt;a class=&quot;header-anchor&quot;
+          &lt;h2 id=&quot;为查询缓存优化你的查询&quot;&gt;&lt;a class=&quot;header-anchor&quot; href=&quot;#为查询缓存优化你的查询&quot;&gt;
         
       
     
     </summary>
     
-      <category term="读书笔记" scheme="http://liuqinh2s.github.io/blog/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
+      <category term="数据库" scheme="http://liuqinh2s.github.io/blog/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
     
-      <category term="《编程珠玑》" scheme="http://liuqinh2s.github.io/blog/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E3%80%8A%E7%BC%96%E7%A8%8B%E7%8F%A0%E7%8E%91%E3%80%8B/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>程序员修炼之道（从小工到专家）</title>
-    <link href="http://liuqinh2s.github.io/blog/2018/11/05/%E7%A8%8B%E5%BA%8F%E5%91%98%E4%BF%AE%E7%82%BC%E4%B9%8B%E9%81%93%EF%BC%88%E4%BB%8E%E5%B0%8F%E5%B7%A5%E5%88%B0%E4%B8%93%E5%AE%B6%EF%BC%89/"/>
-    <id>http://liuqinh2s.github.io/blog/2018/11/05/程序员修炼之道（从小工到专家）/</id>
-    <published>2018-11-04T16:00:00.000Z</published>
-    <updated>2018-11-05T09:42:01.474Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h2 id=&quot;无意的重复&quot;&gt;&lt;a class=&quot;header-anchor&quot; href=&quot;#无意的重复&quot;&gt;
-        
-      
-    
-    </summary>
-    
-      <category term="读书笔记" scheme="http://liuqinh2s.github.io/blog/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
-    
-      <category term="《程序员修炼之道（从小工到专家）》" scheme="http://liuqinh2s.github.io/blog/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E3%80%8A%E7%A8%8B%E5%BA%8F%E5%91%98%E4%BF%AE%E7%82%BC%E4%B9%8B%E9%81%93%EF%BC%88%E4%BB%8E%E5%B0%8F%E5%B7%A5%E5%88%B0%E4%B8%93%E5%AE%B6%EF%BC%89%E3%80%8B/"/>
+      <category term="mysql" scheme="http://liuqinh2s.github.io/blog/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/mysql/"/>
     
     
   </entry>
@@ -178,11 +315,11 @@
   </entry>
   
   <entry>
-    <title>mysql查询性能优化</title>
-    <link href="http://liuqinh2s.github.io/blog/2018/11/05/mysql%E6%9F%A5%E8%AF%A2%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/"/>
-    <id>http://liuqinh2s.github.io/blog/2018/11/05/mysql查询性能优化/</id>
+    <title>程序员修炼之道（从小工到专家）</title>
+    <link href="http://liuqinh2s.github.io/blog/2018/11/05/%E7%A8%8B%E5%BA%8F%E5%91%98%E4%BF%AE%E7%82%BC%E4%B9%8B%E9%81%93%EF%BC%88%E4%BB%8E%E5%B0%8F%E5%B7%A5%E5%88%B0%E4%B8%93%E5%AE%B6%EF%BC%89/"/>
+    <id>http://liuqinh2s.github.io/blog/2018/11/05/程序员修炼之道（从小工到专家）/</id>
     <published>2018-11-04T16:00:00.000Z</published>
-    <updated>2018-11-05T01:35:20.755Z</updated>
+    <updated>2018-11-05T09:42:01.474Z</updated>
     
     <summary type="html">
     
@@ -190,15 +327,15 @@
       
         
         
-          &lt;h2 id=&quot;为查询缓存优化你的查询&quot;&gt;&lt;a class=&quot;header-anchor&quot; href=&quot;#为查询缓存优化你的查询&quot;&gt;
+          &lt;h2 id=&quot;无意的重复&quot;&gt;&lt;a class=&quot;header-anchor&quot; href=&quot;#无意的重复&quot;&gt;
         
       
     
     </summary>
     
-      <category term="数据库" scheme="http://liuqinh2s.github.io/blog/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
+      <category term="读书笔记" scheme="http://liuqinh2s.github.io/blog/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
     
-      <category term="mysql" scheme="http://liuqinh2s.github.io/blog/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/mysql/"/>
+      <category term="《程序员修炼之道（从小工到专家）》" scheme="http://liuqinh2s.github.io/blog/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E3%80%8A%E7%A8%8B%E5%BA%8F%E5%91%98%E4%BF%AE%E7%82%BC%E4%B9%8B%E9%81%93%EF%BC%88%E4%BB%8E%E5%B0%8F%E5%B7%A5%E5%88%B0%E4%B8%93%E5%AE%B6%EF%BC%89%E3%80%8B/"/>
     
     
   </entry>
@@ -228,65 +365,6 @@
     
     
       <category term="编辑器" scheme="http://liuqinh2s.github.io/blog/tags/%E7%BC%96%E8%BE%91%E5%99%A8/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>编译原理笔记</title>
-    <link href="http://liuqinh2s.github.io/blog/2018/11/04/%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/"/>
-    <id>http://liuqinh2s.github.io/blog/2018/11/04/编译原理笔记/</id>
-    <published>2018-11-03T16:00:00.000Z</published>
-    <updated>2018-11-04T08:35:31.681Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h2 id=&quot;编译原理知识点&quot;&gt;&lt;a class=&quot;header-anchor&quot; href=&quot;#编译原理知识点&quot;&gt;
-        
-      
-    
-    </summary>
-    
-      <category term="编译原理" scheme="http://liuqinh2s.github.io/blog/categories/%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%86/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>熟练使用JetBrains家的IDE</title>
-    <link href="http://liuqinh2s.github.io/blog/2018/11/04/%E7%86%9F%E7%BB%83%E4%BD%BF%E7%94%A8JetBrains%E5%AE%B6%E7%9A%84IDE/"/>
-    <id>http://liuqinh2s.github.io/blog/2018/11/04/熟练使用JetBrains家的IDE/</id>
-    <published>2018-11-03T16:00:00.000Z</published>
-    <updated>2018-11-04T08:12:01.100Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;ol&gt;
-&lt;li&gt;
-&lt;p&gt;格式化代码（reformat code）:&lt;br&gt;
-win: ctrl+alt+L&lt;br&gt;
-mac: command+option+L&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;在一行的任意位置使用： shift +
-        
-      
-    
-    </summary>
-    
-      <category term="工具" scheme="http://liuqinh2s.github.io/blog/categories/%E5%B7%A5%E5%85%B7/"/>
-    
-      <category term="IDE" scheme="http://liuqinh2s.github.io/blog/categories/%E5%B7%A5%E5%85%B7/IDE/"/>
-    
-    
-      <category term="IDE" scheme="http://liuqinh2s.github.io/blog/tags/IDE/"/>
     
   </entry>
   
@@ -346,29 +424,6 @@ mac: command+option+L&lt;/p&gt;
       <category term="Unix" scheme="http://liuqinh2s.github.io/blog/tags/Unix/"/>
     
       <category term="Linux" scheme="http://liuqinh2s.github.io/blog/tags/Linux/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>pom.xml详解</title>
-    <link href="http://liuqinh2s.github.io/blog/2018/11/04/pom.xml%E8%AF%A6%E8%A7%A3/"/>
-    <id>http://liuqinh2s.github.io/blog/2018/11/04/pom.xml详解/</id>
-    <published>2018-11-03T16:00:00.000Z</published>
-    <updated>2018-11-07T08:43:03.198Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;POM, Project Object Model，项目对象模型，是Maven的配置文件。&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;&lt;a href=&quot;https://zh.wikipedia.org/zh-hans/XML&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;什么是xml?&lt;/a&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-    
-    </summary>
-    
-      <category term="Java" scheme="http://liuqinh2s.github.io/blog/categories/Java/"/>
-    
-      <category term="Java web" scheme="http://liuqinh2s.github.io/blog/categories/Java/Java-web/"/>
-    
     
   </entry>
   
@@ -434,6 +489,38 @@ mac: command+option+L&lt;/p&gt;
   </entry>
   
   <entry>
+    <title>熟练使用JetBrains家的IDE</title>
+    <link href="http://liuqinh2s.github.io/blog/2018/11/04/%E7%86%9F%E7%BB%83%E4%BD%BF%E7%94%A8JetBrains%E5%AE%B6%E7%9A%84IDE/"/>
+    <id>http://liuqinh2s.github.io/blog/2018/11/04/熟练使用JetBrains家的IDE/</id>
+    <published>2018-11-03T16:00:00.000Z</published>
+    <updated>2018-11-16T03:55:04.961Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;通用快捷键&quot;&gt;&lt;a class=&quot;header-anchor&quot; href=&quot;#通用快捷键&quot;&gt; &lt;/a&gt;通用快捷键&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;格式化代码（reformat code）:&lt;br&gt;
+win: ctrl+alt+L&lt;br&gt;
+mac:
+        
+      
+    
+    </summary>
+    
+      <category term="工具" scheme="http://liuqinh2s.github.io/blog/categories/%E5%B7%A5%E5%85%B7/"/>
+    
+      <category term="IDE" scheme="http://liuqinh2s.github.io/blog/categories/%E5%B7%A5%E5%85%B7/IDE/"/>
+    
+    
+      <category term="IDE" scheme="http://liuqinh2s.github.io/blog/tags/IDE/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Linux 入门教程</title>
     <link href="http://liuqinh2s.github.io/blog/2018/11/04/Linux%E5%85%A5%E9%97%A8%E6%95%99%E7%A8%8B/"/>
     <id>http://liuqinh2s.github.io/blog/2018/11/04/Linux入门教程/</id>
@@ -467,110 +554,25 @@ mac: command+option+L&lt;/p&gt;
   </entry>
   
   <entry>
-    <title>Linux Shell 编程</title>
-    <link href="http://liuqinh2s.github.io/blog/2018/11/04/Linux%20Shell%20%E7%BC%96%E7%A8%8B/"/>
-    <id>http://liuqinh2s.github.io/blog/2018/11/04/Linux Shell 编程/</id>
+    <title>pom.xml详解</title>
+    <link href="http://liuqinh2s.github.io/blog/2018/11/04/pom.xml%E8%AF%A6%E8%A7%A3/"/>
+    <id>http://liuqinh2s.github.io/blog/2018/11/04/pom.xml详解/</id>
     <published>2018-11-03T16:00:00.000Z</published>
-    <updated>2018-11-05T08:08:22.981Z</updated>
+    <updated>2018-11-08T01:55:03.161Z</updated>
     
     <summary type="html">
     
-      
-      
-        
-        
-          &lt;h2 id=&quot;shell脚本学习笔记规范&quot;&gt;&lt;a class=&quot;header-anchor&quot; href=&quot;#shell脚本学习笔记规范&quot;&gt;
-        
-      
+      &lt;p&gt;POM, Project Object Model，项目对象模型，是Maven的配置文件。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;a href=&quot;https://zh.wikipedia.org/zh-hans/XML&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;什么是xml?&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
     
     </summary>
     
-      <category term="Unix" scheme="http://liuqinh2s.github.io/blog/categories/Unix/"/>
+      <category term="Java" scheme="http://liuqinh2s.github.io/blog/categories/Java/"/>
     
-      <category term="Linux" scheme="http://liuqinh2s.github.io/blog/categories/Unix/Linux/"/>
+      <category term="Java web" scheme="http://liuqinh2s.github.io/blog/categories/Java/Java-web/"/>
     
-    
-      <category term="Unix" scheme="http://liuqinh2s.github.io/blog/tags/Unix/"/>
-    
-      <category term="Linux" scheme="http://liuqinh2s.github.io/blog/tags/Linux/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>高效命令行</title>
-    <link href="http://liuqinh2s.github.io/blog/2018/11/03/%E9%AB%98%E6%95%88%E5%91%BD%E4%BB%A4%E8%A1%8C/"/>
-    <id>http://liuqinh2s.github.io/blog/2018/11/03/高效命令行/</id>
-    <published>2018-11-02T16:00:00.000Z</published>
-    <updated>2018-11-03T07:55:36.039Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h2 id=&quot;cli-快捷键&quot;&gt;&lt;a class=&quot;header-anchor&quot; href=&quot;#cli-快捷键&quot;&gt; &lt;/a&gt;CLI 快捷键&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;ctrl+a：移到命令首&lt;/li&gt;
-&lt;li&gt;ctrl+e：移到命令尾&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2
-        
-      
-    
-    </summary>
-    
-      <category term="Unix" scheme="http://liuqinh2s.github.io/blog/categories/Unix/"/>
-    
-    
-      <category term="Unix" scheme="http://liuqinh2s.github.io/blog/tags/Unix/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>mac osx 与 linux 的一些区别</title>
-    <link href="http://liuqinh2s.github.io/blog/2018/11/03/mac%20osx%20%E4%B8%8E%20linux%20%E7%9A%84%E4%B8%80%E4%BA%9B%E5%8C%BA%E5%88%AB/"/>
-    <id>http://liuqinh2s.github.io/blog/2018/11/03/mac osx 与 linux 的一些区别/</id>
-    <published>2018-11-02T16:00:00.000Z</published>
-    <updated>2018-11-04T07:14:22.484Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h2 id=&quot;mac-osx上-bashrc和-bash-profile的区别&quot;&gt;&lt;a class=&quot;header-anchor&quot; href=&quot;#mac-osx上-bashrc和-bash-profile的区别&quot;&gt; &lt;/a&gt;mac
-        
-      
-    
-    </summary>
-    
-      <category term="Unix" scheme="http://liuqinh2s.github.io/blog/categories/Unix/"/>
-    
-    
-      <category term="Unix" scheme="http://liuqinh2s.github.io/blog/tags/Unix/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>社交网站 -- 圈子</title>
-    <link href="http://liuqinh2s.github.io/blog/2018/11/02/Java%20Web%20%E5%AE%9E%E6%88%98/"/>
-    <id>http://liuqinh2s.github.io/blog/2018/11/02/Java Web 实战/</id>
-    <published>2018-11-01T16:00:00.000Z</published>
-    <updated>2018-11-05T03:31:24.951Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;我正在做一个社交网站，目前暂定叫做：圈子。这个项目从产品到UI到前端、后端全部都由我一个人操刀。&lt;/p&gt;
-&lt;p&gt;后端使用了 &lt;code&gt;Spring + SpringMVC + Mybatis&lt;/code&gt; 的框架组合，据说 &lt;code&gt;SpringBoot&lt;/code&gt; 很流行，后面我会学一下。前端使用了 &lt;code&gt;Vue&lt;/code&gt; 框架。产品设计移动端优先，使用了 &lt;code&gt;墨刀&lt;/code&gt; 这款工具。&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="项目" scheme="http://liuqinh2s.github.io/blog/categories/%E9%A1%B9%E7%9B%AE/"/>
-    
-    
-      <category term="Java" scheme="http://liuqinh2s.github.io/blog/tags/Java/"/>
     
   </entry>
   
