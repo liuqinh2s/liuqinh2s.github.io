@@ -49,7 +49,7 @@
     <link href="http://liuqinh2s.github.io/blog/2018/11/14/Java%E5%8F%8D%E5%B0%84/"/>
     <id>http://liuqinh2s.github.io/blog/2018/11/14/Java反射/</id>
     <published>2018-11-13T16:00:00.000Z</published>
-    <updated>2018-11-14T02:03:09.088Z</updated>
+    <updated>2018-11-19T06:25:45.931Z</updated>
     
     <summary type="html">
     
@@ -57,8 +57,7 @@
       
         
         
-          &lt;p&gt;最近在学习spring boot 框架，IOC非常依赖Java反射，所以顺带回顾一下Java反射&lt;/p&gt;
-&lt;h2 id=&quot;什么是反射？&quot;&gt;&lt;a class=&quot;header-anchor&quot; href=&quot;#什么是反射？&quot;&gt;
+          &lt;h2 id=&quot;应用场景&quot;&gt;&lt;a class=&quot;header-anchor&quot; href=&quot;#应用场景&quot;&gt;
         
       
     
@@ -341,6 +340,62 @@
   </entry>
   
   <entry>
+    <title>编译原理笔记</title>
+    <link href="http://liuqinh2s.github.io/blog/2018/11/04/%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/"/>
+    <id>http://liuqinh2s.github.io/blog/2018/11/04/编译原理笔记/</id>
+    <published>2018-11-03T16:00:00.000Z</published>
+    <updated>2018-11-04T08:35:31.681Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;编译原理知识点&quot;&gt;&lt;a class=&quot;header-anchor&quot; href=&quot;#编译原理知识点&quot;&gt;
+        
+      
+    
+    </summary>
+    
+      <category term="编译原理" scheme="http://liuqinh2s.github.io/blog/categories/%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%86/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>熟练使用JetBrains家的IDE</title>
+    <link href="http://liuqinh2s.github.io/blog/2018/11/04/%E7%86%9F%E7%BB%83%E4%BD%BF%E7%94%A8JetBrains%E5%AE%B6%E7%9A%84IDE/"/>
+    <id>http://liuqinh2s.github.io/blog/2018/11/04/熟练使用JetBrains家的IDE/</id>
+    <published>2018-11-03T16:00:00.000Z</published>
+    <updated>2018-11-19T06:23:17.204Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;通用快捷键&quot;&gt;&lt;a class=&quot;header-anchor&quot; href=&quot;#通用快捷键&quot;&gt; &lt;/a&gt;通用快捷键&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;格式化代码（reformat code）:&lt;br&gt;
+win: ctrl+alt+L&lt;br&gt;
+mac:
+        
+      
+    
+    </summary>
+    
+      <category term="工具" scheme="http://liuqinh2s.github.io/blog/categories/%E5%B7%A5%E5%85%B7/"/>
+    
+      <category term="IDE" scheme="http://liuqinh2s.github.io/blog/categories/%E5%B7%A5%E5%85%B7/IDE/"/>
+    
+    
+      <category term="IDE" scheme="http://liuqinh2s.github.io/blog/tags/IDE/"/>
+    
+  </entry>
+  
+  <entry>
     <title>精通一款编辑器之sublime text 3</title>
     <link href="http://liuqinh2s.github.io/blog/2018/11/04/%E7%B2%BE%E9%80%9A%E4%B8%80%E6%AC%BE%E7%BC%96%E8%BE%91%E5%99%A8%E4%B9%8Bsublime%20text%203/"/>
     <id>http://liuqinh2s.github.io/blog/2018/11/04/精通一款编辑器之sublime text 3/</id>
@@ -428,6 +483,29 @@
   </entry>
   
   <entry>
+    <title>pom.xml详解</title>
+    <link href="http://liuqinh2s.github.io/blog/2018/11/04/pom.xml%E8%AF%A6%E8%A7%A3/"/>
+    <id>http://liuqinh2s.github.io/blog/2018/11/04/pom.xml详解/</id>
+    <published>2018-11-03T16:00:00.000Z</published>
+    <updated>2018-11-08T01:55:03.161Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;POM, Project Object Model，项目对象模型，是Maven的配置文件。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;a href=&quot;https://zh.wikipedia.org/zh-hans/XML&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;什么是xml?&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+    
+    </summary>
+    
+      <category term="Java" scheme="http://liuqinh2s.github.io/blog/categories/Java/"/>
+    
+      <category term="Java web" scheme="http://liuqinh2s.github.io/blog/categories/Java/Java-web/"/>
+    
+    
+  </entry>
+  
+  <entry>
     <title>git 使用技巧</title>
     <link href="http://liuqinh2s.github.io/blog/2018/11/04/git%20%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7/"/>
     <id>http://liuqinh2s.github.io/blog/2018/11/04/git 使用技巧/</id>
@@ -485,94 +563,6 @@
       <category term="Unix" scheme="http://liuqinh2s.github.io/blog/tags/Unix/"/>
     
       <category term="Linux" scheme="http://liuqinh2s.github.io/blog/tags/Linux/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>熟练使用JetBrains家的IDE</title>
-    <link href="http://liuqinh2s.github.io/blog/2018/11/04/%E7%86%9F%E7%BB%83%E4%BD%BF%E7%94%A8JetBrains%E5%AE%B6%E7%9A%84IDE/"/>
-    <id>http://liuqinh2s.github.io/blog/2018/11/04/熟练使用JetBrains家的IDE/</id>
-    <published>2018-11-03T16:00:00.000Z</published>
-    <updated>2018-11-16T03:55:04.961Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h2 id=&quot;通用快捷键&quot;&gt;&lt;a class=&quot;header-anchor&quot; href=&quot;#通用快捷键&quot;&gt; &lt;/a&gt;通用快捷键&lt;/h2&gt;
-&lt;ol&gt;
-&lt;li&gt;格式化代码（reformat code）:&lt;br&gt;
-win: ctrl+alt+L&lt;br&gt;
-mac:
-        
-      
-    
-    </summary>
-    
-      <category term="工具" scheme="http://liuqinh2s.github.io/blog/categories/%E5%B7%A5%E5%85%B7/"/>
-    
-      <category term="IDE" scheme="http://liuqinh2s.github.io/blog/categories/%E5%B7%A5%E5%85%B7/IDE/"/>
-    
-    
-      <category term="IDE" scheme="http://liuqinh2s.github.io/blog/tags/IDE/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Linux 入门教程</title>
-    <link href="http://liuqinh2s.github.io/blog/2018/11/04/Linux%E5%85%A5%E9%97%A8%E6%95%99%E7%A8%8B/"/>
-    <id>http://liuqinh2s.github.io/blog/2018/11/04/Linux入门教程/</id>
-    <published>2018-11-03T16:00:00.000Z</published>
-    <updated>2018-11-05T08:08:13.996Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;这是我亲自写的一份教程（没有参考任何其他人），我认为的最合适的入门应该学些什么，请耐心阅读吧。&lt;/p&gt;
-&lt;p&gt;概念：目录，路径，相对路径，绝对路径，文件系统，文件，环境变量&lt;/p&gt;
-&lt;p&gt;cd（change directory）后接目录，如：&lt;br&gt;
-&lt;code&gt;cd
-        
-      
-    
-    </summary>
-    
-      <category term="Unix" scheme="http://liuqinh2s.github.io/blog/categories/Unix/"/>
-    
-      <category term="Linux" scheme="http://liuqinh2s.github.io/blog/categories/Unix/Linux/"/>
-    
-    
-      <category term="Unix" scheme="http://liuqinh2s.github.io/blog/tags/Unix/"/>
-    
-      <category term="Linux" scheme="http://liuqinh2s.github.io/blog/tags/Linux/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>pom.xml详解</title>
-    <link href="http://liuqinh2s.github.io/blog/2018/11/04/pom.xml%E8%AF%A6%E8%A7%A3/"/>
-    <id>http://liuqinh2s.github.io/blog/2018/11/04/pom.xml详解/</id>
-    <published>2018-11-03T16:00:00.000Z</published>
-    <updated>2018-11-08T01:55:03.161Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;POM, Project Object Model，项目对象模型，是Maven的配置文件。&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;&lt;a href=&quot;https://zh.wikipedia.org/zh-hans/XML&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;什么是xml?&lt;/a&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-    
-    </summary>
-    
-      <category term="Java" scheme="http://liuqinh2s.github.io/blog/categories/Java/"/>
-    
-      <category term="Java web" scheme="http://liuqinh2s.github.io/blog/categories/Java/Java-web/"/>
-    
     
   </entry>
   

@@ -27,11 +27,16 @@ public static void main(String[] args) {
 }
 ```
 
-使用IDE的右键中的生成Getter Setter选项自动生成Getter Setter，使用toString自动生成toString。
+3. 使用IDE的右键中的生成Getter Setter选项自动生成Getter Setter，使用toString自动生成toString。
 
-跳转到接口：`ctrl+b`； 跳转到实现类：`ctrl + alt +B`
+4. 跳转到接口：`ctrl+b`； 跳转到实现类：`ctrl + alt +B`
 
-![](../../../../images/2018/idea图解.png)
+5. ![](../../../../images/2018/idea图解.png)
 
 上面这个按钮可以快速的在目录树中定位到当前类所在的路径
+
+6. ctrl+alt+t
+
+![idea-ctrl+alt+t.png](../../../../images/2018/idea-ctrl+alt+t.png)
+
 
