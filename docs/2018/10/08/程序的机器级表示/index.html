@@ -83,7 +83,7 @@
 
 <meta name="description" content="从编译C语言文件说起 1$ gcc -01 -o p p1.c p2.c 使用了gcc命令来编译，也可以简单写作：cc。 优化层级为1，1级是最低的，层级越高程序优化越好，但增加了编译时间，也使调试变得更难，且跟源程序差异很大不便于理解。 编译的流程是：  预处理器（preprocessor）把诸如：#include、#define、#if、#else、#elif、#ifdef、#endif等预">
 <meta property="og:type" content="article">
-<meta property="og:title" content="程序的机器级表示">
+<meta property="og:title" content="《CSAPP》读书笔记 -- 第3章：程序的机器级表示">
 <meta property="og:url" content="http://liuqinh2s.github.io/blog/2018/10/08/程序的机器级表示/index.html">
 <meta property="og:site_name" content="liuqinh2s&#39; blog">
 <meta property="og:description" content="从编译C语言文件说起 1$ gcc -01 -o p p1.c p2.c 使用了gcc命令来编译，也可以简单写作：cc。 优化层级为1，1级是最低的，层级越高程序优化越好，但增加了编译时间，也使调试变得更难，且跟源程序差异很大不便于理解。 编译的流程是：  预处理器（preprocessor）把诸如：#include、#define、#if、#else、#elif、#ifdef、#endif等预">
@@ -119,9 +119,9 @@
 <meta property="og:image" content="http://liuqinh2s.github.io/blog/images/2018/%E9%87%91%E4%B8%9D%E9%9B%80%E5%80%BC.png">
 <meta property="og:image" content="http://liuqinh2s.github.io/blog/images/2018/%E5%90%AB%E9%87%91%E4%B8%9D%E9%9B%80%E5%80%BC%E6%B1%87%E7%BC%96%E7%A0%811.png">
 <meta property="og:image" content="http://liuqinh2s.github.io/blog/images/2018/%E5%90%AB%E9%87%91%E4%B8%9D%E9%9B%80%E5%80%BC%E6%B1%87%E7%BC%96%E7%A0%812.png">
-<meta property="og:updated_time" content="2018-11-05T07:11:23.034Z">
+<meta property="og:updated_time" content="2018-11-21T03:07:18.025Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="程序的机器级表示">
+<meta name="twitter:title" content="《CSAPP》读书笔记 -- 第3章：程序的机器级表示">
 <meta name="twitter:description" content="从编译C语言文件说起 1$ gcc -01 -o p p1.c p2.c 使用了gcc命令来编译，也可以简单写作：cc。 优化层级为1，1级是最低的，层级越高程序优化越好，但增加了编译时间，也使调试变得更难，且跟源程序差异很大不便于理解。 编译的流程是：  预处理器（preprocessor）把诸如：#include、#define、#if、#else、#elif、#ifdef、#endif等预">
 <meta name="twitter:image" content="http://liuqinh2s.github.io/blog/images/2018/%E5%8F%8D%E6%B1%87%E7%BC%96.png">
 
@@ -159,7 +159,7 @@
 
 
 
-  <title>程序的机器级表示 | liuqinh2s' blog</title>
+  <title>《CSAPP》读书笔记 -- 第3章：程序的机器级表示 | liuqinh2s' blog</title>
   
 
 
@@ -357,7 +357,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">程序的机器级表示</h1>
+          <h1 class="post-title" itemprop="name headline">《CSAPP》读书笔记 -- 第3章：程序的机器级表示</h1>
         
 
         <div class="post-meta">
@@ -439,7 +439,7 @@
                   <span class="post-meta-item-text">Words count in article&#58;</span>
                 
                 <span title="Words count in article">
-                  6,130
+                  6,250
                 </span>
               
 
@@ -479,7 +479,7 @@
 <p>编译器做了整个编译流程的大部分工作，汇编代码几乎就是机器码的供人阅读版。所以看懂汇编代码是关键。</p>
 <p>IA32程序代码和C语言很不相同，一些在C语言下看不到的处理器状态可以在这里看到：</p>
 <ul>
-<li>程序计数器（program counter，PC，也叫：instructor pointer）在IA32中叫：<code>%eip</code>，指出下一条指令在内存中的位置</li>
+<li>程序计数器（program counter，PC，也叫：instructor pointer，IP）在IA32中叫：<code>%eip</code>，指出下一条指令在内存中的位置</li>
 <li>整数寄存器，可以用来保存数据</li>
 <li>状态码寄存器，可以用来实现条件控制代码如：if和while</li>
 <li>浮点寄存器，用来计算浮点数</li>
@@ -677,7 +677,7 @@
 <p>有以下几个要点：</p>
 <ol>
 <li>栈是倒着长的</li>
-<li>每个过程调用都有一个stack frame，程序帧</li>
+<li>每个过程调用都有一个stack frame，栈帧</li>
 <li>栈顶帧用两个指针来维护，一个是帧起址：%ebp，一个是栈指针：%esp指向栈顶。</li>
 </ol>
 <p>%esp在过程运行的时候可能会被抹掉，这时候可以通过%ebp来定位。</p>
@@ -719,14 +719,18 @@
 <p>然后执行调用完swap_add之后的代码：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">movl -4(%ebp), %edx</span><br><span class="line">subl -8(%ebp), %edx</span><br><span class="line">imull %edx, %eax</span><br><span class="line">leave</span><br><span class="line">ret</span><br></pre></td></tr></table></figure>
 <p>leave指令的作用是重置栈指针和帧指针，也可以使用popl来重置，很简单：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">movl -4(%ebp), %esp</span><br><span class="line">popl %ebp</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">//使%esp指向%ebp的地址（也就是Saved %ebp那里）</span><br><span class="line">movl %ebp, %esp</span><br><span class="line">//popl指令会导致%esp+4，所以%esp之后会指向上一帧的帧尾（也就是Return Address那里），popl的内容则放到了%ebp里面</span><br><span class="line">popl %ebp</span><br></pre></td></tr></table></figure>
+<p>而之后的<code>ret</code>指令继续将<code>Return Address</code> pop出来，并将<code>Return Address</code>放到PC中。</p>
 <p>从这个例子我们可以看出，编译器遵循一组简单的惯例来管理栈结构。</p>
 <ol>
 <li>通过%ebp加偏移量（+8,+12,…）访问参数</li>
 <li>通过push指令或者栈指针减偏移量来分配栈空间</li>
-<li>在返回前恢复保存好的寄存器，并使栈指针指向调用者的返回地址</li>
+<li>在返回前恢复保存好的寄存器，并使栈指针指向调用者的返回地址（Return Address）</li>
 </ol>
 <p>数组、多维数组、结构体、联合体这些都比较简单，这里略过。</p>
+<blockquote>
+<p>要注意的点：只有call才会push一个返回地址，所以swap_add的栈帧中并没有返回地址，说明它没有调用其他函数</p>
+</blockquote>
 <h2 id="指针"><a class="header-anchor" href="#指针"> </a>指针</h2>
 <p>每种数据类型都有对应的指针类型，但指针类型不是机器码的一部分，只是C语言提供的一种抽象，帮助程序员避免犯错。</p>
 <h2 id="内存引用越界和缓冲区溢出"><a class="header-anchor" href="#内存引用越界和缓冲区溢出"> </a>内存引用越界和缓冲区溢出</h2>
@@ -787,8 +791,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/blog/2018/09/27/浮点数原理/" rel="next" title="浮点数原理">
-                <i class="fa fa-chevron-left"></i> 浮点数原理
+              <a href="/blog/2018/09/27/浮点数原理/" rel="next" title="《CSAPP》读书笔记 -- 第2章：浮点数原理（小专题）">
+                <i class="fa fa-chevron-left"></i> 《CSAPP》读书笔记 -- 第2章：浮点数原理（小专题）
               </a>
             
           </div>
@@ -797,8 +801,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/blog/2018/10/13/处理器体系结构/" rel="prev" title="处理器体系结构">
-                处理器体系结构 <i class="fa fa-chevron-right"></i>
+              <a href="/blog/2018/10/13/处理器体系结构/" rel="prev" title="《CSAPP》读书笔记 -- 第4章：处理器体系结构">
+                《CSAPP》读书笔记 -- 第4章：处理器体系结构 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -885,7 +889,7 @@
               
                 <a href="/blog/archives">
               
-                  <span class="site-state-item-count">76</span>
+                  <span class="site-state-item-count">78</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -896,7 +900,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/blog/categories/index.html">
-                  <span class="site-state-item-count">43</span>
+                  <span class="site-state-item-count">44</span>
                   <span class="site-state-item-name">categories</span>
                 </a>
               </div>
@@ -1027,7 +1031,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">132.4k</span>
+    <span title="Site words total count">132.6k</span>
   
 </div>
 
