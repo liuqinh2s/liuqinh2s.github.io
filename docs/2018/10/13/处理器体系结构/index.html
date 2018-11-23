@@ -101,7 +101,24 @@
 <meta property="og:image" content="http://liuqinh2s.github.io/blog/images/2018/%E5%AD%97%E7%BA%A7%E5%BC%82%E6%88%96%E7%94%B5%E8%B7%AF.png">
 <meta property="og:image" content="http://liuqinh2s.github.io/blog/images/2018/%E5%AD%97%E7%BA%A7%E5%A4%9A%E8%B7%AF%E5%A4%8D%E7%94%A8%E7%94%B5%E8%B7%AF.png">
 <meta property="og:image" content="http://liuqinh2s.github.io/blog/images/2018/%E5%9B%9B%E8%B7%AF%E5%A4%8D%E7%94%A8%E5%99%A8.png">
-<meta property="og:updated_time" content="2018-11-21T03:07:49.216Z">
+<meta property="og:image" content="http://liuqinh2s.github.io/blog/images/2018/%E6%9C%80%E5%B0%8F%E5%80%BC%E7%94%B5%E8%B7%AF.png">
+<meta property="og:image" content="http://liuqinh2s.github.io/blog/images/2018/ALU.png">
+<meta property="og:image" content="http://liuqinh2s.github.io/blog/images/2018/%E9%9B%86%E5%90%88%E5%85%B3%E7%B3%BB.png">
+<meta property="og:image" content="http://liuqinh2s.github.io/blog/images/2018/%E7%A1%AC%E4%BB%B6%E5%AF%84%E5%AD%98%E5%99%A8.png">
+<meta property="og:image" content="http://liuqinh2s.github.io/blog/images/2018/%E5%AF%84%E5%AD%98%E5%99%A8%E6%96%87%E4%BB%B6.png">
+<meta property="og:image" content="http://liuqinh2s.github.io/blog/images/2018/%E9%9A%8F%E6%9C%BA%E8%AE%BF%E9%97%AE%E5%AD%98%E5%82%A8%E5%99%A8.png">
+<meta property="og:image" content="http://liuqinh2s.github.io/blog/images/2018/Y86%E6%8C%87%E4%BB%A4%E9%98%B6%E6%AE%B5%E8%A7%A3%E6%9E%90.png">
+<meta property="og:image" content="http://liuqinh2s.github.io/blog/images/2018/4-18.png">
+<meta property="og:image" content="http://liuqinh2s.github.io/blog/images/2018/subl%E6%8C%87%E4%BB%A4.png">
+<meta property="og:image" content="http://liuqinh2s.github.io/blog/images/2018/4-19.png">
+<meta property="og:image" content="http://liuqinh2s.github.io/blog/images/2018/rmmovl%E6%8C%87%E4%BB%A4.png">
+<meta property="og:image" content="http://liuqinh2s.github.io/blog/images/2018/4-20.png">
+<meta property="og:image" content="http://liuqinh2s.github.io/blog/images/2018/pushl%E6%8C%87%E4%BB%A4.png">
+<meta property="og:image" content="http://liuqinh2s.github.io/blog/images/2018/4-21.png">
+<meta property="og:image" content="http://liuqinh2s.github.io/blog/images/2018/je%E6%8C%87%E4%BB%A4.png">
+<meta property="og:image" content="http://liuqinh2s.github.io/blog/images/2018/ret%E6%8C%87%E4%BB%A4.png">
+<meta property="og:image" content="http://liuqinh2s.github.io/blog/images/2018/SEQ%E7%A1%AC%E4%BB%B6%E7%BB%93%E6%9E%84.png">
+<meta property="og:updated_time" content="2018-11-23T02:00:16.362Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="《CSAPP》读书笔记 -- 第4章：处理器体系结构">
 <meta name="twitter:description" content="阅读这篇文章必须要对汇编码有足够的了解，如果你对IA32汇编码还不够了解，可以先看看这篇文章：程序的机器级表示  Y86指令集体系结构 Y86指令集基本上是IA32指令集的一个子集。这个指令集就是我们处理器实现的目标。如下图：  IA32的movl指令分成了4个不同指令：irmovl、rrmovl、mrmovl和rmmovl，i表示立即数Immediate，r表示寄存器Register，m表示存储">
@@ -421,7 +438,7 @@
                   <span class="post-meta-item-text">Words count in article&#58;</span>
                 
                 <span title="Words count in article">
-                  1,489
+                  3,476
                 </span>
               
 
@@ -453,7 +470,7 @@
 <p>IA32的movl指令分成了4个不同指令：irmovl、rrmovl、mrmovl和rmmovl，i表示立即数Immediate，r表示寄存器Register，m表示存储器Memmory。第一个字母表示源，第二个字母表示目的。</p>
 <p>这里不实现的功能有：</p>
 <ol>
-<li>存储器引用方式是简单的基址+偏移量形式，不支持变址寄存器（second index register）和任何寄存器伸缩（scaling）。</li>
+<li>存储器引用方式是简单的基址+偏移量形式，不支持变址寄存器（second index register）和任何寄存器伸缩（scaling）。如果对操作数的结构不太了解可以看看这个：<a href="../../08/%E7%A8%8B%E5%BA%8F%E7%9A%84%E6%9C%BA%E5%99%A8%E7%BA%A7%E8%A1%A8%E7%A4%BA/#%E6%93%8D%E4%BD%9C%E6%95%B0%E6%8C%87%E7%A4%BA%E7%AC%A6">操作数指示符</a></li>
 <li>和IA32一样不允许从一个存储器直接传送到另一个存储器地址。</li>
 <li>不允许立即数传送到存储器</li>
 </ol>
@@ -464,7 +481,7 @@
 <h3 id="指令编码"><a class="header-anchor" href="#指令编码"> </a>指令编码</h3>
 <p>与IA32一样使用小端编码。</p>
 <p><img src="../../../../images/2018/%E6%8C%87%E4%BB%A4%E7%BC%96%E7%A0%81.png" alt="指令编码"></p>
-<p>每条指令的第一个字节表明指令的类型，这个字节分为两部分，每部分4位：高4位是代码（code）部分，低4位是功能（function）部分。代码值为 0~0xB。可以观察到，<code>rrmovl</code>与条件传送指令有同样的指令代码，可以把它看作是一个无条件传送，就好像jmp指令是无条件跳转一样，它们的功能代码都是0。</p>
+<p>每条指令的第一个字节表明指令的类型，这个字节分为两部分，每部分4位：高4位是代码（code）部分，低4位是功能（function）部分。代码值为 0~0xB。可以观察到，<code>rrmovl</code>与条件传送指令有同样的代码部分，可以把它看作是一个无条件传送。</p>
 <p>寄存器编码如下：</p>
 <p><img src="../../../../images/2018/%E5%AF%84%E5%AD%98%E5%99%A8%E7%BC%96%E7%A0%81.png" alt="寄存器编码"></p>
 <p>举个例子：用16进制表示指令 <code>rmmvol %esp, 0x12345(%edx)</code>的字节编码。</p>
@@ -476,10 +493,10 @@
 <li>RISC: reduced instruction set computers，精简指令集</li>
 <li>CISC: complex instruction set computers，复杂指令集</li>
 </ul>
-<h2 id="y86异常"><a class="header-anchor" href="#y86异常"> </a>Y86异常</h2>
+<h3 id="y86异常"><a class="header-anchor" href="#y86异常"> </a>Y86异常</h3>
 <p><img src="../../../../images/2018/Y86%E5%BC%82%E5%B8%B8.png" alt="Y86异常"></p>
 <p>对于Y86，当遇到这些异常的时候，我们简单的让处理器停止执行指令。在更完善的设计中，处理器通常会调用一个 exception handler（异常处理程序），这个过程被指定用来处理遇到的某种类型的异常，例如放弃程序或调用一个用户自定义的 signal handler（信号处理程序）。</p>
-<h2 id="y86程序"><a class="header-anchor" href="#y86程序"> </a>Y86程序</h2>
+<h3 id="y86程序"><a class="header-anchor" href="#y86程序"> </a>Y86程序</h3>
 <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">Sum</span><span class="params">(<span class="keyword">int</span> *Start, <span class="keyword">int</span> Count)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> sum = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">while</span> (Count) &#123;</span><br><span class="line">        sum += *Start;</span><br><span class="line">        Start++;</span><br><span class="line">        Count--;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> sum; </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p><img src="../../../../images/2018/IA32%E5%AF%B9%E6%AF%94Y86%E4%BB%A3%E7%A0%81.png" alt="IA32对比Y86代码"></p>
 <p>可以看到Y86有时候需要两条指令来完成IA32一条指令就能完成的事。然而如果用数组索引来写这个程序，要转换成Y86会很困难，因为Y86没有伸缩寻址。</p>
@@ -487,11 +504,12 @@
 <p><img src="../../../../images/2018/Y86%E6%B1%87%E7%BC%96%E4%BB%A3%E7%A0%81.png" alt="Y86汇编代码"></p>
 <p>以<code>.</code>开头的是 assembler directive（汇编器命令），命令<code>.pos 0</code>告诉汇编器应该从地址0处开始产生代码。第3、4行使用的Stack标签，在最后有声明，其位置是0x100。第9到13行声明了一个数组，4字节对齐，值分别是：0xd，0xc0，0xb00，0xa000，array标签是起址。</p>
 <blockquote>
-<p>细节问题，<code>pushl %esp</code>（这个指令只能用汇编语言写，C语言无法产生）是先把%esp的值转移到栈，还是先%esp减4再将结果转移到栈，实际上不同版本的intel处理器都会产生不同的结果，所以一个很重要的教训是<br>
-要保证细节上的一贯性。</p>
+<p>细节问题，<code>pushl %esp</code>（这个指令只能用汇编语言写，C语言无法产生）是先把%esp的值转移到栈，还是先%esp减4再将结果转移到栈，实际上不同版本的intel处理器都会产生不同的结果，所以一个很重要的教训是要保证细节上的一贯性。</p>
 </blockquote>
-<h2 id="逻辑设计和硬件控制语言hcl"><a class="header-anchor" href="#逻辑设计和硬件控制语言hcl"> </a>逻辑设计和硬件控制语言HCL</h2>
+<h2 id="逻辑设计和硬件控制语言hcl-hardware-control-language"><a class="header-anchor" href="#逻辑设计和硬件控制语言hcl-hardware-control-language"> </a>逻辑设计和硬件控制语言HCL（Hardware Control Language）</h2>
+<h3 id="逻辑门"><a class="header-anchor" href="#逻辑门"> </a>逻辑门</h3>
 <p><img src="../../../../images/2018/%E9%80%BB%E8%BE%91%E9%97%A8.png" alt="逻辑门"></p>
+<h3 id="组合电路和hcl语言"><a class="header-anchor" href="#组合电路和hcl语言"> </a>组合电路和HCL语言</h3>
 <p>构建一个组合电路有两条限制：</p>
 <ol>
 <li>两个或多个逻辑门的输出不能连接在一起。这样会导致线上的信号矛盾，产生不合法的电压或电路故障。</li>
@@ -506,19 +524,88 @@
 <p><img src="../../../../images/2018/MUX%E7%BB%84%E5%90%88%E7%94%B5%E8%B7%AF.png" alt="MUX组合电路"></p>
 <p><code>bool out = (s &amp;&amp; a) || (!s &amp;&amp; b)</code></p>
 <h3 id="字级的组合电路和hcl整数表达式"><a class="header-anchor" href="#字级的组合电路和hcl整数表达式"> </a>字级的组合电路和HCL整数表达式</h3>
+<p>通常我们设计能对字（word）进行操作的组合电路，字级电路中用到的就是HCL整数表达式了。</p>
 <p>字级与电路：</p>
 <p><img src="../../../../images/2018/%E5%AD%97%E7%BA%A7%E4%B8%8E%E7%94%B5%E8%B7%AF.png" alt="字级与电路"></p>
 <p><code>bool Eq = (A == B);</code></p>
 <p>也可以用异或来实现：</p>
 <p><img src="../../../../images/2018/%E5%AD%97%E7%BA%A7%E5%BC%82%E6%88%96%E7%94%B5%E8%B7%AF.png" alt="字级异或电路"></p>
+<p>在HCL中，多路复用函数是用情况表达式（case expression）来描述的。情况表达式的通用格式如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">[</span><br><span class="line">    select_1 : expr_1;</span><br><span class="line">    select_2 : expr_2;</span><br><span class="line">             .</span><br><span class="line">             .</span><br><span class="line">             .</span><br><span class="line">    select_k : expr_k;</span><br><span class="line">]</span><br></pre></td></tr></table></figure>
+<p>同C语言的switch语句不同，我们不要求不同的选择表达式之间互斥。从逻辑上讲，这些选择表达式是顺序求值的，且第一个求值为1的情况就会被选中。</p>
 <p>字级多路复用电路：</p>
 <p><img src="../../../../images/2018/%E5%AD%97%E7%BA%A7%E5%A4%9A%E8%B7%AF%E5%A4%8D%E7%94%A8%E7%94%B5%E8%B7%AF.png" alt="字级多路复用电路"></p>
 <p>用HCL来描述就是：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">int Out = [</span><br><span class="line">    s: A;</span><br><span class="line">    1: B;</span><br><span class="line">];</span><br></pre></td></tr></table></figure>
+<p>大多数人第一眼是看不懂这个表达式的，其实里面有个暗含的条件：先执行 <code>s: A;</code> 如果失败（没有输出A）才会再执行 <code>1: B;</code>。而<code>1: B;</code>实际上是<code>!s&amp;&amp;1: B;</code>的简写。没有输出A就已经代表s是0了，那么!s就是1。</p>
 <p>四路复用器：</p>
 <p><img src="../../../../images/2018/%E5%9B%9B%E8%B7%AF%E5%A4%8D%E7%94%A8%E5%99%A8.png" alt="四路复用器"></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">int Out4 = [</span><br><span class="line">    !s1 &amp;&amp; !s0: A; # 00</span><br><span class="line">    !s1       : B; # 01</span><br><span class="line">    !s0       : C; # 10</span><br><span class="line">    1         : D; # 11</span><br><span class="line">];</span><br></pre></td></tr></table></figure>
 <p>第二个表达式可以写成<code>!s1</code>，而不用写的更完整<code>!s1&amp;&amp;s0</code>，是因为另一种可能<code>s0=0</code>已经出现在了第一个选择表达式了，若能到达第二个选择表达式，则<code>s0=1</code>。类似的，第三个表达式可以写成<code>!s0</code>，第四个表达式可以简单的写成1。</p>
+<p>来看最后一个例子，假设我们想设计一个逻辑电路来找一组字A、B和C中的最小值，如下图所示：</p>
+<p><img src="../../../../images/2018/%E6%9C%80%E5%B0%8F%E5%80%BC%E7%94%B5%E8%B7%AF.png" alt="最小值电路"></p>
+<p>用HCL来表达：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">int Min3 = [</span><br><span class="line">    A&lt;=B &amp;&amp; A&lt;=C : A;</span><br><span class="line">    B&lt;=A &amp;&amp; B&lt;=C : B;</span><br><span class="line">    1            : C;</span><br><span class="line">]</span><br></pre></td></tr></table></figure>
+<p>算术逻辑单元（arithmetic/logic unit, ALU）</p>
+<p><img src="../../../../images/2018/ALU.png" alt="ALU"></p>
+<h3 id="集合关系"><a class="header-anchor" href="#集合关系"> </a>集合关系</h3>
+<p><img src="../../../../images/2018/%E9%9B%86%E5%90%88%E5%85%B3%E7%B3%BB.png" alt="集合关系"></p>
+<p>在这个电路中，两位的信号code就可以用来控制对4个数据字A、B、C和D做选择。根据可能的code值，可以用相等测试来表示信号s1和s0的产生：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">bool s1= code==2 || code==3;</span><br><span class="line">bool s0= code==1 || code==3;</span><br></pre></td></tr></table></figure>
+<p>还有一种更简洁的方式来表示这样的属性：当code在集合<code>{2,3}</code>中s1为1，而code在集合<code>{1,3}</code>中s0为1：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">bool s1= code in &#123;2,3&#125;;</span><br><span class="line">bool s0= code in &#123;1,3&#125;;</span><br></pre></td></tr></table></figure>
+<p>判断集合关系的通用格式：<code>iexpr in {iexpr1, iexpr2, ... , iexprk}</code></p>
+<h3 id="存储器和时钟"><a class="header-anchor" href="#存储器和时钟"> </a>存储器和时钟</h3>
+<p>组合电路从本质上讲，不存储任何信息，它们只是简单的根据输入信号产生一个输出信号。为了产生时序电路（sequential circuit），也就是有状态并且在这个状态上进行计算的系统，我们必须引入按位存储信息的设备。存储设备都是由同一个时钟控制，时钟是一个周期性信号，决定什么时候要把新值加载到设备中。考虑两类存储器设备：</p>
+<ul>
+<li><strong>时钟寄存器</strong>（简称寄存器）存储单个位或字。时钟信号控制寄存器加载输入值。</li>
+<li><strong>随机访问存储器</strong>（简称存储器）存储多个字，用地址来选择该读或该写哪个字。随机访问存储器的例子包括：1.处理器的虚拟存储器系统（由硬件和操作系统结合起来使处理器可以在一个很大的地址空间内访问任意的字，硬件上包括由缓存、内存、外存）。2.寄存器文件，在此，寄存器标识符作为地址。在IA32或Y86处理器中，寄存器文件有8个程序寄存器（%eax、%ecx等）。</li>
+</ul>
+<p>正如我们看到的那样，在说到硬件和机器级编程时，“寄存器”这个词是有两个不同的意思的。需要避免歧义的时候，我们分别称呼这两类寄存器为：<code>硬件寄存器</code>和<code>程序寄存器</code>。</p>
+<p>下图说明了硬件寄存器是如何工作的：</p>
+<p><img src="../../../../images/2018/%E7%A1%AC%E4%BB%B6%E5%AF%84%E5%AD%98%E5%99%A8.png" alt="硬件寄存器"></p>
+<p>寄存器是作为电路不同部分中的组合逻辑之间的屏障。我们的Y86处理器会用时钟寄存器保存程序计数器（PC），条件码（CC）和程序状态（Stat）。</p>
+<p>下图展示了一个典型的寄存器文件：</p>
+<p><img src="../../../../images/2018/%E5%AF%84%E5%AD%98%E5%99%A8%E6%96%87%E4%BB%B6.png" alt="寄存器文件"></p>
+<p>寄存器文件有两个读端口，一个写端口。每个端口都有一个地址输入，地址是图4-4中的寄存器标识符。这样一个多端口随机访问存储器允许同时进行多个读和写操作。</p>
+<p>虽然寄存器文件不是组合电路，因为它有内部存储。不过在我们的实现中，从寄存器文件中读数据就好像它是一个以地址为输入、数据为输出的一个组合逻辑块。当srcA或srcB被设成某个寄存器ID时，在一段延迟之后，存储在相应寄存器上的值就会出现在valA或valB上。</p>
+<p>向寄存器文件写入字是由时钟信号控制的，控制方式类似于将值加载到时钟寄存器。每次时钟上升时，输入valW上的值会被写入dstW指明的寄存器上。当dstW设为特殊的ID值0xF时，不会写任何程序寄存器。</p>
+<p>由于寄存器文件既可以读又可以写，一个很自然的问题就是：如果我们同时读和写一个程序寄存器会发生什么？答案简单明了：我们会看到一个旧值到新值的变化。所以在设计处理器的时候要把这个问题考虑进去。</p>
+<p>我们的处理器有一个随机访问存储器，如下图所示：</p>
+<p><img src="../../../../images/2018/%E9%9A%8F%E6%9C%BA%E8%AE%BF%E9%97%AE%E5%AD%98%E5%82%A8%E5%99%A8.png" alt="随机访问存储器"></p>
+<p>同寄存器文件一样，从存储器中读的操作方式类似于组合逻辑：如果我们在输入address上提供一个地址，并将write控制信号设置为0，那么经过一些延迟之后，存储在那个地址上的值会出现在输出data上。如果地址超出了范围，error信号会置为1，否则就是0。</p>
+<p>写存储器是由时钟控制的：我们将address设置为期望的地址，将data in设置为期望的值，而write设置为1。然后我们控制时钟时，只要地址是合法的，就会更新相应的地址中的值，如果是非法地址，error就会置为1。</p>
+<h2 id="y86的顺序实现"><a class="header-anchor" href="#y86的顺序实现"> </a>Y86的顺序实现</h2>
+<h3 id="将处理组织成阶段"><a class="header-anchor" href="#将处理组织成阶段"> </a>将处理组织成阶段</h3>
+<ul>
+<li><strong>取指（fetch）</strong>：从存储器取指令，地址为PC所指的地址。从指令中抽取出指令指示符字节的两个四位部分，称为icode（指令代码）和ifun（指令功能）。</li>
+<li><strong>译码（decode）</strong>：译码阶段从寄存器文件最多读入两个操作数，得到值valA和valB（如果是两个的话）。通常，它读入指令rA和rB字段指明的寄存器，不过有些指令是读寄存器%esp的。</li>
+<li><strong>执行（execute）</strong></li>
+<li><strong>访存（memory）</strong>：访存阶段可以将数据写入存储器，或者从存储器读出数据。读出的值为valM。</li>
+<li><strong>写回（write back）</strong>：写回阶段最多可以写两个结果到寄存器文件。</li>
+<li><strong>更新PC（PC update）</strong>：将PC设置成下一条指令的地址。</li>
+</ul>
+<p>处理器无限循环，执行这些阶段。在我们简化的实现中，发生任何异常时，处理器就会停止。比如：它执行halt指令或非法指令，或者它试图读或者写非法地址。在更完整的设计中，处理器会进入异常处理模式，开始执行由异常的类型决定的特殊代码。</p>
+<p>在硬件上复制逻辑块的成本比软件中有重复代码的成本要大得多。而且在硬件系统中处理许多特殊情况和特性要比用软件来处理困难得多。</p>
+<p>我们面临的一个挑战是将每条不同指令所需要的计算放入到上述的通用框架中。我们会使用图4-17中所示的代码来描述不同的Y86指令的处理。图4-18到4-21描述了不同Y86指令在各阶段是怎样处理的。</p>
+<p><img src="../../../../images/2018/Y86%E6%8C%87%E4%BB%A4%E9%98%B6%E6%AE%B5%E8%A7%A3%E6%9E%90.png" alt="Y86指令阶段解析"></p>
+<p><img src="../../../../images/2018/4-18.png" alt="4-18"></p>
+<p>让我们看一个具体的例子，图4-17中的第三条指令：</p>
+<p><img src="../../../../images/2018/subl%E6%8C%87%E4%BB%A4.png" alt="subl指令"></p>
+<p><img src="../../../../images/2018/4-19.png" alt="4-19"></p>
+<p>图4-17中第五条指令：</p>
+<p><img src="../../../../images/2018/rmmovl%E6%8C%87%E4%BB%A4.png" alt="rmmovl指令"></p>
+<p><img src="../../../../images/2018/4-20.png" alt="4-20"></p>
+<p>图4-17中第六条指令：</p>
+<p><img src="../../../../images/2018/pushl%E6%8C%87%E4%BB%A4.png" alt="pushl指令"></p>
+<p>图4-21表明了三类控制转义指令的处理：各种跳转、call和ret。</p>
+<p><img src="../../../../images/2018/4-21.png" alt="4-21"></p>
+<p>图4-17中第8条指令：</p>
+<p><img src="../../../../images/2018/je%E6%8C%87%E4%BB%A4.png" alt="je指令"></p>
+<p>图4-17中第13条指令：</p>
+<p><img src="../../../../images/2018/ret%E6%8C%87%E4%BB%A4.png" alt="ret指令"></p>
+<h2 id="seq硬件结构"><a class="header-anchor" href="#seq硬件结构"> </a>SEQ硬件结构</h2>
+<p><img src="../../../../images/2018/SEQ%E7%A1%AC%E4%BB%B6%E7%BB%93%E6%9E%84.png" alt="SEQ硬件结构"></p>
 
       
     </div>
@@ -641,7 +728,7 @@
               
                 <a href="/blog/archives">
               
-                  <span class="site-state-item-count">78</span>
+                  <span class="site-state-item-count">79</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -652,7 +739,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/blog/categories/index.html">
-                  <span class="site-state-item-count">44</span>
+                  <span class="site-state-item-count">45</span>
                   <span class="site-state-item-name">categories</span>
                 </a>
               </div>
@@ -663,7 +750,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/blog/tags/index.html">
-                  <span class="site-state-item-count">16</span>
+                  <span class="site-state-item-count">17</span>
                   <span class="site-state-item-name">tags</span>
                 </a>
               </div>
@@ -749,7 +836,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#y86指令集体系结构"><span class="nav-number">1.</span> <span class="nav-text"> Y86指令集体系结构</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#指令编码"><span class="nav-number">1.1.</span> <span class="nav-text"> 指令编码</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#risc-和-cisc"><span class="nav-number">1.2.</span> <span class="nav-text"> RISC 和 CISC</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#y86异常"><span class="nav-number">2.</span> <span class="nav-text"> Y86异常</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#y86程序"><span class="nav-number">3.</span> <span class="nav-text"> Y86程序</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#逻辑设计和硬件控制语言hcl"><span class="nav-number">4.</span> <span class="nav-text"> 逻辑设计和硬件控制语言HCL</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#字级的组合电路和hcl整数表达式"><span class="nav-number">4.1.</span> <span class="nav-text"> 字级的组合电路和HCL整数表达式</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#y86指令集体系结构"><span class="nav-number">1.</span> <span class="nav-text"> Y86指令集体系结构</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#指令编码"><span class="nav-number">1.1.</span> <span class="nav-text"> 指令编码</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#risc-和-cisc"><span class="nav-number">1.2.</span> <span class="nav-text"> RISC 和 CISC</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#y86异常"><span class="nav-number">1.3.</span> <span class="nav-text"> Y86异常</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#y86程序"><span class="nav-number">1.4.</span> <span class="nav-text"> Y86程序</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#逻辑设计和硬件控制语言hcl-hardware-control-language"><span class="nav-number">2.</span> <span class="nav-text"> 逻辑设计和硬件控制语言HCL（Hardware Control Language）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#逻辑门"><span class="nav-number">2.1.</span> <span class="nav-text"> 逻辑门</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#组合电路和hcl语言"><span class="nav-number">2.2.</span> <span class="nav-text"> 组合电路和HCL语言</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#字级的组合电路和hcl整数表达式"><span class="nav-number">2.3.</span> <span class="nav-text"> 字级的组合电路和HCL整数表达式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#集合关系"><span class="nav-number">2.4.</span> <span class="nav-text"> 集合关系</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#存储器和时钟"><span class="nav-number">2.5.</span> <span class="nav-text"> 存储器和时钟</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#y86的顺序实现"><span class="nav-number">3.</span> <span class="nav-text"> Y86的顺序实现</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#将处理组织成阶段"><span class="nav-number">3.1.</span> <span class="nav-text"> 将处理组织成阶段</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#seq硬件结构"><span class="nav-number">4.</span> <span class="nav-text"> SEQ硬件结构</span></a></li></ol></div>
             
 
           </div>
@@ -783,7 +870,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">132.6k</span>
+    <span title="Site words total count">135.3k</span>
   
 </div>
 

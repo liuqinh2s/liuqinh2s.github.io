@@ -288,14 +288,21 @@
 
     <url>
         <loc>http://liuqinh2s.github.io/blog/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/</loc>
-        <lastmod>2018-11-21T03:08:15.224Z</lastmod>
+        <lastmod>2018-11-23T02:00:16.362Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>http://liuqinh2s.github.io/blog/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E3%80%8ACSAPP%E3%80%8B/</loc>
-        <lastmod>2018-11-21T03:08:15.224Z</lastmod>
+        <lastmod>2018-11-23T02:00:16.362Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://liuqinh2s.github.io/blog/categories/JavaScript/</loc>
+        <lastmod>2018-11-23T02:14:23.019Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
