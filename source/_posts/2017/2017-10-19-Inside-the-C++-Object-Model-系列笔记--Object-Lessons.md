@@ -62,8 +62,8 @@ C++的 member functions 有三种：**static 、nonstatic 、virtual**
 
 ### data members 在内存中的布局
 
-C++只保证处于同一个 access section（也就是private,public,protected片段）的数据，一定会以声明的次序出现在内存布局当中(要求较晚出现的数据成员处在较大的内存地址中)。
-C++标准只提供了这一点点的保证。
+`C++`只保证处于同一个 access section（也就是private,public,protected片段）的数据，一定会以声明的次序出现在内存布局当中(要求较晚出现的数据成员处在较大的内存地址中)。
+`C++`标准只提供了这一点点的保证。
 允许编译器将多个Acess Section的顺序自由排列，而不必在乎它们的声明次序。但似乎没有编译器这样做。
 对于继承类，C++标准并未指定是其基类成员在前还是自己的成员在前。
 
