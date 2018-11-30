@@ -7,6 +7,11 @@ tags: [C++]
 comments: true
 ---
 
+- [Inside the C++ Object Model 系列笔记 一 -- Object Lessons](../../19/Inside-the-C++-Object-Model-系列笔记--Object-Lessons)
+- [Inside the C++ Object Model 系列笔记 二 -- The Semantics of constructors](../../19/Inside-the-C++-Object-Model-系列笔记--The-Semantics-of-constructors)
+- [Inside the C++ Object Model 系列笔记 三 -- The Semantics of Data](../../21/Inside-the-C++-Object-Model-系列笔记--The-Semantics-of-Data)
+- [Inside the C++ Object Model 系列笔记 四 -- The Semantics of Function](../../23/Inside-the-C++-Object-Model-系列笔记--The-Semantics-of-Function)
+
 >c++支持三种类型的成员函数，分别为static,nostatic,virtual。每一种调用方式都不尽相同。
 
 ## nonstatic member function

@@ -81,18 +81,18 @@
 
 
 
-<meta name="description" content="C++对象模型的细节，讨论了 data members 的处理。  空类在内存中有空间吗 一个实例引出的思考： 1234class X&amp;#123;&amp;#125;;class Y:virtual public X&amp;#123;&amp;#125;;class Z:virtual public X&amp;#123;&amp;#125;;class A:public Y, public Z&amp;#123;&amp;#125;; 猜猜size">
+<meta name="description" content="Inside the C++ Object Model 系列笔记 一 – Object Lessons Inside the C++ Object Model 系列笔记 二 – The Semantics of constructors Inside the C++ Object Model 系列笔记 三 – The Semantics of Data Inside the C++ Object">
 <meta name="keywords" content="C++">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Inside the C++ Object Model 系列笔记 三 -- The Semantics of Data">
 <meta property="og:url" content="http://liuqinh2s.github.io/blog/2017/10/21/Inside-the-C++-Object-Model-系列笔记--The-Semantics-of-Data/index.html">
 <meta property="og:site_name" content="liuqinh2s&#39; blog">
-<meta property="og:description" content="C++对象模型的细节，讨论了 data members 的处理。  空类在内存中有空间吗 一个实例引出的思考： 1234class X&amp;#123;&amp;#125;;class Y:virtual public X&amp;#123;&amp;#125;;class Z:virtual public X&amp;#123;&amp;#125;;class A:public Y, public Z&amp;#123;&amp;#125;; 猜猜size">
+<meta property="og:description" content="Inside the C++ Object Model 系列笔记 一 – Object Lessons Inside the C++ Object Model 系列笔记 二 – The Semantics of constructors Inside the C++ Object Model 系列笔记 三 – The Semantics of Data Inside the C++ Object">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2018-11-28T05:52:18.296Z">
+<meta property="og:updated_time" content="2018-11-28T09:47:51.528Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Inside the C++ Object Model 系列笔记 三 -- The Semantics of Data">
-<meta name="twitter:description" content="C++对象模型的细节，讨论了 data members 的处理。  空类在内存中有空间吗 一个实例引出的思考： 1234class X&amp;#123;&amp;#125;;class Y:virtual public X&amp;#123;&amp;#125;;class Z:virtual public X&amp;#123;&amp;#125;;class A:public Y, public Z&amp;#123;&amp;#125;; 猜猜size">
+<meta name="twitter:description" content="Inside the C++ Object Model 系列笔记 一 – Object Lessons Inside the C++ Object Model 系列笔记 二 – The Semantics of constructors Inside the C++ Object Model 系列笔记 三 – The Semantics of Data Inside the C++ Object">
 
 
 
@@ -408,7 +408,7 @@
                   <span class="post-meta-item-text">Words count in article&#58;</span>
                 
                 <span title="Words count in article">
-                  2,062
+                  2,116
                 </span>
               
 
@@ -433,7 +433,13 @@
       
 
       
-        <p>C++对象模型的细节，讨论了 data members 的处理。</p>
+        <ul>
+<li><a href="../../19/Inside-the-C++-Object-Model-%E7%B3%BB%E5%88%97%E7%AC%94%E8%AE%B0--Object-Lessons">Inside the C++ Object Model 系列笔记 一 – Object Lessons</a></li>
+<li><a href="../../19/Inside-the-C++-Object-Model-%E7%B3%BB%E5%88%97%E7%AC%94%E8%AE%B0--The-Semantics-of-constructors">Inside the C++ Object Model 系列笔记 二 – The Semantics of constructors</a></li>
+<li><a href="./">Inside the C++ Object Model 系列笔记 三 – The Semantics of Data</a></li>
+<li><a href="../../23/Inside-the-C++-Object-Model-%E7%B3%BB%E5%88%97%E7%AC%94%E8%AE%B0--The-Semantics-of-Function">Inside the C++ Object Model 系列笔记 四 – The Semantics of Function</a></li>
+</ul>
+<p>C++对象模型的细节，讨论了 data members 的处理。</p>
 <h2 id="空类在内存中有空间吗"><a class="header-anchor" href="#空类在内存中有空间吗"> </a>空类在内存中有空间吗</h2>
 <p>一个实例引出的思考：</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">X</span>&#123;</span>&#125;;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Y</span>:</span><span class="keyword">virtual</span> <span class="keyword">public</span> X&#123;&#125;;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Z</span>:</span><span class="keyword">virtual</span> <span class="keyword">public</span> X&#123;&#125;;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">A</span>:</span><span class="keyword">public</span> Y, <span class="keyword">public</span> Z&#123;&#125;;</span><br></pre></td></tr></table></figure>
@@ -768,7 +774,7 @@ C++ Standard 并未明确 base classes 的特定排列次序，但是目前的�
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">136.0k</span>
+    <span title="Site words total count">136.6k</span>
   
 </div>
 

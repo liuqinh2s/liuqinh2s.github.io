@@ -7,11 +7,18 @@ tags: [C++]
 comments: true
 ---
 
+- [Inside the C++ Object Model 系列笔记 一 -- Object Lessons](./)
+- [Inside the C++ Object Model 系列笔记 二 -- The Semantics of constructors](../Inside-the-C++-Object-Model-系列笔记--The-Semantics-of-constructors)
+- [Inside the C++ Object Model 系列笔记 三 -- The Semantics of Data](../../21/Inside-the-C++-Object-Model-系列笔记--The-Semantics-of-Data)
+- [Inside the C++ Object Model 系列笔记 四 -- The Semantics of Function](../../23/Inside-the-C++-Object-Model-系列笔记--The-Semantics-of-Function)
+
 >多态：统一的接口，不同的实现
 
-**C++多态（polymorphism）** 表示”以一个public base class的指针（或者reference），寻址出一个derived class object”
+**C++多态（polymorphism）** 表示“以一个public base class的指针（或者reference），寻址出一个derived class object”
 
 ## Layout Costs for Adding Encapsulation(封装)
+
+>意思是：为了添加封装所需要付出的内存布局花销
 
 第一章 Object Lessons 介绍了 C++如何在背后实现一个对象，内存中的布局以及空间上的关系。
 
@@ -58,7 +65,7 @@ C++的 member functions 有三种：**static 、nonstatic 、virtual**
 
 - 其 nonstatic data member 的总和大小;
 - 任何由于位对齐所需要的填补上去的空间;(关于内存对齐，自己查)
-- 加上了为了支持virtual机制而引起的额外负担。
+- 为了支持virtual机制而引起的额外负担。
 
 ### data members 在内存中的布局
 
@@ -78,7 +85,7 @@ private:
 }
 ```
 
-数据 i 一定在 j 之前，k 一定在 n 之前。具体什么顺序就看编译器了。
+数据 i 一定在 j 之前，k 一定在 n 之前。其他顺序就看编译器了。
 
 ### Virtual Table(vtbl, vtable) 和 vptr
 
@@ -87,8 +94,9 @@ Virtual function 机制由以下2个步骤来支持：
 1. 每个 class 产生的 Virtual function 的指针放在 Virtual Table 中
 2. 编译器给每个 class object 添加一个指针 vptr，指向相应的 vtable
 
-一个 vtable 对应一个 class，一个 vptr 才对应一个 class object，必须区分开这 2 个概念。vtable 独立于对象，就跟函数独立于对象一样。
-这样所有对象才能共享它们，就像 static data members 被共享一样。
+一个 vtable 对应一个 class，一个 vptr 才对应一个 class object，必须区分开这 2 个概念。vtable 独立于对象，就跟函数独立于对象一样。这样所有对象才能共享它们，就像 static data members 被共享一样。
+
+`nonstatic data member`是对象独有的，每个对象都有自己的一份。而其他的member全都是公用的。其实这里可以顺便学一下[序列化](https://zh.wikipedia.org/zh/序列化)这个概念，思考一下序列化对象的时候哪些东西需要存储。
 
 RTTI(run-time type identification):一般来说，每一个 class 相关联的 type_info 对象的指针通常也保存在 vtable 的第一个 slot 中。关于 type_info 是什么，可以自己查。
 
@@ -112,6 +120,8 @@ class D : public B, public C {};
 
 >我觉得这里有个问题，class D继承class B和class C的时候并不是虚继承，所以何不将B和C直接放在D中呢？这样就省了两次指针。
 
+这是我看到的一个讲的很不错的博客：[虚拟继承](https://liuhongjiang.github.io/hexotech/2012/11/30/virtual-inheritance/)
+
 ## struct 和 class 关键字的区别
 
 总共就两个区别：
@@ -125,19 +135,19 @@ struct 用来表现那些只有数据的集合体 POD(Plain Old Data)、而 clas
 
 >POD stands for Plain Old Data - that is, a class (whether defined with the keyword struct or the keyword class) without constructors, destructors and virtual members functions.
 
-由于这2个关键字在本质上无区别，所以class并没有必须要引入，但是引入它的确非常令人满意，因为这个语言所引入的不止是这个关键字，还有它所支持的封装和继承的哲学。可以这样想象:struct只剩下方便C程序员迁徙到C++的用途了。
+由于这2个关键字在本质上无区别，所以class并没有必须要引入，但是引入它的确非常令人满意，因为这个语言所引入的不止是这个关键字，还有它所支持的封装和继承的哲学。可以这样想象：struct只剩下方便C程序员迁徙到C++的用途了。
 
 ## programming paradigms
 
 C++支持三种形式的编程风格(或称典范 paradigm):
 
-- 面向过程的风格（procedural model）:就像C一样，一条语句接一条语句的执行或者函数跳转;
-- 抽象数据类型模型(abstract data type model，ADT):仅仅使用了class的封装，很多人都是 在用基于对象的风格却误以为自己在使用面向对象的风格;
-- 面向对象的风格(object-oriented):使用了class的封装和多态的编程思维(多态才是 真正的面向对象的特征)。
+- 面向过程的风格（procedural model）: 就像C一样，一条语句接一条语句的执行或者函数跳转;
+- 抽象数据类型模型(abstract data type model，ADT): 仅仅使用了class的封装，很多人都是 在用基于对象的风格却误以为自己在使用面向对象的风格;
+- 面向对象的风格(object-oriented): 使用了class的封装和多态的编程思维(多态才是 真正的面向对象的特征)。
 
 纯粹以一种paradigm写程序，有助于整体行为的良好稳固。
 
->一个 reference 通常是以一个指针来实现的，所以 point 和 reference 并没有本质的区别，reference 和 const 指针的区别就是，你取 reference 指针的地址的时候，取到的是数据的地址，const 指针取地址取到的是指针的地址。
+>一个 reference 通常是以一个指针来实现的，所以 point 和 reference 并没有本质的区别，reference 和 const 指针的区别就是，你取 reference 指针的地址的时候，取到的是数据的地址，const 指针取地址取到的是指针的地址。下面的程序说明了这一点：
 
 ```C++
 #include <iostream>
@@ -156,11 +166,13 @@ int main(){
 
 也就是说你取不到 b 的地址。所以说引用相当于一个 `别名`。引用常用在函数调用里，可以直接操作原有对象，这样就可以不用写指针的指针这种绕弯的东西了。
 
->函数的实参传递给形参是值传递，也就是一个 copy，形参在函数里将是一个局部变量。这个特性是许多新手面临的大坑。一道经典的考察题目便是，实现一个 C 语言的 swap 函数，由于 C 语言没有引用，你就只能用指针来操作原有对象了。
+>函数的实参传递给形参是值传递，也就是一个 copy，形参在函数里将是一个局部变量。这个特性是许多新手面临的大坑。一道经典的考察题目便是，实现一个 C 语言的 swap 函数，由于 C 语言没有引用，你就只能用指针来操作原有对象了。java更坑，java没有指针，所以需要用引用，但基础数据类型没有引用，所以你如果要交换基础数据类型的话，根本没办法写swap函数。
+
+>如果你对C语言的程序栈很了解的话，就会知道形参实际上是不存在的，实参直接拷贝到了寄存器中，所以底层上来说参数都是值拷贝，而且操作结果无法写回到实参，实参稳稳的放在上一个栈帧中从未发生任何变化。具体的细节可以看：[《CSAPP》读书笔记 -- 第3章：程序的机器级表示](../../../../2018/10/08/程序的机器级表示/#过程调用例子)
 
 ## 指针的类型
 
 - 对于内存来说，不同类型的指针并没有什么不同。它们都是占用一个word的大小（所以word的大小决定了内存可访问空间的大小，32位系统是4字节，64位系统是8字节），包含一个数字，这个数字代表内存中的一个地址;
 - 指针的类型是编译器的概念，对于硬件来说，并没有什么指针类型的概念;
 - 转型操作也只是一种编译器的指令，它改变的是编译器对被指内存的解释方式而已!
-- void*指针只能够持有一个地址（一个字节），而不能通过它操作所指向的object
+- `void*`指针只能够持有一个地址（一个字节），而不能通过它操作所指向的object
