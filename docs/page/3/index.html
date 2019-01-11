@@ -430,12 +430,10 @@
         
           
           B站上学Spring Boot
- 写一个Hello World程序
-
+写一个Hello World程序
 创建Maven项目
 导入spring boot相关的依赖
-
-123456789101112&lt;parent&gt;    &lt;groupId&gt;org.springframework.boot&lt;/groupId&
+123456789101112&lt;parent&gt;    &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
           ...
           <!--noindex-->
           <div class="post-button text-center">
@@ -586,7 +584,7 @@
                   <span class="post-meta-item-text">Words count in article&#58;</span>
                 
                 <span title="Words count in article">
-                  1,741
+                  1,737
                 </span>
               
 
@@ -615,8 +613,7 @@
           
           本书的另一个中心思想显而易见：良好的算法是程序性能提升的关键。
 下面还是通过探讨几个实例，来领会一下算法的重要性。
- 三个问题
-A. 给定一个最多包含40亿个随机排列的32位整数的顺序文件，找出一个不在文件中的32位整数(在文件中至少缺失一个这样的数 - - 为什么? )。在具有足够内存的情况下，如
+三个问题A. 给定一个最多包含40亿个随机排列的32位整数的顺序文件，找出一个不在文件中的32位整数(在文件中至少缺失一个这样的数 - - 为什么? )。在具有足够内存的情况下，如何解
           ...
           <!--noindex-->
           <div class="post-button text-center">
@@ -671,7 +668,7 @@ A. 给定一个最多包含40亿个随机排列的32位整数的顺序文件，�
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://liuqinh2s.github.io/blog/blog/2018/11/05/mysql问题集合/">
+    <link itemprop="mainEntityOfPage" href="http://liuqinh2s.github.io/blog/blog/2018/11/05/编程珠玑系列笔记1/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="liuqinh2s">
@@ -690,7 +687,7 @@ A. 给定一个最多包含40亿个随机排列的32位整数的顺序文件，�
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/blog/2018/11/05/mysql问题集合/" itemprop="url">mysql问题集合</a></h1>
+                <a class="post-title-link" href="/blog/2018/11/05/编程珠玑系列笔记1/" itemprop="url">编程珠玑系列笔记 -- 第一章 开篇</a></h1>
         
 
         <div class="post-meta">
@@ -725,8 +722,8 @@ A. 给定一个最多包含40亿个随机排列的32位整数的顺序文件，�
               
               
                 <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
-                  <a href="/blog/categories/数据库/" itemprop="url" rel="index">
-                    <span itemprop="name">数据库</span>
+                  <a href="/blog/categories/读书笔记/" itemprop="url" rel="index">
+                    <span itemprop="name">读书笔记</span>
                   </a>
                 </span>
 
@@ -736,8 +733,8 @@ A. 给定一个最多包含40亿个随机排列的32位整数的顺序文件，�
                 
               
                 <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
-                  <a href="/blog/categories/数据库/mysql/" itemprop="url" rel="index">
-                    <span itemprop="name">mysql</span>
+                  <a href="/blog/categories/读书笔记/《编程珠玑》/" itemprop="url" rel="index">
+                    <span itemprop="name">《编程珠玑》</span>
                   </a>
                 </span>
 
@@ -767,7 +764,7 @@ A. 给定一个最多包含40亿个随机排列的32位整数的顺序文件，�
                   <span class="post-meta-item-text">Words count in article&#58;</span>
                 
                 <span title="Words count in article">
-                  1,420
+                  3,644
                 </span>
               
 
@@ -794,14 +791,15 @@ A. 给定一个最多包含40亿个随机排列的32位整数的顺序文件，�
       
         
           
-           删除操作
-delete from table where id not in (select id from table where name1=)
-这样直接又查又写是不行的，只能造个临时表
-1093 - You can’t specify target table ‘contacts’ for 
+          本书的中心思想：对实例研究的深入思考不仅有趣，而且可以获得实际的益处。
+规律和智慧都隐藏在实例之中，而我们通过实例来窥探它们。实例是道的载体。
+开篇明确问题，一旦问题明确，这场战役就成功了90%。
+确定用户的真实需求是程序设计的根本。
+简单的程序通常比具有相同功能的复杂程序更可靠、更安全、更健壮、更
           ...
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/blog/2018/11/05/mysql问题集合/#more" rel="contents">
+            <a class="btn" href="/blog/2018/11/05/编程珠玑系列笔记1/#more" rel="contents">
               Read more &raquo;
             </a>
           </div>
@@ -975,10 +973,9 @@ delete from table where id not in (select id from table where name1=)
       
         
           
-           无意的重复
-有时，重复来自设计中的错误。
+          无意的重复有时，重复来自设计中的错误。
 让我们来看一个来自配送行业的例子。假定我们的分析揭示，一辆卡车有车型、牌照号、司机以及其他一些属性。与此类似，发运路线的属性包括路线、卡车和司机，基于这一理解，我们编写了一些类。
-但如果Sally打电话请病假，我们必须改换司机，事情又会怎样呢？Truck和
+但如果Sally打电话请病假，我们必须改换司机，事情又会怎样呢？Truck和De
           ...
           <!--noindex-->
           <div class="post-button text-center">
@@ -1033,7 +1030,7 @@ delete from table where id not in (select id from table where name1=)
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://liuqinh2s.github.io/blog/blog/2018/11/05/mysql查询性能优化/">
+    <link itemprop="mainEntityOfPage" href="http://liuqinh2s.github.io/blog/blog/2018/11/05/mysql问题集合/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="liuqinh2s">
@@ -1052,7 +1049,7 @@ delete from table where id not in (select id from table where name1=)
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/blog/2018/11/05/mysql查询性能优化/" itemprop="url">mysql查询性能优化</a></h1>
+                <a class="post-title-link" href="/blog/2018/11/05/mysql问题集合/" itemprop="url">mysql问题集合</a></h1>
         
 
         <div class="post-meta">
@@ -1129,7 +1126,7 @@ delete from table where id not in (select id from table where name1=)
                   <span class="post-meta-item-text">Words count in article&#58;</span>
                 
                 <span title="Words count in article">
-                  1,550
+                  1,420
                 </span>
               
 
@@ -1156,13 +1153,11 @@ delete from table where id not in (select id from table where name1=)
       
         
           
-           为查询缓存优化你的查询
-大多数的MySQL服务器都开启了查询缓存。这是提高性最有效的方法之一，而且这是被MySQL的数据库引擎处理的。当有很多相同的查询被执行了多次的时候，这些查询结果会被放到一个缓存中，这样，后续的相同的查询就不用操作表而直接访问缓存结果了。
-这里最主要的问题是，对于程序员来说，
+          删除操作delete from table where id not in (select id from table where name1=)这样直接又查又写是不行的，只能造个临时表1093 - You can’t specify target table ‘contacts’ for upda
           ...
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/blog/2018/11/05/mysql查询性能优化/#more" rel="contents">
+            <a class="btn" href="/blog/2018/11/05/mysql问题集合/#more" rel="contents">
               Read more &raquo;
             </a>
           </div>
@@ -1204,7 +1199,7 @@ delete from table where id not in (select id from table where name1=)
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/blog/page/2/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/blog/">1</a><a class="page-number" href="/blog/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/blog/page/4/">4</a><span class="space">&hellip;</span><a class="page-number" href="/blog/page/17/">17</a><a class="extend next" rel="next" href="/blog/page/4/"><i class="fa fa-angle-right"></i></a>
+    <a class="extend prev" rel="prev" href="/blog/page/2/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/blog/">1</a><a class="page-number" href="/blog/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/blog/page/4/">4</a><span class="space">&hellip;</span><a class="page-number" href="/blog/page/14/">14</a><a class="extend next" rel="next" href="/blog/page/4/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 
@@ -1252,7 +1247,7 @@ delete from table where id not in (select id from table where name1=)
               
                 <a href="/blog/archives">
               
-                  <span class="site-state-item-count">81</span>
+                  <span class="site-state-item-count">68</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -1378,7 +1373,7 @@ delete from table where id not in (select id from table where name1=)
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">137.8k</span>
+    <span title="Site words total count">129.5k</span>
   
 </div>
 

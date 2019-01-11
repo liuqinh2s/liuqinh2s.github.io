@@ -81,18 +81,18 @@
 
 
 
-<meta name="description" content="我们写代码的时候需要不停的命名，项目、类、函数、变量 等等都要命名。而命名关乎程序的可读性，而程序的可读性又至关重要（代码是写给人看的）。  名副其实 一个很重要的原则是：如果命名需要注释来补充，那就不算名副其实。 举个例子： 1int d;  //消逝的时间，以日计 名称d什么也没说，如果其他很多地方要用到这个变量那就十分糟糕了，因为用的人不一定想的起来d是什么意思（如果只是局部变量局部使用，那">
+<meta name="description" content="我们写代码的时候需要不停的命名，项目、类、函数、变量 等等都要命名。而命名关乎程序的可读性，而程序的可读性又至关重要（代码是写给人看的）。 名副其实一个很重要的原则是：如果命名需要注释来补充，那就不算名副其实。 举个例子： 1int d;  //消逝的时间，以日计 名称d什么也没说，如果其他很多地方要用到这个变量那就十分糟糕了，因为用的人不一定想的起来d是什么意思（如果只是局部变量局部使用，那它的">
 <meta name="keywords" content="代码规范">
 <meta property="og:type" content="article">
 <meta property="og:title" content="《代码整洁之道》读书笔记--第2章:有意义的命名">
 <meta property="og:url" content="http://liuqinh2s.github.io/blog/2018/06/10/《代码整洁之道》读书笔记-第2章-有意义的命名/index.html">
 <meta property="og:site_name" content="liuqinh2s&#39; blog">
-<meta property="og:description" content="我们写代码的时候需要不停的命名，项目、类、函数、变量 等等都要命名。而命名关乎程序的可读性，而程序的可读性又至关重要（代码是写给人看的）。  名副其实 一个很重要的原则是：如果命名需要注释来补充，那就不算名副其实。 举个例子： 1int d;  //消逝的时间，以日计 名称d什么也没说，如果其他很多地方要用到这个变量那就十分糟糕了，因为用的人不一定想的起来d是什么意思（如果只是局部变量局部使用，那">
+<meta property="og:description" content="我们写代码的时候需要不停的命名，项目、类、函数、变量 等等都要命名。而命名关乎程序的可读性，而程序的可读性又至关重要（代码是写给人看的）。 名副其实一个很重要的原则是：如果命名需要注释来补充，那就不算名副其实。 举个例子： 1int d;  //消逝的时间，以日计 名称d什么也没说，如果其他很多地方要用到这个变量那就十分糟糕了，因为用的人不一定想的起来d是什么意思（如果只是局部变量局部使用，那它的">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2018-12-19T04:29:36.386Z">
+<meta property="og:updated_time" content="2019-01-11T09:26:39.658Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="《代码整洁之道》读书笔记--第2章:有意义的命名">
-<meta name="twitter:description" content="我们写代码的时候需要不停的命名，项目、类、函数、变量 等等都要命名。而命名关乎程序的可读性，而程序的可读性又至关重要（代码是写给人看的）。  名副其实 一个很重要的原则是：如果命名需要注释来补充，那就不算名副其实。 举个例子： 1int d;  //消逝的时间，以日计 名称d什么也没说，如果其他很多地方要用到这个变量那就十分糟糕了，因为用的人不一定想的起来d是什么意思（如果只是局部变量局部使用，那">
+<meta name="twitter:description" content="我们写代码的时候需要不停的命名，项目、类、函数、变量 等等都要命名。而命名关乎程序的可读性，而程序的可读性又至关重要（代码是写给人看的）。 名副其实一个很重要的原则是：如果命名需要注释来补充，那就不算名副其实。 举个例子： 1int d;  //消逝的时间，以日计 名称d什么也没说，如果其他很多地方要用到这个变量那就十分糟糕了，因为用的人不一定想的起来d是什么意思（如果只是局部变量局部使用，那它的">
 
 
 
@@ -432,8 +432,7 @@
 
       
         <p>我们写代码的时候需要不停的命名，项目、类、函数、变量 等等都要命名。而命名关乎程序的可读性，而程序的可读性又至关重要（代码是写给人看的）。</p>
-<h2 id="名副其实"><a class="header-anchor" href="#名副其实"> </a>名副其实</h2>
-<p>一个很重要的原则是：<strong>如果命名需要注释来补充，那就不算名副其实。</strong></p>
+<h2 id="名副其实"><a href="#名副其实" class="headerlink" title="名副其实"></a>名副其实</h2><p>一个很重要的原则是：<strong>如果命名需要注释来补充，那就不算名副其实。</strong></p>
 <p>举个例子：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">int d;  //消逝的时间，以日计</span><br></pre></td></tr></table></figure>
 <p>名称<code>d</code>什么也没说，如果其他很多地方要用到这个变量那就十分糟糕了，因为用的人不一定想的起来<code>d</code>是什么意思（如果只是局部变量局部使用，那它的罪孽会轻一点，如果是全局变量或者类的成员变量那这简直就是大坑）。<strong>其实我们很容易发现，注释没法像好的命名一样方便，因为我们不会在写代码的时候看到一个不懂的命名就去找它的定义处的注释，这样会浪费很多时间。另外如果写成注释就还需要维护注释，如果注释和代码不一致的情况那就变成了一种误导。</strong>。所以好的命名就应该能自己说明自己是什么。</p>
@@ -457,85 +456,67 @@
 </blockquote>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> List&lt;Cell&gt; <span class="title">getFlaggedCells</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    List&lt;Cell&gt; flaggedCells = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">    <span class="keyword">for</span> (Cell cell : gameBoard)&#123;</span><br><span class="line">        <span class="keyword">if</span> (cell.isFlagged())&#123;</span><br><span class="line">            flaggedCells.add(cell);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> flaggedCells;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>从int数组到Cell类，<strong>抽象程度又提高了，代码可重用性也就提高了</strong>。</p>
-<h2 id="避免误导"><a class="header-anchor" href="#避免误导"> </a>避免误导</h2>
-<p>例如，hp、aix 和 sco 都不应该用作变量名，因为它们都是UNIX平台或类UNIX平台的专有名称。别用accountList来指称一组账号，除非它们真的是List类型，List一词对程序员来说有特殊的意义，如果包纳账号的容器并非是一个List，就会引起错误的判断（即便容器就是个List，最好也别在名称中写出容器的类型）。所以，用accountGroup或bunchOfAccounts，甚至直接用accounts都会好一些。</p>
+<h2 id="避免误导"><a href="#避免误导" class="headerlink" title="避免误导"></a>避免误导</h2><p>例如，hp、aix 和 sco 都不应该用作变量名，因为它们都是UNIX平台或类UNIX平台的专有名称。别用accountList来指称一组账号，除非它们真的是List类型，List一词对程序员来说有特殊的意义，如果包纳账号的容器并非是一个List，就会引起错误的判断（即便容器就是个List，最好也别在名称中写出容器的类型）。所以，用accountGroup或bunchOfAccounts，甚至直接用accounts都会好一些。</p>
 <p><strong>提防使用不同之处较小的命名</strong>。想区分模块中某处的XYZControllerForEfficientHandlingOfStrings 和另一处的 XYZControllerForEfficentStorageOfStrings，会花多长时间呢？这两个词外形实在太相似了。我们很享受线代Java编程环境的自动代码完成特性，键入某个名称的前几个字母，就可以得到一列该名称的可能性，假如相似的名字依字母顺序放在一起，且差异很明显，那就会相当有助益。</p>
 <blockquote>
 <p>在某些字体里，1和l，0和O很难分清。要注意这种混淆。</p>
 </blockquote>
-<h2 id="做有意义的区分"><a class="header-anchor" href="#做有意义的区分"> </a>做有意义的区分</h2>
-<p>如果程序员只是为满足编译器或解释器的需要而写代码，就会制造麻烦。例如，因为同一作用域内不能重名，你可能随手改掉其中一个命名，有时候干脆以错误的拼写充数，结果就是有人一不小心更正拼写错误，然后导致编译器出错。</p>
+<h2 id="做有意义的区分"><a href="#做有意义的区分" class="headerlink" title="做有意义的区分"></a>做有意义的区分</h2><p>如果程序员只是为满足编译器或解释器的需要而写代码，就会制造麻烦。例如，因为同一作用域内不能重名，你可能随手改掉其中一个命名，有时候干脆以错误的拼写充数，结果就是有人一不小心更正拼写错误，然后导致编译器出错。</p>
 <p>例如class已经是关键字，就给变量命名为klass，clazz，还有this，命名成thiz。</p>
 <p>以数字系列命名（a1, a2, …, aN）是以意义命名的对立面。试看：</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">copyChars</span><span class="params">(<span class="keyword">char</span> a1[], <span class="keyword">char</span> a2[])</span></span>&#123;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;a1.length;i++)&#123;</span><br><span class="line">        a2[i] = a1[i];</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>如果参数名改为 <code>source</code> 和 <code>destination</code>，这个函数就会像样许多。</p>
-<p><strong>废话是另一种没意义的区分</strong>。假设你有一个 Product 类。如果还有一个 ProductInfo 或 ProductData 类，那它们的名称虽然不同，意思却并无区别。Info和Data就像a、an和the一样是意义含混的废话。<br>
-注意，只要体现出有意义的区分，使用a和the这样的前缀就没错。例如，你可能把a用在域内变量，而把the用于函数参数。但如果你已经有一个名为zork的变量，又想调用一个名为theZork的变量，麻烦就来了。</p>
+<p><strong>废话是另一种没意义的区分</strong>。假设你有一个 Product 类。如果还有一个 ProductInfo 或 ProductData 类，那它们的名称虽然不同，意思却并无区别。Info和Data就像a、an和the一样是意义含混的废话。<br>注意，只要体现出有意义的区分，使用a和the这样的前缀就没错。例如，你可能把a用在域内变量，而把the用于函数参数。但如果你已经有一个名为zork的变量，又想调用一个名为theZork的变量，麻烦就来了。</p>
 <p>废话都是冗余。Variable一词永远不应当出现在变量名中。Table一词永远不应当出现在表名中。NameString会比Name好吗？难倒Name会是一个浮点数不成？如果是这样，就触犯了关于误导的规则。设想有个名为Customer的类，还有一个名为CustomerObject的类。区别何在呢？哪个是表示客户历史支付情况的最佳途径？</p>
 <p>举个例子：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">getActiveAccount();</span><br><span class="line">getActiveAccounts();</span><br><span class="line">getActiveAccountInfo();</span><br></pre></td></tr></table></figure>
 <p>程序员怎么知道该调用哪个函数呢？</p>
 <p>如果缺少明确约定，变量moneyAmount就与money没区别，customerInfo与custmoer没区别，accountData与account没区别，theMessage也与message没区别。<strong>要区分名称，就要以读者能鉴别不同之处的方式来区分</strong>。</p>
-<h2 id="使用读的出来的名称"><a class="header-anchor" href="#使用读的出来的名称"> </a>使用读的出来的名称</h2>
-<p>人类长于记忆和使用单词，若不善加利用，实在是种耻辱。</p>
+<h2 id="使用读的出来的名称"><a href="#使用读的出来的名称" class="headerlink" title="使用读的出来的名称"></a>使用读的出来的名称</h2><p>人类长于记忆和使用单词，若不善加利用，实在是种耻辱。</p>
 <p><strong>如果名称读不出来，讨论的时候会像个傻鸟</strong>。“哎，这儿，鼻涕阿三喜摁踢（bee cee arr three cee enn tee， BCR3CNT的读音）上头，有个皮挨死极翘（pee ess zee kyew）整数，看见没？” <strong>这不是小事，因为编程本就是一种社会活动</strong>。</p>
 <p>有家公司，程序里面写了个 genymdhms（生成日期，年、月、日、时、分、秒），他们一般读作：“gen why emm dee aich emm ess”，YMDHMS的读音。我有个见字照读的恶习，于是开口就念“gen-yah-mudda-hims”。后来好些设计师和分析师都有样学样，听起来傻乎乎。我们知道典故，所以觉得很搞笑。搞笑归搞笑，实际是在强忍糟糕的命名。在给新开发者解释变量的意义时，他们总是读出傻乎乎的自造词，而非恰当的英语词。比较：</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">DtaRcrd102</span> </span>&#123;</span><br><span class="line">    <span class="keyword">private</span> Date genymdhms;</span><br><span class="line">    <span class="keyword">private</span> Date modymdhms;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">final</span> String pszqint = <span class="string">"102"</span>;</span><br><span class="line">    <span class="comment">/* ... */</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Customer</span> &#123;</span></span><br><span class="line">    <span class="keyword">private</span> Date generationTimestamp;</span><br><span class="line">    <span class="keyword">private</span> Date modificationTimestamp;</span><br><span class="line">    <span class="keyword">private</span> final String recordId = <span class="string">"102"</span>;</span><br><span class="line">    <span class="comment">/* ... */</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>现在读起来就像人话了：“喂，Mikey，看看这条记录！生成时间戳（generation timestamp）被设置为明天了！不能这样吧？”</p>
-<h2 id="使用可搜索的名称"><a class="header-anchor" href="#使用可搜索的名称"> </a>使用可搜索的名称</h2>
-<p>单字母名称和数字常量有个问题，就是很难在一大篇文字中找出来。</p>
-<h2 id="避免使用编码"><a class="header-anchor" href="#避免使用编码"> </a>避免使用编码</h2>
-<p>编码已经太多，无谓再自找麻烦。把类型或作用域编进名称里面，徒然增加了解码的负担。没理由要求每位新人都在弄清要应付的编码之外（那算是正常的），还要再搞懂另一套编码“语言”。这对于解决问题而言，纯属多余的负担。带编码的名称通常也不便发音，容易打错。</p>
-<h3 id="匈牙利命名法"><a class="header-anchor" href="#匈牙利命名法"> </a>匈牙利命名法</h3>
-<p>在往昔名称长短很要命的时代，我们毫无必要的破坏了不编码的规矩，如今后悔不迭。Fortran语言要求首字母体现出类型，导致了编码的产生。BASIC早期版本只允许使用一个字母再加一位数字。匈牙利命名法（Hungarian Notation，HN）将这种态势愈演愈烈。</p>
+<h2 id="使用可搜索的名称"><a href="#使用可搜索的名称" class="headerlink" title="使用可搜索的名称"></a>使用可搜索的名称</h2><p>单字母名称和数字常量有个问题，就是很难在一大篇文字中找出来。</p>
+<h2 id="避免使用编码"><a href="#避免使用编码" class="headerlink" title="避免使用编码"></a>避免使用编码</h2><p>编码已经太多，无谓再自找麻烦。把类型或作用域编进名称里面，徒然增加了解码的负担。没理由要求每位新人都在弄清要应付的编码之外（那算是正常的），还要再搞懂另一套编码“语言”。这对于解决问题而言，纯属多余的负担。带编码的名称通常也不便发音，容易打错。</p>
+<h3 id="匈牙利命名法"><a href="#匈牙利命名法" class="headerlink" title="匈牙利命名法"></a>匈牙利命名法</h3><p>在往昔名称长短很要命的时代，我们毫无必要的破坏了不编码的规矩，如今后悔不迭。Fortran语言要求首字母体现出类型，导致了编码的产生。BASIC早期版本只允许使用一个字母再加一位数字。匈牙利命名法（Hungarian Notation，HN）将这种态势愈演愈烈。</p>
 <p>在Windows的C语言API的时代，HN相当重要，那时所有名称要么是个整数句柄，要么是个长指针或者void指针，要不然就是string的几种实现（有不同的用途和属性）之一。那时候编译器并不做类型检查，程序员需要匈牙利命名法来帮助自己记住类型。</p>
 <p>现代编程语言具有更丰富的类型系统，编译器也记得并强制使用类型。而且，人们趋向于使用更小的类、更短的方法，好让每个变量的定义都在视野范围内。</p>
 <p>Java程序员不需要类型编码。对象是强类型的，代码编辑环境已经先进到在编译开始前就侦测到类型错误的程度！所以，如今HN和其他类型编码形式都纯属多余。它们增加了修改变量、函数或类的名称或类型的难度。它们增加了阅读代码的难度。它们制造了让编码系统误导读者的可能性。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">PhoneNumber phoneString;    // 类型变化时，名称并不会自动变化，若名称中编码了类型，还要我们手动去改。</span><br></pre></td></tr></table></figure>
-<h3 id="成员前缀"><a class="header-anchor" href="#成员前缀"> </a>成员前缀</h3>
-<p>也不必用m_前缀来标明成员变量。应当把类和函数做得足够小，消除对成员前缀的需要。你应当使用某种可以高亮或用颜色标出成员的编辑环境。</p>
+<h3 id="成员前缀"><a href="#成员前缀" class="headerlink" title="成员前缀"></a>成员前缀</h3><p>也不必用m_前缀来标明成员变量。应当把类和函数做得足够小，消除对成员前缀的需要。你应当使用某种可以高亮或用颜色标出成员的编辑环境。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">public class Part &#123;</span><br><span class="line">    private String m_dsc;   // The textual description</span><br><span class="line">    void setName(String name) &#123;</span><br><span class="line">        m_dsc = name;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Part</span></span>&#123;</span><br><span class="line">    String description;</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">setDescription</span><span class="params">(String description)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.description = description;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>此外，人们会很快就学会无视前缀（或后缀），只看到名称中有意义的部分。代码读的越多，眼中就越没有前缀。最终，前缀变作了不入法眼的废料，变作了旧代码的标志物。</p>
-<h3 id="接口和实现"><a class="header-anchor" href="#接口和实现"> </a>接口和实现</h3>
-<p>有时也会出现采用编码的特殊情形。比如，你在做一个创建形态用的抽象工厂（Abstract Factory）。该工厂是个接口，要用具体类来实现。你怎么 命名工厂和具体类呢？IShapeFactory和ShapeFactory吗？我喜欢不加修饰的接口。前导字母I被滥用到了说好听点是干扰，说难听点根本就是废话的程度。我不想让用户知道我给他们的是接口。我就想让他们知道那是个ShapeFactory。如果接口和实现必须选一个来编码的话，我宁肯选择实现。ShapeFactoryImp，甚至是丑陋的CShapeFactory，都比对接口名称编码来得好。</p>
-<h2 id="避免思维映射"><a class="header-anchor" href="#避免思维映射"> </a>避免思维映射</h2>
-<p>不应当让读者在脑海中把你的名称翻译为他们熟知的名称。这种问题经常出现在选择是使用问题领域术语还是解决方案领域术语时。</p>
+<h3 id="接口和实现"><a href="#接口和实现" class="headerlink" title="接口和实现"></a>接口和实现</h3><p>有时也会出现采用编码的特殊情形。比如，你在做一个创建形态用的抽象工厂（Abstract Factory）。该工厂是个接口，要用具体类来实现。你怎么 命名工厂和具体类呢？IShapeFactory和ShapeFactory吗？我喜欢不加修饰的接口。前导字母I被滥用到了说好听点是干扰，说难听点根本就是废话的程度。我不想让用户知道我给他们的是接口。我就想让他们知道那是个ShapeFactory。如果接口和实现必须选一个来编码的话，我宁肯选择实现。ShapeFactoryImp，甚至是丑陋的CShapeFactory，都比对接口名称编码来得好。</p>
+<h2 id="避免思维映射"><a href="#避免思维映射" class="headerlink" title="避免思维映射"></a>避免思维映射</h2><p>不应当让读者在脑海中把你的名称翻译为他们熟知的名称。这种问题经常出现在选择是使用问题领域术语还是解决方案领域术语时。</p>
 <p>单字母变量名就是个问题。在作用域较小，也没有名称冲突时，循环计数器自然有可能被命名为i或j或k（但千万别用字母l）。这是因为传统上惯用单字母名称做循环计数器。然而，在多数其他情况下，单字母名称不是个好选择，读者必须在脑海中将它映射为真实概念。仅仅是因为有了a和b，就要取名为c，实在并非像样的理由。</p>
 <p>程序员通常都是聪明人。聪明人有时会借脑筋急转弯炫耀其聪明。总而言之，假使你记得r代表不包含主机和图式（scheme）的小写字母版url的话，那你真是太聪明了。</p>
 <p>聪明程序员和专业程序员之间的区别在于，专业程序员了解，明确是王道。专业程序员善用其能，编写其他人能理解的代码。</p>
-<h2 id="类名"><a class="header-anchor" href="#类名"> </a>类名</h2>
-<p>类名和对象名应该是名词或名词短语，如Customer、WikiPage、Account和AddressParser。避免使用Manager、Processor、Data或Info这样的类名。类名不应当是动词。</p>
+<h2 id="类名"><a href="#类名" class="headerlink" title="类名"></a>类名</h2><p>类名和对象名应该是名词或名词短语，如Customer、WikiPage、Account和AddressParser。避免使用Manager、Processor、Data或Info这样的类名。类名不应当是动词。</p>
 <blockquote>
 <p>这里没看懂，举的例子并不是动词啊</p>
 </blockquote>
-<h2 id="方法名"><a class="header-anchor" href="#方法名"> </a>方法名</h2>
-<p>方法名应当是动词或动词短语，如 postPayment、deletePage或save。属性访问器、修改器和断言应该根据其值命名，并依Javabean标准加上get、set和is前缀。</p>
+<h2 id="方法名"><a href="#方法名" class="headerlink" title="方法名"></a>方法名</h2><p>方法名应当是动词或动词短语，如 postPayment、deletePage或save。属性访问器、修改器和断言应该根据其值命名，并依Javabean标准加上get、set和is前缀。</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">String name = employee.getName();</span><br><span class="line">customer.setName(<span class="string">"mike"</span>);</span><br><span class="line"><span class="keyword">if</span>(paycheck.isPosted())...</span><br></pre></td></tr></table></figure>
 <p>重载构造器时，使用描述了参数的静态工厂方法名。例如：</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Complex fulcrumPoint = Complex.FromRealNumber(<span class="number">23.0</span>);</span><br></pre></td></tr></table></figure>
 <p>通常好于</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Complex fulcrumPoint = <span class="keyword">new</span> Complex(<span class="number">23.0</span>);</span><br></pre></td></tr></table></figure>
 <p>可以考虑将相应的构造器设置为private，强制使用这种命名手段。</p>
-<h2 id="别扮可爱"><a class="header-anchor" href="#别扮可爱"> </a>别扮可爱</h2>
-<p>如果名称太耍宝，那就只有同作者一般有幽默感的人才能记得住，而且还是在他们记得那个笑话的时候才行。谁会知道名为HolyHandGrenade的函数是用来做什么的呢？没错，这名字挺伶俐，不过DeleteItems或许是更好的名称。宁可明确，毋为好玩。</p>
+<h2 id="别扮可爱"><a href="#别扮可爱" class="headerlink" title="别扮可爱"></a>别扮可爱</h2><p>如果名称太耍宝，那就只有同作者一般有幽默感的人才能记得住，而且还是在他们记得那个笑话的时候才行。谁会知道名为HolyHandGrenade的函数是用来做什么的呢？没错，这名字挺伶俐，不过DeleteItems或许是更好的名称。宁可明确，毋为好玩。</p>
 <p>扮可爱的做法在代码中经常体现为使用俗语或俚语。例如，别用whack()来表示kill()。别用eatMyShorts()这类与文化紧密相关的笑话来表示abort()。</p>
-<h2 id="每个概念对应一个词"><a class="header-anchor" href="#每个概念对应一个词"> </a>每个概念对应一个词</h2>
-<p>给每个抽象概念选一个词，并且一以贯之。例如，使用fetch、retrieve和get来给在多个类中的同种方法命名。你怎么记得住哪个类中是哪个方法呢？</p>
+<h2 id="每个概念对应一个词"><a href="#每个概念对应一个词" class="headerlink" title="每个概念对应一个词"></a>每个概念对应一个词</h2><p>给每个抽象概念选一个词，并且一以贯之。例如，使用fetch、retrieve和get来给在多个类中的同种方法命名。你怎么记得住哪个类中是哪个方法呢？</p>
 <p>Eclipse和Intellj之类的线代编程环境提供了与环境相关的线索，比如某个对象能调用的方法列表。不过要注意，列表中通常不会给出你为函数名和参数列表编写的注释。如果参数名称来自函数声明，你就太幸运了。函数名称应当独一无二，而且要保持一致，这样你才能不借助多余的浏览就能找到正确的方法。</p>
 <p>同样，在同一堆代码中有controller，又有manager，还有driver，就会令人困惑。DeviceManager和Protocal-Controller之间有何根本区别？为什么不全用controllers或managers？他们都是Drivers吗？这种名称，让人觉得这两个对象是不同类型的，也分属不同的类。</p>
 <p>对于那些会用到你代码的程序员，一以贯之的命名法简直就是天降福音。</p>
-<h2 id="别用双关语"><a class="header-anchor" href="#别用双关语"> </a>别用双关语</h2>
-<p>避免将同一个单词用于不同目的。如果遵循“一词一意”的规则，可能在好多类里面都会有add方法。只要这些add方法的参数列表和返回值在语义上等价，就一切顺利。</p>
+<h2 id="别用双关语"><a href="#别用双关语" class="headerlink" title="别用双关语"></a>别用双关语</h2><p>避免将同一个单词用于不同目的。如果遵循“一词一意”的规则，可能在好多类里面都会有add方法。只要这些add方法的参数列表和返回值在语义上等价，就一切顺利。</p>
 <p>但是，可能会有人决定为“保持一致”而使用add这个词来命名，即便并非真的想表示这种意思。比如，在多个类种都有add方法，该方法通过增加或连接两个现存值来获得新值。假设要写个新类，该类中有一个方法，把单个参数放到群集（collection）中。该把这个方法叫做add吗？这样做貌似和其他add方法保持了一致，但实际上语义却不同，应该用insert或append之类的词来命名才对。把该方法命名为add，就是双关语了。</p>
-<h2 id="使用解决方案领域的名称"><a class="header-anchor" href="#使用解决方案领域的名称"> </a>使用解决方案领域的名称</h2>
-<p>记住，只有程序员才会读你的代码。所以，尽管用那些计算机科学（Computer Science, CS）术语、算法名、模式名、数学术语吧。</p>
+<h2 id="使用解决方案领域的名称"><a href="#使用解决方案领域的名称" class="headerlink" title="使用解决方案领域的名称"></a>使用解决方案领域的名称</h2><p>记住，只有程序员才会读你的代码。所以，尽管用那些计算机科学（Computer Science, CS）术语、算法名、模式名、数学术语吧。</p>
 <p>对于熟悉访问者（VISITOR）模式的程序来说，名称AccountVisitor富有意义。那个程序员会不知道JobQueue的意思呢？</p>
-<h2 id="使用源自所涉及问题领域的名称"><a class="header-anchor" href="#使用源自所涉及问题领域的名称"> </a>使用源自所涉及问题领域的名称</h2>
-<p>如果不能用程序员熟悉的术语来给手头的工作命名，就采用从所涉及领域而来的名称吧。至少，负责维护代码的程序员就能去请教领域专家了。</p>
-<h2 id="添加有意义的语境"><a class="header-anchor" href="#添加有意义的语境"> </a>添加有意义的语境</h2>
-<p>很少有名称是能自我说明的–多数都不能。反之，你需要用有良好命名的类、函数或名称空间来放置名称，给读者提供语境。如果没这么做，给名称添加前缀就是最后一招了。</p>
+<h2 id="使用源自所涉及问题领域的名称"><a href="#使用源自所涉及问题领域的名称" class="headerlink" title="使用源自所涉及问题领域的名称"></a>使用源自所涉及问题领域的名称</h2><p>如果不能用程序员熟悉的术语来给手头的工作命名，就采用从所涉及领域而来的名称吧。至少，负责维护代码的程序员就能去请教领域专家了。</p>
+<h2 id="添加有意义的语境"><a href="#添加有意义的语境" class="headerlink" title="添加有意义的语境"></a>添加有意义的语境</h2><p>很少有名称是能自我说明的—多数都不能。反之，你需要用有良好命名的类、函数或名称空间来放置名称，给读者提供语境。如果没这么做，给名称添加前缀就是最后一招了。</p>
 <p>设想你有名为firstName、lastName、street、houseNumber、city\state和zipcode的变量。当它们搁一块儿的时候，很明确是构成了一个地址。不过，假使只是在某个方法中看见孤零零的一个state变量呢？你会理所当然推断那是某个地址的一部分吗？</p>
 <p>可以添加前缀addrFirstName、addrLastName、addrState等，以此提供语境。至少，读者会明白这些变量都是某个更大结构的一部分。当然，更好的方案是创建名为Address的类。这样，即便是编译器也会知道这些变量隶属某个更大的概念了。</p>
 <p>看一个例子：</p>
@@ -544,8 +525,7 @@
 <p>上列函数有点过长，变量的使用贯穿始终。要分解这个函数，需要创建一个名为GuessStatisticsMessage的类，把三个变量做成该类的成员字段。这样它们就在定义上变作了GuessStatisticsMessage的一部分。语境的增强也让算法能够通过分解为更小的函数而变得更为干净利落。</p>
 <p>有语境的变量：</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">GuessStatisticsMessage</span> </span>&#123;</span><br><span class="line">    <span class="keyword">private</span> String number;</span><br><span class="line">    <span class="keyword">private</span> String verb;</span><br><span class="line">    <span class="keyword">private</span> String pluralModifier;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">make</span><span class="params">(<span class="keyword">char</span> candidate, <span class="keyword">int</span> count)</span></span>&#123;</span><br><span class="line">        createPluralDependentMessageParts(count);</span><br><span class="line">        <span class="keyword">return</span> String.format(</span><br><span class="line">            <span class="string">"There %s %s %s%s"</span>, verb, number, candidate, pluralModifier);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">createPluralDependentMessageParts</span><span class="params">(<span class="keyword">int</span> count)</span></span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(count==<span class="number">0</span>)&#123;</span><br><span class="line">            thereAreNoLetters();</span><br><span class="line">        &#125;<span class="keyword">else</span> <span class="keyword">if</span> (count==<span class="number">1</span>)&#123;</span><br><span class="line">            thereIsOneLetter();</span><br><span class="line">        &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">            thereAreManyLetters(count);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">thereAreManyLetters</span><span class="params">(<span class="keyword">int</span> count)</span></span>&#123;</span><br><span class="line">        number = Integer.toString(count);</span><br><span class="line">        verb = <span class="string">"are"</span>;</span><br><span class="line">        pluralModifier=<span class="string">"s"</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">thereIsOneLetters</span><span class="params">()</span></span>&#123;</span><br><span class="line">        number=<span class="string">"1"</span>;</span><br><span class="line">        verb = <span class="string">"is"</span>;</span><br><span class="line">        pluralModifier = <span class="string">""</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">thereAreNoLetters</span><span class="params">()</span></span>&#123;</span><br><span class="line">        number = <span class="string">"no"</span>;</span><br><span class="line">        verb = <span class="string">"are"</span>;</span><br><span class="line">        pluralModifier = <span class="string">"s"</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="不要添加没用的语境"><a class="header-anchor" href="#不要添加没用的语境"> </a>不要添加没用的语境</h2>
-<p>设若有一个名为“加油站豪华版”（Gas Station Deluxe）的应用，在其中给每个类添加GSD前缀就不是什么好点子。说白了，你是在和自己在用的工具过不去。输入G，按下自动完成键，结果会得到系统中全部类的列表，列表恨不得有一英里那么长。这样做聪明吗？为什么要搞得IDE没法帮助你？</p>
+<h2 id="不要添加没用的语境"><a href="#不要添加没用的语境" class="headerlink" title="不要添加没用的语境"></a>不要添加没用的语境</h2><p>设若有一个名为“加油站豪华版”（Gas Station Deluxe）的应用，在其中给每个类添加GSD前缀就不是什么好点子。说白了，你是在和自己在用的工具过不去。输入G，按下自动完成键，结果会得到系统中全部类的列表，列表恨不得有一英里那么长。这样做聪明吗？为什么要搞得IDE没法帮助你？</p>
 <p>再比如，你在GSD应用程序中的记账模块创建了一个表示邮件地址的类，然后给该类命名为GSDAccountAddress。稍后，你的客户联络应用中需要用到邮件地址，你会用GSDAccountAddress吗？这名字听起来没问题吗？在这17个字母里面，有10个字母纯属多余，与当前语境毫无关联。</p>
 <p>只要短名称足够清楚，就要比长名称好。别给名称添加不必要的语境。</p>
 <p>对于Address类的实体来说，accountAddress和customerAddress都是不错的名称，不过用在类名上就不太好了。Address是个好类名。如果需要与MAC地址、端口地址和Web地址相区别，我会考虑使用PostalAddress、MAC和URI。这样的名称更为精确，而精确正是命名的要点。</p>
@@ -675,7 +655,7 @@
               
                 <a href="/blog/archives">
               
-                  <span class="site-state-item-count">81</span>
+                  <span class="site-state-item-count">68</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -783,7 +763,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#名副其实"><span class="nav-number">1.</span> <span class="nav-text"> 名副其实</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#避免误导"><span class="nav-number">2.</span> <span class="nav-text"> 避免误导</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#做有意义的区分"><span class="nav-number">3.</span> <span class="nav-text"> 做有意义的区分</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#使用读的出来的名称"><span class="nav-number">4.</span> <span class="nav-text"> 使用读的出来的名称</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#使用可搜索的名称"><span class="nav-number">5.</span> <span class="nav-text"> 使用可搜索的名称</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#避免使用编码"><span class="nav-number">6.</span> <span class="nav-text"> 避免使用编码</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#匈牙利命名法"><span class="nav-number">6.1.</span> <span class="nav-text"> 匈牙利命名法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#成员前缀"><span class="nav-number">6.2.</span> <span class="nav-text"> 成员前缀</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#接口和实现"><span class="nav-number">6.3.</span> <span class="nav-text"> 接口和实现</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#避免思维映射"><span class="nav-number">7.</span> <span class="nav-text"> 避免思维映射</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#类名"><span class="nav-number">8.</span> <span class="nav-text"> 类名</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#方法名"><span class="nav-number">9.</span> <span class="nav-text"> 方法名</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#别扮可爱"><span class="nav-number">10.</span> <span class="nav-text"> 别扮可爱</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#每个概念对应一个词"><span class="nav-number">11.</span> <span class="nav-text"> 每个概念对应一个词</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#别用双关语"><span class="nav-number">12.</span> <span class="nav-text"> 别用双关语</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#使用解决方案领域的名称"><span class="nav-number">13.</span> <span class="nav-text"> 使用解决方案领域的名称</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#使用源自所涉及问题领域的名称"><span class="nav-number">14.</span> <span class="nav-text"> 使用源自所涉及问题领域的名称</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#添加有意义的语境"><span class="nav-number">15.</span> <span class="nav-text"> 添加有意义的语境</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#不要添加没用的语境"><span class="nav-number">16.</span> <span class="nav-text"> 不要添加没用的语境</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#名副其实"><span class="nav-number">1.</span> <span class="nav-text">名副其实</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#避免误导"><span class="nav-number">2.</span> <span class="nav-text">避免误导</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#做有意义的区分"><span class="nav-number">3.</span> <span class="nav-text">做有意义的区分</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#使用读的出来的名称"><span class="nav-number">4.</span> <span class="nav-text">使用读的出来的名称</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#使用可搜索的名称"><span class="nav-number">5.</span> <span class="nav-text">使用可搜索的名称</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#避免使用编码"><span class="nav-number">6.</span> <span class="nav-text">避免使用编码</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#匈牙利命名法"><span class="nav-number">6.1.</span> <span class="nav-text">匈牙利命名法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#成员前缀"><span class="nav-number">6.2.</span> <span class="nav-text">成员前缀</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#接口和实现"><span class="nav-number">6.3.</span> <span class="nav-text">接口和实现</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#避免思维映射"><span class="nav-number">7.</span> <span class="nav-text">避免思维映射</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#类名"><span class="nav-number">8.</span> <span class="nav-text">类名</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#方法名"><span class="nav-number">9.</span> <span class="nav-text">方法名</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#别扮可爱"><span class="nav-number">10.</span> <span class="nav-text">别扮可爱</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#每个概念对应一个词"><span class="nav-number">11.</span> <span class="nav-text">每个概念对应一个词</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#别用双关语"><span class="nav-number">12.</span> <span class="nav-text">别用双关语</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#使用解决方案领域的名称"><span class="nav-number">13.</span> <span class="nav-text">使用解决方案领域的名称</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#使用源自所涉及问题领域的名称"><span class="nav-number">14.</span> <span class="nav-text">使用源自所涉及问题领域的名称</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#添加有意义的语境"><span class="nav-number">15.</span> <span class="nav-text">添加有意义的语境</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#不要添加没用的语境"><span class="nav-number">16.</span> <span class="nav-text">不要添加没用的语境</span></a></li></ol></div>
             
 
           </div>
@@ -817,7 +797,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">137.8k</span>
+    <span title="Site words total count">129.5k</span>
   
 </div>
 

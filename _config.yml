@@ -102,29 +102,29 @@ feed:
 
 # Markdown-it config
 ## Docs: https://github.com/celsomiranda/hexo-renderer-markdown-it/wiki
-markdown:
-  render:
-    # 置为true时，html内容保持不变；置为false时，html内容将被转义成普通字符串
-    html: true
-    # 是否生成与XHTML完全兼容的标签
-    xhtmlOut: false
-    # 置为true时，每个换行符都被渲染成一个<br>（即Hexo的默认表现）；置为false时，只有空行才会被渲染为<br>（GFM的默认表现）
-    breaks: true
-    # 是否自动识别链接并把它渲染成链接
-    linkify: true
-    # 是否自动识别印刷格式（意思是把(c)渲染为©这样的）
-    typographer: true
-    # 如果typographer被设置为true，则该选项用于设置将dumb quotes（""）自动替换为smart quotes
-    quotes: '“”‘’'
-  plugins:
-    - markdown-it-abbr
-    - markdown-it-footnote
-    - markdown-it-ins
-    - markdown-it-sub
-    - markdown-it-sup
-  anchors:
-    level: 2
-    collisionSuffix: 'v'
-    permalink: true
-    permalinkClass: header-anchor
-    permalinkSymbol: " "
+# markdown:
+#   render:
+#     # 置为true时，html内容保持不变；置为false时，html内容将被转义成普通字符串
+#     html: true
+#     # 是否生成与XHTML完全兼容的标签
+#     xhtmlOut: false
+#     # 置为true时，每个换行符都被渲染成一个<br>（即Hexo的默认表现）；置为false时，只有空行才会被渲染为<br>（GFM的默认表现）
+#     breaks: true
+#     # 是否自动识别链接并把它渲染成链接
+#     linkify: true
+#     # 是否自动识别印刷格式（意思是把(c)渲染为©这样的）
+#     typographer: true
+#     # 如果typographer被设置为true，则该选项用于设置将dumb quotes（""）自动替换为smart quotes
+#     quotes: '“”‘’'
+#   plugins:
+#     - markdown-it-abbr
+#     - markdown-it-footnote
+#     - markdown-it-ins
+#     - markdown-it-sub
+#     - markdown-it-sup
+#   anchors:
+#     level: 2
+#     collisionSuffix: 'v'
+#     permalink: true
+#     permalinkClass: header-anchor
+#     permalinkSymbol: " "

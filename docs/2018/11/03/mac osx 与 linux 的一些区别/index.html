@@ -81,18 +81,18 @@
 
 
 
-<meta name="description" content="mac osx上.bashrc和.bash_profile的区别 .bash_profile is executed for login shells, while .bashrc is executed for interactive non-login shells. When you login (type username and password) via console, eithe">
+<meta name="description" content="mac osx上.bashrc和.bash_profile的区别.bash_profile is executed for login shells, while .bashrc is executed for interactive non-login shells. When you login (type username and password) via console, either">
 <meta name="keywords" content="Unix">
 <meta property="og:type" content="article">
 <meta property="og:title" content="mac osx 与 linux 的一些区别">
 <meta property="og:url" content="http://liuqinh2s.github.io/blog/2018/11/03/mac osx 与 linux 的一些区别/index.html">
 <meta property="og:site_name" content="liuqinh2s&#39; blog">
-<meta property="og:description" content="mac osx上.bashrc和.bash_profile的区别 .bash_profile is executed for login shells, while .bashrc is executed for interactive non-login shells. When you login (type username and password) via console, eithe">
+<meta property="og:description" content="mac osx上.bashrc和.bash_profile的区别.bash_profile is executed for login shells, while .bashrc is executed for interactive non-login shells. When you login (type username and password) via console, either">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2018-12-19T04:29:36.388Z">
+<meta property="og:updated_time" content="2019-01-11T09:26:39.659Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="mac osx 与 linux 的一些区别">
-<meta name="twitter:description" content="mac osx上.bashrc和.bash_profile的区别 .bash_profile is executed for login shells, while .bashrc is executed for interactive non-login shells. When you login (type username and password) via console, eithe">
+<meta name="twitter:description" content="mac osx上.bashrc和.bash_profile的区别.bash_profile is executed for login shells, while .bashrc is executed for interactive non-login shells. When you login (type username and password) via console, either">
 
 
 
@@ -420,13 +420,11 @@
       
 
       
-        <h2 id="mac-osx上-bashrc和-bash-profile的区别"><a class="header-anchor" href="#mac-osx上-bashrc和-bash-profile的区别"> </a>mac osx上<code>.bashrc</code>和<code>.bash_profile</code>的区别</h2>
-<p><code>.bash_profile</code> is executed for login shells, while <code>.bashrc</code> is executed for interactive non-login shells.</p>
+        <h2 id="mac-osx上-bashrc和-bash-profile的区别"><a href="#mac-osx上-bashrc和-bash-profile的区别" class="headerlink" title="mac osx上.bashrc和.bash_profile的区别"></a>mac osx上<code>.bashrc</code>和<code>.bash_profile</code>的区别</h2><p><code>.bash_profile</code> is executed for login shells, while <code>.bashrc</code> is executed for interactive non-login shells.</p>
 <p>When you login (type username and password) via console, either sitting at the machine, or remotely via ssh: <code>.bash_profile</code> is executed to configure your shell before the initial command prompt.</p>
 <p>But, if you’ve already logged into your machine and open a new terminal window (xterm) then .bashrc is executed before the window command prompt. <code>.bashrc</code> is also run when you start a new bash instance by typing <code>/bin/bash</code> in a terminal.</p>
 <p>On OS X, Terminal by default runs a login shell every time, so this is a little different to most other systems, but you can configure that in the preferences.</p>
-<h2 id="mac-osx系统的环境变量加载顺序"><a class="header-anchor" href="#mac-osx系统的环境变量加载顺序"> </a>Mac OSX系统的环境变量加载顺序</h2>
-<ol>
+<h2 id="Mac-OSX系统的环境变量加载顺序"><a href="#Mac-OSX系统的环境变量加载顺序" class="headerlink" title="Mac OSX系统的环境变量加载顺序"></a>Mac OSX系统的环境变量加载顺序</h2><ol>
 <li>/etc/profile</li>
 <li>/etc/paths</li>
 <li>~/.bash_profile</li>
@@ -435,8 +433,7 @@
 <li>~/.bashrc</li>
 </ol>
 <p>/etc/profile和/etc/paths是系统级别的，系统启动就会加载，后面几个是当前用户级的环境变量，后面几个按从前往后的顺序读取，如果<code>~/.bash_profile</code>文件存在，则后面的几个文件就会被忽略不读了，如果<code>~/.bash_profile</code>文件不存在，才会以此类推读取后面的文件。</p>
-<h2 id="设置path的语法"><a class="header-anchor" href="#设置path的语法"> </a>设置PATH的语法</h2>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">// 中间用冒号隔开</span><br><span class="line">export PATH=$PATH:&lt;PATH 1&gt;:&lt;PATH 2&gt;:---:&lt;PATH N&gt;</span><br></pre></td></tr></table></figure>
+<h2 id="设置PATH的语法"><a href="#设置PATH的语法" class="headerlink" title="设置PATH的语法"></a>设置PATH的语法</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">// 中间用冒号隔开</span><br><span class="line">export PATH=$PATH:&lt;PATH 1&gt;:&lt;PATH 2&gt;:---:&lt;PATH N&gt;</span><br></pre></td></tr></table></figure>
 <blockquote>
 <p>export的意思是使子进程拥有父进程的环境变量</p>
 </blockquote>
@@ -566,7 +563,7 @@
               
                 <a href="/blog/archives">
               
-                  <span class="site-state-item-count">81</span>
+                  <span class="site-state-item-count">68</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -674,7 +671,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#mac-osx上-bashrc和-bash-profile的区别"><span class="nav-number">1.</span> <span class="nav-text"> mac osx上.bashrc和.bash_profile的区别</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#mac-osx系统的环境变量加载顺序"><span class="nav-number">2.</span> <span class="nav-text"> Mac OSX系统的环境变量加载顺序</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#设置path的语法"><span class="nav-number">3.</span> <span class="nav-text"> 设置PATH的语法</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#mac-osx上-bashrc和-bash-profile的区别"><span class="nav-number">1.</span> <span class="nav-text">mac osx上.bashrc和.bash_profile的区别</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Mac-OSX系统的环境变量加载顺序"><span class="nav-number">2.</span> <span class="nav-text">Mac OSX系统的环境变量加载顺序</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#设置PATH的语法"><span class="nav-number">3.</span> <span class="nav-text">设置PATH的语法</span></a></li></ol></div>
             
 
           </div>
@@ -708,7 +705,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">137.8k</span>
+    <span title="Site words total count">129.5k</span>
   
 </div>
 

@@ -419,15 +419,14 @@
         
           
           项目初始化命令
-
 安装vue-cli: npm install -g vue-cli
 初始化项目: vue init webpack my-project
 进入项目: cd my-project
 安装依赖: npm install
 运行项目: npm run dev
 
-项目目录结构
-最重要的几个东西
+项目目录结构最重要的几个东西：
+
           ...
           <!--noindex-->
           <div class="post-button text-center">
@@ -606,10 +605,9 @@
         
           
           阅读这篇文章必须要对汇编码有足够的了解，如果你对IA32汇编码还不够了解，可以先看看这篇文章：程序的机器级表示
- Y86指令集体系结构
-Y86指令集基本上是IA32指令集的一个子集。这个指令集就是我们处理器实现的目标。如下图：
+Y86指令集体系结构Y86指令集基本上是IA32指令集的一个子集。这个指令集就是我们处理器实现的目标。如下图：
 
-IA32的movl指令分成了4个不同指令：irmovl、rrmovl、
+IA32的movl指令分成了4个不同指令：irmovl、rrmovl、mr
           ...
           <!--noindex-->
           <div class="post-button text-center">
@@ -760,7 +758,7 @@ IA32的movl指令分成了4个不同指令：irmovl、rrmovl、
                   <span class="post-meta-item-text">Words count in article&#58;</span>
                 
                 <span title="Words count in article">
-                  6,250
+                  6,245
                 </span>
               
 
@@ -787,13 +785,12 @@ IA32的movl指令分成了4个不同指令：irmovl、rrmovl、
       
         
           
-           从编译C语言文件说起
-1$ gcc -01 -o p p1.c p2.c
+          从编译C语言文件说起1$ gcc -01 -o p p1.c p2.c
 使用了gcc命令来编译，也可以简单写作：cc。
 优化层级为1，1级是最低的，层级越高程序优化越好，但增加了编译时间，也使调试变得更难，且跟源程序差异很大不便于理解。
 编译的流程是：
 
-预处理器（preprocessor）把诸
+预处理器（preprocessor）把诸如：
           ...
           <!--noindex-->
           <div class="post-button text-center">
@@ -944,7 +941,7 @@ IA32的movl指令分成了4个不同指令：irmovl、rrmovl、
                   <span class="post-meta-item-text">Words count in article&#58;</span>
                 
                 <span title="Words count in article">
-                  3,441
+                  3,297
                 </span>
               
 
@@ -1140,13 +1137,11 @@ rounding：when a number cannot be
       
         
           
-           安装 oh my zsh
-首先检查自己有没有zsh：
+          安装 oh my zsh首先检查自己有没有zsh：
 1cat /etc/shells
 如果有的话就下载oh my zsh
- 设置默认shell
-1chsh -s /bin/zsh
-有可能会遇到设置不成功的问题，那么我们可以手动修改/etc/passwd，找到自己那一条配置信息，把默认shell改
+设置默认shell1chsh -s /bin/zsh
+有可能会遇到设置不成功的问题，那么我们可以手动修改/etc/passwd，找到自己那一条配置信息，把默认shell改成/bi
           ...
           <!--noindex-->
           <div class="post-button text-center">
@@ -1192,7 +1187,7 @@ rounding：when a number cannot be
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/blog/page/7/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/blog/">1</a><span class="space">&hellip;</span><a class="page-number" href="/blog/page/7/">7</a><span class="page-number current">8</span><a class="page-number" href="/blog/page/9/">9</a><span class="space">&hellip;</span><a class="page-number" href="/blog/page/17/">17</a><a class="extend next" rel="next" href="/blog/page/9/"><i class="fa fa-angle-right"></i></a>
+    <a class="extend prev" rel="prev" href="/blog/page/7/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/blog/">1</a><span class="space">&hellip;</span><a class="page-number" href="/blog/page/7/">7</a><span class="page-number current">8</span><a class="page-number" href="/blog/page/9/">9</a><span class="space">&hellip;</span><a class="page-number" href="/blog/page/14/">14</a><a class="extend next" rel="next" href="/blog/page/9/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 
@@ -1240,7 +1235,7 @@ rounding：when a number cannot be
               
                 <a href="/blog/archives">
               
-                  <span class="site-state-item-count">81</span>
+                  <span class="site-state-item-count">68</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -1366,7 +1361,7 @@ rounding：when a number cannot be
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">137.8k</span>
+    <span title="Site words total count">129.5k</span>
   
 </div>
 

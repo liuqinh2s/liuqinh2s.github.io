@@ -81,18 +81,18 @@
 
 
 
-<meta name="description" content="Inside the C++ Object Model 系列笔记 一 – Object Lessons Inside the C++ Object Model 系列笔记 二 – The Semantics of constructors Inside the C++ Object Model 系列笔记 三 – The Semantics of Data Inside the C++ Object">
+<meta name="description" content="Inside the C++ Object Model 系列笔记 一 — Object Lessons Inside the C++ Object Model 系列笔记 二 — The Semantics of constructors Inside the C++ Object Model 系列笔记 三 — The Semantics of Data Inside the C++ Object">
 <meta name="keywords" content="C++">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Inside the C++ Object Model 系列笔记 二 -- The Semantics of constructors">
 <meta property="og:url" content="http://liuqinh2s.github.io/blog/2017/10/19/Inside-the-C++-Object-Model-系列笔记--The-Semantics-of-constructors/index.html">
 <meta property="og:site_name" content="liuqinh2s&#39; blog">
-<meta property="og:description" content="Inside the C++ Object Model 系列笔记 一 – Object Lessons Inside the C++ Object Model 系列笔记 二 – The Semantics of constructors Inside the C++ Object Model 系列笔记 三 – The Semantics of Data Inside the C++ Object">
+<meta property="og:description" content="Inside the C++ Object Model 系列笔记 一 — Object Lessons Inside the C++ Object Model 系列笔记 二 — The Semantics of constructors Inside the C++ Object Model 系列笔记 三 — The Semantics of Data Inside the C++ Object">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2018-12-19T04:29:36.381Z">
+<meta property="og:updated_time" content="2019-01-11T09:26:39.653Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Inside the C++ Object Model 系列笔记 二 -- The Semantics of constructors">
-<meta name="twitter:description" content="Inside the C++ Object Model 系列笔记 一 – Object Lessons Inside the C++ Object Model 系列笔记 二 – The Semantics of constructors Inside the C++ Object Model 系列笔记 三 – The Semantics of Data Inside the C++ Object">
+<meta name="twitter:description" content="Inside the C++ Object Model 系列笔记 一 — Object Lessons Inside the C++ Object Model 系列笔记 二 — The Semantics of constructors Inside the C++ Object Model 系列笔记 三 — The Semantics of Data Inside the C++ Object">
 
 
 
@@ -432,21 +432,18 @@
 
       
         <ul>
-<li><a href="../Inside-the-C++-Object-Model-%E7%B3%BB%E5%88%97%E7%AC%94%E8%AE%B0--Object-Lessons">Inside the C++ Object Model 系列笔记 一 – Object Lessons</a></li>
-<li><a href="./">Inside the C++ Object Model 系列笔记 二 – The Semantics of constructors</a></li>
-<li><a href="../../21/Inside-the-C++-Object-Model-%E7%B3%BB%E5%88%97%E7%AC%94%E8%AE%B0--The-Semantics-of-Data">Inside the C++ Object Model 系列笔记 三 – The Semantics of Data</a></li>
-<li><a href="../../23/Inside-the-C++-Object-Model-%E7%B3%BB%E5%88%97%E7%AC%94%E8%AE%B0--The-Semantics-of-Function">Inside the C++ Object Model 系列笔记 四 – The Semantics of Function</a></li>
+<li><a href="../Inside-the-C++-Object-Model-系列笔记--Object-Lessons">Inside the C++ Object Model 系列笔记 一 — Object Lessons</a></li>
+<li><a href="./">Inside the C++ Object Model 系列笔记 二 — The Semantics of constructors</a></li>
+<li><a href="../../21/Inside-the-C++-Object-Model-系列笔记--The-Semantics-of-Data">Inside the C++ Object Model 系列笔记 三 — The Semantics of Data</a></li>
+<li><a href="../../23/Inside-the-C++-Object-Model-系列笔记--The-Semantics-of-Function">Inside the C++ Object Model 系列笔记 四 — The Semantics of Function</a></li>
 </ul>
 <p>这一章详细的讨论了 constructor 如何工作，讨论构造一个对象的过程以及构造一个对象给程序带来的影响。</p>
-<h2 id="区分trivial和notrivial"><a class="header-anchor" href="#区分trivial和notrivial"> </a>区分trivial和notrivial</h2>
-<ol>
+<h2 id="区分trivial和notrivial"><a href="#区分trivial和notrivial" class="headerlink" title="区分trivial和notrivial"></a>区分trivial和notrivial</h2><ol>
 <li>只有编译器需要的时候(为什么会需要?后面讲的很清楚)，合成操作才是nontrivial的， 这样的构造函数才会被真正的合成出来;</li>
 <li>如果编译器不需要，而程序员又没有提供，这时的默认构造函数就是trivial的。虽然它在概念上存在，但是编译器实际上根本不会去合成出来，因为他不做任何没有意义的事情，所以当然可以忽略它不去合成。trivial 的函数只存在于概念上，实际上不存在这个函数。</li>
 </ol>
-<h2 id="default-constructor"><a class="header-anchor" href="#default-constructor"> </a>default constructor</h2>
-<p>A default constructor is a constructor which can be called with no arguments (either defined with an empty parameter list, or with default arguments provided for every parameter).</p>
-<h3 id="通常很多c-程序员存在两种误解"><a class="header-anchor" href="#通常很多c-程序员存在两种误解"> </a>通常很多C++程序员存在两种误解</h3>
-<ul>
+<h2 id="default-constructor"><a href="#default-constructor" class="headerlink" title="default constructor"></a>default constructor</h2><p>A default constructor is a constructor which can be called with no arguments (either defined with an empty parameter list, or with default arguments provided for every parameter).</p>
+<h3 id="通常很多C-程序员存在两种误解"><a href="#通常很多C-程序员存在两种误解" class="headerlink" title="通常很多C++程序员存在两种误解"></a>通常很多C++程序员存在两种误解</h3><ul>
 <li>没有定义默认构造函数的类都会被编译器生成一个默认构造函数。</li>
 <li>编译器生成的默认构造函数会明确初始化类中每一个数据成员。</li>
 </ul>
@@ -455,47 +452,32 @@
 <p>注意如果声明的是一个指针（或者在其他语言里声明了一个对象或者数组的引用），那么只会开辟一个指针的空间，真正的对象要到定义的时候，也就是初始化的时候，分配内存并初始化。</p>
 </blockquote>
 <p>所以所有成员都在声明的时候被分配内存，构造函数的作用是初始化它们，non-object 成员需要程序员自己初始化，编译器不帮忙。</p>
-<p>C++中对于默认构造函数的解释是:<br>
-<strong>默认的构造函数会在需要的时候被编译器产生出来。</strong><br>
-这里非常重要的一点是:<br>
-谁需要?是程序的需要还是编译器的需要?如果是程序的需要，那是程序员的责任;<br>
-只有在是编译器的需要时，默认构造函数才会被编译器产生出来，而且被产生出来的默认构造函数只会执行编译器所需要的行动，而且这个产生操作只有在默认构造函数真正被调用时才会进行合成。</p>
+<p>C++中对于默认构造函数的解释是:<br><strong>默认的构造函数会在需要的时候被编译器产生出来。</strong><br>这里非常重要的一点是:<br>谁需要?是程序的需要还是编译器的需要?如果是程序的需要，那是程序员的责任;<br>只有在是编译器的需要时，默认构造函数才会被编译器产生出来，而且被产生出来的默认构造函数只会执行编译器所需要的行动，而且这个产生操作只有在默认构造函数真正被调用时才会进行合成。</p>
 <p>例如:成员变量初始化为 0 操作，这个操作就是程序的需要，而不是编译器的需要。</p>
 <p>总结变量的初始化:</p>
 <p>Global objects are guaranteed to have their associated memory “zeroed out” at program start-up. Local objects allocated on the program stack and heap objects allocated on the free-store do not have their associated memory zeroed out; rather, the memory retains the arbitrary bit pattern of its previous use.</p>
-<p>只有全局变量和静态变量才会保证初始化，其中静态变量可以视为全局变量的一种，因为静态变量也是保存在全局变量的存储空间上的。<br>
-Golbal objects 的内存保证会在程序激活的时候被清 0；Local objects 配置于程序的堆栈中，Heap objects 配置于自由空间中，都不一定会被清为 0,它们的内容将是内存上次被使用后的痕迹!</p>
+<p>只有全局变量和静态变量才会保证初始化，其中静态变量可以视为全局变量的一种，因为静态变量也是保存在全局变量的存储空间上的。<br>Golbal objects 的内存保证会在程序激活的时候被清 0；Local objects 配置于程序的堆栈中，Heap objects 配置于自由空间中，都不一定会被清为 0,它们的内容将是内存上次被使用后的痕迹!</p>
 <p>全局变量和静态变量都放在 global data Segment 上，且在类被声明的时候就已经分配内存和初始化，也就是 <strong>在任何对象被定义之前静态变量就已经存在了（即使该 class 没有任何 object 实体，static data members也已经存在）。</strong></p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Foo</span> &#123;</span> <span class="keyword">public</span>: <span class="keyword">int</span> val; Foo *pnext; &#125;;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">foo_bar</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">   <span class="comment">// Oops:  program needs bar's members zeroed out</span></span><br><span class="line">   Foo bar;</span><br><span class="line">   <span class="keyword">if</span> ( bar.val || bar.pnext )</span><br><span class="line">      <span class="comment">// ... do something</span></span><br><span class="line">   <span class="comment">// ...</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>When is a default constructor synthesized, then? Only when the implementation needs it. Moreover, the synthesized constructor performs only those activities required by the implementation. That is, even if there were a need to synthesize a default constructor for class Foo, that constructor would not include code to zero out the two data members val and pnext. For the previous program fragment to execute correctly, the designer of class Foo needs to provide an explicit default constructor that properly initializes the class’s two members.</p>
 <p>意思是初始化 val 和 pnext 是程序员的责任，编译器不负责，所以你这里不初始化它们，它们存储的结果就是内存遗留的痕迹。</p>
-<h3 id="什么时候编译器会给你生成默认构造函数"><a class="header-anchor" href="#什么时候编译器会给你生成默认构造函数"> </a>什么时候编译器会给你生成默认构造函数</h3>
-<p>首先你得没有写默认构造函数，编译器才会给你生成。有四类情况，编译器会给你加代码：</p>
+<h3 id="什么时候编译器会给你生成默认构造函数"><a href="#什么时候编译器会给你生成默认构造函数" class="headerlink" title="什么时候编译器会给你生成默认构造函数"></a>什么时候编译器会给你生成默认构造函数</h3><p>首先你得没有写默认构造函数，编译器才会给你生成。有四类情况，编译器会给你加代码：</p>
 <ol>
 <li>类中有一个对象（成员变量），这个对象包含了默认构造函数</li>
 <li>继承自带有默认构造函数的基类的类</li>
 <li>带有虚函数的类</li>
 <li>继承自虚基类的类</li>
 </ol>
-<p>如果class A内含一个或以上的member objects，那么A的constructor必须调用每一个 member class 的默认构造函数。<br>
-具体方法是:编译器会扩张 constructors（注意：是所有的构造函数，不仅仅是默认构造函数会被扩张），在其中安插代码使得在 user code 被调用之前先调 用 member objects 的默认构造函数(当然如果需要调用基类的默认构造函数，则放在基类的 默认构造函数调用之后:基类构造函数-&gt;成员构造函数-&gt;user code)。<br>
-C++要求以“member objects 在 class 中的声明次序”来调用各个 construtors。这就是声明的次序决定了初始化次序(构造函数初始化列表一直要求以声明顺序来初始化)的根本原因!<br>
-所以你打乱 member initialization list 的顺序根本没有用哦~</p>
+<p>如果class A内含一个或以上的member objects，那么A的constructor必须调用每一个 member class 的默认构造函数。<br>具体方法是:编译器会扩张 constructors（注意：是所有的构造函数，不仅仅是默认构造函数会被扩张），在其中安插代码使得在 user code 被调用之前先调 用 member objects 的默认构造函数(当然如果需要调用基类的默认构造函数，则放在基类的 默认构造函数调用之后:基类构造函数-&gt;成员构造函数-&gt;user code)。<br>C++要求以“member objects 在 class 中的声明次序”来调用各个 construtors。这就是声明的次序决定了初始化次序(构造函数初始化列表一直要求以声明顺序来初始化)的根本原因!<br>所以你打乱 member initialization list 的顺序根本没有用哦~</p>
 <p>理解了初始化列表中的实际执行顺序中“以 member 声明的次序”来决定的，就可以理解一些很 微妙的错误了。比如:</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">A() : i(<span class="number">99</span>), j(<span class="number">66</span>), value(foo()) &#123;... &#125;</span><br><span class="line"><span class="keyword">int</span> i, value, j;</span><br></pre></td></tr></table></figure>
-<p>这会不会产生错误取决于成员函数 foo()是依赖于 i 还是 j:<br>
-如果 foo 依赖于 i，由于 i 声明在 value 之前，所以不会产生错误;<br>
-如果 foo 依赖于 j，由于 j 声明在 value 之后，就产生了使用未初始化成员的错误。</p>
-<p>带有virtual functions的类的默认构造函数毫无疑问是nontrivial的，需要编译器安插额外的<br>
-成员 vptr 并在构造函数中正确的设置好 vptr，这是编译器的重要职责之一。<br>
-继承自 virtual base class 的类的默认构造函数同样也毫无疑问的 nontrivial，编译器需要正确设置相关的信息以使得这些虚基类的信息能够在执行时准备妥当，这些设置取决于编译器实现虚基类的手法。</p>
+<p>这会不会产生错误取决于成员函数 foo()是依赖于 i 还是 j:<br>如果 foo 依赖于 i，由于 i 声明在 value 之前，所以不会产生错误;<br>如果 foo 依赖于 j，由于 j 声明在 value 之后，就产生了使用未初始化成员的错误。</p>
+<p>带有virtual functions的类的默认构造函数毫无疑问是nontrivial的，需要编译器安插额外的<br>成员 vptr 并在构造函数中正确的设置好 vptr，这是编译器的重要职责之一。<br>继承自 virtual base class 的类的默认构造函数同样也毫无疑问的 nontrivial，编译器需要正确设置相关的信息以使得这些虚基类的信息能够在执行时准备妥当，这些设置取决于编译器实现虚基类的手法。</p>
 <p>编译器有4种情况会使得编译器真正的为class生成nontrivial的默认构造函数，这个 nontrivial 的默认构造函数只满足编译器的需要(调用 member objects 或 base class 的默认构造函数、初始化 virtual function 或 virutal base class 机制)。其它情况时，类在概念上拥有默认构造函数，但是实际上根本不会被产生出来(前面的区分 trivial 和 nontrivial)。</p>
 <p>对于一个trivial默认构造函数，编译器的态度是，既然它全无用处，干脆就不合成它。在这儿要厘清的是概念与实现的差别，概念上追求缜密完善，在实现上则追求效率，可以不要的东西就不要。</p>
-<h2 id="copy-constructor"><a class="header-anchor" href="#copy-constructor"> </a>copy constructor</h2>
-<p>有一个参数的类型是其类类型的构造函数是为拷贝构造函数。如下：</p>
+<h2 id="copy-constructor"><a href="#copy-constructor" class="headerlink" title="copy constructor"></a>copy constructor</h2><p>有一个参数的类型是其类类型的构造函数是为拷贝构造函数。如下：</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">X::X( <span class="keyword">const</span> X&amp; x);</span><br><span class="line">Y::Y( <span class="keyword">const</span> Y&amp; y, <span class="keyword">int</span> =<span class="number">0</span> );</span><br><span class="line"><span class="comment">//可以是多参数形式，但其第二个即后继参数都有一个默认值</span></span><br></pre></td></tr></table></figure>
-<h3 id="什么时候编译器会给你生成拷贝构造函数"><a class="header-anchor" href="#什么时候编译器会给你生成拷贝构造函数"> </a>什么时候编译器会给你生成拷贝构造函数</h3>
-<blockquote>
+<h3 id="什么时候编译器会给你生成拷贝构造函数"><a href="#什么时候编译器会给你生成拷贝构造函数" class="headerlink" title="什么时候编译器会给你生成拷贝构造函数"></a>什么时候编译器会给你生成拷贝构造函数</h3><blockquote>
 <p>其实和前面默认构造函数一样，四种情况</p>
 </blockquote>
 <p>如果一个类没有定义拷贝构造函数，通常按照“成员逐一初始化(Default Memberwise Initialization)”的手法来解决“一个类对象以另一个同类实体作为初值”——也就是说把内建或派生的数据成员从某一个对象拷贝到另一个对象身上，如果数据成员是一个对象，则递归使用“成员逐一初始化(Default Memberwise Initialization)”的手法。</p>
@@ -514,8 +496,7 @@ C++要求以“member objects 在 class 中的声明次序”来调用各个 con
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">A</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">  <span class="function"><span class="keyword">virtual</span> <span class="keyword">void</span> <span class="title">f</span><span class="params">()</span> </span>&#123; <span class="built_in">cout</span> &lt;&lt; <span class="string">"A::f()"</span> &lt;&lt; <span class="built_in">endl</span>; &#125;</span><br><span class="line">  <span class="keyword">int</span> i;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">B</span> :</span> <span class="keyword">public</span> A &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">  <span class="function"><span class="keyword">void</span> <span class="title">f</span><span class="params">()</span></span>&#123; <span class="built_in">cout</span> &lt;&lt; <span class="string">"B::f()"</span> &lt;&lt; <span class="built_in">endl</span>; &#125;</span><br><span class="line">  <span class="keyword">int</span> i;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">int</span> argc, <span class="keyword">char</span> <span class="keyword">const</span> *argv[])</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">  B b;</span><br><span class="line">  b.i=<span class="number">1</span>;</span><br><span class="line">  A a = b;</span><br><span class="line">  A *p = &amp;a;</span><br><span class="line">  p-&gt;f();</span><br><span class="line">  <span class="built_in">cout</span> &lt;&lt; p-&gt;i &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">  <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>两个 i 不是同一个 i，b.i=1;优先给 b 中的同名变量赋值了。这样的代码简直可怕。那么怎么访问到从 A 继承来的成员变量 i 呢，请看：</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">A</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">  <span class="function"><span class="keyword">virtual</span> <span class="keyword">void</span> <span class="title">f</span><span class="params">()</span> </span>&#123; <span class="built_in">cout</span> &lt;&lt; <span class="string">"A::f()"</span> &lt;&lt; <span class="built_in">endl</span>; &#125;</span><br><span class="line">  <span class="keyword">int</span> i;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">B</span> :</span> <span class="keyword">public</span> A &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">  <span class="function"><span class="keyword">void</span> <span class="title">f</span><span class="params">()</span></span>&#123; <span class="built_in">cout</span> &lt;&lt; <span class="string">"B::f()"</span> &lt;&lt; <span class="built_in">endl</span>; &#125;</span><br><span class="line">  <span class="keyword">int</span> i;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">int</span> argc, <span class="keyword">char</span> <span class="keyword">const</span> *argv[])</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">  B b;</span><br><span class="line">  b.A::i=<span class="number">6</span>;</span><br><span class="line">  b.B::i=<span class="number">1</span>;</span><br><span class="line">  A a = b;</span><br><span class="line">  A *p = &amp;a;</span><br><span class="line">  <span class="built_in">cout</span> &lt;&lt; p-&gt;i &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">  <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="命名返回值优化"><a class="header-anchor" href="#命名返回值优化"> </a>命名返回值优化</h2>
-<p>对于一个如foo()这样的函数，它的每一个返回分支都返回相同的对象，编译器有可能对其做Named return Value优化（下文都简称NRV优化），方法是以一个参数result取代返回对象。</p>
+<h2 id="命名返回值优化"><a href="#命名返回值优化" class="headerlink" title="命名返回值优化"></a>命名返回值优化</h2><p>对于一个如foo()这样的函数，它的每一个返回分支都返回相同的对象，编译器有可能对其做Named return Value优化（下文都简称NRV优化），方法是以一个参数result取代返回对象。</p>
 <p>foo()的原型：</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">X <span class="title">foo</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    X xx;</span><br><span class="line">    <span class="keyword">if</span>(...)</span><br><span class="line">        <span class="keyword">return</span> xx;</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">        <span class="keyword">return</span> xx;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>优化后的foo()以result取代xx：</p>
@@ -647,7 +628,7 @@ C++要求以“member objects 在 class 中的声明次序”来调用各个 con
               
                 <a href="/blog/archives">
               
-                  <span class="site-state-item-count">81</span>
+                  <span class="site-state-item-count">68</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -755,7 +736,7 @@ C++要求以“member objects 在 class 中的声明次序”来调用各个 con
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#区分trivial和notrivial"><span class="nav-number">1.</span> <span class="nav-text"> 区分trivial和notrivial</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#default-constructor"><span class="nav-number">2.</span> <span class="nav-text"> default constructor</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#通常很多c-程序员存在两种误解"><span class="nav-number">2.1.</span> <span class="nav-text"> 通常很多C++程序员存在两种误解</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#什么时候编译器会给你生成默认构造函数"><span class="nav-number">2.2.</span> <span class="nav-text"> 什么时候编译器会给你生成默认构造函数</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#copy-constructor"><span class="nav-number">3.</span> <span class="nav-text"> copy constructor</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#什么时候编译器会给你生成拷贝构造函数"><span class="nav-number">3.1.</span> <span class="nav-text"> 什么时候编译器会给你生成拷贝构造函数</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#命名返回值优化"><span class="nav-number">4.</span> <span class="nav-text"> 命名返回值优化</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#区分trivial和notrivial"><span class="nav-number">1.</span> <span class="nav-text">区分trivial和notrivial</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#default-constructor"><span class="nav-number">2.</span> <span class="nav-text">default constructor</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#通常很多C-程序员存在两种误解"><span class="nav-number">2.1.</span> <span class="nav-text">通常很多C++程序员存在两种误解</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#什么时候编译器会给你生成默认构造函数"><span class="nav-number">2.2.</span> <span class="nav-text">什么时候编译器会给你生成默认构造函数</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#copy-constructor"><span class="nav-number">3.</span> <span class="nav-text">copy constructor</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#什么时候编译器会给你生成拷贝构造函数"><span class="nav-number">3.1.</span> <span class="nav-text">什么时候编译器会给你生成拷贝构造函数</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#命名返回值优化"><span class="nav-number">4.</span> <span class="nav-text">命名返回值优化</span></a></li></ol></div>
             
 
           </div>
@@ -789,7 +770,7 @@ C++要求以“member objects 在 class 中的声明次序”来调用各个 con
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">137.8k</span>
+    <span title="Site words total count">129.5k</span>
   
 </div>
 

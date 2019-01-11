@@ -81,18 +81,18 @@
 
 
 
-<meta name="description" content="添加用户 添加用户：useradd xxx 密码：passwd xxx 添加用户进 sudoers 修改 /etc/sudoers 文件，首先改权限：sudo chmod u+w /etc/sudoers，然后再用 vi /etc/sudoers。 理解这个表达式的意义： 1ALL ALL=(ALL) ALL The first ALL is the users allowed The seco">
+<meta name="description" content="添加用户添加用户：useradd xxx密码：passwd xxx添加用户进 sudoers修改 /etc/sudoers 文件，首先改权限：sudo chmod u+w /etc/sudoers，然后再用 vi /etc/sudoers。理解这个表达式的意义： 1ALL ALL=(ALL) ALL The first ALL is the users allowedThe second one">
 <meta name="keywords" content="Unix,Linux">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Linux 服务器运维">
 <meta property="og:url" content="http://liuqinh2s.github.io/blog/2018/11/04/Linux服务器运维/index.html">
 <meta property="og:site_name" content="liuqinh2s&#39; blog">
-<meta property="og:description" content="添加用户 添加用户：useradd xxx 密码：passwd xxx 添加用户进 sudoers 修改 /etc/sudoers 文件，首先改权限：sudo chmod u+w /etc/sudoers，然后再用 vi /etc/sudoers。 理解这个表达式的意义： 1ALL ALL=(ALL) ALL The first ALL is the users allowed The seco">
+<meta property="og:description" content="添加用户添加用户：useradd xxx密码：passwd xxx添加用户进 sudoers修改 /etc/sudoers 文件，首先改权限：sudo chmod u+w /etc/sudoers，然后再用 vi /etc/sudoers。理解这个表达式的意义： 1ALL ALL=(ALL) ALL The first ALL is the users allowedThe second one">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2018-12-19T04:29:36.388Z">
+<meta property="og:updated_time" content="2019-01-11T09:26:39.660Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Linux 服务器运维">
-<meta name="twitter:description" content="添加用户 添加用户：useradd xxx 密码：passwd xxx 添加用户进 sudoers 修改 /etc/sudoers 文件，首先改权限：sudo chmod u+w /etc/sudoers，然后再用 vi /etc/sudoers。 理解这个表达式的意义： 1ALL ALL=(ALL) ALL The first ALL is the users allowed The seco">
+<meta name="twitter:description" content="添加用户添加用户：useradd xxx密码：passwd xxx添加用户进 sudoers修改 /etc/sudoers 文件，首先改权限：sudo chmod u+w /etc/sudoers，然后再用 vi /etc/sudoers。理解这个表达式的意义： 1ALL ALL=(ALL) ALL The first ALL is the users allowedThe second one">
 
 
 
@@ -431,17 +431,9 @@
       
 
       
-        <h2 id="添加用户"><a class="header-anchor" href="#添加用户"> </a>添加用户</h2>
-<p>添加用户：<code>useradd xxx</code><br>
-密码：<code>passwd xxx</code><br>
-添加用户进 sudoers<br>
-修改 <code>/etc/sudoers</code> 文件，首先改权限：<code>sudo chmod u+w /etc/sudoers</code>，然后再用 <code>vi /etc/sudoers</code>。<br>
-理解这个表达式的意义：</p>
+        <h2 id="添加用户"><a href="#添加用户" class="headerlink" title="添加用户"></a>添加用户</h2><p>添加用户：<code>useradd xxx</code><br>密码：<code>passwd xxx</code><br>添加用户进 sudoers<br>修改 <code>/etc/sudoers</code> 文件，首先改权限：<code>sudo chmod u+w /etc/sudoers</code>，然后再用 <code>vi /etc/sudoers</code>。<br>理解这个表达式的意义：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ALL ALL=(ALL) ALL</span><br></pre></td></tr></table></figure>
-<p>The first ALL is the users allowed<br>
-The second one is the hosts<br>
-The third one is the user as you are running the command<br>
-The last one is the commands allowed</p>
+<p>The first ALL is the users allowed<br>The second one is the hosts<br>The third one is the user as you are running the command<br>The last one is the commands allowed</p>
 <p>在文本中 root ALL=(ALL) ALL 后面一行加：xxx ALL=(ALL) ALL</p>
 <p>把用户加进组：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">useradd -G &#123;group-name&#125; username</span><br><span class="line">usermod -a -G &#123;group-name&#125; username</span><br></pre></td></tr></table></figure>
@@ -572,7 +564,7 @@ The last one is the commands allowed</p>
               
                 <a href="/blog/archives">
               
-                  <span class="site-state-item-count">81</span>
+                  <span class="site-state-item-count">68</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -680,7 +672,7 @@ The last one is the commands allowed</p>
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#添加用户"><span class="nav-number">1.</span> <span class="nav-text"> 添加用户</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#添加用户"><span class="nav-number">1.</span> <span class="nav-text">添加用户</span></a></li></ol></div>
             
 
           </div>
@@ -714,7 +706,7 @@ The last one is the commands allowed</p>
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">137.8k</span>
+    <span title="Site words total count">129.5k</span>
   
 </div>
 

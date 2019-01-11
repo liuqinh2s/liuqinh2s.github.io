@@ -81,17 +81,17 @@
 
 
 
-<meta name="description" content="无意的重复 有时，重复来自设计中的错误。 让我们来看一个来自配送行业的例子。假定我们的分析揭示，一辆卡车有车型、牌照号、司机以及其他一些属性。与此类似，发运路线的属性包括路线、卡车和司机，基于这一理解，我们编写了一些类。 但如果Sally打电话请病假，我们必须改换司机，事情又会怎样呢？Truck和DeliverRoute都包含有司机。我们改变哪一个？显然这一的重复很糟糕，根据底层的商业模式对其进">
+<meta name="description" content="无意的重复有时，重复来自设计中的错误。 让我们来看一个来自配送行业的例子。假定我们的分析揭示，一辆卡车有车型、牌照号、司机以及其他一些属性。与此类似，发运路线的属性包括路线、卡车和司机，基于这一理解，我们编写了一些类。 但如果Sally打电话请病假，我们必须改换司机，事情又会怎样呢？Truck和DeliverRoute都包含有司机。我们改变哪一个？显然这一的重复很糟糕，根据底层的商业模式对其进行规">
 <meta property="og:type" content="article">
 <meta property="og:title" content="程序员修炼之道（从小工到专家）">
 <meta property="og:url" content="http://liuqinh2s.github.io/blog/2018/11/05/程序员修炼之道（从小工到专家）/index.html">
 <meta property="og:site_name" content="liuqinh2s&#39; blog">
-<meta property="og:description" content="无意的重复 有时，重复来自设计中的错误。 让我们来看一个来自配送行业的例子。假定我们的分析揭示，一辆卡车有车型、牌照号、司机以及其他一些属性。与此类似，发运路线的属性包括路线、卡车和司机，基于这一理解，我们编写了一些类。 但如果Sally打电话请病假，我们必须改换司机，事情又会怎样呢？Truck和DeliverRoute都包含有司机。我们改变哪一个？显然这一的重复很糟糕，根据底层的商业模式对其进">
+<meta property="og:description" content="无意的重复有时，重复来自设计中的错误。 让我们来看一个来自配送行业的例子。假定我们的分析揭示，一辆卡车有车型、牌照号、司机以及其他一些属性。与此类似，发运路线的属性包括路线、卡车和司机，基于这一理解，我们编写了一些类。 但如果Sally打电话请病假，我们必须改换司机，事情又会怎样呢？Truck和DeliverRoute都包含有司机。我们改变哪一个？显然这一的重复很糟糕，根据底层的商业模式对其进行规">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2018-12-19T04:29:36.390Z">
+<meta property="og:updated_time" content="2019-01-11T09:26:39.662Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="程序员修炼之道（从小工到专家）">
-<meta name="twitter:description" content="无意的重复 有时，重复来自设计中的错误。 让我们来看一个来自配送行业的例子。假定我们的分析揭示，一辆卡车有车型、牌照号、司机以及其他一些属性。与此类似，发运路线的属性包括路线、卡车和司机，基于这一理解，我们编写了一些类。 但如果Sally打电话请病假，我们必须改换司机，事情又会怎样呢？Truck和DeliverRoute都包含有司机。我们改变哪一个？显然这一的重复很糟糕，根据底层的商业模式对其进">
+<meta name="twitter:description" content="无意的重复有时，重复来自设计中的错误。 让我们来看一个来自配送行业的例子。假定我们的分析揭示，一辆卡车有车型、牌照号、司机以及其他一些属性。与此类似，发运路线的属性包括路线、卡车和司机，基于这一理解，我们编写了一些类。 但如果Sally打电话请病假，我们必须改换司机，事情又会怎样呢？Truck和DeliverRoute都包含有司机。我们改变哪一个？显然这一的重复很糟糕，根据底层的商业模式对其进行规">
 
 
 
@@ -430,15 +430,14 @@
       
 
       
-        <h2 id="无意的重复"><a class="header-anchor" href="#无意的重复"> </a>无意的重复</h2>
-<p>有时，重复来自设计中的错误。</p>
+        <h2 id="无意的重复"><a href="#无意的重复" class="headerlink" title="无意的重复"></a>无意的重复</h2><p>有时，重复来自设计中的错误。</p>
 <p>让我们来看一个来自配送行业的例子。假定我们的分析揭示，一辆卡车有车型、牌照号、司机以及其他一些属性。与此类似，发运路线的属性包括路线、卡车和司机，基于这一理解，我们编写了一些类。</p>
-<p>但如果Sally打电话请病假，我们必须改换司机，事情又会怎样呢？Truck和DeliverRoute都包含有司机。我们改变哪一个？显然这一的重复很糟糕，根据底层的商业模式对其进行规范化（normalize）–卡车的底层属性集真的应该包含司机？路线呢？又或许我们需要第三种对象，把司机、卡车及路线结合在一起，不管最终的解决方案是什么，我们都应该避免这种不规范的数据。</p>
+<p>但如果Sally打电话请病假，我们必须改换司机，事情又会怎样呢？Truck和DeliverRoute都包含有司机。我们改变哪一个？显然这一的重复很糟糕，根据底层的商业模式对其进行规范化（normalize）—卡车的底层属性集真的应该包含司机？路线呢？又或许我们需要第三种对象，把司机、卡车及路线结合在一起，不管最终的解决方案是什么，我们都应该避免这种不规范的数据。</p>
 <p>当我们拥有多个相互依赖的数据元素时，会出现一种不那么显而易见的不规范数据，让我们看一个表示线段的类：</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Line</span>&#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    Point start;</span><br><span class="line">    Point end;</span><br><span class="line">    <span class="keyword">double</span> length;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 <p>第一眼看上去，这个类似乎是合理的，线段显然有起点和终点，并总是有长度（即使长度为0），但这里有重复。长度是由起点和终点决定的：改变其中一个，长度就会变化，最好是让长度成为计算字段：</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Line</span>&#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    Point start;</span><br><span class="line">    Point end;</span><br><span class="line">    <span class="function"><span class="keyword">double</span> <span class="title">length</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="keyword">return</span> start.distanceTo(end);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-<p>在以后的开发过程中，你可以因为性能原因而选择违反DRY原则，这经常发生在你需要缓存数据，以避免重复昂贵的操作时，其诀窍是使影响局部化–对DRY原则的违反没有暴露给外界：只有类中的方法需要注意“保持行为良好”。</p>
+<p>在以后的开发过程中，你可以因为性能原因而选择违反DRY原则，这经常发生在你需要缓存数据，以避免重复昂贵的操作时，其诀窍是使影响局部化—对DRY原则的违反没有暴露给外界：只有类中的方法需要注意“保持行为良好”。</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Line</span>&#123;</span></span><br><span class="line"><span class="keyword">private</span>:</span><br><span class="line">    <span class="keyword">bool</span> changed;</span><br><span class="line">    <span class="keyword">double</span> length;</span><br><span class="line">    Point start;</span><br><span class="line">    Point end;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">setStart</span><span class="params">(Point p)</span></span>&#123;</span><br><span class="line">        start = p;</span><br><span class="line">        changed = <span class="literal">true</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">setEnd</span><span class="params">(Point p)</span></span>&#123;</span><br><span class="line">        end = p;</span><br><span class="line">        changed = <span class="literal">true</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="function">Point <span class="title">getStart</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="keyword">return</span> start;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function">Point <span class="title">getEnd</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="keyword">return</span> end;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">double</span> <span class="title">getLength</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(changed)&#123;</span><br><span class="line">            length = start.distanceTo(end);</span><br><span class="line">            changed = <span class="literal">false</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> length;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 <p>这个例子还说明了像Java和C++这样的面向对象语言的一个重要问题在可能的情况下，应该总是用访问器（accessor）函数读写对象的属性。这将使未来增加功能（比如缓存）变得更容易。</p>
 <blockquote>
@@ -468,8 +467,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/blog/2018/11/05/mysql查询性能优化/" rel="next" title="mysql查询性能优化">
-                <i class="fa fa-chevron-left"></i> mysql查询性能优化
+              <a href="/blog/2018/11/05/mysql问题集合/" rel="next" title="mysql问题集合">
+                <i class="fa fa-chevron-left"></i> mysql问题集合
               </a>
             
           </div>
@@ -478,8 +477,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/blog/2018/11/05/mysql问题集合/" rel="prev" title="mysql问题集合">
-                mysql问题集合 <i class="fa fa-chevron-right"></i>
+              <a href="/blog/2018/11/05/编程珠玑系列笔记1/" rel="prev" title="编程珠玑系列笔记 -- 第一章 开篇">
+                编程珠玑系列笔记 -- 第一章 开篇 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -564,7 +563,7 @@
               
                 <a href="/blog/archives">
               
-                  <span class="site-state-item-count">81</span>
+                  <span class="site-state-item-count">68</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -672,7 +671,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#无意的重复"><span class="nav-number">1.</span> <span class="nav-text"> 无意的重复</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#无意的重复"><span class="nav-number">1.</span> <span class="nav-text">无意的重复</span></a></li></ol></div>
             
 
           </div>
@@ -706,7 +705,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">137.8k</span>
+    <span title="Site words total count">129.5k</span>
   
 </div>
 

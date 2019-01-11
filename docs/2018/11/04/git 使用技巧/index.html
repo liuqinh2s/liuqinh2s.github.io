@@ -81,18 +81,18 @@
 
 
 
-<meta name="description" content="git 建立远程项目 git 是多人写作的版本控制系统，而我却把它用成了单人版本控制系统，真是罪过罪过。上一次用多人 git 的时候，连添加远端库的步骤都没弄清。其实很简单，你在本地做了一个项目之后，远端的项目还没捡起来，或者才新建的一个空的远端项目，这个时候你特别想把本地项目和远端项目关联起来，你想起了 git remote add，但是不是这么操作的。 具体的操作如下： 首先，通过上传 你的">
+<meta name="description" content="git 建立远程项目git 是多人写作的版本控制系统，而我却把它用成了单人版本控制系统，真是罪过罪过。上一次用多人 git 的时候，连添加远端库的步骤都没弄清。其实很简单，你在本地做了一个项目之后，远端的项目还没捡起来，或者才新建的一个空的远端项目，这个时候你特别想把本地项目和远端项目关联起来，你想起了 git remote add，但是不是这么操作的。 具体的操作如下：首先，通过上传 你的公钥给">
 <meta name="keywords" content="git">
 <meta property="og:type" content="article">
 <meta property="og:title" content="git 使用技巧">
 <meta property="og:url" content="http://liuqinh2s.github.io/blog/2018/11/04/git 使用技巧/index.html">
 <meta property="og:site_name" content="liuqinh2s&#39; blog">
-<meta property="og:description" content="git 建立远程项目 git 是多人写作的版本控制系统，而我却把它用成了单人版本控制系统，真是罪过罪过。上一次用多人 git 的时候，连添加远端库的步骤都没弄清。其实很简单，你在本地做了一个项目之后，远端的项目还没捡起来，或者才新建的一个空的远端项目，这个时候你特别想把本地项目和远端项目关联起来，你想起了 git remote add，但是不是这么操作的。 具体的操作如下： 首先，通过上传 你的">
+<meta property="og:description" content="git 建立远程项目git 是多人写作的版本控制系统，而我却把它用成了单人版本控制系统，真是罪过罪过。上一次用多人 git 的时候，连添加远端库的步骤都没弄清。其实很简单，你在本地做了一个项目之后，远端的项目还没捡起来，或者才新建的一个空的远端项目，这个时候你特别想把本地项目和远端项目关联起来，你想起了 git remote add，但是不是这么操作的。 具体的操作如下：首先，通过上传 你的公钥给">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2018-12-19T04:29:36.389Z">
+<meta property="og:updated_time" content="2019-01-11T09:26:39.660Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="git 使用技巧">
-<meta name="twitter:description" content="git 建立远程项目 git 是多人写作的版本控制系统，而我却把它用成了单人版本控制系统，真是罪过罪过。上一次用多人 git 的时候，连添加远端库的步骤都没弄清。其实很简单，你在本地做了一个项目之后，远端的项目还没捡起来，或者才新建的一个空的远端项目，这个时候你特别想把本地项目和远端项目关联起来，你想起了 git remote add，但是不是这么操作的。 具体的操作如下： 首先，通过上传 你的">
+<meta name="twitter:description" content="git 建立远程项目git 是多人写作的版本控制系统，而我却把它用成了单人版本控制系统，真是罪过罪过。上一次用多人 git 的时候，连添加远端库的步骤都没弄清。其实很简单，你在本地做了一个项目之后，远端的项目还没捡起来，或者才新建的一个空的远端项目，这个时候你特别想把本地项目和远端项目关联起来，你想起了 git remote add，但是不是这么操作的。 具体的操作如下：首先，通过上传 你的公钥给">
 
 
 
@@ -431,22 +431,13 @@
       
 
       
-        <h2 id="git-建立远程项目"><a class="header-anchor" href="#git-建立远程项目"> </a>git 建立远程项目</h2>
-<p>git 是多人写作的版本控制系统，而我却把它用成了单人版本控制系统，真是罪过罪过。上一次用多人 git 的时候，连添加远端库的步骤都没弄清。其实很简单，你在本地做了一个项目之后，远端的项目还没捡起来，或者才新建的一个空的远端项目，这个时候你特别想把本地项目和远端项目关联起来，你想起了 git remote add，但是不是这么操作的。</p>
-<p>具体的操作如下：<br>
-首先，通过上传 你的公钥给 git 服务器，获得 git 服务器对你本机的认证，这样你用 git 命令就不用每次都输入用户名和密码了。然后就是 git clone 远端项目，即便它是空的，也请你先 clone，然后把你本地的东西复制粘贴到 clone 下来的目录里，并使用 git add . 和 git commit -m “first commit” 提交。然后 git push origin master 。你会发现根本就不需要 git remote add 一个主机，因为 git clone 的时候就把远端给关联好了。使用 git remote -v 查看远端服务器的信息吧。</p>
+        <h2 id="git-建立远程项目"><a href="#git-建立远程项目" class="headerlink" title="git 建立远程项目"></a>git 建立远程项目</h2><p>git 是多人写作的版本控制系统，而我却把它用成了单人版本控制系统，真是罪过罪过。上一次用多人 git 的时候，连添加远端库的步骤都没弄清。其实很简单，你在本地做了一个项目之后，远端的项目还没捡起来，或者才新建的一个空的远端项目，这个时候你特别想把本地项目和远端项目关联起来，你想起了 git remote add，但是不是这么操作的。</p>
+<p>具体的操作如下：<br>首先，通过上传 你的公钥给 git 服务器，获得 git 服务器对你本机的认证，这样你用 git 命令就不用每次都输入用户名和密码了。然后就是 git clone 远端项目，即便它是空的，也请你先 clone，然后把你本地的东西复制粘贴到 clone 下来的目录里，并使用 git add . 和 git commit -m “first commit” 提交。然后 git push origin master 。你会发现根本就不需要 git remote add 一个主机，因为 git clone 的时候就把远端给关联好了。使用 git remote -v 查看远端服务器的信息吧。</p>
 <blockquote>
 <p>其实如果原项目太大复制很慢的话，复制<code>.git</code>文件夹到原项目，这样更快（只要把本地项目和远端拉下来的空项目的<code>.git</code>文件放到一起就行了）。</p>
 </blockquote>
-<p>远端名字改了，本地怎么修改 remote 信息：<br>
-<code>git remote set-url origin git@github.com:username/newrepo.git</code><br>
-修改远程仓库对应的网址.<br>
-然后：<br>
-<code>git remote -v</code><br>
-列出所有远程仓库信息, 包括网址.<br>
-看看是否修改成功吧</p>
-<h2 id="github页面修改仓库信息"><a class="header-anchor" href="#github页面修改仓库信息"> </a>Github页面修改仓库信息</h2>
-<p>跑到自己的仓库那,找到Setting的tag, 点进去后Options的Settings就可以设定Repository name.</p>
+<p>远端名字改了，本地怎么修改 remote 信息：<br><code>git remote set-url origin git@github.com:username/newrepo.git</code><br>修改远程仓库对应的网址.<br>然后：<br><code>git remote -v</code><br>列出所有远程仓库信息, 包括网址.<br>看看是否修改成功吧</p>
+<h2 id="Github页面修改仓库信息"><a href="#Github页面修改仓库信息" class="headerlink" title="Github页面修改仓库信息"></a>Github页面修改仓库信息</h2><p>跑到自己的仓库那,找到Setting的tag, 点进去后Options的Settings就可以设定Repository name.</p>
 
       
     </div>
@@ -487,8 +478,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/blog/2018/11/04/pom.xml详解/" rel="prev" title="pom.xml详解">
-                pom.xml详解 <i class="fa fa-chevron-right"></i>
+              <a href="/blog/2018/11/04/精通一款编辑器之sublime text 3/" rel="prev" title="精通一款编辑器之sublime text 3">
+                精通一款编辑器之sublime text 3 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -573,7 +564,7 @@
               
                 <a href="/blog/archives">
               
-                  <span class="site-state-item-count">81</span>
+                  <span class="site-state-item-count">68</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -681,7 +672,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#git-建立远程项目"><span class="nav-number">1.</span> <span class="nav-text"> git 建立远程项目</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#github页面修改仓库信息"><span class="nav-number">2.</span> <span class="nav-text"> Github页面修改仓库信息</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#git-建立远程项目"><span class="nav-number">1.</span> <span class="nav-text">git 建立远程项目</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Github页面修改仓库信息"><span class="nav-number">2.</span> <span class="nav-text">Github页面修改仓库信息</span></a></li></ol></div>
             
 
           </div>
@@ -715,7 +706,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">137.8k</span>
+    <span title="Site words total count">129.5k</span>
   
 </div>
 

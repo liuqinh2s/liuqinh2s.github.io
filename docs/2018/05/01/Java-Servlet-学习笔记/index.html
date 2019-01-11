@@ -81,17 +81,17 @@
 
 
 
-<meta name="description" content="The difference between servlets and JSP is that servlets typically embed HTML inside Java code, while JSPs embed Java code in HTML.  不过现在都是用MVC框架了。  life cycle of a servlet Three methods are central">
+<meta name="description" content="The difference between servlets and JSP is that servlets typically embed HTML inside Java code, while JSPs embed Java code in HTML.  不过现在都是用MVC框架了。 life cycle of a servletThree methods are central to">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Java Servlet 学习笔记">
 <meta property="og:url" content="http://liuqinh2s.github.io/blog/2018/05/01/Java-Servlet-学习笔记/index.html">
 <meta property="og:site_name" content="liuqinh2s&#39; blog">
-<meta property="og:description" content="The difference between servlets and JSP is that servlets typically embed HTML inside Java code, while JSPs embed Java code in HTML.  不过现在都是用MVC框架了。  life cycle of a servlet Three methods are central">
+<meta property="og:description" content="The difference between servlets and JSP is that servlets typically embed HTML inside Java code, while JSPs embed Java code in HTML.  不过现在都是用MVC框架了。 life cycle of a servletThree methods are central to">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2018-12-19T04:29:36.384Z">
+<meta property="og:updated_time" content="2019-01-11T09:26:39.656Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Java Servlet 学习笔记">
-<meta name="twitter:description" content="The difference between servlets and JSP is that servlets typically embed HTML inside Java code, while JSPs embed Java code in HTML.  不过现在都是用MVC框架了。  life cycle of a servlet Three methods are central">
+<meta name="twitter:description" content="The difference between servlets and JSP is that servlets typically embed HTML inside Java code, while JSPs embed Java code in HTML.  不过现在都是用MVC框架了。 life cycle of a servletThree methods are central to">
 
 
 
@@ -434,8 +434,7 @@
 <p>The difference between servlets and JSP is that servlets typically embed HTML inside Java code, while JSPs embed Java code in HTML.</p>
 </blockquote>
 <p>不过现在都是用MVC框架了。</p>
-<h2 id="life-cycle-of-a-servlet"><a class="header-anchor" href="#life-cycle-of-a-servlet"> </a>life cycle of a servlet</h2>
-<p>Three methods are central to the life cycle of a servlet. These are <code>init()</code>, <code>service()</code>, and <code>destroy()</code>. They are implemented by every servlet and are invoked at specific times by the server.</p>
+<h2 id="life-cycle-of-a-servlet"><a href="#life-cycle-of-a-servlet" class="headerlink" title="life cycle of a servlet"></a>life cycle of a servlet</h2><p>Three methods are central to the life cycle of a servlet. These are <code>init()</code>, <code>service()</code>, and <code>destroy()</code>. They are implemented by every servlet and are invoked at specific times by the server.</p>
 <ul>
 <li>the web container initializes the servlet instance by calling the init() method, passing an object implementing the <code>javax.servlet.ServletConfig</code> interface. This configuration object allows the servlet to access name-value initialization parameters from the web application.</li>
 <li>Each request is serviced in its own separate thread. The web container calls the service() method of the servlet for every request. The developer of the servlet must provide an implementation for these methods.</li>
@@ -443,46 +442,39 @@
 </ul>
 <p>The following is a typical user scenario of these methods.</p>
 <ol>
-<li>Assume that a user requests to visit a URL.
-<ul>
+<li>Assume that a user requests to visit a URL.<ul>
 <li>The browser then generates an HTTP request for this URL.</li>
 <li>This request is then sent to the appropriate server.</li>
 </ul>
 </li>
-<li>The HTTP request is received by the web server and forwarded to the servlet container.
-<ul>
+<li>The HTTP request is received by the web server and forwarded to the servlet container.<ul>
 <li>The container maps this request to a particular servlet.</li>
 <li>The servlet is dynamically retrieved and loaded into the address space of the container.</li>
 </ul>
 </li>
-<li>The container invokes the <code>init()</code> method of the servlet.
-<ul>
+<li>The container invokes the <code>init()</code> method of the servlet.<ul>
 <li><strong>This method is invoked only when the servlet is first loaded into memory.</strong></li>
 <li>It is possible to pass initialization parameters to the servlet so that it may configure itself.</li>
 </ul>
 </li>
-<li>The container invokes the <code>service()</code> method of the servlet.
-<ul>
+<li>The container invokes the <code>service()</code> method of the servlet.<ul>
 <li>This method is called to process the HTTP request.</li>
 <li>The servlet may read data that has been provided in the HTTP request.</li>
 <li>The servlet may also formulate an HTTP response for the client.</li>
 </ul>
 </li>
-<li>The servlet remains in the container’s address space and is available to process any other HTTP requests received from clients.
-<ul>
+<li>The servlet remains in the container’s address space and is available to process any other HTTP requests received from clients.<ul>
 <li><strong>The service() method is called for each HTTP request.</strong></li>
 </ul>
 </li>
-<li>The container may, at some point, decide to unload the servlet from its memory.
-<ul>
+<li>The container may, at some point, decide to unload the servlet from its memory.<ul>
 <li>The algorithms by which this decision is made are specific to each container.</li>
 </ul>
 </li>
 <li>The container calls the servlet’s destroy() method to relinquish any resources such as file handles that are allocated for the servlet; important data may be saved to a persistent store.</li>
 <li>The memory allocated for the servlet and its objects can then be garbage collected.</li>
 </ol>
-<h2 id="example"><a class="header-anchor" href="#example"> </a>Example</h2>
-<p>The following example servlet prints how many times its <code>service()</code> method was called.</p>
+<h2 id="Example"><a href="#Example" class="headerlink" title="Example"></a>Example</h2><p>The following example servlet prints how many times its <code>service()</code> method was called.</p>
 <p>Note that <code>HttpServlet</code> is a subclass of <code>GenericServlet</code>, an implementation of the <code>Servlet</code> interface.</p>
 <p>The <code>service()</code> method of <code>HttpServlet</code> class dispatches requests to the methods <code>doGet()</code>, <code>doPost()</code>, <code>doPut()</code>, <code>doDelete()</code>, and so on; according to the HTTP request. In the example below <code>service()</code> is overridden and does not distinguish which HTTP request method it serves.</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.io.IOException;</span><br><span class="line"> </span><br><span class="line"><span class="keyword">import</span> javax.servlet.ServletConfig;</span><br><span class="line"><span class="keyword">import</span> javax.servlet.ServletException;</span><br><span class="line"><span class="keyword">import</span> javax.servlet.http.HttpServlet;</span><br><span class="line"><span class="keyword">import</span> javax.servlet.http.HttpServletRequest;</span><br><span class="line"><span class="keyword">import</span> javax.servlet.http.HttpServletResponse;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ServletLifeCycleExample</span> <span class="keyword">extends</span> <span class="title">HttpServlet</span> </span>&#123;</span><br><span class="line"> </span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">int</span> count;</span><br><span class="line"> </span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">init</span><span class="params">(<span class="keyword">final</span> ServletConfig config)</span> <span class="keyword">throws</span> ServletException </span>&#123;</span><br><span class="line">        <span class="keyword">super</span>.init(config);</span><br><span class="line">        getServletContext().log(<span class="string">"init() called"</span>);</span><br><span class="line">        count = <span class="number">0</span>;</span><br><span class="line">    &#125;</span><br><span class="line"> </span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">service</span><span class="params">(<span class="keyword">final</span> HttpServletRequest request, <span class="keyword">final</span> HttpServletResponse response)</span> <span class="keyword">throws</span> ServletException, IOException </span>&#123;</span><br><span class="line">        getServletContext().log(<span class="string">"service() called"</span>);</span><br><span class="line">        count++;</span><br><span class="line">        response.getWriter().write(<span class="string">"Incrementing the count to "</span> + count);</span><br><span class="line">    &#125;</span><br><span class="line"> </span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">destroy</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        getServletContext().log(<span class="string">"destroy() called"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -524,8 +516,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/blog/2018/05/03/Android通讯录深入研究/" rel="prev" title="Android通讯录深入研究">
-                Android通讯录深入研究 <i class="fa fa-chevron-right"></i>
+              <a href="/blog/2018/05/03/Volley库StringRequest编码问题/" rel="prev" title="Volley库StringRequest编码问题">
+                Volley库StringRequest编码问题 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -610,7 +602,7 @@
               
                 <a href="/blog/archives">
               
-                  <span class="site-state-item-count">81</span>
+                  <span class="site-state-item-count">68</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -718,7 +710,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#life-cycle-of-a-servlet"><span class="nav-number">1.</span> <span class="nav-text"> life cycle of a servlet</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#example"><span class="nav-number">2.</span> <span class="nav-text"> Example</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#life-cycle-of-a-servlet"><span class="nav-number">1.</span> <span class="nav-text">life cycle of a servlet</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Example"><span class="nav-number">2.</span> <span class="nav-text">Example</span></a></li></ol></div>
             
 
           </div>
@@ -752,7 +744,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">137.8k</span>
+    <span title="Site words total count">129.5k</span>
   
 </div>
 

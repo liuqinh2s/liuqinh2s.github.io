@@ -81,17 +81,17 @@
 
 
 
-<meta name="description" content="为查询缓存优化你的查询 大多数的MySQL服务器都开启了查询缓存。这是提高性最有效的方法之一，而且这是被MySQL的数据库引擎处理的。当有很多相同的查询被执行了多次的时候，这些查询结果会被放到一个缓存中，这样，后续的相同的查询就不用操作表而直接访问缓存结果了。 这里最主要的问题是，对于程序员来说，这个事情是很容易被忽略的。因为，我们某些查询语句会让MySQL不使用缓存。请看下面的示例： 1234">
+<meta name="description" content="为查询缓存优化你的查询大多数的MySQL服务器都开启了查询缓存。这是提高性最有效的方法之一，而且这是被MySQL的数据库引擎处理的。当有很多相同的查询被执行了多次的时候，这些查询结果会被放到一个缓存中，这样，后续的相同的查询就不用操作表而直接访问缓存结果了。 这里最主要的问题是，对于程序员来说，这个事情是很容易被忽略的。因为，我们某些查询语句会让MySQL不使用缓存。请看下面的示例： 123456">
 <meta property="og:type" content="article">
 <meta property="og:title" content="mysql查询性能优化">
 <meta property="og:url" content="http://liuqinh2s.github.io/blog/2018/11/05/mysql查询性能优化/index.html">
 <meta property="og:site_name" content="liuqinh2s&#39; blog">
-<meta property="og:description" content="为查询缓存优化你的查询 大多数的MySQL服务器都开启了查询缓存。这是提高性最有效的方法之一，而且这是被MySQL的数据库引擎处理的。当有很多相同的查询被执行了多次的时候，这些查询结果会被放到一个缓存中，这样，后续的相同的查询就不用操作表而直接访问缓存结果了。 这里最主要的问题是，对于程序员来说，这个事情是很容易被忽略的。因为，我们某些查询语句会让MySQL不使用缓存。请看下面的示例： 1234">
+<meta property="og:description" content="为查询缓存优化你的查询大多数的MySQL服务器都开启了查询缓存。这是提高性最有效的方法之一，而且这是被MySQL的数据库引擎处理的。当有很多相同的查询被执行了多次的时候，这些查询结果会被放到一个缓存中，这样，后续的相同的查询就不用操作表而直接访问缓存结果了。 这里最主要的问题是，对于程序员来说，这个事情是很容易被忽略的。因为，我们某些查询语句会让MySQL不使用缓存。请看下面的示例： 123456">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2018-12-19T04:29:36.390Z">
+<meta property="og:updated_time" content="2019-01-11T09:26:39.661Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="mysql查询性能优化">
-<meta name="twitter:description" content="为查询缓存优化你的查询 大多数的MySQL服务器都开启了查询缓存。这是提高性最有效的方法之一，而且这是被MySQL的数据库引擎处理的。当有很多相同的查询被执行了多次的时候，这些查询结果会被放到一个缓存中，这样，后续的相同的查询就不用操作表而直接访问缓存结果了。 这里最主要的问题是，对于程序员来说，这个事情是很容易被忽略的。因为，我们某些查询语句会让MySQL不使用缓存。请看下面的示例： 1234">
+<meta name="twitter:description" content="为查询缓存优化你的查询大多数的MySQL服务器都开启了查询缓存。这是提高性最有效的方法之一，而且这是被MySQL的数据库引擎处理的。当有很多相同的查询被执行了多次的时候，这些查询结果会被放到一个缓存中，这样，后续的相同的查询就不用操作表而直接访问缓存结果了。 这里最主要的问题是，对于程序员来说，这个事情是很容易被忽略的。因为，我们某些查询语句会让MySQL不使用缓存。请看下面的示例： 123456">
 
 
 
@@ -430,36 +430,25 @@
       
 
       
-        <h2 id="为查询缓存优化你的查询"><a class="header-anchor" href="#为查询缓存优化你的查询"> </a>为查询缓存优化你的查询</h2>
-<p>大多数的MySQL服务器都开启了查询缓存。这是提高性最有效的方法之一，而且这是被MySQL的数据库引擎处理的。当有很多相同的查询被执行了多次的时候，这些查询结果会被放到一个缓存中，这样，后续的相同的查询就不用操作表而直接访问缓存结果了。</p>
+        <h2 id="为查询缓存优化你的查询"><a href="#为查询缓存优化你的查询" class="headerlink" title="为查询缓存优化你的查询"></a>为查询缓存优化你的查询</h2><p>大多数的MySQL服务器都开启了查询缓存。这是提高性最有效的方法之一，而且这是被MySQL的数据库引擎处理的。当有很多相同的查询被执行了多次的时候，这些查询结果会被放到一个缓存中，这样，后续的相同的查询就不用操作表而直接访问缓存结果了。</p>
 <p>这里最主要的问题是，对于程序员来说，这个事情是很容易被忽略的。因为，我们某些查询语句会让MySQL不使用缓存。请看下面的示例：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">// 查询缓存不开启</span><br><span class="line">$r = mysql_query(&quot;SELECT username FROM user WHERE signup_date &gt;= CURDATE()&quot;);</span><br><span class="line"> </span><br><span class="line">// 开启查询缓存</span><br><span class="line">$today = date(&quot;Y-m-d&quot;);</span><br><span class="line">$r = mysql_query(&quot;SELECT username FROM user WHERE signup_date &gt;= &apos;$today&apos;&quot;);</span><br></pre></td></tr></table></figure>
 <p>上面两条SQL语句的差别就是 CURDATE() ，MySQL的查询缓存对这个函数不起作用。所以，像 NOW() 和 RAND() 或是其它的诸如此类的SQL函数都不会开启查询缓存，因为这些函数的返回是会不定的易变的。所以，你所需要的就是用一个变量来代替MySQL的函数，从而开启缓存。</p>
-<h2 id="explain-你的-select-查询"><a class="header-anchor" href="#explain-你的-select-查询"> </a>EXPLAIN 你的 SELECT 查询</h2>
-<h2 id="当只要一行数据时使用-limit-1"><a class="header-anchor" href="#当只要一行数据时使用-limit-1"> </a>当只要一行数据时使用 LIMIT 1</h2>
-<p>当你查询表的有些时候，你已经知道结果只会有一条结果，但因为你可能需要去fetch游标，或是你也许会去检查返回的记录数。</p>
+<h2 id="EXPLAIN-你的-SELECT-查询"><a href="#EXPLAIN-你的-SELECT-查询" class="headerlink" title="EXPLAIN 你的 SELECT 查询"></a>EXPLAIN 你的 SELECT 查询</h2><h2 id="当只要一行数据时使用-LIMIT-1"><a href="#当只要一行数据时使用-LIMIT-1" class="headerlink" title="当只要一行数据时使用 LIMIT 1"></a>当只要一行数据时使用 LIMIT 1</h2><p>当你查询表的有些时候，你已经知道结果只会有一条结果，但因为你可能需要去fetch游标，或是你也许会去检查返回的记录数。</p>
 <p>在这种情况下，加上 LIMIT 1 可以增加性能。这样一样，MySQL数据库引擎会在找到一条数据后停止搜索，而不是继续往后查少下一条符合记录的数据。</p>
-<h2 id="为搜索字段建索引"><a class="header-anchor" href="#为搜索字段建索引"> </a>为搜索字段建索引</h2>
-<p>索引并不一定就是给主键或是唯一的字段。如果在你的表中，有某个字段你总要会经常用来做搜索，那么，请为其建立索引吧。</p>
-<h2 id="在join表的时候使用相当类型的例-并将其索引"><a class="header-anchor" href="#在join表的时候使用相当类型的例-并将其索引"> </a>在Join表的时候使用相当类型的例，并将其索引</h2>
-<h2 id="千万不要-order-by-rand"><a class="header-anchor" href="#千万不要-order-by-rand"> </a>千万不要 ORDER BY RAND()</h2>
-<h2 id="避免-select"><a class="header-anchor" href="#避免-select"> </a>避免 SELECT *</h2>
-<p>从数据库里读出越多的数据，那么查询就会变得越慢。并且，如果你的数据库服务器和WEB服务器是两台独立的服务器的话，这还会增加网络传输的负载。</p>
+<h2 id="为搜索字段建索引"><a href="#为搜索字段建索引" class="headerlink" title="为搜索字段建索引"></a>为搜索字段建索引</h2><p>索引并不一定就是给主键或是唯一的字段。如果在你的表中，有某个字段你总要会经常用来做搜索，那么，请为其建立索引吧。</p>
+<h2 id="在Join表的时候使用相当类型的例，并将其索引"><a href="#在Join表的时候使用相当类型的例，并将其索引" class="headerlink" title="在Join表的时候使用相当类型的例，并将其索引"></a>在Join表的时候使用相当类型的例，并将其索引</h2><h2 id="千万不要-ORDER-BY-RAND"><a href="#千万不要-ORDER-BY-RAND" class="headerlink" title="千万不要 ORDER BY RAND()"></a>千万不要 ORDER BY RAND()</h2><h2 id="避免-SELECT"><a href="#避免-SELECT" class="headerlink" title="避免 SELECT *"></a>避免 SELECT *</h2><p>从数据库里读出越多的数据，那么查询就会变得越慢。并且，如果你的数据库服务器和WEB服务器是两台独立的服务器的话，这还会增加网络传输的负载。</p>
 <p>所以，你应该养成一个需要什么就取什么的好的习惯。</p>
-<h2 id="永远为每张表设置一个id"><a class="header-anchor" href="#永远为每张表设置一个id"> </a>永远为每张表设置一个ID</h2>
-<p>我们应该为数据库里的每张表都设置一个ID做为其主键，而且最好的是一个INT型的（推荐使用UNSIGNED），并设置上自动增加的AUTO_INCREMENT标志。</p>
+<h2 id="永远为每张表设置一个ID"><a href="#永远为每张表设置一个ID" class="headerlink" title="永远为每张表设置一个ID"></a>永远为每张表设置一个ID</h2><p>我们应该为数据库里的每张表都设置一个ID做为其主键，而且最好的是一个INT型的（推荐使用UNSIGNED），并设置上自动增加的AUTO_INCREMENT标志。</p>
 <p>就算是你 users 表有一个主键叫 “email”的字段，你也别让它成为主键。使用 VARCHAR 类型来当主键会使用得性能下降。另外，在你的程序中，你应该使用表的ID来构造你的数据结构。</p>
 <p>而且，在MySQL数据引擎下，还有一些操作需要使用主键，在这些情况下，主键的性能和设置变得非常重要，比如，集群，分区……</p>
 <p>在这里，只有一个情况是例外，那就是“关联表”的“外键”，也就是说，这个表的主键，通过若干个别的表的主键构成。我们把这个情况叫做“外键”。比如：有一个“学生表”有学生的ID，有一个“课程表”有课程ID，那么，“成绩表”就是“关联表”了，其关联了学生表和课程表，在成绩表中，学生ID和课程ID叫“外键”其共同组成主键。</p>
-<h2 id="使用-enum-而不是-varchar"><a class="header-anchor" href="#使用-enum-而不是-varchar"> </a>使用 ENUM 而不是 VARCHAR</h2>
-<p>ENUM 类型是非常快和紧凑的。在实际上，其保存的是 TINYINT，但其外表上显示为字符串。这样一来，用这个字段来做一些选项列表变得相当的完美。</p>
+<h2 id="使用-ENUM-而不是-VARCHAR"><a href="#使用-ENUM-而不是-VARCHAR" class="headerlink" title="使用 ENUM 而不是 VARCHAR"></a>使用 ENUM 而不是 VARCHAR</h2><p>ENUM 类型是非常快和紧凑的。在实际上，其保存的是 TINYINT，但其外表上显示为字符串。这样一来，用这个字段来做一些选项列表变得相当的完美。</p>
 <p>如果你有一个字段，比如“性别”，“国家”，“民族”，“状态”或“部门”，你知道这些字段的取值是有限而且固定的，那么，你应该使用 ENUM 而不是 VARCHAR。</p>
-<h2 id="尽可能的使用-not-null"><a class="header-anchor" href="#尽可能的使用-not-null"> </a>尽可能的使用 NOT NULL</h2>
-<p>除非你有一个很特别的原因去使用 NULL 值，你应该总是让你的字段保持 NOT NULL。这看起来好像有点争议，请往下看。</p>
+<h2 id="尽可能的使用-NOT-NULL"><a href="#尽可能的使用-NOT-NULL" class="headerlink" title="尽可能的使用 NOT NULL"></a>尽可能的使用 NOT NULL</h2><p>除非你有一个很特别的原因去使用 NULL 值，你应该总是让你的字段保持 NOT NULL。这看起来好像有点争议，请往下看。</p>
 <p>首先，问问你自己“Empty”和“NULL”有多大的区别（如果是INT，那就是0和NULL）？如果你觉得它们之间没有什么区别，那么你就不要使用NULL。（你知道吗？在 Oracle 里，NULL 和 Empty 的字符串是一样的！)</p>
 <p>不要以为 NULL 不需要空间，其需要额外的空间，并且，在你进行比较的时候，你的程序会更复杂。 当然，这里并不是说你就不能使用NULL了，现实情况是很复杂的，依然会有些情况下，你需要使用NULL值。</p>
-<h2 id="拆分大的-delete-或-insert-语句"><a class="header-anchor" href="#拆分大的-delete-或-insert-语句"> </a>拆分大的 DELETE 或 INSERT 语句</h2>
-<p>如果你需要在一个在线的网站上去执行一个大的 DELETE 或 INSERT 查询，你需要非常小心，要避免你的操作让你的整个网站停止相应。因为这两个操作是会锁表的，表一锁住了，别的操作都进不来了。</p>
+<h2 id="拆分大的-DELETE-或-INSERT-语句"><a href="#拆分大的-DELETE-或-INSERT-语句" class="headerlink" title="拆分大的 DELETE 或 INSERT 语句"></a>拆分大的 DELETE 或 INSERT 语句</h2><p>如果你需要在一个在线的网站上去执行一个大的 DELETE 或 INSERT 查询，你需要非常小心，要避免你的操作让你的整个网站停止相应。因为这两个操作是会锁表的，表一锁住了，别的操作都进不来了。</p>
 <p>Apache 会有很多的子进程或线程。所以，其工作起来相当有效率，而我们的服务器也不希望有太多的子进程，线程和数据库链接，这是极大的占服务器资源的事情，尤其是内存。</p>
 <p>如果你把你的表锁上一段时间，比如30秒钟，那么对于一个有很高访问量的站点来说，这30秒所积累的访问进程/线程，数据库链接，打开的文件数，可能不仅仅会让你泊WEB服务Crash，还可能会让你的整台服务器马上掛了。</p>
 <p>所以，如果你有一个大的处理，你定你一定把其拆分，使用 LIMIT 条件是一个好的方法。下面是一个示例：</p>
@@ -488,8 +477,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/blog/2018/11/05/mysql存储过程/" rel="next" title="mysql存储过程">
-                <i class="fa fa-chevron-left"></i> mysql存储过程
+              <a href="/blog/2018/11/05/LeetCode 543. Diameter of Binary Tree/" rel="next" title="LeetCode 543. Diameter of Binary Tree">
+                <i class="fa fa-chevron-left"></i> LeetCode 543. Diameter of Binary Tree
               </a>
             
           </div>
@@ -498,8 +487,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/blog/2018/11/05/程序员修炼之道（从小工到专家）/" rel="prev" title="程序员修炼之道（从小工到专家）">
-                程序员修炼之道（从小工到专家） <i class="fa fa-chevron-right"></i>
+              <a href="/blog/2018/11/05/mysql问题集合/" rel="prev" title="mysql问题集合">
+                mysql问题集合 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -584,7 +573,7 @@
               
                 <a href="/blog/archives">
               
-                  <span class="site-state-item-count">81</span>
+                  <span class="site-state-item-count">68</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -692,7 +681,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#为查询缓存优化你的查询"><span class="nav-number">1.</span> <span class="nav-text"> 为查询缓存优化你的查询</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#explain-你的-select-查询"><span class="nav-number">2.</span> <span class="nav-text"> EXPLAIN 你的 SELECT 查询</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#当只要一行数据时使用-limit-1"><span class="nav-number">3.</span> <span class="nav-text"> 当只要一行数据时使用 LIMIT 1</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#为搜索字段建索引"><span class="nav-number">4.</span> <span class="nav-text"> 为搜索字段建索引</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#在join表的时候使用相当类型的例-并将其索引"><span class="nav-number">5.</span> <span class="nav-text"> 在Join表的时候使用相当类型的例，并将其索引</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#千万不要-order-by-rand"><span class="nav-number">6.</span> <span class="nav-text"> 千万不要 ORDER BY RAND()</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#避免-select"><span class="nav-number">7.</span> <span class="nav-text"> 避免 SELECT *</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#永远为每张表设置一个id"><span class="nav-number">8.</span> <span class="nav-text"> 永远为每张表设置一个ID</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#使用-enum-而不是-varchar"><span class="nav-number">9.</span> <span class="nav-text"> 使用 ENUM 而不是 VARCHAR</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#尽可能的使用-not-null"><span class="nav-number">10.</span> <span class="nav-text"> 尽可能的使用 NOT NULL</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#拆分大的-delete-或-insert-语句"><span class="nav-number">11.</span> <span class="nav-text"> 拆分大的 DELETE 或 INSERT 语句</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#为查询缓存优化你的查询"><span class="nav-number">1.</span> <span class="nav-text">为查询缓存优化你的查询</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#EXPLAIN-你的-SELECT-查询"><span class="nav-number">2.</span> <span class="nav-text">EXPLAIN 你的 SELECT 查询</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#当只要一行数据时使用-LIMIT-1"><span class="nav-number">3.</span> <span class="nav-text">当只要一行数据时使用 LIMIT 1</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#为搜索字段建索引"><span class="nav-number">4.</span> <span class="nav-text">为搜索字段建索引</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#在Join表的时候使用相当类型的例，并将其索引"><span class="nav-number">5.</span> <span class="nav-text">在Join表的时候使用相当类型的例，并将其索引</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#千万不要-ORDER-BY-RAND"><span class="nav-number">6.</span> <span class="nav-text">千万不要 ORDER BY RAND()</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#避免-SELECT"><span class="nav-number">7.</span> <span class="nav-text">避免 SELECT *</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#永远为每张表设置一个ID"><span class="nav-number">8.</span> <span class="nav-text">永远为每张表设置一个ID</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#使用-ENUM-而不是-VARCHAR"><span class="nav-number">9.</span> <span class="nav-text">使用 ENUM 而不是 VARCHAR</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#尽可能的使用-NOT-NULL"><span class="nav-number">10.</span> <span class="nav-text">尽可能的使用 NOT NULL</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#拆分大的-DELETE-或-INSERT-语句"><span class="nav-number">11.</span> <span class="nav-text">拆分大的 DELETE 或 INSERT 语句</span></a></li></ol></div>
             
 
           </div>
@@ -726,7 +715,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">137.8k</span>
+    <span title="Site words total count">129.5k</span>
   
 </div>
 

@@ -81,17 +81,17 @@
 
 
 
-<meta name="description" content="做网站的前端开发，学习CSS布局是非常重要的，这里给出一些质量高的资料：  学习CSS布局 Flex布局教程–阮一峰 Flex布局实战–阮一峰">
+<meta name="description" content="做网站的前端开发，学习CSS布局是非常重要的，这里给出一些质量高的资料：  学习CSS布局 Flex布局教程—阮一峰 Flex布局实战—阮一峰">
 <meta property="og:type" content="article">
 <meta property="og:title" content="CSS布局">
 <meta property="og:url" content="http://liuqinh2s.github.io/blog/2018/11/01/CSS布局/index.html">
 <meta property="og:site_name" content="liuqinh2s&#39; blog">
-<meta property="og:description" content="做网站的前端开发，学习CSS布局是非常重要的，这里给出一些质量高的资料：  学习CSS布局 Flex布局教程–阮一峰 Flex布局实战–阮一峰">
+<meta property="og:description" content="做网站的前端开发，学习CSS布局是非常重要的，这里给出一些质量高的资料：  学习CSS布局 Flex布局教程—阮一峰 Flex布局实战—阮一峰">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2018-12-19T04:29:36.387Z">
+<meta property="og:updated_time" content="2019-01-11T09:26:39.659Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="CSS布局">
-<meta name="twitter:description" content="做网站的前端开发，学习CSS布局是非常重要的，这里给出一些质量高的资料：  学习CSS布局 Flex布局教程–阮一峰 Flex布局实战–阮一峰">
+<meta name="twitter:description" content="做网站的前端开发，学习CSS布局是非常重要的，这里给出一些质量高的资料：  学习CSS布局 Flex布局教程—阮一峰 Flex布局实战—阮一峰">
 
 
 
@@ -405,7 +405,7 @@
                   <span class="post-meta-item-text">Words count in article&#58;</span>
                 
                 <span title="Words count in article">
-                  522
+                  518
                 </span>
               
 
@@ -433,30 +433,24 @@
         <p>做网站的前端开发，学习CSS布局是非常重要的，这里给出一些质量高的资料：</p>
 <ul>
 <li><a href="http://zh.learnlayout.com/" target="_blank" rel="noopener">学习CSS布局</a></li>
-<li><a href="http://www.ruanyifeng.com/blog/2015/07/flex-grammar.html" target="_blank" rel="noopener">Flex布局教程–阮一峰</a></li>
-<li><a href="http://www.ruanyifeng.com/blog/2015/07/flex-examples.html" target="_blank" rel="noopener">Flex布局实战–阮一峰</a></li>
+<li><a href="http://www.ruanyifeng.com/blog/2015/07/flex-grammar.html" target="_blank" rel="noopener">Flex布局教程—阮一峰</a></li>
+<li><a href="http://www.ruanyifeng.com/blog/2015/07/flex-examples.html" target="_blank" rel="noopener">Flex布局实战—阮一峰</a></li>
 </ul>
 <a id="more"></a>
 <p>布局的传统解决方案，基于<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/box_model" target="_blank" rel="noopener">盒装模型</a>。依赖 <code>display</code>属性 + <code>position</code>属性 + <code>float</code>属性。</p>
 <ul>
-<li><a href="../CSS%E4%BC%A0%E7%BB%9F%E5%B8%83%E5%B1%80">传统CSS布局</a></li>
-<li>[CSS Flex 布局](…/CSS Flex 布局)</li>
+<li><a href="../CSS传统布局">传统CSS布局</a></li>
+<li><a href="../CSS Flex 布局">CSS Flex 布局</a></li>
 </ul>
-<h2 id="居中和自适应"><a class="header-anchor" href="#居中和自适应"> </a>居中和自适应</h2>
-<h3 id="margin-auto"><a class="header-anchor" href="#margin-auto"> </a>margin: auto;</h3>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-id">#main</span>&#123;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">600px</span>;</span><br><span class="line">    <span class="attribute">margin</span>: <span class="number">0</span> auto;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="居中和自适应"><a href="#居中和自适应" class="headerlink" title="居中和自适应"></a>居中和自适应</h2><h3 id="margin-auto"><a href="#margin-auto" class="headerlink" title="margin: auto;"></a>margin: auto;</h3><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-id">#main</span>&#123;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">600px</span>;</span><br><span class="line">    <span class="attribute">margin</span>: <span class="number">0</span> auto;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>设置块级元素<code>width</code>可以防止它从左到右撑满整个容器。然后你就可以设置左右外边距为<code>auto</code>来使其水平居中。元素会占据你所指定的宽度，然后剩余的宽度会一分为二成为左右外边距。</p>
 <p>唯一的问题是，当浏览器窗口比元素的宽度还要窄时，浏览器会显示一个水平滚动条来容纳页面。让我们再来改进一下这个方案…</p>
-<h3 id="max-width"><a class="header-anchor" href="#max-width"> </a>max-width</h3>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-id">#main</span>&#123;</span><br><span class="line">    <span class="attribute">max-width</span>: <span class="number">600px</span>;</span><br><span class="line">    <span class="attribute">margin</span>: <span class="number">0</span> auto;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="max-width"><a href="#max-width" class="headerlink" title="max-width"></a>max-width</h3><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-id">#main</span>&#123;</span><br><span class="line">    <span class="attribute">max-width</span>: <span class="number">600px</span>;</span><br><span class="line">    <span class="attribute">margin</span>: <span class="number">0</span> auto;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>在这种情况下使用<code>max-width</code>来代替<code>width</code>可以使浏览器更好的处理小窗口的情况。这点在移动设备上显得尤为重要。</p>
-<h3 id="盒模型"><a class="header-anchor" href="#盒模型"> </a>盒模型</h3>
-<p><strong>元素的真实占据空间 = 元素大小+内边距+边框</strong></p>
-<h3 id="box-sizing"><a class="header-anchor" href="#box-sizing"> </a>box-sizing</h3>
-<p>盒模型对于元素真实大小的获取并不直接，需要自己计算，所以新增了一个叫做：<code>box-sizing</code>的CSS属性。当你设置一个元素为：<code>box-sizing: border-box;</code>时，此元素的内边距和边框不再增加它的宽度。</p>
+<h3 id="盒模型"><a href="#盒模型" class="headerlink" title="盒模型"></a>盒模型</h3><p><strong>元素的真实占据空间 = 元素大小+内边距+边框</strong></p>
+<h3 id="box-sizing"><a href="#box-sizing" class="headerlink" title="box-sizing"></a>box-sizing</h3><p>盒模型对于元素真实大小的获取并不直接，需要自己计算，所以新增了一个叫做：<code>box-sizing</code>的CSS属性。当你设置一个元素为：<code>box-sizing: border-box;</code>时，此元素的内边距和边框不再增加它的宽度。</p>
 <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">* &#123;</span><br><span class="line">    <span class="attribute">-webkit-box-sizing</span>: border-box;</span><br><span class="line">       <span class="attribute">-moz-box-sizing</span>: border-box;</span><br><span class="line">            <span class="attribute">box-sizing</span>: border-box;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="媒体查询"><a class="header-anchor" href="#媒体查询"> </a>媒体查询</h2>
-<p>&quot;响应式设计（Responsive Design）&quot;是一种让网站针对不同的浏览器和设备呈现不同显示效果的策略，这样做可以让网站在任何情况下都显示的很棒。</p>
+<h2 id="媒体查询"><a href="#媒体查询" class="headerlink" title="媒体查询"></a>媒体查询</h2><p>“响应式设计（Responsive Design）”是一种让网站针对不同的浏览器和设备呈现不同显示效果的策略，这样做可以让网站在任何情况下都显示的很棒。</p>
 <p>媒体查询是做响应式设计的最强大工具。</p>
 <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">@<span class="keyword">media</span> screen and (min-width:<span class="number">600px</span>)&#123;</span><br><span class="line">    <span class="selector-tag">nav</span>&#123;</span><br><span class="line">        <span class="attribute">float</span>: left;</span><br><span class="line">        <span class="attribute">width</span>: <span class="number">25%</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="selector-tag">section</span>&#123;</span><br><span class="line">        <span class="attribute">margin-left</span>: <span class="number">25%</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">@<span class="keyword">media</span> screen and (max-width:<span class="number">599px</span>)&#123;</span><br><span class="line">    <span class="selector-tag">nav</span> <span class="selector-tag">li</span>&#123;</span><br><span class="line">        <span class="attribute">display</span>: inline;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
@@ -579,7 +573,7 @@
               
                 <a href="/blog/archives">
               
-                  <span class="site-state-item-count">81</span>
+                  <span class="site-state-item-count">68</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -687,7 +681,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#居中和自适应"><span class="nav-number">1.</span> <span class="nav-text"> 居中和自适应</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#margin-auto"><span class="nav-number">1.1.</span> <span class="nav-text"> margin: auto;</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#max-width"><span class="nav-number">1.2.</span> <span class="nav-text"> max-width</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#盒模型"><span class="nav-number">1.3.</span> <span class="nav-text"> 盒模型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#box-sizing"><span class="nav-number">1.4.</span> <span class="nav-text"> box-sizing</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#媒体查询"><span class="nav-number">2.</span> <span class="nav-text"> 媒体查询</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#居中和自适应"><span class="nav-number">1.</span> <span class="nav-text">居中和自适应</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#margin-auto"><span class="nav-number">1.1.</span> <span class="nav-text">margin: auto;</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#max-width"><span class="nav-number">1.2.</span> <span class="nav-text">max-width</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#盒模型"><span class="nav-number">1.3.</span> <span class="nav-text">盒模型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#box-sizing"><span class="nav-number">1.4.</span> <span class="nav-text">box-sizing</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#媒体查询"><span class="nav-number">2.</span> <span class="nav-text">媒体查询</span></a></li></ol></div>
             
 
           </div>
@@ -721,7 +715,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">137.8k</span>
+    <span title="Site words total count">129.5k</span>
   
 </div>
 

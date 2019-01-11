@@ -81,18 +81,18 @@
 
 
 
-<meta name="description" content="这是我亲自写的一份教程（没有参考任何其他人），我认为的最合适的入门应该学些什么，请耐心阅读吧。 概念：目录，路径，相对路径，绝对路径，文件系统，文件，环境变量 cd（change directory）后接目录，如： cd /opt 或者 cd /opt/都行，直接用cd则切换到你的用户目录，Linux下的用户目录如：/home/liuqinh2s/，mac下的用户目录：/Users/liuqinh">
+<meta name="description" content="这是我亲自写的一份教程（没有参考任何其他人），我认为的最合适的入门应该学些什么，请耐心阅读吧。 概念：目录，路径，相对路径，绝对路径，文件系统，文件，环境变量 cd（change directory）后接目录，如：cd /opt 或者 cd /opt/都行，直接用cd则切换到你的用户目录，Linux下的用户目录如：/home/liuqinh2s/，mac下的用户目录：/Users/liuqinh2">
 <meta name="keywords" content="Unix,Linux">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Linux 入门教程">
 <meta property="og:url" content="http://liuqinh2s.github.io/blog/2018/11/04/Linux入门教程/index.html">
 <meta property="og:site_name" content="liuqinh2s&#39; blog">
-<meta property="og:description" content="这是我亲自写的一份教程（没有参考任何其他人），我认为的最合适的入门应该学些什么，请耐心阅读吧。 概念：目录，路径，相对路径，绝对路径，文件系统，文件，环境变量 cd（change directory）后接目录，如： cd /opt 或者 cd /opt/都行，直接用cd则切换到你的用户目录，Linux下的用户目录如：/home/liuqinh2s/，mac下的用户目录：/Users/liuqinh">
+<meta property="og:description" content="这是我亲自写的一份教程（没有参考任何其他人），我认为的最合适的入门应该学些什么，请耐心阅读吧。 概念：目录，路径，相对路径，绝对路径，文件系统，文件，环境变量 cd（change directory）后接目录，如：cd /opt 或者 cd /opt/都行，直接用cd则切换到你的用户目录，Linux下的用户目录如：/home/liuqinh2s/，mac下的用户目录：/Users/liuqinh2">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2018-12-19T04:29:36.388Z">
+<meta property="og:updated_time" content="2019-01-11T09:26:39.660Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Linux 入门教程">
-<meta name="twitter:description" content="这是我亲自写的一份教程（没有参考任何其他人），我认为的最合适的入门应该学些什么，请耐心阅读吧。 概念：目录，路径，相对路径，绝对路径，文件系统，文件，环境变量 cd（change directory）后接目录，如： cd /opt 或者 cd /opt/都行，直接用cd则切换到你的用户目录，Linux下的用户目录如：/home/liuqinh2s/，mac下的用户目录：/Users/liuqinh">
+<meta name="twitter:description" content="这是我亲自写的一份教程（没有参考任何其他人），我认为的最合适的入门应该学些什么，请耐心阅读吧。 概念：目录，路径，相对路径，绝对路径，文件系统，文件，环境变量 cd（change directory）后接目录，如：cd /opt 或者 cd /opt/都行，直接用cd则切换到你的用户目录，Linux下的用户目录如：/home/liuqinh2s/，mac下的用户目录：/Users/liuqinh2">
 
 
 
@@ -433,18 +433,7 @@
       
         <p>这是我亲自写的一份教程（没有参考任何其他人），我认为的最合适的入门应该学些什么，请耐心阅读吧。</p>
 <p>概念：目录，路径，相对路径，绝对路径，文件系统，文件，环境变量</p>
-<p>cd（change directory）后接目录，如：<br>
-<code>cd /opt</code> 或者 <code>cd /opt/</code>都行，直接用cd则切换到你的用户目录，Linux下的用户目录如：/home/liuqinh2s/，mac下的用户目录：/Users/liuqinh2s。使用pwd（print working directory）可以查看当前所在的目录。如果你想回到上次所处的目录，使用<code>cd -</code>。<br>
-你要运行任何程序，首先得知道程序文件所在的位置（目录），然后去读取文件进内存，然后CPU读内存执行程序。怎么让操作系统明确程序所在的目录，有个叫做PATH的环境变量，操作系统会拿你输入的程序名字（或者一个路径）去环境变量中的那些目录下查找，如果找到就运行，找不到则报告错误给你。也就是说如果你添加了环境变量就可以直接用程序名称运行程序而不用在填写它所在的目录，否则一律要使用路径+程序名称来指定位置。<br>
-<code>cd ..</code> 到上层目录，<code>cd ../..</code>到上上层目录。<code>cd ~/.vim</code>，~表示你的用户目录，如：/Users/liuqinh2s。<br>
-ls（list），使用<code>ls -al</code>查看当前目录下所有的文件，a=all，l=long，你会发现，头两个文件总是<code>.</code>和<code>..</code>，<code>.</code>代表当前目录，<code>..</code>代表上层目录。假如你用<code>vim .</code>来编辑<code>.</code>文件，在你输入:wq保存的时候，会提示你<code>&quot;.&quot; is a directory</code>。同理<code>vim ..</code>也不行。那么根目录有没有上层目录呢，使用ls命令发现有<code>..</code>，但<code>..</code>和<code>.</code>一样都指向根目录自己（所以才叫根目录啊）。<br>
-像<code>.vim</code>这种以<code>.</code>开头的文件都是隐藏文件或者隐藏目录。直接使用ls不会显示隐藏的文件和目录。配置文件一般都使用<code>.</code>开头，避免被看见，哈哈。<br>
-新建目录：mkdir（make directory）<br>
-新建文件：touch<br>
-删除：rm（remove）<br>
-拷贝：cp（copy）<br>
-移动：mv（move）<br>
-命令行有文件名自动补全功能，记得常按TAB键哦。</p>
+<p>cd（change directory）后接目录，如：<br><code>cd /opt</code> 或者 <code>cd /opt/</code>都行，直接用cd则切换到你的用户目录，Linux下的用户目录如：/home/liuqinh2s/，mac下的用户目录：/Users/liuqinh2s。使用pwd（print working directory）可以查看当前所在的目录。如果你想回到上次所处的目录，使用<code>cd -</code>。<br>你要运行任何程序，首先得知道程序文件所在的位置（目录），然后去读取文件进内存，然后CPU读内存执行程序。怎么让操作系统明确程序所在的目录，有个叫做PATH的环境变量，操作系统会拿你输入的程序名字（或者一个路径）去环境变量中的那些目录下查找，如果找到就运行，找不到则报告错误给你。也就是说如果你添加了环境变量就可以直接用程序名称运行程序而不用在填写它所在的目录，否则一律要使用路径+程序名称来指定位置。<br><code>cd ..</code> 到上层目录，<code>cd ../..</code>到上上层目录。<code>cd ~/.vim</code>，~表示你的用户目录，如：/Users/liuqinh2s。<br>ls（list），使用<code>ls -al</code>查看当前目录下所有的文件，a=all，l=long，你会发现，头两个文件总是<code>.</code>和<code>..</code>，<code>.</code>代表当前目录，<code>..</code>代表上层目录。假如你用<code>vim .</code>来编辑<code>.</code>文件，在你输入:wq保存的时候，会提示你<code>&quot;.&quot; is a directory</code>。同理<code>vim ..</code>也不行。那么根目录有没有上层目录呢，使用ls命令发现有<code>..</code>，但<code>..</code>和<code>.</code>一样都指向根目录自己（所以才叫根目录啊）。<br>像<code>.vim</code>这种以<code>.</code>开头的文件都是隐藏文件或者隐藏目录。直接使用ls不会显示隐藏的文件和目录。配置文件一般都使用<code>.</code>开头，避免被看见，哈哈。<br>新建目录：mkdir（make directory）<br>新建文件：touch<br>删除：rm（remove）<br>拷贝：cp（copy）<br>移动：mv（move）<br>命令行有文件名自动补全功能，记得常按TAB键哦。</p>
 
       
     </div>
@@ -477,8 +466,8 @@ ls（list），使用<code>ls -al</code>查看当前目录下所有的文件，a
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/blog/2018/11/03/高效命令行/" rel="next" title="高效命令行">
-                <i class="fa fa-chevron-left"></i> 高效命令行
+              <a href="/blog/2018/11/04/精通一款编辑器之sublime text 3/" rel="next" title="精通一款编辑器之sublime text 3">
+                <i class="fa fa-chevron-left"></i> 精通一款编辑器之sublime text 3
               </a>
             
           </div>
@@ -487,8 +476,8 @@ ls（list），使用<code>ls -al</code>查看当前目录下所有的文件，a
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/blog/2018/11/04/Linux Shell 编程/" rel="prev" title="Linux Shell 编程">
-                Linux Shell 编程 <i class="fa fa-chevron-right"></i>
+              <a href="/blog/2018/11/04/vim相关/" rel="prev" title="vim相关">
+                vim相关 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -564,7 +553,7 @@ ls（list），使用<code>ls -al</code>查看当前目录下所有的文件，a
               
                 <a href="/blog/archives">
               
-                  <span class="site-state-item-count">81</span>
+                  <span class="site-state-item-count">68</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -690,7 +679,7 @@ ls（list），使用<code>ls -al</code>查看当前目录下所有的文件，a
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">137.8k</span>
+    <span title="Site words total count">129.5k</span>
   
 </div>
 

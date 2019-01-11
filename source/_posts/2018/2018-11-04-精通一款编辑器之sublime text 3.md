@@ -45,3 +45,17 @@ tags: [编辑器]
 
 第一项即为使用这个插件的快捷键，也就是格式化代码的快捷键。
 
+## 底栏设置显示文件编码
+
+在mac osx上一不小心按了cmd+shift+c，文件的存储格式现在变成了GBK格式，当我再按下cmd+s保存时，提示我UTF-8格式的文件不能用GBK格式来保存。怎么解决这个问题呢？首先我想查看这个文件是什么编码，Sublime Text的默认设置是不开启显示编码的，如果想开启，可通过菜单Perference → Settings – User，在打开的配置文件里 ，在大括号后面，增加以下内容：
+
+```
+// Display file encoding in the status bar
+"show_encoding": true,
+// Display line endings in the status bar
+"show_line_endings": true,
+```
+
+此时保存该配置文件，就能够看到sublime最底下一行会显示文件编码格式了。以上的配置内容在Perference → Setting─Default都是false的。
+
+然后在底栏点击文件编码，点击reopen with encoding，然后选择utf-8，然后cmd+w关闭窗口，然后cmd+shift+t重新打开刚刚关闭的窗口，就一切恢复正常了。

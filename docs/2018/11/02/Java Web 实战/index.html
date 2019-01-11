@@ -90,7 +90,7 @@
 <meta property="og:description" content="我正在做一个社交网站，目前暂定叫做：圈子。这个项目从产品到UI到前端、后端全部都由我一个人操刀。 后端使用了 Spring + SpringMVC + Mybatis 的框架组合，据说 SpringBoot 很流行，后面我会学一下。前端使用了 Vue 框架。产品设计移动端优先，使用了 墨刀 这款工具。">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="http://liuqinh2s.github.io/blog/images/2018/service层.png">
-<meta property="og:updated_time" content="2018-12-19T04:29:36.387Z">
+<meta property="og:updated_time" content="2019-01-11T09:26:39.659Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="社交网站 -- 圈子">
 <meta name="twitter:description" content="我正在做一个社交网站，目前暂定叫做：圈子。这个项目从产品到UI到前端、后端全部都由我一个人操刀。 后端使用了 Spring + SpringMVC + Mybatis 的框架组合，据说 SpringBoot 很流行，后面我会学一下。前端使用了 Vue 框架。产品设计移动端优先，使用了 墨刀 这款工具。">
@@ -435,9 +435,7 @@
 <li>数据库设计</li>
 <li>前端开发，后端开发</li>
 </ol>
-<h2 id="后端开发"><a class="header-anchor" href="#后端开发"> </a>后端开发</h2>
-<h3 id="服务器上安装java"><a class="header-anchor" href="#服务器上安装java"> </a>服务器上安装Java</h3>
-<p>不使用open-jdk，去oracle官网下载jdk。</p>
+<h2 id="后端开发"><a href="#后端开发" class="headerlink" title="后端开发"></a>后端开发</h2><h3 id="服务器上安装Java"><a href="#服务器上安装Java" class="headerlink" title="服务器上安装Java"></a>服务器上安装Java</h3><p>不使用open-jdk，去oracle官网下载jdk。</p>
 <p>这里遇到的一个问题是，在官网点击accept之后，复制到下载链接，然后在服务器上wget该下载地址，发现不到一秒就下载完了，但是下载的文件不能解压！上网搜了一通，有不少人是在tar上找原因，说参数怎么怎么改，但试了多种参数搭配，查看了参数的说明，还是没解决问题，后来看到有人也遇到了相同的问题，结果是因为认证的问题，用浏览器下载的时候下载链接会多一个后缀。具体如下：</p>
 <p>如果直接复制下载链接，得到的是：<a href="http://download.oracle.com/otn-pub/java/jdk/10.0.2+13/19aef61b38124481863b1413dce1855f/jdk-10.0.2_linux-x64_bin.tar.gz" target="_blank" rel="noopener">http://download.oracle.com/otn-pub/java/jdk/10.0.2+13/19aef61b38124481863b1413dce1855f/jdk-10.0.2_linux-x64_bin.tar.gz</a></p>
 <p>通过chrome浏览器点击下载，然后ctrl+j打开下载界面（chrome://downloads），得到的真正的下载链接是：<a href="http://download.oracle.com/otn-pub/java/jdk/10.0.2+13/19aef61b38124481863b1413dce1855f/jdk-10.0.2_linux-x64_bin.tar.gz?AuthParam=1532949475_ca242a7f9181fc9c51d63b20d1465ae1" target="_blank" rel="noopener">http://download.oracle.com/otn-pub/java/jdk/10.0.2+13/19aef61b38124481863b1413dce1855f/jdk-10.0.2_linux-x64_bin.tar.gz?AuthParam=1532949475_ca242a7f9181fc9c51d63b20d1465ae1</a></p>
@@ -452,25 +450,20 @@
 <p>翻译成中文就是说：export让子进程可以使用该变量。如果你不用export，那么你在shell里再新开其他shell，环境变量就都没了。</p>
 <p>最后还得谈谈对PATH这个东西的一点深入理解。我居然蠢到以为只要把jdk整个目录扔到/usr/bin下面就能使用java和javac了，实际上只有PATH下的一层目录可以，子目录是不行的！为什么不做成子目录也可以扫描到？因为那样这个PATH机制就失去了意义，既然你子目录都可以扫，那我拿根目录做PATH，然后程序随便扔哪不就行了。从另一个角度来看，你遍历子目录找可执行文件是很耗时的，也是不科学的，因为将会有很多重名的文件，你让shell怎么知道你要执行哪个文件？而同一层目录的文件是不允许同名的，不存在冲突。</p>
 <p>最后一个问题是为什么要配置环境变量，其实当然也可以不配置，配置的好处是可以省去那一串长长的路径。</p>
-<h3 id="tomcat配置"><a class="header-anchor" href="#tomcat配置"> </a>tomcat配置</h3>
-<p>首先是去官网下载，下载一个tar.gz格式的，然后解压，然后也是配置环境，其实tomcat不用配置成环境变量也行，因为网站开关的次数是非常少的。</p>
+<h3 id="tomcat配置"><a href="#tomcat配置" class="headerlink" title="tomcat配置"></a>tomcat配置</h3><p>首先是去官网下载，下载一个tar.gz格式的，然后解压，然后也是配置环境，其实tomcat不用配置成环境变量也行，因为网站开关的次数是非常少的。</p>
 <p>这里唯一要注意的问题就是你的服务器端口要打开，默认是8080端口。我一般买了服务器之后先把除ssh之外的所有端口统统关了。</p>
-<h3 id="mysql配置"><a class="header-anchor" href="#mysql配置"> </a>mysql配置</h3>
-<p>mysql也需要去官网下载，这里记录一个问题，mysql8.0会与jdbc不兼容，所以版本太高也是容易出问题的，我换成mysql5.7就好了。</p>
+<h3 id="mysql配置"><a href="#mysql配置" class="headerlink" title="mysql配置"></a>mysql配置</h3><p>mysql也需要去官网下载，这里记录一个问题，mysql8.0会与jdbc不兼容，所以版本太高也是容易出问题的，我换成mysql5.7就好了。</p>
 <p>另外我在安装了centOS服务器上安装mysql也是费了很多功夫，刚开始是想去官网手动下载安装以及配置，刚开始的时候是参照这个博客：<a href="https://blog.csdn.net/Cryhelyxx/article/details/49757217" target="_blank" rel="noopener">64位centos6.7安装mysql-5.7.9-linux-glibc2.5-x86_64.tar.gz</a>。实在太麻烦了，而且配置过程中遇到太多的问题，我后来想linux的安装不是都统一用安装命令解决吗。于是我又上网翻，找到了这个教程：<a href="https://my.oschina.net/Laily/blog/713023" target="_blank" rel="noopener">CentOS 7 yum 安装 MySQL5.7</a>。总算是照着弄完了。但也同样遇到一个问题，就是官网上已经没有5.7版本的链接，只有8.0版本的。没关系下载的接口并没有撤，只要照着教程里的链接下载就行了：<code>wget http://repo.mysql.com//mysql57-community-release-el7-8.noarch.rpm</code></p>
 <p>最后总结一下安装和配置的方法论：</p>
 <ol>
 <li>找到下载源，一般是去官网找，但也有找不到的情况，比如下载低版本的时候，比如找jdk的时候，我一般google关键字：jdk1.8 oracle，如果是想找最新的则输入：java oracle。tomcat则比较好，多个版本都提供而且一直都在更新。mysql则比较坑一点，在官网的yum下载入口中根本就没有低版本的链接。这时候只好找找看别人的教程里的安装低版本时候的链接，说不定那些下载链接都还有效。</li>
 <li>配置，一般主要是配置环境变量，然后像mysql这种还需要初始化，但如果使用linux安装命令的话很多东西就都自动配置好了，所以最好不要自己去配置，除非你有充足的时间，想要学习一下配置过程。</li>
 </ol>
-<h3 id="远程连接mysql"><a class="header-anchor" href="#远程连接mysql"> </a>远程连接mysql</h3>
-<p>用navicat远程连接mysql的时候遇到的问题：错误号：1130.</p>
+<h3 id="远程连接mysql"><a href="#远程连接mysql" class="headerlink" title="远程连接mysql"></a>远程连接mysql</h3><p>用navicat远程连接mysql的时候遇到的问题：错误号：1130.</p>
 <p>是因为权限问题造成的，解决办法：</p>
-<p>进入mysql:<code>mysql -u root -p</code><br>
-在mysql控制台中输入：<code>GRANT ALL PRIVILEGES ON *.* TO 'myuser'@'%' IDENTIFIED BY 'mypassword' WITH GRANT OPTION;</code></p>
-<p>其中*.*代表ip，这样写就是允许所有IP，然后myuser填你要登录的用户，%这里本来是填登录的设备，使用%表示任何设备都可以，mypassword填该用户对应的密码。</p>
-<h3 id="框架搭建"><a class="header-anchor" href="#框架搭建"> </a>框架搭建</h3>
-<p>关于后台搭框架的过程，可以参考这篇文章：<a href="https://blog.csdn.net/GallenZhang/article/details/51932152" target="_blank" rel="noopener">SSM框架整合（IntelliJ IDEA + maven + Spring + SpringMVC + MyBatis）</a></p>
+<p>进入mysql:<code>mysql -u root -p</code><br>在mysql控制台中输入：<code>GRANT ALL PRIVILEGES ON *.* TO &#39;myuser&#39;@&#39;%&#39; IDENTIFIED BY &#39;mypassword&#39; WITH GRANT OPTION;</code></p>
+<p>其中<em>.</em>代表ip，这样写就是允许所有IP，然后myuser填你要登录的用户，%这里本来是填登录的设备，使用%表示任何设备都可以，mypassword填该用户对应的密码。</p>
+<h3 id="框架搭建"><a href="#框架搭建" class="headerlink" title="框架搭建"></a>框架搭建</h3><p>关于后台搭框架的过程，可以参考这篇文章：<a href="https://blog.csdn.net/GallenZhang/article/details/51932152" target="_blank" rel="noopener">SSM框架整合（IntelliJ IDEA + maven + Spring + SpringMVC + MyBatis）</a></p>
 <p>要注意的几点：</p>
 <ul>
 <li>tomcat肯定是要手动配置的</li>
@@ -479,13 +472,11 @@
 <li>第三方库（非Maven远程托管的库）一定要放到 <code>src -&gt; main -&gt; webapp -&gt; WEB-INF -&gt; lib</code> 目录下（没有就自己创建），否则在build的时候你会发现target中的lib没有第三方库（其实build过程对这些库的处理方式就是简单的拷贝，你手动拷贝也是可以的，但自动化才是最好的）</li>
 </ul>
 <p>然后就是多熟悉一下配置，弄好自己需要的配置，弄清楚配置可以做哪些事，这很重要。</p>
-<h4 id="第三方库的管理问题"><a class="header-anchor" href="#第三方库的管理问题"> </a>第三方库的管理问题</h4>
-<p>第三方库老是报错：<code>classNotfound</code>，这个库是用来发短信的：</p>
+<h4 id="第三方库的管理问题"><a href="#第三方库的管理问题" class="headerlink" title="第三方库的管理问题"></a>第三方库的管理问题</h4><p>第三方库老是报错：<code>classNotfound</code>，这个库是用来发短信的：</p>
 <p>在pom.xml中：</p>
 <figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>sms<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>sms<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">version</span>&gt;</span>2.6.3<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">scope</span>&gt;</span>system<span class="tag">&lt;/<span class="name">scope</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">systemPath</span>&gt;</span>$&#123;basedir&#125;/src/main/webapp/WEB-INF/lib/CCP_REST_SMS_SDK_JAVA_v2.6.3r.jar<span class="tag">&lt;/<span class="name">systemPath</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <p>systemPath一开始我填的是${basedir}/lib/CCP_REST_SMS_SDK_JAVA_v2.6.3r.jar，始终是不行，我看了target里面的lib，没拷贝进去，就算我手动拷贝jar包进去还是classNotfound，后来换成这个路径存放jar之后终于能自动拷贝进target里面，问题也修复了。</p>
-<h3 id="mybatis-generator"><a class="header-anchor" href="#mybatis-generator"> </a>mybatis-generator</h3>
-<p>数据库设计好之后，可以使用mybatis自动生成数据库操作相关的部分：<code>mapper</code>、<code>mapping</code>和<code>dao</code>。可以参考这篇文章：<a href="https://www.cnblogs.com/lichenwei/p/4145696.html" target="_blank" rel="noopener">使用Mybatis-Generator自动生成Dao、Model、Mapping相关文件</a></p>
+<h3 id="mybatis-generator"><a href="#mybatis-generator" class="headerlink" title="mybatis-generator"></a>mybatis-generator</h3><p>数据库设计好之后，可以使用mybatis自动生成数据库操作相关的部分：<code>mapper</code>、<code>mapping</code>和<code>dao</code>。可以参考这篇文章：<a href="https://www.cnblogs.com/lichenwei/p/4145696.html" target="_blank" rel="noopener">使用Mybatis-Generator自动生成Dao、Model、Mapping相关文件</a></p>
 <p>下面三个文件放到同一目录，运行指令：<code>java -jar mybatis-generator-core-1.3.7.jar -configfile generatorConfig.xml -overwrite</code></p>
 <ul>
 <li><a href="../../../../assets/2018/generatorConfig.xml">generatorConfig.xml</a></li>
@@ -495,14 +486,12 @@
 <blockquote>
 <p>遇到的坑是overwrite实际上会出问题，如果想重新生成，还是应该先删掉生成的文件，再重新生成，如果覆盖可能会出问题。</p>
 </blockquote>
-<h3 id="gitignore"><a class="header-anchor" href="#gitignore"> </a>.gitignore</h3>
-<p>使用intellj idea的插件.ignore来自动生成，选择java, maven, jetbrains, macosx等选项，生成相应的忽略项。</p>
+<h3 id="gitignore"><a href="#gitignore" class="headerlink" title=".gitignore"></a>.gitignore</h3><p>使用intellj idea的插件.ignore来自动生成，选择java, maven, jetbrains, macosx等选项，生成相应的忽略项。</p>
 <ol>
 <li>如果你有自己下载的第三方jar包，想通过git来维护，必须注释掉java选项生成的*.jar忽略项。</li>
 <li>下载后的项目还要自己配置tomcat才能运行，要手动添加Artifacts，并手动标识resource文件夹。</li>
 </ol>
-<h3 id="代码结构"><a class="header-anchor" href="#代码结构"> </a>代码结构</h3>
-<p>核心的模块只有四个，一个实体类模块 + 三个服务层级模块</p>
+<h3 id="代码结构"><a href="#代码结构" class="headerlink" title="代码结构"></a>代码结构</h3><p>核心的模块只有四个，一个实体类模块 + 三个服务层级模块</p>
 <ul>
 <li>model（实体类，对应数据库中的一个表）</li>
 <li>controller（处理HTTP请求）</li>
@@ -529,13 +518,11 @@
 <li>config模块（放入你需要的配置类，比如常量配置）</li>
 </ul>
 <p>以上只是我个人喜欢的代码分类方法或者说是比较常见的分类方法。</p>
-<h3 id="spring注解"><a class="header-anchor" href="#spring注解"> </a>spring注解</h3>
-<p>spring主要就是靠注解来表明各种信息，使用起来非常方便，这样就可以让后台开发者专注于业务逻辑了。</p>
-<h4 id="controller层"><a class="header-anchor" href="#controller层"> </a>Controller层</h4>
-<p>Controller层 类使用的注解：</p>
+<h3 id="spring注解"><a href="#spring注解" class="headerlink" title="spring注解"></a>spring注解</h3><p>spring主要就是靠注解来表明各种信息，使用起来非常方便，这样就可以让后台开发者专注于业务逻辑了。</p>
+<h4 id="Controller层"><a href="#Controller层" class="headerlink" title="Controller层"></a>Controller层</h4><p>Controller层 类使用的注解：</p>
 <ul>
 <li>@Controller</li>
-<li>RequestMapping({&quot;/user&quot;})，大括号可以不打</li>
+<li>RequestMapping({“/user”})，大括号可以不打</li>
 </ul>
 <p>或者你也可以用<code>@RestController</code>代替<code>@Controller</code>，查看源码可以知道<code>@RestController</code>是<code>@Controller</code>和<code>@ResponseBody</code>的组合，这样就不用在每个方法前面写<code>@ResponseBody</code>了。另外<code>@RestController</code>是REST API风格。</p>
 <p>Controller层 属性使用的注解：</p>
@@ -545,23 +532,20 @@
 </ul>
 <p>Controller层 方法使用的注解：</p>
 <ul>
-<li>@RequestMapping(value={&quot;/login&quot;}, consumes={“application/json”}, method=RequestMethod.POST)，大括号可以不打</li>
+<li>@RequestMapping(value={“/login”}, consumes={“application/json”}, method=RequestMethod.POST)，大括号可以不打</li>
 <li>@ResponseBody，如果你使用了<code>@RestController</code>这个注解就不用写了</li>
-<li>public JSONObject login(HttpServletRequest request, @RequestBody BasicInfo basicInfo)</li>
+<li>public JSONObject login(HttpServletRequest request, @RequestBody BasicInfo basicInfo) </li>
 </ul>
 <p>方法中的参数的注解有好几种：</p>
 <ul>
 <li>@RequestBody，接收一个json</li>
-<li>@PathVariables，接收路径中的动态部分，比如：</li>
-</ul>
+<li><p>@PathVariables，接收路径中的动态部分，比如：</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@RequestMapping</span>(value=<span class="string">"/changePrivacy/&#123;id&#125;/&#123;type&#125;"</span>)</span><br><span class="line"><span class="function"><span class="keyword">public</span> Response <span class="title">changePrivacy</span><span class="params">(@PathVariable(<span class="string">"id"</span>)</span> <span class="keyword">long</span> id,@<span class="title">PathVariable</span><span class="params">(<span class="string">"type"</span>)</span> CollectType type) </span>&#123;</span><br><span class="line">    collectRepository.modifyByIdAndUserId(type, id, getUserId());</span><br><span class="line">    <span class="keyword">return</span> result();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<ul>
-<li>@RequestParam<br>
-看下面一段代码：<br>
-<code>http://localhost:8080/springmvc/hello/101?param1=10&amp;param2=20</code><br>
-根据上面的这个URL，你可以用这样的方式来进行获取</li>
-</ul>
+</li>
+<li><p>@RequestParam<br>看下面一段代码：<br><code>http://localhost:8080/springmvc/hello/101?param1=10&amp;param2=20</code><br>根据上面的这个URL，你可以用这样的方式来进行获取</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> String <span class="title">getDetails</span><span class="params">(</span></span></span><br><span class="line"><span class="function"><span class="params">    @RequestParam(value=<span class="string">"param1"</span>, required=<span class="keyword">true</span>)</span> String param1,</span></span><br><span class="line"><span class="function">        @<span class="title">RequestParam</span><span class="params">(value=<span class="string">"param2"</span>, required=<span class="keyword">false</span>)</span> String param2)</span>&#123;</span><br><span class="line">...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
 <p>@RequestParam 支持下面四种参数</p>
 <ul>
 <li>defaultValue 如果本次请求没有携带这个参数，或者参数为空，那么就会启用默认值</li>
@@ -569,22 +553,17 @@
 <li>required 这个参数是不是必须的</li>
 <li>value 跟name一样的作用，是name属性的一个别名</li>
 </ul>
-<h4 id="service层"><a class="header-anchor" href="#service层"> </a>Service层</h4>
-<p>service层一般分为两部分，接口部分和实现部分：</p>
-<img src="../../../../images/2018/service层.png" width="200px">
+<h4 id="Service层"><a href="#Service层" class="headerlink" title="Service层"></a>Service层</h4><p>service层一般分为两部分，接口部分和实现部分：</p>
+<p><img src="../../../../images/2018/service层.png" width="200px"></p>
 <p>接口中一般没有注解，实现类里面的注解如下：</p>
 <ul>
 <li>@Service(“collectService”)，标注了Controller层要使用的service类的名称。</li>
 <li>@Transactional，[事务回滚}(<a href="https://blog.csdn.net/u013142781/article/details/50421904" target="_blank" rel="noopener">https://blog.csdn.net/u013142781/article/details/50421904</a>)</li>
 <li>@Autowired</li>
 </ul>
-<h3 id="mapping文件"><a class="header-anchor" href="#mapping文件"> </a>mapping文件</h3>
-<p>mapping文件是mybaits用来映射数据库表的xml配置文件，具体语法看一个例子就知道了：</p>
+<h3 id="mapping文件"><a href="#mapping文件" class="headerlink" title="mapping文件"></a>mapping文件</h3><p>mapping文件是mybaits用来映射数据库表的xml配置文件，具体语法看一个例子就知道了：</p>
 <p><a href="../../../../assets/2018/CommentMapper.xml">CommentMapper.xml</a></p>
-<h2 id="用户模块的逻辑"><a class="header-anchor" href="#用户模块的逻辑"> </a>用户模块的逻辑</h2>
-<h3 id="注册"><a class="header-anchor" href="#注册"> </a>注册</h3>
-<h4 id="请求参数校验"><a class="header-anchor" href="#请求参数校验"> </a>请求参数校验</h4>
-<ol>
+<h2 id="用户模块的逻辑"><a href="#用户模块的逻辑" class="headerlink" title="用户模块的逻辑"></a>用户模块的逻辑</h2><h3 id="注册"><a href="#注册" class="headerlink" title="注册"></a>注册</h3><h4 id="请求参数校验"><a href="#请求参数校验" class="headerlink" title="请求参数校验"></a>请求参数校验</h4><ol>
 <li>基本逻辑：注册必须先注销，检查session的keyId（keyId即数据库中的用户名），如果存在keyId，则是登录状态，系统拒绝服务。</li>
 <li>用户名不能为空</li>
 <li>手机号不能为空</li>
@@ -596,8 +575,7 @@
 <li>短信验证码错误</li>
 <li>短信验证码过期</li>
 </ol>
-<h4 id="添加用户"><a class="header-anchor" href="#添加用户"> </a>添加用户</h4>
-<ol>
+<h4 id="添加用户"><a href="#添加用户" class="headerlink" title="添加用户"></a>添加用户</h4><ol>
 <li>设置用户ID</li>
 <li>设置用户名</li>
 <li>设置密码</li>
@@ -608,39 +586,24 @@
 </ol>
 <blockquote>
 <p>手机号只能与一个账号绑定，一个账号只能绑定一个手机号，因而也可以用手机号登陆</p>
-</blockquote>
-<blockquote>
 <p>密码使用MD5加密，由<code>用户ID</code>+<code>前端传过来的密码</code>+<code>verifyCode</code>拼成。其中前端传过来的密码也需要经过MD5加密。</p>
-</blockquote>
-<blockquote>
 <p>后端加密的意义在于防止拖库</p>
-</blockquote>
-<blockquote>
 <p>verifyCode的生成使用当前UNIX时间戳减去一个随机数，得到的long型整数，再拼接用户的手机号进行MD5加密</p>
-</blockquote>
-<blockquote>
 <p>前端密码加密的意义在于，用户多站点使用同一密码，防止用户的其他账号被盗（社会学攻击）</p>
-</blockquote>
-<blockquote>
 <p>前端加密并不能防止HTTP劫持，所以要防止盗号还是必须使用HTTPS协议</p>
 </blockquote>
-<h4 id="维护session"><a class="header-anchor" href="#维护session"> </a>维护session</h4>
-<blockquote>
+<h4 id="维护session"><a href="#维护session" class="headerlink" title="维护session"></a>维护session</h4><blockquote>
 <p>维护session的时候要去掉用户密码和verifyCode，其他的字段都可以设置进session</p>
 </blockquote>
-<h2 id="数据库重复插入问题"><a class="header-anchor" href="#数据库重复插入问题"> </a>数据库重复插入问题</h2>
-<p>由于网络原因，客户可能连续推送了两条重复的数据，两条数据时间间隔非常小，因此导致了我们的</p>
+<h2 id="数据库重复插入问题"><a href="#数据库重复插入问题" class="headerlink" title="数据库重复插入问题"></a>数据库重复插入问题</h2><p>由于网络原因，客户可能连续推送了两条重复的数据，两条数据时间间隔非常小，因此导致了我们的</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">if(用户不存在)</span><br><span class="line">&#123;</span><br><span class="line">    xxxxx</span><br><span class="line">    存储用户到数据库</span><br><span class="line">&#125;</span><br><span class="line">else</span><br><span class="line">&#123;</span><br><span class="line">    重复推送，不采取任何措施</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>这个操作还没有执行完毕，第二条拥有相同数据的线程已经进入并通过了if的检验，导致数据库存储了两条相同的数据。后来我自己写了个100并发的多线程测试程序，发现100条相同数据中有40条被插入到了数据库里！天啦噜！！！因此确定了是多线程的并发导致了程序的判断逻辑失效。</p>
 <p>考虑使用synchronized对方法添加同步锁，但是这样会导致其他正常数据的推送线程也被阻塞，影响效率。因此不采用。</p>
 <p>即想提高效率不对方法添加synchronized，又想保证数据准确性，最后使用synchronized(siteId + uid) 在Controller层加锁(保证了只有重复数据被加锁,在Controller使用的原因是因为事务会在Service调用完毕才被提交，我实验过在Service同步，150并发会出现2条重复数据，因为事务还没来得及提交)</p>
-<p>这种加同步锁的方法在<br>
-负载均衡下的多台应用服务器会失效<br>
-！因为就算Spring保证了对象是单例的，但是多台服务器肯定是多个对象！因此synchronized将无效。解决方法是在数据库层对该对接公司的唯一记录加select锁，这样就能保证数据的不重复性，但是会降低该公司推送数据的效率(相当于逐条推送)，但是公司与公司之间还是并行推送的。还有一个方法就是将业务逻辑写入存储过程，然后对存储过程加锁，这种方法太麻烦了，需求有变动就必须去修改存储过程，但是效率要比前者高得多。</p>
+<p>这种加同步锁的方法在<br>负载均衡下的多台应用服务器会失效<br>！因为就算Spring保证了对象是单例的，但是多台服务器肯定是多个对象！因此synchronized将无效。解决方法是在数据库层对该对接公司的唯一记录加select锁，这样就能保证数据的不重复性，但是会降低该公司推送数据的效率(相当于逐条推送)，但是公司与公司之间还是并行推送的。还有一个方法就是将业务逻辑写入存储过程，然后对存储过程加锁，这种方法太麻烦了，需求有变动就必须去修改存储过程，但是效率要比前者高得多。</p>
 <p>总结：</p>
 <p>在service层加锁会导致所有用户操作受阻，在controller针对用户id加锁可以锁住重复操作。但多台服务器的情况下会失效。</p>
-<h2 id="参考资料："><a class="header-anchor" href="#参考资料："> </a>参考资料：</h2>
-<ul>
+<h2 id="参考资料："><a href="#参考资料：" class="headerlink" title="参考资料："></a>参考资料：</h2><ul>
 <li><a href="http://www.voidcn.com/article/p-qtmqetyl-ug.html" target="_blank" rel="noopener">获取用户IP</a></li>
 </ul>
 
@@ -673,8 +636,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/blog/2018/11/01/前端学习攻略/" rel="next" title="前端学习攻略">
-                <i class="fa fa-chevron-left"></i> 前端学习攻略
+              <a href="/blog/2018/11/01/CSS Flex 布局/" rel="next" title="CSS Flex 布局">
+                <i class="fa fa-chevron-left"></i> CSS Flex 布局
               </a>
             
           </div>
@@ -769,7 +732,7 @@
               
                 <a href="/blog/archives">
               
-                  <span class="site-state-item-count">81</span>
+                  <span class="site-state-item-count">68</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -877,7 +840,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#后端开发"><span class="nav-number">1.</span> <span class="nav-text"> 后端开发</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#服务器上安装java"><span class="nav-number">1.1.</span> <span class="nav-text"> 服务器上安装Java</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#tomcat配置"><span class="nav-number">1.2.</span> <span class="nav-text"> tomcat配置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#mysql配置"><span class="nav-number">1.3.</span> <span class="nav-text"> mysql配置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#远程连接mysql"><span class="nav-number">1.4.</span> <span class="nav-text"> 远程连接mysql</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#框架搭建"><span class="nav-number">1.5.</span> <span class="nav-text"> 框架搭建</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#第三方库的管理问题"><span class="nav-number">1.5.1.</span> <span class="nav-text"> 第三方库的管理问题</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#mybatis-generator"><span class="nav-number">1.6.</span> <span class="nav-text"> mybatis-generator</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#gitignore"><span class="nav-number">1.7.</span> <span class="nav-text"> .gitignore</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#代码结构"><span class="nav-number">1.8.</span> <span class="nav-text"> 代码结构</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#spring注解"><span class="nav-number">1.9.</span> <span class="nav-text"> spring注解</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#controller层"><span class="nav-number">1.9.1.</span> <span class="nav-text"> Controller层</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#service层"><span class="nav-number">1.9.2.</span> <span class="nav-text"> Service层</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#mapping文件"><span class="nav-number">1.10.</span> <span class="nav-text"> mapping文件</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#用户模块的逻辑"><span class="nav-number">2.</span> <span class="nav-text"> 用户模块的逻辑</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#注册"><span class="nav-number">2.1.</span> <span class="nav-text"> 注册</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#请求参数校验"><span class="nav-number">2.1.1.</span> <span class="nav-text"> 请求参数校验</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#添加用户"><span class="nav-number">2.1.2.</span> <span class="nav-text"> 添加用户</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#维护session"><span class="nav-number">2.1.3.</span> <span class="nav-text"> 维护session</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数据库重复插入问题"><span class="nav-number">3.</span> <span class="nav-text"> 数据库重复插入问题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参考资料："><span class="nav-number">4.</span> <span class="nav-text"> 参考资料：</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#后端开发"><span class="nav-number">1.</span> <span class="nav-text">后端开发</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#服务器上安装Java"><span class="nav-number">1.1.</span> <span class="nav-text">服务器上安装Java</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#tomcat配置"><span class="nav-number">1.2.</span> <span class="nav-text">tomcat配置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#mysql配置"><span class="nav-number">1.3.</span> <span class="nav-text">mysql配置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#远程连接mysql"><span class="nav-number">1.4.</span> <span class="nav-text">远程连接mysql</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#框架搭建"><span class="nav-number">1.5.</span> <span class="nav-text">框架搭建</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#第三方库的管理问题"><span class="nav-number">1.5.1.</span> <span class="nav-text">第三方库的管理问题</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#mybatis-generator"><span class="nav-number">1.6.</span> <span class="nav-text">mybatis-generator</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#gitignore"><span class="nav-number">1.7.</span> <span class="nav-text">.gitignore</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#代码结构"><span class="nav-number">1.8.</span> <span class="nav-text">代码结构</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#spring注解"><span class="nav-number">1.9.</span> <span class="nav-text">spring注解</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Controller层"><span class="nav-number">1.9.1.</span> <span class="nav-text">Controller层</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Service层"><span class="nav-number">1.9.2.</span> <span class="nav-text">Service层</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#mapping文件"><span class="nav-number">1.10.</span> <span class="nav-text">mapping文件</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#用户模块的逻辑"><span class="nav-number">2.</span> <span class="nav-text">用户模块的逻辑</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#注册"><span class="nav-number">2.1.</span> <span class="nav-text">注册</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#请求参数校验"><span class="nav-number">2.1.1.</span> <span class="nav-text">请求参数校验</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#添加用户"><span class="nav-number">2.1.2.</span> <span class="nav-text">添加用户</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#维护session"><span class="nav-number">2.1.3.</span> <span class="nav-text">维护session</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数据库重复插入问题"><span class="nav-number">3.</span> <span class="nav-text">数据库重复插入问题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参考资料："><span class="nav-number">4.</span> <span class="nav-text">参考资料：</span></a></li></ol></div>
             
 
           </div>
@@ -911,7 +874,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">137.8k</span>
+    <span title="Site words total count">129.5k</span>
   
 </div>
 

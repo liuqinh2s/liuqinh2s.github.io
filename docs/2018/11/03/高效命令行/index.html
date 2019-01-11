@@ -81,18 +81,18 @@
 
 
 
-<meta name="description" content="CLI 快捷键  ctrl+a：移到命令首 ctrl+e：移到命令尾   将历史补全功能绑定到方向键上 12bind &amp;apos;&amp;quot;\e[A&amp;quot;: history-search-backward&amp;apos;bind &amp;apos;&amp;quot;\e[B&amp;quot;: history-search-forward&amp;apos; 按住option再按方向键，可以发现在命令行出现：[A，[">
+<meta name="description" content="CLI 快捷键 ctrl+a：移到命令首 ctrl+e：移到命令尾  将历史补全功能绑定到方向键上12bind &amp;apos;&amp;quot;\e[A&amp;quot;: history-search-backward&amp;apos;bind &amp;apos;&amp;quot;\e[B&amp;quot;: history-search-forward&amp;apos; 按住option再按方向键，可以发现在命令行出现：[A，[B，[C">
 <meta name="keywords" content="Unix">
 <meta property="og:type" content="article">
 <meta property="og:title" content="高效命令行">
 <meta property="og:url" content="http://liuqinh2s.github.io/blog/2018/11/03/高效命令行/index.html">
 <meta property="og:site_name" content="liuqinh2s&#39; blog">
-<meta property="og:description" content="CLI 快捷键  ctrl+a：移到命令首 ctrl+e：移到命令尾   将历史补全功能绑定到方向键上 12bind &amp;apos;&amp;quot;\e[A&amp;quot;: history-search-backward&amp;apos;bind &amp;apos;&amp;quot;\e[B&amp;quot;: history-search-forward&amp;apos; 按住option再按方向键，可以发现在命令行出现：[A，[">
+<meta property="og:description" content="CLI 快捷键 ctrl+a：移到命令首 ctrl+e：移到命令尾  将历史补全功能绑定到方向键上12bind &amp;apos;&amp;quot;\e[A&amp;quot;: history-search-backward&amp;apos;bind &amp;apos;&amp;quot;\e[B&amp;quot;: history-search-forward&amp;apos; 按住option再按方向键，可以发现在命令行出现：[A，[B，[C">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2018-12-19T04:29:36.388Z">
+<meta property="og:updated_time" content="2019-01-11T09:26:39.660Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="高效命令行">
-<meta name="twitter:description" content="CLI 快捷键  ctrl+a：移到命令首 ctrl+e：移到命令尾   将历史补全功能绑定到方向键上 12bind &amp;apos;&amp;quot;\e[A&amp;quot;: history-search-backward&amp;apos;bind &amp;apos;&amp;quot;\e[B&amp;quot;: history-search-forward&amp;apos; 按住option再按方向键，可以发现在命令行出现：[A，[">
+<meta name="twitter:description" content="CLI 快捷键 ctrl+a：移到命令首 ctrl+e：移到命令尾  将历史补全功能绑定到方向键上12bind &amp;apos;&amp;quot;\e[A&amp;quot;: history-search-backward&amp;apos;bind &amp;apos;&amp;quot;\e[B&amp;quot;: history-search-forward&amp;apos; 按住option再按方向键，可以发现在命令行出现：[A，[B，[C">
 
 
 
@@ -420,26 +420,21 @@
       
 
       
-        <h2 id="cli-快捷键"><a class="header-anchor" href="#cli-快捷键"> </a>CLI 快捷键</h2>
-<ul>
+        <h2 id="CLI-快捷键"><a href="#CLI-快捷键" class="headerlink" title="CLI 快捷键"></a>CLI 快捷键</h2><ul>
 <li>ctrl+a：移到命令首</li>
 <li>ctrl+e：移到命令尾</li>
 </ul>
-<h2 id="将历史补全功能绑定到方向键上"><a class="header-anchor" href="#将历史补全功能绑定到方向键上"> </a>将历史补全功能绑定到方向键上</h2>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">bind &apos;&quot;\e[A&quot;: history-search-backward&apos;</span><br><span class="line">bind &apos;&quot;\e[B&quot;: history-search-forward&apos;</span><br></pre></td></tr></table></figure>
+<h2 id="将历史补全功能绑定到方向键上"><a href="#将历史补全功能绑定到方向键上" class="headerlink" title="将历史补全功能绑定到方向键上"></a>将历史补全功能绑定到方向键上</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">bind &apos;&quot;\e[A&quot;: history-search-backward&apos;</span><br><span class="line">bind &apos;&quot;\e[B&quot;: history-search-forward&apos;</span><br></pre></td></tr></table></figure>
 <p>按住<code>option</code>再按方向键，可以发现在命令行出现：<code>[A</code>，<code>[B</code>，<code>[C</code>，<code>[D</code>。这代表了这些键的字符绑定，加上<code>\e</code>也就是escape（转义）的意思。</p>
-<h2 id="将ctrl-left-arrow和ctrl-right-arrow指定为cli编辑时-向左向右移动一个单词的距离"><a class="header-anchor" href="#将ctrl-left-arrow和ctrl-right-arrow指定为cli编辑时-向左向右移动一个单词的距离"> </a>将<code>ctrl+left arrow</code>和<code>ctrl+right arrow</code>指定为CLI编辑时，向左向右移动一个单词的距离</h2>
-<p>在iterm2中，<code>cmd+,</code>打开设置(Preferences)，Preferences-&gt;Profiles-&gt;Keys。找到<code>^&lt;-</code>，设置为：<code>Send Escape Sequence</code>：<code>Esc+[C</code>，将<code>^-&gt;</code>，设置为：<code>Send Escape Sequence</code>：<code>Esc+[D</code>。</p>
-<h2 id="man"><a class="header-anchor" href="#man"> </a>man</h2>
-<p>man page是在线帮助，man page显示的内容文件放在<code>/usr/share/man</code>中</p>
+<h2 id="将ctrl-left-arrow和ctrl-right-arrow指定为CLI编辑时，向左向右移动一个单词的距离"><a href="#将ctrl-left-arrow和ctrl-right-arrow指定为CLI编辑时，向左向右移动一个单词的距离" class="headerlink" title="将ctrl+left arrow和ctrl+right arrow指定为CLI编辑时，向左向右移动一个单词的距离"></a>将<code>ctrl+left arrow</code>和<code>ctrl+right arrow</code>指定为CLI编辑时，向左向右移动一个单词的距离</h2><p>在iterm2中，<code>cmd+,</code>打开设置(Preferences)，Preferences-&gt;Profiles-&gt;Keys。找到<code>^&lt;-</code>，设置为：<code>Send Escape Sequence</code>：<code>Esc+[C</code>，将<code>^-&gt;</code>，设置为：<code>Send Escape Sequence</code>：<code>Esc+[D</code>。</p>
+<h2 id="man"><a href="#man" class="headerlink" title="man"></a>man</h2><p>man page是在线帮助，man page显示的内容文件放在<code>/usr/share/man</code>中</p>
 <ul>
 <li>向下翻页：Page Down，Mac OSX里面快捷键是<code>Fn+Down Arrow</code></li>
 <li>向上翻页：Page Up，Mac OSX里面快捷键是<code>Fn+Up Arrow</code></li>
 <li>翻到最后一页：End，Mac OSX里面快捷键是<code>Fn+right Arrow</code></li>
 <li>翻到第一页：Home，Mac OSX里面快捷键是<code>Fn+left Arrow</code></li>
 </ul>
-<h2 id="查找"><a class="header-anchor" href="#查找"> </a>查找</h2>
-<p>使用<code>/string</code>向下搜索string关键字，<code>?string</code>向上搜索string关键字。n键继续关键字的下一个搜索，N键反向搜索关键字。</p>
+<h2 id="查找"><a href="#查找" class="headerlink" title="查找"></a>查找</h2><p>使用<code>/string</code>向下搜索string关键字，<code>?string</code>向上搜索string关键字。n键继续关键字的下一个搜索，N键反向搜索关键字。</p>
 <blockquote>
 <p>跟vim里面的搜索是一样的。</p>
 </blockquote>
@@ -483,8 +478,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/blog/2018/11/04/Linux入门教程/" rel="prev" title="Linux 入门教程">
-                Linux 入门教程 <i class="fa fa-chevron-right"></i>
+              <a href="/blog/2018/11/04/Linux Shell 编程/" rel="prev" title="Linux Shell 编程">
+                Linux Shell 编程 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -569,7 +564,7 @@
               
                 <a href="/blog/archives">
               
-                  <span class="site-state-item-count">81</span>
+                  <span class="site-state-item-count">68</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -677,7 +672,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#cli-快捷键"><span class="nav-number">1.</span> <span class="nav-text"> CLI 快捷键</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#将历史补全功能绑定到方向键上"><span class="nav-number">2.</span> <span class="nav-text"> 将历史补全功能绑定到方向键上</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#将ctrl-left-arrow和ctrl-right-arrow指定为cli编辑时-向左向右移动一个单词的距离"><span class="nav-number">3.</span> <span class="nav-text"> 将ctrl+left arrow和ctrl+right arrow指定为CLI编辑时，向左向右移动一个单词的距离</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#man"><span class="nav-number">4.</span> <span class="nav-text"> man</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#查找"><span class="nav-number">5.</span> <span class="nav-text"> 查找</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#CLI-快捷键"><span class="nav-number">1.</span> <span class="nav-text">CLI 快捷键</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#将历史补全功能绑定到方向键上"><span class="nav-number">2.</span> <span class="nav-text">将历史补全功能绑定到方向键上</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#将ctrl-left-arrow和ctrl-right-arrow指定为CLI编辑时，向左向右移动一个单词的距离"><span class="nav-number">3.</span> <span class="nav-text">将ctrl+left arrow和ctrl+right arrow指定为CLI编辑时，向左向右移动一个单词的距离</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#man"><span class="nav-number">4.</span> <span class="nav-text">man</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#查找"><span class="nav-number">5.</span> <span class="nav-text">查找</span></a></li></ol></div>
             
 
           </div>
@@ -711,7 +706,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">137.8k</span>
+    <span title="Site words total count">129.5k</span>
   
 </div>
 
