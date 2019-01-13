@@ -212,16 +212,6 @@
         </li>
       
         
-        <li class="menu-item menu-item-life-experience">
-          <a href="/blog/LifeExperience/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-bank"></i> <br>
-            
-            Life Experience
-          </a>
-        </li>
-      
-        
         <li class="menu-item menu-item-math">
           <a href="/blog/Math/" rel="section">
             
@@ -306,7 +296,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://liuqinh2s.github.io/blog/blog/2018/11/04/Linux Shell 编程/">
+    <link itemprop="mainEntityOfPage" href="http://liuqinh2s.github.io/blog/blog/2017/10/19/Inside-the-C++-Object-Model-系列笔记--The-Semantics-of-constructors/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="liuqinh2s">
@@ -325,7 +315,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/blog/2018/11/04/Linux Shell 编程/" itemprop="url">Linux Shell 编程</a></h1>
+                <a class="post-title-link" href="/blog/2017/10/19/Inside-the-C++-Object-Model-系列笔记--The-Semantics-of-constructors/" itemprop="url">Inside the C++ Object Model 系列笔记 二 -- The Semantics of constructors</a></h1>
         
 
         <div class="post-meta">
@@ -337,8 +327,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-11-04T00:00:00+08:00">
-                2018-11-04
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-10-19T00:00:00+08:00">
+                2017-10-19
               </time>
             
 
@@ -360,8 +350,8 @@
               
               
                 <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
-                  <a href="/blog/categories/Unix/" itemprop="url" rel="index">
-                    <span itemprop="name">Unix</span>
+                  <a href="/blog/categories/读书笔记/" itemprop="url" rel="index">
+                    <span itemprop="name">读书笔记</span>
                   </a>
                 </span>
 
@@ -371,8 +361,8 @@
                 
               
                 <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
-                  <a href="/blog/categories/Unix/Linux/" itemprop="url" rel="index">
-                    <span itemprop="name">Linux</span>
+                  <a href="/blog/categories/读书笔记/《Inside-the-C-Object-Model》/" itemprop="url" rel="index">
+                    <span itemprop="name">《Inside the C++ Object Model》</span>
                   </a>
                 </span>
 
@@ -402,7 +392,7 @@
                   <span class="post-meta-item-text">Words count in article&#58;</span>
                 
                 <span title="Words count in article">
-                  2,871
+                  3,520
                 </span>
               
 
@@ -428,13 +418,14 @@
 
       
         
-          
-          Shell脚本学习笔记规范
-在书写Shell命令的时候，我没有加命令提示符。比如zsh的提示符：➜  myshell，或者bash的提示符：bash-3.2$。因为往往很多读者，直接把命令提示符(promt)也作为命令的一部分直接复制粘贴输入到命令行中了。所以新手读者需要注意这一点，以及知道什么是命
-          ...
+          <p>这一章详细的讨论了 constructor 如何工作，讨论构造一个对象的过程以及构造一个对象给程序带来的影响。</p>
+<h2 id="区分trivial和notrivial"><a href="#区分trivial和notrivial" class="headerlink" title="区分trivial和notrivial"></a>区分trivial和notrivial</h2><ol>
+<li>只有编译器需要的时候(为什么会需要?后面讲的很清楚)，合成操作才是nontrivial的， 这样的构造函数才会被真正的合成出来;</li>
+<li>如果编译器不需要，而程序员又没有提供，这时的默认构造函数就是trivial的。虽然它在概念上存在，但是编译器实际上根本不会去合成出来，因为他不做任何没有意义的事情，所以当然可以忽略它不去合成。trivial 的函数只存在于概念上，实际上不存在这个函数。</li>
+</ol>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/blog/2018/11/04/Linux Shell 编程/#more" rel="contents">
+            <a class="btn" href="/blog/2017/10/19/Inside-the-C++-Object-Model-系列笔记--The-Semantics-of-constructors/#more" rel="contents">
               Read more &raquo;
             </a>
           </div>
@@ -485,7 +476,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://liuqinh2s.github.io/blog/blog/2018/11/03/高效命令行/">
+    <link itemprop="mainEntityOfPage" href="http://liuqinh2s.github.io/blog/blog/2017/10/19/Inside-the-C++-Object-Model-系列笔记--Object-Lessons/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="liuqinh2s">
@@ -504,7 +495,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/blog/2018/11/03/高效命令行/" itemprop="url">高效命令行</a></h1>
+                <a class="post-title-link" href="/blog/2017/10/19/Inside-the-C++-Object-Model-系列笔记--Object-Lessons/" itemprop="url">Inside the C++ Object Model 系列笔记 一 -- Object Lessons</a></h1>
         
 
         <div class="post-meta">
@@ -516,8 +507,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-11-03T00:00:00+08:00">
-                2018-11-03
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-10-19T00:00:00+08:00">
+                2017-10-19
               </time>
             
 
@@ -539,8 +530,19 @@
               
               
                 <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
-                  <a href="/blog/categories/Unix/" itemprop="url" rel="index">
-                    <span itemprop="name">Unix</span>
+                  <a href="/blog/categories/读书笔记/" itemprop="url" rel="index">
+                    <span itemprop="name">读书笔记</span>
+                  </a>
+                </span>
+
+                
+                
+                  , 
+                
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                  <a href="/blog/categories/读书笔记/《Inside-the-C-Object-Model》/" itemprop="url" rel="index">
+                    <span itemprop="name">《Inside the C++ Object Model》</span>
                   </a>
                 </span>
 
@@ -570,7 +572,7 @@
                   <span class="post-meta-item-text">Words count in article&#58;</span>
                 
                 <span title="Words count in article">
-                  289
+                  2,240
                 </span>
               
 
@@ -596,522 +598,18 @@
 
       
         
-          
-          CLI 快捷键
-ctrl+a：移到命令首
-ctrl+e：移到命令尾
-
-将历史补全功能绑定到方向键上12bind &apos;&quot;\e[A&quot;: history-search-backward&apos;bind &apos;&quot;\e[B&quot;: history-sear
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/blog/2018/11/03/高效命令行/#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://liuqinh2s.github.io/blog/blog/2018/11/03/mac osx 与 linux 的一些区别/">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="liuqinh2s">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="https://wx4.sinaimg.cn/mw690/006zFO3gly1flf4xnd5q9j30ku0ku75r.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="liuqinh2s' blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/blog/2018/11/03/mac osx 与 linux 的一些区别/" itemprop="url">mac osx 与 linux 的一些区别</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-11-03T00:00:00+08:00">
-                2018-11-03
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
-                  <a href="/blog/categories/Unix/" itemprop="url" rel="index">
-                    <span itemprop="name">Unix</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">Words count in article&#58;</span>
-                
-                <span title="Words count in article">
-                  289
-                </span>
-              
-
-              
-
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-          mac osx上.bashrc和.bash_profile的区别.bash_profile is executed for login shells, while .bashrc is executed for interactive non-login shells.
-When you login
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/blog/2018/11/03/mac osx 与 linux 的一些区别/#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://liuqinh2s.github.io/blog/blog/2018/11/02/Java Web 实战/">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="liuqinh2s">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="https://wx4.sinaimg.cn/mw690/006zFO3gly1flf4xnd5q9j30ku0ku75r.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="liuqinh2s' blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/blog/2018/11/02/Java Web 实战/" itemprop="url">社交网站 -- 圈子</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-11-02T00:00:00+08:00">
-                2018-11-02
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
-                  <a href="/blog/categories/项目/" itemprop="url" rel="index">
-                    <span itemprop="name">项目</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">Words count in article&#58;</span>
-                
-                <span title="Words count in article">
-                  4,114
-                </span>
-              
-
-              
-
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <p>我正在做一个社交网站，目前暂定叫做：圈子。这个项目从产品到UI到前端、后端全部都由我一个人操刀。</p>
-<p>后端使用了 <code>Spring + SpringMVC + Mybatis</code> 的框架组合，据说 <code>SpringBoot</code> 很流行，后面我会学一下。前端使用了 <code>Vue</code> 框架。产品设计移动端优先，使用了 <code>墨刀</code> 这款工具。</p>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/blog/2018/11/02/Java Web 实战/#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://liuqinh2s.github.io/blog/blog/2018/11/01/前端学习攻略/">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="liuqinh2s">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="https://wx4.sinaimg.cn/mw690/006zFO3gly1flf4xnd5q9j30ku0ku75r.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="liuqinh2s' blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/blog/2018/11/01/前端学习攻略/" itemprop="url">前端学习攻略</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-11-01T00:00:00+08:00">
-                2018-11-01
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
-                  <a href="/blog/categories/前端/" itemprop="url" rel="index">
-                    <span itemprop="name">前端</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">Words count in article&#58;</span>
-                
-                <span title="Words count in article">
-                  45
-                </span>
-              
-
-              
-
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <p>官方文档：</p>
-<ul>
-<li><a href="http://www.w3school.com.cn/" target="_blank" rel="noopener">w3school</a></li>
-<li><a href="https://developer.mozilla.org/zh-CN/" target="_blank" rel="noopener">MDN Web Docs</a></li>
-</ul>
-<blockquote>
-<p>不用刻意跑到这两个网站里去搜索，直接google即可。一般搜索结果里前几个就是这两个网站。</p>
+          <blockquote>
+<p>多态：统一的接口，不同的实现</p>
 </blockquote>
+<p><strong>C++多态（polymorphism）</strong> 表示“以一个public base class的指针（或者reference），寻址出一个derived class object”</p>
+<h2 id="Layout-Costs-for-Adding-Encapsulation-封装"><a href="#Layout-Costs-for-Adding-Encapsulation-封装" class="headerlink" title="Layout Costs for Adding Encapsulation(封装)"></a>Layout Costs for Adding Encapsulation(封装)</h2><blockquote>
+<p>意思是：为了添加封装所需要付出的内存布局花销</p>
+</blockquote>
+<p>第一章 Object Lessons 介绍了 C++如何在背后实现一个对象，内存中的布局以及空间上的关系。</p>
+<p><strong>在计算机的原理中，要实现某个机制，我们总能找到很多种实现方式</strong>（对比着学习，多思考每种实现方法的利弊），C++的类的实现也不例外，让我们对比以下三种实现方式：</p>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/blog/2018/11/01/前端学习攻略/#more" rel="contents">
+            <a class="btn" href="/blog/2017/10/19/Inside-the-C++-Object-Model-系列笔记--Object-Lessons/#more" rel="contents">
               Read more &raquo;
             </a>
           </div>
@@ -1153,7 +651,7 @@ When you login
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/blog/page/4/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/blog/">1</a><span class="space">&hellip;</span><a class="page-number" href="/blog/page/4/">4</a><span class="page-number current">5</span><a class="page-number" href="/blog/page/6/">6</a><span class="space">&hellip;</span><a class="page-number" href="/blog/page/12/">12</a><a class="extend next" rel="next" href="/blog/page/6/"><i class="fa fa-angle-right"></i></a>
+    <a class="extend prev" rel="prev" href="/blog/page/4/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/blog/">1</a><span class="space">&hellip;</span><a class="page-number" href="/blog/page/4/">4</a><span class="page-number current">5</span>
   </nav>
 
 
@@ -1201,7 +699,7 @@ When you login
               
                 <a href="/blog/archives">
               
-                  <span class="site-state-item-count">57</span>
+                  <span class="site-state-item-count">22</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -1212,7 +710,7 @@ When you login
               
               <div class="site-state-item site-state-categories">
                 <a href="/blog/categories/index.html">
-                  <span class="site-state-item-count">47</span>
+                  <span class="site-state-item-count">22</span>
                   <span class="site-state-item-name">categories</span>
                 </a>
               </div>
@@ -1223,7 +721,7 @@ When you login
               
               <div class="site-state-item site-state-tags">
                 <a href="/blog/tags/index.html">
-                  <span class="site-state-item-count">17</span>
+                  <span class="site-state-item-count">11</span>
                   <span class="site-state-item-name">tags</span>
                 </a>
               </div>
@@ -1327,7 +825,7 @@ When you login
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">116.4k</span>
+    <span title="Site words total count">61.5k</span>
   
 </div>
 

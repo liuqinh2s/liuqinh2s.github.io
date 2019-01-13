@@ -6,7 +6,7 @@
   <link href="/blog/atom.xml" rel="self"/>
   
   <link href="http://liuqinh2s.github.io/blog/"/>
-  <updated>2019-01-11T09:26:39.664Z</updated>
+  <updated>2019-01-13T01:54:03.053Z</updated>
   <id>http://liuqinh2s.github.io/blog/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="http://liuqinh2s.github.io/blog/2019/01/07/%E7%AC%AC%E4%B8%80%E4%B8%AA%E6%9E%81%E9%99%90%E7%9A%84%E8%AF%81%E6%98%8E/"/>
     <id>http://liuqinh2s.github.io/blog/2019/01/07/第一个极限的证明/</id>
     <published>2019-01-06T16:00:00.000Z</published>
-    <updated>2019-01-11T09:26:39.664Z</updated>
+    <updated>2019-01-13T01:54:03.053Z</updated>
     
     <summary type="html">
     
@@ -37,48 +37,16 @@
   </entry>
   
   <entry>
-    <title>爬虫常见问题指南</title>
-    <link href="http://liuqinh2s.github.io/blog/2018/11/27/%E7%88%AC%E8%99%AB%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98%E6%8C%87%E5%8D%97/"/>
-    <id>http://liuqinh2s.github.io/blog/2018/11/27/爬虫常见问题指南/</id>
-    <published>2018-11-26T16:00:00.000Z</published>
-    <updated>2019-01-11T09:26:39.663Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h2 id=&quot;读写文件遇到的问题&quot;&gt;&lt;a href=&quot;#读写文件遇到的问题&quot; class=&quot;headerlink&quot; title=&quot;读写文件遇到的问题&quot;&gt;&lt;/a&gt;读写文件遇到的问题&lt;/h2&gt;&lt;h3 id=&quot;编码问题&quot;&gt;&lt;a href=&quot;#编码问题&quot;
-        
-      
-    
-    </summary>
-    
-      <category term="项目" scheme="http://liuqinh2s.github.io/blog/categories/%E9%A1%B9%E7%9B%AE/"/>
-    
-    
-      <category term="Python" scheme="http://liuqinh2s.github.io/blog/tags/Python/"/>
-    
-  </entry>
-  
-  <entry>
     <title>js实现sleep方法的最佳实践</title>
     <link href="http://liuqinh2s.github.io/blog/2018/11/22/js%E5%AE%9E%E7%8E%B0sleep%E6%96%B9%E6%B3%95%E7%9A%84%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5/"/>
     <id>http://liuqinh2s.github.io/blog/2018/11/22/js实现sleep方法的最佳实践/</id>
     <published>2018-11-21T16:00:00.000Z</published>
-    <updated>2019-01-11T09:26:39.663Z</updated>
+    <updated>2019-01-13T02:09:27.305Z</updated>
     
     <summary type="html">
     
-      
-      
-        
-        
-          &lt;p&gt;&lt;code&gt;setTimeout&lt;/code&gt;是异步的，跟其他语言里的&lt;code&gt;sleep&lt;/code&gt;和&lt;code&gt;delay&lt;/code&gt;并不一样，不能阻塞住程序。上网查了之后发现js没有自带的sleep方法，那么如何自己实现sleep方法呢？&lt;/p&gt;
-&lt;p&gt;&lt;a
-        
-      
+      &lt;p&gt;&lt;code&gt;setTimeout&lt;/code&gt;是异步的，跟其他语言里的&lt;code&gt;sleep&lt;/code&gt;和&lt;code&gt;delay&lt;/code&gt;并不一样，不能阻塞住程序。上网查了之后发现js没有自带的sleep方法，那么如何自己实现sleep方法呢？&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://stackoverflow.com/questions/951021/what-is-the-javascript-version-of-sleep&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;What is the JavaScript version of sleep()?&lt;/a&gt;&lt;/p&gt;
     
     </summary>
     
@@ -90,80 +58,16 @@
   </entry>
   
   <entry>
-    <title>spring boot 配置文件</title>
-    <link href="http://liuqinh2s.github.io/blog/2018/11/09/spring%20boot%20%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6/"/>
-    <id>http://liuqinh2s.github.io/blog/2018/11/09/spring boot 配置文件/</id>
-    <published>2018-11-08T16:00:00.000Z</published>
-    <updated>2019-01-11T09:26:39.662Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;spring
-        
-      
-    
-    </summary>
-    
-      <category term="Java" scheme="http://liuqinh2s.github.io/blog/categories/Java/"/>
-    
-      <category term="Java web" scheme="http://liuqinh2s.github.io/blog/categories/Java/Java-web/"/>
-    
-    
-      <category term="Java" scheme="http://liuqinh2s.github.io/blog/tags/Java/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>spring boot 入门笔记</title>
-    <link href="http://liuqinh2s.github.io/blog/2018/11/08/spring%20boot%20%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
-    <id>http://liuqinh2s.github.io/blog/2018/11/08/spring boot 学习笔记/</id>
-    <published>2018-11-07T16:00:00.000Z</published>
-    <updated>2019-01-11T09:26:39.662Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;&lt;a href=&quot;https://www.bilibili.com/video/av20965295/?p=6&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;B站上学Spring Boot&lt;/a&gt;&lt;/p&gt;
-&lt;h2
-        
-      
-    
-    </summary>
-    
-      <category term="Java" scheme="http://liuqinh2s.github.io/blog/categories/Java/"/>
-    
-      <category term="Java web" scheme="http://liuqinh2s.github.io/blog/categories/Java/Java-web/"/>
-    
-    
-      <category term="Java" scheme="http://liuqinh2s.github.io/blog/tags/Java/"/>
-    
-  </entry>
-  
-  <entry>
     <title>编程珠玑系列笔记 -- 第二章 啊哈！算法</title>
     <link href="http://liuqinh2s.github.io/blog/2018/11/06/%E7%BC%96%E7%A8%8B%E7%8F%A0%E7%8E%91%E7%B3%BB%E5%88%97%E7%AC%94%E8%AE%B02/"/>
     <id>http://liuqinh2s.github.io/blog/2018/11/06/编程珠玑系列笔记2/</id>
     <published>2018-11-05T16:00:00.000Z</published>
-    <updated>2019-01-11T09:26:39.662Z</updated>
+    <updated>2019-01-13T02:09:17.970Z</updated>
     
     <summary type="html">
     
-      
-      
-        
-        
-          &lt;p&gt;本书的另一个中心思想显而易见：&lt;strong&gt;良好的算法是程序性能提升的关键。&lt;/strong&gt;&lt;/p&gt;
+      &lt;p&gt;本书的另一个中心思想显而易见：&lt;strong&gt;良好的算法是程序性能提升的关键。&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;下面还是通过探讨几个实例，来领会一下算法的重要性。&lt;/p&gt;
-&lt;h2 id=&quot;三个问题&quot;&gt;&lt;a href=&quot;#三个问题&quot; class=&quot;headerlink&quot;
-        
-      
     
     </summary>
     
@@ -179,19 +83,15 @@
     <link href="http://liuqinh2s.github.io/blog/2018/11/05/%E7%BC%96%E7%A8%8B%E7%8F%A0%E7%8E%91%E7%B3%BB%E5%88%97%E7%AC%94%E8%AE%B01/"/>
     <id>http://liuqinh2s.github.io/blog/2018/11/05/编程珠玑系列笔记1/</id>
     <published>2018-11-04T16:00:00.000Z</published>
-    <updated>2019-01-11T09:26:39.662Z</updated>
+    <updated>2019-01-13T02:09:10.857Z</updated>
     
     <summary type="html">
     
-      
-      
-        
-        
-          &lt;p&gt;本书的中心思想：&lt;strong&gt;对实例研究的深入思考不仅有趣，而且可以获得实际的益处。&lt;/strong&gt;&lt;/p&gt;
+      &lt;p&gt;本书的中心思想：&lt;strong&gt;对实例研究的深入思考不仅有趣，而且可以获得实际的益处。&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;规律和智慧都隐藏在实例之中，而我们通过实例来窥探它们。实例是道的载体。&lt;/p&gt;
-&lt;h2 id=&quot;开篇&quot;&gt;&lt;a href=&quot;#开篇&quot;
-        
-      
+&lt;h2 id=&quot;开篇&quot;&gt;&lt;a href=&quot;#开篇&quot; class=&quot;headerlink&quot; title=&quot;开篇&quot;&gt;&lt;/a&gt;开篇&lt;/h2&gt;&lt;p&gt;明确问题，一旦问题明确，这场战役就成功了90%。&lt;/p&gt;
+&lt;p&gt;确定用户的真实需求是程序设计的根本。&lt;/p&gt;
+&lt;p&gt;简单的程序通常比具有相同功能的复杂程序更可靠、更安全、更健壮、更高效，而且易于实现和维护。因为简单的程序往往更具有概括性、更抽象、更能洞悉问题的本质。&lt;/p&gt;
     
     </summary>
     
@@ -203,177 +103,20 @@
   </entry>
   
   <entry>
-    <title>程序员修炼之道（从小工到专家）</title>
-    <link href="http://liuqinh2s.github.io/blog/2018/11/05/%E7%A8%8B%E5%BA%8F%E5%91%98%E4%BF%AE%E7%82%BC%E4%B9%8B%E9%81%93%EF%BC%88%E4%BB%8E%E5%B0%8F%E5%B7%A5%E5%88%B0%E4%B8%93%E5%AE%B6%EF%BC%89/"/>
-    <id>http://liuqinh2s.github.io/blog/2018/11/05/程序员修炼之道（从小工到专家）/</id>
-    <published>2018-11-04T16:00:00.000Z</published>
-    <updated>2019-01-11T09:26:39.662Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h2 id=&quot;无意的重复&quot;&gt;&lt;a href=&quot;#无意的重复&quot; class=&quot;headerlink&quot;
-        
-      
-    
-    </summary>
-    
-      <category term="读书笔记" scheme="http://liuqinh2s.github.io/blog/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
-    
-      <category term="《程序员修炼之道（从小工到专家）》" scheme="http://liuqinh2s.github.io/blog/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E3%80%8A%E7%A8%8B%E5%BA%8F%E5%91%98%E4%BF%AE%E7%82%BC%E4%B9%8B%E9%81%93%EF%BC%88%E4%BB%8E%E5%B0%8F%E5%B7%A5%E5%88%B0%E4%B8%93%E5%AE%B6%EF%BC%89%E3%80%8B/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>mysql查询性能优化</title>
-    <link href="http://liuqinh2s.github.io/blog/2018/11/05/mysql%E6%9F%A5%E8%AF%A2%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/"/>
-    <id>http://liuqinh2s.github.io/blog/2018/11/05/mysql查询性能优化/</id>
-    <published>2018-11-04T16:00:00.000Z</published>
-    <updated>2019-01-11T09:26:39.661Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h2 id=&quot;为查询缓存优化你的查询&quot;&gt;&lt;a href=&quot;#为查询缓存优化你的查询&quot; class=&quot;headerlink&quot;
-        
-      
-    
-    </summary>
-    
-      <category term="数据库" scheme="http://liuqinh2s.github.io/blog/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
-    
-      <category term="mysql" scheme="http://liuqinh2s.github.io/blog/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/mysql/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>LeetCode 543. Diameter of Binary Tree</title>
-    <link href="http://liuqinh2s.github.io/blog/2018/11/05/LeetCode%20543.%20Diameter%20of%20Binary%20Tree/"/>
-    <id>http://liuqinh2s.github.io/blog/2018/11/05/LeetCode 543. Diameter of Binary Tree/</id>
-    <published>2018-11-04T16:00:00.000Z</published>
-    <updated>2019-01-11T09:26:39.661Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;Given a binary tree, you need to compute the length of the diameter of the tree. The diameter of a binary tree is the length of the
-        
-      
-    
-    </summary>
-    
-      <category term="ACM" scheme="http://liuqinh2s.github.io/blog/categories/ACM/"/>
-    
-      <category term="LeetCode" scheme="http://liuqinh2s.github.io/blog/categories/ACM/LeetCode/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>mysql存储过程</title>
-    <link href="http://liuqinh2s.github.io/blog/2018/11/05/mysql%E5%AD%98%E5%82%A8%E8%BF%87%E7%A8%8B/"/>
-    <id>http://liuqinh2s.github.io/blog/2018/11/05/mysql存储过程/</id>
-    <published>2018-11-04T16:00:00.000Z</published>
-    <updated>2019-01-11T09:26:39.661Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h2 id=&quot;基本概念&quot;&gt;&lt;a href=&quot;#基本概念&quot; class=&quot;headerlink&quot; title=&quot;基本概念&quot;&gt;&lt;/a&gt;基本概念&lt;/h2&gt;&lt;ol&gt;
-&lt;li&gt;&lt;p&gt;什么是存储例程？&lt;/p&gt;
-&lt;p&gt;
-        
-      
-    
-    </summary>
-    
-      <category term="数据库" scheme="http://liuqinh2s.github.io/blog/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
-    
-      <category term="mysql" scheme="http://liuqinh2s.github.io/blog/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/mysql/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>mysql问题集合</title>
-    <link href="http://liuqinh2s.github.io/blog/2018/11/05/mysql%E9%97%AE%E9%A2%98%E9%9B%86%E5%90%88/"/>
-    <id>http://liuqinh2s.github.io/blog/2018/11/05/mysql问题集合/</id>
-    <published>2018-11-04T16:00:00.000Z</published>
-    <updated>2019-01-11T09:26:39.662Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h2 id=&quot;删除操作&quot;&gt;&lt;a href=&quot;#删除操作&quot; class=&quot;headerlink&quot; title=&quot;删除操作&quot;&gt;&lt;/a&gt;删除操作&lt;/h2&gt;&lt;p&gt;delete from table where id not in (select id from table where
-        
-      
-    
-    </summary>
-    
-      <category term="数据库" scheme="http://liuqinh2s.github.io/blog/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
-    
-      <category term="mysql" scheme="http://liuqinh2s.github.io/blog/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/mysql/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>什么是回调</title>
-    <link href="http://liuqinh2s.github.io/blog/2018/11/04/%E4%BB%80%E4%B9%88%E6%98%AF%E5%9B%9E%E8%B0%83/"/>
-    <id>http://liuqinh2s.github.io/blog/2018/11/04/什么是回调/</id>
-    <published>2018-11-03T16:00:00.000Z</published>
-    <updated>2019-01-11T09:26:39.661Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;&lt;img src=&quot;https://i.loli.net/2018/11/04/5bdeaff01640b.png&quot;
-        
-      
-    
-    </summary>
-    
-      <category term="编程概念" scheme="http://liuqinh2s.github.io/blog/categories/%E7%BC%96%E7%A8%8B%E6%A6%82%E5%BF%B5/"/>
-    
-    
-  </entry>
-  
-  <entry>
     <title>精通一款编辑器之sublime text 3</title>
     <link href="http://liuqinh2s.github.io/blog/2018/11/04/%E7%B2%BE%E9%80%9A%E4%B8%80%E6%AC%BE%E7%BC%96%E8%BE%91%E5%99%A8%E4%B9%8Bsublime%20text%203/"/>
     <id>http://liuqinh2s.github.io/blog/2018/11/04/精通一款编辑器之sublime text 3/</id>
     <published>2018-11-03T16:00:00.000Z</published>
-    <updated>2019-01-11T11:29:28.091Z</updated>
+    <updated>2019-01-13T02:10:34.280Z</updated>
     
     <summary type="html">
     
-      
-      
-        
-        
-          &lt;h2 id=&quot;编辑器常用功能&quot;&gt;&lt;a href=&quot;#编辑器常用功能&quot; class=&quot;headerlink&quot;
-        
-      
+      &lt;h2 id=&quot;编辑器常用功能&quot;&gt;&lt;a href=&quot;#编辑器常用功能&quot; class=&quot;headerlink&quot; title=&quot;编辑器常用功能&quot;&gt;&lt;/a&gt;编辑器常用功能&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;格式化代码：格式化代码可以让你不用管代码的格式，可以放肆的写程序，你可以少敲很多空格，不用关心代码的格式问题，机器给出的代码格式风格统一且漂亮，一键解决你的格式问题，真是提高码代码效率的非常重要的功能。&lt;/li&gt;
+&lt;li&gt;查找文件：查找文件是在集成开发的时候非常重要的功能，当文件多起来的时候，快速定位到文件可以节省很多时间，甚至有时候文件实在太多，你只能通过查找的方式找到那个文件。&lt;/li&gt;
+&lt;li&gt;正则全文件查找和替换：轻松让你更改全局变量和配置，这是一个必须的功能，没有它简直无法想象工作量有多大。&lt;/li&gt;
+&lt;li&gt;代码收缩和扩展：代码太长怎么办，收缩和扩展啊。&lt;/li&gt;
+&lt;/ol&gt;
     
     </summary>
     
@@ -387,25 +130,21 @@
   </entry>
   
   <entry>
-    <title>编译原理笔记</title>
-    <link href="http://liuqinh2s.github.io/blog/2018/11/04/%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/"/>
-    <id>http://liuqinh2s.github.io/blog/2018/11/04/编译原理笔记/</id>
+    <title>什么是回调</title>
+    <link href="http://liuqinh2s.github.io/blog/2018/11/04/%E4%BB%80%E4%B9%88%E6%98%AF%E5%9B%9E%E8%B0%83/"/>
+    <id>http://liuqinh2s.github.io/blog/2018/11/04/什么是回调/</id>
     <published>2018-11-03T16:00:00.000Z</published>
-    <updated>2019-01-11T09:26:39.661Z</updated>
+    <updated>2019-01-13T02:08:55.106Z</updated>
     
     <summary type="html">
     
-      
-      
-        
-        
-          &lt;h2 id=&quot;编译原理知识点&quot;&gt;&lt;a href=&quot;#编译原理知识点&quot; class=&quot;headerlink&quot;
-        
-      
+      &lt;p&gt;&lt;img src=&quot;https://i.loli.net/2018/11/04/5bdeaff01640b.png&quot; alt=&quot;回调2.png&quot;&gt;&lt;/p&gt;
+&lt;p&gt;打个比方，有一家旅馆提供叫醒服务，但是要求旅客自己决定叫醒的方法。可以是打客房电话，也可以是派服务员去敲门，睡得死怕耽误事的，还可以要求往自己头上浇盆水。这里，“叫醒”这个行为是旅馆提供的，相当于库函数，但是叫醒的方式是由旅客决定并告诉旅馆的，也就是回调函数。而旅客告诉旅馆怎么叫醒自己的动作，也就是把回调函数传入库函数的动作，称为登记回调函数（to register a callback function）。&lt;/p&gt;
+&lt;p&gt;在回调中，我们利用某种方式，把回调函数像参数一样传入中间函数。可以这么理解，在传入一个回调函数之前，中间函数是不完整的。换句话说，程序可以在运行时，通过登记不同的回调函数，来决定、改变中间函数的行为。这就比简单的函数调用要灵活太多了。&lt;/p&gt;
     
     </summary>
     
-      <category term="编译原理" scheme="http://liuqinh2s.github.io/blog/categories/%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%86/"/>
+      <category term="编程概念" scheme="http://liuqinh2s.github.io/blog/categories/%E7%BC%96%E7%A8%8B%E6%A6%82%E5%BF%B5/"/>
     
     
   </entry>
@@ -415,18 +154,17 @@
     <link href="http://liuqinh2s.github.io/blog/2018/11/04/%E7%86%9F%E7%BB%83%E4%BD%BF%E7%94%A8JetBrains%E5%AE%B6%E7%9A%84IDE/"/>
     <id>http://liuqinh2s.github.io/blog/2018/11/04/熟练使用JetBrains家的IDE/</id>
     <published>2018-11-03T16:00:00.000Z</published>
-    <updated>2019-01-11T09:26:39.661Z</updated>
+    <updated>2019-01-13T02:09:01.209Z</updated>
     
     <summary type="html">
     
-      
-      
-        
-        
-          &lt;h2 id=&quot;通用快捷键&quot;&gt;&lt;a href=&quot;#通用快捷键&quot; class=&quot;headerlink&quot; title=&quot;通用快捷键&quot;&gt;&lt;/a&gt;通用快捷键&lt;/h2&gt;&lt;ol&gt;
-&lt;li&gt;格式化代码（reformat code）:&lt;br&gt;win: ctrl+alt+L&lt;br&gt;mac:
-        
-      
+      &lt;h2 id=&quot;通用快捷键&quot;&gt;&lt;a href=&quot;#通用快捷键&quot; class=&quot;headerlink&quot; title=&quot;通用快捷键&quot;&gt;&lt;/a&gt;通用快捷键&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;格式化代码（reformat code）:&lt;br&gt;win: ctrl+alt+L&lt;br&gt;mac: command+option+L&lt;/li&gt;
+&lt;li&gt;在一行的任意位置使用： shift + enter，新建下一行并跳到下一行。&lt;/li&gt;
+&lt;li&gt;善用代码自动补全功能，变量名和方法名等可以用 enter 补全。导入包可以用 alt + enter。&lt;/li&gt;
+&lt;li&gt;上下移动代码，ctrl+shift+上下键&lt;/li&gt;
+&lt;li&gt;Android Studio 生成函数注释：你在方法前输入/**然后一回车，自动帮你生成方法和参数的注释。&lt;/li&gt;
+&lt;/ol&gt;
     
     </summary>
     
@@ -440,32 +178,190 @@
   </entry>
   
   <entry>
-    <title>vim相关</title>
-    <link href="http://liuqinh2s.github.io/blog/2018/11/04/vim%E7%9B%B8%E5%85%B3/"/>
-    <id>http://liuqinh2s.github.io/blog/2018/11/04/vim相关/</id>
-    <published>2018-11-03T16:00:00.000Z</published>
-    <updated>2019-01-11T09:26:39.660Z</updated>
+    <title>《CSAPP》读书笔记 -- 第4章：处理器体系结构</title>
+    <link href="http://liuqinh2s.github.io/blog/2018/10/13/%E5%A4%84%E7%90%86%E5%99%A8%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84/"/>
+    <id>http://liuqinh2s.github.io/blog/2018/10/13/处理器体系结构/</id>
+    <published>2018-10-12T16:00:00.000Z</published>
+    <updated>2019-01-13T02:08:48.739Z</updated>
     
     <summary type="html">
     
-      
-      
-        
-        
-          &lt;p&gt;vim的配置文件位于：&lt;code&gt;~/.vimrc&lt;/code&gt;，文件使用VimScript语法来编写。&lt;/p&gt;
-&lt;p&gt;.vimrc文件分为三个部分，分别是：&lt;/p&gt;
+      &lt;p&gt;阅读这篇文章必须要对汇编码有足够的了解，如果你对IA32汇编码还不够了解，可以先看看这篇文章：&lt;a href=&quot;../../08/程序的机器级表示&quot;&gt;程序的机器级表示&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&quot;Y86指令集体系结构&quot;&gt;&lt;a href=&quot;#Y86指令集体系结构&quot; class=&quot;headerlink&quot; title=&quot;Y86指令集体系结构&quot;&gt;&lt;/a&gt;Y86指令集体系结构&lt;/h2&gt;&lt;p&gt;Y86指令集基本上是IA32指令集的一个子集。这个指令集就是我们处理器实现的目标。如下图：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;../../../../images/2018/Y86指令集.png&quot; alt=&quot;Y86指令集&quot;&gt;&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="读书笔记" scheme="http://liuqinh2s.github.io/blog/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
+    
+      <category term="《CSAPP》" scheme="http://liuqinh2s.github.io/blog/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E3%80%8ACSAPP%E3%80%8B/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>《CSAPP》读书笔记 -- 第3章：程序的机器级表示</title>
+    <link href="http://liuqinh2s.github.io/blog/2018/10/08/%E7%A8%8B%E5%BA%8F%E7%9A%84%E6%9C%BA%E5%99%A8%E7%BA%A7%E8%A1%A8%E7%A4%BA/"/>
+    <id>http://liuqinh2s.github.io/blog/2018/10/08/程序的机器级表示/</id>
+    <published>2018-10-07T16:00:00.000Z</published>
+    <updated>2019-01-13T02:08:36.076Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;从编译C语言文件说起&quot;&gt;&lt;a href=&quot;#从编译C语言文件说起&quot; class=&quot;headerlink&quot; title=&quot;从编译C语言文件说起&quot;&gt;&lt;/a&gt;从编译C语言文件说起&lt;/h2&gt;&lt;figure class=&quot;highlight c&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ gcc &lt;span class=&quot;number&quot;&gt;-01&lt;/span&gt; -o p p1.c p2.c&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;使用了gcc命令来编译，也可以简单写作：&lt;code&gt;cc&lt;/code&gt;。&lt;/p&gt;
+&lt;p&gt;优化层级为1，1级是最低的，层级越高程序优化越好，但增加了编译时间，也使调试变得更难，且跟源程序差异很大不便于理解。&lt;/p&gt;
+&lt;p&gt;编译的流程是：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;预处理器（preprocessor）把诸如：&lt;code&gt;#include&lt;/code&gt;、&lt;code&gt;#define&lt;/code&gt;、&lt;code&gt;#if&lt;/code&gt;、&lt;code&gt;#else&lt;/code&gt;、&lt;code&gt;#elif&lt;/code&gt;、&lt;code&gt;#ifdef&lt;/code&gt;、&lt;code&gt;#endif&lt;/code&gt;等预编译指令替换掉。&lt;/li&gt;
+&lt;li&gt;编译器（compiler）把&lt;code&gt;.c&lt;/code&gt;源文件编译成&lt;code&gt;.s&lt;/code&gt;的汇编代码文件。&lt;/li&gt;
+&lt;li&gt;汇编器（assembler）把汇编代码文件转换成相应的二进制目标文件&lt;code&gt;.o&lt;/code&gt;，目标文件已经是机器码了，只是没有填入全局变量的地址。&lt;/li&gt;
+&lt;li&gt;链接器（linker），把多目标文件和库函数链接在一起，形成可执行文件。&lt;/li&gt;
+&lt;/ol&gt;
+    
+    </summary>
+    
+      <category term="读书笔记" scheme="http://liuqinh2s.github.io/blog/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
+    
+      <category term="《CSAPP》" scheme="http://liuqinh2s.github.io/blog/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E3%80%8ACSAPP%E3%80%8B/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>《CSAPP》读书笔记 -- 第2章：浮点数原理（小专题）</title>
+    <link href="http://liuqinh2s.github.io/blog/2018/09/27/%E6%B5%AE%E7%82%B9%E6%95%B0%E5%8E%9F%E7%90%86/"/>
+    <id>http://liuqinh2s.github.io/blog/2018/09/27/浮点数原理/</id>
+    <published>2018-09-26T16:00:00.000Z</published>
+    <updated>2019-01-13T02:08:19.376Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;strong&gt;浮点数的作用&lt;/strong&gt;：区别于整形数，用来表示小数。可以用来表示很大的数，或者非常接近0的小数，或者近似的做实数计算，浮点数的一般形式：$x\times 2^y$。&lt;/p&gt;
+&lt;p&gt;IEEE（pronounced “Eye-Triple-Eee”）浮点数标准。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;rounding&lt;/strong&gt;：when a number cannot be represented exactly in the format and hence must be adjusted upward or down- ward。可以翻译为：&lt;strong&gt;舍入&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;十进制的小数表示：$d&lt;em&gt;m d&lt;/em&gt;{m-1} \cdots d&lt;em&gt;1 d_0 . d&lt;/em&gt;{-1} d&lt;em&gt;{-2} \cdots d&lt;/em&gt;{-n}$，写成数学表达式：&lt;/p&gt;
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;
+d = \sum_{i=-n}^m 10^i \times d_i&lt;/script&gt;&lt;p&gt;相应的，二进制也可以写成这种形式：&lt;/p&gt;
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;
+b = \sum_{i=-n}^m 2^i \times b_i&lt;/script&gt;
+    
+    </summary>
+    
+      <category term="读书笔记" scheme="http://liuqinh2s.github.io/blog/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
+    
+      <category term="《CSAPP》" scheme="http://liuqinh2s.github.io/blog/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E3%80%8ACSAPP%E3%80%8B/"/>
+    
+    
+      <category term="信息记法" scheme="http://liuqinh2s.github.io/blog/tags/%E4%BF%A1%E6%81%AF%E8%AE%B0%E6%B3%95/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>wsl oh my zsh 字符乱码问题</title>
+    <link href="http://liuqinh2s.github.io/blog/2018/09/20/wsl%20oh%20my%20zsh%20%E5%AD%97%E4%BD%93%E9%97%AE%E9%A2%98/"/>
+    <id>http://liuqinh2s.github.io/blog/2018/09/20/wsl oh my zsh 字体问题/</id>
+    <published>2018-09-19T16:00:00.000Z</published>
+    <updated>2019-01-13T02:08:08.921Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;安装-oh-my-zsh&quot;&gt;&lt;a href=&quot;#安装-oh-my-zsh&quot; class=&quot;headerlink&quot; title=&quot;安装 oh my zsh&quot;&gt;&lt;/a&gt;安装 oh my zsh&lt;/h2&gt;&lt;p&gt;首先检查自己有没有zsh：&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;cat /etc/shells&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;如果有的话就下载&lt;a href=&quot;https://github.com/robbyrussell/oh-my-zsh&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;oh my zsh&lt;/a&gt;&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="解决的问题" scheme="http://liuqinh2s.github.io/blog/categories/%E8%A7%A3%E5%86%B3%E7%9A%84%E9%97%AE%E9%A2%98/"/>
+    
+    
+      <category term="windows环境" scheme="http://liuqinh2s.github.io/blog/tags/windows%E7%8E%AF%E5%A2%83/"/>
+    
+      <category term="wsl" scheme="http://liuqinh2s.github.io/blog/tags/wsl/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>wsl修改右键bash图标</title>
+    <link href="http://liuqinh2s.github.io/blog/2018/09/19/wsl%E4%BF%AE%E6%94%B9%E5%8F%B3%E9%94%AEbash%E5%9B%BE%E6%A0%87/"/>
+    <id>http://liuqinh2s.github.io/blog/2018/09/19/wsl修改右键bash图标/</id>
+    <published>2018-09-18T16:00:00.000Z</published>
+    <updated>2019-01-13T02:07:59.353Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;使用 windows subsystem for linux (简称：WSL) 的时候，遇到一个小问题，在文件管理器中右键，唤出bash，发现图标不对：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://i.loli.net/2018/09/19/5ba25208ca7de.png&quot; alt=&quot;截图1&quot;&gt;&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="解决的问题" scheme="http://liuqinh2s.github.io/blog/categories/%E8%A7%A3%E5%86%B3%E7%9A%84%E9%97%AE%E9%A2%98/"/>
+    
+    
+      <category term="windows环境" scheme="http://liuqinh2s.github.io/blog/tags/windows%E7%8E%AF%E5%A2%83/"/>
+    
+      <category term="wsl" scheme="http://liuqinh2s.github.io/blog/tags/wsl/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>《APUE-3rd》 读书笔记 -- File I/O</title>
+    <link href="http://liuqinh2s.github.io/blog/2018/05/28/APUE-3rd-%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0--File-IO/"/>
+    <id>http://liuqinh2s.github.io/blog/2018/05/28/APUE-3rd-读书笔记--File-IO/</id>
+    <published>2018-05-27T16:00:00.000Z</published>
+    <updated>2019-01-13T02:07:52.378Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;p&gt;这章讲的是文件IO，其中有几个非常重要的概念：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;File Desriptors，文件描述符&lt;/li&gt;
+&lt;li&gt;current file offset，当前文件偏移量&lt;/li&gt;
+&lt;li&gt;File Sharing Data Structure，文件共享数据模型&lt;/li&gt;
+&lt;li&gt;file descriptor flags ，文件描述位&lt;/li&gt;
+&lt;li&gt;file status flags ，文件状态位&lt;/li&gt;
+&lt;/ol&gt;
+    
+    </summary>
+    
+      <category term="读书笔记" scheme="http://liuqinh2s.github.io/blog/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
+    
+      <category term="《APUE-3rd》" scheme="http://liuqinh2s.github.io/blog/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E3%80%8AAPUE-3rd%E3%80%8B/"/>
+    
+    
+      <category term="Unix" scheme="http://liuqinh2s.github.io/blog/tags/Unix/"/>
+    
+      <category term="Linux" scheme="http://liuqinh2s.github.io/blog/tags/Linux/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>《APUE-3rd》 读书笔记 -- Unix System Overview</title>
+    <link href="http://liuqinh2s.github.io/blog/2018/05/22/APUE-3rd-%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0--Unix%20System%20Overview/"/>
+    <id>http://liuqinh2s.github.io/blog/2018/05/22/APUE-3rd-读书笔记--Unix System Overview/</id>
+    <published>2018-05-21T16:00:00.000Z</published>
+    <updated>2019-01-13T02:07:49.089Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;p&gt;Unix系统中非常重要的概念：&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;Vundle插件管理部分&lt;/li&gt;
-&lt;li&gt;Vim编辑器配置部分&lt;/li&gt;
-&lt;li&gt;Vi
-        
-      
+&lt;li&gt;内核&lt;/li&gt;
+&lt;li&gt;系统调用&lt;/li&gt;
+&lt;li&gt;库函数&lt;/li&gt;
+&lt;li&gt;shell&lt;/li&gt;
+&lt;li&gt;文件、目录、路径、工作路径、权限管理&lt;/li&gt;
+&lt;li&gt;文件描述符&lt;/li&gt;
+&lt;li&gt;进程、线程&lt;/li&gt;
+&lt;li&gt;错误处理&lt;/li&gt;
+&lt;li&gt;信号&lt;/li&gt;
+&lt;/ul&gt;
     
     </summary>
     
-      <category term="Unix" scheme="http://liuqinh2s.github.io/blog/categories/Unix/"/>
+      <category term="读书笔记" scheme="http://liuqinh2s.github.io/blog/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
     
-      <category term="Linux" scheme="http://liuqinh2s.github.io/blog/categories/Unix/Linux/"/>
+      <category term="《APUE-3rd》" scheme="http://liuqinh2s.github.io/blog/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E3%80%8AAPUE-3rd%E3%80%8B/"/>
     
     
       <category term="Unix" scheme="http://liuqinh2s.github.io/blog/tags/Unix/"/>
@@ -475,92 +371,137 @@
   </entry>
   
   <entry>
-    <title>Linux 入门教程</title>
-    <link href="http://liuqinh2s.github.io/blog/2018/11/04/Linux%E5%85%A5%E9%97%A8%E6%95%99%E7%A8%8B/"/>
-    <id>http://liuqinh2s.github.io/blog/2018/11/04/Linux入门教程/</id>
-    <published>2018-11-03T16:00:00.000Z</published>
-    <updated>2019-01-11T09:26:39.660Z</updated>
+    <title>mathjax常用公式记录</title>
+    <link href="http://liuqinh2s.github.io/blog/2018/04/30/mathjax%E5%B8%B8%E7%94%A8%E5%85%AC%E5%BC%8F%E8%AE%B0%E5%BD%95/"/>
+    <id>http://liuqinh2s.github.io/blog/2018/04/30/mathjax常用公式记录/</id>
+    <published>2018-04-29T16:00:00.000Z</published>
+    <updated>2019-01-13T02:07:41.681Z</updated>
     
     <summary type="html">
     
-      
-      
-        
-        
-          &lt;p&gt;这是我亲自写的一份教程（没有参考任何其他人），我认为的最合适的入门应该学些什么，请耐心阅读吧。&lt;/p&gt;
-&lt;p&gt;概念：目录，路径，相对路径，绝对路径，文件系统，文件，环境变量&lt;/p&gt;
-&lt;p&gt;cd（change directory）后接目录，如：&lt;br&gt;&lt;code&gt;cd
-        
-      
+      &lt;h2 id=&quot;角度记法&quot;&gt;&lt;a href=&quot;#角度记法&quot; class=&quot;headerlink&quot; title=&quot;角度记法&quot;&gt;&lt;/a&gt;角度记法&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;度数：&lt;script type=&quot;math/tex&quot;&gt;60^\circ&lt;/script&gt;，$60^\circ$&lt;/li&gt;
+&lt;li&gt;度数分：&lt;script type=&quot;math/tex&quot;&gt;60^\prime&lt;/script&gt;，$60^\prime$&lt;/li&gt;
+&lt;li&gt;弧度：&lt;script type=&quot;math/tex&quot;&gt;\frac{\pi}{2}&lt;/script&gt;，$\frac{\pi}{2}$&lt;/li&gt;
+&lt;li&gt;角度记法：&lt;script type=&quot;math/tex&quot;&gt;\angle A&lt;/script&gt;，$\angle A$&lt;/li&gt;
+&lt;/ul&gt;
     
     </summary>
     
-      <category term="Unix" scheme="http://liuqinh2s.github.io/blog/categories/Unix/"/>
+      <category term="LaTex" scheme="http://liuqinh2s.github.io/blog/categories/LaTex/"/>
     
-      <category term="Linux" scheme="http://liuqinh2s.github.io/blog/categories/Unix/Linux/"/>
-    
-    
-      <category term="Unix" scheme="http://liuqinh2s.github.io/blog/tags/Unix/"/>
-    
-      <category term="Linux" scheme="http://liuqinh2s.github.io/blog/tags/Linux/"/>
     
   </entry>
   
   <entry>
-    <title>git 使用技巧</title>
-    <link href="http://liuqinh2s.github.io/blog/2018/11/04/git%20%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7/"/>
-    <id>http://liuqinh2s.github.io/blog/2018/11/04/git 使用技巧/</id>
-    <published>2018-11-03T16:00:00.000Z</published>
-    <updated>2019-01-11T09:26:39.660Z</updated>
+    <title>数学基础公式推导</title>
+    <link href="http://liuqinh2s.github.io/blog/2018/04/25/%E6%95%B0%E5%AD%A6%E5%9F%BA%E7%A1%80%E5%85%AC%E5%BC%8F%E6%8E%A8%E5%AF%BC/"/>
+    <id>http://liuqinh2s.github.io/blog/2018/04/25/数学基础公式推导/</id>
+    <published>2018-04-24T16:00:00.000Z</published>
+    <updated>2019-01-13T02:07:35.634Z</updated>
     
     <summary type="html">
     
-      
-      
-        
-        
-          &lt;h2 id=&quot;git-建立远程项目&quot;&gt;&lt;a href=&quot;#git-建立远程项目&quot; class=&quot;headerlink&quot; title=&quot;git 建立远程项目&quot;&gt;&lt;/a&gt;git 建立远程项目&lt;/h2&gt;&lt;p&gt;git
-        
-      
+      &lt;p&gt;今天看到下面这个公式，突然想我好像不会推导啊：&lt;/p&gt;
+&lt;p&gt;$\sin(\beta-\alpha) = \sin\beta\cos\alpha - \cos\beta\sin\alpha$&lt;/p&gt;
+&lt;p&gt;遂想如何推导，在youtube上找了一个视频：&lt;a href=&quot;https://www.youtube.com/watch?v=uX6hxwW5BYM&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;三角函数正余弦和角公式推导&lt;/a&gt;&lt;/p&gt;
     
     </summary>
     
-      <category term="工具" scheme="http://liuqinh2s.github.io/blog/categories/%E5%B7%A5%E5%85%B7/"/>
+      <category term="数学" scheme="http://liuqinh2s.github.io/blog/categories/%E6%95%B0%E5%AD%A6/"/>
     
-      <category term="git" scheme="http://liuqinh2s.github.io/blog/categories/%E5%B7%A5%E5%85%B7/git/"/>
-    
-    
-      <category term="git" scheme="http://liuqinh2s.github.io/blog/tags/git/"/>
     
   </entry>
   
   <entry>
-    <title>Linux 服务器运维</title>
-    <link href="http://liuqinh2s.github.io/blog/2018/11/04/Linux%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%BF%90%E7%BB%B4/"/>
-    <id>http://liuqinh2s.github.io/blog/2018/11/04/Linux服务器运维/</id>
-    <published>2018-11-03T16:00:00.000Z</published>
-    <updated>2019-01-11T09:26:39.660Z</updated>
+    <title>Hexo+Markdown+MathJax搭建个人博客</title>
+    <link href="http://liuqinh2s.github.io/blog/2018/04/25/Hexo+Markdown+MathJax%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/"/>
+    <id>http://liuqinh2s.github.io/blog/2018/04/25/Hexo+Markdown+MathJax搭建个人博客/</id>
+    <published>2018-04-24T16:00:00.000Z</published>
+    <updated>2019-01-13T02:18:49.505Z</updated>
     
     <summary type="html">
     
-      
-      
-        
-        
-          &lt;h2 id=&quot;添加用户&quot;&gt;&lt;a href=&quot;#添加用户&quot; class=&quot;headerlink&quot; title=&quot;添加用户&quot;&gt;&lt;/a&gt;添加用户&lt;/h2&gt;&lt;p&gt;添加用户：&lt;code&gt;useradd xxx&lt;/code&gt;&lt;br&gt;密码：&lt;code&gt;passwd
-        
-      
+      &lt;h2 id=&quot;为什么搭建个人博客&quot;&gt;&lt;a href=&quot;#为什么搭建个人博客&quot; class=&quot;headerlink&quot; title=&quot;为什么搭建个人博客&quot;&gt;&lt;/a&gt;为什么搭建个人博客&lt;/h2&gt;&lt;p&gt;其实有想过用简书写博客，但简书不支持 &lt;code&gt;mathjax&lt;/code&gt;，而我写作的时候要用到不少数学公式。&lt;/p&gt;
+&lt;p&gt;以前也用过 leanote，也就是现在的 蚂蚁笔记，但蚂蚁笔记的博客中，[TOC] 是有 mathjax 渲染的，但右上角的目录导航却是没有加 mathjax 渲染的，这样看着会相当别扭。另外还有几个原因：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;leanote收费&lt;/li&gt;
+&lt;li&gt;无法彻底的自定义&lt;/li&gt;
+&lt;li&gt;博客不像使用静态网站引擎那样直观的以文件的形式展示在我面前&lt;/li&gt;
+&lt;/ol&gt;
     
     </summary>
     
-      <category term="Unix" scheme="http://liuqinh2s.github.io/blog/categories/Unix/"/>
-    
-      <category term="Linux" scheme="http://liuqinh2s.github.io/blog/categories/Unix/Linux/"/>
+      <category term="项目" scheme="http://liuqinh2s.github.io/blog/categories/%E9%A1%B9%E7%9B%AE/"/>
     
     
-      <category term="Unix" scheme="http://liuqinh2s.github.io/blog/tags/Unix/"/>
+  </entry>
+  
+  <entry>
+    <title>Override Overload Overwrite</title>
+    <link href="http://liuqinh2s.github.io/blog/2017/11/14/Override-Overload-Overwrite/"/>
+    <id>http://liuqinh2s.github.io/blog/2017/11/14/Override-Overload-Overwrite/</id>
+    <published>2017-11-13T16:00:00.000Z</published>
+    <updated>2019-01-13T02:05:34.278Z</updated>
     
-      <category term="Linux" scheme="http://liuqinh2s.github.io/blog/tags/Linux/"/>
+    <summary type="html">
+    
+      &lt;p&gt;我们都知道有些东西容易混淆，在加上中文翻译得乱七八糟，更加让人困惑。今天我要讲的这三位可就真是绝了。&lt;/p&gt;
+&lt;p&gt;它们是：Override、Overload、Overwrite。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="编程范式" scheme="http://liuqinh2s.github.io/blog/categories/%E7%BC%96%E7%A8%8B%E8%8C%83%E5%BC%8F/"/>
+    
+      <category term="面向对象编程" scheme="http://liuqinh2s.github.io/blog/categories/%E7%BC%96%E7%A8%8B%E8%8C%83%E5%BC%8F/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Inside the C++ Object Model 系列笔记 四 -- The Semantics of Function</title>
+    <link href="http://liuqinh2s.github.io/blog/2017/10/23/Inside-the-C++-Object-Model-%E7%B3%BB%E5%88%97%E7%AC%94%E8%AE%B0--The-Semantics-of-Function/"/>
+    <id>http://liuqinh2s.github.io/blog/2017/10/23/Inside-the-C++-Object-Model-系列笔记--The-Semantics-of-Function/</id>
+    <published>2017-10-22T16:00:00.000Z</published>
+    <updated>2019-01-13T02:05:23.675Z</updated>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;c++支持三种类型的成员函数，分别为static,nostatic,virtual。每一种调用方式都不尽相同。&lt;/p&gt;
+&lt;/blockquote&gt;
+    
+    </summary>
+    
+      <category term="读书笔记" scheme="http://liuqinh2s.github.io/blog/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
+    
+      <category term="《Inside the C++ Object Model》" scheme="http://liuqinh2s.github.io/blog/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E3%80%8AInside-the-C-Object-Model%E3%80%8B/"/>
+    
+    
+      <category term="C++" scheme="http://liuqinh2s.github.io/blog/tags/C/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Inside the C++ Object Model 系列笔记 三 -- The Semantics of Data</title>
+    <link href="http://liuqinh2s.github.io/blog/2017/10/21/Inside-the-C++-Object-Model-%E7%B3%BB%E5%88%97%E7%AC%94%E8%AE%B0--The-Semantics-of-Data/"/>
+    <id>http://liuqinh2s.github.io/blog/2017/10/21/Inside-the-C++-Object-Model-系列笔记--The-Semantics-of-Data/</id>
+    <published>2017-10-20T16:00:00.000Z</published>
+    <updated>2019-01-13T02:04:48.610Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;C++对象模型的细节，讨论了 data members 的处理。&lt;/p&gt;
+&lt;h2 id=&quot;空类在内存中有空间吗&quot;&gt;&lt;a href=&quot;#空类在内存中有空间吗&quot; class=&quot;headerlink&quot; title=&quot;空类在内存中有空间吗&quot;&gt;&lt;/a&gt;空类在内存中有空间吗&lt;/h2&gt;
+    
+    </summary>
+    
+      <category term="读书笔记" scheme="http://liuqinh2s.github.io/blog/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
+    
+      <category term="《Inside the C++ Object Model》" scheme="http://liuqinh2s.github.io/blog/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E3%80%8AInside-the-C-Object-Model%E3%80%8B/"/>
+    
+    
+      <category term="C++" scheme="http://liuqinh2s.github.io/blog/tags/C/"/>
     
   </entry>
   

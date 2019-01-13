@@ -7,17 +7,14 @@ tags: [C++]
 comments: true
 ---
 
-- [Inside the C++ Object Model 系列笔记 一 -- Object Lessons](../Inside-the-C++-Object-Model-系列笔记--Object-Lessons)
-- [Inside the C++ Object Model 系列笔记 二 -- The Semantics of constructors](./)
-- [Inside the C++ Object Model 系列笔记 三 -- The Semantics of Data](../../21/Inside-the-C++-Object-Model-系列笔记--The-Semantics-of-Data)
-- [Inside the C++ Object Model 系列笔记 四 -- The Semantics of Function](../../23/Inside-the-C++-Object-Model-系列笔记--The-Semantics-of-Function)
-
 这一章详细的讨论了 constructor 如何工作，讨论构造一个对象的过程以及构造一个对象给程序带来的影响。
 
 ## 区分trivial和notrivial
 
 1. 只有编译器需要的时候(为什么会需要?后面讲的很清楚)，合成操作才是nontrivial的， 这样的构造函数才会被真正的合成出来;
 2. 如果编译器不需要，而程序员又没有提供，这时的默认构造函数就是trivial的。虽然它在概念上存在，但是编译器实际上根本不会去合成出来，因为他不做任何没有意义的事情，所以当然可以忽略它不去合成。trivial 的函数只存在于概念上，实际上不存在这个函数。
+
+<!-- more -->
 
 ## default constructor
 
@@ -250,3 +247,8 @@ void  foo(X &result)
 ```
 
 对比优化前与优化后的代码可以看出，对于一句类似于X a = foo()这样的代码，NRV优化后的代码相较于原代码节省了一个临时对象的空间（省略了xx）,同时减少了两次函数调用（减少xx对象的默认构造函数和析构函数，以及一次拷贝构造函数的调用，增加了一次对a的默认构造函数的调用）。
+
+- [Inside the C++ Object Model 系列笔记 一 -- Object Lessons](../Inside-the-C++-Object-Model-系列笔记--Object-Lessons)
+- [Inside the C++ Object Model 系列笔记 二 -- The Semantics of constructors](./)
+- [Inside the C++ Object Model 系列笔记 三 -- The Semantics of Data](../../21/Inside-the-C++-Object-Model-系列笔记--The-Semantics-of-Data)
+- [Inside the C++ Object Model 系列笔记 四 -- The Semantics of Function](../../23/Inside-the-C++-Object-Model-系列笔记--The-Semantics-of-Function)

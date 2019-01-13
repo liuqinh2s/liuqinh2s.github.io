@@ -81,19 +81,19 @@
 
 
 
-<meta name="description" content="Inside the C++ Object Model 系列笔记 一 — Object Lessons Inside the C++ Object Model 系列笔记 二 — The Semantics of constructors Inside the C++ Object Model 系列笔记 三 — The Semantics of Data Inside the C++ Object">
+<meta name="description" content="c++支持三种类型的成员函数，分别为static,nostatic,virtual。每一种调用方式都不尽相同。">
 <meta name="keywords" content="C++">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Inside the C++ Object Model 系列笔记 四 -- The Semantics of Function">
 <meta property="og:url" content="http://liuqinh2s.github.io/blog/2017/10/23/Inside-the-C++-Object-Model-系列笔记--The-Semantics-of-Function/index.html">
 <meta property="og:site_name" content="liuqinh2s&#39; blog">
-<meta property="og:description" content="Inside the C++ Object Model 系列笔记 一 — Object Lessons Inside the C++ Object Model 系列笔记 二 — The Semantics of constructors Inside the C++ Object Model 系列笔记 三 — The Semantics of Data Inside the C++ Object">
+<meta property="og:description" content="c++支持三种类型的成员函数，分别为static,nostatic,virtual。每一种调用方式都不尽相同。">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="https://i.loli.net/2018/04/25/5ae01bb4b32a9.gif">
-<meta property="og:updated_time" content="2019-01-11T09:26:39.654Z">
+<meta property="og:updated_time" content="2019-01-13T02:05:23.675Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Inside the C++ Object Model 系列笔记 四 -- The Semantics of Function">
-<meta name="twitter:description" content="Inside the C++ Object Model 系列笔记 一 — Object Lessons Inside the C++ Object Model 系列笔记 二 — The Semantics of constructors Inside the C++ Object Model 系列笔记 三 — The Semantics of Data Inside the C++ Object">
+<meta name="twitter:description" content="c++支持三种类型的成员函数，分别为static,nostatic,virtual。每一种调用方式都不尽相同。">
 <meta name="twitter:image" content="https://i.loli.net/2018/04/25/5ae01bb4b32a9.gif">
 
 
@@ -211,16 +211,6 @@
               <i class="menu-item-icon fa fa-fw fa-bug"></i> <br>
             
             Computer Science
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-life-experience">
-          <a href="/blog/LifeExperience/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-bank"></i> <br>
-            
-            Life Experience
           </a>
         </li>
       
@@ -433,15 +423,10 @@
       
 
       
-        <ul>
-<li><a href="../../19/Inside-the-C++-Object-Model-系列笔记--Object-Lessons">Inside the C++ Object Model 系列笔记 一 — Object Lessons</a></li>
-<li><a href="../../19/Inside-the-C++-Object-Model-系列笔记--The-Semantics-of-constructors">Inside the C++ Object Model 系列笔记 二 — The Semantics of constructors</a></li>
-<li><a href="../../21/Inside-the-C++-Object-Model-系列笔记--The-Semantics-of-Data">Inside the C++ Object Model 系列笔记 三 — The Semantics of Data</a></li>
-<li><a href="../../23/Inside-the-C++-Object-Model-系列笔记--The-Semantics-of-Function">Inside the C++ Object Model 系列笔记 四 — The Semantics of Function</a></li>
-</ul>
-<blockquote>
+        <blockquote>
 <p>c++支持三种类型的成员函数，分别为static,nostatic,virtual。每一种调用方式都不尽相同。</p>
 </blockquote>
+<a id="more"></a>
 <h2 id="nonstatic-member-function"><a href="#nonstatic-member-function" class="headerlink" title="nonstatic member function"></a>nonstatic member function</h2><p>C++的设计准则之一就是:nonstatic member function至少必须和一般的nonmember function 有相同的效率。<br>实际上，nonstatic member function 会被编译器进行如下的转换，变成一个普通函数:</p>
 <p>Type1 X::foo(Type2 arg1) { … }</p>
 <p>会被转换为如下的普通函数:</p>
@@ -495,6 +480,12 @@
 <p>虚函数表的构造挺简单的：</p>
 <p><img src="https://i.loli.net/2018/04/25/5ae01bb4b32a9.gif" alt="虚函数表的构造"></p>
 <p>从内存布局的角度看，类对象继承基类的时候只把基类的 nonstatic data member和member function（函数入口，也可以说是函数指针） 放进自己内存里，static data member和static function都在global address里面。然后就是虚函数表是复制了一份基类的虚函数表，然后把virtual实现了的部分替换掉，没实现的就不改，依然用父类的。然后虚函数表指针自然也要不一样，毕竟指向的内存地址不一样，对吧。</p>
+<ul>
+<li><a href="../../19/Inside-the-C++-Object-Model-系列笔记--Object-Lessons">Inside the C++ Object Model 系列笔记 一 — Object Lessons</a></li>
+<li><a href="../../19/Inside-the-C++-Object-Model-系列笔记--The-Semantics-of-constructors">Inside the C++ Object Model 系列笔记 二 — The Semantics of constructors</a></li>
+<li><a href="../../21/Inside-the-C++-Object-Model-系列笔记--The-Semantics-of-Data">Inside the C++ Object Model 系列笔记 三 — The Semantics of Data</a></li>
+<li><a href="../../23/Inside-the-C++-Object-Model-系列笔记--The-Semantics-of-Function">Inside the C++ Object Model 系列笔记 四 — The Semantics of Function</a></li>
+</ul>
 
       
     </div>
@@ -621,7 +612,7 @@
               
                 <a href="/blog/archives">
               
-                  <span class="site-state-item-count">57</span>
+                  <span class="site-state-item-count">22</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -632,7 +623,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/blog/categories/index.html">
-                  <span class="site-state-item-count">47</span>
+                  <span class="site-state-item-count">22</span>
                   <span class="site-state-item-name">categories</span>
                 </a>
               </div>
@@ -643,7 +634,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/blog/tags/index.html">
-                  <span class="site-state-item-count">17</span>
+                  <span class="site-state-item-count">11</span>
                   <span class="site-state-item-name">tags</span>
                 </a>
               </div>
@@ -763,7 +754,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">116.4k</span>
+    <span title="Site words total count">61.5k</span>
   
 </div>
 

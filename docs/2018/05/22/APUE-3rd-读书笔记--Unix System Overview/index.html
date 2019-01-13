@@ -81,22 +81,22 @@
 
 
 
-<meta name="description" content="前言Unix系统中非常重要的概念：  内核 系统调用 库函数 shell 文件、目录、路径、工作路径、权限管理 文件描述符 进程、线程 错误处理 信号  1.1    IntroductionAll operating systems provide services for programs they run. Typical services include executing a new p">
+<meta name="description" content="前言Unix系统中非常重要的概念：  内核 系统调用 库函数 shell 文件、目录、路径、工作路径、权限管理 文件描述符 进程、线程 错误处理 信号">
 <meta name="keywords" content="Unix,Linux">
 <meta property="og:type" content="article">
 <meta property="og:title" content="《APUE-3rd》 读书笔记 -- Unix System Overview">
 <meta property="og:url" content="http://liuqinh2s.github.io/blog/2018/05/22/APUE-3rd-读书笔记--Unix System Overview/index.html">
 <meta property="og:site_name" content="liuqinh2s&#39; blog">
-<meta property="og:description" content="前言Unix系统中非常重要的概念：  内核 系统调用 库函数 shell 文件、目录、路径、工作路径、权限管理 文件描述符 进程、线程 错误处理 信号  1.1    IntroductionAll operating systems provide services for programs they run. Typical services include executing a new p">
+<meta property="og:description" content="前言Unix系统中非常重要的概念：  内核 系统调用 库函数 shell 文件、目录、路径、工作路径、权限管理 文件描述符 进程、线程 错误处理 信号">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="https://i.loli.net/2018/05/22/5b03742b0a818.png">
 <meta property="og:image" content="https://i.loli.net/2018/05/23/5b04b995bf5e1.png">
 <meta property="og:image" content="http://liuqinh2s.github.io/blog/images/APUE-3rd-Figure%201.11.png">
 <meta property="og:image" content="http://liuqinh2s.github.io/blog/images/APUE-3rd-Figure%201.12.png">
-<meta property="og:updated_time" content="2019-01-11T09:26:39.657Z">
+<meta property="og:updated_time" content="2019-01-13T02:07:49.089Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="《APUE-3rd》 读书笔记 -- Unix System Overview">
-<meta name="twitter:description" content="前言Unix系统中非常重要的概念：  内核 系统调用 库函数 shell 文件、目录、路径、工作路径、权限管理 文件描述符 进程、线程 错误处理 信号  1.1    IntroductionAll operating systems provide services for programs they run. Typical services include executing a new p">
+<meta name="twitter:description" content="前言Unix系统中非常重要的概念：  内核 系统调用 库函数 shell 文件、目录、路径、工作路径、权限管理 文件描述符 进程、线程 错误处理 信号">
 <meta name="twitter:image" content="https://i.loli.net/2018/05/22/5b03742b0a818.png">
 
 
@@ -214,16 +214,6 @@
               <i class="menu-item-icon fa fa-fw fa-bug"></i> <br>
             
             Computer Science
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-life-experience">
-          <a href="/blog/LifeExperience/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-bank"></i> <br>
-            
-            Life Experience
           </a>
         </li>
       
@@ -448,6 +438,7 @@
 <li>错误处理</li>
 <li>信号</li>
 </ul>
+<a id="more"></a>
 <h2 id="1-1-Introduction"><a href="#1-1-Introduction" class="headerlink" title="1.1    Introduction"></a>1.1    Introduction</h2><p>All operating systems provide services for programs they run. Typical services include executing a new program, opening a file, reading a file, allocating a region of memory, getting the current time of day, and so on. The focus of this text is to describe the services provided by various versions of the UNIX operating system. 所有的操作系统都提供一些服务让程序能够在其上运行，典型的服务包括：执行一个新程序，打开一个文件，读取一个文件，分配一块内存，获取当前时间，等等。 这本书所关注的重点就是众多种类的unix操作系统能提供服务。</p>
 <p>Describing the UNIX System in a strictly linear fashion, without any forward references to terms that haven’t been described yet, is nearly impossible (and would probably be boring). 这里道出了一个众所周知的难题，想要线性的给读者讲授一个新课程，在讲授一个知识点时却又不引进任何其他的未知概念，这几乎是不可能的。</p>
 <blockquote>
@@ -734,8 +725,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/blog/2018/05/08/Linux-Shell-配色/" rel="next" title="Linux Shell 配色">
-                <i class="fa fa-chevron-left"></i> Linux Shell 配色
+              <a href="/blog/2018/04/30/mathjax常用公式记录/" rel="next" title="mathjax常用公式记录">
+                <i class="fa fa-chevron-left"></i> mathjax常用公式记录
               </a>
             
           </div>
@@ -830,7 +821,7 @@
               
                 <a href="/blog/archives">
               
-                  <span class="site-state-item-count">57</span>
+                  <span class="site-state-item-count">22</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -841,7 +832,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/blog/categories/index.html">
-                  <span class="site-state-item-count">47</span>
+                  <span class="site-state-item-count">22</span>
                   <span class="site-state-item-name">categories</span>
                 </a>
               </div>
@@ -852,7 +843,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/blog/tags/index.html">
-                  <span class="site-state-item-count">17</span>
+                  <span class="site-state-item-count">11</span>
                   <span class="site-state-item-name">tags</span>
                 </a>
               </div>
@@ -972,7 +963,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">116.4k</span>
+    <span title="Site words total count">61.5k</span>
   
 </div>
 

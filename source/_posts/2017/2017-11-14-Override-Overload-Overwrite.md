@@ -9,6 +9,8 @@ comments: true
 
 它们是：Override、Overload、Overwrite。
 
+<!-- more -->
+
 这是我查有道词典时候看到的可怕一幕：
 
 ![](https://wx4.sinaimg.cn/mw690/006zFO3ggy1flhl8a9e69j312w0tatf9.jpg)

@@ -15,6 +15,8 @@ mac: command+option+L
 4. 上下移动代码，ctrl+shift+上下键
 5. Android Studio 生成函数注释：你在方法前输入/**然后一回车，自动帮你生成方法和参数的注释。
 
+<!-- more -->
+
 ## Intellj Idea
 
 快速打出常用语句：

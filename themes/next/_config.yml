@@ -99,7 +99,7 @@ menu:
   # categories: /categories/ || th
   # archives: /archives/ || archive
   Computer Science: /ComputerScience/ || bug
-  Life Experience: /LifeExperience/ || bank
+  # Life Experience: /LifeExperience/ || bank
   Math: /Math/ || coffee
   Note: /notes/ || book
   # schedule: /schedule/ || calendar

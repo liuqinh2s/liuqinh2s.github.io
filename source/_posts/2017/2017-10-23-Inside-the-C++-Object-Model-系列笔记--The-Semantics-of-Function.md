@@ -7,12 +7,9 @@ tags: [C++]
 comments: true
 ---
 
-- [Inside the C++ Object Model 系列笔记 一 -- Object Lessons](../../19/Inside-the-C++-Object-Model-系列笔记--Object-Lessons)
-- [Inside the C++ Object Model 系列笔记 二 -- The Semantics of constructors](../../19/Inside-the-C++-Object-Model-系列笔记--The-Semantics-of-constructors)
-- [Inside the C++ Object Model 系列笔记 三 -- The Semantics of Data](../../21/Inside-the-C++-Object-Model-系列笔记--The-Semantics-of-Data)
-- [Inside the C++ Object Model 系列笔记 四 -- The Semantics of Function](../../23/Inside-the-C++-Object-Model-系列笔记--The-Semantics-of-Function)
-
 >c++支持三种类型的成员函数，分别为static,nostatic,virtual。每一种调用方式都不尽相同。
+
+<!-- more -->
 
 ## nonstatic member function
 
@@ -114,3 +111,8 @@ vtable的内容：
 ![虚函数表的构造](https://i.loli.net/2018/04/25/5ae01bb4b32a9.gif)
 
 从内存布局的角度看，类对象继承基类的时候只把基类的 nonstatic data member和member function（函数入口，也可以说是函数指针） 放进自己内存里，static data member和static function都在global address里面。然后就是虚函数表是复制了一份基类的虚函数表，然后把virtual实现了的部分替换掉，没实现的就不改，依然用父类的。然后虚函数表指针自然也要不一样，毕竟指向的内存地址不一样，对吧。
+
+- [Inside the C++ Object Model 系列笔记 一 -- Object Lessons](../../19/Inside-the-C++-Object-Model-系列笔记--Object-Lessons)
+- [Inside the C++ Object Model 系列笔记 二 -- The Semantics of constructors](../../19/Inside-the-C++-Object-Model-系列笔记--The-Semantics-of-constructors)
+- [Inside the C++ Object Model 系列笔记 三 -- The Semantics of Data](../../21/Inside-the-C++-Object-Model-系列笔记--The-Semantics-of-Data)
+- [Inside the C++ Object Model 系列笔记 四 -- The Semantics of Function](../../23/Inside-the-C++-Object-Model-系列笔记--The-Semantics-of-Function)

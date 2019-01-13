@@ -7,11 +7,6 @@ tags: [C++]
 comments: true
 ---
 
-- [Inside the C++ Object Model 系列笔记 一 -- Object Lessons](./)
-- [Inside the C++ Object Model 系列笔记 二 -- The Semantics of constructors](../Inside-the-C++-Object-Model-系列笔记--The-Semantics-of-constructors)
-- [Inside the C++ Object Model 系列笔记 三 -- The Semantics of Data](../../21/Inside-the-C++-Object-Model-系列笔记--The-Semantics-of-Data)
-- [Inside the C++ Object Model 系列笔记 四 -- The Semantics of Function](../../23/Inside-the-C++-Object-Model-系列笔记--The-Semantics-of-Function)
-
 >多态：统一的接口，不同的实现
 
 **C++多态（polymorphism）** 表示“以一个public base class的指针（或者reference），寻址出一个derived class object”
@@ -23,6 +18,8 @@ comments: true
 第一章 Object Lessons 介绍了 C++如何在背后实现一个对象，内存中的布局以及空间上的关系。
 
 **在计算机的原理中，要实现某个机制，我们总能找到很多种实现方式**（对比着学习，多思考每种实现方法的利弊），C++的类的实现也不例外，让我们对比以下三种实现方式：
+
+<!-- more -->
 
 ### 三种对象实现模式
 
@@ -176,3 +173,8 @@ int main(){
 - 指针的类型是编译器的概念，对于硬件来说，并没有什么指针类型的概念;
 - 转型操作也只是一种编译器的指令，它改变的是编译器对被指内存的解释方式而已!
 - `void*`指针只能够持有一个地址（一个字节），而不能通过它操作所指向的object
+
+- [Inside the C++ Object Model 系列笔记 一 -- Object Lessons](./)
+- [Inside the C++ Object Model 系列笔记 二 -- The Semantics of constructors](../Inside-the-C++-Object-Model-系列笔记--The-Semantics-of-constructors)
+- [Inside the C++ Object Model 系列笔记 三 -- The Semantics of Data](../../21/Inside-the-C++-Object-Model-系列笔记--The-Semantics-of-Data)
+- [Inside the C++ Object Model 系列笔记 四 -- The Semantics of Function](../../23/Inside-the-C++-Object-Model-系列笔记--The-Semantics-of-Function)

@@ -7,14 +7,11 @@ tags: [C++]
 comments: true
 ---
 
-- [Inside the C++ Object Model 系列笔记 一 -- Object Lessons](../../19/Inside-the-C++-Object-Model-系列笔记--Object-Lessons)
-- [Inside the C++ Object Model 系列笔记 二 -- The Semantics of constructors](../../19/Inside-the-C++-Object-Model-系列笔记--The-Semantics-of-constructors)
-- [Inside the C++ Object Model 系列笔记 三 -- The Semantics of Data](./)
-- [Inside the C++ Object Model 系列笔记 四 -- The Semantics of Function](../../23/Inside-the-C++-Object-Model-系列笔记--The-Semantics-of-Function)
-
 C++对象模型的细节，讨论了 data members 的处理。
 
 ## 空类在内存中有空间吗
+
+<!-- more -->
 
 一个实例引出的思考：
 
@@ -200,3 +197,8 @@ x2=x;
 C++ Standard 并未明确 base classes 的特定排列次序，但是目前的编译器都是按照声明的次序来安放他们的。(有一个优化:如果第 1 基类没有 vtable 而后继基类有，则可能把它们调 个位置)。
 多重继承中，可能会有多个 vptr 指针，视其继承体系而定:派生类中 vptr 的数目最多等于所有基
 类的 vptr 数目的总和。
+
+- [Inside the C++ Object Model 系列笔记 一 -- Object Lessons](../../19/Inside-the-C++-Object-Model-系列笔记--Object-Lessons)
+- [Inside the C++ Object Model 系列笔记 二 -- The Semantics of constructors](../../19/Inside-the-C++-Object-Model-系列笔记--The-Semantics-of-constructors)
+- [Inside the C++ Object Model 系列笔记 三 -- The Semantics of Data](./)
+- [Inside the C++ Object Model 系列笔记 四 -- The Semantics of Function](../../23/Inside-the-C++-Object-Model-系列笔记--The-Semantics-of-Function)

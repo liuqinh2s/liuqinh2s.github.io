@@ -16,7 +16,7 @@ tags: [Unix, Linux]
 4. file descriptor flags ，文件描述位
 5. file status flags ，文件状态位
 
-
+<!-- more -->
 
 ## File Descriptors
 

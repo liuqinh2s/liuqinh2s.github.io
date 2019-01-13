@@ -18,6 +18,8 @@ cat /etc/shells
 
 如果有的话就下载[oh my zsh](https://github.com/robbyrussell/oh-my-zsh)
 
+<!-- more -->
+
 ## 设置默认shell
 
 ```
