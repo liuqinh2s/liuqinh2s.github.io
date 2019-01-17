@@ -89,3 +89,7 @@ public enum ExceptionMsg {
 封装是为了更好的把代码的改动控制在模块内部，从而减少外部的改动需求。API尽量不变，对外的接口尽量不变。[理解 Java 的三大特性之封装](http://wiki.jikexueyuan.com/project/java-enhancement/java-one.html)
 
 继承则是赤裸裸的在重用代码。
+
+## 2019-01-17
+
+一个奇怪的问题，我配置好了github的ssh key，但每次push都跟我索要账号密码。原因是我clone的时候用的http模式，在项目的.git/config里面可以修改，改为ssh模式即可。感谢stackoverflow的小哥：[Why is Github asking for username/password when following the instructions on screen and pushing a new repo?](https://stackoverflow.com/questions/10909221/why-is-github-asking-for-username-password-when-following-the-instructions-on-sc)
