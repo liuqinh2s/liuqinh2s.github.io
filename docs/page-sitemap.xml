@@ -7,6 +7,13 @@
     </url>
     
     <url>
+        <loc>http://liuqinh2s.github.io/blog/Math/</loc>
+        <lastmod>2019-02-11T03:22:40.006Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
         <loc>http://liuqinh2s.github.io/blog/notes/</loc>
         <lastmod>2019-01-17T07:15:21.255Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -37,13 +44,6 @@
     <url>
         <loc>http://liuqinh2s.github.io/blog/archives/</loc>
         <lastmod>2019-01-15T03:05:06.012Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    
-    <url>
-        <loc>http://liuqinh2s.github.io/blog/Math/</loc>
-        <lastmod>2019-01-15T03:05:05.871Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
