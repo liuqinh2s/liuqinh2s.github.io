@@ -198,6 +198,8 @@ C++ Standard 并未明确 base classes 的特定排列次序，但是目前的�
 多重继承中，可能会有多个 vptr 指针，视其继承体系而定:派生类中 vptr 的数目最多等于所有基
 类的 vptr 数目的总和。
 
+## Inside the C++ Object Model 系列笔记向导
+
 - [Inside the C++ Object Model 系列笔记 一 -- Object Lessons](../../19/Inside-the-C++-Object-Model-系列笔记--Object-Lessons)
 - [Inside the C++ Object Model 系列笔记 二 -- The Semantics of constructors](../../19/Inside-the-C++-Object-Model-系列笔记--The-Semantics-of-constructors)
 - [Inside the C++ Object Model 系列笔记 三 -- The Semantics of Data](./)

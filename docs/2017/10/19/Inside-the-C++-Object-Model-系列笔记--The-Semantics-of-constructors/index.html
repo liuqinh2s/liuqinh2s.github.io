@@ -89,7 +89,7 @@
 <meta property="og:site_name" content="liuqinh2s&#39; blog">
 <meta property="og:description" content="这一章详细的讨论了 constructor 如何工作，讨论构造一个对象的过程以及构造一个对象给程序带来的影响。 区分trivial和notrivial 只有编译器需要的时候(为什么会需要?后面讲的很清楚)，合成操作才是nontrivial的， 这样的构造函数才会被真正的合成出来; 如果编译器不需要，而程序员又没有提供，这时的默认构造函数就是trivial的。虽然它在概念上存在，但是编译器实际上根本">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-01-15T03:05:05.920Z">
+<meta property="og:updated_time" content="2019-02-19T08:25:49.966Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Inside the C++ Object Model 系列笔记 二 -- The Semantics of constructors">
 <meta name="twitter:description" content="这一章详细的讨论了 constructor 如何工作，讨论构造一个对象的过程以及构造一个对象给程序带来的影响。 区分trivial和notrivial 只有编译器需要的时候(为什么会需要?后面讲的很清楚)，合成操作才是nontrivial的， 这样的构造函数才会被真正的合成出来; 如果编译器不需要，而程序员又没有提供，这时的默认构造函数就是trivial的。虽然它在概念上存在，但是编译器实际上根本">
@@ -396,7 +396,7 @@
                   <span class="post-meta-item-text">Words count in article&#58;</span>
                 
                 <span title="Words count in article">
-                  3,520
+                  3,531
                 </span>
               
 
@@ -487,7 +487,7 @@
 <p>优化后的foo()以result取代xx：</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span>  <span class="title">foo</span><span class="params">(X &amp;result)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    result.X::X();</span><br><span class="line">    <span class="keyword">if</span>(...)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="comment">//直接处理result</span></span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="comment">//直接处理result</span></span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>对比优化前与优化后的代码可以看出，对于一句类似于X a = foo()这样的代码，NRV优化后的代码相较于原代码节省了一个临时对象的空间（省略了xx）,同时减少了两次函数调用（减少xx对象的默认构造函数和析构函数，以及一次拷贝构造函数的调用，增加了一次对a的默认构造函数的调用）。</p>
-<ul>
+<h2 id="Inside-the-C-Object-Model-系列笔记向导"><a href="#Inside-the-C-Object-Model-系列笔记向导" class="headerlink" title="Inside the C++ Object Model 系列笔记向导"></a>Inside the C++ Object Model 系列笔记向导</h2><ul>
 <li><a href="../Inside-the-C++-Object-Model-系列笔记--Object-Lessons">Inside the C++ Object Model 系列笔记 一 — Object Lessons</a></li>
 <li><a href="./">Inside the C++ Object Model 系列笔记 二 — The Semantics of constructors</a></li>
 <li><a href="../../21/Inside-the-C++-Object-Model-系列笔记--The-Semantics-of-Data">Inside the C++ Object Model 系列笔记 三 — The Semantics of Data</a></li>
@@ -619,7 +619,7 @@
               
                 <a href="/blog/archives">
               
-                  <span class="site-state-item-count">26</span>
+                  <span class="site-state-item-count">27</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -630,7 +630,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/blog/categories/index.html">
-                  <span class="site-state-item-count">24</span>
+                  <span class="site-state-item-count">25</span>
                   <span class="site-state-item-name">categories</span>
                 </a>
               </div>
@@ -727,7 +727,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#区分trivial和notrivial"><span class="nav-number">1.</span> <span class="nav-text">区分trivial和notrivial</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#default-constructor"><span class="nav-number">2.</span> <span class="nav-text">default constructor</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#通常很多C-程序员存在两种误解"><span class="nav-number">2.1.</span> <span class="nav-text">通常很多C++程序员存在两种误解</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#什么时候编译器会给你生成默认构造函数"><span class="nav-number">2.2.</span> <span class="nav-text">什么时候编译器会给你生成默认构造函数</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#copy-constructor"><span class="nav-number">3.</span> <span class="nav-text">copy constructor</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#什么时候编译器会给你生成拷贝构造函数"><span class="nav-number">3.1.</span> <span class="nav-text">什么时候编译器会给你生成拷贝构造函数</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#命名返回值优化"><span class="nav-number">4.</span> <span class="nav-text">命名返回值优化</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#区分trivial和notrivial"><span class="nav-number">1.</span> <span class="nav-text">区分trivial和notrivial</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#default-constructor"><span class="nav-number">2.</span> <span class="nav-text">default constructor</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#通常很多C-程序员存在两种误解"><span class="nav-number">2.1.</span> <span class="nav-text">通常很多C++程序员存在两种误解</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#什么时候编译器会给你生成默认构造函数"><span class="nav-number">2.2.</span> <span class="nav-text">什么时候编译器会给你生成默认构造函数</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#copy-constructor"><span class="nav-number">3.</span> <span class="nav-text">copy constructor</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#什么时候编译器会给你生成拷贝构造函数"><span class="nav-number">3.1.</span> <span class="nav-text">什么时候编译器会给你生成拷贝构造函数</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#命名返回值优化"><span class="nav-number">4.</span> <span class="nav-text">命名返回值优化</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Inside-the-C-Object-Model-系列笔记向导"><span class="nav-number">5.</span> <span class="nav-text">Inside the C++ Object Model 系列笔记向导</span></a></li></ol></div>
             
 
           </div>
@@ -761,7 +761,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">66.2k</span>
+    <span title="Site words total count">66.8k</span>
   
 </div>
 

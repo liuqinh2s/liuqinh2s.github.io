@@ -90,7 +90,7 @@
 <meta property="og:description" content="c++支持三种类型的成员函数，分别为static,nostatic,virtual。每一种调用方式都不尽相同。">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="https://i.loli.net/2018/04/25/5ae01bb4b32a9.gif">
-<meta property="og:updated_time" content="2019-01-15T03:05:05.947Z">
+<meta property="og:updated_time" content="2019-02-19T08:26:03.839Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Inside the C++ Object Model 系列笔记 四 -- The Semantics of Function">
 <meta name="twitter:description" content="c++支持三种类型的成员函数，分别为static,nostatic,virtual。每一种调用方式都不尽相同。">
@@ -398,7 +398,7 @@
                   <span class="post-meta-item-text">Words count in article&#58;</span>
                 
                 <span title="Words count in article">
-                  1,614
+                  1,625
                 </span>
               
 
@@ -480,7 +480,7 @@
 <p>虚函数表的构造挺简单的：</p>
 <p><img src="https://i.loli.net/2018/04/25/5ae01bb4b32a9.gif" alt="虚函数表的构造"></p>
 <p>从内存布局的角度看，类对象继承基类的时候只把基类的 nonstatic data member和member function（函数入口，也可以说是函数指针） 放进自己内存里，static data member和static function都在global address里面。然后就是虚函数表是复制了一份基类的虚函数表，然后把virtual实现了的部分替换掉，没实现的就不改，依然用父类的。然后虚函数表指针自然也要不一样，毕竟指向的内存地址不一样，对吧。</p>
-<ul>
+<h2 id="Inside-the-C-Object-Model-系列笔记向导"><a href="#Inside-the-C-Object-Model-系列笔记向导" class="headerlink" title="Inside the C++ Object Model 系列笔记向导"></a>Inside the C++ Object Model 系列笔记向导</h2><ul>
 <li><a href="../../19/Inside-the-C++-Object-Model-系列笔记--Object-Lessons">Inside the C++ Object Model 系列笔记 一 — Object Lessons</a></li>
 <li><a href="../../19/Inside-the-C++-Object-Model-系列笔记--The-Semantics-of-constructors">Inside the C++ Object Model 系列笔记 二 — The Semantics of constructors</a></li>
 <li><a href="../../21/Inside-the-C++-Object-Model-系列笔记--The-Semantics-of-Data">Inside the C++ Object Model 系列笔记 三 — The Semantics of Data</a></li>
@@ -612,7 +612,7 @@
               
                 <a href="/blog/archives">
               
-                  <span class="site-state-item-count">26</span>
+                  <span class="site-state-item-count">27</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -623,7 +623,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/blog/categories/index.html">
-                  <span class="site-state-item-count">24</span>
+                  <span class="site-state-item-count">25</span>
                   <span class="site-state-item-name">categories</span>
                 </a>
               </div>
@@ -720,7 +720,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#nonstatic-member-function"><span class="nav-number">1.</span> <span class="nav-text">nonstatic member function</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Virtual-Member-Function"><span class="nav-number">2.</span> <span class="nav-text">Virtual Member Function</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Static-Member-Function"><span class="nav-number">3.</span> <span class="nav-text">Static Member Function</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#nonstatic-member-function"><span class="nav-number">1.</span> <span class="nav-text">nonstatic member function</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Virtual-Member-Function"><span class="nav-number">2.</span> <span class="nav-text">Virtual Member Function</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Static-Member-Function"><span class="nav-number">3.</span> <span class="nav-text">Static Member Function</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Inside-the-C-Object-Model-系列笔记向导"><span class="nav-number">4.</span> <span class="nav-text">Inside the C++ Object Model 系列笔记向导</span></a></li></ol></div>
             
 
           </div>
@@ -754,7 +754,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">66.2k</span>
+    <span title="Site words total count">66.8k</span>
   
 </div>
 

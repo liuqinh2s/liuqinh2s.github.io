@@ -174,6 +174,8 @@ int main(){
 - 转型操作也只是一种编译器的指令，它改变的是编译器对被指内存的解释方式而已!
 - `void*`指针只能够持有一个地址（一个字节），而不能通过它操作所指向的object
 
+## Inside the C++ Object Model 系列笔记向导
+
 - [Inside the C++ Object Model 系列笔记 一 -- Object Lessons](./)
 - [Inside the C++ Object Model 系列笔记 二 -- The Semantics of constructors](../Inside-the-C++-Object-Model-系列笔记--The-Semantics-of-constructors)
 - [Inside the C++ Object Model 系列笔记 三 -- The Semantics of Data](../../21/Inside-the-C++-Object-Model-系列笔记--The-Semantics-of-Data)

@@ -93,3 +93,7 @@ public enum ExceptionMsg {
 ## 2019-01-17
 
 一个奇怪的问题，我配置好了github的ssh key，但每次push都跟我索要账号密码。原因是我clone的时候用的http模式，在项目的.git/config里面可以修改，改为ssh模式即可。感谢stackoverflow的小哥：[Why is Github asking for username/password when following the instructions on screen and pushing a new repo?](https://stackoverflow.com/questions/10909221/why-is-github-asking-for-username-password-when-following-the-instructions-on-sc)
+
+## 2019-02-19
+
+今天终于解决了一个困扰我一年之久的问题，网易云音乐和知乎账号的登陆异常。我对比了不同的网络环境（IP），不同的账号（别人的知乎账号），不同的浏览器。组合测试最后发现既不是IP的单方面的问题，也不是账号的单方面问题，也不是浏览器的单方面的问题。而当我使用无痕浏览的时候并没有任何问题，所以应该是chrome浏览器记住了某些东西。最后发现问题出在chrome浏览器的账号同步上，可能是因为我的谷歌账号在历史上曾记录了一次知乎异常登陆的cookie，所以之后的每一次登陆都使用这个cookie，而且清空都是无效的，在你登陆的时候又会给你自动添加。之后我先登出chrome账号，并同时清空所有数据，然后再登陆知乎账号，然后再登陆chrome账号同步一次正确的知乎登陆。问题就得到了解决。

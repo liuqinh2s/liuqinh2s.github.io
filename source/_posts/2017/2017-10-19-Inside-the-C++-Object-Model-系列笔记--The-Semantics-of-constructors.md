@@ -248,6 +248,8 @@ void  foo(X &result)
 
 对比优化前与优化后的代码可以看出，对于一句类似于X a = foo()这样的代码，NRV优化后的代码相较于原代码节省了一个临时对象的空间（省略了xx）,同时减少了两次函数调用（减少xx对象的默认构造函数和析构函数，以及一次拷贝构造函数的调用，增加了一次对a的默认构造函数的调用）。
 
+## Inside the C++ Object Model 系列笔记向导
+
 - [Inside the C++ Object Model 系列笔记 一 -- Object Lessons](../Inside-the-C++-Object-Model-系列笔记--Object-Lessons)
 - [Inside the C++ Object Model 系列笔记 二 -- The Semantics of constructors](./)
 - [Inside the C++ Object Model 系列笔记 三 -- The Semantics of Data](../../21/Inside-the-C++-Object-Model-系列笔记--The-Semantics-of-Data)
