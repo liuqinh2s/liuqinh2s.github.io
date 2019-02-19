@@ -6,7 +6,7 @@
   <link href="/blog/atom.xml" rel="self"/>
   
   <link href="http://liuqinh2s.github.io/blog/"/>
-  <updated>2019-02-19T09:46:39.345Z</updated>
+  <updated>2019-02-19T11:05:30.764Z</updated>
   <id>http://liuqinh2s.github.io/blog/</id>
   
   <author>
@@ -21,17 +21,12 @@
     <link href="http://liuqinh2s.github.io/blog/2019/02/19/%E5%BF%AB%E9%80%9F%E6%8E%92%E5%BA%8F/"/>
     <id>http://liuqinh2s.github.io/blog/2019/02/19/快速排序/</id>
     <published>2019-02-18T16:00:00.000Z</published>
-    <updated>2019-02-19T09:46:39.345Z</updated>
+    <updated>2019-02-19T11:05:30.764Z</updated>
     
     <summary type="html">
     
-      
-      
-        
-        
-          &lt;p&gt;快速排序算法是一个原理非常简单易懂的算法，但如果现场手写的话又有多少人能写得出来呢？我今天又试了一下，发现还是存在一些认知上的问题。首先我明白快排的核心操作是：&lt;strong&gt;选取一个中枢，然后把小于中枢的放到左边，大于中枢的放到右边&lt;/strong&gt;。但我发现时隔仅仅一年
-        
-      
+      &lt;p&gt;快速排序算法是一个原理非常简单易懂的算法，但如果现场手写的话又有多少人能写得出来呢？我今天又试了一下，发现还是存在一些认知上的问题。首先我明白快排的核心操作是：&lt;strong&gt;选取一个中枢，然后把小于中枢的放到左边，大于中枢的放到右边&lt;/strong&gt;。但我发现时隔仅仅一年多，我居然已经忘了这个操作的英文名字了。直到我在写这篇文章的时候才突然想起来：partition操作。&lt;/p&gt;
+&lt;p&gt;在使用partition操作的前提下，递归解决问题就OK了。&lt;/p&gt;
     
     </summary>
     
@@ -47,7 +42,7 @@
     <link href="http://liuqinh2s.github.io/blog/2019/01/19/%E5%B9%B6%E6%9F%A5%E9%9B%86/"/>
     <id>http://liuqinh2s.github.io/blog/2019/01/19/并查集/</id>
     <published>2019-01-18T16:00:00.000Z</published>
-    <updated>2019-02-19T03:35:45.994Z</updated>
+    <updated>2019-02-19T10:52:20.034Z</updated>
     
     <summary type="html">
     
@@ -70,7 +65,7 @@
     <link href="http://liuqinh2s.github.io/blog/2019/01/17/KMP%E7%AE%97%E6%B3%95/"/>
     <id>http://liuqinh2s.github.io/blog/2019/01/17/KMP算法/</id>
     <published>2019-01-16T16:00:00.000Z</published>
-    <updated>2019-02-19T03:33:52.398Z</updated>
+    <updated>2019-02-19T10:52:20.034Z</updated>
     
     <summary type="html">
     
@@ -96,7 +91,7 @@
     <link href="http://liuqinh2s.github.io/blog/2019/01/15/%E8%93%84%E6%B0%B4%E6%B1%A0%E7%AE%97%E6%B3%95/"/>
     <id>http://liuqinh2s.github.io/blog/2019/01/15/蓄水池算法/</id>
     <published>2019-01-14T16:00:00.000Z</published>
-    <updated>2019-02-19T03:33:14.514Z</updated>
+    <updated>2019-02-19T10:52:20.034Z</updated>
     
     <summary type="html">
     
@@ -118,7 +113,7 @@
     <link href="http://liuqinh2s.github.io/blog/2019/01/10/%E8%87%AA%E5%B7%B1%E5%86%99Json%E8%A7%A3%E9%87%8A%E5%99%A8/"/>
     <id>http://liuqinh2s.github.io/blog/2019/01/10/自己写Json解释器/</id>
     <published>2019-01-09T16:00:00.000Z</published>
-    <updated>2019-02-19T03:52:48.628Z</updated>
+    <updated>2019-02-19T10:52:20.034Z</updated>
     
     <summary type="html">
     
@@ -141,7 +136,7 @@
     <link href="http://liuqinh2s.github.io/blog/2019/01/07/%E7%AC%AC%E4%B8%80%E4%B8%AA%E6%9E%81%E9%99%90%E7%9A%84%E8%AF%81%E6%98%8E/"/>
     <id>http://liuqinh2s.github.io/blog/2019/01/07/第一个极限的证明/</id>
     <published>2019-01-06T16:00:00.000Z</published>
-    <updated>2019-01-15T03:05:06.008Z</updated>
+    <updated>2019-02-19T10:52:20.034Z</updated>
     
     <summary type="html">
     
@@ -161,7 +156,7 @@
     <link href="http://liuqinh2s.github.io/blog/2018/11/22/js%E5%AE%9E%E7%8E%B0sleep%E6%96%B9%E6%B3%95%E7%9A%84%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5/"/>
     <id>http://liuqinh2s.github.io/blog/2018/11/22/js实现sleep方法的最佳实践/</id>
     <published>2018-11-21T16:00:00.000Z</published>
-    <updated>2019-01-15T03:05:06.006Z</updated>
+    <updated>2019-02-19T10:52:20.033Z</updated>
     
     <summary type="html">
     
@@ -182,7 +177,7 @@
     <link href="http://liuqinh2s.github.io/blog/2018/11/06/%E7%BC%96%E7%A8%8B%E7%8F%A0%E7%8E%91%E7%B3%BB%E5%88%97%E7%AC%94%E8%AE%B02/"/>
     <id>http://liuqinh2s.github.io/blog/2018/11/06/编程珠玑系列笔记2/</id>
     <published>2018-11-05T16:00:00.000Z</published>
-    <updated>2019-01-15T03:05:06.003Z</updated>
+    <updated>2019-02-19T10:52:20.033Z</updated>
     
     <summary type="html">
     
@@ -203,7 +198,7 @@
     <link href="http://liuqinh2s.github.io/blog/2018/11/05/%E7%BC%96%E7%A8%8B%E7%8F%A0%E7%8E%91%E7%B3%BB%E5%88%97%E7%AC%94%E8%AE%B01/"/>
     <id>http://liuqinh2s.github.io/blog/2018/11/05/编程珠玑系列笔记1/</id>
     <published>2018-11-04T16:00:00.000Z</published>
-    <updated>2019-01-15T03:05:06.001Z</updated>
+    <updated>2019-02-19T10:52:20.033Z</updated>
     
     <summary type="html">
     
@@ -223,11 +218,31 @@
   </entry>
   
   <entry>
+    <title>什么是回调</title>
+    <link href="http://liuqinh2s.github.io/blog/2018/11/04/%E4%BB%80%E4%B9%88%E6%98%AF%E5%9B%9E%E8%B0%83/"/>
+    <id>http://liuqinh2s.github.io/blog/2018/11/04/什么是回调/</id>
+    <published>2018-11-03T16:00:00.000Z</published>
+    <updated>2019-02-19T10:52:20.032Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;https://i.loli.net/2018/11/04/5bdeaff01640b.png&quot; alt=&quot;回调2.png&quot;&gt;&lt;/p&gt;
+&lt;p&gt;打个比方，有一家旅馆提供叫醒服务，但是要求旅客自己决定叫醒的方法。可以是打客房电话，也可以是派服务员去敲门，睡得死怕耽误事的，还可以要求往自己头上浇盆水。这里，“叫醒”这个行为是旅馆提供的，相当于库函数，但是叫醒的方式是由旅客决定并告诉旅馆的，也就是回调函数。而旅客告诉旅馆怎么叫醒自己的动作，也就是把回调函数传入库函数的动作，称为登记回调函数（to register a callback function）。&lt;/p&gt;
+&lt;p&gt;在回调中，我们利用某种方式，把回调函数像参数一样传入中间函数。可以这么理解，在传入一个回调函数之前，中间函数是不完整的。换句话说，程序可以在运行时，通过登记不同的回调函数，来决定、改变中间函数的行为。这就比简单的函数调用要灵活太多了。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="编程概念" scheme="http://liuqinh2s.github.io/blog/categories/%E7%BC%96%E7%A8%8B%E6%A6%82%E5%BF%B5/"/>
+    
+    
+  </entry>
+  
+  <entry>
     <title>精通一款编辑器之sublime text 3</title>
     <link href="http://liuqinh2s.github.io/blog/2018/11/04/%E7%B2%BE%E9%80%9A%E4%B8%80%E6%AC%BE%E7%BC%96%E8%BE%91%E5%99%A8%E4%B9%8Bsublime%20text%203/"/>
     <id>http://liuqinh2s.github.io/blog/2018/11/04/精通一款编辑器之sublime text 3/</id>
     <published>2018-11-03T16:00:00.000Z</published>
-    <updated>2019-01-15T03:05:05.999Z</updated>
+    <updated>2019-02-19T10:52:20.033Z</updated>
     
     <summary type="html">
     
@@ -254,7 +269,7 @@
     <link href="http://liuqinh2s.github.io/blog/2018/11/04/%E7%86%9F%E7%BB%83%E4%BD%BF%E7%94%A8JetBrains%E5%AE%B6%E7%9A%84IDE/"/>
     <id>http://liuqinh2s.github.io/blog/2018/11/04/熟练使用JetBrains家的IDE/</id>
     <published>2018-11-03T16:00:00.000Z</published>
-    <updated>2019-01-15T03:05:05.997Z</updated>
+    <updated>2019-02-19T10:52:20.033Z</updated>
     
     <summary type="html">
     
@@ -278,31 +293,11 @@
   </entry>
   
   <entry>
-    <title>什么是回调</title>
-    <link href="http://liuqinh2s.github.io/blog/2018/11/04/%E4%BB%80%E4%B9%88%E6%98%AF%E5%9B%9E%E8%B0%83/"/>
-    <id>http://liuqinh2s.github.io/blog/2018/11/04/什么是回调/</id>
-    <published>2018-11-03T16:00:00.000Z</published>
-    <updated>2019-01-15T03:05:05.995Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;img src=&quot;https://i.loli.net/2018/11/04/5bdeaff01640b.png&quot; alt=&quot;回调2.png&quot;&gt;&lt;/p&gt;
-&lt;p&gt;打个比方，有一家旅馆提供叫醒服务，但是要求旅客自己决定叫醒的方法。可以是打客房电话，也可以是派服务员去敲门，睡得死怕耽误事的，还可以要求往自己头上浇盆水。这里，“叫醒”这个行为是旅馆提供的，相当于库函数，但是叫醒的方式是由旅客决定并告诉旅馆的，也就是回调函数。而旅客告诉旅馆怎么叫醒自己的动作，也就是把回调函数传入库函数的动作，称为登记回调函数（to register a callback function）。&lt;/p&gt;
-&lt;p&gt;在回调中，我们利用某种方式，把回调函数像参数一样传入中间函数。可以这么理解，在传入一个回调函数之前，中间函数是不完整的。换句话说，程序可以在运行时，通过登记不同的回调函数，来决定、改变中间函数的行为。这就比简单的函数调用要灵活太多了。&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="编程概念" scheme="http://liuqinh2s.github.io/blog/categories/%E7%BC%96%E7%A8%8B%E6%A6%82%E5%BF%B5/"/>
-    
-    
-  </entry>
-  
-  <entry>
     <title>《CSAPP》读书笔记 -- 第4章：处理器体系结构</title>
     <link href="http://liuqinh2s.github.io/blog/2018/10/13/%E5%A4%84%E7%90%86%E5%99%A8%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84/"/>
     <id>http://liuqinh2s.github.io/blog/2018/10/13/处理器体系结构/</id>
     <published>2018-10-12T16:00:00.000Z</published>
-    <updated>2019-01-15T03:05:05.993Z</updated>
+    <updated>2019-02-19T10:52:20.032Z</updated>
     
     <summary type="html">
     
@@ -324,7 +319,7 @@
     <link href="http://liuqinh2s.github.io/blog/2018/10/08/%E7%A8%8B%E5%BA%8F%E7%9A%84%E6%9C%BA%E5%99%A8%E7%BA%A7%E8%A1%A8%E7%A4%BA/"/>
     <id>http://liuqinh2s.github.io/blog/2018/10/08/程序的机器级表示/</id>
     <published>2018-10-07T16:00:00.000Z</published>
-    <updated>2019-01-15T03:05:05.991Z</updated>
+    <updated>2019-02-19T10:52:20.032Z</updated>
     
     <summary type="html">
     
@@ -353,7 +348,7 @@
     <link href="http://liuqinh2s.github.io/blog/2018/09/27/%E6%B5%AE%E7%82%B9%E6%95%B0%E5%8E%9F%E7%90%86/"/>
     <id>http://liuqinh2s.github.io/blog/2018/09/27/浮点数原理/</id>
     <published>2018-09-26T16:00:00.000Z</published>
-    <updated>2019-01-15T03:05:05.989Z</updated>
+    <updated>2019-02-19T10:52:20.032Z</updated>
     
     <summary type="html">
     
@@ -382,7 +377,7 @@ b = \sum_{i=-n}^m 2^i \times b_i&lt;/script&gt;
     <link href="http://liuqinh2s.github.io/blog/2018/09/20/wsl%20oh%20my%20zsh%20%E5%AD%97%E4%BD%93%E9%97%AE%E9%A2%98/"/>
     <id>http://liuqinh2s.github.io/blog/2018/09/20/wsl oh my zsh 字体问题/</id>
     <published>2018-09-19T16:00:00.000Z</published>
-    <updated>2019-01-15T03:05:05.987Z</updated>
+    <updated>2019-02-19T10:52:20.032Z</updated>
     
     <summary type="html">
     
@@ -406,7 +401,7 @@ b = \sum_{i=-n}^m 2^i \times b_i&lt;/script&gt;
     <link href="http://liuqinh2s.github.io/blog/2018/09/19/wsl%E4%BF%AE%E6%94%B9%E5%8F%B3%E9%94%AEbash%E5%9B%BE%E6%A0%87/"/>
     <id>http://liuqinh2s.github.io/blog/2018/09/19/wsl修改右键bash图标/</id>
     <published>2018-09-18T16:00:00.000Z</published>
-    <updated>2019-01-15T03:05:05.985Z</updated>
+    <updated>2019-02-19T10:52:20.031Z</updated>
     
     <summary type="html">
     
@@ -429,7 +424,7 @@ b = \sum_{i=-n}^m 2^i \times b_i&lt;/script&gt;
     <link href="http://liuqinh2s.github.io/blog/2018/05/28/APUE-3rd-%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0--File-IO/"/>
     <id>http://liuqinh2s.github.io/blog/2018/05/28/APUE-3rd-读书笔记--File-IO/</id>
     <published>2018-05-27T16:00:00.000Z</published>
-    <updated>2019-01-15T03:05:05.983Z</updated>
+    <updated>2019-02-19T10:52:20.031Z</updated>
     
     <summary type="html">
     
@@ -460,7 +455,7 @@ b = \sum_{i=-n}^m 2^i \times b_i&lt;/script&gt;
     <link href="http://liuqinh2s.github.io/blog/2018/05/22/APUE-3rd-%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0--Unix%20System%20Overview/"/>
     <id>http://liuqinh2s.github.io/blog/2018/05/22/APUE-3rd-读书笔记--Unix System Overview/</id>
     <published>2018-05-21T16:00:00.000Z</published>
-    <updated>2019-01-15T03:05:05.981Z</updated>
+    <updated>2019-02-19T10:52:20.031Z</updated>
     
     <summary type="html">
     
@@ -495,7 +490,7 @@ b = \sum_{i=-n}^m 2^i \times b_i&lt;/script&gt;
     <link href="http://liuqinh2s.github.io/blog/2018/04/30/mathjax%E5%B8%B8%E7%94%A8%E5%85%AC%E5%BC%8F%E8%AE%B0%E5%BD%95/"/>
     <id>http://liuqinh2s.github.io/blog/2018/04/30/mathjax常用公式记录/</id>
     <published>2018-04-29T16:00:00.000Z</published>
-    <updated>2019-01-15T03:05:05.978Z</updated>
+    <updated>2019-02-19T10:52:20.030Z</updated>
     
     <summary type="html">
     
