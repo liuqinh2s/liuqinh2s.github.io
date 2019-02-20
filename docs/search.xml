@@ -88,18 +88,6 @@
       </categories>
   </entry>
   <entry>
-    <title><![CDATA[熟练使用JetBrains家的IDE]]></title>
-    <url>%2Fblog%2F2018%2F11%2F04%2F%E7%86%9F%E7%BB%83%E4%BD%BF%E7%94%A8JetBrains%E5%AE%B6%E7%9A%84IDE%2F</url>
-    <content type="text"><![CDATA[通用快捷键 格式化代码（reformat code）:win: ctrl+alt+Lmac: command+option+L 在一行的任意位置使用： shift + enter，新建下一行并跳到下一行。 善用代码自动补全功能，变量名和方法名等可以用 enter 补全。导入包可以用 alt + enter。 上下移动代码，ctrl+shift+上下键 Android Studio 生成函数注释：你在方法前输入/**然后一回车，自动帮你生成方法和参数的注释。 Intellj Idea快速打出常用语句： sout：System.out.println(); psvm： 123public static void main(String[] args) &#123; &#125; 使用IDE的右键中的生成Getter Setter选项自动生成Getter Setter，使用toString自动生成toString。 跳转到接口：ctrl+b； 跳转到实现类：ctrl + alt +B 上面这个按钮可以快速的在目录树中定位到当前类所在的路径 ctrl+alt+t]]></content>
-      <categories>
-        <category>工具</category>
-        <category>IDE</category>
-      </categories>
-      <tags>
-        <tag>IDE</tag>
-      </tags>
-  </entry>
-  <entry>
     <title><![CDATA[精通一款编辑器之sublime text 3]]></title>
     <url>%2Fblog%2F2018%2F11%2F04%2F%E7%B2%BE%E9%80%9A%E4%B8%80%E6%AC%BE%E7%BC%96%E8%BE%91%E5%99%A8%E4%B9%8Bsublime%20text%203%2F</url>
     <content type="text"><![CDATA[编辑器常用功能 格式化代码：格式化代码可以让你不用管代码的格式，可以放肆的写程序，你可以少敲很多空格，不用关心代码的格式问题，机器给出的代码格式风格统一且漂亮，一键解决你的格式问题，真是提高码代码效率的非常重要的功能。 查找文件：查找文件是在集成开发的时候非常重要的功能，当文件多起来的时候，快速定位到文件可以节省很多时间，甚至有时候文件实在太多，你只能通过查找的方式找到那个文件。 正则全文件查找和替换：轻松让你更改全局变量和配置，这是一个必须的功能，没有它简直无法想象工作量有多大。 代码收缩和扩展：代码太长怎么办，收缩和扩展啊。 安装卸载插件 cmd+shift+p：打开命令板，输入install，点击：Package Control: Install Package选项，然后搜索你想要的插件。 卸载请在命令板输入：remove，点击：Package Control: Remove Package选项。其实卸载无非就是两个词：remove和uninstall，多试试就行了。 打开命令板之后什么都不想干，怎么关闭命令板呢？其实很简单，再按一次打开命令板的快捷键就行了，开关都用同一个键或者按钮（术语叫：toggle，可开可关），这是比较通用设计理念。 vue 插件 vue-syntax-highlight：可以让.vue文件高亮。 HTML-CSS-JS Prettify：可以格式化这三种语言的代码，特别是单文件的vue，非常需要这个来同时格式化三种语言。不过需要配置一下。工具栏路径：Sublime Text -&gt; Preferences -&gt; Package Settings -&gt; HTML/CSS/JS Prettify -&gt; Plugin Options - Default，然后搜索：allowed_file_extensions，给这个配置项添加一个vue即可，要注意的是有四处有这个配置项，分别是html、css、js、json，如果你想它们全都能格式化，自然是要全都添加vue，但实验证明只加html里面就行了，如果在其他几个里面加反而引起了冲突。然后格式化代码的快捷键是什么呢？同样也有配置文件的，工具栏路径：Sublime Text -&gt; Preferences -&gt; Package Settings -&gt; HTML/CSS/JS Prettify -&gt; Keyboard Shortcuts - Default，可以看到： 12345678910111213141516[&#123; &quot;keys&quot;: [&quot;super+shift+h&quot;], &quot;command&quot;: &quot;htmlprettify&quot;&#125;, &#123; &quot;keys&quot;: [&quot;super+alt+h&quot;, &quot;p&quot;], &quot;command&quot;: &quot;htmlprettify_set_prettify_prefs&quot;&#125;, &#123; &quot;keys&quot;: [&quot;super+alt+h&quot;, &quot;o&quot;], &quot;command&quot;: &quot;htmlprettify_set_plugin_options&quot;&#125;, &#123; &quot;keys&quot;: [&quot;super+alt+h&quot;, &quot;k&quot;], &quot;command&quot;: &quot;htmlprettify_set_keyboard_shortcuts&quot;&#125;, &#123; &quot;keys&quot;: [&quot;super+alt+h&quot;, &quot;n&quot;], &quot;command&quot;: &quot;htmlprettify_set_node_path&quot;&#125;] 第一项即为使用这个插件的快捷键，也就是格式化代码的快捷键。 底栏设置显示文件编码在mac osx上一不小心按了cmd+shift+c，文件的存储格式现在变成了GBK格式，当我再按下cmd+s保存时，提示我UTF-8格式的文件不能用GBK格式来保存。怎么解决这个问题呢？首先我想查看这个文件是什么编码，Sublime Text的默认设置是不开启显示编码的，如果想开启，可通过菜单Perference → Settings – User，在打开的配置文件里 ，在大括号后面，增加以下内容： 1234// Display file encoding in the status bar&quot;show_encoding&quot;: true,// Display line endings in the status bar&quot;show_line_endings&quot;: true, 此时保存该配置文件，就能够看到sublime最底下一行会显示文件编码格式了。以上的配置内容在Perference → Setting─Default都是false的。 然后在底栏点击文件编码，点击reopen with encoding，然后选择utf-8，然后cmd+w关闭窗口，然后cmd+shift+t重新打开刚刚关闭的窗口，就一切恢复正常了。]]></content>
@@ -109,6 +97,18 @@
       </categories>
       <tags>
         <tag>编辑器</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[熟练使用JetBrains家的IDE]]></title>
+    <url>%2Fblog%2F2018%2F11%2F04%2F%E7%86%9F%E7%BB%83%E4%BD%BF%E7%94%A8JetBrains%E5%AE%B6%E7%9A%84IDE%2F</url>
+    <content type="text"><![CDATA[通用快捷键 格式化代码（reformat code）:win: ctrl+alt+Lmac: command+option+L 在一行的任意位置使用： shift + enter，新建下一行并跳到下一行。 善用代码自动补全功能，变量名和方法名等可以用 enter 补全。导入包可以用 alt + enter。 上下移动代码，ctrl+shift+上下键 Android Studio 生成函数注释：你在方法前输入/**然后一回车，自动帮你生成方法和参数的注释。 Intellj Idea快速打出常用语句： sout：System.out.println(); psvm： 123public static void main(String[] args) &#123; &#125; 使用IDE的右键中的生成Getter Setter选项自动生成Getter Setter，使用toString自动生成toString。 跳转到接口：ctrl+b； 跳转到实现类：ctrl + alt +B 上面这个按钮可以快速的在目录树中定位到当前类所在的路径 ctrl+alt+t]]></content>
+      <categories>
+        <category>工具</category>
+        <category>IDE</category>
+      </categories>
+      <tags>
+        <tag>IDE</tag>
       </tags>
   </entry>
   <entry>

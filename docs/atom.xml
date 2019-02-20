@@ -238,6 +238,33 @@
   </entry>
   
   <entry>
+    <title>精通一款编辑器之sublime text 3</title>
+    <link href="http://liuqinh2s.github.io/blog/2018/11/04/%E7%B2%BE%E9%80%9A%E4%B8%80%E6%AC%BE%E7%BC%96%E8%BE%91%E5%99%A8%E4%B9%8Bsublime%20text%203/"/>
+    <id>http://liuqinh2s.github.io/blog/2018/11/04/精通一款编辑器之sublime text 3/</id>
+    <published>2018-11-03T16:00:00.000Z</published>
+    <updated>2019-02-19T10:52:20.033Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;编辑器常用功能&quot;&gt;&lt;a href=&quot;#编辑器常用功能&quot; class=&quot;headerlink&quot; title=&quot;编辑器常用功能&quot;&gt;&lt;/a&gt;编辑器常用功能&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;格式化代码：格式化代码可以让你不用管代码的格式，可以放肆的写程序，你可以少敲很多空格，不用关心代码的格式问题，机器给出的代码格式风格统一且漂亮，一键解决你的格式问题，真是提高码代码效率的非常重要的功能。&lt;/li&gt;
+&lt;li&gt;查找文件：查找文件是在集成开发的时候非常重要的功能，当文件多起来的时候，快速定位到文件可以节省很多时间，甚至有时候文件实在太多，你只能通过查找的方式找到那个文件。&lt;/li&gt;
+&lt;li&gt;正则全文件查找和替换：轻松让你更改全局变量和配置，这是一个必须的功能，没有它简直无法想象工作量有多大。&lt;/li&gt;
+&lt;li&gt;代码收缩和扩展：代码太长怎么办，收缩和扩展啊。&lt;/li&gt;
+&lt;/ol&gt;
+    
+    </summary>
+    
+      <category term="工具" scheme="http://liuqinh2s.github.io/blog/categories/%E5%B7%A5%E5%85%B7/"/>
+    
+      <category term="编辑器" scheme="http://liuqinh2s.github.io/blog/categories/%E5%B7%A5%E5%85%B7/%E7%BC%96%E8%BE%91%E5%99%A8/"/>
+    
+    
+      <category term="编辑器" scheme="http://liuqinh2s.github.io/blog/tags/%E7%BC%96%E8%BE%91%E5%99%A8/"/>
+    
+  </entry>
+  
+  <entry>
     <title>熟练使用JetBrains家的IDE</title>
     <link href="http://liuqinh2s.github.io/blog/2018/11/04/%E7%86%9F%E7%BB%83%E4%BD%BF%E7%94%A8JetBrains%E5%AE%B6%E7%9A%84IDE/"/>
     <id>http://liuqinh2s.github.io/blog/2018/11/04/熟练使用JetBrains家的IDE/</id>
@@ -262,33 +289,6 @@
     
     
       <category term="IDE" scheme="http://liuqinh2s.github.io/blog/tags/IDE/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>精通一款编辑器之sublime text 3</title>
-    <link href="http://liuqinh2s.github.io/blog/2018/11/04/%E7%B2%BE%E9%80%9A%E4%B8%80%E6%AC%BE%E7%BC%96%E8%BE%91%E5%99%A8%E4%B9%8Bsublime%20text%203/"/>
-    <id>http://liuqinh2s.github.io/blog/2018/11/04/精通一款编辑器之sublime text 3/</id>
-    <published>2018-11-03T16:00:00.000Z</published>
-    <updated>2019-02-19T10:52:20.033Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;编辑器常用功能&quot;&gt;&lt;a href=&quot;#编辑器常用功能&quot; class=&quot;headerlink&quot; title=&quot;编辑器常用功能&quot;&gt;&lt;/a&gt;编辑器常用功能&lt;/h2&gt;&lt;ol&gt;
-&lt;li&gt;格式化代码：格式化代码可以让你不用管代码的格式，可以放肆的写程序，你可以少敲很多空格，不用关心代码的格式问题，机器给出的代码格式风格统一且漂亮，一键解决你的格式问题，真是提高码代码效率的非常重要的功能。&lt;/li&gt;
-&lt;li&gt;查找文件：查找文件是在集成开发的时候非常重要的功能，当文件多起来的时候，快速定位到文件可以节省很多时间，甚至有时候文件实在太多，你只能通过查找的方式找到那个文件。&lt;/li&gt;
-&lt;li&gt;正则全文件查找和替换：轻松让你更改全局变量和配置，这是一个必须的功能，没有它简直无法想象工作量有多大。&lt;/li&gt;
-&lt;li&gt;代码收缩和扩展：代码太长怎么办，收缩和扩展啊。&lt;/li&gt;
-&lt;/ol&gt;
-    
-    </summary>
-    
-      <category term="工具" scheme="http://liuqinh2s.github.io/blog/categories/%E5%B7%A5%E5%85%B7/"/>
-    
-      <category term="编辑器" scheme="http://liuqinh2s.github.io/blog/categories/%E5%B7%A5%E5%85%B7/%E7%BC%96%E8%BE%91%E5%99%A8/"/>
-    
-    
-      <category term="编辑器" scheme="http://liuqinh2s.github.io/blog/tags/%E7%BC%96%E8%BE%91%E5%99%A8/"/>
     
   </entry>
   

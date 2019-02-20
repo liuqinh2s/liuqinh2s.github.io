@@ -35,14 +35,14 @@
     </url>
     
     <url>
-        <loc>http://liuqinh2s.github.io/blog/archives/</loc>
+        <loc>http://liuqinh2s.github.io/blog/categories/</loc>
         <lastmod>2019-02-19T10:52:20.035Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
     
     <url>
-        <loc>http://liuqinh2s.github.io/blog/categories/</loc>
+        <loc>http://liuqinh2s.github.io/blog/archives/</loc>
         <lastmod>2019-02-19T10:52:20.035Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
