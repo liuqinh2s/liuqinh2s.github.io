@@ -10,3 +10,8 @@ date: 2018-04-17 17:00:10
 兴趣爱好：喜欢科幻、喜欢探究事物的本质，对人类文明和世界的未来很感兴趣。
 
 [简历](../assets/liuqinh2s-resume.pdf)
+
+## 我的工具
+
+- 图床：[sm.ms](https://sm.ms)
+- SwitchOmega配置文件：[OmegaOptions.bak](https://liuqinh2s.github.io/blog/assets/OmegaOptions.bak)
