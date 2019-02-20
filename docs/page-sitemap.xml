@@ -7,8 +7,15 @@
     </url>
     
     <url>
+        <loc>http://liuqinh2s.github.io/blog/Tools/</loc>
+        <lastmod>2019-02-20T12:32:10.942Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
         <loc>http://liuqinh2s.github.io/blog/about/</loc>
-        <lastmod>2019-02-20T12:27:34.088Z</lastmod>
+        <lastmod>2019-02-20T12:30:21.561Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
