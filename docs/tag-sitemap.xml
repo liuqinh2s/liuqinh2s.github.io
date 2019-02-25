@@ -44,13 +44,6 @@
     </url>
 
     <url>
-        <loc>http://liuqinh2s.github.io/blog/tags/IDE/</loc>
-        <lastmod>2019-02-19T10:52:20.033Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>http://liuqinh2s.github.io/blog/tags/%E7%BC%96%E8%BE%91%E5%99%A8/</loc>
         <lastmod>2019-02-19T10:52:20.033Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -58,8 +51,15 @@
     </url>
 
     <url>
-        <loc>http://liuqinh2s.github.io/blog/tags/JavaScript/</loc>
+        <loc>http://liuqinh2s.github.io/blog/tags/IDE/</loc>
         <lastmod>2019-02-19T10:52:20.033Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://liuqinh2s.github.io/blog/tags/JavaScript/</loc>
+        <lastmod>2019-02-25T02:39:28.139Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
