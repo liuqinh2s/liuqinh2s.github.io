@@ -1,6 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[岛屿的个数]]></title>
+    <url>%2Fblog%2F2019%2F02%2F28%2F%E5%B2%9B%E5%B1%BF%E7%9A%84%E4%B8%AA%E6%95%B0%2F</url>
+    <content type="text"><![CDATA[这也是今天面试字节跳动的题目 在一个 2 维数组中， 1 表示岛，0 表示水，求被水环绕的岛的数量。 例如： 123411000110000010000011 递归着色12345678910111213141516171819202122232425262728293031323334353637383940414243public class Solution &#123; private int result = 0; private int getIslandsNum(int[][] A)&#123; for(int i=0;i&lt;A.length;i++)&#123; for(int j=0;j&lt;A[i].length;j++)&#123; if(A[i][j]==1)&#123; result++; A[i][j] = 0; deepSearch(A, i, j); &#125; &#125; &#125; return result; &#125; private void deepSearch(int[][] A, int i, int j)&#123; if(i-1&gt;=0 &amp;&amp; A[i-1][j]==1)&#123; A[i-1][j] = 0; deepSearch(A, i-1, j); &#125; if(i+1&lt;A.length &amp;&amp; A[i+1][j]==1)&#123; A[i+1][j] = 0; deepSearch(A, i+1, j); &#125; if(j-1&gt;=0 &amp;&amp; A[i][j-1]==1)&#123; A[i][j-1] = 0; deepSearch(A, i, j-1); &#125; if(j+1&lt;A[i].length &amp;&amp; A[i][j+1]==1)&#123; A[i][j+1] = 0; deepSearch(A, i, j+1); &#125; &#125; public static void main(String[] args) &#123; int[][] A = &#123;&#123;1, 1, 0, 0, 0&#125;,&#123;1, 1, 0, 0, 0&#125;,&#123;0,0,1,0,0&#125;,&#123;0,0,0,1,1&#125;&#125;; Solution solution = new Solution(); int result = solution.getIslandsNum(A); System.out.println(result); &#125;&#125;]]></content>
+      <categories>
+        <category>算法</category>
+      </categories>
+  </entry>
+  <entry>
+    <title><![CDATA[剑指offer笔记]]></title>
+    <url>%2Fblog%2F2019%2F02%2F28%2F%E5%89%91%E6%8C%87offer%E7%AC%94%E8%AE%B0%2F</url>
+    <content type="text"><![CDATA[二维数组的二分查找题目描述给定一个二维数组，每一行都是递增的，每一列也都是递增的，且每个数都唯一。然后给一个数，在这个二维数组中查找这个数，如果找到，返回坐标，如果没找到返回(-1,-1)。 举个例子： 1231 2 64 5 97 8 10 今天面试字节跳动公司，问的第一题就是这一道，而这道题其实可以追溯到《剑指offer》。所以面试大公司的话最好先刷完这三本书，算法是绕不过去的一关： 《剑指offer》，国内特别喜欢出这个上面的题 《编程之美》，微软出的 《程序员面试经典》，主要是面向北美和欧洲的程序员 好钢要用在刀刃上，像leetcode这种可以先不刷，以上三本书的覆盖率已经可以完全应对面试了。 言归正传，回到这道题，最简单的做法是暴力法遍历每一个元素，时间复杂度是O(m*n)。 然后其实很容易想到二分法，但这是一个二维数组，要稍作一些变化。面试官一开始就提出了最优的时间复杂度：O(log(m*n))。如何做到呢？ 灵光一闪：平面划分，如果找中间那个数，那么会将这个矩阵划分成多少份呢？第一个感觉是四份，但我们仔细分析一下： 左上角这一块，一定是小于中间这个数的，右下角这一块一定是大于这个中间数的。 右上角这一块呢？很遗憾，可能大于中间这个数，也可能小于中间这个数，左下角也一样。 当我们要查的这个数大于中间这个数，我们就可以肯定它不在左上角，但剩余了三个区间。当我们要查的这个数小于中间这个数，我们就可以肯定它不在右下角，但同样也剩下三个区间可能存在这个数。那么接下来该怎么办？答案是：递归解决。 那么时间复杂度是多少？怎么算？答案是：$O(3^{\log_4(m*n)})$ 在每次递归中，我们将矩阵划分成四份，并对其中三份进行递归，简单的画一个树杈图，就能看出至少是3的次方级别，而是多少次方取决于树的深度，而深度就是四分的深度：$\log_4(m*n)$ 如此来看，这个算法似乎并不怎么好。 网上的常见解法： 对每行做二分查找，然后列顺序遍历；或者对每列做二分查找，然后顺序遍历行。时间复杂度是：$O(m\log n)$或$O(n\log m)$ 从右上角开始，如果当前这个数大于我们要查的数，那么我们就可以肯定当前这个数下面的数（列）都大于我们要查的数，于是我们抛弃这一列。反过来如果当前数小于我们要查的数，那么可以肯定当前数前面的数（行）都小于我们要查的数，于是我们抛弃这一行。这样每次都会行进一步，或者列进一步，逐步逼近最后的答案。那么时间复杂度是多少呢？在最坏情况下，这个要查的数可能出现在左下角。那么我们向左和向下都前进了尽可能多的步，时间复杂度是：O(m+n)。 第一个思路的代码如下： 1234567891011121314151617private int[] getPosition2(int[][] A, int value)&#123; for(int i=0;i&lt;A.length;i++)&#123; int begin = 0; int end = A[i].length-1; while(begin&lt;=end)&#123; int mid = (begin+end)/2; if(value==A[i][mid])&#123; return new int[]&#123;i, mid&#125;; &#125;else if(value&lt;A[i][mid])&#123; end = mid-1; &#125;else&#123; begin = mid+1; &#125; &#125; &#125; return new int[]&#123;-1, -1&#125;;&#125; 第二个思路的代码如下： 1234567891011121314151617181920212223242526public class Solution &#123; private int[] getPosition(int[][] A, int value) &#123; int xIndex = 0; int yIndex = A[xIndex].length-1; while (xIndex &lt; A.length &amp;&amp; yIndex &gt;= 0) &#123; if (A[xIndex][yIndex] == value) &#123; return new int[]&#123;xIndex, yIndex&#125;; &#125; else if (A[xIndex][yIndex] &lt; value) &#123; xIndex++; &#125; else &#123; yIndex--; &#125; &#125; return new int[]&#123;-1, -1&#125;; &#125; public static void main(String[] args) &#123; int[][] A = &#123;&#123;1, 2, 6&#125;,&#123;4, 5, 9&#125;,&#123;7,8,10&#125;&#125;; Solution solution = new Solution(); int[] result = solution.getPosition(A, 7); for(int i=0;i&lt;result.length;i++)&#123; System.out.println(result[i]); &#125; &#125;&#125;]]></content>
+      <categories>
+        <category>读书笔记</category>
+        <category>《剑指offer》</category>
+      </categories>
+  </entry>
+  <entry>
     <title><![CDATA[快速排序]]></title>
     <url>%2Fblog%2F2019%2F02%2F19%2F%E5%BF%AB%E9%80%9F%E6%8E%92%E5%BA%8F%2F</url>
     <content type="text"><![CDATA[快速排序算法是一个原理非常简单易懂的算法，但如果现场手写的话又有多少人能写得出来呢？我今天又试了一下，发现还是存在一些认知上的问题。首先我明白快排的核心操作是：选取一个中枢，然后把小于中枢的放到左边，大于中枢的放到右边。但我发现时隔仅仅一年多，我居然已经忘了这个操作的英文名字了。直到我在写这篇文章的时候才突然想起来：partition操作。 在使用partition操作的前提下，递归解决问题就OK了。 partition具体操作如下： 我选取的中枢是第一个元素，且从前往后遍历数组。遇到小于中枢的，我要交换当前结点和中枢。遇到大于中枢的，直接略过。 第一个分支也就是遇到小于中枢的结点，这里才是操作比较复杂的部分，仔细想想其实这里要交换两次。将小于中枢的结点与中枢交换之后，中枢跑到了最后面，此时的结构相当于：小小小..大大大..中枢。我们还要将中枢塞到中间去。 1234567891011121314151617181920212223242526public void qsort(int[] array, int begin, int end)&#123; if(begin&gt;=end-1)&#123; return; &#125; int pivotIndex = partition(array, begin, end); qsort(array, begin, pivotIndex); qsort(array, pivotIndex+1, end);&#125;private int partition(int[] array, int begin, int end)&#123; int pivot = array[begin]; int pivotIndex = begin; int index = begin+1; while(index&lt;end)&#123; if(array[index]&lt;pivot)&#123; int temp = array[index]; array[index] = array[pivotIndex]; array[pivotIndex++] = temp; temp = array[index]; array[index] = array[pivotIndex]; array[pivotIndex] = temp; &#125; index++; &#125; return pivotIndex;&#125; 还可以思考一下： 选第一个元素做中枢，从后往前遍历 选最后一个元素做中枢，从前往后遍历 选最后一个元素做中枢，从后往前遍历 所以最后我发现快速排序确实是一个简单易懂的算法，难点在于partition操作的具体问题具体分析。四类partition全部写一遍。应该差不多了。 上面的方法归根结底都是使用 一个中枢 来划分，实际上也可以用两个指针来划分：一个记录小部的末尾，一个记录大部的首部。这两个指针一个从前往后，一个从后往前，直到相遇，本轮划分操作就结束。 于是我又抽空写了一下这个两个指针往中间靠的，结果并没有一遍写对，原因是边界检查，居然要不停的检查： 123456789101112131415161718192021private int partition1(int[] array, int begin, int end)&#123; int pivot = array[begin]; int smallEnd = begin; int bigBegin = end-1; while(smallEnd&lt;bigBegin)&#123; while (smallEnd&lt;bigBegin &amp;&amp; array[bigBegin]&gt;pivot)&#123; bigBegin--; &#125; if(smallEnd&lt;bigBegin)&#123; array[smallEnd++] = array[bigBegin]; &#125; while(smallEnd&lt;bigBegin &amp;&amp; array[smallEnd]&lt;pivot)&#123; smallEnd++; &#125; if(smallEnd&lt;bigBegin)&#123; array[bigBegin--] = array[smallEnd]; &#125; &#125; array[smallEnd] = pivot; return smallEnd;&#125; 这样感觉就太不美了。]]></content>
@@ -80,6 +97,18 @@
       </categories>
   </entry>
   <entry>
+    <title><![CDATA[精通一款编辑器之sublime text 3]]></title>
+    <url>%2Fblog%2F2018%2F11%2F04%2F%E7%B2%BE%E9%80%9A%E4%B8%80%E6%AC%BE%E7%BC%96%E8%BE%91%E5%99%A8%E4%B9%8Bsublime%20text%203%2F</url>
+    <content type="text"><![CDATA[编辑器常用功能 格式化代码：格式化代码可以让你不用管代码的格式，可以放肆的写程序，你可以少敲很多空格，不用关心代码的格式问题，机器给出的代码格式风格统一且漂亮，一键解决你的格式问题，真是提高码代码效率的非常重要的功能。 查找文件：查找文件是在集成开发的时候非常重要的功能，当文件多起来的时候，快速定位到文件可以节省很多时间，甚至有时候文件实在太多，你只能通过查找的方式找到那个文件。 正则全文件查找和替换：轻松让你更改全局变量和配置，这是一个必须的功能，没有它简直无法想象工作量有多大。 代码收缩和扩展：代码太长怎么办，收缩和扩展啊。 安装卸载插件 cmd+shift+p：打开命令板，输入install，点击：Package Control: Install Package选项，然后搜索你想要的插件。 卸载请在命令板输入：remove，点击：Package Control: Remove Package选项。其实卸载无非就是两个词：remove和uninstall，多试试就行了。 打开命令板之后什么都不想干，怎么关闭命令板呢？其实很简单，再按一次打开命令板的快捷键就行了，开关都用同一个键或者按钮（术语叫：toggle，可开可关），这是比较通用设计理念。 vue 插件 vue-syntax-highlight：可以让.vue文件高亮。 HTML-CSS-JS Prettify：可以格式化这三种语言的代码，特别是单文件的vue，非常需要这个来同时格式化三种语言。不过需要配置一下。工具栏路径：Sublime Text -&gt; Preferences -&gt; Package Settings -&gt; HTML/CSS/JS Prettify -&gt; Plugin Options - Default，然后搜索：allowed_file_extensions，给这个配置项添加一个vue即可，要注意的是有四处有这个配置项，分别是html、css、js、json，如果你想它们全都能格式化，自然是要全都添加vue，但实验证明只加html里面就行了，如果在其他几个里面加反而引起了冲突。然后格式化代码的快捷键是什么呢？同样也有配置文件的，工具栏路径：Sublime Text -&gt; Preferences -&gt; Package Settings -&gt; HTML/CSS/JS Prettify -&gt; Keyboard Shortcuts - Default，可以看到： 12345678910111213141516[&#123; &quot;keys&quot;: [&quot;super+shift+h&quot;], &quot;command&quot;: &quot;htmlprettify&quot;&#125;, &#123; &quot;keys&quot;: [&quot;super+alt+h&quot;, &quot;p&quot;], &quot;command&quot;: &quot;htmlprettify_set_prettify_prefs&quot;&#125;, &#123; &quot;keys&quot;: [&quot;super+alt+h&quot;, &quot;o&quot;], &quot;command&quot;: &quot;htmlprettify_set_plugin_options&quot;&#125;, &#123; &quot;keys&quot;: [&quot;super+alt+h&quot;, &quot;k&quot;], &quot;command&quot;: &quot;htmlprettify_set_keyboard_shortcuts&quot;&#125;, &#123; &quot;keys&quot;: [&quot;super+alt+h&quot;, &quot;n&quot;], &quot;command&quot;: &quot;htmlprettify_set_node_path&quot;&#125;] 第一项即为使用这个插件的快捷键，也就是格式化代码的快捷键。 底栏设置显示文件编码在mac osx上一不小心按了cmd+shift+c，文件的存储格式现在变成了GBK格式，当我再按下cmd+s保存时，提示我UTF-8格式的文件不能用GBK格式来保存。怎么解决这个问题呢？首先我想查看这个文件是什么编码，Sublime Text的默认设置是不开启显示编码的，如果想开启，可通过菜单Perference → Settings – User，在打开的配置文件里 ，在大括号后面，增加以下内容： 1234// Display file encoding in the status bar&quot;show_encoding&quot;: true,// Display line endings in the status bar&quot;show_line_endings&quot;: true, 此时保存该配置文件，就能够看到sublime最底下一行会显示文件编码格式了。以上的配置内容在Perference → Setting─Default都是false的。 然后在底栏点击文件编码，点击reopen with encoding，然后选择utf-8，然后cmd+w关闭窗口，然后cmd+shift+t重新打开刚刚关闭的窗口，就一切恢复正常了。]]></content>
+      <categories>
+        <category>工具</category>
+        <category>编辑器</category>
+      </categories>
+      <tags>
+        <tag>编辑器</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[熟练使用JetBrains家的IDE]]></title>
     <url>%2Fblog%2F2018%2F11%2F04%2F%E7%86%9F%E7%BB%83%E4%BD%BF%E7%94%A8JetBrains%E5%AE%B6%E7%9A%84IDE%2F</url>
     <content type="text"><![CDATA[通用快捷键 格式化代码（reformat code）:win: ctrl+alt+Lmac: command+option+L 在一行的任意位置使用： shift + enter，新建下一行并跳到下一行。 善用代码自动补全功能，变量名和方法名等可以用 enter 补全。导入包可以用 alt + enter。 上下移动代码，ctrl+shift+上下键 Android Studio 生成函数注释：你在方法前输入/**然后一回车，自动帮你生成方法和参数的注释。 Intellj Idea快速打出常用语句： sout：System.out.println(); psvm： 123public static void main(String[] args) &#123; &#125; 使用IDE的右键中的生成Getter Setter选项自动生成Getter Setter，使用toString自动生成toString。 跳转到接口：ctrl+b； 跳转到实现类：ctrl + alt +B 上面这个按钮可以快速的在目录树中定位到当前类所在的路径 ctrl+alt+t]]></content>
@@ -98,18 +127,6 @@
       <categories>
         <category>编程概念</category>
       </categories>
-  </entry>
-  <entry>
-    <title><![CDATA[精通一款编辑器之sublime text 3]]></title>
-    <url>%2Fblog%2F2018%2F11%2F04%2F%E7%B2%BE%E9%80%9A%E4%B8%80%E6%AC%BE%E7%BC%96%E8%BE%91%E5%99%A8%E4%B9%8Bsublime%20text%203%2F</url>
-    <content type="text"><![CDATA[编辑器常用功能 格式化代码：格式化代码可以让你不用管代码的格式，可以放肆的写程序，你可以少敲很多空格，不用关心代码的格式问题，机器给出的代码格式风格统一且漂亮，一键解决你的格式问题，真是提高码代码效率的非常重要的功能。 查找文件：查找文件是在集成开发的时候非常重要的功能，当文件多起来的时候，快速定位到文件可以节省很多时间，甚至有时候文件实在太多，你只能通过查找的方式找到那个文件。 正则全文件查找和替换：轻松让你更改全局变量和配置，这是一个必须的功能，没有它简直无法想象工作量有多大。 代码收缩和扩展：代码太长怎么办，收缩和扩展啊。 安装卸载插件 cmd+shift+p：打开命令板，输入install，点击：Package Control: Install Package选项，然后搜索你想要的插件。 卸载请在命令板输入：remove，点击：Package Control: Remove Package选项。其实卸载无非就是两个词：remove和uninstall，多试试就行了。 打开命令板之后什么都不想干，怎么关闭命令板呢？其实很简单，再按一次打开命令板的快捷键就行了，开关都用同一个键或者按钮（术语叫：toggle，可开可关），这是比较通用设计理念。 vue 插件 vue-syntax-highlight：可以让.vue文件高亮。 HTML-CSS-JS Prettify：可以格式化这三种语言的代码，特别是单文件的vue，非常需要这个来同时格式化三种语言。不过需要配置一下。工具栏路径：Sublime Text -&gt; Preferences -&gt; Package Settings -&gt; HTML/CSS/JS Prettify -&gt; Plugin Options - Default，然后搜索：allowed_file_extensions，给这个配置项添加一个vue即可，要注意的是有四处有这个配置项，分别是html、css、js、json，如果你想它们全都能格式化，自然是要全都添加vue，但实验证明只加html里面就行了，如果在其他几个里面加反而引起了冲突。然后格式化代码的快捷键是什么呢？同样也有配置文件的，工具栏路径：Sublime Text -&gt; Preferences -&gt; Package Settings -&gt; HTML/CSS/JS Prettify -&gt; Keyboard Shortcuts - Default，可以看到： 12345678910111213141516[&#123; &quot;keys&quot;: [&quot;super+shift+h&quot;], &quot;command&quot;: &quot;htmlprettify&quot;&#125;, &#123; &quot;keys&quot;: [&quot;super+alt+h&quot;, &quot;p&quot;], &quot;command&quot;: &quot;htmlprettify_set_prettify_prefs&quot;&#125;, &#123; &quot;keys&quot;: [&quot;super+alt+h&quot;, &quot;o&quot;], &quot;command&quot;: &quot;htmlprettify_set_plugin_options&quot;&#125;, &#123; &quot;keys&quot;: [&quot;super+alt+h&quot;, &quot;k&quot;], &quot;command&quot;: &quot;htmlprettify_set_keyboard_shortcuts&quot;&#125;, &#123; &quot;keys&quot;: [&quot;super+alt+h&quot;, &quot;n&quot;], &quot;command&quot;: &quot;htmlprettify_set_node_path&quot;&#125;] 第一项即为使用这个插件的快捷键，也就是格式化代码的快捷键。 底栏设置显示文件编码在mac osx上一不小心按了cmd+shift+c，文件的存储格式现在变成了GBK格式，当我再按下cmd+s保存时，提示我UTF-8格式的文件不能用GBK格式来保存。怎么解决这个问题呢？首先我想查看这个文件是什么编码，Sublime Text的默认设置是不开启显示编码的，如果想开启，可通过菜单Perference → Settings – User，在打开的配置文件里 ，在大括号后面，增加以下内容： 1234// Display file encoding in the status bar&quot;show_encoding&quot;: true,// Display line endings in the status bar&quot;show_line_endings&quot;: true, 此时保存该配置文件，就能够看到sublime最底下一行会显示文件编码格式了。以上的配置内容在Perference → Setting─Default都是false的。 然后在底栏点击文件编码，点击reopen with encoding，然后选择utf-8，然后cmd+w关闭窗口，然后cmd+shift+t重新打开刚刚关闭的窗口，就一切恢复正常了。]]></content>
-      <categories>
-        <category>工具</category>
-        <category>编辑器</category>
-      </categories>
-      <tags>
-        <tag>编辑器</tag>
-      </tags>
   </entry>
   <entry>
     <title><![CDATA[《CSAPP》读书笔记 -- 第4章：处理器体系结构]]></title>
@@ -168,7 +185,7 @@
   <entry>
     <title><![CDATA[Learning SpringBoot2]]></title>
     <url>%2Fblog%2F2018%2F09%2F02%2FLearning-SpringBoot2%2F</url>
-    <content type="text"><![CDATA[随着计算机的发展，很多东西都慢慢工具化了，大量简单重复的工作直接交给计算机就好了，留给人们的只是业务逻辑跟架构调优。spring boot 2 就是一个非常好用的Java web集成框架。学习最好的方法就是通过 例子 来领悟和体会到其中抽象的知识（共性）。对于工具的使用则更加强调动手实践。 先参考一下网上的资料： 知乎：Spring Boot要如何学习？ bilibili：【自用】尚硅谷spring boot全套视频教程 第一步快速入门如果对spring boot一点都不了解的话，要先了解一下spring boot是什么，它的发展历程，从而建立起一个简单的印象。可以先看B站的教学视频的前几个概要介绍的视频。然后大致浏览一下需要学习的内容，你会发现都是按模块划分的，比如：工程配置、日志管理、数据库、缓存等等。 有了大概的了解，就可以动手写一个hello world了。 Spring Boot快速入门 使用Intellij中的Spring Initializr来快速构建Spring Boot/Cloud工程 由于我以前做过spring+springMVC+mybatis的项目，所以学习springboot2对我来说是比较轻松的。]]></content>
+    <content type="text"><![CDATA[随着计算机的发展，很多东西都慢慢工具化了，大量简单重复的工作直接交给计算机就好了，留给人们的只是业务逻辑跟架构调优。spring boot 2 就是一个非常好用的Java web集成框架。学习最好的方法就是通过 例子 来领悟和体会到其中抽象的知识（共性）。对于工具的使用则更加强调动手实践。 先参考一下网上的资料： 知乎：Spring Boot要如何学习？ bilibili：【自用】尚硅谷spring boot全套视频教程 第一步快速入门如果对spring boot一点都不了解的话，要先了解一下spring boot是什么，它的发展历程，从而建立起一个简单的印象。可以先看B站的教学视频的前几个概要介绍的视频。然后大致浏览一下需要学习的内容，你会发现都是按模块划分的，比如：工程配置、日志管理、数据库、缓存等等。 有了大概的了解，就可以动手写一个hello world了。 Spring Boot快速入门 使用Intellij中的Spring Initializr来快速构建Spring Boot/Cloud工程 由于我以前做过spring+springMVC+mybatis的项目，所以学习springboot2对我来说是比较轻松的。 一般来说后端都会用到数据库，所以一个完整的Hello World程序怎么可以不接通数据库呢？ Springboot 整合 Mybatis 的完整 Web 案例]]></content>
       <categories>
         <category>后端</category>
         <category>Java web</category>

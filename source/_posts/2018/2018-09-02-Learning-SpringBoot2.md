@@ -11,6 +11,8 @@ comments: true
 - [知乎：Spring Boot要如何学习？](https://www.zhihu.com/question/53729800)
 - [bilibili：【自用】尚硅谷spring boot全套视频教程](https://www.bilibili.com/video/av44560321?from=search&seid=7097190869964471137)
 
+<!--more-->
+
 ## 第一步快速入门
 
 如果对spring boot一点都不了解的话，要先了解一下spring boot是什么，它的发展历程，从而建立起一个简单的印象。可以先看B站的教学视频的前几个概要介绍的视频。然后大致浏览一下需要学习的内容，你会发现都是按模块划分的，比如：工程配置、日志管理、数据库、缓存等等。
@@ -21,6 +23,10 @@ comments: true
 - [使用Intellij中的Spring Initializr来快速构建Spring Boot/Cloud工程](http://blog.didispace.com/spring-initializr-in-intellij/)
 
 由于我以前做过`spring+springMVC+mybatis`的项目，所以学习springboot2对我来说是比较轻松的。
+
+一般来说后端都会用到数据库，所以一个完整的Hello World程序怎么可以不接通数据库呢？
+
+[Springboot 整合 Mybatis 的完整 Web 案例](https://www.bysocket.com/?p=1610)
 
 
 
