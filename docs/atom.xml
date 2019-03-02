@@ -6,7 +6,7 @@
   <link href="/blog/atom.xml" rel="self"/>
   
   <link href="http://liuqinh2s.github.io/blog/"/>
-  <updated>2019-03-01T06:54:56.448Z</updated>
+  <updated>2019-03-02T08:25:15.885Z</updated>
   <id>http://liuqinh2s.github.io/blog/</id>
   
   <author>
@@ -21,20 +21,14 @@
     <link href="http://liuqinh2s.github.io/blog/2019/03/01/%E6%96%90%E6%B3%A2%E9%82%A3%E5%A5%91%E6%95%B0%E5%88%97/"/>
     <id>http://liuqinh2s.github.io/blog/2019/03/01/斐波那契数列/</id>
     <published>2019-02-28T16:00:00.000Z</published>
-    <updated>2019-03-01T06:54:56.448Z</updated>
+    <updated>2019-03-02T08:25:15.885Z</updated>
     
     <summary type="html">
     
-      
-      
-        
-        
-          &lt;p&gt;斐波那契数列的计算非常有意思，因为算法的时间复杂度可以连续优化，最优达到&lt;code&gt;O(logN)&lt;/code&gt;。&lt;/p&gt;
+      &lt;p&gt;斐波那契数列的计算非常有意思，因为算法的时间复杂度可以连续优化，最优达到&lt;code&gt;O(logN)&lt;/code&gt;。&lt;/p&gt;
 &lt;p&gt;最简单的是递归计算，时间复杂度是：$O(2^n)$&lt;/p&gt;
 &lt;p&gt;然后是迭代（也就是循环）计算，时间复杂度是：$O(n)$&lt;/p&gt;
-&lt;p&gt;另外递
-        
-      
+&lt;p&gt;另外递归+备忘录也可以做到线性的时间复杂度。&lt;/p&gt;
     
     </summary>
     
@@ -48,17 +42,20 @@
     <link href="http://liuqinh2s.github.io/blog/2019/02/28/%E5%89%91%E6%8C%87offer%E7%AC%94%E8%AE%B0/"/>
     <id>http://liuqinh2s.github.io/blog/2019/02/28/剑指offer笔记/</id>
     <published>2019-02-27T16:00:00.000Z</published>
-    <updated>2019-03-02T08:04:43.382Z</updated>
+    <updated>2019-03-02T08:25:47.467Z</updated>
     
     <summary type="html">
     
-      
-      
-        
-        
-          &lt;h2 id=&quot;二维数组的二分查找&quot;&gt;&lt;a href=&quot;#二维数组的二分查找&quot; class=&quot;headerlink&quot; title=&quot;二维数组的二分查找&quot;&gt;&lt;/a&gt;二维数组的二分查找&lt;/h2&gt;&lt;h3 id=&quot;题目描述&quot;&gt;&lt;a href=&quot;#题目描述&quot;
-        
-      
+      &lt;h2 id=&quot;二维数组的二分查找&quot;&gt;&lt;a href=&quot;#二维数组的二分查找&quot; class=&quot;headerlink&quot; title=&quot;二维数组的二分查找&quot;&gt;&lt;/a&gt;二维数组的二分查找&lt;/h2&gt;&lt;h3 id=&quot;题目描述&quot;&gt;&lt;a href=&quot;#题目描述&quot; class=&quot;headerlink&quot; title=&quot;题目描述&quot;&gt;&lt;/a&gt;题目描述&lt;/h3&gt;&lt;p&gt;给定一个二维数组，每一行都是递增的，每一列也都是递增的，且每个数都唯一。然后给一个数，在这个二维数组中查找这个数，如果找到，返回坐标，如果没找到返回&lt;code&gt;(-1,-1)&lt;/code&gt;。&lt;/p&gt;
+&lt;p&gt;举个例子：&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1 2 6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4 5 9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7 8 10&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;今天面试字节跳动公司，问的第一题就是这一道，而这道题其实可以追溯到《剑指offer》中的面试题3。所以面试大公司的话最好先刷完这三本书，算法是绕不过去的一关：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;《剑指offer》，国内特别喜欢出这个上面的题&lt;/li&gt;
+&lt;li&gt;《编程之美》，微软出的&lt;/li&gt;
+&lt;li&gt;《程序员面试经典》，主要是面向北美和欧洲的程序员&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;好钢要用在刀刃上，像leetcode这种可以先不刷，以上三本书的覆盖率已经可以完全应对面试了。&lt;/p&gt;
     
     </summary>
     

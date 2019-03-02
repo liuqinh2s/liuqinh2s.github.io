@@ -81,17 +81,17 @@
 
 
 
-<meta name="description" content="斐波那契数列的计算非常有意思，因为算法的时间复杂度可以连续优化，最优达到O(logN)。 最简单的是递归计算，时间复杂度是：$O(2^n)$ 然后是迭代（也就是循环）计算，时间复杂度是：$O(n)$ 另外递归+备忘录也可以做到线性的时间复杂度。 这两个都非常常见，代码如下： 12345678910111213141516171819202122232425262728public class So">
+<meta name="description" content="斐波那契数列的计算非常有意思，因为算法的时间复杂度可以连续优化，最优达到O(logN)。 最简单的是递归计算，时间复杂度是：$O(2^n)$ 然后是迭代（也就是循环）计算，时间复杂度是：$O(n)$ 另外递归+备忘录也可以做到线性的时间复杂度。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="斐波那契数列">
 <meta property="og:url" content="http://liuqinh2s.github.io/blog/2019/03/01/斐波那契数列/index.html">
 <meta property="og:site_name" content="liuqinh2s&#39; blog">
-<meta property="og:description" content="斐波那契数列的计算非常有意思，因为算法的时间复杂度可以连续优化，最优达到O(logN)。 最简单的是递归计算，时间复杂度是：$O(2^n)$ 然后是迭代（也就是循环）计算，时间复杂度是：$O(n)$ 另外递归+备忘录也可以做到线性的时间复杂度。 这两个都非常常见，代码如下： 12345678910111213141516171819202122232425262728public class So">
+<meta property="og:description" content="斐波那契数列的计算非常有意思，因为算法的时间复杂度可以连续优化，最优达到O(logN)。 最简单的是递归计算，时间复杂度是：$O(2^n)$ 然后是迭代（也就是循环）计算，时间复杂度是：$O(n)$ 另外递归+备忘录也可以做到线性的时间复杂度。">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-03-01T06:54:56.448Z">
+<meta property="og:updated_time" content="2019-03-02T08:25:15.885Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="斐波那契数列">
-<meta name="twitter:description" content="斐波那契数列的计算非常有意思，因为算法的时间复杂度可以连续优化，最优达到O(logN)。 最简单的是递归计算，时间复杂度是：$O(2^n)$ 然后是迭代（也就是循环）计算，时间复杂度是：$O(n)$ 另外递归+备忘录也可以做到线性的时间复杂度。 这两个都非常常见，代码如下： 12345678910111213141516171819202122232425262728public class So">
+<meta name="twitter:description" content="斐波那契数列的计算非常有意思，因为算法的时间复杂度可以连续优化，最优达到O(logN)。 最简单的是递归计算，时间复杂度是：$O(2^n)$ 然后是迭代（也就是循环）计算，时间复杂度是：$O(n)$ 另外递归+备忘录也可以做到线性的时间复杂度。">
 
 
 
@@ -423,6 +423,7 @@
 <p>最简单的是递归计算，时间复杂度是：$O(2^n)$</p>
 <p>然后是迭代（也就是循环）计算，时间复杂度是：$O(n)$</p>
 <p>另外递归+备忘录也可以做到线性的时间复杂度。</p>
+<a id="more"></a>
 <p>这两个都非常常见，代码如下：</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">int</span> <span class="title">fibonacci</span><span class="params">(<span class="keyword">int</span> A)</span></span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(A&lt;=<span class="number">1</span>)&#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> fibonacci(A-<span class="number">1</span>)+fibonacci(A-<span class="number">2</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">int</span> <span class="title">fibonacci2</span><span class="params">(<span class="keyword">int</span> A)</span></span>&#123;</span><br><span class="line">        <span class="keyword">int</span> a = <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">int</span> b = <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">int</span> result = <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;A;i++)&#123;</span><br><span class="line">            result = a+b;</span><br><span class="line">            a = b;</span><br><span class="line">            b = result;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> result;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        Solution solution = <span class="keyword">new</span> Solution();</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;<span class="number">11</span>;i++)&#123;</span><br><span class="line">            System.out.println(solution.fibonacci2(i));</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>其实还存在一种利用矩阵的解法，然算法复杂度缩减到对数。</p>
@@ -699,7 +700,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">71.8k</span>
+    <span title="Site words total count">72.1k</span>
   
 </div>
 
