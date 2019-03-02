@@ -6,7 +6,7 @@
   <link href="/blog/atom.xml" rel="self"/>
   
   <link href="http://liuqinh2s.github.io/blog/"/>
-  <updated>2019-02-28T13:49:19.900Z</updated>
+  <updated>2019-03-01T06:54:56.448Z</updated>
   <id>http://liuqinh2s.github.io/blog/</id>
   
   <author>
@@ -15,6 +15,59 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>斐波那契数列</title>
+    <link href="http://liuqinh2s.github.io/blog/2019/03/01/%E6%96%90%E6%B3%A2%E9%82%A3%E5%A5%91%E6%95%B0%E5%88%97/"/>
+    <id>http://liuqinh2s.github.io/blog/2019/03/01/斐波那契数列/</id>
+    <published>2019-02-28T16:00:00.000Z</published>
+    <updated>2019-03-01T06:54:56.448Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;斐波那契数列的计算非常有意思，因为算法的时间复杂度可以连续优化，最优达到&lt;code&gt;O(logN)&lt;/code&gt;。&lt;/p&gt;
+&lt;p&gt;最简单的是递归计算，时间复杂度是：$O(2^n)$&lt;/p&gt;
+&lt;p&gt;然后是迭代（也就是循环）计算，时间复杂度是：$O(n)$&lt;/p&gt;
+&lt;p&gt;另外递
+        
+      
+    
+    </summary>
+    
+      <category term="算法" scheme="http://liuqinh2s.github.io/blog/categories/%E7%AE%97%E6%B3%95/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>剑指offer笔记</title>
+    <link href="http://liuqinh2s.github.io/blog/2019/02/28/%E5%89%91%E6%8C%87offer%E7%AC%94%E8%AE%B0/"/>
+    <id>http://liuqinh2s.github.io/blog/2019/02/28/剑指offer笔记/</id>
+    <published>2019-02-27T16:00:00.000Z</published>
+    <updated>2019-03-02T08:04:43.382Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;二维数组的二分查找&quot;&gt;&lt;a href=&quot;#二维数组的二分查找&quot; class=&quot;headerlink&quot; title=&quot;二维数组的二分查找&quot;&gt;&lt;/a&gt;二维数组的二分查找&lt;/h2&gt;&lt;h3 id=&quot;题目描述&quot;&gt;&lt;a href=&quot;#题目描述&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="读书笔记" scheme="http://liuqinh2s.github.io/blog/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
+    
+      <category term="《剑指offer》" scheme="http://liuqinh2s.github.io/blog/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E3%80%8A%E5%89%91%E6%8C%87offer%E3%80%8B/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>岛屿的个数</title>
@@ -41,32 +94,6 @@
     </summary>
     
       <category term="算法" scheme="http://liuqinh2s.github.io/blog/categories/%E7%AE%97%E6%B3%95/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>剑指offer笔记</title>
-    <link href="http://liuqinh2s.github.io/blog/2019/02/28/%E5%89%91%E6%8C%87offer%E7%AC%94%E8%AE%B0/"/>
-    <id>http://liuqinh2s.github.io/blog/2019/02/28/剑指offer笔记/</id>
-    <published>2019-02-27T16:00:00.000Z</published>
-    <updated>2019-02-28T12:16:50.663Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h2 id=&quot;二维数组的二分查找&quot;&gt;&lt;a href=&quot;#二维数组的二分查找&quot; class=&quot;headerlink&quot; title=&quot;二维数组的二分查找&quot;&gt;&lt;/a&gt;二维数组的二分查找&lt;/h2&gt;&lt;h3 id=&quot;题目描述&quot;&gt;&lt;a href=&quot;#题目描述&quot;
-        
-      
-    
-    </summary>
-    
-      <category term="读书笔记" scheme="http://liuqinh2s.github.io/blog/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
-    
-      <category term="《剑指offer》" scheme="http://liuqinh2s.github.io/blog/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E3%80%8A%E5%89%91%E6%8C%87offer%E3%80%8B/"/>
     
     
   </entry>
@@ -471,31 +498,6 @@ b = \sum_{i=-n}^m 2^i \times b_i&lt;/script&gt;
       <category term="windows环境" scheme="http://liuqinh2s.github.io/blog/tags/windows%E7%8E%AF%E5%A2%83/"/>
     
       <category term="wsl" scheme="http://liuqinh2s.github.io/blog/tags/wsl/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Learning SpringBoot2</title>
-    <link href="http://liuqinh2s.github.io/blog/2018/09/02/Learning-SpringBoot2/"/>
-    <id>http://liuqinh2s.github.io/blog/2018/09/02/Learning-SpringBoot2/</id>
-    <published>2018-09-01T16:00:00.000Z</published>
-    <updated>2019-02-28T06:32:30.560Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;随着计算机的发展，很多东西都慢慢工具化了，大量简单重复的工作直接交给计算机就好了，留给人们的只是业务逻辑跟架构调优。spring boot 2 就是一个非常好用的Java web集成框架。学习最好的方法就是通过 &lt;strong&gt;例子&lt;/strong&gt; 来领悟和体会到其中抽象的知识（共性）。对于工具的使用则更加强调动手实践。&lt;/p&gt;
-&lt;p&gt;先参考一下网上的资料：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://www.zhihu.com/question/53729800&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;知乎：Spring Boot要如何学习？&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://www.bilibili.com/video/av44560321?from=search&amp;amp;seid=7097190869964471137&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;bilibili：【自用】尚硅谷spring boot全套视频教程&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-    
-    </summary>
-    
-      <category term="后端" scheme="http://liuqinh2s.github.io/blog/categories/%E5%90%8E%E7%AB%AF/"/>
-    
-      <category term="Java web" scheme="http://liuqinh2s.github.io/blog/categories/%E5%90%8E%E7%AB%AF/Java-web/"/>
-    
     
   </entry>
   
