@@ -6,7 +6,7 @@
   <link href="/blog/atom.xml" rel="self"/>
   
   <link href="http://liuqinh2s.github.io/blog/"/>
-  <updated>2019-03-02T08:25:15.885Z</updated>
+  <updated>2019-03-03T05:01:10.080Z</updated>
   <id>http://liuqinh2s.github.io/blog/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>动态数组的分摊分析</title>
+    <link href="http://liuqinh2s.github.io/blog/2019/03/03/%E5%8A%A8%E6%80%81%E6%95%B0%E7%BB%84%E7%9A%84%E5%88%86%E6%91%8A%E5%88%86%E6%9E%90/"/>
+    <id>http://liuqinh2s.github.io/blog/2019/03/03/动态数组的分摊分析/</id>
+    <published>2019-03-02T16:00:00.000Z</published>
+    <updated>2019-03-03T05:01:10.080Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;介绍&quot;&gt;&lt;a href=&quot;#介绍&quot; class=&quot;headerlink&quot; title=&quot;介绍&quot;&gt;&lt;/a&gt;介绍&lt;/h2&gt;&lt;p&gt;动态数组在每次容量用尽时，重新申请2倍于当前数组的空间，并将原数组中的内容拷贝到新的空间，然后释放原数组的内存空间。对于动态数组，每次插入的花费有两种情况：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;容量够用，我们只需要存储新的元素&lt;/li&gt;
+&lt;li&gt;容量不够用，创建新的空间，拷贝原数组进新的空间，再存储这个新的元素&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;分析方法有许多，统称为：amortized analysis（分摊分析）&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="算法" scheme="http://liuqinh2s.github.io/blog/categories/%E7%AE%97%E6%B3%95/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>斐波那契数列</title>
@@ -42,7 +65,7 @@
     <link href="http://liuqinh2s.github.io/blog/2019/02/28/%E5%89%91%E6%8C%87offer%E7%AC%94%E8%AE%B0/"/>
     <id>http://liuqinh2s.github.io/blog/2019/02/28/剑指offer笔记/</id>
     <published>2019-02-27T16:00:00.000Z</published>
-    <updated>2019-03-02T08:25:47.467Z</updated>
+    <updated>2019-03-03T05:00:00.428Z</updated>
     
     <summary type="html">
     
@@ -71,22 +94,16 @@
     <link href="http://liuqinh2s.github.io/blog/2019/02/28/%E5%B2%9B%E5%B1%BF%E7%9A%84%E4%B8%AA%E6%95%B0/"/>
     <id>http://liuqinh2s.github.io/blog/2019/02/28/岛屿的个数/</id>
     <published>2019-02-27T16:00:00.000Z</published>
-    <updated>2019-02-28T13:49:19.900Z</updated>
+    <updated>2019-03-02T08:27:30.421Z</updated>
     
     <summary type="html">
     
-      
-      
-        
-        
-          &lt;blockquote&gt;
+      &lt;blockquote&gt;
 &lt;p&gt;这也是今天面试字节跳动的题目&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;在一个 2 维数组中， 1 表示岛，0 表示水，求被水环绕的岛的数量。&lt;/p&gt;
 &lt;p&gt;例如：&lt;/p&gt;
-&lt;figure class=&quot;highlight
-        
-      
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;11000&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11000&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;00100&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;00011&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
     
     </summary>
     
@@ -297,29 +314,22 @@
   </entry>
   
   <entry>
-    <title>精通一款编辑器之sublime text 3</title>
-    <link href="http://liuqinh2s.github.io/blog/2018/11/04/%E7%B2%BE%E9%80%9A%E4%B8%80%E6%AC%BE%E7%BC%96%E8%BE%91%E5%99%A8%E4%B9%8Bsublime%20text%203/"/>
-    <id>http://liuqinh2s.github.io/blog/2018/11/04/精通一款编辑器之sublime text 3/</id>
+    <title>什么是回调</title>
+    <link href="http://liuqinh2s.github.io/blog/2018/11/04/%E4%BB%80%E4%B9%88%E6%98%AF%E5%9B%9E%E8%B0%83/"/>
+    <id>http://liuqinh2s.github.io/blog/2018/11/04/什么是回调/</id>
     <published>2018-11-03T16:00:00.000Z</published>
-    <updated>2019-02-19T10:52:20.033Z</updated>
+    <updated>2019-02-25T02:40:57.469Z</updated>
     
     <summary type="html">
     
-      &lt;h2 id=&quot;编辑器常用功能&quot;&gt;&lt;a href=&quot;#编辑器常用功能&quot; class=&quot;headerlink&quot; title=&quot;编辑器常用功能&quot;&gt;&lt;/a&gt;编辑器常用功能&lt;/h2&gt;&lt;ol&gt;
-&lt;li&gt;格式化代码：格式化代码可以让你不用管代码的格式，可以放肆的写程序，你可以少敲很多空格，不用关心代码的格式问题，机器给出的代码格式风格统一且漂亮，一键解决你的格式问题，真是提高码代码效率的非常重要的功能。&lt;/li&gt;
-&lt;li&gt;查找文件：查找文件是在集成开发的时候非常重要的功能，当文件多起来的时候，快速定位到文件可以节省很多时间，甚至有时候文件实在太多，你只能通过查找的方式找到那个文件。&lt;/li&gt;
-&lt;li&gt;正则全文件查找和替换：轻松让你更改全局变量和配置，这是一个必须的功能，没有它简直无法想象工作量有多大。&lt;/li&gt;
-&lt;li&gt;代码收缩和扩展：代码太长怎么办，收缩和扩展啊。&lt;/li&gt;
-&lt;/ol&gt;
+      &lt;p&gt;&lt;img src=&quot;https://i.loli.net/2018/11/04/5bdeaff01640b.png&quot; alt=&quot;回调2.png&quot;&gt;&lt;/p&gt;
+&lt;p&gt;打个比方，有一家旅馆提供叫醒服务，但是要求旅客自己决定叫醒的方法。可以是打客房电话，也可以是派服务员去敲门，睡得死怕耽误事的，还可以要求往自己头上浇盆水。这里，“叫醒”这个行为是旅馆提供的，相当于库函数，但是叫醒的方式是由旅客决定并告诉旅馆的，也就是回调函数。而旅客告诉旅馆怎么叫醒自己的动作，也就是把回调函数传入库函数的动作，称为登记回调函数（to register a callback function）。&lt;/p&gt;
+&lt;p&gt;在回调中，我们利用某种方式，把回调函数像参数一样传入中间函数。可以这么理解，在传入一个回调函数之前，中间函数是不完整的。换句话说，程序可以在运行时，通过登记不同的回调函数，来决定、改变中间函数的行为。这就比简单的函数调用要灵活太多了。&lt;/p&gt;
     
     </summary>
     
-      <category term="工具" scheme="http://liuqinh2s.github.io/blog/categories/%E5%B7%A5%E5%85%B7/"/>
+      <category term="编程概念" scheme="http://liuqinh2s.github.io/blog/categories/%E7%BC%96%E7%A8%8B%E6%A6%82%E5%BF%B5/"/>
     
-      <category term="编辑器" scheme="http://liuqinh2s.github.io/blog/categories/%E5%B7%A5%E5%85%B7/%E7%BC%96%E8%BE%91%E5%99%A8/"/>
-    
-    
-      <category term="编辑器" scheme="http://liuqinh2s.github.io/blog/tags/%E7%BC%96%E8%BE%91%E5%99%A8/"/>
     
   </entry>
   
@@ -352,22 +362,29 @@
   </entry>
   
   <entry>
-    <title>什么是回调</title>
-    <link href="http://liuqinh2s.github.io/blog/2018/11/04/%E4%BB%80%E4%B9%88%E6%98%AF%E5%9B%9E%E8%B0%83/"/>
-    <id>http://liuqinh2s.github.io/blog/2018/11/04/什么是回调/</id>
+    <title>精通一款编辑器之sublime text 3</title>
+    <link href="http://liuqinh2s.github.io/blog/2018/11/04/%E7%B2%BE%E9%80%9A%E4%B8%80%E6%AC%BE%E7%BC%96%E8%BE%91%E5%99%A8%E4%B9%8Bsublime%20text%203/"/>
+    <id>http://liuqinh2s.github.io/blog/2018/11/04/精通一款编辑器之sublime text 3/</id>
     <published>2018-11-03T16:00:00.000Z</published>
-    <updated>2019-02-25T02:40:57.469Z</updated>
+    <updated>2019-02-19T10:52:20.033Z</updated>
     
     <summary type="html">
     
-      &lt;p&gt;&lt;img src=&quot;https://i.loli.net/2018/11/04/5bdeaff01640b.png&quot; alt=&quot;回调2.png&quot;&gt;&lt;/p&gt;
-&lt;p&gt;打个比方，有一家旅馆提供叫醒服务，但是要求旅客自己决定叫醒的方法。可以是打客房电话，也可以是派服务员去敲门，睡得死怕耽误事的，还可以要求往自己头上浇盆水。这里，“叫醒”这个行为是旅馆提供的，相当于库函数，但是叫醒的方式是由旅客决定并告诉旅馆的，也就是回调函数。而旅客告诉旅馆怎么叫醒自己的动作，也就是把回调函数传入库函数的动作，称为登记回调函数（to register a callback function）。&lt;/p&gt;
-&lt;p&gt;在回调中，我们利用某种方式，把回调函数像参数一样传入中间函数。可以这么理解，在传入一个回调函数之前，中间函数是不完整的。换句话说，程序可以在运行时，通过登记不同的回调函数，来决定、改变中间函数的行为。这就比简单的函数调用要灵活太多了。&lt;/p&gt;
+      &lt;h2 id=&quot;编辑器常用功能&quot;&gt;&lt;a href=&quot;#编辑器常用功能&quot; class=&quot;headerlink&quot; title=&quot;编辑器常用功能&quot;&gt;&lt;/a&gt;编辑器常用功能&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;格式化代码：格式化代码可以让你不用管代码的格式，可以放肆的写程序，你可以少敲很多空格，不用关心代码的格式问题，机器给出的代码格式风格统一且漂亮，一键解决你的格式问题，真是提高码代码效率的非常重要的功能。&lt;/li&gt;
+&lt;li&gt;查找文件：查找文件是在集成开发的时候非常重要的功能，当文件多起来的时候，快速定位到文件可以节省很多时间，甚至有时候文件实在太多，你只能通过查找的方式找到那个文件。&lt;/li&gt;
+&lt;li&gt;正则全文件查找和替换：轻松让你更改全局变量和配置，这是一个必须的功能，没有它简直无法想象工作量有多大。&lt;/li&gt;
+&lt;li&gt;代码收缩和扩展：代码太长怎么办，收缩和扩展啊。&lt;/li&gt;
+&lt;/ol&gt;
     
     </summary>
     
-      <category term="编程概念" scheme="http://liuqinh2s.github.io/blog/categories/%E7%BC%96%E7%A8%8B%E6%A6%82%E5%BF%B5/"/>
+      <category term="工具" scheme="http://liuqinh2s.github.io/blog/categories/%E5%B7%A5%E5%85%B7/"/>
     
+      <category term="编辑器" scheme="http://liuqinh2s.github.io/blog/categories/%E5%B7%A5%E5%85%B7/%E7%BC%96%E8%BE%91%E5%99%A8/"/>
+    
+    
+      <category term="编辑器" scheme="http://liuqinh2s.github.io/blog/tags/%E7%BC%96%E8%BE%91%E5%99%A8/"/>
     
   </entry>
   
@@ -463,29 +480,6 @@ b = \sum_{i=-n}^m 2^i \times b_i&lt;/script&gt;
       &lt;h2 id=&quot;安装-oh-my-zsh&quot;&gt;&lt;a href=&quot;#安装-oh-my-zsh&quot; class=&quot;headerlink&quot; title=&quot;安装 oh my zsh&quot;&gt;&lt;/a&gt;安装 oh my zsh&lt;/h2&gt;&lt;p&gt;首先检查自己有没有zsh：&lt;/p&gt;
 &lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;cat /etc/shells&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;p&gt;如果有的话就下载&lt;a href=&quot;https://github.com/robbyrussell/oh-my-zsh&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;oh my zsh&lt;/a&gt;&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="解决的问题" scheme="http://liuqinh2s.github.io/blog/categories/%E8%A7%A3%E5%86%B3%E7%9A%84%E9%97%AE%E9%A2%98/"/>
-    
-    
-      <category term="windows环境" scheme="http://liuqinh2s.github.io/blog/tags/windows%E7%8E%AF%E5%A2%83/"/>
-    
-      <category term="wsl" scheme="http://liuqinh2s.github.io/blog/tags/wsl/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>wsl修改右键bash图标</title>
-    <link href="http://liuqinh2s.github.io/blog/2018/09/19/wsl%E4%BF%AE%E6%94%B9%E5%8F%B3%E9%94%AEbash%E5%9B%BE%E6%A0%87/"/>
-    <id>http://liuqinh2s.github.io/blog/2018/09/19/wsl修改右键bash图标/</id>
-    <published>2018-09-18T16:00:00.000Z</published>
-    <updated>2019-02-19T10:52:20.031Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;使用 windows subsystem for linux (简称：WSL) 的时候，遇到一个小问题，在文件管理器中右键，唤出bash，发现图标不对：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://i.loli.net/2018/09/19/5ba25208ca7de.png&quot; alt=&quot;截图1&quot;&gt;&lt;/p&gt;
     
     </summary>
     
