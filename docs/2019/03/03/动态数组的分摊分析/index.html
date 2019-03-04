@@ -88,7 +88,7 @@
 <meta property="og:site_name" content="liuqinh2s&#39; blog">
 <meta property="og:description" content="介绍动态数组在每次容量用尽时，重新申请2倍于当前数组的空间，并将原数组中的内容拷贝到新的空间，然后释放原数组的内存空间。对于动态数组，每次插入的花费有两种情况：  容量够用，我们只需要存储新的元素 容量不够用，创建新的空间，拷贝原数组进新的空间，再存储这个新的元素  分析方法有许多，统称为：amortized analysis（分摊分析）">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-03-03T05:01:10.080Z">
+<meta property="og:updated_time" content="2019-03-04T01:09:10.936Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="动态数组的分摊分析">
 <meta name="twitter:description" content="介绍动态数组在每次容量用尽时，重新申请2倍于当前数组的空间，并将原数组中的内容拷贝到新的空间，然后释放原数组的内存空间。对于动态数组，每次插入的花费有两种情况：  容量够用，我们只需要存储新的元素 容量不够用，创建新的空间，拷贝原数组进新的空间，再存储这个新的元素  分析方法有许多，统称为：amortized analysis（分摊分析）">
@@ -238,6 +238,16 @@
               <i class="menu-item-icon fa fa-fw fa-wrench"></i> <br>
             
             Tools
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-english">
+          <a href="/blog/English/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-language"></i> <br>
+            
+            English
           </a>
         </li>
       
@@ -394,7 +404,7 @@
                   <span class="post-meta-item-text">Words count in article&#58;</span>
                 
                 <span title="Words count in article">
-                  889
+                  893
                 </span>
               
 
@@ -426,6 +436,7 @@
 </ol>
 <p>分析方法有许多，统称为：amortized analysis（分摊分析）</p>
 <a id="more"></a>
+<p><a href="https://www.cs.cornell.edu/courses/cs3110/2013sp/lectures/lec21-amortized/lec21.html" target="_blank" rel="noopener">Lecture 21: Amortized Analysis</a></p>
 <h3 id="统计分析（aggregate-method）"><a href="#统计分析（aggregate-method）" class="headerlink" title="统计分析（aggregate method）"></a>统计分析（aggregate method）</h3><p>把n词操作花费求和，然后取平均值。</p>
 <p>每次扩容时，后半部分元素统一进行第一次移动，而这些元素之后的所有移动操作也是一起发生的，因而我们发现元素是以组为单位，组内的元素移动次数相同。那么有多少个这种组呢？第一组是单个元素，第二组也是单个元素，第三组是两个元素，第四组是四个元素，第五组是8个元素，… ，以此类推。而：</p>
 <script type="math/tex; mode=display">
@@ -494,6 +505,10 @@ c+\Phi(h')-\Phi(h)</script><p>c表示当前插入操作的总的花费，$\Phi(h
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/blog/2019/03/03/To be a publisher/" rel="prev" title="To be a publisher">
+                To be a publisher <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -577,7 +592,7 @@ c+\Phi(h')-\Phi(h)</script><p>c表示当前插入操作的总的花费，$\Phi(h
               
                 <a href="/blog/archives">
               
-                  <span class="site-state-item-count">32</span>
+                  <span class="site-state-item-count">33</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -588,7 +603,7 @@ c+\Phi(h')-\Phi(h)</script><p>c表示当前插入操作的总的花费，$\Phi(h
               
               <div class="site-state-item site-state-categories">
                 <a href="/blog/categories/index.html">
-                  <span class="site-state-item-count">21</span>
+                  <span class="site-state-item-count">22</span>
                   <span class="site-state-item-name">categories</span>
                 </a>
               </div>
@@ -719,7 +734,7 @@ c+\Phi(h')-\Phi(h)</script><p>c表示当前插入操作的总的花费，$\Phi(h
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">73.2k</span>
+    <span title="Site words total count">73.8k</span>
   
 </div>
 
