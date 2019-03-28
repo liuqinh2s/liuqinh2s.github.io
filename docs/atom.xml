@@ -6,7 +6,7 @@
   <link href="/blog/atom.xml" rel="self"/>
   
   <link href="http://liuqinh2s.github.io/blog/"/>
-  <updated>2019-03-03T09:00:18.347Z</updated>
+  <updated>2019-03-28T08:19:08.269Z</updated>
   <id>http://liuqinh2s.github.io/blog/</id>
   
   <author>
@@ -17,25 +17,81 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>To be a publisher</title>
-    <link href="http://liuqinh2s.github.io/blog/2019/03/03/To%20be%20a%20publisher/"/>
-    <id>http://liuqinh2s.github.io/blog/2019/03/03/To be a publisher/</id>
-    <published>2019-03-02T16:00:00.000Z</published>
-    <updated>2019-03-03T09:00:18.347Z</updated>
+    <title>面试题12：打印1到最大的n位数</title>
+    <link href="http://liuqinh2s.github.io/blog/2019/03/05/%E9%9D%A2%E8%AF%95%E9%A2%9812%EF%BC%9A%E6%89%93%E5%8D%B01%E5%88%B0%E6%9C%80%E5%A4%A7%E7%9A%84n%E4%BD%8D%E6%95%B0/"/>
+    <id>http://liuqinh2s.github.io/blog/2019/03/05/面试题12：打印1到最大的n位数/</id>
+    <published>2019-03-04T16:00:00.000Z</published>
+    <updated>2019-03-28T08:19:08.269Z</updated>
     
     <summary type="html">
     
-      
-      
-        
-        
-          &lt;p&gt;这是我一直以来想写的文章，标题叫：To be a
-        
-      
+      &lt;h2 id=&quot;题目&quot;&gt;&lt;a href=&quot;#题目&quot; class=&quot;headerlink&quot; title=&quot;题目&quot;&gt;&lt;/a&gt;题目&lt;/h2&gt;&lt;p&gt;输入数字n，按顺序打印出从1到最大的n位十进制数。比如输入3，则打印出1、2、3一直到最大的3位数999。&lt;/p&gt;
     
     </summary>
     
-      <category term="随笔" scheme="http://liuqinh2s.github.io/blog/categories/%E9%9A%8F%E7%AC%94/"/>
+      <category term="读书笔记" scheme="http://liuqinh2s.github.io/blog/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
+    
+      <category term="《剑指offer》" scheme="http://liuqinh2s.github.io/blog/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E3%80%8A%E5%89%91%E6%8C%87offer%E3%80%8B/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>面试题11：数值的整数次方</title>
+    <link href="http://liuqinh2s.github.io/blog/2019/03/05/%E9%9D%A2%E8%AF%95%E9%A2%9811%EF%BC%9A%E6%95%B0%E5%80%BC%E7%9A%84%E6%95%B4%E6%95%B0%E6%AC%A1%E6%96%B9/"/>
+    <id>http://liuqinh2s.github.io/blog/2019/03/05/面试题11：数值的整数次方/</id>
+    <published>2019-03-04T16:00:00.000Z</published>
+    <updated>2019-03-28T07:34:04.835Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;题目&quot;&gt;&lt;a href=&quot;#题目&quot; class=&quot;headerlink&quot; title=&quot;题目&quot;&gt;&lt;/a&gt;题目&lt;/h2&gt;&lt;p&gt;实现函数double Power(double base, int exponent)，求base的exponent次方。不得使用库函数，同时不需要考虑大数问题。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="读书笔记" scheme="http://liuqinh2s.github.io/blog/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
+    
+      <category term="《剑指offer》" scheme="http://liuqinh2s.github.io/blog/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E3%80%8A%E5%89%91%E6%8C%87offer%E3%80%8B/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>面试题10：二进制中1的个数</title>
+    <link href="http://liuqinh2s.github.io/blog/2019/03/04/%E9%9D%A2%E8%AF%95%E9%A2%9810%EF%BC%9A%E4%BA%8C%E8%BF%9B%E5%88%B6%E4%B8%AD1%E7%9A%84%E4%B8%AA%E6%95%B0/"/>
+    <id>http://liuqinh2s.github.io/blog/2019/03/04/面试题10：二进制中1的个数/</id>
+    <published>2019-03-03T16:00:00.000Z</published>
+    <updated>2019-03-28T07:33:56.716Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;题目&quot;&gt;&lt;a href=&quot;#题目&quot; class=&quot;headerlink&quot; title=&quot;题目&quot;&gt;&lt;/a&gt;题目&lt;/h2&gt;&lt;p&gt;请实现一个函数，输入一个整数，输出该数二进制表示中1的个数。例如把9表示成二进制是1001，有2位是1。因此如果输入9，该函数输出2。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="读书笔记" scheme="http://liuqinh2s.github.io/blog/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
+    
+      <category term="《剑指offer》" scheme="http://liuqinh2s.github.io/blog/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E3%80%8A%E5%89%91%E6%8C%87offer%E3%80%8B/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>面试题8：旋转数组的最小数字</title>
+    <link href="http://liuqinh2s.github.io/blog/2019/03/03/%E9%9D%A2%E8%AF%95%E9%A2%988%EF%BC%9A%E6%97%8B%E8%BD%AC%E6%95%B0%E7%BB%84%E7%9A%84%E6%9C%80%E5%B0%8F%E6%95%B0%E5%AD%97/"/>
+    <id>http://liuqinh2s.github.io/blog/2019/03/03/面试题8：旋转数组的最小数字/</id>
+    <published>2019-03-02T16:00:00.000Z</published>
+    <updated>2019-03-28T07:36:33.235Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;题目&quot;&gt;&lt;a href=&quot;#题目&quot; class=&quot;headerlink&quot; title=&quot;题目&quot;&gt;&lt;/a&gt;题目&lt;/h2&gt;&lt;p&gt;把一个数组最开始的若干个元素搬到数组的末尾，我们称之为数组的旋转。输入一个递增排序的数组的一个旋转，输出旋转数组的最小元素。例如数组&lt;code&gt;{3,4,5,1,2}&lt;/code&gt;为&lt;code&gt;{1,2,3,4,5}&lt;/code&gt;的一个旋转，该数组的最小值为1。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="读书笔记" scheme="http://liuqinh2s.github.io/blog/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
+    
+      <category term="《剑指offer》" scheme="http://liuqinh2s.github.io/blog/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E3%80%8A%E5%89%91%E6%8C%87offer%E3%80%8B/"/>
     
     
   </entry>
@@ -45,7 +101,7 @@
     <link href="http://liuqinh2s.github.io/blog/2019/03/03/%E5%8A%A8%E6%80%81%E6%95%B0%E7%BB%84%E7%9A%84%E5%88%86%E6%91%8A%E5%88%86%E6%9E%90/"/>
     <id>http://liuqinh2s.github.io/blog/2019/03/03/动态数组的分摊分析/</id>
     <published>2019-03-02T16:00:00.000Z</published>
-    <updated>2019-03-04T01:09:10.936Z</updated>
+    <updated>2019-03-08T07:33:35.827Z</updated>
     
     <summary type="html">
     
@@ -64,11 +120,29 @@
   </entry>
   
   <entry>
-    <title>斐波那契数列</title>
-    <link href="http://liuqinh2s.github.io/blog/2019/03/01/%E6%96%90%E6%B3%A2%E9%82%A3%E5%A5%91%E6%95%B0%E5%88%97/"/>
-    <id>http://liuqinh2s.github.io/blog/2019/03/01/斐波那契数列/</id>
-    <published>2019-02-28T16:00:00.000Z</published>
-    <updated>2019-03-02T08:25:15.885Z</updated>
+    <title>To be a publisher</title>
+    <link href="http://liuqinh2s.github.io/blog/2019/03/03/To%20be%20a%20publisher/"/>
+    <id>http://liuqinh2s.github.io/blog/2019/03/03/To be a publisher/</id>
+    <published>2019-03-02T16:00:00.000Z</published>
+    <updated>2019-03-28T07:51:37.721Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;这是我一直以来想写的文章，标题叫：To be a publisher，也就是做一个可以在互联网上产出内容的人。为什么我认为在互联网上产出内容这么重要呢？因为在未来，不能发声的人将无法融入互联网这个新的社会，即便融入了，也只能是那些能够发声的人的附庸。不能表达自己或不善于表达自己这是一件很可怕的事，这类人或许将成为互联网上的哑巴，被忽视的群体，沉默的大多数。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="随笔" scheme="http://liuqinh2s.github.io/blog/categories/%E9%9A%8F%E7%AC%94/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>面试题9：斐波那契数列</title>
+    <link href="http://liuqinh2s.github.io/blog/2019/03/03/%E9%9D%A2%E8%AF%95%E9%A2%989%EF%BC%9A%E6%96%90%E6%B3%A2%E9%82%A3%E5%A5%91%E6%95%B0%E5%88%97/"/>
+    <id>http://liuqinh2s.github.io/blog/2019/03/03/面试题9：斐波那契数列/</id>
+    <published>2019-03-02T16:00:00.000Z</published>
+    <updated>2019-03-28T07:37:51.235Z</updated>
     
     <summary type="html">
     
@@ -85,24 +159,101 @@
   </entry>
   
   <entry>
-    <title>剑指offer笔记</title>
-    <link href="http://liuqinh2s.github.io/blog/2019/02/28/%E5%89%91%E6%8C%87offer%E7%AC%94%E8%AE%B0/"/>
-    <id>http://liuqinh2s.github.io/blog/2019/02/28/剑指offer笔记/</id>
-    <published>2019-02-27T16:00:00.000Z</published>
-    <updated>2019-03-03T05:00:00.428Z</updated>
+    <title>面试题7：用两个栈实现队列</title>
+    <link href="http://liuqinh2s.github.io/blog/2019/03/02/%E9%9D%A2%E8%AF%95%E9%A2%987%EF%BC%9A%E7%94%A8%E4%B8%A4%E4%B8%AA%E6%A0%88%E5%AE%9E%E7%8E%B0%E9%98%9F%E5%88%97/"/>
+    <id>http://liuqinh2s.github.io/blog/2019/03/02/面试题7：用两个栈实现队列/</id>
+    <published>2019-03-01T16:00:00.000Z</published>
+    <updated>2019-03-28T07:35:03.860Z</updated>
     
     <summary type="html">
     
-      &lt;h2 id=&quot;二维数组的二分查找&quot;&gt;&lt;a href=&quot;#二维数组的二分查找&quot; class=&quot;headerlink&quot; title=&quot;二维数组的二分查找&quot;&gt;&lt;/a&gt;二维数组的二分查找&lt;/h2&gt;&lt;h3 id=&quot;题目描述&quot;&gt;&lt;a href=&quot;#题目描述&quot; class=&quot;headerlink&quot; title=&quot;题目描述&quot;&gt;&lt;/a&gt;题目描述&lt;/h3&gt;&lt;p&gt;给定一个二维数组，每一行都是递增的，每一列也都是递增的，且每个数都唯一。然后给一个数，在这个二维数组中查找这个数，如果找到，返回坐标，如果没找到返回&lt;code&gt;(-1,-1)&lt;/code&gt;。&lt;/p&gt;
+      &lt;h2 id=&quot;题目&quot;&gt;&lt;a href=&quot;#题目&quot; class=&quot;headerlink&quot; title=&quot;题目&quot;&gt;&lt;/a&gt;题目&lt;/h2&gt;&lt;p&gt;用两个栈实现一个队列。队列的声明如下，请实现它的两个函数&lt;code&gt;appendTail&lt;/code&gt;和&lt;code&gt;deleteHead&lt;/code&gt;，分别完成在队列尾部插入结点和在队列头部删除结点的功能。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="读书笔记" scheme="http://liuqinh2s.github.io/blog/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
+    
+      <category term="《剑指offer》" scheme="http://liuqinh2s.github.io/blog/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E3%80%8A%E5%89%91%E6%8C%87offer%E3%80%8B/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>面试题6：重建二叉树</title>
+    <link href="http://liuqinh2s.github.io/blog/2019/03/02/%E9%9D%A2%E8%AF%95%E9%A2%986%EF%BC%9A%E9%87%8D%E5%BB%BA%E4%BA%8C%E5%8F%89%E6%A0%91/"/>
+    <id>http://liuqinh2s.github.io/blog/2019/03/02/面试题6：重建二叉树/</id>
+    <published>2019-03-01T16:00:00.000Z</published>
+    <updated>2019-03-28T07:34:58.468Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;题目&quot;&gt;&lt;a href=&quot;#题目&quot; class=&quot;headerlink&quot; title=&quot;题目&quot;&gt;&lt;/a&gt;题目&lt;/h2&gt;&lt;p&gt;输入某二叉树的前序遍历和中序遍历的结果，请重建出该二叉树。假设输入的前序遍历和中序遍历的结果中都不含重复的数字。例如输入前序遍历序列&lt;code&gt;{1,2,4,7,3,5,6,8}&lt;/code&gt;和中序遍历序列&lt;code&gt;{4,7,2,1,5,3,8,6}&lt;/code&gt;，则重建出图2.6所示的二叉树并输出它的头结点。二叉树定义如下：&lt;/p&gt;
+&lt;figure class=&quot;highlight java&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;class&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;TreeNode&lt;/span&gt; &lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; val;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    TreeNode left;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    TreeNode right;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    TreeNode(&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; x) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        val = x;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+    
+    </summary>
+    
+      <category term="读书笔记" scheme="http://liuqinh2s.github.io/blog/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
+    
+      <category term="《剑指offer》" scheme="http://liuqinh2s.github.io/blog/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E3%80%8A%E5%89%91%E6%8C%87offer%E3%80%8B/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>面试题4：替换空格</title>
+    <link href="http://liuqinh2s.github.io/blog/2019/03/01/%E9%9D%A2%E8%AF%95%E9%A2%984%EF%BC%9A%E6%9B%BF%E6%8D%A2%E7%A9%BA%E6%A0%BC/"/>
+    <id>http://liuqinh2s.github.io/blog/2019/03/01/面试题4：替换空格/</id>
+    <published>2019-02-28T16:00:00.000Z</published>
+    <updated>2019-03-28T07:36:21.772Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;题目&quot;&gt;&lt;a href=&quot;#题目&quot; class=&quot;headerlink&quot; title=&quot;题目&quot;&gt;&lt;/a&gt;题目&lt;/h2&gt;&lt;p&gt;请实现一个函数，把字符串中的每个空格替换成“%20”。例如输入“We are happy.”，则输出“We%20are%20happy.”。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;在网络编程中，如果URL参数中含有特殊字符，如空格、’#’等，可能导致服务器端无法获得正确的参数值。我们需要将这些字符转换为服务器可以识别的字符。转换规则是在’%’后面跟上ASCII码的两位十六进制表示。&lt;/p&gt;
+&lt;/blockquote&gt;
+    
+    </summary>
+    
+      <category term="读书笔记" scheme="http://liuqinh2s.github.io/blog/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
+    
+      <category term="《剑指offer》" scheme="http://liuqinh2s.github.io/blog/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E3%80%8A%E5%89%91%E6%8C%87offer%E3%80%8B/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>面试题5：从尾到头打印链表</title>
+    <link href="http://liuqinh2s.github.io/blog/2019/03/01/%E9%9D%A2%E8%AF%95%E9%A2%985%EF%BC%9A%E4%BB%8E%E5%B0%BE%E5%88%B0%E5%A4%B4%E6%89%93%E5%8D%B0%E9%93%BE%E8%A1%A8/"/>
+    <id>http://liuqinh2s.github.io/blog/2019/03/01/面试题5：从尾到头打印链表/</id>
+    <published>2019-02-28T16:00:00.000Z</published>
+    <updated>2019-03-28T07:34:51.603Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;题目&quot;&gt;&lt;a href=&quot;#题目&quot; class=&quot;headerlink&quot; title=&quot;题目&quot;&gt;&lt;/a&gt;题目&lt;/h2&gt;&lt;p&gt;输入一个链表的头结点，从尾到头反过来打印出每个结点的值。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="读书笔记" scheme="http://liuqinh2s.github.io/blog/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
+    
+      <category term="《剑指offer》" scheme="http://liuqinh2s.github.io/blog/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E3%80%8A%E5%89%91%E6%8C%87offer%E3%80%8B/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>面试题3：二维数组的二分查找</title>
+    <link href="http://liuqinh2s.github.io/blog/2019/02/28/%E9%9D%A2%E8%AF%95%E9%A2%983%EF%BC%9A%E4%BA%8C%E7%BB%B4%E6%95%B0%E7%BB%84%E7%9A%84%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE/"/>
+    <id>http://liuqinh2s.github.io/blog/2019/02/28/面试题3：二维数组的二分查找/</id>
+    <published>2019-02-27T16:00:00.000Z</published>
+    <updated>2019-03-28T07:36:07.596Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;题目&quot;&gt;&lt;a href=&quot;#题目&quot; class=&quot;headerlink&quot; title=&quot;题目&quot;&gt;&lt;/a&gt;题目&lt;/h2&gt;&lt;p&gt;给定一个二维数组，每一行都是递增的，每一列也都是递增的，且每个数都唯一。然后给一个数，在这个二维数组中查找这个数，如果找到，返回坐标，如果没找到返回&lt;code&gt;(-1,-1)&lt;/code&gt;。&lt;/p&gt;
 &lt;p&gt;举个例子：&lt;/p&gt;
 &lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1 2 6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4 5 9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7 8 10&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;今天面试字节跳动公司，问的第一题就是这一道，而这道题其实可以追溯到《剑指offer》中的面试题3。所以面试大公司的话最好先刷完这三本书，算法是绕不过去的一关：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;《剑指offer》，国内特别喜欢出这个上面的题&lt;/li&gt;
-&lt;li&gt;《编程之美》，微软出的&lt;/li&gt;
-&lt;li&gt;《程序员面试经典》，主要是面向北美和欧洲的程序员&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;好钢要用在刀刃上，像leetcode这种可以先不刷，以上三本书的覆盖率已经可以完全应对面试了。&lt;/p&gt;
     
     </summary>
     
@@ -118,7 +269,7 @@
     <link href="http://liuqinh2s.github.io/blog/2019/02/28/%E5%B2%9B%E5%B1%BF%E7%9A%84%E4%B8%AA%E6%95%B0/"/>
     <id>http://liuqinh2s.github.io/blog/2019/02/28/岛屿的个数/</id>
     <published>2019-02-27T16:00:00.000Z</published>
-    <updated>2019-03-02T08:27:30.421Z</updated>
+    <updated>2019-03-08T07:33:35.806Z</updated>
     
     <summary type="html">
     
@@ -137,11 +288,41 @@
   </entry>
   
   <entry>
+    <title>剑指offer笔记系列--开篇简介</title>
+    <link href="http://liuqinh2s.github.io/blog/2019/02/28/%E5%89%91%E6%8C%87offer%E7%AC%94%E8%AE%B0%E7%B3%BB%E5%88%97--%E5%BC%80%E7%AF%87%E7%AE%80%E4%BB%8B/"/>
+    <id>http://liuqinh2s.github.io/blog/2019/02/28/剑指offer笔记系列--开篇简介/</id>
+    <published>2019-02-27T16:00:00.000Z</published>
+    <updated>2019-03-28T07:18:48.912Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;今天面试字节跳动公司，问的第一题就是《剑指offer》中的面试题3。所以面试大公司的话最好先刷完这三本书，算法是绕不过去的一关：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;《剑指offer》，国内特别喜欢出这个上面的题&lt;/li&gt;
+&lt;li&gt;《编程之美》，微软出的&lt;/li&gt;
+&lt;li&gt;《程序员面
+        
+      
+    
+    </summary>
+    
+      <category term="读书笔记" scheme="http://liuqinh2s.github.io/blog/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
+    
+      <category term="《剑指offer》" scheme="http://liuqinh2s.github.io/blog/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E3%80%8A%E5%89%91%E6%8C%87offer%E3%80%8B/"/>
+    
+    
+  </entry>
+  
+  <entry>
     <title>快速排序</title>
     <link href="http://liuqinh2s.github.io/blog/2019/02/19/%E5%BF%AB%E9%80%9F%E6%8E%92%E5%BA%8F/"/>
     <id>http://liuqinh2s.github.io/blog/2019/02/19/快速排序/</id>
     <published>2019-02-18T16:00:00.000Z</published>
-    <updated>2019-02-19T11:52:51.701Z</updated>
+    <updated>2019-03-08T07:33:35.793Z</updated>
     
     <summary type="html">
     
@@ -162,7 +343,7 @@
     <link href="http://liuqinh2s.github.io/blog/2019/01/19/%E5%B9%B6%E6%9F%A5%E9%9B%86/"/>
     <id>http://liuqinh2s.github.io/blog/2019/01/19/并查集/</id>
     <published>2019-01-18T16:00:00.000Z</published>
-    <updated>2019-02-19T10:52:20.034Z</updated>
+    <updated>2019-03-08T07:33:35.785Z</updated>
     
     <summary type="html">
     
@@ -185,7 +366,7 @@
     <link href="http://liuqinh2s.github.io/blog/2019/01/17/KMP%E7%AE%97%E6%B3%95/"/>
     <id>http://liuqinh2s.github.io/blog/2019/01/17/KMP算法/</id>
     <published>2019-01-16T16:00:00.000Z</published>
-    <updated>2019-02-19T10:52:20.034Z</updated>
+    <updated>2019-03-08T07:33:35.782Z</updated>
     
     <summary type="html">
     
@@ -211,7 +392,7 @@
     <link href="http://liuqinh2s.github.io/blog/2019/01/15/%E8%93%84%E6%B0%B4%E6%B1%A0%E7%AE%97%E6%B3%95/"/>
     <id>http://liuqinh2s.github.io/blog/2019/01/15/蓄水池算法/</id>
     <published>2019-01-14T16:00:00.000Z</published>
-    <updated>2019-02-19T10:52:20.034Z</updated>
+    <updated>2019-03-08T07:33:35.775Z</updated>
     
     <summary type="html">
     
@@ -233,7 +414,7 @@
     <link href="http://liuqinh2s.github.io/blog/2019/01/10/%E8%87%AA%E5%B7%B1%E5%86%99Json%E8%A7%A3%E9%87%8A%E5%99%A8/"/>
     <id>http://liuqinh2s.github.io/blog/2019/01/10/自己写Json解释器/</id>
     <published>2019-01-09T16:00:00.000Z</published>
-    <updated>2019-02-25T02:42:07.460Z</updated>
+    <updated>2019-03-08T07:33:35.770Z</updated>
     
     <summary type="html">
     
@@ -256,7 +437,7 @@
     <link href="http://liuqinh2s.github.io/blog/2019/01/07/%E7%AC%AC%E4%B8%80%E4%B8%AA%E6%9E%81%E9%99%90%E7%9A%84%E8%AF%81%E6%98%8E/"/>
     <id>http://liuqinh2s.github.io/blog/2019/01/07/第一个极限的证明/</id>
     <published>2019-01-06T16:00:00.000Z</published>
-    <updated>2019-02-25T02:36:46.221Z</updated>
+    <updated>2019-03-08T07:33:35.764Z</updated>
     
     <summary type="html">
     
@@ -266,229 +447,6 @@
     
       <category term="数学" scheme="http://liuqinh2s.github.io/blog/categories/%E6%95%B0%E5%AD%A6/"/>
     
-    
-  </entry>
-  
-  <entry>
-    <title>js实现sleep方法的最佳实践</title>
-    <link href="http://liuqinh2s.github.io/blog/2018/11/22/js%E5%AE%9E%E7%8E%B0sleep%E6%96%B9%E6%B3%95%E7%9A%84%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5/"/>
-    <id>http://liuqinh2s.github.io/blog/2018/11/22/js实现sleep方法的最佳实践/</id>
-    <published>2018-11-21T16:00:00.000Z</published>
-    <updated>2019-02-25T02:39:28.139Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;code&gt;setTimeout&lt;/code&gt;是异步的，跟其他语言里的&lt;code&gt;sleep&lt;/code&gt;和&lt;code&gt;delay&lt;/code&gt;并不一样，不能阻塞住程序。上网查了之后发现js没有自带的sleep方法，那么如何自己实现sleep方法呢？&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;https://stackoverflow.com/questions/951021/what-is-the-javascript-version-of-sleep&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;What is the JavaScript version of sleep()?&lt;/a&gt;&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="编程语言" scheme="http://liuqinh2s.github.io/blog/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/"/>
-    
-      <category term="JavaScript" scheme="http://liuqinh2s.github.io/blog/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/JavaScript/"/>
-    
-    
-      <category term="JavaScript" scheme="http://liuqinh2s.github.io/blog/tags/JavaScript/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>编程珠玑系列笔记 -- 第二章 啊哈！算法</title>
-    <link href="http://liuqinh2s.github.io/blog/2018/11/06/%E7%BC%96%E7%A8%8B%E7%8F%A0%E7%8E%91%E7%B3%BB%E5%88%97%E7%AC%94%E8%AE%B02/"/>
-    <id>http://liuqinh2s.github.io/blog/2018/11/06/编程珠玑系列笔记2/</id>
-    <published>2018-11-05T16:00:00.000Z</published>
-    <updated>2019-02-19T10:52:20.033Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;本书的另一个中心思想显而易见：&lt;strong&gt;良好的算法是程序性能提升的关键。&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;下面还是通过探讨几个实例，来领会一下算法的重要性。&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="读书笔记" scheme="http://liuqinh2s.github.io/blog/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
-    
-      <category term="《编程珠玑》" scheme="http://liuqinh2s.github.io/blog/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E3%80%8A%E7%BC%96%E7%A8%8B%E7%8F%A0%E7%8E%91%E3%80%8B/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>编程珠玑系列笔记 -- 第一章 开篇</title>
-    <link href="http://liuqinh2s.github.io/blog/2018/11/05/%E7%BC%96%E7%A8%8B%E7%8F%A0%E7%8E%91%E7%B3%BB%E5%88%97%E7%AC%94%E8%AE%B01/"/>
-    <id>http://liuqinh2s.github.io/blog/2018/11/05/编程珠玑系列笔记1/</id>
-    <published>2018-11-04T16:00:00.000Z</published>
-    <updated>2019-02-19T10:52:20.033Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;本书的中心思想：&lt;strong&gt;对实例研究的深入思考不仅有趣，而且可以获得实际的益处。&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;规律和智慧都隐藏在实例之中，而我们通过实例来窥探它们。实例是道的载体。&lt;/p&gt;
-&lt;h2 id=&quot;开篇&quot;&gt;&lt;a href=&quot;#开篇&quot; class=&quot;headerlink&quot; title=&quot;开篇&quot;&gt;&lt;/a&gt;开篇&lt;/h2&gt;&lt;p&gt;明确问题，一旦问题明确，这场战役就成功了90%。&lt;/p&gt;
-&lt;p&gt;确定用户的真实需求是程序设计的根本。&lt;/p&gt;
-&lt;p&gt;简单的程序通常比具有相同功能的复杂程序更可靠、更安全、更健壮、更高效，而且易于实现和维护。因为简单的程序往往更具有概括性、更抽象、更能洞悉问题的本质。&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="读书笔记" scheme="http://liuqinh2s.github.io/blog/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
-    
-      <category term="《编程珠玑》" scheme="http://liuqinh2s.github.io/blog/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E3%80%8A%E7%BC%96%E7%A8%8B%E7%8F%A0%E7%8E%91%E3%80%8B/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>熟练使用JetBrains家的IDE</title>
-    <link href="http://liuqinh2s.github.io/blog/2018/11/04/%E7%86%9F%E7%BB%83%E4%BD%BF%E7%94%A8JetBrains%E5%AE%B6%E7%9A%84IDE/"/>
-    <id>http://liuqinh2s.github.io/blog/2018/11/04/熟练使用JetBrains家的IDE/</id>
-    <published>2018-11-03T16:00:00.000Z</published>
-    <updated>2019-02-19T10:52:20.033Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;通用快捷键&quot;&gt;&lt;a href=&quot;#通用快捷键&quot; class=&quot;headerlink&quot; title=&quot;通用快捷键&quot;&gt;&lt;/a&gt;通用快捷键&lt;/h2&gt;&lt;ol&gt;
-&lt;li&gt;格式化代码（reformat code）:&lt;br&gt;win: ctrl+alt+L&lt;br&gt;mac: command+option+L&lt;/li&gt;
-&lt;li&gt;在一行的任意位置使用： shift + enter，新建下一行并跳到下一行。&lt;/li&gt;
-&lt;li&gt;善用代码自动补全功能，变量名和方法名等可以用 enter 补全。导入包可以用 alt + enter。&lt;/li&gt;
-&lt;li&gt;上下移动代码，ctrl+shift+上下键&lt;/li&gt;
-&lt;li&gt;Android Studio 生成函数注释：你在方法前输入/**然后一回车，自动帮你生成方法和参数的注释。&lt;/li&gt;
-&lt;/ol&gt;
-    
-    </summary>
-    
-      <category term="工具" scheme="http://liuqinh2s.github.io/blog/categories/%E5%B7%A5%E5%85%B7/"/>
-    
-      <category term="IDE" scheme="http://liuqinh2s.github.io/blog/categories/%E5%B7%A5%E5%85%B7/IDE/"/>
-    
-    
-      <category term="IDE" scheme="http://liuqinh2s.github.io/blog/tags/IDE/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>什么是回调</title>
-    <link href="http://liuqinh2s.github.io/blog/2018/11/04/%E4%BB%80%E4%B9%88%E6%98%AF%E5%9B%9E%E8%B0%83/"/>
-    <id>http://liuqinh2s.github.io/blog/2018/11/04/什么是回调/</id>
-    <published>2018-11-03T16:00:00.000Z</published>
-    <updated>2019-02-25T02:40:57.469Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;img src=&quot;https://i.loli.net/2018/11/04/5bdeaff01640b.png&quot; alt=&quot;回调2.png&quot;&gt;&lt;/p&gt;
-&lt;p&gt;打个比方，有一家旅馆提供叫醒服务，但是要求旅客自己决定叫醒的方法。可以是打客房电话，也可以是派服务员去敲门，睡得死怕耽误事的，还可以要求往自己头上浇盆水。这里，“叫醒”这个行为是旅馆提供的，相当于库函数，但是叫醒的方式是由旅客决定并告诉旅馆的，也就是回调函数。而旅客告诉旅馆怎么叫醒自己的动作，也就是把回调函数传入库函数的动作，称为登记回调函数（to register a callback function）。&lt;/p&gt;
-&lt;p&gt;在回调中，我们利用某种方式，把回调函数像参数一样传入中间函数。可以这么理解，在传入一个回调函数之前，中间函数是不完整的。换句话说，程序可以在运行时，通过登记不同的回调函数，来决定、改变中间函数的行为。这就比简单的函数调用要灵活太多了。&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="编程概念" scheme="http://liuqinh2s.github.io/blog/categories/%E7%BC%96%E7%A8%8B%E6%A6%82%E5%BF%B5/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>精通一款编辑器之sublime text 3</title>
-    <link href="http://liuqinh2s.github.io/blog/2018/11/04/%E7%B2%BE%E9%80%9A%E4%B8%80%E6%AC%BE%E7%BC%96%E8%BE%91%E5%99%A8%E4%B9%8Bsublime%20text%203/"/>
-    <id>http://liuqinh2s.github.io/blog/2018/11/04/精通一款编辑器之sublime text 3/</id>
-    <published>2018-11-03T16:00:00.000Z</published>
-    <updated>2019-02-19T10:52:20.033Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;编辑器常用功能&quot;&gt;&lt;a href=&quot;#编辑器常用功能&quot; class=&quot;headerlink&quot; title=&quot;编辑器常用功能&quot;&gt;&lt;/a&gt;编辑器常用功能&lt;/h2&gt;&lt;ol&gt;
-&lt;li&gt;格式化代码：格式化代码可以让你不用管代码的格式，可以放肆的写程序，你可以少敲很多空格，不用关心代码的格式问题，机器给出的代码格式风格统一且漂亮，一键解决你的格式问题，真是提高码代码效率的非常重要的功能。&lt;/li&gt;
-&lt;li&gt;查找文件：查找文件是在集成开发的时候非常重要的功能，当文件多起来的时候，快速定位到文件可以节省很多时间，甚至有时候文件实在太多，你只能通过查找的方式找到那个文件。&lt;/li&gt;
-&lt;li&gt;正则全文件查找和替换：轻松让你更改全局变量和配置，这是一个必须的功能，没有它简直无法想象工作量有多大。&lt;/li&gt;
-&lt;li&gt;代码收缩和扩展：代码太长怎么办，收缩和扩展啊。&lt;/li&gt;
-&lt;/ol&gt;
-    
-    </summary>
-    
-      <category term="工具" scheme="http://liuqinh2s.github.io/blog/categories/%E5%B7%A5%E5%85%B7/"/>
-    
-      <category term="编辑器" scheme="http://liuqinh2s.github.io/blog/categories/%E5%B7%A5%E5%85%B7/%E7%BC%96%E8%BE%91%E5%99%A8/"/>
-    
-    
-      <category term="编辑器" scheme="http://liuqinh2s.github.io/blog/tags/%E7%BC%96%E8%BE%91%E5%99%A8/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>《CSAPP》读书笔记 -- 第4章：处理器体系结构</title>
-    <link href="http://liuqinh2s.github.io/blog/2018/10/13/%E5%A4%84%E7%90%86%E5%99%A8%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84/"/>
-    <id>http://liuqinh2s.github.io/blog/2018/10/13/处理器体系结构/</id>
-    <published>2018-10-12T16:00:00.000Z</published>
-    <updated>2019-02-19T10:52:20.032Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;阅读这篇文章必须要对汇编码有足够的了解，如果你对IA32汇编码还不够了解，可以先看看这篇文章：&lt;a href=&quot;../../08/程序的机器级表示&quot;&gt;程序的机器级表示&lt;/a&gt;&lt;/p&gt;
-&lt;h2 id=&quot;Y86指令集体系结构&quot;&gt;&lt;a href=&quot;#Y86指令集体系结构&quot; class=&quot;headerlink&quot; title=&quot;Y86指令集体系结构&quot;&gt;&lt;/a&gt;Y86指令集体系结构&lt;/h2&gt;&lt;p&gt;Y86指令集基本上是IA32指令集的一个子集。这个指令集就是我们处理器实现的目标。如下图：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;../../../../images/2018/Y86指令集.png&quot; alt=&quot;Y86指令集&quot;&gt;&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="读书笔记" scheme="http://liuqinh2s.github.io/blog/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
-    
-      <category term="《CSAPP》" scheme="http://liuqinh2s.github.io/blog/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E3%80%8ACSAPP%E3%80%8B/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>《CSAPP》读书笔记 -- 第3章：程序的机器级表示</title>
-    <link href="http://liuqinh2s.github.io/blog/2018/10/08/%E7%A8%8B%E5%BA%8F%E7%9A%84%E6%9C%BA%E5%99%A8%E7%BA%A7%E8%A1%A8%E7%A4%BA/"/>
-    <id>http://liuqinh2s.github.io/blog/2018/10/08/程序的机器级表示/</id>
-    <published>2018-10-07T16:00:00.000Z</published>
-    <updated>2019-02-19T10:52:20.032Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;从编译C语言文件说起&quot;&gt;&lt;a href=&quot;#从编译C语言文件说起&quot; class=&quot;headerlink&quot; title=&quot;从编译C语言文件说起&quot;&gt;&lt;/a&gt;从编译C语言文件说起&lt;/h2&gt;&lt;figure class=&quot;highlight c&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ gcc &lt;span class=&quot;number&quot;&gt;-01&lt;/span&gt; -o p p1.c p2.c&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;使用了gcc命令来编译，也可以简单写作：&lt;code&gt;cc&lt;/code&gt;。&lt;/p&gt;
-&lt;p&gt;优化层级为1，1级是最低的，层级越高程序优化越好，但增加了编译时间，也使调试变得更难，且跟源程序差异很大不便于理解。&lt;/p&gt;
-&lt;p&gt;编译的流程是：&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;预处理器（preprocessor）把诸如：&lt;code&gt;#include&lt;/code&gt;、&lt;code&gt;#define&lt;/code&gt;、&lt;code&gt;#if&lt;/code&gt;、&lt;code&gt;#else&lt;/code&gt;、&lt;code&gt;#elif&lt;/code&gt;、&lt;code&gt;#ifdef&lt;/code&gt;、&lt;code&gt;#endif&lt;/code&gt;等预编译指令替换掉。&lt;/li&gt;
-&lt;li&gt;编译器（compiler）把&lt;code&gt;.c&lt;/code&gt;源文件编译成&lt;code&gt;.s&lt;/code&gt;的汇编代码文件。&lt;/li&gt;
-&lt;li&gt;汇编器（assembler）把汇编代码文件转换成相应的二进制目标文件&lt;code&gt;.o&lt;/code&gt;，目标文件已经是机器码了，只是没有填入全局变量的地址。&lt;/li&gt;
-&lt;li&gt;链接器（linker），把多目标文件和库函数链接在一起，形成可执行文件。&lt;/li&gt;
-&lt;/ol&gt;
-    
-    </summary>
-    
-      <category term="读书笔记" scheme="http://liuqinh2s.github.io/blog/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
-    
-      <category term="《CSAPP》" scheme="http://liuqinh2s.github.io/blog/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E3%80%8ACSAPP%E3%80%8B/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>《CSAPP》读书笔记 -- 第2章：浮点数原理（小专题）</title>
-    <link href="http://liuqinh2s.github.io/blog/2018/09/27/%E6%B5%AE%E7%82%B9%E6%95%B0%E5%8E%9F%E7%90%86/"/>
-    <id>http://liuqinh2s.github.io/blog/2018/09/27/浮点数原理/</id>
-    <published>2018-09-26T16:00:00.000Z</published>
-    <updated>2019-02-19T10:52:20.032Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;strong&gt;浮点数的作用&lt;/strong&gt;：区别于整形数，用来表示小数。可以用来表示很大的数，或者非常接近0的小数，或者近似的做实数计算，浮点数的一般形式：$x\times 2^y$。&lt;/p&gt;
-&lt;p&gt;IEEE（pronounced “Eye-Triple-Eee”）浮点数标准。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;rounding&lt;/strong&gt;：when a number cannot be represented exactly in the format and hence must be adjusted upward or down- ward。可以翻译为：&lt;strong&gt;舍入&lt;/strong&gt;。&lt;/p&gt;
-&lt;p&gt;十进制的小数表示：$d&lt;em&gt;m d&lt;/em&gt;{m-1} \cdots d&lt;em&gt;1 d_0 . d&lt;/em&gt;{-1} d&lt;em&gt;{-2} \cdots d&lt;/em&gt;{-n}$，写成数学表达式：&lt;/p&gt;
-&lt;script type=&quot;math/tex; mode=display&quot;&gt;
-d = \sum_{i=-n}^m 10^i \times d_i&lt;/script&gt;&lt;p&gt;相应的，二进制也可以写成这种形式：&lt;/p&gt;
-&lt;script type=&quot;math/tex; mode=display&quot;&gt;
-b = \sum_{i=-n}^m 2^i \times b_i&lt;/script&gt;
-    
-    </summary>
-    
-      <category term="读书笔记" scheme="http://liuqinh2s.github.io/blog/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
-    
-      <category term="《CSAPP》" scheme="http://liuqinh2s.github.io/blog/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E3%80%8ACSAPP%E3%80%8B/"/>
-    
-    
-      <category term="信息记法" scheme="http://liuqinh2s.github.io/blog/tags/%E4%BF%A1%E6%81%AF%E8%AE%B0%E6%B3%95/"/>
     
   </entry>
   
