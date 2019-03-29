@@ -316,7 +316,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://liuqinh2s.github.io/blog/blog/2018/09/19/wsl修改右键bash图标/">
+    <link itemprop="mainEntityOfPage" href="http://liuqinh2s.github.io/blog/blog/2019/01/17/KMP算法/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="liuqinh2s">
@@ -335,7 +335,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/blog/2018/09/19/wsl修改右键bash图标/" itemprop="url">wsl修改右键bash图标</a></h1>
+                <a class="post-title-link" href="/blog/2019/01/17/KMP算法/" itemprop="url">KMP算法</a></h1>
         
 
         <div class="post-meta">
@@ -347,8 +347,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-09-19T00:00:00+08:00">
-                2018-09-19
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-01-17T00:00:00+08:00">
+                2019-01-17
               </time>
             
 
@@ -370,8 +370,8 @@
               
               
                 <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
-                  <a href="/blog/categories/解决的问题/" itemprop="url" rel="index">
-                    <span itemprop="name">解决的问题</span>
+                  <a href="/blog/categories/算法/" itemprop="url" rel="index">
+                    <span itemprop="name">算法</span>
                   </a>
                 </span>
 
@@ -401,7 +401,7 @@
                   <span class="post-meta-item-text">Words count in article&#58;</span>
                 
                 <span title="Words count in article">
-                  240
+                  1,882
                 </span>
               
 
@@ -427,11 +427,18 @@
 
       
         
-          <p>使用 windows subsystem for linux (简称：WSL) 的时候，遇到一个小问题，在文件管理器中右键，唤出bash，发现图标不对：</p>
-<p><img src="https://i.loli.net/2018/09/19/5ba25208ca7de.png" alt="截图1"></p>
+          <h2 id="KMP算法"><a href="#KMP算法" class="headerlink" title="KMP算法"></a>KMP算法</h2><p>KMP算法用来在一个文本中查找模式串，如下图所示：</p>
+<p>文本匹配例子：</p>
+<p><img src="https://i.loli.net/2019/02/01/5c545a0ceea57.jpg#align=left&amp;display=inline&amp;height=78&amp;linkTarget=_blank&amp;originHeight=78&amp;originWidth=392&amp;width=392" alt=""></p>
+<p>我们把上面那个长字符串的称为<strong>文本</strong>，下面这个短的称为<strong>模式串</strong>。我们的目的是查看<code>ABADABAD</code>是否出现在文本中。</p>
+<p>不必要的比较：</p>
+<p><img src="https://i.loli.net/2019/02/01/5c545a0d27686.jpg#align=left&amp;display=inline&amp;height=100&amp;linkTarget=_blank&amp;originHeight=100&amp;originWidth=418&amp;width=418" alt=""></p>
+<p>跳过不必要的比较：</p>
+<p><img src="https://i.loli.net/2019/02/01/5c545a0cf058c.jpg#align=left&amp;display=inline&amp;height=90&amp;linkTarget=_blank&amp;originHeight=90&amp;originWidth=410&amp;width=410" alt=""></p>
+<p>KMP算法的核心作用在于帮助模式串顺利的跳过很多不必要的比较（模式串没有任何前缀与文本匹配），直接后移到一部分前缀已经匹配的位置，开始下一次的比较。更准确的讲是移动到：最长真前后缀匹配的位置，如上图所示的<code>ABA</code>。</p>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/blog/2018/09/19/wsl修改右键bash图标/#more" rel="contents">
+            <a class="btn" href="/blog/2019/01/17/KMP算法/#more" rel="contents">
               Read more &raquo;
             </a>
           </div>
@@ -482,7 +489,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://liuqinh2s.github.io/blog/blog/2018/09/02/Learning-SpringBoot2/">
+    <link itemprop="mainEntityOfPage" href="http://liuqinh2s.github.io/blog/blog/2019/01/15/蓄水池算法/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="liuqinh2s">
@@ -501,7 +508,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/blog/2018/09/02/Learning-SpringBoot2/" itemprop="url">Learning SpringBoot2</a></h1>
+                <a class="post-title-link" href="/blog/2019/01/15/蓄水池算法/" itemprop="url">蓄水池算法</a></h1>
         
 
         <div class="post-meta">
@@ -513,8 +520,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-09-02T00:00:00+08:00">
-                2018-09-02
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-01-15T00:00:00+08:00">
+                2019-01-15
               </time>
             
 
@@ -536,19 +543,8 @@
               
               
                 <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
-                  <a href="/blog/categories/后端/" itemprop="url" rel="index">
-                    <span itemprop="name">后端</span>
-                  </a>
-                </span>
-
-                
-                
-                  , 
-                
-              
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
-                  <a href="/blog/categories/后端/Java-web/" itemprop="url" rel="index">
-                    <span itemprop="name">Java web</span>
+                  <a href="/blog/categories/算法/" itemprop="url" rel="index">
+                    <span itemprop="name">算法</span>
                   </a>
                 </span>
 
@@ -578,7 +574,7 @@
                   <span class="post-meta-item-text">Words count in article&#58;</span>
                 
                 <span title="Words count in article">
-                  377
+                  851
                 </span>
               
 
@@ -604,198 +600,14 @@
 
       
         
-          <p>随着计算机的发展，很多东西都慢慢工具化了，大量简单重复的工作直接交给计算机就好了，留给人们的只是业务逻辑跟架构调优。spring boot 2 就是一个非常好用的Java web集成框架。学习最好的方法就是通过 <strong>例子</strong> 来领悟和体会到其中抽象的知识（共性）。对于工具的使用则更加强调动手实践。</p>
-<p>先参考一下网上的资料：</p>
-<ul>
-<li><a href="https://www.zhihu.com/question/53729800" target="_blank" rel="noopener">知乎：Spring Boot要如何学习？</a></li>
-<li><a href="https://www.bilibili.com/video/av44560321?from=search&amp;seid=7097190869964471137" target="_blank" rel="noopener">bilibili：【自用】尚硅谷spring boot全套视频教程</a></li>
-</ul>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/blog/2018/09/02/Learning-SpringBoot2/#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://liuqinh2s.github.io/blog/blog/2018/05/28/APUE-3rd-读书笔记--File-IO/">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="liuqinh2s">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="https://wx4.sinaimg.cn/mw690/006zFO3gly1flf4xnd5q9j30ku0ku75r.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="liuqinh2s' blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/blog/2018/05/28/APUE-3rd-读书笔记--File-IO/" itemprop="url">《APUE-3rd》 读书笔记 -- File I/O</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-05-28T00:00:00+08:00">
-                2018-05-28
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
-                  <a href="/blog/categories/读书笔记/" itemprop="url" rel="index">
-                    <span itemprop="name">读书笔记</span>
-                  </a>
-                </span>
-
-                
-                
-                  , 
-                
-              
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
-                  <a href="/blog/categories/读书笔记/《APUE-3rd》/" itemprop="url" rel="index">
-                    <span itemprop="name">《APUE-3rd》</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">Words count in article&#58;</span>
-                
-                <span title="Words count in article">
-                  11,887
-                </span>
-              
-
-              
-
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>这章讲的是文件IO，其中有几个非常重要的概念：</p>
+          <h2 id="蓄水池算法-Reservoir-Sampling"><a href="#蓄水池算法-Reservoir-Sampling" class="headerlink" title="蓄水池算法(Reservoir Sampling)"></a>蓄水池算法(Reservoir Sampling)</h2><p>这个算法真的很奇妙，它的核心是一个<strong>数学证明</strong>。外延，或者说应用场景是：</p>
 <ol>
-<li>File Desriptors，文件描述符</li>
-<li>current file offset，当前文件偏移量</li>
-<li>File Sharing Data Structure，文件共享数据模型</li>
-<li>file descriptor flags ，文件描述位</li>
-<li>file status flags ，文件状态位</li>
+<li>$C_n^k$，也就是从大小为n的样本集中随机取k个不同的样本</li>
+<li>流式数据，或者说无法直接根据索引拿到数据（更加不可能一遍加载到内存）</li>
 </ol>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/blog/2018/05/28/APUE-3rd-读书笔记--File-IO/#more" rel="contents">
+            <a class="btn" href="/blog/2019/01/15/蓄水池算法/#more" rel="contents">
               Read more &raquo;
             </a>
           </div>
@@ -846,7 +658,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://liuqinh2s.github.io/blog/blog/2018/05/22/APUE-3rd-读书笔记--Unix System Overview/">
+    <link itemprop="mainEntityOfPage" href="http://liuqinh2s.github.io/blog/blog/2019/01/10/自己写Json解释器/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="liuqinh2s">
@@ -865,7 +677,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/blog/2018/05/22/APUE-3rd-读书笔记--Unix System Overview/" itemprop="url">《APUE-3rd》 读书笔记 -- Unix System Overview</a></h1>
+                <a class="post-title-link" href="/blog/2019/01/10/自己写Json解释器/" itemprop="url">自己写json解释器</a></h1>
         
 
         <div class="post-meta">
@@ -877,8 +689,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-05-22T00:00:00+08:00">
-                2018-05-22
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-01-10T00:00:00+08:00">
+                2019-01-10
               </time>
             
 
@@ -900,19 +712,8 @@
               
               
                 <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
-                  <a href="/blog/categories/读书笔记/" itemprop="url" rel="index">
-                    <span itemprop="name">读书笔记</span>
-                  </a>
-                </span>
-
-                
-                
-                  , 
-                
-              
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
-                  <a href="/blog/categories/读书笔记/《APUE-3rd》/" itemprop="url" rel="index">
-                    <span itemprop="name">《APUE-3rd》</span>
+                  <a href="/blog/categories/动手实践/" itemprop="url" rel="index">
+                    <span itemprop="name">动手实践</span>
                   </a>
                 </span>
 
@@ -942,7 +743,7 @@
                   <span class="post-meta-item-text">Words count in article&#58;</span>
                 
                 <span title="Words count in article">
-                  12,681
+                  1,540
                 </span>
               
 
@@ -968,21 +769,15 @@
 
       
         
-          <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>Unix系统中非常重要的概念：</p>
+          <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>最近发现自己似乎除了公司的项目外，基本没什么别的项目。有一个gitbook正在制作（严格来说并不是项目）：<a href="https://liuqinh2s.gitbooks.io/leetcode/" target="_blank" rel="noopener">leetcode刷题笔记</a>。最近一直在语雀上看阮一峰的每周分享，在第四期中看到这个：<a href="http://seriot.ch/parsing_json.php#1" target="_blank" rel="noopener">Douglas Crockford 的名片</a>。想来想去，觉得可以做几个解析器，比如<strong>json解析器</strong>，<strong>markdown解析器</strong>，<strong>正则表达式解析器</strong>等等，然后可以回过头再去看看编译原理，夯实基础。</p>
+<p>说干就干，先深入了解一下json，并看看别人如何实现json的解析。</p>
 <ul>
-<li>内核</li>
-<li>系统调用</li>
-<li>库函数</li>
-<li>shell</li>
-<li>文件、目录、路径、工作路径、权限管理</li>
-<li>文件描述符</li>
-<li>进程、线程</li>
-<li>错误处理</li>
-<li>信号</li>
+<li><a href="https://www.json.org/" target="_blank" rel="noopener">https://www.json.org/</a></li>
+<li><a href="https://zhuanlan.zhihu.com/p/28049617" target="_blank" rel="noopener">https://zhuanlan.zhihu.com/p/28049617</a></li>
 </ul>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/blog/2018/05/22/APUE-3rd-读书笔记--Unix System Overview/#more" rel="contents">
+            <a class="btn" href="/blog/2019/01/10/自己写Json解释器/#more" rel="contents">
               Read more &raquo;
             </a>
           </div>
@@ -1033,7 +828,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://liuqinh2s.github.io/blog/blog/2018/04/30/mathjax常用公式记录/">
+    <link itemprop="mainEntityOfPage" href="http://liuqinh2s.github.io/blog/blog/2019/01/07/第一个极限的证明/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="liuqinh2s">
@@ -1052,7 +847,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/blog/2018/04/30/mathjax常用公式记录/" itemprop="url">mathjax常用公式记录</a></h1>
+                <a class="post-title-link" href="/blog/2019/01/07/第一个极限的证明/" itemprop="url">$\lim\limits_{x\rightarrow 0} \frac{\sin x}{x} = 1$的证明</a></h1>
         
 
         <div class="post-meta">
@@ -1064,8 +859,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-04-30T00:00:00+08:00">
-                2018-04-30
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-01-07T00:00:00+08:00">
+                2019-01-07
               </time>
             
 
@@ -1087,19 +882,8 @@
               
               
                 <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
-                  <a href="/blog/categories/工具/" itemprop="url" rel="index">
-                    <span itemprop="name">工具</span>
-                  </a>
-                </span>
-
-                
-                
-                  , 
-                
-              
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
-                  <a href="/blog/categories/工具/LaTex/" itemprop="url" rel="index">
-                    <span itemprop="name">LaTex</span>
+                  <a href="/blog/categories/数学/" itemprop="url" rel="index">
+                    <span itemprop="name">数学</span>
                   </a>
                 </span>
 
@@ -1129,7 +913,7 @@
                   <span class="post-meta-item-text">Words count in article&#58;</span>
                 
                 <span title="Words count in article">
-                  180
+                  387
                 </span>
               
 
@@ -1155,15 +939,187 @@
 
       
         
-          <h2 id="角度记法"><a href="#角度记法" class="headerlink" title="角度记法"></a>角度记法</h2><ul>
-<li>度数：<script type="math/tex">60^\circ</script>，$60^\circ$</li>
-<li>度数分：<script type="math/tex">60^\prime</script>，$60^\prime$</li>
-<li>弧度：<script type="math/tex">\frac{\pi}{2}</script>，$\frac{\pi}{2}$</li>
-<li>角度记法：<script type="math/tex">\angle A</script>，$\angle A$</li>
-</ul>
+          <p>高数中的第一个证明，可能就是这个$\lim\limits_{x\rightarrow 0} \frac{\sin x}{x} = 1$的证明了。下面给出这个极限的证明，用到了解析几何（作图法）。</p>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/blog/2018/04/30/mathjax常用公式记录/#more" rel="contents">
+            <a class="btn" href="/blog/2019/01/07/第一个极限的证明/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://liuqinh2s.github.io/blog/blog/2018/11/22/js实现sleep方法的最佳实践/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="liuqinh2s">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="https://wx4.sinaimg.cn/mw690/006zFO3gly1flf4xnd5q9j30ku0ku75r.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="liuqinh2s' blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/blog/2018/11/22/js实现sleep方法的最佳实践/" itemprop="url">js实现sleep方法的最佳实践</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-11-22T00:00:00+08:00">
+                2018-11-22
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                  <a href="/blog/categories/编程语言/" itemprop="url" rel="index">
+                    <span itemprop="name">编程语言</span>
+                  </a>
+                </span>
+
+                
+                
+                  , 
+                
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                  <a href="/blog/categories/编程语言/JavaScript/" itemprop="url" rel="index">
+                    <span itemprop="name">JavaScript</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Words count in article&#58;</span>
+                
+                <span title="Words count in article">
+                  723
+                </span>
+              
+
+              
+
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <p><code>setTimeout</code>是异步的，跟其他语言里的<code>sleep</code>和<code>delay</code>并不一样，不能阻塞住程序。上网查了之后发现js没有自带的sleep方法，那么如何自己实现sleep方法呢？</p>
+<p><a href="https://stackoverflow.com/questions/951021/what-is-the-javascript-version-of-sleep" target="_blank" rel="noopener">What is the JavaScript version of sleep()?</a></p>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/blog/2018/11/22/js实现sleep方法的最佳实践/#more" rel="contents">
               Read more &raquo;
             </a>
           </div>
@@ -1205,7 +1161,7 @@
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/blog/page/6/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/blog/">1</a><span class="space">&hellip;</span><a class="page-number" href="/blog/page/6/">6</a><span class="page-number current">7</span><a class="page-number" href="/blog/page/8/">8</a><a class="page-number" href="/blog/page/9/">9</a><a class="extend next" rel="next" href="/blog/page/8/"><i class="fa fa-angle-right"></i></a>
+    <a class="extend prev" rel="prev" href="/blog/page/6/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/blog/">1</a><span class="space">&hellip;</span><a class="page-number" href="/blog/page/6/">6</a><span class="page-number current">7</span><a class="page-number" href="/blog/page/8/">8</a><span class="space">&hellip;</span><a class="page-number" href="/blog/page/12/">12</a><a class="extend next" rel="next" href="/blog/page/8/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 
@@ -1253,7 +1209,7 @@
               
                 <a href="/blog/archives">
               
-                  <span class="site-state-item-count">45</span>
+                  <span class="site-state-item-count">59</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -1379,7 +1335,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">75.9k</span>
+    <span title="Site words total count">80.8k</span>
   
 </div>
 
