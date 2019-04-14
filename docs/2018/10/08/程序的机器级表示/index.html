@@ -119,7 +119,7 @@
 <meta property="og:image" content="http://liuqinh2s.github.io/blog/images/2018/金丝雀值.png">
 <meta property="og:image" content="http://liuqinh2s.github.io/blog/images/2018/含金丝雀值汇编码1.png">
 <meta property="og:image" content="http://liuqinh2s.github.io/blog/images/2018/含金丝雀值汇编码2.png">
-<meta property="og:updated_time" content="2019-03-08T07:33:35.712Z">
+<meta property="og:updated_time" content="2019-04-14T11:38:41.912Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="《CSAPP》读书笔记 -- 第3章：程序的机器级表示">
 <meta name="twitter:description" content="从编译C语言文件说起1$ gcc -01 -o p p1.c p2.c 使用了gcc命令来编译，也可以简单写作：cc。 优化层级为1，1级是最低的，层级越高程序优化越好，但增加了编译时间，也使调试变得更难，且跟源程序差异很大不便于理解。 编译的流程是：  预处理器（preprocessor）把诸如：#include、#define、#if、#else、#elif、#ifdef、#endif等预编译">
@@ -171,7 +171,7 @@
 
 </head>
 
-<body itemscope="" itemtype="http://schema.org/WebPage" lang="en">
+<body itemscope itemtype="http://schema.org/WebPage" lang="en">
 
   
   
@@ -181,7 +181,7 @@
   <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
-    <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
       <div class="header-inner"><div class="site-brand-wrapper">
   <div class="site-meta ">
     
@@ -343,20 +343,20 @@
   
   
 
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
   
   
   
   <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://liuqinh2s.github.io/blog/blog/2018/10/08/程序的机器级表示/">
 
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="liuqinh2s">
-      <meta itemprop="description" content="">
+      <meta itemprop="description" content>
       <meta itemprop="image" content="https://wx4.sinaimg.cn/mw690/006zFO3gly1flf4xnd5q9j30ku0ku75r.jpg">
     </span>
 
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="liuqinh2s' blog">
     </span>
 
@@ -399,7 +399,7 @@
                 <span class="post-meta-item-text">In</span>
               
               
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
                   <a href="/blog/categories/读书笔记/" itemprop="url" rel="index">
                     <span itemprop="name">读书笔记</span>
                   </a>
@@ -410,7 +410,7 @@
                   , 
                 
               
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
                   <a href="/blog/categories/读书笔记/《CSAPP》/" itemprop="url" rel="index">
                     <span itemprop="name">《CSAPP》</span>
                   </a>
@@ -581,7 +581,7 @@
 <p>举个例子：t=a+b，a、b、t都是整形数。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">CF: (unsigned)t&lt;(unsigned)a       无符号溢出</span><br><span class="line">ZF: (t==0)                        零</span><br><span class="line">SF: (t&lt;0)                         负数</span><br><span class="line">OF: (a&lt;0 == b&lt;0) &amp;&amp; (t&lt;0 != a&lt;0)  有符号溢出</span><br></pre></td></tr></table></figure>
 <blockquote>
-<p>OF的表达式也可以写作：(a<0 &&="" b<0="" t="">0) || (a&gt;0 &amp;&amp; b&gt;0 &amp;&amp; t&lt;0)，也就是说a、b都是负数相加却是正数，或者a、b都是正数相加却是负数，这两种情况就代表溢出了。</0></p>
+<p>OF的表达式也可以写作：(a<0 && b<0 t>0) || (a&gt;0 &amp;&amp; b&gt;0 &amp;&amp; t&lt;0)，也就是说a、b都是负数相加却是正数，或者a、b都是正数相加却是负数，这两种情况就代表溢出了。</0></p>
 </blockquote>
 <p>leal操作不会改变状态码，因为这个指令只是用来计算地址。除此之外表3.7中的所有操作都可能改变状态码。例如逻辑操作：XOR，会使CF和OF置零，移位操作会使CF置为最后一个移位出去的bit，但OF要置零。自增和自减指令会设置OF和ZF，不设置CF。</p>
 <p>CMP指令类似于SUB指令，但只修改状态码而不改变其他寄存器，如果两个操作数相等，ZF就会被设置；TEST指令类似于AND指令，但只修改状态码而不改变其他寄存器，如果两个操作数是重复的： testl %eax,%eax，作用是检测%eax是0，还是正数，还是负数。</p>
@@ -849,7 +849,7 @@
 
       <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
-          <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
               <img class="site-author-image" itemprop="image" src="https://wx4.sinaimg.cn/mw690/006zFO3gly1flf4xnd5q9j30ku0ku75r.jpg" alt="liuqinh2s">
             
@@ -1006,7 +1006,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">80.8k</span>
+    <span title="Site words total count">81.0k</span>
   
 </div>
 

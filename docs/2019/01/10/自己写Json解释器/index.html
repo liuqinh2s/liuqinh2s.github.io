@@ -94,7 +94,7 @@
 <meta property="og:image" content="https://cdn.nlark.com/yuque/0/2019/gif/243235/1548817346617-bbaece81-ac6b-44c5-8f3b-c812282d09bb.gif#align=left&display=inline&height=413&linkTarget=_blank&originHeight=413&originWidth=598&size=0&width=598">
 <meta property="og:image" content="https://cdn.nlark.com/yuque/0/2019/gif/243235/1548817346858-d84fda0d-6473-44b3-b68e-e94d7e9de14a.gif#align=left&display=inline&height=266&linkTarget=_blank&originHeight=266&originWidth=598&size=0&width=598">
 <meta property="og:image" content="http://wx2.sinaimg.cn/mw690/006zFO3ggy1fzofc13iqfj30ku0fv0su.jpg">
-<meta property="og:updated_time" content="2019-03-08T07:33:35.770Z">
+<meta property="og:updated_time" content="2019-04-14T11:38:41.914Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="自己写json解释器">
 <meta name="twitter:description" content="前言最近发现自己似乎除了公司的项目外，基本没什么别的项目。有一个gitbook正在制作（严格来说并不是项目）：leetcode刷题笔记。最近一直在语雀上看阮一峰的每周分享，在第四期中看到这个：Douglas Crockford 的名片。想来想去，觉得可以做几个解析器，比如json解析器，markdown解析器，正则表达式解析器等等，然后可以回过头再去看看编译原理，夯实基础。 说干就干，先深入了解一">
@@ -146,7 +146,7 @@
 
 </head>
 
-<body itemscope="" itemtype="http://schema.org/WebPage" lang="en">
+<body itemscope itemtype="http://schema.org/WebPage" lang="en">
 
   
   
@@ -156,7 +156,7 @@
   <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
-    <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
       <div class="header-inner"><div class="site-brand-wrapper">
   <div class="site-meta ">
     
@@ -318,20 +318,20 @@
   
   
 
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
   
   
   
   <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://liuqinh2s.github.io/blog/blog/2019/01/10/自己写Json解释器/">
 
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="liuqinh2s">
-      <meta itemprop="description" content="">
+      <meta itemprop="description" content>
       <meta itemprop="image" content="https://wx4.sinaimg.cn/mw690/006zFO3gly1flf4xnd5q9j30ku0ku75r.jpg">
     </span>
 
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="liuqinh2s' blog">
     </span>
 
@@ -374,7 +374,7 @@
                 <span class="post-meta-item-text">In</span>
               
               
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
                   <a href="/blog/categories/动手实践/" itemprop="url" rel="index">
                     <span itemprop="name">动手实践</span>
                   </a>
@@ -449,20 +449,20 @@
 <li>键值对。在其他语言中，又叫做：object（对象），record（记录），struct（结构体），dictionary（字典），hash table（哈希表），keyed list（键列），associative array（关联数组）。</li>
 <li>数组。</li>
 </ul>
-<p><img src="https://cdn.nlark.com/yuque/0/2019/gif/243235/1548817346559-bec98671-6891-4e18-9c1b-f7495f20fba7.gif#align=left&amp;display=inline&amp;height=113&amp;linkTarget=_blank&amp;originHeight=113&amp;originWidth=598&amp;size=0&amp;width=598" alt=""></p>
-<p><img src="https://cdn.nlark.com/yuque/0/2019/gif/243235/1548817346985-ad605362-85e9-4122-873c-3ea760702448.gif#align=left&amp;display=inline&amp;height=113&amp;linkTarget=_blank&amp;originHeight=113&amp;originWidth=598&amp;size=0&amp;width=598" alt=""></p>
+<p><img src="https://cdn.nlark.com/yuque/0/2019/gif/243235/1548817346559-bec98671-6891-4e18-9c1b-f7495f20fba7.gif#align=left&amp;display=inline&amp;height=113&amp;linkTarget=_blank&amp;originHeight=113&amp;originWidth=598&amp;size=0&amp;width=598" alt></p>
+<p><img src="https://cdn.nlark.com/yuque/0/2019/gif/243235/1548817346985-ad605362-85e9-4122-873c-3ea760702448.gif#align=left&amp;display=inline&amp;height=113&amp;linkTarget=_blank&amp;originHeight=113&amp;originWidth=598&amp;size=0&amp;width=598" alt></p>
 <p><strong>对于具体的值而言，有七种：</strong></p>
-<p><img src="https://cdn.nlark.com/yuque/0/2019/gif/243235/1548817346509-3ff705a1-3d80-4bb9-a007-6d7351d2ccc2.gif#align=left&amp;display=inline&amp;height=278&amp;linkTarget=_blank&amp;originHeight=278&amp;originWidth=598&amp;size=0&amp;width=598" alt=""></p>
+<p><img src="https://cdn.nlark.com/yuque/0/2019/gif/243235/1548817346509-3ff705a1-3d80-4bb9-a007-6d7351d2ccc2.gif#align=left&amp;display=inline&amp;height=278&amp;linkTarget=_blank&amp;originHeight=278&amp;originWidth=598&amp;size=0&amp;width=598" alt></p>
 <p>其中<code>true</code>、<code>false</code>、<code>null</code>这三种都是极其容易解析的，这里就不展示铁路图。下面展示一下<code>string</code>和<code>number</code>的铁路图。</p>
 <p><strong>string：</strong></p>
-<p><img src="https://cdn.nlark.com/yuque/0/2019/gif/243235/1548817346617-bbaece81-ac6b-44c5-8f3b-c812282d09bb.gif#align=left&amp;display=inline&amp;height=413&amp;linkTarget=_blank&amp;originHeight=413&amp;originWidth=598&amp;size=0&amp;width=598" alt=""></p>
+<p><img src="https://cdn.nlark.com/yuque/0/2019/gif/243235/1548817346617-bbaece81-ac6b-44c5-8f3b-c812282d09bb.gif#align=left&amp;display=inline&amp;height=413&amp;linkTarget=_blank&amp;originHeight=413&amp;originWidth=598&amp;size=0&amp;width=598" alt></p>
 <p><code>string</code>只有两种特殊情况，且都比较简单：</p>
 <ol>
 <li>遇到<code>\</code>且后面是<code>u</code>，那么说明接下来的4个字节是一组的，组成一个unicode编码。<br></li>
 <li>遇到<code>\</code>且后面不是<code>u</code>，那么只对后面紧跟的一个字节转义。<br></li>
 </ol>
 <p><strong>number：</strong></p>
-<p><img src="https://cdn.nlark.com/yuque/0/2019/gif/243235/1548817346858-d84fda0d-6473-44b3-b68e-e94d7e9de14a.gif#align=left&amp;display=inline&amp;height=266&amp;linkTarget=_blank&amp;originHeight=266&amp;originWidth=598&amp;size=0&amp;width=598" alt=""></p>
+<p><img src="https://cdn.nlark.com/yuque/0/2019/gif/243235/1548817346858-d84fda0d-6473-44b3-b68e-e94d7e9de14a.gif#align=left&amp;display=inline&amp;height=266&amp;linkTarget=_blank&amp;originHeight=266&amp;originWidth=598&amp;size=0&amp;width=598" alt></p>
 <p>这个图其实也很简单，首先是有负号或者没负号（如果是正数，不用写正号）；然后是数字部分，要么是0，要么是非0开头的一串数字。然后是小数点，然后是小数部分，然后是指数部分。</p>
 <h2 id="开始写代码"><a href="#开始写代码" class="headerlink" title="开始写代码"></a>开始写代码</h2><p>代码地址：<a href="https://gist.github.com/liuqinh2s/9cdae8d5d6e476259d82d92c7da1cb93" target="_blank" rel="noopener">json解析器（java版）</a><br><strong>在json中解析一个值只需要看第一个字符就知道了，json的解析不需要先做tokenize。</strong><br>我们先对json字符串进行<code>trim()</code>操作，去除掉首位多余的空白符。<br>我们使用一个全局变量<code>index</code>，来记录读到哪个位置了。使用<code>ignoreWhiteSpace()</code>方法来略过空白符。</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">ignoreWhiteSpace</span><span class="params">()</span> <span class="keyword">throws</span> Exception </span>&#123;</span><br><span class="line">    <span class="keyword">while</span> (index &lt; json.length()) &#123;</span><br><span class="line">        <span class="keyword">if</span> (json.charAt(index) &lt;= <span class="string">' '</span>) &#123;</span><br><span class="line">            index++;</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> (index &gt;= json.length()) &#123;</span><br><span class="line">        <span class="keyword">throw</span> <span class="keyword">new</span> Exception(<span class="string">"illegal json string, while parsing value ArrayIndexOutOfBounds"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -583,7 +583,7 @@
 
       <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
-          <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
               <img class="site-author-image" itemprop="image" src="https://wx4.sinaimg.cn/mw690/006zFO3gly1flf4xnd5q9j30ku0ku75r.jpg" alt="liuqinh2s">
             
@@ -740,7 +740,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">80.8k</span>
+    <span title="Site words total count">81.0k</span>
   
 </div>
 
