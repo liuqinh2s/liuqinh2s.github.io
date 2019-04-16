@@ -1,6 +1,6 @@
 ---
 title: Hexo+Markdown+MathJax搭建个人博客
-categories: [动手实践]
+categories: [do it yourself]
 comments: true
 ---
 

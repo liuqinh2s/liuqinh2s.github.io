@@ -88,7 +88,7 @@
 <meta property="og:site_name" content="liuqinh2s&#39; blog">
 <meta property="og:description" content="介绍动态数组在每次容量用尽时，重新申请2倍于当前数组的空间，并将原数组中的内容拷贝到新的空间，然后释放原数组的内存空间。对于动态数组，每次插入的花费有两种情况：  容量够用，我们只需要存储新的元素 容量不够用，创建新的空间，拷贝原数组进新的空间，再存储这个新的元素  分析方法有许多，统称为：amortized analysis（分摊分析）">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-04-14T11:38:41.916Z">
+<meta property="og:updated_time" content="2019-04-15T01:51:01.053Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="动态数组的分摊分析">
 <meta name="twitter:description" content="介绍动态数组在每次容量用尽时，重新申请2倍于当前数组的空间，并将原数组中的内容拷贝到新的空间，然后释放原数组的内存空间。对于动态数组，每次插入的花费有两种情况：  容量够用，我们只需要存储新的元素 容量不够用，创建新的空间，拷贝原数组进新的空间，再存储这个新的元素  分析方法有许多，统称为：amortized analysis（分摊分析）">
@@ -212,42 +212,12 @@
         </li>
       
         
-        <li class="menu-item menu-item-math">
-          <a href="/blog/Math/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-coffee"></i> <br>
-            
-            Math
-          </a>
-        </li>
-      
-        
         <li class="menu-item menu-item-notes">
           <a href="/blog/notes/" rel="section">
             
               <i class="menu-item-icon fa fa-fw fa-book"></i> <br>
             
             Notes
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-tools">
-          <a href="/blog/Tools/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-wrench"></i> <br>
-            
-            Tools
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-english">
-          <a href="/blog/English/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-language"></i> <br>
-            
-            English
           </a>
         </li>
       
@@ -438,7 +408,7 @@
 <a id="more"></a>
 <p><a href="https://www.cs.cornell.edu/courses/cs3110/2013sp/lectures/lec21-amortized/lec21.html" target="_blank" rel="noopener">Lecture 21: Amortized Analysis</a></p>
 <h3 id="统计分析（aggregate-method）"><a href="#统计分析（aggregate-method）" class="headerlink" title="统计分析（aggregate method）"></a>统计分析（aggregate method）</h3><p>把n词操作花费求和，然后取平均值。</p>
-<p>每次扩容时，后半部分元素统一进行第一次移动，而这些元素之后的所有移动操作也是一起发生的，因而我们发现元素是以组为单位，组内的元素移动次数相同。那么有多少个这种组呢？第一组是单个元素，第二组也是单个元素，第三组是两个元素，第四组是四个元素，第五组是8个元素，… ，以此类推。而：</p>
+<p>每次扩容时，后半部分元素统一进行第一次移动，而这些元素之后的所有移动操作也是一起发生的，因而我们发现元素是以组为单位，组内的元素移动次数相同。那么有多少个这种组呢？第一组是单个元素，第二组也是单个元素，第三组是两个元素，第四组是四个元素，第五组是8个元素，... ，以此类推。而：</p>
 <script type="math/tex; mode=display">
 1 + 1 + 2+ 2^2 + \cdots + 2^i = n</script><script type="math/tex; mode=display">
 i = \log_2 n -1</script><p>而这些组的移动次数分别是多少呢？最后一组元素只移动一次，倒数第二组元素移动2次，以此类推。所以总的移动次数是：</p>
@@ -465,11 +435,11 @@ n + \frac{n}{2} + \cdots + 1 = 2n-1</script><p>所以移动的平均次数是：
 \Phi(h) = 2n-m</script><p>其中n是当前数组元素的个数，m是当前数组内存空间大小。</p>
 <p>每次插入的费用函数定义为：</p>
 <script type="math/tex; mode=display">
-c+\Phi(h')-\Phi(h)</script><p>c表示当前插入操作的总的花费，$\Phi(h’)$是插入后的势能函数，$\Phi(h)$是插入前的势能函数。</p>
+c+\Phi(h')-\Phi(h)</script><p>c表示当前插入操作的总的花费，$\Phi(h&#39;)$是插入后的势能函数，$\Phi(h)$是插入前的势能函数。</p>
 <p>这里分为两种情况：</p>
 <ol>
 <li>如果<code>n&lt;m</code>，不必扩容，c=1，势能函数相差2，所以加起来是3</li>
-<li>如果<code>n=m</code>，那么就要扩容，c=n+1，$\Phi(h’)=2(n+1)-2n$，$\Phi(h)=2n-n$，加起来还是3</li>
+<li>如果<code>n=m</code>，那么就要扩容，c=n+1，$\Phi(h&#39;)=2(n+1)-2n$，$\Phi(h)=2n-n$，加起来还是3</li>
 </ol>
 <p>所以费用函数其实是一个等于3的常数函数。</p>
 
@@ -496,8 +466,8 @@ c+\Phi(h')-\Phi(h)</script><p>c表示当前插入操作的总的花费，$\Phi(h
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/blog/2019/03/03/面试题8：旋转数组的最小数字/" rel="next" title="面试题8：旋转数组的最小数字">
-                <i class="fa fa-chevron-left"></i> 面试题8：旋转数组的最小数字
+              <a href="/blog/2019/03/02/面试题7：用两个栈实现队列/" rel="next" title="面试题7：用两个栈实现队列">
+                <i class="fa fa-chevron-left"></i> 面试题7：用两个栈实现队列
               </a>
             
           </div>
@@ -506,8 +476,8 @@ c+\Phi(h')-\Phi(h)</script><p>c表示当前插入操作的总的花费，$\Phi(h
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/blog/2019/03/03/To be a publisher/" rel="prev" title="To be a publisher">
-                To be a publisher <i class="fa fa-chevron-right"></i>
+              <a href="/blog/2019/03/03/面试题8：旋转数组的最小数字/" rel="prev" title="面试题8：旋转数组的最小数字">
+                面试题8：旋转数组的最小数字 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -592,7 +562,7 @@ c+\Phi(h')-\Phi(h)</script><p>c表示当前插入操作的总的花费，$\Phi(h
               
                 <a href="/blog/archives">
               
-                  <span class="site-state-item-count">59</span>
+                  <span class="site-state-item-count">61</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -738,7 +708,7 @@ c+\Phi(h')-\Phi(h)</script><p>c表示当前插入操作的总的花费，$\Phi(h
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">81.0k</span>
+    <span title="Site words total count">74.8k</span>
   
 </div>
 

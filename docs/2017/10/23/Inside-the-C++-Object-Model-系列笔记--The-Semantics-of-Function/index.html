@@ -90,7 +90,7 @@
 <meta property="og:description" content="c++支持三种类型的成员函数，分别为static,nostatic,virtual。每一种调用方式都不尽相同。">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="https://i.loli.net/2018/04/25/5ae01bb4b32a9.gif">
-<meta property="og:updated_time" content="2019-04-14T11:38:41.910Z">
+<meta property="og:updated_time" content="2019-04-15T01:51:01.029Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Inside the C++ Object Model 系列笔记 四 -- The Semantics of Function">
 <meta name="twitter:description" content="c++支持三种类型的成员函数，分别为static,nostatic,virtual。每一种调用方式都不尽相同。">
@@ -215,42 +215,12 @@
         </li>
       
         
-        <li class="menu-item menu-item-math">
-          <a href="/blog/Math/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-coffee"></i> <br>
-            
-            Math
-          </a>
-        </li>
-      
-        
         <li class="menu-item menu-item-notes">
           <a href="/blog/notes/" rel="section">
             
               <i class="menu-item-icon fa fa-fw fa-book"></i> <br>
             
             Notes
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-tools">
-          <a href="/blog/Tools/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-wrench"></i> <br>
-            
-            Tools
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-english">
-          <a href="/blog/English/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-language"></i> <br>
-            
-            English
           </a>
         </li>
       
@@ -448,9 +418,9 @@
 </blockquote>
 <a id="more"></a>
 <h2 id="nonstatic-member-function"><a href="#nonstatic-member-function" class="headerlink" title="nonstatic member function"></a>nonstatic member function</h2><p>C++的设计准则之一就是:nonstatic member function至少必须和一般的nonmember function 有相同的效率。<br>实际上，nonstatic member function 会被编译器进行如下的转换，变成一个普通函数:</p>
-<p>Type1 X::foo(Type2 arg1) { … }</p>
+<p>Type1 X::foo(Type2 arg1) { ... }</p>
 <p>会被转换为如下的普通函数:</p>
-<p>void foo(X *const this, Type1 &amp;__result, Type2 arg1) { … }</p>
+<p>void foo(X *const this, Type1 &amp;__result, Type2 arg1) { ... }</p>
 <p>改写函数原型，在参数中增加this指针，对每一个”nonstatic data member的存取操作”改为由this指针来存取</p>
 <p>将member function重写为一个外部函数，经过”mangling”处理（不需要处理的加上 extern “C”）</p>
 <p>实际上，普通函数、普通成员函数、静态成员函数到最后都会变成与C语言函数类似的普通函数，只是编译器在这些不同类型的函数身上做了不同的扩展，并放在不同的 scope 里面而已。</p>
@@ -479,7 +449,7 @@
 <li>其中vptr为指向虚函数表的指针，它由编译器产生。vptr也要进行名字处理，因为一个继承体系可能有多个vptr。</li>
 <li>1是虚函数在虚函数表中的索引，通过它关联到虚函数function().</li>
 </ul>
-<p>何时发生这种转换？答案是在必需的时候 — 一个再熟悉不过的答案。当通过指针调用的时候，要调用的函数实体无法在编译期决定，必需待到执行期才能获得，所以上面引入一个间接层的转换必不可少。但是当我们通过对象（不是引用，也不是指针）来调用的时候，<br>进行上面的转换就显得多余了，因为在编译器要调用的函数实体已经被决定。此时调用发生的转换，与一个非静态成员函数(Nonstatic Member Functions)调用发生的转换一致。p.function()的处理就跟非静态成员函数一样了。</p>
+<p>何时发生这种转换？答案是在必需的时候 -- 一个再熟悉不过的答案。当通过指针调用的时候，要调用的函数实体无法在编译期决定，必需待到执行期才能获得，所以上面引入一个间接层的转换必不可少。但是当我们通过对象（不是引用，也不是指针）来调用的时候，<br>进行上面的转换就显得多余了，因为在编译器要调用的函数实体已经被决定。此时调用发生的转换，与一个非静态成员函数(Nonstatic Member Functions)调用发生的转换一致。p.function()的处理就跟非静态成员函数一样了。</p>
 <h2 id="Static-Member-Function"><a href="#Static-Member-Function" class="headerlink" title="Static Member Function"></a>Static Member Function</h2><ul>
 <li>不能够直接存取其类中的非静态成员（nostatic members），包括不能调用非静态成员函数(Nonstatic Member Functions)。</li>
 <li>不能声明为const、volatile或virtual</li>
@@ -501,10 +471,10 @@
 <p><img src="https://i.loli.net/2018/04/25/5ae01bb4b32a9.gif" alt="虚函数表的构造"></p>
 <p>从内存布局的角度看，类对象继承基类的时候只把基类的 nonstatic data member和member function（函数入口，也可以说是函数指针） 放进自己内存里，static data member和static function都在global address里面。然后就是虚函数表是复制了一份基类的虚函数表，然后把virtual实现了的部分替换掉，没实现的就不改，依然用父类的。然后虚函数表指针自然也要不一样，毕竟指向的内存地址不一样，对吧。</p>
 <h2 id="Inside-the-C-Object-Model-系列笔记向导"><a href="#Inside-the-C-Object-Model-系列笔记向导" class="headerlink" title="Inside the C++ Object Model 系列笔记向导"></a>Inside the C++ Object Model 系列笔记向导</h2><ul>
-<li><a href="../../19/Inside-the-C++-Object-Model-系列笔记--Object-Lessons">Inside the C++ Object Model 系列笔记 一 — Object Lessons</a></li>
-<li><a href="../../19/Inside-the-C++-Object-Model-系列笔记--The-Semantics-of-constructors">Inside the C++ Object Model 系列笔记 二 — The Semantics of constructors</a></li>
-<li><a href="../../21/Inside-the-C++-Object-Model-系列笔记--The-Semantics-of-Data">Inside the C++ Object Model 系列笔记 三 — The Semantics of Data</a></li>
-<li><a href="../../23/Inside-the-C++-Object-Model-系列笔记--The-Semantics-of-Function">Inside the C++ Object Model 系列笔记 四 — The Semantics of Function</a></li>
+<li><a href="../../19/Inside-the-C++-Object-Model-系列笔记--Object-Lessons">Inside the C++ Object Model 系列笔记 一 -- Object Lessons</a></li>
+<li><a href="../../19/Inside-the-C++-Object-Model-系列笔记--The-Semantics-of-constructors">Inside the C++ Object Model 系列笔记 二 -- The Semantics of constructors</a></li>
+<li><a href="../../21/Inside-the-C++-Object-Model-系列笔记--The-Semantics-of-Data">Inside the C++ Object Model 系列笔记 三 -- The Semantics of Data</a></li>
+<li><a href="../../23/Inside-the-C++-Object-Model-系列笔记--The-Semantics-of-Function">Inside the C++ Object Model 系列笔记 四 -- The Semantics of Function</a></li>
 </ul>
 
       
@@ -632,7 +602,7 @@
               
                 <a href="/blog/archives">
               
-                  <span class="site-state-item-count">59</span>
+                  <span class="site-state-item-count">61</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -778,7 +748,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">81.0k</span>
+    <span title="Site words total count">74.8k</span>
   
 </div>
 

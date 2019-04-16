@@ -81,16 +81,17 @@
 
 
 
-<meta name="description" content="Computer Science is not a magicTo be a hacker">
-<meta property="og:type" content="website">
-<meta property="og:title" content="liuqinh2s&#39; blog">
-<meta property="og:url" content="http://liuqinh2s.github.io/blog/categories/随笔/index.html">
+<meta name="description" content="今天同学群里面讨论了这样一段代码，说是产品出了bug，现场急着修复。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="C++ map的remove函数实现">
+<meta property="og:url" content="http://liuqinh2s.github.io/blog/2019/04/15/C++ map的remove函数实现/index.html">
 <meta property="og:site_name" content="liuqinh2s&#39; blog">
-<meta property="og:description" content="Computer Science is not a magicTo be a hacker">
+<meta property="og:description" content="今天同学群里面讨论了这样一段代码，说是产品出了bug，现场急着修复。">
 <meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2019-04-15T06:58:59.129Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="liuqinh2s&#39; blog">
-<meta name="twitter:description" content="Computer Science is not a magicTo be a hacker">
+<meta name="twitter:title" content="C++ map的remove函数实现">
+<meta name="twitter:description" content="今天同学群里面讨论了这样一段代码，说是产品出了bug，现场急着修复。">
 
 
 
@@ -120,13 +121,13 @@
 
 
 
-  <link rel="canonical" href="http://liuqinh2s.github.io/blog/categories/随笔/">
+  <link rel="canonical" href="http://liuqinh2s.github.io/blog/2019/04/15/C++ map的remove函数实现/">
 
 
 
 
 
-  <title>Category: 随笔 | liuqinh2s' blog</title>
+  <title>C++ map的remove函数实现 | liuqinh2s' blog</title>
   
 
 
@@ -145,7 +146,7 @@
     
   
 
-  <div class="container sidebar-position-left ">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -211,42 +212,12 @@
         </li>
       
         
-        <li class="menu-item menu-item-math">
-          <a href="/blog/Math/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-coffee"></i> <br>
-            
-            Math
-          </a>
-        </li>
-      
-        
         <li class="menu-item menu-item-notes">
           <a href="/blog/notes/" rel="section">
             
               <i class="menu-item-icon fa fa-fw fa-book"></i> <br>
             
             Notes
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-tools">
-          <a href="/blog/Tools/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-wrench"></i> <br>
-            
-            Tools
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-english">
-          <a href="/blog/English/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-language"></i> <br>
-            
-            English
           </a>
         </li>
       
@@ -301,53 +272,197 @@
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block category">
+  <div id="posts" class="posts-expand">
+    
 
-    <div id="posts" class="posts-collapse">
-      <div class="collection-title">
-        <h1>随笔<small>Category</small>
-        </h1>
-      </div>
+  
 
-      
-        
+  
+  
+  
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://liuqinh2s.github.io/blog/blog/2019/04/15/C++ map的remove函数实现/">
 
-      <h2 class="post-title">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="liuqinh2s">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="https://wx4.sinaimg.cn/mw690/006zFO3gly1flf4xnd5q9j30ku0ku75r.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="liuqinh2s' blog">
+    </span>
+
+    
+      <header class="post-header">
+
         
-            <a class="post-title-link" href="/blog/2019/03/03/To be a publisher/" itemprop="url">
-              
-                <span itemprop="name">To be a publisher</span>
-              
-            </a>
         
-      </h2>
+          <h1 class="post-title" itemprop="name headline">C++ map的remove函数实现</h1>
+        
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-03-03T00:00:00+08:00" content="2019-03-03">
-          03-03
-        </time>
-      </div>
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-04-15T00:00:00+08:00">
+                2019-04-15
+              </time>
+            
 
-    </header>
-  </article>
+            
 
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/blog/categories/fixed-issues/" itemprop="url" rel="index">
+                    <span itemprop="name">fixed issues</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="page-pv"><i class="fa fa-eye"></i>
+            <span class="busuanzi-value" id="busuanzi_value_page_pv"></span>
+            </span>
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Words count in article&#58;</span>
+                
+                <span title="Words count in article">
+                  421
+                </span>
+              
+
+              
+
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>今天同学群里面讨论了这样一段代码，说是产品出了bug，现场急着修复。</p>
+<a id="more"></a>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;map&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;string&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="built_in">std</span>::<span class="built_in">cout</span> &lt;&lt; <span class="string">"hello world"</span> &lt;&lt; <span class="built_in">std</span>::<span class="built_in">endl</span>;</span><br><span class="line">    <span class="built_in">std</span>::<span class="built_in">map</span>&lt;<span class="keyword">int</span>, <span class="built_in">std</span>::<span class="built_in">string</span>&gt; mapPeople;</span><br><span class="line">    mapPeople[<span class="number">1</span>] = <span class="string">"hexu1"</span>;</span><br><span class="line">    mapPeople[<span class="number">2</span>] = <span class="string">"hexu2"</span>;</span><br><span class="line">    <span class="comment">// mapPeople[3] = "hexu3";</span></span><br><span class="line">    <span class="comment">// mapPeople[4] = "hexu4";</span></span><br><span class="line"></span><br><span class="line">    <span class="built_in">std</span>::<span class="built_in">map</span>&lt;<span class="keyword">int</span>, <span class="built_in">std</span>::<span class="built_in">string</span>&gt;::iterator iter = mapPeople.begin();</span><br><span class="line">    <span class="keyword">for</span> (; iter != mapPeople.end(); iter++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span> (iter-&gt;first == <span class="number">2</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="built_in">std</span>::<span class="built_in">cout</span> &lt;&lt; <span class="string">"id : "</span> &lt;&lt; iter-&gt;first &lt;&lt; <span class="string">", name : "</span> &lt;&lt; iter-&gt;second &lt;&lt; <span class="built_in">std</span>::<span class="built_in">endl</span>;</span><br><span class="line">            mapPeople.erase(iter++);</span><br><span class="line">            <span class="built_in">std</span>::<span class="built_in">cout</span> &lt;&lt; (iter != mapPeople.end()) &lt;&lt; <span class="built_in">std</span>::<span class="built_in">endl</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    </span><br><span class="line">    <span class="comment">//for (; iter != mapPeople.end();)</span></span><br><span class="line">    <span class="comment">//&#123;</span></span><br><span class="line">    <span class="comment">//	if (iter-&gt;first == 2)</span></span><br><span class="line">    <span class="comment">//	&#123;</span></span><br><span class="line">    <span class="comment">//		std::cout &lt;&lt; "id : " &lt;&lt; iter-&gt;first &lt;&lt; ", name : " &lt;&lt; iter-&gt;second &lt;&lt; std::endl;</span></span><br><span class="line">    <span class="comment">//		mapPeople.erase(iter++);</span></span><br><span class="line">    <span class="comment">//		if (iter == mapPeople.end())</span></span><br><span class="line">    <span class="comment">//			break;</span></span><br><span class="line">    <span class="comment">//	&#125;</span></span><br><span class="line">    <span class="comment">//	iter++;</span></span><br><span class="line">    <span class="comment">//&#125;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//    getchar();</span></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>说是第一个for循环会崩溃，第二个for循环可以通过。经过分析，主要问题其实是出在对迭代器和erase的不熟悉上，导致错误的使用，除此之外这个程序还有一个明显的问题，就是在erase这条分支中，iter++了两次。那么如何正确的写一个remove函数呢？代码如下：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;map&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;string&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="built_in">std</span>::<span class="built_in">cout</span> &lt;&lt; <span class="string">"hello world"</span> &lt;&lt; <span class="built_in">std</span>::<span class="built_in">endl</span>;</span><br><span class="line">    <span class="built_in">std</span>::<span class="built_in">map</span>&lt;<span class="keyword">int</span>, <span class="built_in">std</span>::<span class="built_in">string</span>&gt; mapPeople;</span><br><span class="line">    mapPeople[<span class="number">1</span>] = <span class="string">"hexu1"</span>;</span><br><span class="line">    mapPeople[<span class="number">2</span>] = <span class="string">"hexu2"</span>;</span><br><span class="line">    mapPeople[<span class="number">3</span>] = <span class="string">"hexu3"</span>;</span><br><span class="line">    mapPeople[<span class="number">4</span>] = <span class="string">"hexu4"</span>;</span><br><span class="line"></span><br><span class="line">    <span class="built_in">std</span>::<span class="built_in">map</span>&lt;<span class="keyword">int</span>, <span class="built_in">std</span>::<span class="built_in">string</span>&gt;::iterator iter = mapPeople.begin();</span><br><span class="line">    <span class="keyword">while</span> (iter != mapPeople.end())</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span> (iter-&gt;first == <span class="number">2</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="built_in">std</span>::<span class="built_in">cout</span> &lt;&lt; <span class="string">"id : "</span> &lt;&lt; iter-&gt;first &lt;&lt; <span class="string">", name : "</span> &lt;&lt; iter-&gt;second &lt;&lt; <span class="built_in">std</span>::<span class="built_in">endl</span>;</span><br><span class="line">            iter = mapPeople.erase(iter);</span><br><span class="line">            <span class="keyword">continue</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        iter++;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>碰到删除的时候，要小心，可以这么写：<code>iter = mapPeople.erase(iter);</code>，也可以这么写：<code>mapPeople.erase(iter++);</code>（必须在删除前给迭代器，否则迭代器会失效）。</p>
+<p>另外注意迭代器不要加两次。</p>
 
       
     </div>
+    
+    
+    
 
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/blog/2019/03/12/面试题26：复杂链表的复制/" rel="next" title="面试题26：复杂链表的复制">
+                <i class="fa fa-chevron-left"></i> 面试题26：复杂链表的复制
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/blog/2019/04/15/hexo把英文单引号渲染成中文单引号的问题/" rel="prev" title="hexo把英文单引号渲染成中文单引号的问题">
+                hexo把英文单引号渲染成中文单引号的问题 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
 
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -355,6 +470,15 @@
 
 
           
+
+  
+    <div class="comments" id="comments">
+      <div id="lv-container" data-id="city" data-uid="MTAyMC8zNTc5MC8xMjMyNg=="></div>
+    </div>
+
+  
+
+
 
         </div>
         
@@ -393,7 +517,7 @@
               
                 <a href="/blog/archives">
               
-                  <span class="site-state-item-count">59</span>
+                  <span class="site-state-item-count">61</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -523,7 +647,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">81.0k</span>
+    <span title="Site words total count">74.8k</span>
   
 </div>
 
@@ -664,6 +788,10 @@
 
 
   
+  <script type="text/javascript" src="/blog/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/blog/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
@@ -692,6 +820,17 @@
 
 
 
+  
+    <script type="text/javascript">
+      (function(d, s) {
+        var j, e = d.getElementsByTagName(s)[0];
+        if (typeof LivereTower === 'function') { return; }
+        j = d.createElement(s);
+        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+        j.async = true;
+        e.parentNode.insertBefore(j, e);
+      })(document, 'script');
+    </script>
   
 
 

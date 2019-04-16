@@ -1,6 +1,6 @@
 ---
 title: To be a publisher
-categories: [随笔]
+categories: [methodology]
 comments: true
 ---
 

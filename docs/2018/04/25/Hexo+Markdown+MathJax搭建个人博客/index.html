@@ -88,7 +88,7 @@
 <meta property="og:site_name" content="liuqinh2s&#39; blog">
 <meta property="og:description" content="为什么搭建个人博客其实有想过用简书写博客，但简书不支持 mathjax，而我写作的时候要用到不少数学公式。 以前也用过 leanote，也就是现在的 蚂蚁笔记，但蚂蚁笔记的博客中，[TOC] 是有 mathjax 渲染的，但右上角的目录导航却是没有加 mathjax 渲染的，这样看着会相当别扭。另外还有几个原因：  leanote收费 无法彻底的自定义 博客不像使用静态网站引擎那样直观的以文件的形">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-04-14T11:38:41.910Z">
+<meta property="og:updated_time" content="2019-04-15T05:34:03.616Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hexo+Markdown+MathJax搭建个人博客">
 <meta name="twitter:description" content="为什么搭建个人博客其实有想过用简书写博客，但简书不支持 mathjax，而我写作的时候要用到不少数学公式。 以前也用过 leanote，也就是现在的 蚂蚁笔记，但蚂蚁笔记的博客中，[TOC] 是有 mathjax 渲染的，但右上角的目录导航却是没有加 mathjax 渲染的，这样看着会相当别扭。另外还有几个原因：  leanote收费 无法彻底的自定义 博客不像使用静态网站引擎那样直观的以文件的形">
@@ -212,42 +212,12 @@
         </li>
       
         
-        <li class="menu-item menu-item-math">
-          <a href="/blog/Math/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-coffee"></i> <br>
-            
-            Math
-          </a>
-        </li>
-      
-        
         <li class="menu-item menu-item-notes">
           <a href="/blog/notes/" rel="section">
             
               <i class="menu-item-icon fa fa-fw fa-book"></i> <br>
             
             Notes
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-tools">
-          <a href="/blog/Tools/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-wrench"></i> <br>
-            
-            Tools
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-english">
-          <a href="/blog/English/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-language"></i> <br>
-            
-            English
           </a>
         </li>
       
@@ -368,8 +338,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/blog/categories/动手实践/" itemprop="url" rel="index">
-                    <span itemprop="name">动手实践</span>
+                  <a href="/blog/categories/do-it-yourself/" itemprop="url" rel="index">
+                    <span itemprop="name">do it yourself</span>
                   </a>
                 </span>
 
@@ -540,8 +510,8 @@
 <p>然后就是加上 <code>不蒜子</code>，百度统计这类统计工具，和 disqus 评论等等。</p>
 <h2 id="遇到的问题以及解决方案"><a href="#遇到的问题以及解决方案" class="headerlink" title="遇到的问题以及解决方案"></a>遇到的问题以及解决方案</h2><h3 id="如何使用HTML锚点"><a href="#如何使用HTML锚点" class="headerlink" title="如何使用HTML锚点"></a>如何使用HTML锚点</h3><p>如果不了解HTML锚点，可以参考这个：</p>
 <ul>
-<li><a href="http://www.w3school.com.cn/html/html_links.asp" target="_blank" rel="noopener">w3school — HTML 链接</a></li>
-<li><a href="https://baike.baidu.com/item/%E9%94%9A%E7%82%B9" target="_blank" rel="noopener">百度百科 — 锚点</a>。HTML可以在页面内跳转，只需要定义一个锚点，访问的时候 <strong>将 <code>#</code> 符号和锚名称添加到 URL 的末端</strong>。</li>
+<li><a href="http://www.w3school.com.cn/html/html_links.asp" target="_blank" rel="noopener">w3school -- HTML 链接</a></li>
+<li><a href="https://baike.baidu.com/item/%E9%94%9A%E7%82%B9" target="_blank" rel="noopener">百度百科 -- 锚点</a>。HTML可以在页面内跳转，只需要定义一个锚点，访问的时候 <strong>将 <code>#</code> 符号和锚名称添加到 URL 的末端</strong>。</li>
 </ul>
 <p>markdown本身是没有这个功能的，所以我们直接把标题用HTML写出来就行了。标题的对应是 <code>#</code> 到 <code>######</code> 总共6级，分别对应 <code>&lt;h1&gt;</code> 到 <code>&lt;h6&gt;</code>。</p>
 <p>举个例子：<code>&lt;h4 id=&quot;3.2.3&quot;&gt;解决 markdown 与 mathjax 的冲突&lt;/h4&gt;</code></p>
@@ -576,8 +546,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/blog/2017/11/14/Override-Overload-Overwrite/" rel="next" title="Override Overload Overwrite">
-                <i class="fa fa-chevron-left"></i> Override Overload Overwrite
+              <a href="/blog/2018/04/25/数学基础公式推导/" rel="next" title="数学基础公式推导">
+                <i class="fa fa-chevron-left"></i> 数学基础公式推导
               </a>
             
           </div>
@@ -586,8 +556,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/blog/2018/04/25/数学基础公式推导/" rel="prev" title="数学基础公式推导">
-                数学基础公式推导 <i class="fa fa-chevron-right"></i>
+              <a href="/blog/2018/04/30/mathjax常用公式记录/" rel="prev" title="mathjax常用公式记录">
+                mathjax常用公式记录 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -672,7 +642,7 @@
               
                 <a href="/blog/archives">
               
-                  <span class="site-state-item-count">59</span>
+                  <span class="site-state-item-count">61</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -818,7 +788,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">81.0k</span>
+    <span title="Site words total count">74.8k</span>
   
 </div>
 

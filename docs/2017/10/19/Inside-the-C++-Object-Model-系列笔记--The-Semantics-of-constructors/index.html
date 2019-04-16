@@ -89,7 +89,7 @@
 <meta property="og:site_name" content="liuqinh2s&#39; blog">
 <meta property="og:description" content="这一章详细的讨论了 constructor 如何工作，讨论构造一个对象的过程以及构造一个对象给程序带来的影响。 区分trivial和notrivial 只有编译器需要的时候(为什么会需要?后面讲的很清楚)，合成操作才是nontrivial的， 这样的构造函数才会被真正的合成出来; 如果编译器不需要，而程序员又没有提供，这时的默认构造函数就是trivial的。虽然它在概念上存在，但是编译器实际上根本">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-04-14T11:38:41.909Z">
+<meta property="og:updated_time" content="2019-04-15T01:51:01.028Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Inside the C++ Object Model 系列笔记 二 -- The Semantics of constructors">
 <meta name="twitter:description" content="这一章详细的讨论了 constructor 如何工作，讨论构造一个对象的过程以及构造一个对象给程序带来的影响。 区分trivial和notrivial 只有编译器需要的时候(为什么会需要?后面讲的很清楚)，合成操作才是nontrivial的， 这样的构造函数才会被真正的合成出来; 如果编译器不需要，而程序员又没有提供，这时的默认构造函数就是trivial的。虽然它在概念上存在，但是编译器实际上根本">
@@ -213,42 +213,12 @@
         </li>
       
         
-        <li class="menu-item menu-item-math">
-          <a href="/blog/Math/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-coffee"></i> <br>
-            
-            Math
-          </a>
-        </li>
-      
-        
         <li class="menu-item menu-item-notes">
           <a href="/blog/notes/" rel="section">
             
               <i class="menu-item-icon fa fa-fw fa-book"></i> <br>
             
             Notes
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-tools">
-          <a href="/blog/Tools/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-wrench"></i> <br>
-            
-            Tools
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-english">
-          <a href="/blog/English/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-language"></i> <br>
-            
-            English
           </a>
         </li>
       
@@ -508,10 +478,10 @@
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span>  <span class="title">foo</span><span class="params">(X &amp;result)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    result.X::X();</span><br><span class="line">    <span class="keyword">if</span>(...)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="comment">//直接处理result</span></span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="comment">//直接处理result</span></span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>对比优化前与优化后的代码可以看出，对于一句类似于X a = foo()这样的代码，NRV优化后的代码相较于原代码节省了一个临时对象的空间（省略了xx）,同时减少了两次函数调用（减少xx对象的默认构造函数和析构函数，以及一次拷贝构造函数的调用，增加了一次对a的默认构造函数的调用）。</p>
 <h2 id="Inside-the-C-Object-Model-系列笔记向导"><a href="#Inside-the-C-Object-Model-系列笔记向导" class="headerlink" title="Inside the C++ Object Model 系列笔记向导"></a>Inside the C++ Object Model 系列笔记向导</h2><ul>
-<li><a href="../Inside-the-C++-Object-Model-系列笔记--Object-Lessons">Inside the C++ Object Model 系列笔记 一 — Object Lessons</a></li>
-<li><a href="./">Inside the C++ Object Model 系列笔记 二 — The Semantics of constructors</a></li>
-<li><a href="../../21/Inside-the-C++-Object-Model-系列笔记--The-Semantics-of-Data">Inside the C++ Object Model 系列笔记 三 — The Semantics of Data</a></li>
-<li><a href="../../23/Inside-the-C++-Object-Model-系列笔记--The-Semantics-of-Function">Inside the C++ Object Model 系列笔记 四 — The Semantics of Function</a></li>
+<li><a href="../Inside-the-C++-Object-Model-系列笔记--Object-Lessons">Inside the C++ Object Model 系列笔记 一 -- Object Lessons</a></li>
+<li><a href="./">Inside the C++ Object Model 系列笔记 二 -- The Semantics of constructors</a></li>
+<li><a href="../../21/Inside-the-C++-Object-Model-系列笔记--The-Semantics-of-Data">Inside the C++ Object Model 系列笔记 三 -- The Semantics of Data</a></li>
+<li><a href="../../23/Inside-the-C++-Object-Model-系列笔记--The-Semantics-of-Function">Inside the C++ Object Model 系列笔记 四 -- The Semantics of Function</a></li>
 </ul>
 
       
@@ -543,8 +513,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/blog/2017/03/29/值传递和引用传递/" rel="next" title="值传递和引用传递">
-                <i class="fa fa-chevron-left"></i> 值传递和引用传递
+              <a href="/blog/2017/10/19/Inside-the-C++-Object-Model-系列笔记--Object-Lessons/" rel="next" title="Inside the C++ Object Model 系列笔记 一 -- Object Lessons">
+                <i class="fa fa-chevron-left"></i> Inside the C++ Object Model 系列笔记 一 -- Object Lessons
               </a>
             
           </div>
@@ -553,8 +523,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/blog/2017/10/19/Inside-the-C++-Object-Model-系列笔记--Object-Lessons/" rel="prev" title="Inside the C++ Object Model 系列笔记 一 -- Object Lessons">
-                Inside the C++ Object Model 系列笔记 一 -- Object Lessons <i class="fa fa-chevron-right"></i>
+              <a href="/blog/2017/10/21/Inside-the-C++-Object-Model-系列笔记--The-Semantics-of-Data/" rel="prev" title="Inside the C++ Object Model 系列笔记 三 -- The Semantics of Data">
+                Inside the C++ Object Model 系列笔记 三 -- The Semantics of Data <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -639,7 +609,7 @@
               
                 <a href="/blog/archives">
               
-                  <span class="site-state-item-count">59</span>
+                  <span class="site-state-item-count">61</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -785,7 +755,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">81.0k</span>
+    <span title="Site words total count">74.8k</span>
   
 </div>
 

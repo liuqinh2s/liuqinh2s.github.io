@@ -88,7 +88,7 @@
 <meta property="og:site_name" content="liuqinh2s&#39; blog">
 <meta property="og:description" content="蓄水池算法(Reservoir Sampling)这个算法真的很奇妙，它的核心是一个数学证明。外延，或者说应用场景是：  $C_n^k$，也就是从大小为n的样本集中随机取k个不同的样本 流式数据，或者说无法直接根据索引拿到数据（更加不可能一遍加载到内存）">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-04-14T11:38:41.914Z">
+<meta property="og:updated_time" content="2019-04-15T01:51:01.046Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="蓄水池算法">
 <meta name="twitter:description" content="蓄水池算法(Reservoir Sampling)这个算法真的很奇妙，它的核心是一个数学证明。外延，或者说应用场景是：  $C_n^k$，也就是从大小为n的样本集中随机取k个不同的样本 流式数据，或者说无法直接根据索引拿到数据（更加不可能一遍加载到内存）">
@@ -212,42 +212,12 @@
         </li>
       
         
-        <li class="menu-item menu-item-math">
-          <a href="/blog/Math/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-coffee"></i> <br>
-            
-            Math
-          </a>
-        </li>
-      
-        
         <li class="menu-item menu-item-notes">
           <a href="/blog/notes/" rel="section">
             
               <i class="menu-item-icon fa fa-fw fa-book"></i> <br>
             
             Notes
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-tools">
-          <a href="/blog/Tools/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-wrench"></i> <br>
-            
-            Tools
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-english">
-          <a href="/blog/English/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-language"></i> <br>
-            
-            English
           </a>
         </li>
       
@@ -451,7 +421,7 @@
 </ol>
 <p>分类讨论，首k个样本最终存在于水塘中的概率，和其余样本最终存在于水塘中的概率：</p>
 <ol>
-<li>首k个样本，随便选一个做研究对象。被选中到水塘的概率为：1。（数组从1开始）从j=k+1开始考虑替换，第一次不被替换的概率是$\frac{k}{k+1}$，第二次不被替换的概率是$\frac{k+1}{k+2}$，第三次…，一直到最后一次不被替换的概率是$\frac{n-1}{n}$。<br><br>所以该项被保留的概率 = $1\times\frac{k}{k+1}\times\frac{k+1}{k+2}\times\frac{k+2}{k+3}\times\cdots\times\frac{n-1}{n}=\frac{k}{n}$</li>
+<li>首k个样本，随便选一个做研究对象。被选中到水塘的概率为：1。（数组从1开始）从j=k+1开始考虑替换，第一次不被替换的概率是$\frac{k}{k+1}$，第二次不被替换的概率是$\frac{k+1}{k+2}$，第三次...，一直到最后一次不被替换的概率是$\frac{n-1}{n}$。<br><br>所以该项被保留的概率 = $1\times\frac{k}{k+1}\times\frac{k+1}{k+2}\times\frac{k+2}{k+3}\times\cdots\times\frac{n-1}{n}=\frac{k}{n}$</li>
 <li>一开始不在水塘中的那一部分，随便选一个做研究对象。被选中到水塘的概率为：$\frac{k}{j}$，后续不被替换的概率$\frac{j}{j+1}$，一直到$\frac{n-1}{n}$。<br><br>所以该项被保留的概率 = $\frac{k}{j}\times\frac{j}{j+1}\times\cdots\frac{n-1}{n}=\frac{k}{n}$</li>
 </ol>
 <p>到此我们就证明了所以样本最终存在于水塘中的概率都是$\frac{k}{n}$，这也完全符合了我们的数学期望。</p>
@@ -576,7 +546,7 @@
               
                 <a href="/blog/archives">
               
-                  <span class="site-state-item-count">59</span>
+                  <span class="site-state-item-count">61</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -722,7 +692,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">81.0k</span>
+    <span title="Site words total count">74.8k</span>
   
 </div>
 

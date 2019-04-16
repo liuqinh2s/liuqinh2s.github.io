@@ -81,17 +81,17 @@
 
 
 
-<meta name="description" content="题目请实现一个函数，把字符串中的每个空格替换成“%20”。例如输入“We are happy.”，则输出“We%20are%20happy.”。  在网络编程中，如果URL参数中含有特殊字符，如空格、’#’等，可能导致服务器端无法获得正确的参数值。我们需要将这些字符转换为服务器可以识别的字符。转换规则是在’%’后面跟上ASCII码的两位十六进制表示。">
+<meta name="description" content="题目请实现一个函数，把字符串中的每个空格替换成“%20”。例如输入“We are happy.”，则输出“We%20are%20happy.”。  在网络编程中，如果URL参数中含有特殊字符，如空格、&amp;#39;#&amp;#39;等，可能导致服务器端无法获得正确的参数值。我们需要将这些字符转换为服务器可以识别的字符。转换规则是在&amp;#39;%&amp;#39;后面跟上ASCII码的两位十六进制表示。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="面试题4：替换空格">
 <meta property="og:url" content="http://liuqinh2s.github.io/blog/2019/03/01/面试题4：替换空格/index.html">
 <meta property="og:site_name" content="liuqinh2s&#39; blog">
-<meta property="og:description" content="题目请实现一个函数，把字符串中的每个空格替换成“%20”。例如输入“We are happy.”，则输出“We%20are%20happy.”。  在网络编程中，如果URL参数中含有特殊字符，如空格、’#’等，可能导致服务器端无法获得正确的参数值。我们需要将这些字符转换为服务器可以识别的字符。转换规则是在’%’后面跟上ASCII码的两位十六进制表示。">
+<meta property="og:description" content="题目请实现一个函数，把字符串中的每个空格替换成“%20”。例如输入“We are happy.”，则输出“We%20are%20happy.”。  在网络编程中，如果URL参数中含有特殊字符，如空格、&amp;#39;#&amp;#39;等，可能导致服务器端无法获得正确的参数值。我们需要将这些字符转换为服务器可以识别的字符。转换规则是在&amp;#39;%&amp;#39;后面跟上ASCII码的两位十六进制表示。">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-04-14T11:38:41.915Z">
+<meta property="og:updated_time" content="2019-04-15T01:51:01.050Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="面试题4：替换空格">
-<meta name="twitter:description" content="题目请实现一个函数，把字符串中的每个空格替换成“%20”。例如输入“We are happy.”，则输出“We%20are%20happy.”。  在网络编程中，如果URL参数中含有特殊字符，如空格、’#’等，可能导致服务器端无法获得正确的参数值。我们需要将这些字符转换为服务器可以识别的字符。转换规则是在’%’后面跟上ASCII码的两位十六进制表示。">
+<meta name="twitter:description" content="题目请实现一个函数，把字符串中的每个空格替换成“%20”。例如输入“We are happy.”，则输出“We%20are%20happy.”。  在网络编程中，如果URL参数中含有特殊字符，如空格、&amp;#39;#&amp;#39;等，可能导致服务器端无法获得正确的参数值。我们需要将这些字符转换为服务器可以识别的字符。转换规则是在&amp;#39;%&amp;#39;后面跟上ASCII码的两位十六进制表示。">
 
 
 
@@ -212,42 +212,12 @@
         </li>
       
         
-        <li class="menu-item menu-item-math">
-          <a href="/blog/Math/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-coffee"></i> <br>
-            
-            Math
-          </a>
-        </li>
-      
-        
         <li class="menu-item menu-item-notes">
           <a href="/blog/notes/" rel="section">
             
               <i class="menu-item-icon fa fa-fw fa-book"></i> <br>
             
             Notes
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-tools">
-          <a href="/blog/Tools/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-wrench"></i> <br>
-            
-            Tools
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-english">
-          <a href="/blog/English/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-language"></i> <br>
-            
-            English
           </a>
         </li>
       
@@ -442,7 +412,7 @@
       
         <h2 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h2><p>请实现一个函数，把字符串中的每个空格替换成“%20”。例如输入“We are happy.”，则输出“We%20are%20happy.”。</p>
 <blockquote>
-<p>在网络编程中，如果URL参数中含有特殊字符，如空格、’#’等，可能导致服务器端无法获得正确的参数值。我们需要将这些字符转换为服务器可以识别的字符。转换规则是在’%’后面跟上ASCII码的两位十六进制表示。</p>
+<p>在网络编程中，如果URL参数中含有特殊字符，如空格、&#39;#&#39;等，可能导致服务器端无法获得正确的参数值。我们需要将这些字符转换为服务器可以识别的字符。转换规则是在&#39;%&#39;后面跟上ASCII码的两位十六进制表示。</p>
 </blockquote>
 <a id="more"></a>
 <h2 id="解答"><a href="#解答" class="headerlink" title="解答"></a>解答</h2><p>这一题我觉得完全没必要去想到$O(n^2)$那个算法，直接就可以想到$O(n)$的解法，而且也没必要像书中说的那样从后往前替换。我们只需要能得到一个足够大的新内存空间，然后把原来的字符串移动过去，在移动的同时注意替换空格就行了。</p>
@@ -486,8 +456,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/blog/2019/03/02/面试题7：用两个栈实现队列/" rel="prev" title="面试题7：用两个栈实现队列">
-                面试题7：用两个栈实现队列 <i class="fa fa-chevron-right"></i>
+              <a href="/blog/2019/03/02/面试题6：重建二叉树/" rel="prev" title="面试题6：重建二叉树">
+                面试题6：重建二叉树 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -572,7 +542,7 @@
               
                 <a href="/blog/archives">
               
-                  <span class="site-state-item-count">59</span>
+                  <span class="site-state-item-count">61</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -718,7 +688,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">81.0k</span>
+    <span title="Site words total count">74.8k</span>
   
 </div>
 

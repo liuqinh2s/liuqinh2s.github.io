@@ -91,6 +91,9 @@ feed:
   content_limit: 140
   content_limit_delim: ' '
 
+kramed:
+  smartypants: false
+
 # search:
 #   path: search.xml
 #   field: post

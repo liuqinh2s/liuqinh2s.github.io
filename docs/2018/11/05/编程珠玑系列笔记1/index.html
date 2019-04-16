@@ -89,7 +89,7 @@
 <meta property="og:description" content="本书的中心思想：对实例研究的深入思考不仅有趣，而且可以获得实际的益处。 规律和智慧都隐藏在实例之中，而我们通过实例来窥探它们。实例是道的载体。 开篇明确问题，一旦问题明确，这场战役就成功了90%。 确定用户的真实需求是程序设计的根本。 简单的程序通常比具有相同功能的复杂程序更可靠、更安全、更健壮、更高效，而且易于实现和维护。因为简单的程序往往更具有概括性、更抽象、更能洞悉问题的本质。">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="http://liuqinh2s.github.io/blog/images/2018/编程珠玑第一章1.png">
-<meta property="og:updated_time" content="2019-04-14T11:38:41.913Z">
+<meta property="og:updated_time" content="2019-04-15T01:51:01.041Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="编程珠玑系列笔记 -- 第一章 开篇">
 <meta name="twitter:description" content="本书的中心思想：对实例研究的深入思考不仅有趣，而且可以获得实际的益处。 规律和智慧都隐藏在实例之中，而我们通过实例来窥探它们。实例是道的载体。 开篇明确问题，一旦问题明确，这场战役就成功了90%。 确定用户的真实需求是程序设计的根本。 简单的程序通常比具有相同功能的复杂程序更可靠、更安全、更健壮、更高效，而且易于实现和维护。因为简单的程序往往更具有概括性、更抽象、更能洞悉问题的本质。">
@@ -214,42 +214,12 @@
         </li>
       
         
-        <li class="menu-item menu-item-math">
-          <a href="/blog/Math/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-coffee"></i> <br>
-            
-            Math
-          </a>
-        </li>
-      
-        
         <li class="menu-item menu-item-notes">
           <a href="/blog/notes/" rel="section">
             
               <i class="menu-item-icon fa fa-fw fa-book"></i> <br>
             
             Notes
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-tools">
-          <a href="/blog/Tools/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-wrench"></i> <br>
-            
-            Tools
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-english">
-          <a href="/blog/English/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-language"></i> <br>
-            
-            English
           </a>
         </li>
       
@@ -466,7 +436,7 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">/* phase 1: initialize set to empty */</span><br><span class="line">for i = [0, n)</span><br><span class="line">    bit[i]=0</span><br><span class="line">/* phase 2: insert present elements into the set */</span><br><span class="line">for each i in the input file</span><br><span class="line">    bit[i]=1</span><br><span class="line">/* phase 3: write sorted output */</span><br><span class="line">for i = [0, n)</span><br><span class="line">    if b[i]==1</span><br><span class="line">        write i on the output file</span><br></pre></td></tr></table></figure>
 <p><strong>时间-空间折中与双赢：</strong> 随着现在存储器的空间越来越大，我们往往倾向于用空间换时间的算法，这种折中非常常见。但减少程序的运行空间需求也会减少其运行时间。空间需求的减少之所以会导致运行时间的减少，有两个原因：需要处理的数据变少了，意味着处理这些数据所需的时间也变少了。同时可以将这些数据保存在内存中而不是磁盘上，进一步避免了磁盘访问的时间（IO是巨大的开销，网络传递数据是更大的开销）。当然了，只有在设计远非最优的时候，才有可能时空双赢。</p>
 <blockquote>
-<p>折中在所有工程领域都存在。例如，汽车设计者可能会通过增加沉重的部件，用行驶里程的减少来换取更快的加速。但双赢是更好的结果。我对自己驾驶过的一辆小轿车做过一番研究，我观察到：“轿车基本结构重量的减少会使各底盘部件的重量进一步减少—甚至消除了对某些底盘部件的需求，例如转向助力系统。”</p>
+<p>折中在所有工程领域都存在。例如，汽车设计者可能会通过增加沉重的部件，用行驶里程的减少来换取更快的加速。但双赢是更好的结果。我对自己驾驶过的一辆小轿车做过一番研究，我观察到：“轿车基本结构重量的减少会使各底盘部件的重量进一步减少--甚至消除了对某些底盘部件的需求，例如转向助力系统。”</p>
 </blockquote>
 <h4 id="真实代码"><a href="#真实代码" class="headerlink" title="真实代码"></a>真实代码</h4><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">define</span> BITSPERWORD 32</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> SHIFT 5</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> MASK 0x1F</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> N 10000000</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> a[N/BITSPERWORD];</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">set</span><span class="params">(<span class="keyword">int</span> i)</span></span>&#123;</span><br><span class="line">    a[i&gt;&gt;SHIFT] |= (<span class="number">1</span>&lt;&lt;(i&amp;MASK));</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">clear</span><span class="params">(<span class="keyword">int</span> i)</span></span>&#123;</span><br><span class="line">    a[i&gt;&gt;SHIFT] &amp;= ~(<span class="number">1</span>&lt;&lt;(i&amp;MASK));</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">test</span><span class="params">(<span class="keyword">int</span> i)</span></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> a[i&gt;&gt;SHIFT] &amp; (<span class="number">1</span>&lt;&lt;(i&amp;MASK));</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> i;</span><br><span class="line">    <span class="keyword">for</span>(i=<span class="number">0</span>;i&lt;N;i++)&#123;</span><br><span class="line">        clear(i);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">while</span>(<span class="built_in">scanf</span>(<span class="string">"%d"</span>, &amp;i)!=EOF)&#123;</span><br><span class="line">        <span class="built_in">set</span>(i);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span>(i=<span class="number">0</span>;i&lt;N;i++)&#123;</span><br><span class="line">        <span class="keyword">if</span>(test(i))&#123;</span><br><span class="line">            <span class="built_in">printf</span>(<span class="string">"%d\n"</span>, i);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>对移位操作熟悉的话就会知道，<code>i&gt;&gt;SHIFT</code>的意思就是<code>i/32</code>。<code>a[i&gt;&gt;SHIFT]</code>也就是定位到i所属的数组单元（每个数组单元4个字节）。而<code>i&amp;MASK</code>的意思是<code>i%32</code>，然后<code>(1&lt;&lt;(i&amp;MASK))</code>就定位了i在所属的数组单元中的具体位置。</p>
@@ -506,7 +476,7 @@
 <ol>
 <li>在成本低廉的隔日送达时代之前，商店允许顾客通过电话订购商品，并在几天后上门自取。商店的数据库使用客户的电话号码作为其检索的主关键字（客户知道他们自己的电话号码，而且这些关键字几乎都是唯一的）。你如何组织商店的数据库，以允许高效的插入和检索操作？</li>
 </ol>
-<p>商店将纸质订单表格放在10x10的箱数组中，使用客户电话号码的最后两位作为散列索引。当客户打电话下订单时，将订单放到适当的箱中。当客户来取商品时，销售人员顺序搜索对应箱中的订单—这就是经典的“用顺序搜索来解决冲突的开放散列”。电话号码的最后两位数字非常接近于随机，因此是非常理想的散列函数，而最前面的两位数字则很不理想 - - 为什么?一些市政机关使用类似的方案在记事本中记录信息。</p>
+<p>商店将纸质订单表格放在10x10的箱数组中，使用客户电话号码的最后两位作为散列索引。当客户打电话下订单时，将订单放到适当的箱中。当客户来取商品时，销售人员顺序搜索对应箱中的订单--这就是经典的“用顺序搜索来解决冲突的开放散列”。电话号码的最后两位数字非常接近于随机，因此是非常理想的散列函数，而最前面的两位数字则很不理想 - - 为什么?一些市政机关使用类似的方案在记事本中记录信息。</p>
 <ol>
 <li>在20世纪80年代早期，洛克希德公司加利福尼亚州桑尼维尔市工厂的工程师每天都要将许多由计算机辅助设计（CAD）系统生成的图纸从工厂送到位于圣克鲁斯市的测试站。虽然仅有40公里远，但使用汽车快递服务每天都需要一个多小时的时间（由于交通阻塞和山路崎岖），花费100美元。请给出新的数据传输方案并估计每一种方案的费用。</li>
 </ol>
@@ -635,7 +605,7 @@
               
                 <a href="/blog/archives">
               
-                  <span class="site-state-item-count">59</span>
+                  <span class="site-state-item-count">61</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -781,7 +751,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">81.0k</span>
+    <span title="Site words total count">74.8k</span>
   
 </div>
 
