@@ -3,6 +3,62 @@
 
 
     <url>
+        <loc>http://liuqinh2s.github.io/blog/tags/%E7%BC%96%E8%BE%91%E5%99%A8/</loc>
+        <lastmod>2019-04-19T09:38:02.749Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://liuqinh2s.github.io/blog/tags/IDE/</loc>
+        <lastmod>2019-04-19T09:37:35.677Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://liuqinh2s.github.io/blog/tags/JavaScript/</loc>
+        <lastmod>2019-04-19T09:36:12.411Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://liuqinh2s.github.io/blog/tags/fixed-issues/</loc>
+        <lastmod>2019-04-19T09:35:26.782Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://liuqinh2s.github.io/blog/tags/wsl/</loc>
+        <lastmod>2019-04-19T09:35:04.517Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://liuqinh2s.github.io/blog/tags/DIY/</loc>
+        <lastmod>2019-04-19T09:33:13.285Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://liuqinh2s.github.io/blog/tags/Math/</loc>
+        <lastmod>2019-04-19T09:30:08.220Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://liuqinh2s.github.io/blog/tags/Methodology/</loc>
+        <lastmod>2019-04-19T09:24:00.133Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
         <loc>http://liuqinh2s.github.io/blog/tags/Linux/</loc>
         <lastmod>2019-04-16T08:03:46.332Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -12,41 +68,6 @@
     <url>
         <loc>http://liuqinh2s.github.io/blog/tags/Unix/</loc>
         <lastmod>2019-04-16T08:03:46.332Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://liuqinh2s.github.io/blog/tags/wsl/</loc>
-        <lastmod>2019-04-15T06:59:23.147Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://liuqinh2s.github.io/blog/tags/windows%E7%8E%AF%E5%A2%83/</loc>
-        <lastmod>2019-04-15T06:59:23.147Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://liuqinh2s.github.io/blog/tags/JavaScript/</loc>
-        <lastmod>2019-04-15T01:51:01.043Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://liuqinh2s.github.io/blog/tags/%E7%BC%96%E8%BE%91%E5%99%A8/</loc>
-        <lastmod>2019-04-15T01:51:01.041Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://liuqinh2s.github.io/blog/tags/IDE/</loc>
-        <lastmod>2019-04-15T01:51:01.040Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>

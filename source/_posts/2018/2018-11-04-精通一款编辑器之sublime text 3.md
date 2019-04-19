@@ -1,6 +1,6 @@
 ---
 title: 精通一款编辑器之sublime text 3
-categories: [工具, 编辑器]
+categories: [Skills of Tools, Editor]
 comments: true
 tags: [编辑器]
 ---

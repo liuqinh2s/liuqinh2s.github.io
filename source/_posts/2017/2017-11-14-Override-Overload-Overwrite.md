@@ -1,7 +1,7 @@
 ---
 title: Override Overload Overwrite
 date: 2017-11-14
-categories: [编程概念]
+categories: [Knowledge of CS]
 comments: true
 ---
 

@@ -1,9 +1,7 @@
 ---
 title: wsl oh my zsh 字符乱码问题
-categories: 
-	- fixed issues
 tags:
-	- windows环境
+	- fixed issues
 	- wsl
 comments: true
 ---
