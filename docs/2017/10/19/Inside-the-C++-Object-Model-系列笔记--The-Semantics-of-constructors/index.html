@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="C++,">
+  <meta name="keywords" content="Hexo, NexT">
 
 
 
@@ -82,14 +82,13 @@
 
 
 <meta name="description" content="这一章详细的讨论了 constructor 如何工作，讨论构造一个对象的过程以及构造一个对象给程序带来的影响。 区分trivial和notrivial 只有编译器需要的时候(为什么会需要?后面讲的很清楚)，合成操作才是nontrivial的， 这样的构造函数才会被真正的合成出来; 如果编译器不需要，而程序员又没有提供，这时的默认构造函数就是trivial的。虽然它在概念上存在，但是编译器实际上根本">
-<meta name="keywords" content="C++">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Inside the C++ Object Model 系列笔记 二 -- The Semantics of constructors">
 <meta property="og:url" content="http://liuqinh2s.github.io/blog/2017/10/19/Inside-the-C++-Object-Model-系列笔记--The-Semantics-of-constructors/index.html">
 <meta property="og:site_name" content="liuqinh2s&#39; blog">
 <meta property="og:description" content="这一章详细的讨论了 constructor 如何工作，讨论构造一个对象的过程以及构造一个对象给程序带来的影响。 区分trivial和notrivial 只有编译器需要的时候(为什么会需要?后面讲的很清楚)，合成操作才是nontrivial的， 这样的构造函数才会被真正的合成出来; 如果编译器不需要，而程序员又没有提供，这时的默认构造函数就是trivial的。虽然它在概念上存在，但是编译器实际上根本">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-04-15T01:51:01.028Z">
+<meta property="og:updated_time" content="2019-04-19T09:49:59.452Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Inside the C++ Object Model 系列笔记 二 -- The Semantics of constructors">
 <meta name="twitter:description" content="这一章详细的讨论了 constructor 如何工作，讨论构造一个对象的过程以及构造一个对象给程序带来的影响。 区分trivial和notrivial 只有编译器需要的时候(为什么会需要?后面讲的很清楚)，合成操作才是nontrivial的， 这样的构造函数才会被真正的合成出来; 如果编译器不需要，而程序员又没有提供，这时的默认构造函数就是trivial的。虽然它在概念上存在，但是编译器实际上根本">
@@ -339,8 +338,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/blog/categories/读书笔记/" itemprop="url" rel="index">
-                    <span itemprop="name">读书笔记</span>
+                  <a href="/blog/categories/Programming-Language/" itemprop="url" rel="index">
+                    <span itemprop="name">Programming Language</span>
                   </a>
                 </span>
 
@@ -350,8 +349,8 @@
                 
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/blog/categories/读书笔记/《Inside-the-C-Object-Model》/" itemprop="url" rel="index">
-                    <span itemprop="name">《Inside the C++ Object Model》</span>
+                  <a href="/blog/categories/Programming-Language/C/" itemprop="url" rel="index">
+                    <span itemprop="name">C++</span>
                   </a>
                 </span>
 
@@ -498,12 +497,6 @@
 
     <footer class="post-footer">
       
-        <div class="post-tags">
-          
-            <a href="/blog/tags/C/" rel="tag"># C++</a>
-          
-        </div>
-      
 
       
       
@@ -620,7 +613,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/blog/categories/index.html">
-                  <span class="site-state-item-count">24</span>
+                  <span class="site-state-item-count">23</span>
                   <span class="site-state-item-name">categories</span>
                 </a>
               </div>
@@ -631,7 +624,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/blog/tags/index.html">
-                  <span class="site-state-item-count">12</span>
+                  <span class="site-state-item-count">10</span>
                   <span class="site-state-item-name">tags</span>
                 </a>
               </div>

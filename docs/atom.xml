@@ -295,7 +295,7 @@
     <link href="http://liuqinh2s.github.io/blog/2018/11/06/%E7%BC%96%E7%A8%8B%E7%8F%A0%E7%8E%91%E7%B3%BB%E5%88%97%E7%AC%94%E8%AE%B02/"/>
     <id>http://liuqinh2s.github.io/blog/2018/11/06/编程珠玑系列笔记2/</id>
     <published>2018-11-05T16:00:00.000Z</published>
-    <updated>2019-04-15T01:51:01.042Z</updated>
+    <updated>2019-04-19T09:53:13.277Z</updated>
     
     <summary type="html">
     
@@ -304,9 +304,7 @@
     
     </summary>
     
-      <category term="读书笔记" scheme="http://liuqinh2s.github.io/blog/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
-    
-      <category term="《编程珠玑》" scheme="http://liuqinh2s.github.io/blog/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E3%80%8A%E7%BC%96%E7%A8%8B%E7%8F%A0%E7%8E%91%E3%80%8B/"/>
+      <category term="Knowlege of CS" scheme="http://liuqinh2s.github.io/blog/categories/Knowlege-of-CS/"/>
     
     
   </entry>
@@ -316,7 +314,7 @@
     <link href="http://liuqinh2s.github.io/blog/2018/11/05/%E7%BC%96%E7%A8%8B%E7%8F%A0%E7%8E%91%E7%B3%BB%E5%88%97%E7%AC%94%E8%AE%B01/"/>
     <id>http://liuqinh2s.github.io/blog/2018/11/05/编程珠玑系列笔记1/</id>
     <published>2018-11-04T16:00:00.000Z</published>
-    <updated>2019-04-15T01:51:01.041Z</updated>
+    <updated>2019-04-19T09:53:04.037Z</updated>
     
     <summary type="html">
     
@@ -328,9 +326,7 @@
     
     </summary>
     
-      <category term="读书笔记" scheme="http://liuqinh2s.github.io/blog/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
-    
-      <category term="《编程珠玑》" scheme="http://liuqinh2s.github.io/blog/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E3%80%8A%E7%BC%96%E7%A8%8B%E7%8F%A0%E7%8E%91%E3%80%8B/"/>
+      <category term="Knowlege of CS" scheme="http://liuqinh2s.github.io/blog/categories/Knowlege-of-CS/"/>
     
     
   </entry>
@@ -411,11 +407,11 @@
   </entry>
   
   <entry>
-    <title>《CSAPP》读书笔记 -- 第4章：处理器体系结构</title>
+    <title>处理器体系结构</title>
     <link href="http://liuqinh2s.github.io/blog/2018/10/13/%E5%A4%84%E7%90%86%E5%99%A8%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84/"/>
     <id>http://liuqinh2s.github.io/blog/2018/10/13/处理器体系结构/</id>
     <published>2018-10-12T16:00:00.000Z</published>
-    <updated>2019-04-15T01:51:01.039Z</updated>
+    <updated>2019-04-19T09:52:49.589Z</updated>
     
     <summary type="html">
     
@@ -425,19 +421,17 @@
     
     </summary>
     
-      <category term="读书笔记" scheme="http://liuqinh2s.github.io/blog/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
-    
-      <category term="《CSAPP》" scheme="http://liuqinh2s.github.io/blog/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E3%80%8ACSAPP%E3%80%8B/"/>
+      <category term="Knowledge of CS" scheme="http://liuqinh2s.github.io/blog/categories/Knowledge-of-CS/"/>
     
     
   </entry>
   
   <entry>
-    <title>《CSAPP》读书笔记 -- 第3章：程序的机器级表示</title>
+    <title>程序的机器级表示</title>
     <link href="http://liuqinh2s.github.io/blog/2018/10/08/%E7%A8%8B%E5%BA%8F%E7%9A%84%E6%9C%BA%E5%99%A8%E7%BA%A7%E8%A1%A8%E7%A4%BA/"/>
     <id>http://liuqinh2s.github.io/blog/2018/10/08/程序的机器级表示/</id>
     <published>2018-10-07T16:00:00.000Z</published>
-    <updated>2019-04-15T01:51:01.038Z</updated>
+    <updated>2019-04-19T09:52:26.092Z</updated>
     
     <summary type="html">
     
@@ -454,19 +448,17 @@
     
     </summary>
     
-      <category term="读书笔记" scheme="http://liuqinh2s.github.io/blog/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
-    
-      <category term="《CSAPP》" scheme="http://liuqinh2s.github.io/blog/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E3%80%8ACSAPP%E3%80%8B/"/>
+      <category term="Knowledge of CS" scheme="http://liuqinh2s.github.io/blog/categories/Knowledge-of-CS/"/>
     
     
   </entry>
   
   <entry>
-    <title>《CSAPP》读书笔记 -- 第2章：浮点数原理（小专题）</title>
+    <title>浮点数原理</title>
     <link href="http://liuqinh2s.github.io/blog/2018/09/27/%E6%B5%AE%E7%82%B9%E6%95%B0%E5%8E%9F%E7%90%86/"/>
     <id>http://liuqinh2s.github.io/blog/2018/09/27/浮点数原理/</id>
     <published>2018-09-26T16:00:00.000Z</published>
-    <updated>2019-04-15T01:51:01.037Z</updated>
+    <updated>2019-04-19T09:52:10.250Z</updated>
     
     <summary type="html">
     
@@ -481,12 +473,8 @@ b = \sum_{i=-n}^m 2^i \times b_i&lt;/script&gt;
     
     </summary>
     
-      <category term="读书笔记" scheme="http://liuqinh2s.github.io/blog/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
+      <category term="Knowlege of CS" scheme="http://liuqinh2s.github.io/blog/categories/Knowlege-of-CS/"/>
     
-      <category term="《CSAPP》" scheme="http://liuqinh2s.github.io/blog/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E3%80%8ACSAPP%E3%80%8B/"/>
-    
-    
-      <category term="信息记法" scheme="http://liuqinh2s.github.io/blog/tags/%E4%BF%A1%E6%81%AF%E8%AE%B0%E6%B3%95/"/>
     
   </entry>
   

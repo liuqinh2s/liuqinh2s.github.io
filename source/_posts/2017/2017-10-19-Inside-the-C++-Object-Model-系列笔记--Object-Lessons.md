@@ -2,8 +2,7 @@
 layout: post
 title: Inside the C++ Object Model 系列笔记 一 -- Object Lessons
 date: 2017-10-19
-categories: [读书笔记, 《Inside the C++ Object Model》]
-tags: [C++]
+categories: [Programming Language, C++]
 comments: true
 ---
 

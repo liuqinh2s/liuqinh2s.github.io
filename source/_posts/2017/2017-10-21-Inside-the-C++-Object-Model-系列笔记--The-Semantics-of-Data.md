@@ -2,8 +2,7 @@
 layout: post
 title: Inside the C++ Object Model 系列笔记 三 -- The Semantics of Data
 date: 2017-10-21
-categories: [读书笔记, 《Inside the C++ Object Model》]
-tags: [C++]
+categories: [Programming Language, C++]
 comments: true
 ---
 

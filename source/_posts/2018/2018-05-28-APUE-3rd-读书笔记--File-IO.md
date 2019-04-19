@@ -1,7 +1,7 @@
 ---
 title: 《APUE-3rd》 读书笔记 -- File I/O
 date: 2018-05-28
-categories: [读书笔记, 《APUE-3rd》]
+categories: [Unix]
 comments: true
 tags: [Unix, Linux]
 ---
