@@ -90,7 +90,7 @@
 <meta property="og:description" content="Preperation Before Classapue编程环境搭建 Figure 1.3 List all the files in a directory  12345678910111213141516#include &quot;apue.h&quot;#include &amp;lt;dirent.h&amp;gt;int main(int argc, char *argv[])&amp;#123;    DIR *dp;">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="https://i.loli.net/2018/05/22/5b03742b0a818.png">
-<meta property="og:updated_time" content="2019-04-19T09:53:56.606Z">
+<meta property="og:updated_time" content="2019-04-20T03:14:56.592Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="《APUE-3rd》 读书笔记 -- Unix System Overview">
 <meta name="twitter:description" content="Preperation Before Classapue编程环境搭建 Figure 1.3 List all the files in a directory  12345678910111213141516#include &quot;apue.h&quot;#include &amp;lt;dirent.h&amp;gt;int main(int argc, char *argv[])&amp;#123;    DIR *dp;">
@@ -211,16 +211,6 @@
               <i class="menu-item-icon fa fa-fw fa-bug"></i> <br>
             
             Computer Science
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-notes">
-          <a href="/blog/notes/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-book"></i> <br>
-            
-            Notes
           </a>
         </li>
       
@@ -568,6 +558,8 @@
 <p>Users, however, work better with names than with numbers, so the <strong>password file</strong> maintains the mapping between login names and user IDs, and the <strong>group file</strong> provides the mapping between group names and group IDs. The ls -l command, for example, prints the login name of the owner of a file, using the password file to map the numeric user ID into the corresponding login name.</p>
 <blockquote>
 <p>Early UNIX systems used 16-bit integers to represent user and group IDs. Contemporary UNIX systems use 32-bit integers.</p>
+</blockquote>
+<blockquote>
 <p>Figure 1.9 Print user ID and group ID</p>
 </blockquote>
 <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">"apue.h"</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">true<span class="built_in">printf</span>(<span class="string">"uid = %d, gid = %d\n"</span>, getuid(), getgid());</span><br><span class="line">true<span class="built_in">exit</span>(<span class="number">0</span>); </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -749,7 +741,7 @@
               
                 <a href="/blog/archives">
               
-                  <span class="site-state-item-count">36</span>
+                  <span class="site-state-item-count">37</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -760,7 +752,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/blog/categories/index.html">
-                  <span class="site-state-item-count">23</span>
+                  <span class="site-state-item-count">24</span>
                   <span class="site-state-item-name">categories</span>
                 </a>
               </div>
@@ -895,7 +887,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">64.4k</span>
+    <span title="Site words total count">64.8k</span>
   
 </div>
 

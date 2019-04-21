@@ -119,7 +119,7 @@
 <meta property="og:image" content="http://liuqinh2s.github.io/blog/images/2018/金丝雀值.png">
 <meta property="og:image" content="http://liuqinh2s.github.io/blog/images/2018/含金丝雀值汇编码1.png">
 <meta property="og:image" content="http://liuqinh2s.github.io/blog/images/2018/含金丝雀值汇编码2.png">
-<meta property="og:updated_time" content="2019-04-19T09:52:26.092Z">
+<meta property="og:updated_time" content="2019-04-20T03:14:56.593Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="程序的机器级表示">
 <meta name="twitter:description" content="从编译C语言文件说起1$ gcc -01 -o p p1.c p2.c 使用了gcc命令来编译，也可以简单写作：cc。 优化层级为1，1级是最低的，层级越高程序优化越好，但增加了编译时间，也使调试变得更难，且跟源程序差异很大不便于理解。 编译的流程是：  预处理器（preprocessor）把诸如：#include、#define、#if、#else、#elif、#ifdef、#endif等预编译">
@@ -240,16 +240,6 @@
               <i class="menu-item-icon fa fa-fw fa-bug"></i> <br>
             
             Computer Science
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-notes">
-          <a href="/blog/notes/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-book"></i> <br>
-            
-            Notes
           </a>
         </li>
       
@@ -406,7 +396,7 @@
                   <span class="post-meta-item-text">Words count in article&#58;</span>
                 
                 <span title="Words count in article">
-                  6,245
+                  6,247
                 </span>
               
 
@@ -540,7 +530,7 @@
 <p>举个例子：t=a+b，a、b、t都是整形数。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">CF: (unsigned)t&lt;(unsigned)a       无符号溢出</span><br><span class="line">ZF: (t==0)                        零</span><br><span class="line">SF: (t&lt;0)                         负数</span><br><span class="line">OF: (a&lt;0 == b&lt;0) &amp;&amp; (t&lt;0 != a&lt;0)  有符号溢出</span><br></pre></td></tr></table></figure>
 <blockquote>
-<p>OF的表达式也可以写作：(a<0 && b<0 t>0) || (a&gt;0 &amp;&amp; b&gt;0 &amp;&amp; t&lt;0)，也就是说a、b都是负数相加却是正数，或者a、b都是正数相加却是负数，这两种情况就代表溢出了。</0></p>
+<p>OF的表达式也可以写作：(a&lt;0 &amp;&amp; b<0 && t>0) || (a&gt;0 &amp;&amp; b&gt;0 &amp;&amp; t&lt;0)，也就是说a、b都是负数相加却是正数，或者a、b都是正数相加却是负数，这两种情况就代表溢出了。</0></p>
 </blockquote>
 <p>leal操作不会改变状态码，因为这个指令只是用来计算地址。除此之外表3.7中的所有操作都可能改变状态码。例如逻辑操作：XOR，会使CF和OF置零，移位操作会使CF置为最后一个移位出去的bit，但OF要置零。自增和自减指令会设置OF和ZF，不设置CF。</p>
 <p>CMP指令类似于SUB指令，但只修改状态码而不改变其他寄存器，如果两个操作数相等，ZF就会被设置；TEST指令类似于AND指令，但只修改状态码而不改变其他寄存器，如果两个操作数是重复的： testl %eax,%eax，作用是检测%eax是0，还是正数，还是负数。</p>
@@ -823,7 +813,7 @@
               
                 <a href="/blog/archives">
               
-                  <span class="site-state-item-count">36</span>
+                  <span class="site-state-item-count">37</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -834,7 +824,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/blog/categories/index.html">
-                  <span class="site-state-item-count">23</span>
+                  <span class="site-state-item-count">24</span>
                   <span class="site-state-item-name">categories</span>
                 </a>
               </div>
@@ -969,7 +959,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">64.4k</span>
+    <span title="Site words total count">64.8k</span>
   
 </div>
 

@@ -89,7 +89,7 @@
 <meta property="og:description" content="本书的中心思想：对实例研究的深入思考不仅有趣，而且可以获得实际的益处。 规律和智慧都隐藏在实例之中，而我们通过实例来窥探它们。实例是道的载体。 开篇明确问题，一旦问题明确，这场战役就成功了90%。 确定用户的真实需求是程序设计的根本。 简单的程序通常比具有相同功能的复杂程序更可靠、更安全、更健壮、更高效，而且易于实现和维护。因为简单的程序往往更具有概括性、更抽象、更能洞悉问题的本质。">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="http://liuqinh2s.github.io/blog/images/2018/编程珠玑第一章1.png">
-<meta property="og:updated_time" content="2019-04-19T09:53:04.037Z">
+<meta property="og:updated_time" content="2019-04-20T03:14:56.594Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="编程珠玑系列笔记 -- 第一章 开篇">
 <meta name="twitter:description" content="本书的中心思想：对实例研究的深入思考不仅有趣，而且可以获得实际的益处。 规律和智慧都隐藏在实例之中，而我们通过实例来窥探它们。实例是道的载体。 开篇明确问题，一旦问题明确，这场战役就成功了90%。 确定用户的真实需求是程序设计的根本。 简单的程序通常比具有相同功能的复杂程序更可靠、更安全、更健壮、更高效，而且易于实现和维护。因为简单的程序往往更具有概括性、更抽象、更能洞悉问题的本质。">
@@ -210,16 +210,6 @@
               <i class="menu-item-icon fa fa-fw fa-bug"></i> <br>
             
             Computer Science
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-notes">
-          <a href="/blog/notes/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-book"></i> <br>
-            
-            Notes
           </a>
         </li>
       
@@ -438,11 +428,11 @@
 <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">intcompare</span><span class="params">(<span class="keyword">int</span> *x, <span class="keyword">int</span> *y)</span></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> *x - *y;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> a[<span class="number">10000000</span>];</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> n=<span class="number">0</span>;</span><br><span class="line">    <span class="keyword">while</span>(<span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;a[n])!=EOF)&#123;</span><br><span class="line">        n++;</span><br><span class="line">    &#125;</span><br><span class="line">    qsort(a, n, <span class="keyword">sizeof</span>(<span class="keyword">int</span>), intcompare);</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;n;i++)&#123;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">"%d"</span>, a[i]);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>使用C++的标准模板库中的容器<code>set</code>来完成相同任务：</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="built_in">set</span>&lt;<span class="keyword">int</span>&gt; S;</span><br><span class="line">    <span class="keyword">int</span> i;</span><br><span class="line">    <span class="built_in">set</span>&lt;<span class="keyword">int</span>&gt;::iterator j;</span><br><span class="line">    <span class="keyword">while</span>(<span class="built_in">cin</span> &gt;&gt; i)&#123;</span><br><span class="line">        S.insert(i);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span>(j=S.begin();j&lt;S.end();j++)&#123;</span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; *j &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<ol>
+<ol start="2">
 <li>如何使用位逻辑运算（例如与、或、移位）来实现位向量？</li>
 </ol>
 <p>代码上面已经给出：<a href="#真实代码">真实代码</a></p>
-<ol>
+<ol start="3">
 <li><p>运行时效率是设计目标的一个重要组成部分，所得到的程序需要足够高效。在你自己的系统上实现位图排序并度量其运行时间。该时间与系统排序的运行时间以及习题1中排序的运行时间相比如何？假设n为10000000，且输入文件包含10000000个整数。</p>
 </li>
 <li><p>如果认真考虑了习题3，你将会生成小于n且没有重复的k个整数的问题。最简单的方法就是使用前k个正整数。这个极端的数据集合将不会明显地改变位图方法的运行时间，但是可能会歪曲系统排序的运行时间。如何生成位于0至n-1之间的k个不同的随机顺序的随机整数？尽量使你的程序简短且高效。</p>
@@ -451,26 +441,26 @@
 </li>
 </ol>
 <p>使用位图表示1 000万个数需要1000万个位，或者说125万字节。考虑到没有以数字0或1打头<br>的电话号码，我们可以将内存需求降低为100万字节。另一种做法是采用两趟算法，首先使用<br>5 000 000/8=625 000个字的存储空间来排序0~4 999 999之间的整数，然后在第二趟排序5 000 000~9 999 999的整数。k趟算法可以在kn的时间开销和n/k的空间开销内完成对最多n个小于n的无重复正整数的排序。</p>
-<ol>
+<ol start="6">
 <li>如果那个程序员说的不是每个整数最多出现一次，而是每个整数最多出现10次，你又如何建议他呢？你的解决方案如何随着可用存储空间总量的变化而变化？</li>
 </ol>
 <p>如果每个整数最多出现10次，那么我们就可以使用4位的半字节来统计它出现的次数。利用习题5的答案，我们可以使用10 000 000/2个字节在1趟内完成对整个文件的排序，或使用10 000 000/2k个字节在k趟内完成对整个文件的排序。</p>
-<ol>
+<ol start="9">
 <li>使用更多的空间来换取更少的运行时间存在一个问题：初始化空间本身需要消耗大量的时间。说明如何设计一种技术，在第一次访问向量的项时将其初始化为0。你的方案应该使用常量时间进行初始化和向量访问，使用的额外空间应正比于向量的大小。因为该方法通过进一步增加空间来减少减少初始化的时间，所以仅在空间很廉价、时间很宝贵且向量很稀疏的情况下才考虑使用。</li>
 </ol>
 <p>借助于两个额外的n元向量from、to和一个整数top，from和to也都没有初始化过，top初始化为0。当我们访问索引为i的data元素，想要知道<code>data[i]</code>有没有初始化过。如果<code>from[i]&lt;top</code>且<code>to[from[i]]=i</code>，那么说明已经初始化过。to数组就是用来记录已经访问过哪些data元素的，实际上to数组可以是一个<a href="https://zh.wikipedia.org/zh/Vector_(STL" target="_blank" rel="noopener">动态数组</a>)。</p>
 <p><img src="../../../../images/2018/编程珠玑第一章1.png" width="300px"></p>
 <p>下面代码实现对data[i]的首次访问：</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">from[i] = top;</span><br><span class="line">to[top] = i;</span><br><span class="line">data[i] = <span class="number">0</span>;</span><br><span class="line">top++;</span><br></pre></td></tr></table></figure>
-<ol>
+<ol start="10">
 <li>在成本低廉的隔日送达时代之前，商店允许顾客通过电话订购商品，并在几天后上门自取。商店的数据库使用客户的电话号码作为其检索的主关键字（客户知道他们自己的电话号码，而且这些关键字几乎都是唯一的）。你如何组织商店的数据库，以允许高效的插入和检索操作？</li>
 </ol>
 <p>商店将纸质订单表格放在10x10的箱数组中，使用客户电话号码的最后两位作为散列索引。当客户打电话下订单时，将订单放到适当的箱中。当客户来取商品时，销售人员顺序搜索对应箱中的订单--这就是经典的“用顺序搜索来解决冲突的开放散列”。电话号码的最后两位数字非常接近于随机，因此是非常理想的散列函数，而最前面的两位数字则很不理想 - - 为什么?一些市政机关使用类似的方案在记事本中记录信息。</p>
-<ol>
+<ol start="11">
 <li>在20世纪80年代早期，洛克希德公司加利福尼亚州桑尼维尔市工厂的工程师每天都要将许多由计算机辅助设计（CAD）系统生成的图纸从工厂送到位于圣克鲁斯市的测试站。虽然仅有40公里远，但使用汽车快递服务每天都需要一个多小时的时间（由于交通阻塞和山路崎岖），花费100美元。请给出新的数据传输方案并估计每一种方案的费用。</li>
 </ol>
 <p>两地的计算机原先是通过微波连接的，但是当时测试站打印图纸所需的打印机却非常昂贵。因此，该团队在主厂绘制图纸，然后拍摄下来并通过信鸽把35毫米的底片送到测试站，在测试站进行放大并打印成图片。鸽子来回一.次需要45分钟，是汽车所需时间的一半，并且每天只需要花费几美元。在项目开发的16个月中，信鸽传送了几百卷底片，仅丢失了两卷(当地有鹰，因此没有让信鸽传送机密数据)。由于现在打印机比较便宜，因此可以使用微波链路解决该问题。</p>
-<ol>
+<ol start="12">
 <li>载人航天的先驱们很快就意识到需要在外太空的极端环境下实现顺利书写。民间盛传美国国<br>家宇航局(NASA)花费100万美元研发出了一种特殊的钢笔来解决这个问题。那么，前苏联又会如何解决相同的问题呢?</li>
 </ol>
 <p>看过三傻大闹宝莱坞的都知道，前苏联用的是铅笔，但铅笔的碎屑由于失重漂浮在空中会是很麻烦的问题。</p>
@@ -594,7 +584,7 @@
               
                 <a href="/blog/archives">
               
-                  <span class="site-state-item-count">36</span>
+                  <span class="site-state-item-count">37</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -605,7 +595,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/blog/categories/index.html">
-                  <span class="site-state-item-count">23</span>
+                  <span class="site-state-item-count">24</span>
                   <span class="site-state-item-name">categories</span>
                 </a>
               </div>
@@ -740,7 +730,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">64.4k</span>
+    <span title="Site words total count">64.8k</span>
   
 </div>
 

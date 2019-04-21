@@ -88,7 +88,7 @@
 <meta property="og:site_name" content="liuqinh2s&#39; blog">
 <meta property="og:description" content="介绍动态数组在每次容量用尽时，重新申请2倍于当前数组的空间，并将原数组中的内容拷贝到新的空间，然后释放原数组的内存空间。对于动态数组，每次插入的花费有两种情况：  容量够用，我们只需要存储新的元素 容量不够用，创建新的空间，拷贝原数组进新的空间，再存储这个新的元素  分析方法有许多，统称为：amortized analysis（分摊分析）">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-04-19T09:32:44.169Z">
+<meta property="og:updated_time" content="2019-04-20T03:14:56.596Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="动态数组的分摊分析">
 <meta name="twitter:description" content="介绍动态数组在每次容量用尽时，重新申请2倍于当前数组的空间，并将原数组中的内容拷贝到新的空间，然后释放原数组的内存空间。对于动态数组，每次插入的花费有两种情况：  容量够用，我们只需要存储新的元素 容量不够用，创建新的空间，拷贝原数组进新的空间，再存储这个新的元素  分析方法有许多，统称为：amortized analysis（分摊分析）">
@@ -208,16 +208,6 @@
               <i class="menu-item-icon fa fa-fw fa-bug"></i> <br>
             
             Computer Science
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-notes">
-          <a href="/blog/notes/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-book"></i> <br>
-            
-            Notes
           </a>
         </li>
       
@@ -385,7 +375,7 @@
                   <span class="post-meta-item-text">Words count in article&#58;</span>
                 
                 <span title="Words count in article">
-                  893
+                  965
                 </span>
               
 
@@ -420,19 +410,19 @@
 <p><a href="https://www.cs.cornell.edu/courses/cs3110/2013sp/lectures/lec21-amortized/lec21.html" target="_blank" rel="noopener">Lecture 21: Amortized Analysis</a></p>
 <h3 id="统计分析（aggregate-method）"><a href="#统计分析（aggregate-method）" class="headerlink" title="统计分析（aggregate method）"></a>统计分析（aggregate method）</h3><p>把n词操作花费求和，然后取平均值。</p>
 <p>每次扩容时，后半部分元素统一进行第一次移动，而这些元素之后的所有移动操作也是一起发生的，因而我们发现元素是以组为单位，组内的元素移动次数相同。那么有多少个这种组呢？第一组是单个元素，第二组也是单个元素，第三组是两个元素，第四组是四个元素，第五组是8个元素，... ，以此类推。而：</p>
-<script type="math/tex; mode=display">
-1 + 1 + 2+ 2^2 + \cdots + 2^i = n</script><script type="math/tex; mode=display">
-i = \log_2 n -1</script><p>而这些组的移动次数分别是多少呢？最后一组元素只移动一次，倒数第二组元素移动2次，以此类推。所以总的移动次数是：</p>
-<script type="math/tex; mode=display">
-1\times 2^i+2\times 2^{i-1}+3\times 2^{i-2}+\cdots+k\times 1</script><script type="math/tex; mode=display">
-k = \log_2n + 1</script><p>这个式子挺有规律的，我们可以将其分为很多个组，第一组是：</p>
-<script type="math/tex; mode=display">
-1 + 1 + 2+ 2^2 + \cdots + 2^i = n</script><p>第二组是：</p>
-<script type="math/tex; mode=display">
-1 + 1 + 2+ 2^2 + \cdots + 2^{i-1} = \frac{n}{2}</script><p>以此类推。</p>
+<p>$$<br>1 + 1 + 2+ 2^2 + \cdots + 2^i = n<br>$$</p>
+<p>$$<br>i = \log_2 n -1<br>$$</p>
+<p>而这些组的移动次数分别是多少呢？最后一组元素只移动一次，倒数第二组元素移动2次，以此类推。所以总的移动次数是：</p>
+<p>$$<br>1\times 2^i+2\times 2^{i-1}+3\times 2^{i-2}+\cdots+k\times 1<br>$$</p>
+<p>$$<br>k = \log_2n + 1<br>$$</p>
+<p>这个式子挺有规律的，我们可以将其分为很多个组，第一组是：</p>
+<p>$$<br>1 + 1 + 2+ 2^2 + \cdots + 2^i = n<br>$$</p>
+<p>第二组是：</p>
+<p>$$<br>1 + 1 + 2+ 2^2 + \cdots + 2^{i-1} = \frac{n}{2}<br>$$</p>
+<p>以此类推。</p>
 <p>于是我们得到上式的等价表示：</p>
-<script type="math/tex; mode=display">
-n + \frac{n}{2} + \cdots + 1 = 2n-1</script><p>所以移动的平均次数是：$\frac{2n-1}{n}$，也就是每个元素最多移动2次，加上插入操作，最多三个操作。</p>
+<p>$$<br>n + \frac{n}{2} + \cdots + 1 = 2n-1<br>$$</p>
+<p>所以移动的平均次数是：$\frac{2n-1}{n}$，也就是每个元素最多移动2次，加上插入操作，最多三个操作。</p>
 <h3 id="银行算法（banker-method）"><a href="#银行算法（banker-method）" class="headerlink" title="银行算法（banker method）"></a>银行算法（banker method）</h3><p>对动态数组的插入来说，大部分（后半部分）插入操作是不需要重新分配内存的，是廉价的操作。而少部分操作是需要重新分配内存的，是复杂的操作。我们可以试着想象在每次廉价操作的时候存储额外的费用，相当于存款，来支付复杂操作的费用。</p>
 <p>我们假设一次基本的操作费用是一个硬币，当我们插入了一个下标为n的元素时：</p>
 <ol>
@@ -442,11 +432,11 @@ n + \frac{n}{2} + \cdots + 1 = 2n-1</script><p>所以移动的平均次数是：
 </ol>
 <p>这样来计算，每个插入操作最多需要付出三个硬币，而第一个元素是不需要第三个硬币的。所以费用总数是：3n-1。</p>
 <h3 id="势能算法（Potential-Method）"><a href="#势能算法（Potential-Method）" class="headerlink" title="势能算法（Potential Method）"></a>势能算法（Potential Method）</h3><p>首先说明一下，目前我对这个方法还是无法直观的理解。先祭出这个势能函数：</p>
-<script type="math/tex; mode=display">
-\Phi(h) = 2n-m</script><p>其中n是当前数组元素的个数，m是当前数组内存空间大小。</p>
+<p>$$<br>\Phi(h) = 2n-m<br>$$</p>
+<p>其中n是当前数组元素的个数，m是当前数组内存空间大小。</p>
 <p>每次插入的费用函数定义为：</p>
-<script type="math/tex; mode=display">
-c+\Phi(h')-\Phi(h)</script><p>c表示当前插入操作的总的花费，$\Phi(h&#39;)$是插入后的势能函数，$\Phi(h)$是插入前的势能函数。</p>
+<p>$$<br>c+\Phi(h&#39;)-\Phi(h)<br>$$</p>
+<p>c表示当前插入操作的总的花费，$\Phi(h&#39;)$是插入后的势能函数，$\Phi(h)$是插入前的势能函数。</p>
 <p>这里分为两种情况：</p>
 <ol>
 <li>如果<code>n&lt;m</code>，不必扩容，c=1，势能函数相差2，所以加起来是3</li>
@@ -477,8 +467,8 @@ c+\Phi(h')-\Phi(h)</script><p>c表示当前插入操作的总的花费，$\Phi(h
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/blog/2019/03/03/To be a publisher/" rel="next" title="To be a publisher">
-                <i class="fa fa-chevron-left"></i> To be a publisher
+              <a href="/blog/2019/02/28/推荐一本不错的书：《剑指offer》/" rel="next" title="推荐一本不错的书：《剑指offer》">
+                <i class="fa fa-chevron-left"></i> 推荐一本不错的书：《剑指offer》
               </a>
             
           </div>
@@ -487,8 +477,8 @@ c+\Phi(h')-\Phi(h)</script><p>c表示当前插入操作的总的花费，$\Phi(h
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/blog/2019/04/15/C++ map的remove函数实现/" rel="prev" title="C++ map的remove函数实现">
-                C++ map的remove函数实现 <i class="fa fa-chevron-right"></i>
+              <a href="/blog/2019/03/03/To be a publisher/" rel="prev" title="To be a publisher">
+                To be a publisher <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -573,7 +563,7 @@ c+\Phi(h')-\Phi(h)</script><p>c表示当前插入操作的总的花费，$\Phi(h
               
                 <a href="/blog/archives">
               
-                  <span class="site-state-item-count">36</span>
+                  <span class="site-state-item-count">37</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -584,7 +574,7 @@ c+\Phi(h')-\Phi(h)</script><p>c表示当前插入操作的总的花费，$\Phi(h
               
               <div class="site-state-item site-state-categories">
                 <a href="/blog/categories/index.html">
-                  <span class="site-state-item-count">23</span>
+                  <span class="site-state-item-count">24</span>
                   <span class="site-state-item-name">categories</span>
                 </a>
               </div>
@@ -719,7 +709,7 @@ c+\Phi(h')-\Phi(h)</script><p>c表示当前插入操作的总的花费，$\Phi(h
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">64.4k</span>
+    <span title="Site words total count">64.8k</span>
   
 </div>
 

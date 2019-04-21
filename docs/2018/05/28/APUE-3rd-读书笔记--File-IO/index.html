@@ -97,7 +97,7 @@
 <meta property="og:image" content="https://i.loli.net/2018/05/31/5b0f4c0dc6161.png">
 <meta property="og:image" content="https://i.loli.net/2018/05/31/5b0f4c6873af3.png">
 <meta property="og:image" content="https://i.loli.net/2018/05/31/5b0f4cf6d20f6.png">
-<meta property="og:updated_time" content="2019-04-19T09:54:01.606Z">
+<meta property="og:updated_time" content="2019-04-20T03:14:56.592Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="《APUE-3rd》 读书笔记 -- File I&#x2F;O">
 <meta name="twitter:description" content="前言这章讲的是文件IO，其中有几个非常重要的概念：  File Desriptors，文件描述符 current file offset，当前文件偏移量 File Sharing Data Structure，文件共享数据模型 file descriptor flags ，文件描述位 file status flags ，文件状态位">
@@ -218,16 +218,6 @@
               <i class="menu-item-icon fa fa-fw fa-bug"></i> <br>
             
             Computer Science
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-notes">
-          <a href="/blog/notes/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-book"></i> <br>
-            
-            Notes
           </a>
         </li>
       
@@ -384,7 +374,7 @@
                   <span class="post-meta-item-text">Words count in article&#58;</span>
                 
                 <span title="Words count in article">
-                  11,887
+                  11,889
                 </span>
               
 
@@ -575,6 +565,8 @@
 <p>We’ll return to this timing example later in the text. In Section 3.14, we show the effect of synchronous writes; in Section 5.8, we compare these unbuffered I/O times with the standard I/O library.</p>
 <blockquote>
 <p>Beware when trying to measure the performance of programs that read and write files. The operating system will try to cache the file incore, so if you measure the performance of the program repeatedly, the successive timings will likely be better than the first. This improvement occurs because the first run causes the file to be entered into the system’s cache, and successive runs access the file from the system’s cache instead of from the disk. (The term incore means in main memory. Back in the day, a computer’s main memory was built out of ferrite core. This is where the phrase ‘‘core dump’’ comes from: the main memory image of a program stored in a file on disk for diagnosis.)</p>
+</blockquote>
+<blockquote>
 <p>In the tests reported in Figure 3.6, each run with a different buffer size was made using a different copy of the file so that the current run didn’t find the data in the cache from the previous run. The files are large enough that they all don’t remain in the cache (the test system was configured with 6 GB of RAM).</p>
 </blockquote>
 <h2 id="File-Sharing"><a href="#File-Sharing" class="headerlink" title="File Sharing"></a>File Sharing</h2><p>The UNIX System supports the sharing of open files among different processes. Before describing the dup function, we need to describe this sharing. To do this, we’ll examine the data structures used by the kernel for all I/O. </p>
@@ -608,7 +600,11 @@
 <p>The arrangement of these three tables has existed since the early versions of the UNIX System [Thompson 1978]. <strong>This arrangement is critical to the way files are shared among processes</strong>. We’ll return to this figure in later chapters, when we describe additional ways that files are shared. </p>
 <blockquote>
 <p><strong>The v-node was invented to provide support for multiple file system types on a single computer system</strong>. This work was done independently by Peter Weinberger (Bell Laboratories) and Bill Joy (Sun Microsystems). <strong>Sun called this the Virtual File System and called the file system–independent portion of the i-node the v-node</strong> [Kleiman 1986]. The v-node propagated through various vendor implementations as support for Sun’s Network File System (NFS) was added. The first release from Berkeley to provide v-nodes was the 4.3BSD Reno release, when NFS was added. </p>
+</blockquote>
+<blockquote>
 <p>In SVR4, the v-node replaced the file system–independent i-node of SVR3. Solaris is derived from SVR4 and, therefore, uses v-nodes. </p>
+</blockquote>
+<blockquote>
 <p>Instead of splitting the data structures into a v-node and an i-node, Linux uses a file system–independent i-node and a file system–dependent i-node. </p>
 </blockquote>
 <p>If two independent processes have the same file open, we could have the arrangement shown in Figure 3.8. </p>
@@ -744,7 +740,7 @@
 </blockquote>
 <p>The prototype that we show corresponds to POSIX.1. FreeBSD 8.0 and Mac OS X 10.6.8 declare the second argument as an unsigned long. This detail doesn’t matter, since the second argument is always a #defined name from a header. </p>
 <p>For the ISO C prototype, an ellipsis is used for the remaining arguments. Normally, however, there is only one more argument, and it’s usually a pointer to a variable or a structure. </p>
-<p>In this prototype, we show only the headers required for the function itself. Normally, additional device-specific headers are required. For example, the ioctl commands for terminal I/O, beyond the basic operations specified by POSIX.1, all require the <termios.h> header. </termios.h></p>
+<p>In this prototype, we show only the headers required for the function itself. Normally, additional device-specific headers are required. For example, the ioctl commands for terminal I/O, beyond the basic operations specified by POSIX.1, all require the &lt;termios.h&gt; header. </p>
 <p>Each device driver can define its own set of ioctl commands. The system, however, provides generic ioctl commands for different classes of devices. Examples of some of the categories for these generic ioctl commands supported in FreeBSD are summarized in Figure 3.15. </p>
 <p><img src="https://i.loli.net/2018/05/31/5b0f4cf6d20f6.png" width="60%"></p>
 <p>The mag tape operations allow us to write end-of-file marks on a tape, rewind a tape, space forward over a specified number of files or records, and the like. None of these operations is easily expressed in terms of the other functions in the chapter (read, write, lseek, and so on), so the easiest way to handle these devices has always been to access their operations using ioctl. </p>
@@ -919,7 +915,7 @@
               
                 <a href="/blog/archives">
               
-                  <span class="site-state-item-count">36</span>
+                  <span class="site-state-item-count">37</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -930,7 +926,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/blog/categories/index.html">
-                  <span class="site-state-item-count">23</span>
+                  <span class="site-state-item-count">24</span>
                   <span class="site-state-item-name">categories</span>
                 </a>
               </div>
@@ -1065,7 +1061,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">64.4k</span>
+    <span title="Site words total count">64.8k</span>
   
 </div>
 
