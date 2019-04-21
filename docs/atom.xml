@@ -6,7 +6,7 @@
   <link href="/blog/atom.xml" rel="self"/>
   
   <link href="http://liuqinh2s.github.io/blog/"/>
-  <updated>2019-04-21T09:34:07.798Z</updated>
+  <updated>2019-04-21T09:06:34.966Z</updated>
   <id>http://liuqinh2s.github.io/blog/</id>
   
   <author>
@@ -15,27 +15,6 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title>计算机中的信息</title>
-    <link href="http://liuqinh2s.github.io/blog/2019/04/21/%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%B8%AD%E7%9A%84%E4%BF%A1%E6%81%AF/"/>
-    <id>http://liuqinh2s.github.io/blog/2019/04/21/计算机中的信息/</id>
-    <published>2019-04-20T16:00:00.000Z</published>
-    <updated>2019-04-21T09:34:07.798Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;信息的本质&quot;&gt;&lt;a href=&quot;#信息的本质&quot; class=&quot;headerlink&quot; title=&quot;信息的本质&quot;&gt;&lt;/a&gt;信息的本质&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;信息的本质是消除不确定性&lt;/strong&gt;：我们抛掷一枚硬币，然后用手盖住，出现正面朝上和反面朝上的概率都是二分之一。当我们偷看了结果，确定了是正面还是反面朝上，也就获得了信息。在这个例子中，我们消除的不确定性是一个二分之一的概率。在 &lt;strong&gt;&lt;a href=&quot;https://zh.wikipedia.org/zh-hans/%E5%85%8B%E5%8A%B3%E5%BE%B7%C2%B7%E9%A6%99%E5%86%9C&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;香农&lt;/a&gt;&lt;/strong&gt; 划时代的论文 &lt;strong&gt;&lt;a href=&quot;http://math.harvard.edu/~ctm/home/text/others/shannon/entropy/entropy.pdf&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;通信的数学原理&lt;/a&gt;&lt;/strong&gt; 中，首次提出了信息是可量化的，以及如何量化信息。我们以bit为信息的度量单位，一个bit可以是0或者1，我们每获得一个bit的信息，就会消除一个二分之一的不确定性。&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;小思考题：如果我们抛掷的是一个骰子呢，当我们确定了一次投掷结果，我们获得多少信息（用bit为单位衡量）？&lt;br&gt;我们都知道，骰子有6个面，分别刻有1~6，我们有六分之一的概率得到其中任意一个面朝上。那么我们获得的信息应该是：$\log_2 6$。&lt;/p&gt;
-&lt;/blockquote&gt;
-    
-    </summary>
-    
-      <category term="从零开始学习计算机" scheme="http://liuqinh2s.github.io/blog/categories/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E5%AD%A6%E4%B9%A0%E8%AE%A1%E7%AE%97%E6%9C%BA/"/>
-    
-    
-  </entry>
   
   <entry>
     <title>什么是字符集和编码</title>
@@ -66,11 +45,32 @@
   </entry>
   
   <entry>
+    <title>计算机中的信息</title>
+    <link href="http://liuqinh2s.github.io/blog/2019/04/21/%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%B8%AD%E7%9A%84%E4%BF%A1%E6%81%AF/"/>
+    <id>http://liuqinh2s.github.io/blog/2019/04/21/计算机中的信息/</id>
+    <published>2019-04-20T16:00:00.000Z</published>
+    <updated>2019-04-21T09:34:07.798Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;信息的本质&quot;&gt;&lt;a href=&quot;#信息的本质&quot; class=&quot;headerlink&quot; title=&quot;信息的本质&quot;&gt;&lt;/a&gt;信息的本质&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;信息的本质是消除不确定性&lt;/strong&gt;：我们抛掷一枚硬币，然后用手盖住，出现正面朝上和反面朝上的概率都是二分之一。当我们偷看了结果，确定了是正面还是反面朝上，也就获得了信息。在这个例子中，我们消除的不确定性是一个二分之一的概率。在 &lt;strong&gt;&lt;a href=&quot;https://zh.wikipedia.org/zh-hans/%E5%85%8B%E5%8A%B3%E5%BE%B7%C2%B7%E9%A6%99%E5%86%9C&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;香农&lt;/a&gt;&lt;/strong&gt; 划时代的论文 &lt;strong&gt;&lt;a href=&quot;http://math.harvard.edu/~ctm/home/text/others/shannon/entropy/entropy.pdf&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;通信的数学原理&lt;/a&gt;&lt;/strong&gt; 中，首次提出了信息是可量化的，以及如何量化信息。我们以bit为信息的度量单位，一个bit可以是0或者1，我们每获得一个bit的信息，就会消除一个二分之一的不确定性。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;小思考题：如果我们抛掷的是一个骰子呢，当我们确定了一次投掷结果，我们获得多少信息（用bit为单位衡量）？&lt;br&gt;我们都知道，骰子有6个面，分别刻有1~6，我们有六分之一的概率得到其中任意一个面朝上。那么我们获得的信息应该是：$\log_2 6$。&lt;/p&gt;
+&lt;/blockquote&gt;
+    
+    </summary>
+    
+      <category term="从零开始学习计算机" scheme="http://liuqinh2s.github.io/blog/categories/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E5%AD%A6%E4%B9%A0%E8%AE%A1%E7%AE%97%E6%9C%BA/"/>
+    
+    
+  </entry>
+  
+  <entry>
     <title>记录一些不错的网站</title>
     <link href="http://liuqinh2s.github.io/blog/2019/04/20/%E8%AE%B0%E5%BD%95%E4%B8%80%E4%BA%9B%E4%B8%8D%E9%94%99%E7%9A%84%E7%BD%91%E7%AB%99/"/>
     <id>http://liuqinh2s.github.io/blog/2019/04/20/记录一些不错的网站/</id>
     <published>2019-04-19T16:00:00.000Z</published>
-    <updated>2019-04-21T00:50:17.931Z</updated>
+    <updated>2019-04-21T14:19:10.631Z</updated>
     
     <summary type="html">
     
@@ -82,6 +82,10 @@
 &lt;li&gt;&lt;a href=&quot;http://my-music-diary.com/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;My Music Diary&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://www.crypto101.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;CRYPTO101&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;http://static.icybear.net/%5BCN%5DProgrammer%20competency%20matrix.htm&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Programmer Competency Matrix&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://thetreeographer.com/archive/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;世界上最古老的树有哪些&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://learnopengl-cn.github.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;OpenGL 入门&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://ctf-wiki.github.io/ctf-wiki/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;CTF wiki&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://teachyourselfcs.com/#programming&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Teach Yourself Computer Science&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
     
     </summary>
@@ -134,6 +138,24 @@
   </entry>
   
   <entry>
+    <title>To be a publisher</title>
+    <link href="http://liuqinh2s.github.io/blog/2019/03/03/To%20be%20a%20publisher/"/>
+    <id>http://liuqinh2s.github.io/blog/2019/03/03/To be a publisher/</id>
+    <published>2019-03-02T16:00:00.000Z</published>
+    <updated>2019-04-20T03:14:56.596Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;这是我一直以来想写的文章，标题叫：To be a publisher，也就是做一个可以在互联网上产出内容的人。为什么我认为在互联网上产出内容这么重要呢？因为在未来，不能发声的人将无法融入互联网这个新的社会，即便融入了，也只能是那些能够发声的人的附庸。不能表达自己或不善于表达自己这是一件很可怕的事，这类人或许将成为互联网上的哑巴，被忽视的群体，沉默的大多数。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="Methodology" scheme="http://liuqinh2s.github.io/blog/tags/Methodology/"/>
+    
+  </entry>
+  
+  <entry>
     <title>动态数组的分摊分析</title>
     <link href="http://liuqinh2s.github.io/blog/2019/03/03/%E5%8A%A8%E6%80%81%E6%95%B0%E7%BB%84%E7%9A%84%E5%88%86%E6%91%8A%E5%88%86%E6%9E%90/"/>
     <id>http://liuqinh2s.github.io/blog/2019/03/03/动态数组的分摊分析/</id>
@@ -155,24 +177,6 @@
     
       <category term="Analysis" scheme="http://liuqinh2s.github.io/blog/categories/Algorithm/Analysis/"/>
     
-    
-  </entry>
-  
-  <entry>
-    <title>To be a publisher</title>
-    <link href="http://liuqinh2s.github.io/blog/2019/03/03/To%20be%20a%20publisher/"/>
-    <id>http://liuqinh2s.github.io/blog/2019/03/03/To be a publisher/</id>
-    <published>2019-03-02T16:00:00.000Z</published>
-    <updated>2019-04-20T03:14:56.596Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;这是我一直以来想写的文章，标题叫：To be a publisher，也就是做一个可以在互联网上产出内容的人。为什么我认为在互联网上产出内容这么重要呢？因为在未来，不能发声的人将无法融入互联网这个新的社会，即便融入了，也只能是那些能够发声的人的附庸。不能表达自己或不善于表达自己这是一件很可怕的事，这类人或许将成为互联网上的哑巴，被忽视的群体，沉默的大多数。&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="Methodology" scheme="http://liuqinh2s.github.io/blog/tags/Methodology/"/>
     
   </entry>
   
@@ -409,6 +413,26 @@
   </entry>
   
   <entry>
+    <title>什么是回调</title>
+    <link href="http://liuqinh2s.github.io/blog/2018/11/04/%E4%BB%80%E4%B9%88%E6%98%AF%E5%9B%9E%E8%B0%83/"/>
+    <id>http://liuqinh2s.github.io/blog/2018/11/04/什么是回调/</id>
+    <published>2018-11-03T16:00:00.000Z</published>
+    <updated>2019-04-20T03:14:56.594Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;https://i.loli.net/2018/11/04/5bdeaff01640b.png&quot; alt=&quot;回调2.png&quot;&gt;&lt;/p&gt;
+&lt;p&gt;打个比方，有一家旅馆提供叫醒服务，但是要求旅客自己决定叫醒的方法。可以是打客房电话，也可以是派服务员去敲门，睡得死怕耽误事的，还可以要求往自己头上浇盆水。这里，“叫醒”这个行为是旅馆提供的，相当于库函数，但是叫醒的方式是由旅客决定并告诉旅馆的，也就是回调函数。而旅客告诉旅馆怎么叫醒自己的动作，也就是把回调函数传入库函数的动作，称为登记回调函数（to register a callback function）。&lt;/p&gt;
+&lt;p&gt;在回调中，我们利用某种方式，把回调函数像参数一样传入中间函数。可以这么理解，在传入一个回调函数之前，中间函数是不完整的。换句话说，程序可以在运行时，通过登记不同的回调函数，来决定、改变中间函数的行为。这就比简单的函数调用要灵活太多了。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Knowledge of CS" scheme="http://liuqinh2s.github.io/blog/categories/Knowledge-of-CS/"/>
+    
+    
+  </entry>
+  
+  <entry>
     <title>精通一款编辑器之sublime text 3</title>
     <link href="http://liuqinh2s.github.io/blog/2018/11/04/%E7%B2%BE%E9%80%9A%E4%B8%80%E6%AC%BE%E7%BC%96%E8%BE%91%E5%99%A8%E4%B9%8Bsublime%20text%203/"/>
     <id>http://liuqinh2s.github.io/blog/2018/11/04/精通一款编辑器之sublime text 3/</id>
@@ -460,26 +484,6 @@
     
     
       <category term="IDE" scheme="http://liuqinh2s.github.io/blog/tags/IDE/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>什么是回调</title>
-    <link href="http://liuqinh2s.github.io/blog/2018/11/04/%E4%BB%80%E4%B9%88%E6%98%AF%E5%9B%9E%E8%B0%83/"/>
-    <id>http://liuqinh2s.github.io/blog/2018/11/04/什么是回调/</id>
-    <published>2018-11-03T16:00:00.000Z</published>
-    <updated>2019-04-20T03:14:56.594Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;img src=&quot;https://i.loli.net/2018/11/04/5bdeaff01640b.png&quot; alt=&quot;回调2.png&quot;&gt;&lt;/p&gt;
-&lt;p&gt;打个比方，有一家旅馆提供叫醒服务，但是要求旅客自己决定叫醒的方法。可以是打客房电话，也可以是派服务员去敲门，睡得死怕耽误事的，还可以要求往自己头上浇盆水。这里，“叫醒”这个行为是旅馆提供的，相当于库函数，但是叫醒的方式是由旅客决定并告诉旅馆的，也就是回调函数。而旅客告诉旅馆怎么叫醒自己的动作，也就是把回调函数传入库函数的动作，称为登记回调函数（to register a callback function）。&lt;/p&gt;
-&lt;p&gt;在回调中，我们利用某种方式，把回调函数像参数一样传入中间函数。可以这么理解，在传入一个回调函数之前，中间函数是不完整的。换句话说，程序可以在运行时，通过登记不同的回调函数，来决定、改变中间函数的行为。这就比简单的函数调用要灵活太多了。&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="Knowledge of CS" scheme="http://liuqinh2s.github.io/blog/categories/Knowledge-of-CS/"/>
-    
     
   </entry>
   
