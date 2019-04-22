@@ -89,7 +89,7 @@
 <meta property="og:description" content="文本文件中，为了让比特表示文字，我们发明了字符集，让特定的比特序列对应特定的字符。 常见的字符集有：  ASCII EASCII GB2312 GBK Unicode UTF-8 （严格来说UTF-8只是Unicode的一种编码方式） ANSI编码">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="https://i.loli.net/2019/04/21/5cbc05ae5526e.jpg">
-<meta property="og:updated_time" content="2019-04-21T09:06:34.966Z">
+<meta property="og:updated_time" content="2019-04-22T04:36:45.099Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="什么是字符集和编码">
 <meta name="twitter:description" content="文本文件中，为了让比特表示文字，我们发明了字符集，让特定的比特序列对应特定的字符。 常见的字符集有：  ASCII EASCII GB2312 GBK Unicode UTF-8 （严格来说UTF-8只是Unicode的一种编码方式） ANSI编码">
@@ -366,7 +366,7 @@
                   <span class="post-meta-item-text">Words count in article&#58;</span>
                 
                 <span title="Words count in article">
-                  1,895
+                  1,914
                 </span>
               
 
@@ -403,7 +403,7 @@
 <li><a href="https://baike.baidu.com/item/ANSI%E7%BC%96%E7%A0%81" target="_blank" rel="noopener">ANSI编码</a></li>
 </ul>
 <a id="more"></a>
-<h2 id="ASCII"><a href="#ASCII" class="headerlink" title="ASCII"></a>ASCII</h2><p>计算机诞生于美国，因此最早的时候，人们只需要表示英文26个字符在内的少数字符，用半个字节就可以表示完这些字符。这就是ASCII字符集，范围是<code>0~127</code>。</p>
+<h2 id="ASCII"><a href="#ASCII" class="headerlink" title="ASCII"></a>ASCII</h2><p>计算机诞生于美国，因此最早的时候，人们只需要表示英文26个字符在内的少数字符，用半个字节就可以表示完这些字符。这就是ASCII字符集，最高位为0，其余7位可以表示的范围是：<code>0~127</code>。总共128个字符。</p>
 <p>ASCII字符分为：<strong>控制字符</strong>（不可显示） 和 <strong>可显示字符</strong></p>
 <p>其中，0x20以下为控制字符，不可显示。比如，0x10表示换行，0x07表示发声。另外还有个特殊的控制字符：0x7f表示删除，所以总共是33个控制字符，95个可显示字符。</p>
 <h2 id="EASCII"><a href="#EASCII" class="headerlink" title="EASCII"></a>EASCII</h2><p>欧洲国家使用计算机之后，也有了创建字符集的需求，于是对ASCII进行扩展，使用了剩下一半字节的空间，<code>0x80 - 0xff</code>的定义就被填充成了希腊字母，罗马字母等符号。</p>
@@ -427,7 +427,7 @@
 <p>这另一半的潜力就是，第二个字节的<code>0x00 - 0x7f</code>部分。这部分空出来，是由于GB2312表示汉字时，要求两个字节都是在<code>0x80 - 0xff</code>范围内的。</p>
 <p>填上这部分的空档之后，再生僻的字也被表示出来了，同时，我们还考虑到港澳台同胞的感受，包含了繁体字，一共大概增加了20k的汉字和符号。</p>
 <h2 id="Unicode"><a href="#Unicode" class="headerlink" title="Unicode"></a>Unicode</h2><p>随着时间的推移，互联网的兴起，不止海峡两岸，全世界范围内共建一个字符集的呼声越来越高。</p>
-<p>Unicode，统一了所有地区的字符，且还在不断扩充中。Unicode编码系统可分为编码方式和实现方式两个层次。Unicode的实现方式称为Unicode转换格式（Unicode Transformation Format，简称为UTF）</p>
+<p>Unicode，统一了所有地区的字符，且还在不断扩充中。Unicode编码系统可分为 <strong>编码方式</strong> 和 <strong>实现方式</strong> 两个层次。Unicode的实现方式称为Unicode转换格式（Unicode Transformation Format，简称为UTF）</p>
 <blockquote>
 <p>UTF-8兼容ASCII，UTF-16不兼容ASCII。</p>
 </blockquote>
@@ -436,7 +436,7 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">单字节字符：</span><br><span class="line">    以0开头，后面7位表示字符，事实上，UTF-8的单字节字符就是ASCII字符，完美兼容；</span><br><span class="line">n字节字符：</span><br><span class="line">    第一个字节的前n位为1，第n+1位为0。读到此字节时，可以方便的知道后续多少字节是用来表示一个字符；</span><br><span class="line">    其余字节，以10开头。</span><br></pre></td></tr></table></figure>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">Unicode符号范围 | UTF-8编码方式</span><br><span class="line">(十六进制) | （二进制） </span><br><span class="line">—————————————————————– </span><br><span class="line">0000 0000-0000 007F | 0xxxxxxx </span><br><span class="line">0000 0080-0000 07FF | 110xxxxx 10xxxxxx </span><br><span class="line">0000 0800-0000 FFFF | 1110xxxx 10xxxxxx 10xxxxxx </span><br><span class="line">0001 0000-0010 FFFF | 11110xxx 10xxxxxx 10xxxxxx 10xxxxxx</span><br></pre></td></tr></table></figure>
 <blockquote>
-<p>实际上从第二行对照开始，就存在空间浪费，因为右边的x的位数足够用来表示，0到左边的第二个数所表示范围内的所有数，每行浪费的空间大小是左边的第一个数。</p>
+<p>实际上从第二行对照开始，就存在空间浪费，因为右边的x的位数足够用来表示0到左边的第二个数所表示范围内的所有数，每行浪费的空间大小是左边的第一个数。</p>
 </blockquote>
 <p>UTF-8和Unicode是一一对应的，对于常用汉字，基本上都是占用3个字节，生僻汉字可能占用到6个字节。对于GB2312和GBK来讲，UTF-8无疑造成了浪费，所以，UTF-8可以说是对英文友好，但对中文不友好的一种编码方式。所以在中文界，GB2312与GBK依旧有自己的市场。</p>
 <h2 id="ANSI编码"><a href="#ANSI编码" class="headerlink" title="ANSI编码"></a>ANSI编码</h2><p>ANSI 并不是确定的一种编码，在简体中文操作系统指的是 GB2312，在繁体操作系统指的是 BIG5。</p>
@@ -477,8 +477,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/blog/2019/04/21/计算机中的信息/" rel="next" title="计算机中的信息">
-                <i class="fa fa-chevron-left"></i> 计算机中的信息
+              <a href="/blog/2019/04/20/记录一些不错的网站/" rel="next" title="记录一些不错的网站">
+                <i class="fa fa-chevron-left"></i> 记录一些不错的网站
               </a>
             
           </div>
@@ -486,6 +486,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/blog/2019/04/21/计算机中的信息/" rel="prev" title="计算机中的信息">
+                计算机中的信息 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>

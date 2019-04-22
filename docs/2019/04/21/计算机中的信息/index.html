@@ -89,7 +89,7 @@
 <meta property="og:description" content="信息的本质信息的本质是消除不确定性：我们抛掷一枚硬币，然后用手盖住，出现正面朝上和反面朝上的概率都是二分之一。当我们偷看了结果，确定了是正面还是反面朝上，也就获得了信息。在这个例子中，我们消除的不确定性是一个二分之一的概率。在 香农 划时代的论文 通信的数学原理 中，首次提出了信息是可量化的，以及如何量化信息。我们以bit为信息的度量单位，一个bit可以是0或者1，我们每获得一个bit的信息，就会">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="https://i.loli.net/2019/04/21/5cbbc51c0887c.png">
-<meta property="og:updated_time" content="2019-04-21T09:34:07.798Z">
+<meta property="og:updated_time" content="2019-04-22T02:44:55.996Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="计算机中的信息">
 <meta name="twitter:description" content="信息的本质信息的本质是消除不确定性：我们抛掷一枚硬币，然后用手盖住，出现正面朝上和反面朝上的概率都是二分之一。当我们偷看了结果，确定了是正面还是反面朝上，也就获得了信息。在这个例子中，我们消除的不确定性是一个二分之一的概率。在 香农 划时代的论文 通信的数学原理 中，首次提出了信息是可量化的，以及如何量化信息。我们以bit为信息的度量单位，一个bit可以是0或者1，我们每获得一个bit的信息，就会">
@@ -366,7 +366,7 @@
                   <span class="post-meta-item-text">Words count in article&#58;</span>
                 
                 <span title="Words count in article">
-                  1,142
+                  1,145
                 </span>
               
 
@@ -403,7 +403,7 @@
 </blockquote>
 <p>K、M、G：这三个是最常见的倍数单位，可以用来搭配b（bit）或者B（Byte）。它们都是词根的缩写，K是Kilo，表示$2^{10}$ ；M是Mega，表示$2^{20}$ ；G是Giga，表示$2^{30}$ 。</p>
 <blockquote>
-<p>其实在一般的场合中，K表示$10^3$，M表示$10^6$，G表示$10^9$。而我们看到上面都是以<code>1024</code>倍递增（$2^{10}=1024$），是1000的近似。在你购买硬盘的时候，厂商却是使用1000这一套进率的。比如100GB的硬盘，其实际容量只有：$\frac{100\times1000^3}{1024^3}=93.13GB$。而内存则是用1024进率算的，1GB的内存就是$2^30$个字节，因为采用地址总线寻址，寻址空间必须是$2^n$，否则就会造成内存浪费或者定位到一个不存在的内存。</p>
+<p>其实在一般的场合中，K表示$10^3$，M表示$10^6$，G表示$10^9$。而我们看到上面都是以<code>1024</code>倍递增（$2^{10}=1024$），是1000的近似。在你购买硬盘的时候，厂商却是使用1000这一套进率的。比如100GB的硬盘，其实际容量只有：$\frac{100\times1000^3}{1024^3}=93.13GB$。而内存则是用1024进率算的，1GB的内存就是$2^{30}$个字节，因为采用地址总线寻址，寻址空间必须是$2^n$，否则就会造成内存浪费或者定位到一个不存在的内存。</p>
 </blockquote>
 <p>T、P：这两个如果你是程序员的话会比较常见。T是Tera，$2^{40}$；P是Peta，$2^{50}$。</p>
 <blockquote>
@@ -425,9 +425,9 @@
 <li>新建一个文本文件，输入“写”，保存之后再打开，乱码<code>д</code>。</li>
 <li>新建一个文本文件，输入“联通”，保存之后再打开，乱码<code>��ͨ</code>。</li>
 </ul>
-<h2 id="字节序"><a href="#字节序" class="headerlink" title="字节序"></a>字节序</h2><p>计算机的内存地址是按字节编号，比如4GB的内存，它的内存地址从0到$2^30$，这里有个问题就是多字节的数据如何确定存放顺序。有的计算机采用 <strong>大端</strong> 有的则采用 <strong>小端</strong>。</p>
+<h2 id="字节序"><a href="#字节序" class="headerlink" title="字节序"></a>字节序</h2><p>计算机的内存地址是按字节编号，比如4GB的内存，它的内存地址从0到$2^{30}$，这里有个问题就是多字节的数据如何确定存放顺序。有的计算机采用 <strong>大端</strong> 有的则采用 <strong>小端</strong>。</p>
 <p>假设我有一个int型数（4字节）：0x29 16 10 57</p>
-<p>29是高位，57是低位，如果高位存放的内存地址也是高地址，那么我们就称之为 <strong>大端</strong> 字节序。反之就是小端。</p>
+<p>29是高位，57是低位，如果高位存放的内存地址也是高地址，那么我们就称之为 <strong>大端</strong> 字节序。反之就是 <strong>小端</strong> 字节序。</p>
 
       
     </div>
@@ -452,8 +452,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/blog/2019/04/20/记录一些不错的网站/" rel="next" title="记录一些不错的网站">
-                <i class="fa fa-chevron-left"></i> 记录一些不错的网站
+              <a href="/blog/2019/04/21/什么是字符集和编码/" rel="next" title="什么是字符集和编码">
+                <i class="fa fa-chevron-left"></i> 什么是字符集和编码
               </a>
             
           </div>
@@ -461,10 +461,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/blog/2019/04/21/什么是字符集和编码/" rel="prev" title="什么是字符集和编码">
-                什么是字符集和编码 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
