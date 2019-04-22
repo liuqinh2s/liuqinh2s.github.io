@@ -276,7 +276,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://liuqinh2s.github.io/blog/blog/2019/04/21/计算机中的信息/">
+    <link itemprop="mainEntityOfPage" href="http://liuqinh2s.github.io/blog/blog/2019/04/22/计算机硬件结构/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="liuqinh2s">
@@ -295,7 +295,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/blog/2019/04/21/计算机中的信息/" itemprop="url">计算机中的信息</a></h1>
+                <a class="post-title-link" href="/blog/2019/04/22/计算机硬件结构/" itemprop="url">计算机硬件结构</a></h1>
         
 
         <div class="post-meta">
@@ -307,8 +307,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-04-21T00:00:00+08:00">
-                2019-04-21
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-04-22T00:00:00+08:00">
+                2019-04-22
               </time>
             
 
@@ -361,7 +361,7 @@
                   <span class="post-meta-item-text">Words count in article&#58;</span>
                 
                 <span title="Words count in article">
-                  1,145
+                  1,078
                 </span>
               
 
@@ -387,13 +387,30 @@
 
       
         
-          <h2 id="信息的本质"><a href="#信息的本质" class="headerlink" title="信息的本质"></a>信息的本质</h2><p><strong>信息的本质是消除不确定性</strong>：我们抛掷一枚硬币，然后用手盖住，出现正面朝上和反面朝上的概率都是二分之一。当我们偷看了结果，确定了是正面还是反面朝上，也就获得了信息。在这个例子中，我们消除的不确定性是一个二分之一的概率。在 <strong><a href="https://zh.wikipedia.org/zh-hans/%E5%85%8B%E5%8A%B3%E5%BE%B7%C2%B7%E9%A6%99%E5%86%9C" target="_blank" rel="noopener">香农</a></strong> 划时代的论文 <strong><a href="http://math.harvard.edu/~ctm/home/text/others/shannon/entropy/entropy.pdf" target="_blank" rel="noopener">通信的数学原理</a></strong> 中，首次提出了信息是可量化的，以及如何量化信息。我们以bit为信息的度量单位，一个bit可以是0或者1，我们每获得一个bit的信息，就会消除一个二分之一的不确定性。</p>
+          <h2 id="冯·诺依曼结构"><a href="#冯·诺依曼结构" class="headerlink" title="冯·诺依曼结构"></a><a href="https://zh.wikipedia.org/wiki/%E5%86%AF%C2%B7%E8%AF%BA%E4%BC%8A%E6%9B%BC%E7%BB%93%E6%9E%84" target="_blank" rel="noopener">冯·诺依曼结构</a></h2><p>冯·诺伊曼结构与 <strong>存储程序型计算机</strong> 是互相通用的名词</p>
 <blockquote>
-<p>小思考题：如果我们抛掷的是一个骰子呢，当我们确定了一次投掷结果，我们获得多少信息（用bit为单位衡量）？<br>我们都知道，骰子有6个面，分别刻有1~6，我们有六分之一的概率得到其中任意一个面朝上。那么我们获得的信息应该是：$\log_2 6$。</p>
+<p><strong>哈佛结构</strong> 是一种将程序数据与普通数据分开存储的设计概念，可以说是冯·诺依曼结构的一种。</p>
 </blockquote>
+<p>存储程序计算机在体系结构上主要特点有：</p>
+<ul>
+<li>以运算单元为中心</li>
+<li><strong>采用存储程序原理</strong></li>
+<li>存储器是按地址访问、线性编址的空间</li>
+<li><strong>控制流由指令流产生</strong></li>
+<li>指令由 <strong>操作码</strong> 和 <strong>地址码</strong> 组成</li>
+<li>数据以二进制编码</li>
+</ul>
+<p>五个组成部分：</p>
+<ul>
+<li>存储器</li>
+<li>控制器</li>
+<li>运算器（算术逻辑单元）</li>
+<li>输入</li>
+<li>输出</li>
+</ul>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/blog/2019/04/21/计算机中的信息/#more" rel="contents">
+            <a class="btn" href="/blog/2019/04/22/计算机硬件结构/#more" rel="contents">
               Read more &raquo;
             </a>
           </div>
@@ -569,6 +586,174 @@
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/blog/2019/04/21/什么是字符集和编码/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://liuqinh2s.github.io/blog/blog/2019/04/21/计算机中的信息/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="liuqinh2s">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="https://wx4.sinaimg.cn/mw690/006zFO3gly1flf4xnd5q9j30ku0ku75r.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="liuqinh2s' blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/blog/2019/04/21/计算机中的信息/" itemprop="url">计算机中的信息</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-04-21T00:00:00+08:00">
+                2019-04-21
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/blog/categories/从零开始学习计算机/" itemprop="url" rel="index">
+                    <span itemprop="name">从零开始学习计算机</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Words count in article&#58;</span>
+                
+                <span title="Words count in article">
+                  1,145
+                </span>
+              
+
+              
+
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h2 id="信息的本质"><a href="#信息的本质" class="headerlink" title="信息的本质"></a>信息的本质</h2><p><strong>信息的本质是消除不确定性</strong>：我们抛掷一枚硬币，然后用手盖住，出现正面朝上和反面朝上的概率都是二分之一。当我们偷看了结果，确定了是正面还是反面朝上，也就获得了信息。在这个例子中，我们消除的不确定性是一个二分之一的概率。在 <strong><a href="https://zh.wikipedia.org/zh-hans/%E5%85%8B%E5%8A%B3%E5%BE%B7%C2%B7%E9%A6%99%E5%86%9C" target="_blank" rel="noopener">香农</a></strong> 划时代的论文 <strong><a href="http://math.harvard.edu/~ctm/home/text/others/shannon/entropy/entropy.pdf" target="_blank" rel="noopener">通信的数学原理</a></strong> 中，首次提出了信息是可量化的，以及如何量化信息。我们以bit为信息的度量单位，一个bit可以是0或者1，我们每获得一个bit的信息，就会消除一个二分之一的不确定性。</p>
+<blockquote>
+<p>小思考题：如果我们抛掷的是一个骰子呢，当我们确定了一次投掷结果，我们获得多少信息（用bit为单位衡量）？<br>我们都知道，骰子有6个面，分别刻有1~6，我们有六分之一的概率得到其中任意一个面朝上。那么我们获得的信息应该是：$\log_2 6$。</p>
+</blockquote>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/blog/2019/04/21/计算机中的信息/#more" rel="contents">
               Read more &raquo;
             </a>
           </div>
@@ -941,149 +1126,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://liuqinh2s.github.io/blog/blog/2019/04/15/C++ map的remove函数实现/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="liuqinh2s">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="https://wx4.sinaimg.cn/mw690/006zFO3gly1flf4xnd5q9j30ku0ku75r.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="liuqinh2s' blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/blog/2019/04/15/C++ map的remove函数实现/" itemprop="url">C++ map的remove函数实现</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-04-15T00:00:00+08:00">
-                2019-04-15
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">Words count in article&#58;</span>
-                
-                <span title="Words count in article">
-                  508
-                </span>
-              
-
-              
-
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <p>今天同学群里面讨论了这样一段代码，说是产品出了bug，现场急着修复。</p>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/blog/2019/04/15/C++ map的remove函数实现/#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -1136,7 +1178,7 @@
               
                 <a href="/blog/archives">
               
-                  <span class="site-state-item-count">39</span>
+                  <span class="site-state-item-count">40</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -1266,7 +1308,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">67.9k</span>
+    <span title="Site words total count">69.0k</span>
   
 </div>
 
