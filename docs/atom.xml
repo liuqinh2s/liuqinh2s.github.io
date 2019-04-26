@@ -6,7 +6,7 @@
   <link href="/blog/atom.xml" rel="self"/>
   
   <link href="http://liuqinh2s.github.io/blog/"/>
-  <updated>2019-04-23T08:28:00.964Z</updated>
+  <updated>2019-04-25T09:35:01.726Z</updated>
   <id>http://liuqinh2s.github.io/blog/</id>
   
   <author>
@@ -21,11 +21,76 @@
     <link href="http://liuqinh2s.github.io/blog/2019/04/22/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A1%AC%E4%BB%B6%E7%BB%93%E6%9E%84/"/>
     <id>http://liuqinh2s.github.io/blog/2019/04/22/计算机硬件结构/</id>
     <published>2019-04-21T16:00:00.000Z</published>
-    <updated>2019-04-23T08:28:00.964Z</updated>
+    <updated>2019-04-25T09:35:01.726Z</updated>
     
     <summary type="html">
     
-      &lt;h2 id=&quot;图灵机&quot;&gt;&lt;a href=&quot;#图灵机&quot; class=&quot;headerlink&quot; title=&quot;图灵机&quot;&gt;&lt;/a&gt;&lt;a href=&quot;https://zh.wikipedia.org/wiki/%E5%9B%BE%E7%81%B5%E6%9C%BA&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;图灵机&lt;/a&gt;&lt;/h2&gt;&lt;h2 id=&quot;冯·诺依曼结构&quot;&gt;&lt;a href=&quot;#冯·诺依曼结构&quot; class=&quot;headerlink&quot; title=&quot;冯·诺依曼结构&quot;&gt;&lt;/a&gt;&lt;a href=&quot;https://zh.wikipedia.org/wiki/%E5%86%AF%C2%B7%E8%AF%BA%E4%BC%8A%E6%9B%BC%E7%BB%93%E6%9E%84&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;冯·诺依曼结构&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;冯·诺伊曼结构与 &lt;strong&gt;存储程序型计算机&lt;/strong&gt; 是互相通用的名词&lt;/p&gt;
+      &lt;h2 id=&quot;图灵机&quot;&gt;&lt;a href=&quot;#图灵机&quot; class=&quot;headerlink&quot; title=&quot;图灵机&quot;&gt;&lt;/a&gt;&lt;a href=&quot;https://zh.wikipedia.org/wiki/%E5%9B%BE%E7%81%B5%E6%9C%BA&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;图灵机&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;图灵机（Turing Machine）是 &lt;a href=&quot;https://zh.wikipedia.org/wiki/%E8%89%BE%E4%BC%A6%C2%B7%E5%9B%BE%E7%81%B5&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;英国数学家艾伦·图灵&lt;/a&gt; 在1936年发表的 &amp;quot;&lt;a href=&quot;https://www.cs.virginia.edu/~robins/Turing_Paper_1936.pdf&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;On Computable Numbers, with an Application to the Entscheidungsproblem&lt;/a&gt;&amp;quot;（《论可计算数及其在判定性问题上的应用》）中提出的数学模型。在文章中图灵描述了它是什么，并且证明了，只要图灵机可以被实现，就可以用来解决任何可计算问题。&lt;/p&gt;
+&lt;h3 id=&quot;历史&quot;&gt;&lt;a href=&quot;#历史&quot; class=&quot;headerlink&quot; title=&quot;历史&quot;&gt;&lt;/a&gt;历史&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.bilibili.com/video/av30479683?from=search&amp;amp;seid=11735601712045998475&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;妈咪说：图灵&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://movie.douban.com/subject/10463953/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;模仿游戏&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;图灵机的基本思想&quot;&gt;&lt;a href=&quot;#图灵机的基本思想&quot; class=&quot;headerlink&quot; title=&quot;图灵机的基本思想&quot;&gt;&lt;/a&gt;图灵机的基本思想&lt;/h3&gt;&lt;p&gt;图灵机是一种 &lt;strong&gt;抽象计算模型&lt;/strong&gt;，图灵机的构成：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;一条无限长的纸带，纸带由很多个格子构成，用于输入输出信息。每个格子中包含一个来自有限字母表的符号，字母表中有一个特殊符号表示空白。纸带上一端的格子从0开始编号，另一端无限延伸一直到无穷大。&lt;/li&gt;
+&lt;li&gt;一个读写头，用于读写纸带&lt;/li&gt;
+&lt;li&gt;一个状态寄存器，用于保存机器状态。图灵机的状态个数有限，并且有一个特殊的状态：停机状态&lt;/li&gt;
+&lt;li&gt;一套控制规则，根据当前机器状态和纸带内容来确定下一步的动作：&lt;ul&gt;
+&lt;li&gt;写入或擦除当前格子内容&lt;/li&gt;
+&lt;li&gt;移动读写头，向左、向右、或不动&lt;/li&gt;
+&lt;li&gt;保持当前状态或转移到另一状态&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;图灵机的正式定义&quot;&gt;&lt;a href=&quot;#图灵机的正式定义&quot; class=&quot;headerlink&quot; title=&quot;图灵机的正式定义&quot;&gt;&lt;/a&gt;图灵机的正式定义&lt;/h3&gt;&lt;p&gt;a (one-tape) Turing machine can be formally defined as a &lt;strong&gt;7-tuple&lt;/strong&gt; $M=\langle Q,\Gamma ,b,\Sigma ,\delta ,q_{0},F\rangle $   where&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;$Q$ is a finite, non-empty set of &lt;strong&gt;states&lt;/strong&gt;;&lt;/li&gt;
+&lt;li&gt;$\Gamma$  is a finite, non-empty set of &lt;strong&gt;tape alphabet symbols&lt;/strong&gt;;&lt;/li&gt;
+&lt;li&gt;$b\in \Gamma$  is the &lt;strong&gt;blank symbol&lt;/strong&gt; (the only symbol allowed to occur on the tape infinitely often at any step during the computation);&lt;/li&gt;
+&lt;li&gt;$\Sigma \subseteq \Gamma \setminus {b}$ is the set of &lt;strong&gt;input symbols&lt;/strong&gt;, that is, the set of symbols allowed to appear in the initial tape contents;&lt;/li&gt;
+&lt;li&gt;$q_{0}\in Q$ is the &lt;strong&gt;initial state&lt;/strong&gt;;&lt;/li&gt;
+&lt;li&gt;$F\subseteq Q$ is the set of &lt;strong&gt;final states or accepting states&lt;/strong&gt;. The initial tape contents is said to be accepted by $M$ if it eventually halts in a state from $F$.&lt;/li&gt;
+&lt;li&gt;$\delta :(Q\setminus F)\times \Gamma \not \to Q\times \Gamma \times \{L,R\}$ is a partial function called the &lt;strong&gt;transition function&lt;/strong&gt;, where L is left shift, R is right shift. (A relatively uncommon variant allows &amp;quot;no shift&amp;quot;, say N, as a third element of the latter set.) If $\delta$ is not defined on the current state and the current tape symbol, then the machine &lt;strong&gt;halts&lt;/strong&gt;;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;图灵机的实践&quot;&gt;&lt;a href=&quot;#图灵机的实践&quot; class=&quot;headerlink&quot; title=&quot;图灵机的实践&quot;&gt;&lt;/a&gt;图灵机的实践&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://zh.wikipedia.org/wiki/Brainfuck&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Brainfuck&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;图灵完备&quot;&gt;&lt;a href=&quot;#图灵完备&quot; class=&quot;headerlink&quot; title=&quot;图灵完备&quot;&gt;&lt;/a&gt;图灵完备&lt;/h3&gt;&lt;p&gt;只要能模拟单带图灵机，就是图灵完备的。这也意味着其计算能力与通用图灵机等同。&lt;/p&gt;
+&lt;p&gt;不是图灵完备的的常见情况有；&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;递归或循环有限，无法写不终止的程序，如&lt;code&gt;while(true){}&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;无法实现类似数组或列表这样的数据结构（不能模拟纸带）&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;图灵完备也有可能带来坏处，不图灵完备也不是完全没用，比如：有些场景我们需要限制语言的表达能力，如 限制无限循环和递归，保证我们的程序一定是可终止的。&lt;/p&gt;
+&lt;h3 id=&quot;停机问题&quot;&gt;&lt;a href=&quot;#停机问题&quot; class=&quot;headerlink&quot; title=&quot;停机问题&quot;&gt;&lt;/a&gt;&lt;a href=&quot;https://zh.wikipedia.org/wiki/%E5%81%9C%E6%9C%BA%E9%97%AE%E9%A2%98&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;停机问题&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;停机问题（英语：halting problem）是逻辑数学中可计算性理论的一个问题。通俗地说，停机问题就是判断任意一个程序是否能在有限的时间之内结束运行的问题。该问题等价于如下的判定问题：是否存在一个程序P，对于任意输入的程序w，能够判断w会在有限时间内 &lt;strong&gt;结束或者死循环&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;艾伦·图灵在1936年用 &lt;a href=&quot;https://zh.wikipedia.org/wiki/%E5%B0%8D%E8%A7%92%E8%AB%96%E8%AD%89%E6%B3%95&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;对角论证法&lt;/a&gt; 证明了，不存在解决停机问题的通用算法。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;停机问题包含了 &lt;a href=&quot;https://zh.wikipedia.org/wiki/%E8%87%AA%E6%8C%87&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;自我指涉&lt;/a&gt;，本质是 &lt;a href=&quot;https://zh.wikipedia.org/wiki/%E4%B8%80%E9%98%B6%E9%80%BB%E8%BE%91&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;一阶逻辑&lt;/a&gt; 的不完备性，类似的命题有 &lt;a href=&quot;https://zh.wikipedia.org/wiki/%E7%90%86%E5%8F%91%E5%B8%88%E6%82%96%E8%AE%BA&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;理发师悖论&lt;/a&gt;、&lt;a href=&quot;https://zh.wikipedia.org/wiki/%E5%85%A8%E8%83%BD%E6%82%96%E8%AB%96&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;全能悖论&lt;/a&gt; 等。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;证明很简单，构造&lt;code&gt;G=~G&lt;/code&gt;命题（G等于G非），让逻辑崩溃，无论G是真还是假，都是错的，最后推导出：不存在这样的G。&lt;/p&gt;
+&lt;p&gt;停机问题证明过程（反证法）：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;如果存在可以判定任意程序是否停机的程序，我们姑且称它为 &lt;strong&gt;上帝程序&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;那我们定义这样一个程序，它利用上帝程序判断自己是否停机，但如果上帝程序输出停机，它就不停；如果上帝程序输出不停机，它就停机（就是反着干）。这样一来无论上帝程序输出什么，上帝程序都是错的。那么我们只能说不存在这样的上帝程序。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;figure class=&quot;highlight python&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;is_halt&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;(program, input)&lt;/span&gt;:&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt; program halts on input:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; true&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;else&lt;/span&gt;:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; false&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;fuck_is_halt&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;()&lt;/span&gt;:&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt; is_halt(fuck_is_halt):&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;while&lt;/span&gt; (&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;):&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            &lt;span class=&quot;keyword&quot;&gt;pass&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;else&lt;/span&gt;:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;pass&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.matrix67.com/blog/archives/901&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Matrix67：停机问题、Chaitin常数与万能证明方法&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://blog.csdn.net/pongba/article/details/1336028&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;刘未鹏：康托尔、哥德尔、图灵——永恒的金色对角线(rev#2)&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;自我指涉&quot;&gt;&lt;a href=&quot;#自我指涉&quot; class=&quot;headerlink&quot; title=&quot;自我指涉&quot;&gt;&lt;/a&gt;&lt;a href=&quot;https://zh.wikipedia.org/wiki/%E8%87%AA%E6%8C%87&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;自我指涉&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;&lt;img src=&quot;https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Ouroboros.png/220px-Ouroboros.png&quot; alt=&quot;自我指涉&quot;&gt;&lt;/p&gt;
+&lt;p&gt;在数学中，对自指的研究最终导致了著名的 &lt;a href=&quot;https://zh.wikipedia.org/wiki/%E5%93%A5%E5%BE%B7%E5%B0%94%E4%B8%8D%E5%AE%8C%E5%A4%87%E5%AE%9A%E7%90%86&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;哥德尔不完备定理&lt;/a&gt;。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;计算机程序中的自指主要是为 &lt;a href=&quot;https://zh.wikipedia.org/wiki/%E9%80%92%E5%BD%92&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;递归&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;a href=&quot;https://zh.wikipedia.org/wiki/%E5%BE%B7%E7%BD%97%E6%96%AF%E7%89%B9%E6%95%88%E5%BA%94&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;德罗斯特效应&lt;/a&gt;：&lt;/p&gt;
+&lt;p&gt;我们经常可以在主播间看到类似的画面：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Screenshot_Recursion_via_vlc.png/128px-Screenshot_Recursion_via_vlc.png&quot; alt=&quot;德罗斯特效应&quot;&gt;&lt;/p&gt;
+&lt;p&gt;也可以用两面镜子自己做这个实验。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.bilibili.com/video/av31411706?from=search&amp;amp;seid=7703410137961337640&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;妈咪说：哥德尔&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;冯·诺依曼结构&quot;&gt;&lt;a href=&quot;#冯·诺依曼结构&quot; class=&quot;headerlink&quot; title=&quot;冯·诺依曼结构&quot;&gt;&lt;/a&gt;&lt;a href=&quot;https://zh.wikipedia.org/wiki/%E5%86%AF%C2%B7%E8%AF%BA%E4%BC%8A%E6%9B%BC%E7%BB%93%E6%9E%84&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;冯·诺依曼结构&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;冯·诺伊曼结构与 &lt;strong&gt;存储程序型计算机&lt;/strong&gt; 是互相通用的名词&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;&lt;strong&gt;哈佛结构&lt;/strong&gt; 是一种将程序数据与普通数据分开存储的设计概念，可以说是冯·诺依曼结构的一种。&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -451,6 +516,26 @@
   </entry>
   
   <entry>
+    <title>什么是回调</title>
+    <link href="http://liuqinh2s.github.io/blog/2018/11/04/%E4%BB%80%E4%B9%88%E6%98%AF%E5%9B%9E%E8%B0%83/"/>
+    <id>http://liuqinh2s.github.io/blog/2018/11/04/什么是回调/</id>
+    <published>2018-11-03T16:00:00.000Z</published>
+    <updated>2019-04-22T02:34:22.060Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;https://i.loli.net/2018/11/04/5bdeaff01640b.png&quot; alt=&quot;回调2.png&quot;&gt;&lt;/p&gt;
+&lt;p&gt;打个比方，有一家旅馆提供叫醒服务，但是要求旅客自己决定叫醒的方法。可以是打客房电话，也可以是派服务员去敲门，睡得死怕耽误事的，还可以要求往自己头上浇盆水。这里，“叫醒”这个行为是旅馆提供的，相当于库函数，但是叫醒的方式是由旅客决定并告诉旅馆的，也就是回调函数。而旅客告诉旅馆怎么叫醒自己的动作，也就是把回调函数传入库函数的动作，称为登记回调函数（to register a callback function）。&lt;/p&gt;
+&lt;p&gt;在回调中，我们利用某种方式，把回调函数像参数一样传入中间函数。可以这么理解，在传入一个回调函数之前，中间函数是不完整的。换句话说，程序可以在运行时，通过登记不同的回调函数，来决定、改变中间函数的行为。这就比简单的函数调用要灵活太多了。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Knowledge of CS" scheme="http://liuqinh2s.github.io/blog/categories/Knowledge-of-CS/"/>
+    
+    
+  </entry>
+  
+  <entry>
     <title>熟练使用JetBrains家的IDE</title>
     <link href="http://liuqinh2s.github.io/blog/2018/11/04/%E7%86%9F%E7%BB%83%E4%BD%BF%E7%94%A8JetBrains%E5%AE%B6%E7%9A%84IDE/"/>
     <id>http://liuqinh2s.github.io/blog/2018/11/04/熟练使用JetBrains家的IDE/</id>
@@ -475,26 +560,6 @@
     
     
       <category term="IDE" scheme="http://liuqinh2s.github.io/blog/tags/IDE/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>什么是回调</title>
-    <link href="http://liuqinh2s.github.io/blog/2018/11/04/%E4%BB%80%E4%B9%88%E6%98%AF%E5%9B%9E%E8%B0%83/"/>
-    <id>http://liuqinh2s.github.io/blog/2018/11/04/什么是回调/</id>
-    <published>2018-11-03T16:00:00.000Z</published>
-    <updated>2019-04-22T02:34:22.060Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;img src=&quot;https://i.loli.net/2018/11/04/5bdeaff01640b.png&quot; alt=&quot;回调2.png&quot;&gt;&lt;/p&gt;
-&lt;p&gt;打个比方，有一家旅馆提供叫醒服务，但是要求旅客自己决定叫醒的方法。可以是打客房电话，也可以是派服务员去敲门，睡得死怕耽误事的，还可以要求往自己头上浇盆水。这里，“叫醒”这个行为是旅馆提供的，相当于库函数，但是叫醒的方式是由旅客决定并告诉旅馆的，也就是回调函数。而旅客告诉旅馆怎么叫醒自己的动作，也就是把回调函数传入库函数的动作，称为登记回调函数（to register a callback function）。&lt;/p&gt;
-&lt;p&gt;在回调中，我们利用某种方式，把回调函数像参数一样传入中间函数。可以这么理解，在传入一个回调函数之前，中间函数是不完整的。换句话说，程序可以在运行时，通过登记不同的回调函数，来决定、改变中间函数的行为。这就比简单的函数调用要灵活太多了。&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="Knowledge of CS" scheme="http://liuqinh2s.github.io/blog/categories/Knowledge-of-CS/"/>
-    
     
   </entry>
   
