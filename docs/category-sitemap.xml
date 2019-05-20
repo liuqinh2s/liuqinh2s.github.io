@@ -8,8 +8,22 @@
     </url>
 
     <url>
+        <loc>http://liuqinh2s.github.io/blog/categories/Skills-of-Tools/Editor/</loc>
+        <lastmod>2019-04-26T08:03:19.584Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://liuqinh2s.github.io/blog/categories/Skills-of-Tools/</loc>
+        <lastmod>2019-04-26T08:03:19.584Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
         <loc>http://liuqinh2s.github.io/blog/categories/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E5%AD%A6%E4%B9%A0%E8%AE%A1%E7%AE%97%E6%9C%BA/</loc>
-        <lastmod>2019-04-25T09:35:01.726Z</lastmod>
+        <lastmod>2019-04-26T07:47:25.694Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
@@ -115,20 +129,6 @@
     <url>
         <loc>http://liuqinh2s.github.io/blog/categories/Knowlege-of-CS/</loc>
         <lastmod>2019-04-22T02:34:22.071Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://liuqinh2s.github.io/blog/categories/Skills-of-Tools/Editor/</loc>
-        <lastmod>2019-04-22T02:34:22.065Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://liuqinh2s.github.io/blog/categories/Skills-of-Tools/</loc>
-        <lastmod>2019-04-22T02:34:22.065Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>

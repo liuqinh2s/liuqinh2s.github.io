@@ -3,6 +3,13 @@
 
 
     <url>
+        <loc>http://liuqinh2s.github.io/blog/tags/%E7%BC%96%E8%BE%91%E5%99%A8/</loc>
+        <lastmod>2019-04-26T08:03:19.584Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
         <loc>http://liuqinh2s.github.io/blog/tags/fixed-issues/</loc>
         <lastmod>2019-04-22T02:34:22.150Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -33,13 +40,6 @@
     <url>
         <loc>http://liuqinh2s.github.io/blog/tags/JavaScript/</loc>
         <lastmod>2019-04-22T02:34:22.082Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://liuqinh2s.github.io/blog/tags/%E7%BC%96%E8%BE%91%E5%99%A8/</loc>
-        <lastmod>2019-04-22T02:34:22.065Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
