@@ -964,7 +964,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://liuqinh2s.github.io/blog/blog/2018/11/04/精通一款编辑器之sublime text 3/">
+    <link itemprop="mainEntityOfPage" href="http://liuqinh2s.github.io/blog/blog/2018/11/04/什么是回调/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="liuqinh2s">
@@ -983,7 +983,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/blog/2018/11/04/精通一款编辑器之sublime text 3/" itemprop="url">精通一款编辑器之sublime text 3</a></h1>
+                <a class="post-title-link" href="/blog/2018/11/04/什么是回调/" itemprop="url">什么是回调</a></h1>
         
 
         <div class="post-meta">
@@ -1018,19 +1018,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/blog/categories/Skills-of-Tools/" itemprop="url" rel="index">
-                    <span itemprop="name">Skills of Tools</span>
-                  </a>
-                </span>
-
-                
-                
-                  , 
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/blog/categories/Skills-of-Tools/Editor/" itemprop="url" rel="index">
-                    <span itemprop="name">Editor</span>
+                  <a href="/blog/categories/Knowledge-of-CS/" itemprop="url" rel="index">
+                    <span itemprop="name">Knowledge of CS</span>
                   </a>
                 </span>
 
@@ -1060,7 +1049,7 @@
                   <span class="post-meta-item-text">Words count in article&#58;</span>
                 
                 <span title="Words count in article">
-                  1,028
+                  2,398
                 </span>
               
 
@@ -1086,15 +1075,12 @@
 
       
         
-          <h2 id="编辑器常用功能"><a href="#编辑器常用功能" class="headerlink" title="编辑器常用功能"></a>编辑器常用功能</h2><ol>
-<li>格式化代码：格式化代码可以让你不用管代码的格式，可以放肆的写程序，你可以少敲很多空格，不用关心代码的格式问题，机器给出的代码格式风格统一且漂亮，一键解决你的格式问题，真是提高码代码效率的非常重要的功能。</li>
-<li>查找文件：查找文件是在集成开发的时候非常重要的功能，当文件多起来的时候，快速定位到文件可以节省很多时间，甚至有时候文件实在太多，你只能通过查找的方式找到那个文件。</li>
-<li>正则全文件查找和替换：轻松让你更改全局变量和配置，这是一个必须的功能，没有它简直无法想象工作量有多大。</li>
-<li>代码收缩和扩展：代码太长怎么办，收缩和扩展啊。</li>
-</ol>
+          <p><img src="https://i.loli.net/2018/11/04/5bdeaff01640b.png" alt="回调2.png"></p>
+<p>打个比方，有一家旅馆提供叫醒服务，但是要求旅客自己决定叫醒的方法。可以是打客房电话，也可以是派服务员去敲门，睡得死怕耽误事的，还可以要求往自己头上浇盆水。这里，“叫醒”这个行为是旅馆提供的，相当于库函数，但是叫醒的方式是由旅客决定并告诉旅馆的，也就是回调函数。而旅客告诉旅馆怎么叫醒自己的动作，也就是把回调函数传入库函数的动作，称为登记回调函数（to register a callback function）。</p>
+<p>在回调中，我们利用某种方式，把回调函数像参数一样传入中间函数。可以这么理解，在传入一个回调函数之前，中间函数是不完整的。换句话说，程序可以在运行时，通过登记不同的回调函数，来决定、改变中间函数的行为。这就比简单的函数调用要灵活太多了。</p>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/blog/2018/11/04/精通一款编辑器之sublime text 3/#more" rel="contents">
+            <a class="btn" href="/blog/2018/11/04/什么是回调/#more" rel="contents">
               Read more &raquo;
             </a>
           </div>

@@ -6,7 +6,7 @@
   <link href="/blog/atom.xml" rel="self"/>
   
   <link href="http://liuqinh2s.github.io/blog/"/>
-  <updated>2019-04-26T07:14:43.543Z</updated>
+  <updated>2019-06-25T07:02:36.617Z</updated>
   <id>http://liuqinh2s.github.io/blog/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="http://liuqinh2s.github.io/blog/2019/04/26/%E5%9B%BE%E7%81%B5%E6%9C%BA/"/>
     <id>http://liuqinh2s.github.io/blog/2019/04/26/图灵机/</id>
     <published>2019-04-25T16:00:00.000Z</published>
-    <updated>2019-04-26T07:14:43.543Z</updated>
+    <updated>2019-06-25T07:02:36.617Z</updated>
     
     <summary type="html">
     
@@ -43,7 +43,7 @@
     <link href="http://liuqinh2s.github.io/blog/2019/04/22/%E5%86%AF%C2%B7%E8%AF%BA%E4%BE%9D%E6%9B%BC%E7%BB%93%E6%9E%84/"/>
     <id>http://liuqinh2s.github.io/blog/2019/04/22/冯·诺依曼结构/</id>
     <published>2019-04-21T16:00:00.000Z</published>
-    <updated>2019-04-26T07:47:25.694Z</updated>
+    <updated>2019-06-25T07:02:36.616Z</updated>
     
     <summary type="html">
     
@@ -81,7 +81,7 @@
     <link href="http://liuqinh2s.github.io/blog/2019/04/21/%E4%BB%80%E4%B9%88%E6%98%AF%E5%AD%97%E7%AC%A6%E9%9B%86%E5%92%8C%E7%BC%96%E7%A0%81/"/>
     <id>http://liuqinh2s.github.io/blog/2019/04/21/什么是字符集和编码/</id>
     <published>2019-04-20T16:00:00.000Z</published>
-    <updated>2019-04-22T04:36:45.099Z</updated>
+    <updated>2019-06-25T07:02:36.613Z</updated>
     
     <summary type="html">
     
@@ -109,7 +109,7 @@
     <link href="http://liuqinh2s.github.io/blog/2019/04/21/%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%B8%AD%E7%9A%84%E4%BF%A1%E6%81%AF/"/>
     <id>http://liuqinh2s.github.io/blog/2019/04/21/计算机中的信息/</id>
     <published>2019-04-20T16:00:00.000Z</published>
-    <updated>2019-04-22T02:44:55.996Z</updated>
+    <updated>2019-06-25T07:02:36.614Z</updated>
     
     <summary type="html">
     
@@ -130,7 +130,7 @@
     <link href="http://liuqinh2s.github.io/blog/2019/04/20/%E8%AE%B0%E5%BD%95%E4%B8%80%E4%BA%9B%E4%B8%8D%E9%94%99%E7%9A%84%E7%BD%91%E7%AB%99/"/>
     <id>http://liuqinh2s.github.io/blog/2019/04/20/记录一些不错的网站/</id>
     <published>2019-04-19T16:00:00.000Z</published>
-    <updated>2019-04-23T03:56:23.994Z</updated>
+    <updated>2019-06-25T07:02:36.612Z</updated>
     
     <summary type="html">
     
@@ -158,11 +158,29 @@
   </entry>
   
   <entry>
+    <title>C++ map的remove函数实现</title>
+    <link href="http://liuqinh2s.github.io/blog/2019/04/15/C++%20map%E7%9A%84remove%E5%87%BD%E6%95%B0%E5%AE%9E%E7%8E%B0/"/>
+    <id>http://liuqinh2s.github.io/blog/2019/04/15/C++ map的remove函数实现/</id>
+    <published>2019-04-14T16:00:00.000Z</published>
+    <updated>2019-06-25T07:02:36.610Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;今天同学群里面讨论了这样一段代码，说是产品出了bug，现场急着修复。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="fixed issues" scheme="http://liuqinh2s.github.io/blog/tags/fixed-issues/"/>
+    
+  </entry>
+  
+  <entry>
     <title>hexo把英文引号渲染成中文引号的问题</title>
     <link href="http://liuqinh2s.github.io/blog/2019/04/15/hexo%E6%8A%8A%E8%8B%B1%E6%96%87%E5%BC%95%E5%8F%B7%E6%B8%B2%E6%9F%93%E6%88%90%E4%B8%AD%E6%96%87%E5%BC%95%E5%8F%B7%E7%9A%84%E9%97%AE%E9%A2%98/"/>
     <id>http://liuqinh2s.github.io/blog/2019/04/15/hexo把英文引号渲染成中文引号的问题/</id>
     <published>2019-04-14T16:00:00.000Z</published>
-    <updated>2019-04-22T02:34:22.150Z</updated>
+    <updated>2019-06-25T07:02:36.611Z</updated>
     
     <summary type="html">
     
@@ -180,20 +198,20 @@
   </entry>
   
   <entry>
-    <title>C++ map的remove函数实现</title>
-    <link href="http://liuqinh2s.github.io/blog/2019/04/15/C++%20map%E7%9A%84remove%E5%87%BD%E6%95%B0%E5%AE%9E%E7%8E%B0/"/>
-    <id>http://liuqinh2s.github.io/blog/2019/04/15/C++ map的remove函数实现/</id>
-    <published>2019-04-14T16:00:00.000Z</published>
-    <updated>2019-04-22T02:34:22.147Z</updated>
+    <title>To be a publisher</title>
+    <link href="http://liuqinh2s.github.io/blog/2019/03/03/To%20be%20a%20publisher/"/>
+    <id>http://liuqinh2s.github.io/blog/2019/03/03/To be a publisher/</id>
+    <published>2019-03-02T16:00:00.000Z</published>
+    <updated>2019-06-25T07:02:36.607Z</updated>
     
     <summary type="html">
     
-      &lt;p&gt;今天同学群里面讨论了这样一段代码，说是产品出了bug，现场急着修复。&lt;/p&gt;
+      &lt;p&gt;这是我一直以来想写的文章，标题叫：To be a publisher，也就是做一个可以在互联网上产出内容的人。为什么我认为在互联网上产出内容这么重要呢？因为在未来，不能发声的人将无法融入互联网这个新的社会，即便融入了，也只能是那些能够发声的人的附庸。不能表达自己或不善于表达自己这是一件很可怕的事，这类人或许将成为互联网上的哑巴，被忽视的群体，沉默的大多数。&lt;/p&gt;
     
     </summary>
     
     
-      <category term="fixed issues" scheme="http://liuqinh2s.github.io/blog/tags/fixed-issues/"/>
+      <category term="Methodology" scheme="http://liuqinh2s.github.io/blog/tags/Methodology/"/>
     
   </entry>
   
@@ -202,7 +220,7 @@
     <link href="http://liuqinh2s.github.io/blog/2019/03/03/%E5%8A%A8%E6%80%81%E6%95%B0%E7%BB%84%E7%9A%84%E5%88%86%E6%91%8A%E5%88%86%E6%9E%90/"/>
     <id>http://liuqinh2s.github.io/blog/2019/03/03/动态数组的分摊分析/</id>
     <published>2019-03-02T16:00:00.000Z</published>
-    <updated>2019-04-22T02:34:22.144Z</updated>
+    <updated>2019-06-25T07:02:36.608Z</updated>
     
     <summary type="html">
     
@@ -223,29 +241,11 @@
   </entry>
   
   <entry>
-    <title>To be a publisher</title>
-    <link href="http://liuqinh2s.github.io/blog/2019/03/03/To%20be%20a%20publisher/"/>
-    <id>http://liuqinh2s.github.io/blog/2019/03/03/To be a publisher/</id>
-    <published>2019-03-02T16:00:00.000Z</published>
-    <updated>2019-04-22T02:34:22.142Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;这是我一直以来想写的文章，标题叫：To be a publisher，也就是做一个可以在互联网上产出内容的人。为什么我认为在互联网上产出内容这么重要呢？因为在未来，不能发声的人将无法融入互联网这个新的社会，即便融入了，也只能是那些能够发声的人的附庸。不能表达自己或不善于表达自己这是一件很可怕的事，这类人或许将成为互联网上的哑巴，被忽视的群体，沉默的大多数。&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="Methodology" scheme="http://liuqinh2s.github.io/blog/tags/Methodology/"/>
-    
-  </entry>
-  
-  <entry>
     <title>推荐一本不错的书：《剑指offer》</title>
     <link href="http://liuqinh2s.github.io/blog/2019/02/28/%E6%8E%A8%E8%8D%90%E4%B8%80%E6%9C%AC%E4%B8%8D%E9%94%99%E7%9A%84%E4%B9%A6%EF%BC%9A%E3%80%8A%E5%89%91%E6%8C%87offer%E3%80%8B/"/>
     <id>http://liuqinh2s.github.io/blog/2019/02/28/推荐一本不错的书：《剑指offer》/</id>
     <published>2019-02-27T16:00:00.000Z</published>
-    <updated>2019-04-22T02:34:22.139Z</updated>
+    <updated>2019-06-25T07:02:36.606Z</updated>
     
     <summary type="html">
     
@@ -270,7 +270,7 @@
     <link href="http://liuqinh2s.github.io/blog/2019/02/19/%E5%BF%AB%E9%80%9F%E6%8E%92%E5%BA%8F/"/>
     <id>http://liuqinh2s.github.io/blog/2019/02/19/快速排序/</id>
     <published>2019-02-18T16:00:00.000Z</published>
-    <updated>2019-04-22T02:34:22.136Z</updated>
+    <updated>2019-06-25T07:02:36.605Z</updated>
     
     <summary type="html">
     
@@ -291,7 +291,7 @@
     <link href="http://liuqinh2s.github.io/blog/2019/01/19/%E5%B9%B6%E6%9F%A5%E9%9B%86/"/>
     <id>http://liuqinh2s.github.io/blog/2019/01/19/并查集/</id>
     <published>2019-01-18T16:00:00.000Z</published>
-    <updated>2019-04-22T02:34:22.134Z</updated>
+    <updated>2019-06-25T07:02:36.604Z</updated>
     
     <summary type="html">
     
@@ -314,7 +314,7 @@
     <link href="http://liuqinh2s.github.io/blog/2019/01/17/KMP%E7%AE%97%E6%B3%95/"/>
     <id>http://liuqinh2s.github.io/blog/2019/01/17/KMP算法/</id>
     <published>2019-01-16T16:00:00.000Z</published>
-    <updated>2019-04-22T02:34:22.131Z</updated>
+    <updated>2019-06-25T07:02:36.603Z</updated>
     
     <summary type="html">
     
@@ -342,7 +342,7 @@
     <link href="http://liuqinh2s.github.io/blog/2019/01/15/%E8%93%84%E6%B0%B4%E6%B1%A0%E7%AE%97%E6%B3%95/"/>
     <id>http://liuqinh2s.github.io/blog/2019/01/15/蓄水池算法/</id>
     <published>2019-01-14T16:00:00.000Z</published>
-    <updated>2019-04-22T02:34:22.129Z</updated>
+    <updated>2019-06-25T07:02:36.602Z</updated>
     
     <summary type="html">
     
@@ -366,7 +366,7 @@
     <link href="http://liuqinh2s.github.io/blog/2019/01/10/%E8%87%AA%E5%B7%B1%E5%86%99Json%E8%A7%A3%E9%87%8A%E5%99%A8/"/>
     <id>http://liuqinh2s.github.io/blog/2019/01/10/自己写Json解释器/</id>
     <published>2019-01-09T16:00:00.000Z</published>
-    <updated>2019-04-22T02:34:22.088Z</updated>
+    <updated>2019-06-25T07:02:36.600Z</updated>
     
     <summary type="html">
     
@@ -391,7 +391,7 @@
     <link href="http://liuqinh2s.github.io/blog/2019/01/07/%E7%AC%AC%E4%B8%80%E4%B8%AA%E6%9E%81%E9%99%90%E7%9A%84%E8%AF%81%E6%98%8E/"/>
     <id>http://liuqinh2s.github.io/blog/2019/01/07/第一个极限的证明/</id>
     <published>2019-01-06T16:00:00.000Z</published>
-    <updated>2019-04-22T02:34:22.085Z</updated>
+    <updated>2019-06-25T07:02:36.599Z</updated>
     
     <summary type="html">
     
@@ -413,7 +413,7 @@
     <link href="http://liuqinh2s.github.io/blog/2018/11/22/js%E5%AE%9E%E7%8E%B0sleep%E6%96%B9%E6%B3%95%E7%9A%84%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5/"/>
     <id>http://liuqinh2s.github.io/blog/2018/11/22/js实现sleep方法的最佳实践/</id>
     <published>2018-11-21T16:00:00.000Z</published>
-    <updated>2019-04-22T02:34:22.082Z</updated>
+    <updated>2019-06-25T07:02:36.597Z</updated>
     
     <summary type="html">
     
@@ -436,7 +436,7 @@
     <link href="http://liuqinh2s.github.io/blog/2018/11/06/%E7%BC%96%E7%A8%8B%E7%8F%A0%E7%8E%91%E7%B3%BB%E5%88%97%E7%AC%94%E8%AE%B02/"/>
     <id>http://liuqinh2s.github.io/blog/2018/11/06/编程珠玑系列笔记2/</id>
     <published>2018-11-05T16:00:00.000Z</published>
-    <updated>2019-04-22T02:34:22.071Z</updated>
+    <updated>2019-06-25T07:02:36.596Z</updated>
     
     <summary type="html">
     
@@ -455,7 +455,7 @@
     <link href="http://liuqinh2s.github.io/blog/2018/11/05/%E7%BC%96%E7%A8%8B%E7%8F%A0%E7%8E%91%E7%B3%BB%E5%88%97%E7%AC%94%E8%AE%B01/"/>
     <id>http://liuqinh2s.github.io/blog/2018/11/05/编程珠玑系列笔记1/</id>
     <published>2018-11-04T16:00:00.000Z</published>
-    <updated>2019-04-22T02:34:22.069Z</updated>
+    <updated>2019-06-25T07:02:36.595Z</updated>
     
     <summary type="html">
     
@@ -473,29 +473,22 @@
   </entry>
   
   <entry>
-    <title>精通一款编辑器之sublime text 3</title>
-    <link href="http://liuqinh2s.github.io/blog/2018/11/04/%E7%B2%BE%E9%80%9A%E4%B8%80%E6%AC%BE%E7%BC%96%E8%BE%91%E5%99%A8%E4%B9%8Bsublime%20text%203/"/>
-    <id>http://liuqinh2s.github.io/blog/2018/11/04/精通一款编辑器之sublime text 3/</id>
+    <title>什么是回调</title>
+    <link href="http://liuqinh2s.github.io/blog/2018/11/04/%E4%BB%80%E4%B9%88%E6%98%AF%E5%9B%9E%E8%B0%83/"/>
+    <id>http://liuqinh2s.github.io/blog/2018/11/04/什么是回调/</id>
     <published>2018-11-03T16:00:00.000Z</published>
-    <updated>2019-04-26T08:03:19.584Z</updated>
+    <updated>2019-06-25T07:02:36.591Z</updated>
     
     <summary type="html">
     
-      &lt;h2 id=&quot;编辑器常用功能&quot;&gt;&lt;a href=&quot;#编辑器常用功能&quot; class=&quot;headerlink&quot; title=&quot;编辑器常用功能&quot;&gt;&lt;/a&gt;编辑器常用功能&lt;/h2&gt;&lt;ol&gt;
-&lt;li&gt;格式化代码：格式化代码可以让你不用管代码的格式，可以放肆的写程序，你可以少敲很多空格，不用关心代码的格式问题，机器给出的代码格式风格统一且漂亮，一键解决你的格式问题，真是提高码代码效率的非常重要的功能。&lt;/li&gt;
-&lt;li&gt;查找文件：查找文件是在集成开发的时候非常重要的功能，当文件多起来的时候，快速定位到文件可以节省很多时间，甚至有时候文件实在太多，你只能通过查找的方式找到那个文件。&lt;/li&gt;
-&lt;li&gt;正则全文件查找和替换：轻松让你更改全局变量和配置，这是一个必须的功能，没有它简直无法想象工作量有多大。&lt;/li&gt;
-&lt;li&gt;代码收缩和扩展：代码太长怎么办，收缩和扩展啊。&lt;/li&gt;
-&lt;/ol&gt;
+      &lt;p&gt;&lt;img src=&quot;https://i.loli.net/2018/11/04/5bdeaff01640b.png&quot; alt=&quot;回调2.png&quot;&gt;&lt;/p&gt;
+&lt;p&gt;打个比方，有一家旅馆提供叫醒服务，但是要求旅客自己决定叫醒的方法。可以是打客房电话，也可以是派服务员去敲门，睡得死怕耽误事的，还可以要求往自己头上浇盆水。这里，“叫醒”这个行为是旅馆提供的，相当于库函数，但是叫醒的方式是由旅客决定并告诉旅馆的，也就是回调函数。而旅客告诉旅馆怎么叫醒自己的动作，也就是把回调函数传入库函数的动作，称为登记回调函数（to register a callback function）。&lt;/p&gt;
+&lt;p&gt;在回调中，我们利用某种方式，把回调函数像参数一样传入中间函数。可以这么理解，在传入一个回调函数之前，中间函数是不完整的。换句话说，程序可以在运行时，通过登记不同的回调函数，来决定、改变中间函数的行为。这就比简单的函数调用要灵活太多了。&lt;/p&gt;
     
     </summary>
     
-      <category term="Skills of Tools" scheme="http://liuqinh2s.github.io/blog/categories/Skills-of-Tools/"/>
+      <category term="Knowledge of CS" scheme="http://liuqinh2s.github.io/blog/categories/Knowledge-of-CS/"/>
     
-      <category term="Editor" scheme="http://liuqinh2s.github.io/blog/categories/Skills-of-Tools/Editor/"/>
-    
-    
-      <category term="编辑器" scheme="http://liuqinh2s.github.io/blog/tags/%E7%BC%96%E8%BE%91%E5%99%A8/"/>
     
   </entry>
   

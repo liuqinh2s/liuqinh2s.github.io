@@ -24,19 +24,20 @@ comments: true
 
 #### A Simple Object Model
 
-![A Simple Object Model](https://wx4.sinaimg.cn/mw690/006zFO3ggy1fknaq5739jj30nu0l4jsy.jpg)
+![A Simple Object Model](../../../../images/简单对象模型.jpg)
+
 
 可以看到，简单对象模型把所有的data member和member function（函数指针）都放在对象里了。
 
 #### A Table-driven Object Model
 
-![A Table-driven Object Model](https://wx4.sinaimg.cn/mw690/006zFO3ggy1fmxnb321f6j30n80kemzy.jpg)
+![A Table-driven Object Model](../../../../images/表驱动模型.jpg)
 
 表驱动模型把member分为data和function两类，用两个指针分别指向两个表，一个存放所有的data member，一个存放所有的function指针。
 
 #### The C++ Object Model
 
-![The C++ Object Model](https://wx3.sinaimg.cn/mw690/006zFO3ggy1fmxnd1t7ucj30ua0ju0wu.jpg)
+![The C++ Object Model](../../../../images/C++对象模型.jpg)
 
 ```C++
 template<class Type>
@@ -103,9 +104,9 @@ RTTI(run-time type identification):一般来说，每一个 class 相关联的 t
 
 virtual base class，用以实现 “多次出现在继承体系中的base class，有一个单一而被共享的实例”
 
-![虚基类](https://wx3.sinaimg.cn/mw690/006zFO3gly1fknlhzg45wj30bs0asq3w.jpg)
+![虚基类](../../../../images/虚基类.jpg)
 
-![虚拟多重继承](https://wx1.sinaimg.cn/mw690/006zFO3gly1fknli0837fj317w0mmhao.jpg)
+![虚拟多重继承](../../../../images/虚拟多重继承.jpg)
 
 ```C++
 class A { public: void Foo() {} };

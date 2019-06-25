@@ -88,16 +88,16 @@
 <meta property="og:site_name" content="liuqinh2s&#39; blog">
 <meta property="og:description" content="多态：统一的接口，不同的实现  C++多态（polymorphism） 表示“以一个public base class的指针（或者reference），寻址出一个derived class object” Layout Costs for Adding Encapsulation(封装) 意思是：为了添加封装所需要付出的内存布局花销  第一章 Object Lessons 介绍了 C++如何在背">
 <meta property="og:locale" content="en">
-<meta property="og:image" content="https://wx4.sinaimg.cn/mw690/006zFO3ggy1fknaq5739jj30nu0l4jsy.jpg">
-<meta property="og:image" content="https://wx4.sinaimg.cn/mw690/006zFO3ggy1fmxnb321f6j30n80kemzy.jpg">
-<meta property="og:image" content="https://wx3.sinaimg.cn/mw690/006zFO3ggy1fmxnd1t7ucj30ua0ju0wu.jpg">
-<meta property="og:image" content="https://wx3.sinaimg.cn/mw690/006zFO3gly1fknlhzg45wj30bs0asq3w.jpg">
-<meta property="og:image" content="https://wx1.sinaimg.cn/mw690/006zFO3gly1fknli0837fj317w0mmhao.jpg">
-<meta property="og:updated_time" content="2019-04-22T02:34:21.982Z">
+<meta property="og:image" content="http://liuqinh2s.github.io/blog/images/简单对象模型.jpg">
+<meta property="og:image" content="http://liuqinh2s.github.io/blog/images/表驱动模型.jpg">
+<meta property="og:image" content="http://liuqinh2s.github.io/blog/images/C++对象模型.jpg">
+<meta property="og:image" content="http://liuqinh2s.github.io/blog/images/虚基类.jpg">
+<meta property="og:image" content="http://liuqinh2s.github.io/blog/images/虚拟多重继承.jpg">
+<meta property="og:updated_time" content="2019-06-25T07:30:48.480Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Inside the C++ Object Model 系列笔记 一 -- Object Lessons">
 <meta name="twitter:description" content="多态：统一的接口，不同的实现  C++多态（polymorphism） 表示“以一个public base class的指针（或者reference），寻址出一个derived class object” Layout Costs for Adding Encapsulation(封装) 意思是：为了添加封装所需要付出的内存布局花销  第一章 Object Lessons 介绍了 C++如何在背">
-<meta name="twitter:image" content="https://wx4.sinaimg.cn/mw690/006zFO3ggy1fknaq5739jj30nu0l4jsy.jpg">
+<meta name="twitter:image" content="http://liuqinh2s.github.io/blog/images/简单对象模型.jpg">
 
 
 
@@ -416,11 +416,11 @@
 <p>第一章 Object Lessons 介绍了 C++如何在背后实现一个对象，内存中的布局以及空间上的关系。</p>
 <p><strong>在计算机的原理中，要实现某个机制，我们总能找到很多种实现方式</strong>（对比着学习，多思考每种实现方法的利弊），C++的类的实现也不例外，让我们对比以下三种实现方式：</p>
 <a id="more"></a>
-<h3 id="三种对象实现模式"><a href="#三种对象实现模式" class="headerlink" title="三种对象实现模式"></a>三种对象实现模式</h3><h4 id="A-Simple-Object-Model"><a href="#A-Simple-Object-Model" class="headerlink" title="A Simple Object Model"></a>A Simple Object Model</h4><p><img src="https://wx4.sinaimg.cn/mw690/006zFO3ggy1fknaq5739jj30nu0l4jsy.jpg" alt="A Simple Object Model"></p>
+<h3 id="三种对象实现模式"><a href="#三种对象实现模式" class="headerlink" title="三种对象实现模式"></a>三种对象实现模式</h3><h4 id="A-Simple-Object-Model"><a href="#A-Simple-Object-Model" class="headerlink" title="A Simple Object Model"></a>A Simple Object Model</h4><p><img src="../../../../images/简单对象模型.jpg" alt="A Simple Object Model"></p>
 <p>可以看到，简单对象模型把所有的data member和member function（函数指针）都放在对象里了。</p>
-<h4 id="A-Table-driven-Object-Model"><a href="#A-Table-driven-Object-Model" class="headerlink" title="A Table-driven Object Model"></a>A Table-driven Object Model</h4><p><img src="https://wx4.sinaimg.cn/mw690/006zFO3ggy1fmxnb321f6j30n80kemzy.jpg" alt="A Table-driven Object Model"></p>
+<h4 id="A-Table-driven-Object-Model"><a href="#A-Table-driven-Object-Model" class="headerlink" title="A Table-driven Object Model"></a>A Table-driven Object Model</h4><p><img src="../../../../images/表驱动模型.jpg" alt="A Table-driven Object Model"></p>
 <p>表驱动模型把member分为data和function两类，用两个指针分别指向两个表，一个存放所有的data member，一个存放所有的function指针。</p>
-<h4 id="The-C-Object-Model"><a href="#The-C-Object-Model" class="headerlink" title="The C++ Object Model"></a>The C++ Object Model</h4><p><img src="https://wx3.sinaimg.cn/mw690/006zFO3ggy1fmxnd1t7ucj30ua0ju0wu.jpg" alt="The C++ Object Model"></p>
+<h4 id="The-C-Object-Model"><a href="#The-C-Object-Model" class="headerlink" title="The C++ Object Model"></a>The C++ Object Model</h4><p><img src="../../../../images/C++对象模型.jpg" alt="The C++ Object Model"></p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">template</span>&lt;<span class="class"><span class="keyword">class</span> <span class="title">Type</span>&gt;</span></span><br><span class="line"><span class="class"><span class="title">class</span> <span class="title">Point3d</span>&#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    Point3d(Type x, Type y, Type z) : x_(x), y_(y), z_(z) &#123;&#125;</span><br><span class="line">    <span class="function">Type <span class="title">x</span><span class="params">()</span> </span>&#123; <span class="keyword">return</span> x_; &#125;</span><br><span class="line"><span class="keyword">private</span>:</span><br><span class="line">    Type x_, y_, z_;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>上面的 C++ 类并不会比 C 语言 的struct 耗费更多的内存空间，三个 data members 直接内含于 Object 中，member functions 则放在 Object 外。</p>
 <p>C++的 data members 有两种：<strong>static 和 nonstatic</strong></p>
@@ -450,8 +450,8 @@
 <li>如果是虚拟继承，父对象由一个指针指出来，这样父对象的存取就必须由指针访问，添加了一层间接性。</li>
 </ul>
 <p>virtual base class，用以实现 “多次出现在继承体系中的base class，有一个单一而被共享的实例”</p>
-<p><img src="https://wx3.sinaimg.cn/mw690/006zFO3gly1fknlhzg45wj30bs0asq3w.jpg" alt="虚基类"></p>
-<p><img src="https://wx1.sinaimg.cn/mw690/006zFO3gly1fknli0837fj317w0mmhao.jpg" alt="虚拟多重继承"></p>
+<p><img src="../../../../images/虚基类.jpg" alt="虚基类"></p>
+<p><img src="../../../../images/虚拟多重继承.jpg" alt="虚拟多重继承"></p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">A</span> &#123;</span> <span class="keyword">public</span>: <span class="function"><span class="keyword">void</span> <span class="title">Foo</span><span class="params">()</span> </span>&#123;&#125; &#125;;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">B</span> :</span> <span class="keyword">public</span> <span class="keyword">virtual</span> A &#123;&#125;;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">C</span> :</span> <span class="keyword">public</span> <span class="keyword">virtual</span> A &#123;&#125;;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">D</span> :</span> <span class="keyword">public</span> B, <span class="keyword">public</span> C &#123;&#125;;</span><br></pre></td></tr></table></figure>
 <blockquote>
 <p>我觉得这里有个问题，class D继承class B和class C的时候并不是虚继承，所以何不将B和C直接放在D中呢？这样就省了两次指针。</p>
@@ -522,8 +522,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/blog/2017/03/29/值传递和引用传递/" rel="next" title="值传递和引用传递">
-                <i class="fa fa-chevron-left"></i> 值传递和引用传递
+              <a href="/blog/2017/10/19/Inside-the-C++-Object-Model-系列笔记--The-Semantics-of-constructors/" rel="next" title="Inside the C++ Object Model 系列笔记 二 -- The Semantics of constructors">
+                <i class="fa fa-chevron-left"></i> Inside the C++ Object Model 系列笔记 二 -- The Semantics of constructors
               </a>
             
           </div>
@@ -532,8 +532,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/blog/2017/10/19/Inside-the-C++-Object-Model-系列笔记--The-Semantics-of-constructors/" rel="prev" title="Inside the C++ Object Model 系列笔记 二 -- The Semantics of constructors">
-                Inside the C++ Object Model 系列笔记 二 -- The Semantics of constructors <i class="fa fa-chevron-right"></i>
+              <a href="/blog/2017/10/21/Inside-the-C++-Object-Model-系列笔记--The-Semantics-of-Data/" rel="prev" title="Inside the C++ Object Model 系列笔记 三 -- The Semantics of Data">
+                Inside the C++ Object Model 系列笔记 三 -- The Semantics of Data <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
