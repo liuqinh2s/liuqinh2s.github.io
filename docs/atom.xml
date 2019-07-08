@@ -6,7 +6,7 @@
   <link href="/blog/atom.xml" rel="self"/>
   
   <link href="http://liuqinh2s.github.io/blog/"/>
-  <updated>2019-06-25T07:02:36.617Z</updated>
+  <updated>2019-07-08T05:59:44.665Z</updated>
   <id>http://liuqinh2s.github.io/blog/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>markdown写作平台</title>
+    <link href="http://liuqinh2s.github.io/blog/2019/07/08/markdown%E5%86%99%E4%BD%9C%E5%B9%B3%E5%8F%B0/"/>
+    <id>http://liuqinh2s.github.io/blog/2019/07/08/markdown写作平台/</id>
+    <published>2019-07-07T16:00:00.000Z</published>
+    <updated>2019-07-08T05:59:44.665Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;做这个项目的初衷&quot;&gt;&lt;a href=&quot;#做这个项目的初衷&quot; class=&quot;headerlink&quot; title=&quot;做这个项目的初衷&quot;&gt;&lt;/a&gt;做这个项目的初衷&lt;/h2&gt;&lt;p&gt;项目地址：&lt;a href=&quot;https://mdblog.club&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="项目" scheme="http://liuqinh2s.github.io/blog/categories/%E9%A1%B9%E7%9B%AE/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>图灵机</title>
@@ -77,6 +101,27 @@
   </entry>
   
   <entry>
+    <title>计算机中的信息</title>
+    <link href="http://liuqinh2s.github.io/blog/2019/04/21/%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%B8%AD%E7%9A%84%E4%BF%A1%E6%81%AF/"/>
+    <id>http://liuqinh2s.github.io/blog/2019/04/21/计算机中的信息/</id>
+    <published>2019-04-20T16:00:00.000Z</published>
+    <updated>2019-06-25T07:02:36.614Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;信息的本质&quot;&gt;&lt;a href=&quot;#信息的本质&quot; class=&quot;headerlink&quot; title=&quot;信息的本质&quot;&gt;&lt;/a&gt;信息的本质&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;信息的本质是消除不确定性&lt;/strong&gt;：我们抛掷一枚硬币，然后用手盖住，出现正面朝上和反面朝上的概率都是二分之一。当我们偷看了结果，确定了是正面还是反面朝上，也就获得了信息。在这个例子中，我们消除的不确定性是一个二分之一的概率。在 &lt;strong&gt;&lt;a href=&quot;https://zh.wikipedia.org/zh-hans/%E5%85%8B%E5%8A%B3%E5%BE%B7%C2%B7%E9%A6%99%E5%86%9C&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;香农&lt;/a&gt;&lt;/strong&gt; 划时代的论文 &lt;strong&gt;&lt;a href=&quot;http://math.harvard.edu/~ctm/home/text/others/shannon/entropy/entropy.pdf&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;通信的数学原理&lt;/a&gt;&lt;/strong&gt; 中，首次提出了信息是可量化的，以及如何量化信息。我们以bit为信息的度量单位，一个bit可以是0或者1，我们每获得一个bit的信息，就会消除一个二分之一的不确定性。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;小思考题：如果我们抛掷的是一个骰子呢，当我们确定了一次投掷结果，我们获得多少信息（用bit为单位衡量）？&lt;br&gt;我们都知道，骰子有6个面，分别刻有1~6，我们有六分之一的概率得到其中任意一个面朝上。那么我们获得的信息应该是：$\log_2 6$。&lt;/p&gt;
+&lt;/blockquote&gt;
+    
+    </summary>
+    
+      <category term="从零开始学习计算机" scheme="http://liuqinh2s.github.io/blog/categories/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E5%AD%A6%E4%B9%A0%E8%AE%A1%E7%AE%97%E6%9C%BA/"/>
+    
+    
+  </entry>
+  
+  <entry>
     <title>什么是字符集和编码</title>
     <link href="http://liuqinh2s.github.io/blog/2019/04/21/%E4%BB%80%E4%B9%88%E6%98%AF%E5%AD%97%E7%AC%A6%E9%9B%86%E5%92%8C%E7%BC%96%E7%A0%81/"/>
     <id>http://liuqinh2s.github.io/blog/2019/04/21/什么是字符集和编码/</id>
@@ -96,27 +141,6 @@
 &lt;li&gt;&lt;a href=&quot;https://zh.wikipedia.org/zh/UTF-8&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;UTF-8&lt;/a&gt; （严格来说UTF-8只是Unicode的一种编码方式）&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://baike.baidu.com/item/ANSI%E7%BC%96%E7%A0%81&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;ANSI编码&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-    
-    </summary>
-    
-      <category term="从零开始学习计算机" scheme="http://liuqinh2s.github.io/blog/categories/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E5%AD%A6%E4%B9%A0%E8%AE%A1%E7%AE%97%E6%9C%BA/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>计算机中的信息</title>
-    <link href="http://liuqinh2s.github.io/blog/2019/04/21/%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%B8%AD%E7%9A%84%E4%BF%A1%E6%81%AF/"/>
-    <id>http://liuqinh2s.github.io/blog/2019/04/21/计算机中的信息/</id>
-    <published>2019-04-20T16:00:00.000Z</published>
-    <updated>2019-06-25T07:02:36.614Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;信息的本质&quot;&gt;&lt;a href=&quot;#信息的本质&quot; class=&quot;headerlink&quot; title=&quot;信息的本质&quot;&gt;&lt;/a&gt;信息的本质&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;信息的本质是消除不确定性&lt;/strong&gt;：我们抛掷一枚硬币，然后用手盖住，出现正面朝上和反面朝上的概率都是二分之一。当我们偷看了结果，确定了是正面还是反面朝上，也就获得了信息。在这个例子中，我们消除的不确定性是一个二分之一的概率。在 &lt;strong&gt;&lt;a href=&quot;https://zh.wikipedia.org/zh-hans/%E5%85%8B%E5%8A%B3%E5%BE%B7%C2%B7%E9%A6%99%E5%86%9C&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;香农&lt;/a&gt;&lt;/strong&gt; 划时代的论文 &lt;strong&gt;&lt;a href=&quot;http://math.harvard.edu/~ctm/home/text/others/shannon/entropy/entropy.pdf&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;通信的数学原理&lt;/a&gt;&lt;/strong&gt; 中，首次提出了信息是可量化的，以及如何量化信息。我们以bit为信息的度量单位，一个bit可以是0或者1，我们每获得一个bit的信息，就会消除一个二分之一的不确定性。&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;小思考题：如果我们抛掷的是一个骰子呢，当我们确定了一次投掷结果，我们获得多少信息（用bit为单位衡量）？&lt;br&gt;我们都知道，骰子有6个面，分别刻有1~6，我们有六分之一的概率得到其中任意一个面朝上。那么我们获得的信息应该是：$\log_2 6$。&lt;/p&gt;
-&lt;/blockquote&gt;
     
     </summary>
     
@@ -436,7 +460,7 @@
     <link href="http://liuqinh2s.github.io/blog/2018/11/06/%E7%BC%96%E7%A8%8B%E7%8F%A0%E7%8E%91%E7%B3%BB%E5%88%97%E7%AC%94%E8%AE%B02/"/>
     <id>http://liuqinh2s.github.io/blog/2018/11/06/编程珠玑系列笔记2/</id>
     <published>2018-11-05T16:00:00.000Z</published>
-    <updated>2019-06-25T07:02:36.596Z</updated>
+    <updated>2019-07-08T05:39:18.830Z</updated>
     
     <summary type="html">
     
@@ -445,7 +469,7 @@
     
     </summary>
     
-      <category term="Knowlege of CS" scheme="http://liuqinh2s.github.io/blog/categories/Knowlege-of-CS/"/>
+      <category term="Knowledge of CS" scheme="http://liuqinh2s.github.io/blog/categories/Knowledge-of-CS/"/>
     
     
   </entry>
@@ -455,7 +479,7 @@
     <link href="http://liuqinh2s.github.io/blog/2018/11/05/%E7%BC%96%E7%A8%8B%E7%8F%A0%E7%8E%91%E7%B3%BB%E5%88%97%E7%AC%94%E8%AE%B01/"/>
     <id>http://liuqinh2s.github.io/blog/2018/11/05/编程珠玑系列笔记1/</id>
     <published>2018-11-04T16:00:00.000Z</published>
-    <updated>2019-06-25T07:02:36.595Z</updated>
+    <updated>2019-07-08T05:39:14.921Z</updated>
     
     <summary type="html">
     
@@ -464,26 +488,6 @@
 &lt;h2 id=&quot;开篇&quot;&gt;&lt;a href=&quot;#开篇&quot; class=&quot;headerlink&quot; title=&quot;开篇&quot;&gt;&lt;/a&gt;开篇&lt;/h2&gt;&lt;p&gt;明确问题，一旦问题明确，这场战役就成功了90%。&lt;/p&gt;
 &lt;p&gt;确定用户的真实需求是程序设计的根本。&lt;/p&gt;
 &lt;p&gt;简单的程序通常比具有相同功能的复杂程序更可靠、更安全、更健壮、更高效，而且易于实现和维护。因为简单的程序往往更具有概括性、更抽象、更能洞悉问题的本质。&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="Knowlege of CS" scheme="http://liuqinh2s.github.io/blog/categories/Knowlege-of-CS/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>什么是回调</title>
-    <link href="http://liuqinh2s.github.io/blog/2018/11/04/%E4%BB%80%E4%B9%88%E6%98%AF%E5%9B%9E%E8%B0%83/"/>
-    <id>http://liuqinh2s.github.io/blog/2018/11/04/什么是回调/</id>
-    <published>2018-11-03T16:00:00.000Z</published>
-    <updated>2019-06-25T07:02:36.591Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;img src=&quot;https://i.loli.net/2018/11/04/5bdeaff01640b.png&quot; alt=&quot;回调2.png&quot;&gt;&lt;/p&gt;
-&lt;p&gt;打个比方，有一家旅馆提供叫醒服务，但是要求旅客自己决定叫醒的方法。可以是打客房电话，也可以是派服务员去敲门，睡得死怕耽误事的，还可以要求往自己头上浇盆水。这里，“叫醒”这个行为是旅馆提供的，相当于库函数，但是叫醒的方式是由旅客决定并告诉旅馆的，也就是回调函数。而旅客告诉旅馆怎么叫醒自己的动作，也就是把回调函数传入库函数的动作，称为登记回调函数（to register a callback function）。&lt;/p&gt;
-&lt;p&gt;在回调中，我们利用某种方式，把回调函数像参数一样传入中间函数。可以这么理解，在传入一个回调函数之前，中间函数是不完整的。换句话说，程序可以在运行时，通过登记不同的回调函数，来决定、改变中间函数的行为。这就比简单的函数调用要灵活太多了。&lt;/p&gt;
     
     </summary>
     
