@@ -6,7 +6,7 @@
   <link href="/blog/atom.xml" rel="self"/>
   
   <link href="http://liuqinh2s.github.io/blog/"/>
-  <updated>2019-07-08T06:09:37.402Z</updated>
+  <updated>2019-07-10T03:28:30.755Z</updated>
   <id>http://liuqinh2s.github.io/blog/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>炒币的基本知识</title>
+    <link href="http://liuqinh2s.github.io/blog/2019/07/10/%E7%82%92%E5%B8%81%E7%9A%84%E5%9F%BA%E6%9C%AC%E7%9F%A5%E8%AF%86/"/>
+    <id>http://liuqinh2s.github.io/blog/2019/07/10/炒币的基本知识/</id>
+    <published>2019-07-09T16:00:00.000Z</published>
+    <updated>2019-07-10T03:28:30.755Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;平台选择&quot;&gt;&lt;a href=&quot;#平台选择&quot; class=&quot;headerlink&quot; title=&quot;平台选择&quot;&gt;&lt;/a&gt;平台选择&lt;/h2&gt;&lt;p&gt;平台选择：选大平台，像火币、币安。这里有个排行供参考：&lt;a
+        
+      
+    
+    </summary>
+    
+      <category term="百科知识" scheme="http://liuqinh2s.github.io/blog/categories/%E7%99%BE%E7%A7%91%E7%9F%A5%E8%AF%86/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>markdown写作平台</title>
@@ -470,28 +494,6 @@
     
       &lt;p&gt;本书的另一个中心思想显而易见：&lt;strong&gt;良好的算法是程序性能提升的关键。&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;下面还是通过探讨几个实例，来领会一下算法的重要性。&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="Knowledge of CS" scheme="http://liuqinh2s.github.io/blog/categories/Knowledge-of-CS/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>编程珠玑系列笔记 -- 第一章 开篇</title>
-    <link href="http://liuqinh2s.github.io/blog/2018/11/05/%E7%BC%96%E7%A8%8B%E7%8F%A0%E7%8E%91%E7%B3%BB%E5%88%97%E7%AC%94%E8%AE%B01/"/>
-    <id>http://liuqinh2s.github.io/blog/2018/11/05/编程珠玑系列笔记1/</id>
-    <published>2018-11-04T16:00:00.000Z</published>
-    <updated>2019-07-08T05:39:14.921Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;本书的中心思想：&lt;strong&gt;对实例研究的深入思考不仅有趣，而且可以获得实际的益处。&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;规律和智慧都隐藏在实例之中，而我们通过实例来窥探它们。实例是道的载体。&lt;/p&gt;
-&lt;h2 id=&quot;开篇&quot;&gt;&lt;a href=&quot;#开篇&quot; class=&quot;headerlink&quot; title=&quot;开篇&quot;&gt;&lt;/a&gt;开篇&lt;/h2&gt;&lt;p&gt;明确问题，一旦问题明确，这场战役就成功了90%。&lt;/p&gt;
-&lt;p&gt;确定用户的真实需求是程序设计的根本。&lt;/p&gt;
-&lt;p&gt;简单的程序通常比具有相同功能的复杂程序更可靠、更安全、更健壮、更高效，而且易于实现和维护。因为简单的程序往往更具有概括性、更抽象、更能洞悉问题的本质。&lt;/p&gt;
     
     </summary>
     
