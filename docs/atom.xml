@@ -6,7 +6,7 @@
   <link href="/blog/atom.xml" rel="self"/>
   
   <link href="http://liuqinh2s.github.io/blog/"/>
-  <updated>2019-07-10T03:31:05.788Z</updated>
+  <updated>2019-07-11T06:56:33.931Z</updated>
   <id>http://liuqinh2s.github.io/blog/</id>
   
   <author>
@@ -17,11 +17,35 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>当我们在做算法题时，我们在做什么</title>
+    <link href="http://liuqinh2s.github.io/blog/2019/07/11/%E5%BD%93%E6%88%91%E4%BB%AC%E5%9C%A8%E5%81%9A%E7%AE%97%E6%B3%95%E9%A2%98%E6%97%B6%EF%BC%8C%E6%88%91%E4%BB%AC%E5%9C%A8%E5%81%9A%E4%BB%80%E4%B9%88/"/>
+    <id>http://liuqinh2s.github.io/blog/2019/07/11/当我们在做算法题时，我们在做什么/</id>
+    <published>2019-07-10T16:00:00.000Z</published>
+    <updated>2019-07-11T06:56:33.931Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;754-Reach-a-Number&quot;&gt;&lt;a href=&quot;#754-Reach-a-Number&quot; class=&quot;headerlink&quot; title=&quot;754. Reach a Number&quot;&gt;&lt;/a&gt;754. Reach a Number&lt;/h2&gt;&lt;p&gt;&lt;a
+        
+      
+    
+    </summary>
+    
+      <category term="教案" scheme="http://liuqinh2s.github.io/blog/categories/%E6%95%99%E6%A1%88/"/>
+    
+    
+  </entry>
+  
+  <entry>
     <title>炒币的基本知识</title>
     <link href="http://liuqinh2s.github.io/blog/2019/07/10/%E7%82%92%E5%B8%81%E7%9A%84%E5%9F%BA%E6%9C%AC%E7%9F%A5%E8%AF%86/"/>
     <id>http://liuqinh2s.github.io/blog/2019/07/10/炒币的基本知识/</id>
     <published>2019-07-09T16:00:00.000Z</published>
-    <updated>2019-07-10T03:31:05.788Z</updated>
+    <updated>2019-07-10T09:14:42.211Z</updated>
     
     <summary type="html">
     
@@ -245,24 +269,6 @@
   </entry>
   
   <entry>
-    <title>To be a publisher</title>
-    <link href="http://liuqinh2s.github.io/blog/2019/03/03/To%20be%20a%20publisher/"/>
-    <id>http://liuqinh2s.github.io/blog/2019/03/03/To be a publisher/</id>
-    <published>2019-03-02T16:00:00.000Z</published>
-    <updated>2019-06-25T07:02:36.607Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;这是我一直以来想写的文章，标题叫：To be a publisher，也就是做一个可以在互联网上产出内容的人。为什么我认为在互联网上产出内容这么重要呢？因为在未来，不能发声的人将无法融入互联网这个新的社会，即便融入了，也只能是那些能够发声的人的附庸。不能表达自己或不善于表达自己这是一件很可怕的事，这类人或许将成为互联网上的哑巴，被忽视的群体，沉默的大多数。&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="Methodology" scheme="http://liuqinh2s.github.io/blog/tags/Methodology/"/>
-    
-  </entry>
-  
-  <entry>
     <title>动态数组的分摊分析</title>
     <link href="http://liuqinh2s.github.io/blog/2019/03/03/%E5%8A%A8%E6%80%81%E6%95%B0%E7%BB%84%E7%9A%84%E5%88%86%E6%91%8A%E5%88%86%E6%9E%90/"/>
     <id>http://liuqinh2s.github.io/blog/2019/03/03/动态数组的分摊分析/</id>
@@ -284,6 +290,24 @@
     
       <category term="Analysis" scheme="http://liuqinh2s.github.io/blog/categories/Algorithm/Analysis/"/>
     
+    
+  </entry>
+  
+  <entry>
+    <title>To be a publisher</title>
+    <link href="http://liuqinh2s.github.io/blog/2019/03/03/To%20be%20a%20publisher/"/>
+    <id>http://liuqinh2s.github.io/blog/2019/03/03/To be a publisher/</id>
+    <published>2019-03-02T16:00:00.000Z</published>
+    <updated>2019-06-25T07:02:36.607Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;这是我一直以来想写的文章，标题叫：To be a publisher，也就是做一个可以在互联网上产出内容的人。为什么我认为在互联网上产出内容这么重要呢？因为在未来，不能发声的人将无法融入互联网这个新的社会，即便融入了，也只能是那些能够发声的人的附庸。不能表达自己或不善于表达自己这是一件很可怕的事，这类人或许将成为互联网上的哑巴，被忽视的群体，沉默的大多数。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="Methodology" scheme="http://liuqinh2s.github.io/blog/tags/Methodology/"/>
     
   </entry>
   
@@ -475,25 +499,6 @@
     
     
       <category term="JavaScript" scheme="http://liuqinh2s.github.io/blog/tags/JavaScript/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>编程珠玑系列笔记 -- 第二章 啊哈！算法</title>
-    <link href="http://liuqinh2s.github.io/blog/2018/11/06/%E7%BC%96%E7%A8%8B%E7%8F%A0%E7%8E%91%E7%B3%BB%E5%88%97%E7%AC%94%E8%AE%B02/"/>
-    <id>http://liuqinh2s.github.io/blog/2018/11/06/编程珠玑系列笔记2/</id>
-    <published>2018-11-05T16:00:00.000Z</published>
-    <updated>2019-07-08T05:39:18.830Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;本书的另一个中心思想显而易见：&lt;strong&gt;良好的算法是程序性能提升的关键。&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;下面还是通过探讨几个实例，来领会一下算法的重要性。&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="Knowledge of CS" scheme="http://liuqinh2s.github.io/blog/categories/Knowledge-of-CS/"/>
-    
     
   </entry>
   
