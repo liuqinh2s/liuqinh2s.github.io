@@ -6,7 +6,7 @@
   <link href="/blog/atom.xml" rel="self"/>
   
   <link href="http://liuqinh2s.github.io/blog/"/>
-  <updated>2019-07-11T06:56:33.931Z</updated>
+  <updated>2019-10-13T13:40:29.601Z</updated>
   <id>http://liuqinh2s.github.io/blog/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="http://liuqinh2s.github.io/blog/2019/07/11/%E5%BD%93%E6%88%91%E4%BB%AC%E5%9C%A8%E5%81%9A%E7%AE%97%E6%B3%95%E9%A2%98%E6%97%B6%EF%BC%8C%E6%88%91%E4%BB%AC%E5%9C%A8%E5%81%9A%E4%BB%80%E4%B9%88/"/>
     <id>http://liuqinh2s.github.io/blog/2019/07/11/当我们在做算法题时，我们在做什么/</id>
     <published>2019-07-10T16:00:00.000Z</published>
-    <updated>2019-07-11T06:56:33.931Z</updated>
+    <updated>2019-10-13T13:40:29.601Z</updated>
     
     <summary type="html">
     
@@ -45,7 +45,7 @@
     <link href="http://liuqinh2s.github.io/blog/2019/07/10/%E7%82%92%E5%B8%81%E7%9A%84%E5%9F%BA%E6%9C%AC%E7%9F%A5%E8%AF%86/"/>
     <id>http://liuqinh2s.github.io/blog/2019/07/10/炒币的基本知识/</id>
     <published>2019-07-09T16:00:00.000Z</published>
-    <updated>2019-07-10T09:14:42.211Z</updated>
+    <updated>2019-10-13T13:40:29.601Z</updated>
     
     <summary type="html">
     
@@ -64,7 +64,7 @@
     <link href="http://liuqinh2s.github.io/blog/2019/07/08/markdown%E5%86%99%E4%BD%9C%E5%B9%B3%E5%8F%B0/"/>
     <id>http://liuqinh2s.github.io/blog/2019/07/08/markdown写作平台/</id>
     <published>2019-07-07T16:00:00.000Z</published>
-    <updated>2019-07-08T06:09:37.402Z</updated>
+    <updated>2019-10-13T13:40:29.601Z</updated>
     
     <summary type="html">
     
@@ -92,7 +92,7 @@
     <link href="http://liuqinh2s.github.io/blog/2019/04/26/%E5%9B%BE%E7%81%B5%E6%9C%BA/"/>
     <id>http://liuqinh2s.github.io/blog/2019/04/26/图灵机/</id>
     <published>2019-04-25T16:00:00.000Z</published>
-    <updated>2019-06-25T07:02:36.617Z</updated>
+    <updated>2019-10-13T13:40:29.601Z</updated>
     
     <summary type="html">
     
@@ -114,7 +114,7 @@
     <link href="http://liuqinh2s.github.io/blog/2019/04/22/%E5%86%AF%C2%B7%E8%AF%BA%E4%BE%9D%E6%9B%BC%E7%BB%93%E6%9E%84/"/>
     <id>http://liuqinh2s.github.io/blog/2019/04/22/冯·诺依曼结构/</id>
     <published>2019-04-21T16:00:00.000Z</published>
-    <updated>2019-06-25T07:02:36.616Z</updated>
+    <updated>2019-10-13T13:40:29.601Z</updated>
     
     <summary type="html">
     
@@ -148,11 +148,32 @@
   </entry>
   
   <entry>
+    <title>计算机中的信息</title>
+    <link href="http://liuqinh2s.github.io/blog/2019/04/21/%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%B8%AD%E7%9A%84%E4%BF%A1%E6%81%AF/"/>
+    <id>http://liuqinh2s.github.io/blog/2019/04/21/计算机中的信息/</id>
+    <published>2019-04-20T16:00:00.000Z</published>
+    <updated>2019-10-13T13:40:29.601Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;信息的本质&quot;&gt;&lt;a href=&quot;#信息的本质&quot; class=&quot;headerlink&quot; title=&quot;信息的本质&quot;&gt;&lt;/a&gt;信息的本质&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;信息的本质是消除不确定性&lt;/strong&gt;：我们抛掷一枚硬币，然后用手盖住，出现正面朝上和反面朝上的概率都是二分之一。当我们偷看了结果，确定了是正面还是反面朝上，也就获得了信息。在这个例子中，我们消除的不确定性是一个二分之一的概率。在 &lt;strong&gt;&lt;a href=&quot;https://zh.wikipedia.org/zh-hans/%E5%85%8B%E5%8A%B3%E5%BE%B7%C2%B7%E9%A6%99%E5%86%9C&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;香农&lt;/a&gt;&lt;/strong&gt; 划时代的论文 &lt;strong&gt;&lt;a href=&quot;http://math.harvard.edu/~ctm/home/text/others/shannon/entropy/entropy.pdf&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;通信的数学原理&lt;/a&gt;&lt;/strong&gt; 中，首次提出了信息是可量化的，以及如何量化信息。我们以bit为信息的度量单位，一个bit可以是0或者1，我们每获得一个bit的信息，就会消除一个二分之一的不确定性。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;小思考题：如果我们抛掷的是一个骰子呢，当我们确定了一次投掷结果，我们获得多少信息（用bit为单位衡量）？&lt;br&gt;我们都知道，骰子有6个面，分别刻有1~6，我们有六分之一的概率得到其中任意一个面朝上。那么我们获得的信息应该是：$\log_2 6$。&lt;/p&gt;
+&lt;/blockquote&gt;
+    
+    </summary>
+    
+      <category term="从零开始学习计算机" scheme="http://liuqinh2s.github.io/blog/categories/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E5%AD%A6%E4%B9%A0%E8%AE%A1%E7%AE%97%E6%9C%BA/"/>
+    
+    
+  </entry>
+  
+  <entry>
     <title>什么是字符集和编码</title>
     <link href="http://liuqinh2s.github.io/blog/2019/04/21/%E4%BB%80%E4%B9%88%E6%98%AF%E5%AD%97%E7%AC%A6%E9%9B%86%E5%92%8C%E7%BC%96%E7%A0%81/"/>
     <id>http://liuqinh2s.github.io/blog/2019/04/21/什么是字符集和编码/</id>
     <published>2019-04-20T16:00:00.000Z</published>
-    <updated>2019-06-25T07:02:36.613Z</updated>
+    <updated>2019-10-13T13:40:29.600Z</updated>
     
     <summary type="html">
     
@@ -176,32 +197,11 @@
   </entry>
   
   <entry>
-    <title>计算机中的信息</title>
-    <link href="http://liuqinh2s.github.io/blog/2019/04/21/%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%B8%AD%E7%9A%84%E4%BF%A1%E6%81%AF/"/>
-    <id>http://liuqinh2s.github.io/blog/2019/04/21/计算机中的信息/</id>
-    <published>2019-04-20T16:00:00.000Z</published>
-    <updated>2019-06-25T07:02:36.614Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;信息的本质&quot;&gt;&lt;a href=&quot;#信息的本质&quot; class=&quot;headerlink&quot; title=&quot;信息的本质&quot;&gt;&lt;/a&gt;信息的本质&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;信息的本质是消除不确定性&lt;/strong&gt;：我们抛掷一枚硬币，然后用手盖住，出现正面朝上和反面朝上的概率都是二分之一。当我们偷看了结果，确定了是正面还是反面朝上，也就获得了信息。在这个例子中，我们消除的不确定性是一个二分之一的概率。在 &lt;strong&gt;&lt;a href=&quot;https://zh.wikipedia.org/zh-hans/%E5%85%8B%E5%8A%B3%E5%BE%B7%C2%B7%E9%A6%99%E5%86%9C&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;香农&lt;/a&gt;&lt;/strong&gt; 划时代的论文 &lt;strong&gt;&lt;a href=&quot;http://math.harvard.edu/~ctm/home/text/others/shannon/entropy/entropy.pdf&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;通信的数学原理&lt;/a&gt;&lt;/strong&gt; 中，首次提出了信息是可量化的，以及如何量化信息。我们以bit为信息的度量单位，一个bit可以是0或者1，我们每获得一个bit的信息，就会消除一个二分之一的不确定性。&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;小思考题：如果我们抛掷的是一个骰子呢，当我们确定了一次投掷结果，我们获得多少信息（用bit为单位衡量）？&lt;br&gt;我们都知道，骰子有6个面，分别刻有1~6，我们有六分之一的概率得到其中任意一个面朝上。那么我们获得的信息应该是：$\log_2 6$。&lt;/p&gt;
-&lt;/blockquote&gt;
-    
-    </summary>
-    
-      <category term="从零开始学习计算机" scheme="http://liuqinh2s.github.io/blog/categories/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E5%AD%A6%E4%B9%A0%E8%AE%A1%E7%AE%97%E6%9C%BA/"/>
-    
-    
-  </entry>
-  
-  <entry>
     <title>记录一些不错的网站</title>
     <link href="http://liuqinh2s.github.io/blog/2019/04/20/%E8%AE%B0%E5%BD%95%E4%B8%80%E4%BA%9B%E4%B8%8D%E9%94%99%E7%9A%84%E7%BD%91%E7%AB%99/"/>
     <id>http://liuqinh2s.github.io/blog/2019/04/20/记录一些不错的网站/</id>
     <published>2019-04-19T16:00:00.000Z</published>
-    <updated>2019-06-25T07:02:36.612Z</updated>
+    <updated>2019-10-13T13:40:29.600Z</updated>
     
     <summary type="html">
     
@@ -229,29 +229,11 @@
   </entry>
   
   <entry>
-    <title>C++ map的remove函数实现</title>
-    <link href="http://liuqinh2s.github.io/blog/2019/04/15/C++%20map%E7%9A%84remove%E5%87%BD%E6%95%B0%E5%AE%9E%E7%8E%B0/"/>
-    <id>http://liuqinh2s.github.io/blog/2019/04/15/C++ map的remove函数实现/</id>
-    <published>2019-04-14T16:00:00.000Z</published>
-    <updated>2019-06-25T07:02:36.610Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;今天同学群里面讨论了这样一段代码，说是产品出了bug，现场急着修复。&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="fixed issues" scheme="http://liuqinh2s.github.io/blog/tags/fixed-issues/"/>
-    
-  </entry>
-  
-  <entry>
     <title>hexo把英文引号渲染成中文引号的问题</title>
     <link href="http://liuqinh2s.github.io/blog/2019/04/15/hexo%E6%8A%8A%E8%8B%B1%E6%96%87%E5%BC%95%E5%8F%B7%E6%B8%B2%E6%9F%93%E6%88%90%E4%B8%AD%E6%96%87%E5%BC%95%E5%8F%B7%E7%9A%84%E9%97%AE%E9%A2%98/"/>
     <id>http://liuqinh2s.github.io/blog/2019/04/15/hexo把英文引号渲染成中文引号的问题/</id>
     <published>2019-04-14T16:00:00.000Z</published>
-    <updated>2019-06-25T07:02:36.611Z</updated>
+    <updated>2019-10-13T13:40:29.600Z</updated>
     
     <summary type="html">
     
@@ -269,11 +251,29 @@
   </entry>
   
   <entry>
+    <title>C++ map的remove函数实现</title>
+    <link href="http://liuqinh2s.github.io/blog/2019/04/15/C++%20map%E7%9A%84remove%E5%87%BD%E6%95%B0%E5%AE%9E%E7%8E%B0/"/>
+    <id>http://liuqinh2s.github.io/blog/2019/04/15/C++ map的remove函数实现/</id>
+    <published>2019-04-14T16:00:00.000Z</published>
+    <updated>2019-10-13T13:40:29.600Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;今天同学群里面讨论了这样一段代码，说是产品出了bug，现场急着修复。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="fixed issues" scheme="http://liuqinh2s.github.io/blog/tags/fixed-issues/"/>
+    
+  </entry>
+  
+  <entry>
     <title>动态数组的分摊分析</title>
     <link href="http://liuqinh2s.github.io/blog/2019/03/03/%E5%8A%A8%E6%80%81%E6%95%B0%E7%BB%84%E7%9A%84%E5%88%86%E6%91%8A%E5%88%86%E6%9E%90/"/>
     <id>http://liuqinh2s.github.io/blog/2019/03/03/动态数组的分摊分析/</id>
     <published>2019-03-02T16:00:00.000Z</published>
-    <updated>2019-06-25T07:02:36.608Z</updated>
+    <updated>2019-10-13T13:40:29.600Z</updated>
     
     <summary type="html">
     
@@ -298,7 +298,7 @@
     <link href="http://liuqinh2s.github.io/blog/2019/03/03/To%20be%20a%20publisher/"/>
     <id>http://liuqinh2s.github.io/blog/2019/03/03/To be a publisher/</id>
     <published>2019-03-02T16:00:00.000Z</published>
-    <updated>2019-06-25T07:02:36.607Z</updated>
+    <updated>2019-10-13T13:40:29.600Z</updated>
     
     <summary type="html">
     
@@ -316,7 +316,7 @@
     <link href="http://liuqinh2s.github.io/blog/2019/02/28/%E6%8E%A8%E8%8D%90%E4%B8%80%E6%9C%AC%E4%B8%8D%E9%94%99%E7%9A%84%E4%B9%A6%EF%BC%9A%E3%80%8A%E5%89%91%E6%8C%87offer%E3%80%8B/"/>
     <id>http://liuqinh2s.github.io/blog/2019/02/28/推荐一本不错的书：《剑指offer》/</id>
     <published>2019-02-27T16:00:00.000Z</published>
-    <updated>2019-06-25T07:02:36.606Z</updated>
+    <updated>2019-10-13T13:40:29.600Z</updated>
     
     <summary type="html">
     
@@ -341,7 +341,7 @@
     <link href="http://liuqinh2s.github.io/blog/2019/02/19/%E5%BF%AB%E9%80%9F%E6%8E%92%E5%BA%8F/"/>
     <id>http://liuqinh2s.github.io/blog/2019/02/19/快速排序/</id>
     <published>2019-02-18T16:00:00.000Z</published>
-    <updated>2019-06-25T07:02:36.605Z</updated>
+    <updated>2019-10-13T13:40:29.599Z</updated>
     
     <summary type="html">
     
@@ -362,7 +362,7 @@
     <link href="http://liuqinh2s.github.io/blog/2019/01/19/%E5%B9%B6%E6%9F%A5%E9%9B%86/"/>
     <id>http://liuqinh2s.github.io/blog/2019/01/19/并查集/</id>
     <published>2019-01-18T16:00:00.000Z</published>
-    <updated>2019-06-25T07:02:36.604Z</updated>
+    <updated>2019-10-13T13:40:29.599Z</updated>
     
     <summary type="html">
     
@@ -385,7 +385,7 @@
     <link href="http://liuqinh2s.github.io/blog/2019/01/17/KMP%E7%AE%97%E6%B3%95/"/>
     <id>http://liuqinh2s.github.io/blog/2019/01/17/KMP算法/</id>
     <published>2019-01-16T16:00:00.000Z</published>
-    <updated>2019-06-25T07:02:36.603Z</updated>
+    <updated>2019-10-13T13:40:29.599Z</updated>
     
     <summary type="html">
     
@@ -413,7 +413,7 @@
     <link href="http://liuqinh2s.github.io/blog/2019/01/15/%E8%93%84%E6%B0%B4%E6%B1%A0%E7%AE%97%E6%B3%95/"/>
     <id>http://liuqinh2s.github.io/blog/2019/01/15/蓄水池算法/</id>
     <published>2019-01-14T16:00:00.000Z</published>
-    <updated>2019-06-25T07:02:36.602Z</updated>
+    <updated>2019-10-13T13:40:29.599Z</updated>
     
     <summary type="html">
     
@@ -437,7 +437,7 @@
     <link href="http://liuqinh2s.github.io/blog/2019/01/10/%E8%87%AA%E5%B7%B1%E5%86%99Json%E8%A7%A3%E9%87%8A%E5%99%A8/"/>
     <id>http://liuqinh2s.github.io/blog/2019/01/10/自己写Json解释器/</id>
     <published>2019-01-09T16:00:00.000Z</published>
-    <updated>2019-06-25T07:02:36.600Z</updated>
+    <updated>2019-10-13T13:40:29.599Z</updated>
     
     <summary type="html">
     
@@ -462,7 +462,7 @@
     <link href="http://liuqinh2s.github.io/blog/2019/01/07/%E7%AC%AC%E4%B8%80%E4%B8%AA%E6%9E%81%E9%99%90%E7%9A%84%E8%AF%81%E6%98%8E/"/>
     <id>http://liuqinh2s.github.io/blog/2019/01/07/第一个极限的证明/</id>
     <published>2019-01-06T16:00:00.000Z</published>
-    <updated>2019-06-25T07:02:36.599Z</updated>
+    <updated>2019-10-13T13:40:29.599Z</updated>
     
     <summary type="html">
     
@@ -484,7 +484,7 @@
     <link href="http://liuqinh2s.github.io/blog/2018/11/22/js%E5%AE%9E%E7%8E%B0sleep%E6%96%B9%E6%B3%95%E7%9A%84%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5/"/>
     <id>http://liuqinh2s.github.io/blog/2018/11/22/js实现sleep方法的最佳实践/</id>
     <published>2018-11-21T16:00:00.000Z</published>
-    <updated>2019-06-25T07:02:36.597Z</updated>
+    <updated>2019-10-13T13:40:29.599Z</updated>
     
     <summary type="html">
     

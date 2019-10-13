@@ -8,64 +8,64 @@
     </url>
     
     <url>
-        <loc>http://liuqinh2s.github.io/blog/about/</loc>
-        <lastmod>2019-07-08T08:10:04.908Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    
-    <url>
         <loc>http://liuqinh2s.github.io/blog/tags/</loc>
-        <lastmod>2019-06-25T07:02:36.794Z</lastmod>
+        <lastmod>2019-10-13T13:40:29.641Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
     
     <url>
         <loc>http://liuqinh2s.github.io/blog/notes/</loc>
-        <lastmod>2019-06-25T07:02:36.792Z</lastmod>
+        <lastmod>2019-10-13T13:40:29.640Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
     
     <url>
         <loc>http://liuqinh2s.github.io/blog/categories/</loc>
-        <lastmod>2019-06-25T07:02:36.626Z</lastmod>
+        <lastmod>2019-10-13T13:40:29.603Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
     
     <url>
         <loc>http://liuqinh2s.github.io/blog/archives/</loc>
-        <lastmod>2019-06-25T07:02:36.621Z</lastmod>
+        <lastmod>2019-10-13T13:40:29.602Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
     
     <url>
-        <loc>http://liuqinh2s.github.io/blog/Tools/</loc>
-        <lastmod>2019-06-25T07:02:36.563Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    
-    <url>
-        <loc>http://liuqinh2s.github.io/blog/Math/</loc>
-        <lastmod>2019-06-25T07:02:36.562Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    
-    <url>
-        <loc>http://liuqinh2s.github.io/blog/English/</loc>
-        <lastmod>2019-06-25T07:02:36.560Z</lastmod>
+        <loc>http://liuqinh2s.github.io/blog/about/</loc>
+        <lastmod>2019-10-13T13:40:29.601Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
     
     <url>
         <loc>http://liuqinh2s.github.io/blog/ComputerScience/</loc>
-        <lastmod>2019-06-25T07:02:36.559Z</lastmod>
+        <lastmod>2019-10-13T13:40:29.594Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
+        <loc>http://liuqinh2s.github.io/blog/English/</loc>
+        <lastmod>2019-10-13T13:40:29.594Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
+        <loc>http://liuqinh2s.github.io/blog/Math/</loc>
+        <lastmod>2019-10-13T13:40:29.594Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
+        <loc>http://liuqinh2s.github.io/blog/Tools/</loc>
+        <lastmod>2019-10-13T13:40:29.594Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
