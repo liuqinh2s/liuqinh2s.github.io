@@ -1,6 +1,6 @@
 ---
 title: 熟练使用JetBrains家的IDE
-categories: [Skills of Tools, IDE]
+categories: [Tools]
 comments: true
 tags: [IDE]
 ---

@@ -8,6 +8,20 @@
     </url>
     
     <url>
+        <loc>http://liuqinh2s.github.io/blog/ComputerScience/</loc>
+        <lastmod>2019-12-09T14:25:45.721Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
+        <loc>http://liuqinh2s.github.io/blog/about/</loc>
+        <lastmod>2019-12-09T14:23:52.797Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
         <loc>http://liuqinh2s.github.io/blog/notes/</loc>
         <lastmod>2019-12-08T05:35:32.410Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -36,13 +50,6 @@
     </url>
     
     <url>
-        <loc>http://liuqinh2s.github.io/blog/about/</loc>
-        <lastmod>2019-12-05T23:51:51.193Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    
-    <url>
         <loc>http://liuqinh2s.github.io/blog/Tools/</loc>
         <lastmod>2019-12-05T23:51:51.162Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -52,13 +59,6 @@
     <url>
         <loc>http://liuqinh2s.github.io/blog/Math/</loc>
         <lastmod>2019-12-05T23:51:51.161Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    
-    <url>
-        <loc>http://liuqinh2s.github.io/blog/ComputerScience/</loc>
-        <lastmod>2019-12-05T23:51:51.160Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>

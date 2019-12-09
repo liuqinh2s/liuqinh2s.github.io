@@ -109,7 +109,7 @@
     <link href="http://liuqinh2s.github.io/blog/2019/04/20/%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%B8%AD%E7%9A%84%E4%BF%A1%E6%81%AF/"/>
     <id>http://liuqinh2s.github.io/blog/2019/04/20/计算机中的信息/</id>
     <published>2019-04-19T16:00:00.000Z</published>
-    <updated>2019-12-09T13:47:57.513Z</updated>
+    <updated>2019-12-09T14:27:25.014Z</updated>
     
     <summary type="html">
     
@@ -120,7 +120,29 @@
     
     </summary>
     
-      <category term="从零开始学习计算机" scheme="http://liuqinh2s.github.io/blog/categories/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E5%AD%A6%E4%B9%A0%E8%AE%A1%E7%AE%97%E6%9C%BA/"/>
+      <category term="Knowledge of CS" scheme="http://liuqinh2s.github.io/blog/categories/Knowledge-of-CS/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>hexo把英文引号渲染成中文引号的问题</title>
+    <link href="http://liuqinh2s.github.io/blog/2019/04/15/hexo%E6%8A%8A%E8%8B%B1%E6%96%87%E5%BC%95%E5%8F%B7%E6%B8%B2%E6%9F%93%E6%88%90%E4%B8%AD%E6%96%87%E5%BC%95%E5%8F%B7%E7%9A%84%E9%97%AE%E9%A2%98/"/>
+    <id>http://liuqinh2s.github.io/blog/2019/04/15/hexo把英文引号渲染成中文引号的问题/</id>
+    <published>2019-04-14T16:00:00.000Z</published>
+    <updated>2019-12-09T14:31:40.677Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;其实这个问题我早就发现了，但一直没太在意，今天写博客的时候又看到这个难看的引号，终于忍不住想看看到底出了什么问题。&lt;/p&gt;
+&lt;p&gt;首先我试了中文的单引号和英文的单引号，发现渲染效果都一样，然后想看看当我分别打中文单引号和英文单引号的时候，hexo的渲染结果到底是不是一样。&lt;/p&gt;
+&lt;p&gt;打开chrome开发工具，发现页面上的英文单引号统一被渲染成了中文的单引号。&lt;/p&gt;
+&lt;p&gt;然后我手动修改页面看了下英文单引号是什么样子，发现样式确实很不一样。&lt;/p&gt;
+&lt;p&gt;那么问题就确定了：hexo把英文引号渲染成了中文引号。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Fixed Issues" scheme="http://liuqinh2s.github.io/blog/categories/Fixed-Issues/"/>
     
     
   </entry>
@@ -144,33 +166,11 @@
   </entry>
   
   <entry>
-    <title>hexo把英文引号渲染成中文引号的问题</title>
-    <link href="http://liuqinh2s.github.io/blog/2019/04/15/hexo%E6%8A%8A%E8%8B%B1%E6%96%87%E5%BC%95%E5%8F%B7%E6%B8%B2%E6%9F%93%E6%88%90%E4%B8%AD%E6%96%87%E5%BC%95%E5%8F%B7%E7%9A%84%E9%97%AE%E9%A2%98/"/>
-    <id>http://liuqinh2s.github.io/blog/2019/04/15/hexo把英文引号渲染成中文引号的问题/</id>
-    <published>2019-04-14T16:00:00.000Z</published>
-    <updated>2019-12-08T07:03:23.879Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;其实这个问题我早就发现了，但一直没太在意，今天写博客的时候又看到这个难看的引号，终于忍不住想看看到底出了什么问题。&lt;/p&gt;
-&lt;p&gt;首先我试了中文的单引号和英文的单引号，发现渲染效果都一样，然后想看看当我分别打中文单引号和英文单引号的时候，hexo的渲染结果到底是不是一样。&lt;/p&gt;
-&lt;p&gt;打开chrome开发工具，发现页面上的英文单引号统一被渲染成了中文的单引号。&lt;/p&gt;
-&lt;p&gt;然后我手动修改页面看了下英文单引号是什么样子，发现样式确实很不一样。&lt;/p&gt;
-&lt;p&gt;那么问题就确定了：hexo把英文引号渲染成了中文引号。&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="fixed issues" scheme="http://liuqinh2s.github.io/blog/categories/fixed-issues/"/>
-    
-    
-  </entry>
-  
-  <entry>
     <title>动态数组的分摊分析</title>
     <link href="http://liuqinh2s.github.io/blog/2019/03/03/%E5%8A%A8%E6%80%81%E6%95%B0%E7%BB%84%E7%9A%84%E5%88%86%E6%91%8A%E5%88%86%E6%9E%90/"/>
     <id>http://liuqinh2s.github.io/blog/2019/03/03/动态数组的分摊分析/</id>
     <published>2019-03-02T16:00:00.000Z</published>
-    <updated>2019-12-05T23:51:51.188Z</updated>
+    <updated>2019-12-09T14:27:55.566Z</updated>
     
     <summary type="html">
     
@@ -185,8 +185,6 @@
     
       <category term="Algorithm" scheme="http://liuqinh2s.github.io/blog/categories/Algorithm/"/>
     
-      <category term="Analysis" scheme="http://liuqinh2s.github.io/blog/categories/Algorithm/Analysis/"/>
-    
     
   </entry>
   
@@ -195,7 +193,7 @@
     <link href="http://liuqinh2s.github.io/blog/2019/02/19/%E5%BF%AB%E9%80%9F%E6%8E%92%E5%BA%8F/"/>
     <id>http://liuqinh2s.github.io/blog/2019/02/19/快速排序/</id>
     <published>2019-02-18T16:00:00.000Z</published>
-    <updated>2019-12-05T23:51:51.186Z</updated>
+    <updated>2019-12-09T14:28:01.007Z</updated>
     
     <summary type="html">
     
@@ -206,8 +204,6 @@
     
       <category term="Algorithm" scheme="http://liuqinh2s.github.io/blog/categories/Algorithm/"/>
     
-      <category term="Sort" scheme="http://liuqinh2s.github.io/blog/categories/Algorithm/Sort/"/>
-    
     
   </entry>
   
@@ -216,7 +212,7 @@
     <link href="http://liuqinh2s.github.io/blog/2019/01/19/%E5%B9%B6%E6%9F%A5%E9%9B%86/"/>
     <id>http://liuqinh2s.github.io/blog/2019/01/19/并查集/</id>
     <published>2019-01-18T16:00:00.000Z</published>
-    <updated>2019-12-05T23:51:51.186Z</updated>
+    <updated>2019-12-09T14:28:09.894Z</updated>
     
     <summary type="html">
     
@@ -229,7 +225,7 @@
     
     </summary>
     
-      <category term="Data Structure" scheme="http://liuqinh2s.github.io/blog/categories/Data-Structure/"/>
+      <category term="Algorithm" scheme="http://liuqinh2s.github.io/blog/categories/Algorithm/"/>
     
     
   </entry>
@@ -239,7 +235,7 @@
     <link href="http://liuqinh2s.github.io/blog/2019/01/17/KMP%E7%AE%97%E6%B3%95/"/>
     <id>http://liuqinh2s.github.io/blog/2019/01/17/KMP算法/</id>
     <published>2019-01-16T16:00:00.000Z</published>
-    <updated>2019-12-05T23:51:51.185Z</updated>
+    <updated>2019-12-09T14:28:14.653Z</updated>
     
     <summary type="html">
     
@@ -257,8 +253,6 @@
     
       <category term="Algorithm" scheme="http://liuqinh2s.github.io/blog/categories/Algorithm/"/>
     
-      <category term="String" scheme="http://liuqinh2s.github.io/blog/categories/Algorithm/String/"/>
-    
     
   </entry>
   
@@ -267,7 +261,7 @@
     <link href="http://liuqinh2s.github.io/blog/2019/01/15/%E8%93%84%E6%B0%B4%E6%B1%A0%E7%AE%97%E6%B3%95/"/>
     <id>http://liuqinh2s.github.io/blog/2019/01/15/蓄水池算法/</id>
     <published>2019-01-14T16:00:00.000Z</published>
-    <updated>2019-12-05T23:51:51.185Z</updated>
+    <updated>2019-12-09T14:28:17.949Z</updated>
     
     <summary type="html">
     
@@ -281,8 +275,6 @@
     
       <category term="Algorithm" scheme="http://liuqinh2s.github.io/blog/categories/Algorithm/"/>
     
-      <category term="Sample" scheme="http://liuqinh2s.github.io/blog/categories/Algorithm/Sample/"/>
-    
     
   </entry>
   
@@ -291,7 +283,7 @@
     <link href="http://liuqinh2s.github.io/blog/2019/01/07/%E7%AC%AC%E4%B8%80%E4%B8%AA%E6%9E%81%E9%99%90%E7%9A%84%E8%AF%81%E6%98%8E/"/>
     <id>http://liuqinh2s.github.io/blog/2019/01/07/第一个极限的证明/</id>
     <published>2019-01-06T16:00:00.000Z</published>
-    <updated>2019-12-05T23:51:51.184Z</updated>
+    <updated>2019-12-09T14:28:24.953Z</updated>
     
     <summary type="html">
     
@@ -301,10 +293,33 @@
     
       <category term="Math" scheme="http://liuqinh2s.github.io/blog/categories/Math/"/>
     
-      <category term="Calculus" scheme="http://liuqinh2s.github.io/blog/categories/Math/Calculus/"/>
-    
     
       <category term="Math" scheme="http://liuqinh2s.github.io/blog/tags/Math/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>精通一款编辑器之sublime text 3</title>
+    <link href="http://liuqinh2s.github.io/blog/2018/11/04/%E7%B2%BE%E9%80%9A%E4%B8%80%E6%AC%BE%E7%BC%96%E8%BE%91%E5%99%A8%E4%B9%8Bsublime%20text%203/"/>
+    <id>http://liuqinh2s.github.io/blog/2018/11/04/精通一款编辑器之sublime text 3/</id>
+    <published>2018-11-03T16:00:00.000Z</published>
+    <updated>2019-12-09T14:29:11.723Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;编辑器常用功能&quot;&gt;&lt;a href=&quot;#编辑器常用功能&quot; class=&quot;headerlink&quot; title=&quot;编辑器常用功能&quot;&gt;&lt;/a&gt;编辑器常用功能&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;格式化代码：格式化代码可以让你不用管代码的格式，可以放肆的写程序，你可以少敲很多空格，不用关心代码的格式问题，机器给出的代码格式风格统一且漂亮，一键解决你的格式问题，真是提高码代码效率的非常重要的功能。&lt;/li&gt;
+&lt;li&gt;查找文件：查找文件是在集成开发的时候非常重要的功能，当文件多起来的时候，快速定位到文件可以节省很多时间，甚至有时候文件实在太多，你只能通过查找的方式找到那个文件。&lt;/li&gt;
+&lt;li&gt;正则全文件查找和替换：轻松让你更改全局变量和配置，这是一个必须的功能，没有它简直无法想象工作量有多大。&lt;/li&gt;
+&lt;li&gt;代码收缩和扩展：代码太长怎么办，收缩和扩展啊。&lt;/li&gt;
+&lt;/ol&gt;
+    
+    </summary>
+    
+      <category term="Tools" scheme="http://liuqinh2s.github.io/blog/categories/Tools/"/>
+    
+    
+      <category term="编辑器" scheme="http://liuqinh2s.github.io/blog/tags/%E7%BC%96%E8%BE%91%E5%99%A8/"/>
     
   </entry>
   
@@ -313,7 +328,7 @@
     <link href="http://liuqinh2s.github.io/blog/2018/11/04/%E7%86%9F%E7%BB%83%E4%BD%BF%E7%94%A8JetBrains%E5%AE%B6%E7%9A%84IDE/"/>
     <id>http://liuqinh2s.github.io/blog/2018/11/04/熟练使用JetBrains家的IDE/</id>
     <published>2018-11-03T16:00:00.000Z</published>
-    <updated>2019-12-05T23:51:51.179Z</updated>
+    <updated>2019-12-09T14:29:13.870Z</updated>
     
     <summary type="html">
     
@@ -327,39 +342,10 @@
     
     </summary>
     
-      <category term="Skills of Tools" scheme="http://liuqinh2s.github.io/blog/categories/Skills-of-Tools/"/>
-    
-      <category term="IDE" scheme="http://liuqinh2s.github.io/blog/categories/Skills-of-Tools/IDE/"/>
+      <category term="Tools" scheme="http://liuqinh2s.github.io/blog/categories/Tools/"/>
     
     
       <category term="IDE" scheme="http://liuqinh2s.github.io/blog/tags/IDE/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>精通一款编辑器之sublime text 3</title>
-    <link href="http://liuqinh2s.github.io/blog/2018/11/04/%E7%B2%BE%E9%80%9A%E4%B8%80%E6%AC%BE%E7%BC%96%E8%BE%91%E5%99%A8%E4%B9%8Bsublime%20text%203/"/>
-    <id>http://liuqinh2s.github.io/blog/2018/11/04/精通一款编辑器之sublime text 3/</id>
-    <published>2018-11-03T16:00:00.000Z</published>
-    <updated>2019-12-05T23:51:51.181Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;编辑器常用功能&quot;&gt;&lt;a href=&quot;#编辑器常用功能&quot; class=&quot;headerlink&quot; title=&quot;编辑器常用功能&quot;&gt;&lt;/a&gt;编辑器常用功能&lt;/h2&gt;&lt;ol&gt;
-&lt;li&gt;格式化代码：格式化代码可以让你不用管代码的格式，可以放肆的写程序，你可以少敲很多空格，不用关心代码的格式问题，机器给出的代码格式风格统一且漂亮，一键解决你的格式问题，真是提高码代码效率的非常重要的功能。&lt;/li&gt;
-&lt;li&gt;查找文件：查找文件是在集成开发的时候非常重要的功能，当文件多起来的时候，快速定位到文件可以节省很多时间，甚至有时候文件实在太多，你只能通过查找的方式找到那个文件。&lt;/li&gt;
-&lt;li&gt;正则全文件查找和替换：轻松让你更改全局变量和配置，这是一个必须的功能，没有它简直无法想象工作量有多大。&lt;/li&gt;
-&lt;li&gt;代码收缩和扩展：代码太长怎么办，收缩和扩展啊。&lt;/li&gt;
-&lt;/ol&gt;
-    
-    </summary>
-    
-      <category term="Skills of Tools" scheme="http://liuqinh2s.github.io/blog/categories/Skills-of-Tools/"/>
-    
-      <category term="Editor" scheme="http://liuqinh2s.github.io/blog/categories/Skills-of-Tools/Editor/"/>
-    
-    
-      <category term="编辑器" scheme="http://liuqinh2s.github.io/blog/tags/%E7%BC%96%E8%BE%91%E5%99%A8/"/>
     
   </entry>
   
@@ -440,7 +426,7 @@
     <link href="http://liuqinh2s.github.io/blog/2018/09/20/wsl%20oh%20my%20zsh%20%E5%AD%97%E4%BD%93%E9%97%AE%E9%A2%98/"/>
     <id>http://liuqinh2s.github.io/blog/2018/09/20/wsl oh my zsh 字体问题/</id>
     <published>2018-09-19T16:00:00.000Z</published>
-    <updated>2019-12-08T05:19:06.649Z</updated>
+    <updated>2019-12-09T14:31:34.238Z</updated>
     
     <summary type="html">
     
@@ -450,9 +436,7 @@
     
     </summary>
     
-      <category term="fixed issues" scheme="http://liuqinh2s.github.io/blog/categories/fixed-issues/"/>
-    
-      <category term="wsl" scheme="http://liuqinh2s.github.io/blog/categories/fixed-issues/wsl/"/>
+      <category term="Fixed Issues" scheme="http://liuqinh2s.github.io/blog/categories/Fixed-Issues/"/>
     
     
   </entry>
@@ -462,7 +446,7 @@
     <link href="http://liuqinh2s.github.io/blog/2018/09/19/wsl%E4%BF%AE%E6%94%B9%E5%8F%B3%E9%94%AEbash%E5%9B%BE%E6%A0%87/"/>
     <id>http://liuqinh2s.github.io/blog/2018/09/19/wsl修改右键bash图标/</id>
     <published>2018-09-18T16:00:00.000Z</published>
-    <updated>2019-12-08T05:19:16.632Z</updated>
+    <updated>2019-12-09T14:31:27.735Z</updated>
     
     <summary type="html">
     
@@ -471,9 +455,7 @@
     
     </summary>
     
-      <category term="fixed issues" scheme="http://liuqinh2s.github.io/blog/categories/fixed-issues/"/>
-    
-      <category term="wsl" scheme="http://liuqinh2s.github.io/blog/categories/fixed-issues/wsl/"/>
+      <category term="Fixed Issues" scheme="http://liuqinh2s.github.io/blog/categories/Fixed-Issues/"/>
     
     
   </entry>
@@ -483,7 +465,7 @@
     <link href="http://liuqinh2s.github.io/blog/2018/04/30/mathjax%E5%B8%B8%E7%94%A8%E5%85%AC%E5%BC%8F%E8%AE%B0%E5%BD%95/"/>
     <id>http://liuqinh2s.github.io/blog/2018/04/30/mathjax常用公式记录/</id>
     <published>2018-04-29T16:00:00.000Z</published>
-    <updated>2019-12-08T05:09:27.888Z</updated>
+    <updated>2019-12-09T14:29:31.563Z</updated>
     
     <summary type="html">
     
@@ -498,9 +480,7 @@
     
     </summary>
     
-      <category term="Skills of Tools" scheme="http://liuqinh2s.github.io/blog/categories/Skills-of-Tools/"/>
-    
-      <category term="Latex" scheme="http://liuqinh2s.github.io/blog/categories/Skills-of-Tools/Latex/"/>
+      <category term="Tools" scheme="http://liuqinh2s.github.io/blog/categories/Tools/"/>
     
     
   </entry>

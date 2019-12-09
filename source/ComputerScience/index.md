@@ -48,9 +48,6 @@ date: 2018-04-17 10:40:39
 
 ### APUE
 
-- [《APUE-3rd》 读书笔记 -- Unix System Overview](../2018/05/22/APUE-3rd-读书笔记--Unix-System-Overview)
-- [《APUE-3rd》 读书笔记 -- File I/O](../2018/05/28/APUE-3rd-读书笔记--File-IO)
-
 ## 动手开始写代码
 
 ### ACM

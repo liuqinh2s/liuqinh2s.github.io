@@ -13,7 +13,7 @@ comments: true
 
 这是我查有道词典时候看到的可怕一幕：
 
-![](https://wx4.sinaimg.cn/mw690/006zFO3ggy1flhl8a9e69j312w0tatf9.jpg)
+![006zFO3ggy1flhl8a9e69j312w0tatf9.jpg](https://i.loli.net/2019/12/09/LAIVFxpekMXyogD.jpg)
 
 Override 一个把三个名字都占了，你怕不怕？反正我是看的心里一紧。
 
@@ -44,11 +44,7 @@ func();
 
 多态是面向对象编程的概念，你可以看看它的准确定义：
 
-[Polymorphism](https://en.wikipedia.org/wiki/Polymorphism_(computer_science))。
-
-定义很简短：polymorphism is the provision of a single interface to entities of different types.
-
-[The Java™ Tutorials](https://docs.oracle.com/javase/tutorial/java/IandI/polymorphism.html)
+Polymorphism，定义很简短：polymorphism is the provision of a single interface to entities of different types.
 
 如果父类有一个函数，子类也定义了一个完全相同的函数（函数签名相同），那么你可以用父类指针（或者说父类对象）作为统一的接口，来调用子类的方法。比如：
 

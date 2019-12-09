@@ -88,12 +88,12 @@
 <meta property="og:site_name" content="liuqinh2s&#39; blog">
 <meta property="og:description" content="我们都知道有些东西容易混淆，在加上中文翻译得乱七八糟，更加让人困惑。今天我要讲的这三位可就真是绝了。 它们是：Override、Overload、Overwrite。">
 <meta property="og:locale" content="en">
-<meta property="og:image" content="https://wx4.sinaimg.cn/mw690/006zFO3ggy1flhl8a9e69j312w0tatf9.jpg">
-<meta property="og:updated_time" content="2019-12-05T23:51:51.165Z">
+<meta property="og:image" content="https://i.loli.net/2019/12/09/LAIVFxpekMXyogD.jpg">
+<meta property="og:updated_time" content="2019-12-09T14:20:35.173Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Override Overload Overwrite">
 <meta name="twitter:description" content="我们都知道有些东西容易混淆，在加上中文翻译得乱七八糟，更加让人困惑。今天我要讲的这三位可就真是绝了。 它们是：Override、Overload、Overwrite。">
-<meta name="twitter:image" content="https://wx4.sinaimg.cn/mw690/006zFO3ggy1flhl8a9e69j312w0tatf9.jpg">
+<meta name="twitter:image" content="https://i.loli.net/2019/12/09/LAIVFxpekMXyogD.jpg">
 
 
 
@@ -366,7 +366,7 @@
                   <span class="post-meta-item-text">Words count in article&#58;</span>
                 
                 <span title="Words count in article">
-                  1,608
+                  1,605
                 </span>
               
 
@@ -395,7 +395,7 @@
 <p>它们是：Override、Overload、Overwrite。</p>
 <a id="more"></a>
 <p>这是我查有道词典时候看到的可怕一幕：</p>
-<p><img src="https://wx4.sinaimg.cn/mw690/006zFO3ggy1flhl8a9e69j312w0tatf9.jpg" alt></p>
+<p><img src="https://i.loli.net/2019/12/09/LAIVFxpekMXyogD.jpg" alt="006zFO3ggy1flhl8a9e69j312w0tatf9.jpg"></p>
 <p>Override 一个把三个名字都占了，你怕不怕？反正我是看的心里一紧。</p>
 <p>如果把概念都煮成了一锅粥，那还不如不要记这些概念，你应该向更深层次去探寻。就这三个的区别来说，我觉得主要理解两个概念就行了：</p>
 <ol>
@@ -411,9 +411,7 @@
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">func</span><span class="params">(<span class="keyword">int</span> a, <span class="keyword">int</span> b)</span></span>;</span><br><span class="line"><span class="function"><span class="keyword">float</span> <span class="title">func</span><span class="params">(<span class="keyword">int</span> a, <span class="keyword">int</span> b)</span></span>;</span><br><span class="line"></span><br><span class="line">func();</span><br></pre></td></tr></table></figure>
 <p>请问我使用的是哪个函数？你看返回值确实不行吧。</p>
 <h2 id="多态"><a href="#多态" class="headerlink" title="多态"></a>多态</h2><p>多态是面向对象编程的概念，你可以看看它的准确定义：</p>
-<p><a href="https://en.wikipedia.org/wiki/Polymorphism_(computer_science" target="_blank" rel="noopener">Polymorphism</a>)。</p>
-<p>定义很简短：polymorphism is the provision of a single interface to entities of different types.</p>
-<p><a href="https://docs.oracle.com/javase/tutorial/java/IandI/polymorphism.html" target="_blank" rel="noopener">The Java™ Tutorials</a></p>
+<p>Polymorphism，定义很简短：polymorphism is the provision of a single interface to entities of different types.</p>
 <p>如果父类有一个函数，子类也定义了一个完全相同的函数（函数签名相同），那么你可以用父类指针（或者说父类对象）作为统一的接口，来调用子类的方法。比如：</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Vehicle</span>&#123;</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">move</span><span class="params">()</span></span>&#123;</span><br><span class="line">        System.out.println(“Vehicles can move!!”);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">MotorBike</span> <span class="title">extends</span> <span class="title">Vehicle</span>&#123;</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">move</span><span class="params">()</span></span>&#123;</span><br><span class="line">        System.out.println(“MotorBike can move <span class="keyword">and</span> accelerate too!!”);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Car</span> <span class="title">extends</span> <span class="title">Vehicle</span>&#123;</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">move</span><span class="params">()</span></span>&#123;</span><br><span class="line">        System.out.println(“Hi! I am a car!”);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Test</span>&#123;</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span>&#123;</span><br><span class="line">        Vehicle vh = <span class="keyword">new</span> MotorBike();</span><br><span class="line">        vh.move();    <span class="comment">// prints MotorBike can move and accelerate too!!</span></span><br><span class="line">        vh = <span class="keyword">new</span> Vehicle();</span><br><span class="line">        vh.move();    <span class="comment">// prints Vehicles can move!!</span></span><br><span class="line">        vh = <span class="keyword">new</span> Car();</span><br><span class="line">        vh.move();   <span class="comment">// prints Hi! I am a car!</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>多态的好处是可以扩展啊，比如我后来又多了个 truck 类，我不需要去动已经写好的代码，只要把 truck 模块写好，加进去就行了。</p>
@@ -587,7 +585,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/blog/categories/index.html">
-                  <span class="site-state-item-count">19</span>
+                  <span class="site-state-item-count">6</span>
                   <span class="site-state-item-name">categories</span>
                 </a>
               </div>

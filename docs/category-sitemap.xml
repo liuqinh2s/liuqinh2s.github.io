@@ -8,134 +8,43 @@
     </url>
 
     <url>
-        <loc>http://liuqinh2s.github.io/blog/categories/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E5%AD%A6%E4%B9%A0%E8%AE%A1%E7%AE%97%E6%9C%BA/</loc>
-        <lastmod>2019-12-09T13:47:57.513Z</lastmod>
+        <loc>http://liuqinh2s.github.io/blog/categories/Fixed-Issues/</loc>
+        <lastmod>2019-12-09T14:31:40.677Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
-        <loc>http://liuqinh2s.github.io/blog/categories/Knowledge-of-CS/</loc>
-        <lastmod>2019-12-09T13:47:27.998Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://liuqinh2s.github.io/blog/categories/fixed-issues/</loc>
-        <lastmod>2019-12-08T07:03:23.879Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://liuqinh2s.github.io/blog/categories/fixed-issues/wsl/</loc>
-        <lastmod>2019-12-08T05:19:16.632Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://liuqinh2s.github.io/blog/categories/Skills-of-Tools/Latex/</loc>
-        <lastmod>2019-12-08T05:09:27.888Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://liuqinh2s.github.io/blog/categories/Skills-of-Tools/</loc>
-        <lastmod>2019-12-08T05:09:27.888Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://liuqinh2s.github.io/blog/categories/Math/Trigonometric/</loc>
-        <lastmod>2019-12-08T04:56:52.334Z</lastmod>
+        <loc>http://liuqinh2s.github.io/blog/categories/C/</loc>
+        <lastmod>2019-12-09T14:30:53.525Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>http://liuqinh2s.github.io/blog/categories/Math/</loc>
-        <lastmod>2019-12-08T04:56:52.334Z</lastmod>
+        <lastmod>2019-12-09T14:30:04.434Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
-        <loc>http://liuqinh2s.github.io/blog/categories/Programming-Language/C/</loc>
-        <lastmod>2019-12-08T01:40:03.066Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://liuqinh2s.github.io/blog/categories/Programming-Language/</loc>
-        <lastmod>2019-12-08T01:40:03.066Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://liuqinh2s.github.io/blog/categories/Algorithm/Analysis/</loc>
-        <lastmod>2019-12-05T23:51:51.188Z</lastmod>
+        <loc>http://liuqinh2s.github.io/blog/categories/Tools/</loc>
+        <lastmod>2019-12-09T14:29:31.563Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>http://liuqinh2s.github.io/blog/categories/Algorithm/</loc>
-        <lastmod>2019-12-05T23:51:51.188Z</lastmod>
+        <lastmod>2019-12-09T14:28:17.949Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
-        <loc>http://liuqinh2s.github.io/blog/categories/Algorithm/Sort/</loc>
-        <lastmod>2019-12-05T23:51:51.186Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://liuqinh2s.github.io/blog/categories/Data-Structure/</loc>
-        <lastmod>2019-12-05T23:51:51.186Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://liuqinh2s.github.io/blog/categories/Algorithm/Sample/</loc>
-        <lastmod>2019-12-05T23:51:51.185Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://liuqinh2s.github.io/blog/categories/Algorithm/String/</loc>
-        <lastmod>2019-12-05T23:51:51.185Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://liuqinh2s.github.io/blog/categories/Math/Calculus/</loc>
-        <lastmod>2019-12-05T23:51:51.184Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://liuqinh2s.github.io/blog/categories/Skills-of-Tools/Editor/</loc>
-        <lastmod>2019-12-05T23:51:51.181Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://liuqinh2s.github.io/blog/categories/Skills-of-Tools/IDE/</loc>
-        <lastmod>2019-12-05T23:51:51.179Z</lastmod>
+        <loc>http://liuqinh2s.github.io/blog/categories/Knowledge-of-CS/</loc>
+        <lastmod>2019-12-09T14:27:25.014Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
