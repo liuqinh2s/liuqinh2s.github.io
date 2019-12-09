@@ -88,7 +88,7 @@
 <meta property="og:site_name" content="liuqinh2s&#39; blog">
 <meta property="og:description" content="数组和指针的区别： 123456789101112131415int GetSize(int data[])&amp;#123;    return sizeof(data);&amp;#125;int _tmain(int argc, _TCHAR* argv[])&amp;#123;    int data1[] = &amp;#123;1, 2, 3, 4, 5&amp;#125;;    int size1 = sizeof(d">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-12-05T23:51:51.163Z">
+<meta property="og:updated_time" content="2019-12-08T01:40:03.066Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="数组和指针的区别">
 <meta name="twitter:description" content="数组和指针的区别： 123456789101112131415int GetSize(int data[])&amp;#123;    return sizeof(data);&amp;#125;int _tmain(int argc, _TCHAR* argv[])&amp;#123;    int data1[] = &amp;#123;1, 2, 3, 4, 5&amp;#125;;    int size1 = sizeof(d">
@@ -328,8 +328,19 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/blog/categories/Knowledge-of-CS/" itemprop="url" rel="index">
-                    <span itemprop="name">Knowledge of CS</span>
+                  <a href="/blog/categories/Programming-Language/" itemprop="url" rel="index">
+                    <span itemprop="name">Programming Language</span>
+                  </a>
+                </span>
+
+                
+                
+                  , 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/blog/categories/Programming-Language/C/" itemprop="url" rel="index">
+                    <span itemprop="name">C++</span>
                   </a>
                 </span>
 
@@ -392,6 +403,7 @@
         <p>数组和指针的区别：</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">GetSize</span><span class="params">(<span class="keyword">int</span> data[])</span></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">sizeof</span>(data);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> _tmain(<span class="keyword">int</span> argc, _TCHAR* argv[])&#123;</span><br><span class="line">    <span class="keyword">int</span> data1[] = &#123;<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>&#125;;</span><br><span class="line">    <span class="keyword">int</span> size1 = <span class="keyword">sizeof</span>(data1);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">int</span>* data2 = data1;</span><br><span class="line">    <span class="keyword">int</span> size2 = <span class="keyword">sizeof</span>(data2);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">int</span> size3 = GetSize(data1);</span><br><span class="line"></span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"%d, %d, %d\n"</span>, size1, size2, size3);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>答案是输出：20, 4, 4</p>
+<a id="more"></a>
 <p>sizeof是个关键字而不是函数，sizeof(data1)是求数组的大小，这里有5个int型元素，所以总共20个字节，data2声明为指针，尽管指向了一个数组，但本质上只是一个指针，所以sizeof(data2)的语义范围收缩了，无法仅通过一个指针得知其所指范围。在32位系统上一个指针是4字节，所以结果就是4。在C/C++中，当数组作为函数的参数进行传递时，数组就自动退化为同类型的指针，因此size3的结果也是4。</p>
 
       
@@ -500,7 +512,7 @@
               
                 <a href="/blog/archives">
               
-                  <span class="site-state-item-count">44</span>
+                  <span class="site-state-item-count">25</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -511,7 +523,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/blog/categories/index.html">
-                  <span class="site-state-item-count">27</span>
+                  <span class="site-state-item-count">19</span>
                   <span class="site-state-item-name">categories</span>
                 </a>
               </div>
@@ -522,7 +534,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/blog/tags/index.html">
-                  <span class="site-state-item-count">10</span>
+                  <span class="site-state-item-count">4</span>
                   <span class="site-state-item-name">tags</span>
                 </a>
               </div>
@@ -612,7 +624,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">74.4k</span>
+    <span title="Site words total count">30.0k</span>
   
 </div>
 

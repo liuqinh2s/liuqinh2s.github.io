@@ -276,7 +276,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://liuqinh2s.github.io/blog/blog/2019/03/03/动态数组的分摊分析/">
+    <link itemprop="mainEntityOfPage" href="http://liuqinh2s.github.io/blog/blog/2019/01/15/蓄水池算法/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="liuqinh2s">
@@ -295,7 +295,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/blog/2019/03/03/动态数组的分摊分析/" itemprop="url">动态数组的分摊分析</a></h1>
+                <a class="post-title-link" href="/blog/2019/01/15/蓄水池算法/" itemprop="url">蓄水池算法</a></h1>
         
 
         <div class="post-meta">
@@ -307,8 +307,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-03-03T00:00:00+08:00">
-                2019-03-03
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-01-15T00:00:00+08:00">
+                2019-01-15
               </time>
             
 
@@ -341,8 +341,8 @@
                 
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/blog/categories/Algorithm/Analysis/" itemprop="url" rel="index">
-                    <span itemprop="name">Analysis</span>
+                  <a href="/blog/categories/Algorithm/Sample/" itemprop="url" rel="index">
+                    <span itemprop="name">Sample</span>
                   </a>
                 </span>
 
@@ -372,7 +372,7 @@
                   <span class="post-meta-item-text">Words count in article&#58;</span>
                 
                 <span title="Words count in article">
-                  965
+                  851
                 </span>
               
 
@@ -398,15 +398,14 @@
 
       
         
-          <h2 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h2><p>动态数组在每次容量用尽时，重新申请2倍于当前数组的空间，并将原数组中的内容拷贝到新的空间，然后释放原数组的内存空间。对于动态数组，每次插入的花费有两种情况：</p>
+          <h2 id="蓄水池算法-Reservoir-Sampling"><a href="#蓄水池算法-Reservoir-Sampling" class="headerlink" title="蓄水池算法(Reservoir Sampling)"></a>蓄水池算法(Reservoir Sampling)</h2><p>这个算法真的很奇妙，它的核心是一个<strong>数学证明</strong>。外延，或者说应用场景是：</p>
 <ol>
-<li>容量够用，我们只需要存储新的元素</li>
-<li>容量不够用，创建新的空间，拷贝原数组进新的空间，再存储这个新的元素</li>
+<li>$C_n^k$，也就是从大小为n的样本集中随机取k个不同的样本</li>
+<li>流式数据，或者说无法直接根据索引拿到数据（更加不可能一遍加载到内存）</li>
 </ol>
-<p>分析方法有许多，统称为：amortized analysis（分摊分析）</p>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/blog/2019/03/03/动态数组的分摊分析/#more" rel="contents">
+            <a class="btn" href="/blog/2019/01/15/蓄水池算法/#more" rel="contents">
               Read more &raquo;
             </a>
           </div>
@@ -457,7 +456,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://liuqinh2s.github.io/blog/blog/2019/03/03/To be a publisher/">
+    <link itemprop="mainEntityOfPage" href="http://liuqinh2s.github.io/blog/blog/2019/01/07/第一个极限的证明/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="liuqinh2s">
@@ -476,7 +475,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/blog/2019/03/03/To be a publisher/" itemprop="url">To be a publisher</a></h1>
+                <a class="post-title-link" href="/blog/2019/01/07/第一个极限的证明/" itemprop="url">$\lim\limits_{x\rightarrow 0} \frac{\sin x}{x} = 1$的证明</a></h1>
         
 
         <div class="post-meta">
@@ -488,151 +487,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-03-03T00:00:00+08:00">
-                2019-03-03
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">Words count in article&#58;</span>
-                
-                <span title="Words count in article">
-                  681
-                </span>
-              
-
-              
-
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <p>这是我一直以来想写的文章，标题叫：To be a publisher，也就是做一个可以在互联网上产出内容的人。为什么我认为在互联网上产出内容这么重要呢？因为在未来，不能发声的人将无法融入互联网这个新的社会，即便融入了，也只能是那些能够发声的人的附庸。不能表达自己或不善于表达自己这是一件很可怕的事，这类人或许将成为互联网上的哑巴，被忽视的群体，沉默的大多数。</p>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/blog/2019/03/03/To be a publisher/#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://liuqinh2s.github.io/blog/blog/2019/02/28/推荐一本不错的书：《剑指offer》/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="liuqinh2s">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="https://i.loli.net/2019/05/20/5ce257002370387784.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="liuqinh2s' blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/blog/2019/02/28/推荐一本不错的书：《剑指offer》/" itemprop="url">推荐一本不错的书：《剑指offer》</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-02-28T00:00:00+08:00">
-                2019-02-28
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-01-07T00:00:00+08:00">
+                2019-01-07
               </time>
             
 
@@ -654,8 +510,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/blog/categories/推荐/" itemprop="url" rel="index">
-                    <span itemprop="name">推荐</span>
+                  <a href="/blog/categories/Math/" itemprop="url" rel="index">
+                    <span itemprop="name">Math</span>
                   </a>
                 </span>
 
@@ -665,8 +521,8 @@
                 
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/blog/categories/推荐/书籍/" itemprop="url" rel="index">
-                    <span itemprop="name">书籍</span>
+                  <a href="/blog/categories/Math/Calculus/" itemprop="url" rel="index">
+                    <span itemprop="name">Calculus</span>
                   </a>
                 </span>
 
@@ -696,7 +552,7 @@
                   <span class="post-meta-item-text">Words count in article&#58;</span>
                 
                 <span title="Words count in article">
-                  404
+                  393
                 </span>
               
 
@@ -722,15 +578,10 @@
 
       
         
-          <p>今天面试字节跳动公司，问的第一题就是《剑指offer》中的面试题3。所以面试大公司的话最好先刷完这三本书，算法是绕不过去的一关：</p>
-<ul>
-<li>《剑指offer》，国内特别喜欢出这个上面的题</li>
-<li>《编程之美》，微软出的</li>
-<li>《程序员面试经典》，主要是面向北美和欧洲的程序员</li>
-</ul>
+          <p>高数中的第一个证明，可能就是这个$\lim\limits_{x\rightarrow 0} \frac{\sin x}{x} = 1$的证明了。下面给出这个极限的证明，用到了解析几何（作图法）。</p>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/blog/2019/02/28/推荐一本不错的书：《剑指offer》/#more" rel="contents">
+            <a class="btn" href="/blog/2019/01/07/第一个极限的证明/#more" rel="contents">
               Read more &raquo;
             </a>
           </div>
@@ -781,7 +632,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://liuqinh2s.github.io/blog/blog/2019/02/19/快速排序/">
+    <link itemprop="mainEntityOfPage" href="http://liuqinh2s.github.io/blog/blog/2018/11/04/熟练使用JetBrains家的IDE/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="liuqinh2s">
@@ -800,7 +651,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/blog/2019/02/19/快速排序/" itemprop="url">快速排序</a></h1>
+                <a class="post-title-link" href="/blog/2018/11/04/熟练使用JetBrains家的IDE/" itemprop="url">熟练使用JetBrains家的IDE</a></h1>
         
 
         <div class="post-meta">
@@ -812,8 +663,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-02-19T00:00:00+08:00">
-                2019-02-19
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-11-04T00:00:00+08:00">
+                2018-11-04
               </time>
             
 
@@ -835,8 +686,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/blog/categories/Algorithm/" itemprop="url" rel="index">
-                    <span itemprop="name">Algorithm</span>
+                  <a href="/blog/categories/Skills-of-Tools/" itemprop="url" rel="index">
+                    <span itemprop="name">Skills of Tools</span>
                   </a>
                 </span>
 
@@ -846,8 +697,8 @@
                 
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/blog/categories/Algorithm/Sort/" itemprop="url" rel="index">
-                    <span itemprop="name">Sort</span>
+                  <a href="/blog/categories/Skills-of-Tools/IDE/" itemprop="url" rel="index">
+                    <span itemprop="name">IDE</span>
                   </a>
                 </span>
 
@@ -877,7 +728,7 @@
                   <span class="post-meta-item-text">Words count in article&#58;</span>
                 
                 <span title="Words count in article">
-                  747
+                  226
                 </span>
               
 
@@ -903,11 +754,16 @@
 
       
         
-          <p>快速排序算法是一个原理非常简单易懂的算法，但如果现场手写的话又有多少人能写得出来呢？我今天又试了一下，发现还是存在一些认知上的问题。首先我明白快排的核心操作是：<strong>选取一个中枢，然后把小于中枢的放到左边，大于中枢的放到右边</strong>。但我发现时隔仅仅一年多，我居然已经忘了这个操作的英文名字了。直到我在写这篇文章的时候才突然想起来：partition操作。</p>
-<p>在使用partition操作的前提下，递归解决问题就OK了。</p>
+          <h2 id="通用快捷键"><a href="#通用快捷键" class="headerlink" title="通用快捷键"></a>通用快捷键</h2><ol>
+<li>格式化代码（reformat code）:<br>win: ctrl+alt+L<br>mac: command+option+L</li>
+<li>在一行的任意位置使用： shift + enter，新建下一行并跳到下一行。</li>
+<li>善用代码自动补全功能，变量名和方法名等可以用 enter 补全。导入包可以用 alt + enter。</li>
+<li>上下移动代码，ctrl+shift+上下键</li>
+<li>Android Studio 生成函数注释：你在方法前输入/**然后一回车，自动帮你生成方法和参数的注释。</li>
+</ol>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/blog/2019/02/19/快速排序/#more" rel="contents">
+            <a class="btn" href="/blog/2018/11/04/熟练使用JetBrains家的IDE/#more" rel="contents">
               Read more &raquo;
             </a>
           </div>
@@ -958,7 +814,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://liuqinh2s.github.io/blog/blog/2019/01/19/并查集/">
+    <link itemprop="mainEntityOfPage" href="http://liuqinh2s.github.io/blog/blog/2018/11/04/精通一款编辑器之sublime text 3/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="liuqinh2s">
@@ -977,7 +833,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/blog/2019/01/19/并查集/" itemprop="url">并查集</a></h1>
+                <a class="post-title-link" href="/blog/2018/11/04/精通一款编辑器之sublime text 3/" itemprop="url">精通一款编辑器之sublime text 3</a></h1>
         
 
         <div class="post-meta">
@@ -989,8 +845,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-01-19T00:00:00+08:00">
-                2019-01-19
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-11-04T00:00:00+08:00">
+                2018-11-04
               </time>
             
 
@@ -1012,8 +868,19 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/blog/categories/Data-Structure/" itemprop="url" rel="index">
-                    <span itemprop="name">Data Structure</span>
+                  <a href="/blog/categories/Skills-of-Tools/" itemprop="url" rel="index">
+                    <span itemprop="name">Skills of Tools</span>
+                  </a>
+                </span>
+
+                
+                
+                  , 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/blog/categories/Skills-of-Tools/Editor/" itemprop="url" rel="index">
+                    <span itemprop="name">Editor</span>
                   </a>
                 </span>
 
@@ -1043,7 +910,7 @@
                   <span class="post-meta-item-text">Words count in article&#58;</span>
                 
                 <span title="Words count in article">
-                  417
+                  1,028
                 </span>
               
 
@@ -1069,15 +936,181 @@
 
       
         
-          <h2 id="并查集"><a href="#并查集" class="headerlink" title="并查集"></a>并查集</h2><h3 id="什么是并查集"><a href="#什么是并查集" class="headerlink" title="什么是并查集"></a>什么是并查集</h3><p>并查集的核心是<code>parent</code>指针，一个结点可以找到自己所属的结点。从而把结点<strong>归类</strong>。有两个核心操作：</p>
-<ul>
-<li>Union（用来合并两个并查集）</li>
-<li>Find（用于查找一个结点的<code>parent</code>）</li>
-</ul>
-<p>所以并查集可以叫做：union-find data structure。</p>
+          <h2 id="编辑器常用功能"><a href="#编辑器常用功能" class="headerlink" title="编辑器常用功能"></a>编辑器常用功能</h2><ol>
+<li>格式化代码：格式化代码可以让你不用管代码的格式，可以放肆的写程序，你可以少敲很多空格，不用关心代码的格式问题，机器给出的代码格式风格统一且漂亮，一键解决你的格式问题，真是提高码代码效率的非常重要的功能。</li>
+<li>查找文件：查找文件是在集成开发的时候非常重要的功能，当文件多起来的时候，快速定位到文件可以节省很多时间，甚至有时候文件实在太多，你只能通过查找的方式找到那个文件。</li>
+<li>正则全文件查找和替换：轻松让你更改全局变量和配置，这是一个必须的功能，没有它简直无法想象工作量有多大。</li>
+<li>代码收缩和扩展：代码太长怎么办，收缩和扩展啊。</li>
+</ol>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/blog/2019/01/19/并查集/#more" rel="contents">
+            <a class="btn" href="/blog/2018/11/04/精通一款编辑器之sublime text 3/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://liuqinh2s.github.io/blog/blog/2018/10/13/处理器体系结构/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="liuqinh2s">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="https://i.loli.net/2019/05/20/5ce257002370387784.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="liuqinh2s' blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/blog/2018/10/13/处理器体系结构/" itemprop="url">处理器体系结构</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-10-13T00:00:00+08:00">
+                2018-10-13
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/blog/categories/Knowledge-of-CS/" itemprop="url" rel="index">
+                    <span itemprop="name">Knowledge of CS</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Words count in article&#58;</span>
+                
+                <span title="Words count in article">
+                  3,476
+                </span>
+              
+
+              
+
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <p>阅读这篇文章必须要对汇编码有足够的了解，如果你对IA32汇编码还不够了解，可以先看看这篇文章：<a href="../../08/程序的机器级表示">程序的机器级表示</a></p>
+<h2 id="Y86指令集体系结构"><a href="#Y86指令集体系结构" class="headerlink" title="Y86指令集体系结构"></a>Y86指令集体系结构</h2><p>Y86指令集基本上是IA32指令集的一个子集。这个指令集就是我们处理器实现的目标。如下图：</p>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/blog/2018/10/13/处理器体系结构/#more" rel="contents">
               Read more &raquo;
             </a>
           </div>
@@ -1119,7 +1152,7 @@
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/blog/page/2/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/blog/">1</a><a class="page-number" href="/blog/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/blog/page/4/">4</a><span class="space">&hellip;</span><a class="page-number" href="/blog/page/9/">9</a><a class="extend next" rel="next" href="/blog/page/4/"><i class="fa fa-angle-right"></i></a>
+    <a class="extend prev" rel="prev" href="/blog/page/2/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/blog/">1</a><a class="page-number" href="/blog/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/blog/page/4/">4</a><a class="page-number" href="/blog/page/5/">5</a><a class="extend next" rel="next" href="/blog/page/4/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 
@@ -1167,7 +1200,7 @@
               
                 <a href="/blog/archives">
               
-                  <span class="site-state-item-count">44</span>
+                  <span class="site-state-item-count">25</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -1178,7 +1211,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/blog/categories/index.html">
-                  <span class="site-state-item-count">27</span>
+                  <span class="site-state-item-count">19</span>
                   <span class="site-state-item-name">categories</span>
                 </a>
               </div>
@@ -1189,7 +1222,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/blog/tags/index.html">
-                  <span class="site-state-item-count">10</span>
+                  <span class="site-state-item-count">4</span>
                   <span class="site-state-item-name">tags</span>
                 </a>
               </div>
@@ -1279,7 +1312,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">74.4k</span>
+    <span title="Site words total count">30.0k</span>
   
 </div>
 

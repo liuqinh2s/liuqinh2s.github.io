@@ -6,7 +6,7 @@
   <link href="/blog/atom.xml" rel="self"/>
   
   <link href="http://liuqinh2s.github.io/blog/"/>
-  <updated>2019-12-08T01:08:44.862Z</updated>
+  <updated>2019-12-09T13:46:41.817Z</updated>
   <id>http://liuqinh2s.github.io/blog/</id>
   
   <author>
@@ -17,79 +17,11 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>当我们在做算法题时，我们在做什么</title>
-    <link href="http://liuqinh2s.github.io/blog/2019/07/11/%E5%BD%93%E6%88%91%E4%BB%AC%E5%9C%A8%E5%81%9A%E7%AE%97%E6%B3%95%E9%A2%98%E6%97%B6%EF%BC%8C%E6%88%91%E4%BB%AC%E5%9C%A8%E5%81%9A%E4%BB%80%E4%B9%88/"/>
-    <id>http://liuqinh2s.github.io/blog/2019/07/11/当我们在做算法题时，我们在做什么/</id>
-    <published>2019-07-10T16:00:00.000Z</published>
-    <updated>2019-12-08T01:08:44.862Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;754-Reach-a-Number&quot;&gt;&lt;a href=&quot;#754-Reach-a-Number&quot; class=&quot;headerlink&quot; title=&quot;754. Reach a Number&quot;&gt;&lt;/a&gt;754. Reach a Number&lt;/h2&gt;&lt;p&gt;&lt;a href=&quot;https://leetcode.com/problems/reach-a-number/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;题目地址&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;You are standing at position &lt;code&gt;0&lt;/code&gt; on an infinite number line. There is a goal at position &lt;code&gt;target&lt;/code&gt;.&lt;/p&gt;
-&lt;p&gt;On each move, you can either go left or right. During the n-th move (starting from 1), you take n steps.&lt;/p&gt;
-&lt;p&gt;Return the minimum number of steps required to reach the destination.&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="教案" scheme="http://liuqinh2s.github.io/blog/categories/%E6%95%99%E6%A1%88/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>炒币的基本知识</title>
-    <link href="http://liuqinh2s.github.io/blog/2019/07/10/%E7%82%92%E5%B8%81%E7%9A%84%E5%9F%BA%E6%9C%AC%E7%9F%A5%E8%AF%86/"/>
-    <id>http://liuqinh2s.github.io/blog/2019/07/10/炒币的基本知识/</id>
-    <published>2019-07-09T16:00:00.000Z</published>
-    <updated>2019-12-05T23:51:51.191Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;平台选择&quot;&gt;&lt;a href=&quot;#平台选择&quot; class=&quot;headerlink&quot; title=&quot;平台选择&quot;&gt;&lt;/a&gt;平台选择&lt;/h2&gt;&lt;p&gt;平台选择：选大平台，像火币、币安。这里有个排行供参考：&lt;a href=&quot;https://coinmarketcap.com/zh/rankings/exchanges/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://coinmarketcap.com/zh/rankings/exchanges/&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;我自己选的是火币，以前的火币体验是非常好的，买卖很方便，现在经常数据刷不出来。&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="百科知识" scheme="http://liuqinh2s.github.io/blog/categories/%E7%99%BE%E7%A7%91%E7%9F%A5%E8%AF%86/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>markdown写作平台</title>
-    <link href="http://liuqinh2s.github.io/blog/2019/07/08/markdown%E5%86%99%E4%BD%9C%E5%B9%B3%E5%8F%B0/"/>
-    <id>http://liuqinh2s.github.io/blog/2019/07/08/markdown写作平台/</id>
-    <published>2019-07-07T16:00:00.000Z</published>
-    <updated>2019-12-05T23:51:51.191Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;做这个项目的初衷&quot;&gt;&lt;a href=&quot;#做这个项目的初衷&quot; class=&quot;headerlink&quot; title=&quot;做这个项目的初衷&quot;&gt;&lt;/a&gt;做这个项目的初衷&lt;/h2&gt;&lt;p&gt;项目地址：&lt;a href=&quot;https://mdblog.club&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://mdblog.club&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;md即 &lt;strong&gt;markdown&lt;/strong&gt;。&lt;/p&gt;
-&lt;p&gt;这个项目是我想了很久的项目，一直没开工。直到最近终于开始着手做了。&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;很早之前简书的markdown写作还不支持数学公式，很早之前为知笔记和leanote还没有收费，很早之前还没有掘金这个平台。时间过得真快啊，世界变化也真快。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;首先不得不说，做这个平台是为了满足我自己写文章的需求，我不喜欢左右分开，一边用来编辑，另一边用来预览的markdown写作模式，我喜欢typora的一体化模式。但很可惜typora没有在线版的，直到我遇到了这个项目：&lt;a href=&quot;https://github.com/laobubu/HyperMD&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;HyperMD&lt;/a&gt;，我知道借助这个插件我可以着手弄我心中的在线写作平台了。&lt;/p&gt;
-&lt;p&gt;为什么我有了自己的github pages博客平台之后，还要再弄一个markdown写作平台？&lt;/p&gt;
-&lt;p&gt;因为github博客平台有着种种的不方便，比如需要&lt;code&gt;hexo g&lt;/code&gt;生成，需要在写完记得&lt;code&gt;git add .&lt;/code&gt;，&lt;code&gt;git commit -m &amp;quot;message&amp;quot;&lt;/code&gt;，&lt;code&gt;git push origin master&lt;/code&gt;三连。需要在书写之前记得同步&lt;code&gt;git pull&lt;/code&gt;。写作的时候需要在typora和sublime text 3来回切换。&lt;/p&gt;
-&lt;p&gt;为什么不用有道云笔记？&lt;/p&gt;
-&lt;p&gt;有道云笔记虽然免费，但缺点很多，比如数学公式自己弄了个 &lt;strong&gt;```math&lt;/strong&gt;，造成数学公式根本没法看。&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="项目" scheme="http://liuqinh2s.github.io/blog/categories/%E9%A1%B9%E7%9B%AE/"/>
-    
-    
-  </entry>
-  
-  <entry>
     <title>图灵机</title>
     <link href="http://liuqinh2s.github.io/blog/2019/04/26/%E5%9B%BE%E7%81%B5%E6%9C%BA/"/>
     <id>http://liuqinh2s.github.io/blog/2019/04/26/图灵机/</id>
     <published>2019-04-25T16:00:00.000Z</published>
-    <updated>2019-12-05T23:51:51.191Z</updated>
+    <updated>2019-12-09T13:46:41.817Z</updated>
     
     <summary type="html">
     
@@ -101,7 +33,7 @@
     
     </summary>
     
-      <category term="从零开始学习计算机" scheme="http://liuqinh2s.github.io/blog/categories/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E5%AD%A6%E4%B9%A0%E8%AE%A1%E7%AE%97%E6%9C%BA/"/>
+      <category term="Knowledge of CS" scheme="http://liuqinh2s.github.io/blog/categories/Knowledge-of-CS/"/>
     
     
   </entry>
@@ -111,7 +43,7 @@
     <link href="http://liuqinh2s.github.io/blog/2019/04/22/%E5%86%AF%C2%B7%E8%AF%BA%E4%BE%9D%E6%9B%BC%E7%BB%93%E6%9E%84/"/>
     <id>http://liuqinh2s.github.io/blog/2019/04/22/冯·诺依曼结构/</id>
     <published>2019-04-21T16:00:00.000Z</published>
-    <updated>2019-12-05T23:51:51.190Z</updated>
+    <updated>2019-12-09T13:46:51.089Z</updated>
     
     <summary type="html">
     
@@ -139,28 +71,7 @@
     
     </summary>
     
-      <category term="从零开始学习计算机" scheme="http://liuqinh2s.github.io/blog/categories/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E5%AD%A6%E4%B9%A0%E8%AE%A1%E7%AE%97%E6%9C%BA/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>计算机中的信息</title>
-    <link href="http://liuqinh2s.github.io/blog/2019/04/21/%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%B8%AD%E7%9A%84%E4%BF%A1%E6%81%AF/"/>
-    <id>http://liuqinh2s.github.io/blog/2019/04/21/计算机中的信息/</id>
-    <published>2019-04-20T16:00:00.000Z</published>
-    <updated>2019-12-05T23:51:51.190Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;信息的本质&quot;&gt;&lt;a href=&quot;#信息的本质&quot; class=&quot;headerlink&quot; title=&quot;信息的本质&quot;&gt;&lt;/a&gt;信息的本质&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;信息的本质是消除不确定性&lt;/strong&gt;：我们抛掷一枚硬币，然后用手盖住，出现正面朝上和反面朝上的概率都是二分之一。当我们偷看了结果，确定了是正面还是反面朝上，也就获得了信息。在这个例子中，我们消除的不确定性是一个二分之一的概率。在 &lt;strong&gt;&lt;a href=&quot;https://zh.wikipedia.org/zh-hans/%E5%85%8B%E5%8A%B3%E5%BE%B7%C2%B7%E9%A6%99%E5%86%9C&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;香农&lt;/a&gt;&lt;/strong&gt; 划时代的论文 &lt;strong&gt;&lt;a href=&quot;http://math.harvard.edu/~ctm/home/text/others/shannon/entropy/entropy.pdf&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;通信的数学原理&lt;/a&gt;&lt;/strong&gt; 中，首次提出了信息是可量化的，以及如何量化信息。我们以bit为信息的度量单位，一个bit可以是0或者1，我们每获得一个bit的信息，就会消除一个二分之一的不确定性。&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;小思考题：如果我们抛掷的是一个骰子呢，当我们确定了一次投掷结果，我们获得多少信息（用bit为单位衡量）？&lt;br&gt;我们都知道，骰子有6个面，分别刻有1~6，我们有六分之一的概率得到其中任意一个面朝上。那么我们获得的信息应该是：$\log_2 6$。&lt;/p&gt;
-&lt;/blockquote&gt;
-    
-    </summary>
-    
-      <category term="从零开始学习计算机" scheme="http://liuqinh2s.github.io/blog/categories/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E5%AD%A6%E4%B9%A0%E8%AE%A1%E7%AE%97%E6%9C%BA/"/>
+      <category term="Knowledge of CS" scheme="http://liuqinh2s.github.io/blog/categories/Knowledge-of-CS/"/>
     
     
   </entry>
@@ -170,7 +81,7 @@
     <link href="http://liuqinh2s.github.io/blog/2019/04/21/%E4%BB%80%E4%B9%88%E6%98%AF%E5%AD%97%E7%AC%A6%E9%9B%86%E5%92%8C%E7%BC%96%E7%A0%81/"/>
     <id>http://liuqinh2s.github.io/blog/2019/04/21/什么是字符集和编码/</id>
     <published>2019-04-20T16:00:00.000Z</published>
-    <updated>2019-12-05T23:51:51.189Z</updated>
+    <updated>2019-12-09T13:47:27.998Z</updated>
     
     <summary type="html">
     
@@ -188,39 +99,28 @@
     
     </summary>
     
-      <category term="从零开始学习计算机" scheme="http://liuqinh2s.github.io/blog/categories/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E5%AD%A6%E4%B9%A0%E8%AE%A1%E7%AE%97%E6%9C%BA/"/>
+      <category term="Knowledge of CS" scheme="http://liuqinh2s.github.io/blog/categories/Knowledge-of-CS/"/>
     
     
   </entry>
   
   <entry>
-    <title>记录一些不错的网站</title>
-    <link href="http://liuqinh2s.github.io/blog/2019/04/20/%E8%AE%B0%E5%BD%95%E4%B8%80%E4%BA%9B%E4%B8%8D%E9%94%99%E7%9A%84%E7%BD%91%E7%AB%99/"/>
-    <id>http://liuqinh2s.github.io/blog/2019/04/20/记录一些不错的网站/</id>
+    <title>计算机中的信息</title>
+    <link href="http://liuqinh2s.github.io/blog/2019/04/20/%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%B8%AD%E7%9A%84%E4%BF%A1%E6%81%AF/"/>
+    <id>http://liuqinh2s.github.io/blog/2019/04/20/计算机中的信息/</id>
     <published>2019-04-19T16:00:00.000Z</published>
-    <updated>2019-12-05T23:51:51.189Z</updated>
+    <updated>2019-12-09T13:47:57.513Z</updated>
     
     <summary type="html">
     
-      &lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://www.shuge.org/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;有品格的数字古籍图书馆&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://landgreen.github.io/physics/index.html&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;physics&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://tubeheartbeat.com/london/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Tube Heartbeat&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://winds.getstream.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;RSS聚合订阅网站&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://my-music-diary.com/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;My Music Diary&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://www.crypto101.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;CRYPTO101&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://static.icybear.net/%5BCN%5DProgrammer%20competency%20matrix.htm&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Programmer Competency Matrix&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://thetreeographer.com/archive/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;世界上最古老的树有哪些&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://learnopengl-cn.github.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;OpenGL 入门&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://ctf-wiki.github.io/ctf-wiki/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;CTF wiki&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://teachyourselfcs.com/#programming&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Teach Yourself Computer Science&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
+      &lt;h2 id=&quot;信息的本质&quot;&gt;&lt;a href=&quot;#信息的本质&quot; class=&quot;headerlink&quot; title=&quot;信息的本质&quot;&gt;&lt;/a&gt;信息的本质&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;信息的本质是消除不确定性&lt;/strong&gt;：我们抛掷一枚硬币，然后用手盖住，出现正面朝上和反面朝上的概率都是二分之一。当我们偷看了结果，确定了是正面还是反面朝上，也就获得了信息。在这个例子中，我们消除的不确定性是一个二分之一的概率。在 &lt;strong&gt;&lt;a href=&quot;https://zh.wikipedia.org/zh-hans/%E5%85%8B%E5%8A%B3%E5%BE%B7%C2%B7%E9%A6%99%E5%86%9C&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;香农&lt;/a&gt;&lt;/strong&gt; 划时代的论文 &lt;strong&gt;&lt;a href=&quot;http://math.harvard.edu/~ctm/home/text/others/shannon/entropy/entropy.pdf&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;通信的数学原理&lt;/a&gt;&lt;/strong&gt; 中，首次提出了信息是可量化的，以及如何量化信息。我们以bit为信息的度量单位，一个bit可以是0或者1，我们每获得一个bit的信息，就会消除一个二分之一的不确定性。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;小思考题：如果我们抛掷的是一个骰子呢，当我们确定了一次投掷结果，我们获得多少信息（用bit为单位衡量）？&lt;br&gt;我们都知道，骰子有6个面，分别刻有1~6，我们有六分之一的概率得到其中任意一个面朝上。那么我们获得的信息应该是：$\log_2 6$。&lt;/p&gt;
+&lt;/blockquote&gt;
     
     </summary>
     
-      <category term="推荐" scheme="http://liuqinh2s.github.io/blog/categories/%E6%8E%A8%E8%8D%90/"/>
-    
-      <category term="网站" scheme="http://liuqinh2s.github.io/blog/categories/%E6%8E%A8%E8%8D%90/%E7%BD%91%E7%AB%99/"/>
+      <category term="从零开始学习计算机" scheme="http://liuqinh2s.github.io/blog/categories/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E5%AD%A6%E4%B9%A0%E8%AE%A1%E7%AE%97%E6%9C%BA/"/>
     
     
   </entry>
@@ -248,7 +148,7 @@
     <link href="http://liuqinh2s.github.io/blog/2019/04/15/hexo%E6%8A%8A%E8%8B%B1%E6%96%87%E5%BC%95%E5%8F%B7%E6%B8%B2%E6%9F%93%E6%88%90%E4%B8%AD%E6%96%87%E5%BC%95%E5%8F%B7%E7%9A%84%E9%97%AE%E9%A2%98/"/>
     <id>http://liuqinh2s.github.io/blog/2019/04/15/hexo把英文引号渲染成中文引号的问题/</id>
     <published>2019-04-14T16:00:00.000Z</published>
-    <updated>2019-12-05T23:51:51.189Z</updated>
+    <updated>2019-12-08T07:03:23.879Z</updated>
     
     <summary type="html">
     
@@ -260,8 +160,8 @@
     
     </summary>
     
+      <category term="fixed issues" scheme="http://liuqinh2s.github.io/blog/categories/fixed-issues/"/>
     
-      <category term="fixed issues" scheme="http://liuqinh2s.github.io/blog/tags/fixed-issues/"/>
     
   </entry>
   
@@ -286,49 +186,6 @@
       <category term="Algorithm" scheme="http://liuqinh2s.github.io/blog/categories/Algorithm/"/>
     
       <category term="Analysis" scheme="http://liuqinh2s.github.io/blog/categories/Algorithm/Analysis/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>To be a publisher</title>
-    <link href="http://liuqinh2s.github.io/blog/2019/03/03/To%20be%20a%20publisher/"/>
-    <id>http://liuqinh2s.github.io/blog/2019/03/03/To be a publisher/</id>
-    <published>2019-03-02T16:00:00.000Z</published>
-    <updated>2019-12-05T23:51:51.187Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;这是我一直以来想写的文章，标题叫：To be a publisher，也就是做一个可以在互联网上产出内容的人。为什么我认为在互联网上产出内容这么重要呢？因为在未来，不能发声的人将无法融入互联网这个新的社会，即便融入了，也只能是那些能够发声的人的附庸。不能表达自己或不善于表达自己这是一件很可怕的事，这类人或许将成为互联网上的哑巴，被忽视的群体，沉默的大多数。&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="Methodology" scheme="http://liuqinh2s.github.io/blog/tags/Methodology/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>推荐一本不错的书：《剑指offer》</title>
-    <link href="http://liuqinh2s.github.io/blog/2019/02/28/%E6%8E%A8%E8%8D%90%E4%B8%80%E6%9C%AC%E4%B8%8D%E9%94%99%E7%9A%84%E4%B9%A6%EF%BC%9A%E3%80%8A%E5%89%91%E6%8C%87offer%E3%80%8B/"/>
-    <id>http://liuqinh2s.github.io/blog/2019/02/28/推荐一本不错的书：《剑指offer》/</id>
-    <published>2019-02-27T16:00:00.000Z</published>
-    <updated>2019-12-05T23:51:51.186Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;今天面试字节跳动公司，问的第一题就是《剑指offer》中的面试题3。所以面试大公司的话最好先刷完这三本书，算法是绕不过去的一关：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;《剑指offer》，国内特别喜欢出这个上面的题&lt;/li&gt;
-&lt;li&gt;《编程之美》，微软出的&lt;/li&gt;
-&lt;li&gt;《程序员面试经典》，主要是面向北美和欧洲的程序员&lt;/li&gt;
-&lt;/ul&gt;
-    
-    </summary>
-    
-      <category term="推荐" scheme="http://liuqinh2s.github.io/blog/categories/%E6%8E%A8%E8%8D%90/"/>
-    
-      <category term="书籍" scheme="http://liuqinh2s.github.io/blog/categories/%E6%8E%A8%E8%8D%90/%E4%B9%A6%E7%B1%8D/"/>
     
     
   </entry>
@@ -430,31 +287,6 @@
   </entry>
   
   <entry>
-    <title>自己写json解释器</title>
-    <link href="http://liuqinh2s.github.io/blog/2019/01/10/%E8%87%AA%E5%B7%B1%E5%86%99Json%E8%A7%A3%E9%87%8A%E5%99%A8/"/>
-    <id>http://liuqinh2s.github.io/blog/2019/01/10/自己写Json解释器/</id>
-    <published>2019-01-09T16:00:00.000Z</published>
-    <updated>2019-12-05T23:51:51.184Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;p&gt;最近发现自己似乎除了公司的项目外，基本没什么别的项目。有一个gitbook正在制作（严格来说并不是项目）：&lt;a href=&quot;https://liuqinh2s.gitbooks.io/leetcode/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;leetcode刷题笔记&lt;/a&gt;。最近一直在语雀上看阮一峰的每周分享，在第四期中看到这个：&lt;a href=&quot;http://seriot.ch/parsing_json.php#1&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Douglas Crockford 的名片&lt;/a&gt;。想来想去，觉得可以做几个解析器，比如&lt;strong&gt;json解析器&lt;/strong&gt;，&lt;strong&gt;markdown解析器&lt;/strong&gt;，&lt;strong&gt;正则表达式解析器&lt;/strong&gt;等等，然后可以回过头再去看看编译原理，夯实基础。&lt;/p&gt;
-&lt;p&gt;说干就干，先深入了解一下json，并看看别人如何实现json的解析。&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://www.json.org/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://www.json.org/&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://zhuanlan.zhihu.com/p/28049617&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://zhuanlan.zhihu.com/p/28049617&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-    
-    </summary>
-    
-      <category term="Compiler" scheme="http://liuqinh2s.github.io/blog/categories/Compiler/"/>
-    
-    
-      <category term="DIY" scheme="http://liuqinh2s.github.io/blog/tags/DIY/"/>
-    
-  </entry>
-  
-  <entry>
     <title>$\lim\limits_{x\rightarrow 0} \frac{\sin x}{x} = 1$的证明</title>
     <link href="http://liuqinh2s.github.io/blog/2019/01/07/%E7%AC%AC%E4%B8%80%E4%B8%AA%E6%9E%81%E9%99%90%E7%9A%84%E8%AF%81%E6%98%8E/"/>
     <id>http://liuqinh2s.github.io/blog/2019/01/07/第一个极限的证明/</id>
@@ -477,25 +309,199 @@
   </entry>
   
   <entry>
-    <title>js实现sleep方法的最佳实践</title>
-    <link href="http://liuqinh2s.github.io/blog/2018/11/22/js%E5%AE%9E%E7%8E%B0sleep%E6%96%B9%E6%B3%95%E7%9A%84%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5/"/>
-    <id>http://liuqinh2s.github.io/blog/2018/11/22/js实现sleep方法的最佳实践/</id>
-    <published>2018-11-21T16:00:00.000Z</published>
-    <updated>2019-12-05T23:51:51.183Z</updated>
+    <title>熟练使用JetBrains家的IDE</title>
+    <link href="http://liuqinh2s.github.io/blog/2018/11/04/%E7%86%9F%E7%BB%83%E4%BD%BF%E7%94%A8JetBrains%E5%AE%B6%E7%9A%84IDE/"/>
+    <id>http://liuqinh2s.github.io/blog/2018/11/04/熟练使用JetBrains家的IDE/</id>
+    <published>2018-11-03T16:00:00.000Z</published>
+    <updated>2019-12-05T23:51:51.179Z</updated>
     
     <summary type="html">
     
-      &lt;p&gt;&lt;code&gt;setTimeout&lt;/code&gt;是异步的，跟其他语言里的&lt;code&gt;sleep&lt;/code&gt;和&lt;code&gt;delay&lt;/code&gt;并不一样，不能阻塞住程序。上网查了之后发现js没有自带的sleep方法，那么如何自己实现sleep方法呢？&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;https://stackoverflow.com/questions/951021/what-is-the-javascript-version-of-sleep&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;What is the JavaScript version of sleep()?&lt;/a&gt;&lt;/p&gt;
+      &lt;h2 id=&quot;通用快捷键&quot;&gt;&lt;a href=&quot;#通用快捷键&quot; class=&quot;headerlink&quot; title=&quot;通用快捷键&quot;&gt;&lt;/a&gt;通用快捷键&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;格式化代码（reformat code）:&lt;br&gt;win: ctrl+alt+L&lt;br&gt;mac: command+option+L&lt;/li&gt;
+&lt;li&gt;在一行的任意位置使用： shift + enter，新建下一行并跳到下一行。&lt;/li&gt;
+&lt;li&gt;善用代码自动补全功能，变量名和方法名等可以用 enter 补全。导入包可以用 alt + enter。&lt;/li&gt;
+&lt;li&gt;上下移动代码，ctrl+shift+上下键&lt;/li&gt;
+&lt;li&gt;Android Studio 生成函数注释：你在方法前输入/**然后一回车，自动帮你生成方法和参数的注释。&lt;/li&gt;
+&lt;/ol&gt;
     
     </summary>
     
-      <category term="Programming Language" scheme="http://liuqinh2s.github.io/blog/categories/Programming-Language/"/>
+      <category term="Skills of Tools" scheme="http://liuqinh2s.github.io/blog/categories/Skills-of-Tools/"/>
     
-      <category term="JavaScript" scheme="http://liuqinh2s.github.io/blog/categories/Programming-Language/JavaScript/"/>
+      <category term="IDE" scheme="http://liuqinh2s.github.io/blog/categories/Skills-of-Tools/IDE/"/>
     
     
-      <category term="JavaScript" scheme="http://liuqinh2s.github.io/blog/tags/JavaScript/"/>
+      <category term="IDE" scheme="http://liuqinh2s.github.io/blog/tags/IDE/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>精通一款编辑器之sublime text 3</title>
+    <link href="http://liuqinh2s.github.io/blog/2018/11/04/%E7%B2%BE%E9%80%9A%E4%B8%80%E6%AC%BE%E7%BC%96%E8%BE%91%E5%99%A8%E4%B9%8Bsublime%20text%203/"/>
+    <id>http://liuqinh2s.github.io/blog/2018/11/04/精通一款编辑器之sublime text 3/</id>
+    <published>2018-11-03T16:00:00.000Z</published>
+    <updated>2019-12-05T23:51:51.181Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;编辑器常用功能&quot;&gt;&lt;a href=&quot;#编辑器常用功能&quot; class=&quot;headerlink&quot; title=&quot;编辑器常用功能&quot;&gt;&lt;/a&gt;编辑器常用功能&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;格式化代码：格式化代码可以让你不用管代码的格式，可以放肆的写程序，你可以少敲很多空格，不用关心代码的格式问题，机器给出的代码格式风格统一且漂亮，一键解决你的格式问题，真是提高码代码效率的非常重要的功能。&lt;/li&gt;
+&lt;li&gt;查找文件：查找文件是在集成开发的时候非常重要的功能，当文件多起来的时候，快速定位到文件可以节省很多时间，甚至有时候文件实在太多，你只能通过查找的方式找到那个文件。&lt;/li&gt;
+&lt;li&gt;正则全文件查找和替换：轻松让你更改全局变量和配置，这是一个必须的功能，没有它简直无法想象工作量有多大。&lt;/li&gt;
+&lt;li&gt;代码收缩和扩展：代码太长怎么办，收缩和扩展啊。&lt;/li&gt;
+&lt;/ol&gt;
+    
+    </summary>
+    
+      <category term="Skills of Tools" scheme="http://liuqinh2s.github.io/blog/categories/Skills-of-Tools/"/>
+    
+      <category term="Editor" scheme="http://liuqinh2s.github.io/blog/categories/Skills-of-Tools/Editor/"/>
+    
+    
+      <category term="编辑器" scheme="http://liuqinh2s.github.io/blog/tags/%E7%BC%96%E8%BE%91%E5%99%A8/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>处理器体系结构</title>
+    <link href="http://liuqinh2s.github.io/blog/2018/10/13/%E5%A4%84%E7%90%86%E5%99%A8%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84/"/>
+    <id>http://liuqinh2s.github.io/blog/2018/10/13/处理器体系结构/</id>
+    <published>2018-10-12T16:00:00.000Z</published>
+    <updated>2019-12-08T05:24:55.240Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;阅读这篇文章必须要对汇编码有足够的了解，如果你对IA32汇编码还不够了解，可以先看看这篇文章：&lt;a href=&quot;../../08/程序的机器级表示&quot;&gt;程序的机器级表示&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&quot;Y86指令集体系结构&quot;&gt;&lt;a href=&quot;#Y86指令集体系结构&quot; class=&quot;headerlink&quot; title=&quot;Y86指令集体系结构&quot;&gt;&lt;/a&gt;Y86指令集体系结构&lt;/h2&gt;&lt;p&gt;Y86指令集基本上是IA32指令集的一个子集。这个指令集就是我们处理器实现的目标。如下图：&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Knowledge of CS" scheme="http://liuqinh2s.github.io/blog/categories/Knowledge-of-CS/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>程序的机器级表示</title>
+    <link href="http://liuqinh2s.github.io/blog/2018/10/08/%E7%A8%8B%E5%BA%8F%E7%9A%84%E6%9C%BA%E5%99%A8%E7%BA%A7%E8%A1%A8%E7%A4%BA/"/>
+    <id>http://liuqinh2s.github.io/blog/2018/10/08/程序的机器级表示/</id>
+    <published>2018-10-07T16:00:00.000Z</published>
+    <updated>2019-12-05T23:51:51.173Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;从编译C语言文件说起&quot;&gt;&lt;a href=&quot;#从编译C语言文件说起&quot; class=&quot;headerlink&quot; title=&quot;从编译C语言文件说起&quot;&gt;&lt;/a&gt;从编译C语言文件说起&lt;/h2&gt;&lt;figure class=&quot;highlight c&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ gcc &lt;span class=&quot;number&quot;&gt;-01&lt;/span&gt; -o p p1.c p2.c&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;使用了gcc命令来编译，也可以简单写作：&lt;code&gt;cc&lt;/code&gt;。&lt;/p&gt;
+&lt;p&gt;优化层级为1，1级是最低的，层级越高程序优化越好，但增加了编译时间，也使调试变得更难，且跟源程序差异很大不便于理解。&lt;/p&gt;
+&lt;p&gt;编译的流程是：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;预处理器（preprocessor）把诸如：&lt;code&gt;#include&lt;/code&gt;、&lt;code&gt;#define&lt;/code&gt;、&lt;code&gt;#if&lt;/code&gt;、&lt;code&gt;#else&lt;/code&gt;、&lt;code&gt;#elif&lt;/code&gt;、&lt;code&gt;#ifdef&lt;/code&gt;、&lt;code&gt;#endif&lt;/code&gt;等预编译指令替换掉。&lt;/li&gt;
+&lt;li&gt;编译器（compiler）把&lt;code&gt;.c&lt;/code&gt;源文件编译成&lt;code&gt;.s&lt;/code&gt;的汇编代码文件。&lt;/li&gt;
+&lt;li&gt;汇编器（assembler）把汇编代码文件转换成相应的二进制目标文件&lt;code&gt;.o&lt;/code&gt;，目标文件已经是机器码了，只是没有填入全局变量的地址。&lt;/li&gt;
+&lt;li&gt;链接器（linker），把多目标文件和库函数链接在一起，形成可执行文件。&lt;/li&gt;
+&lt;/ol&gt;
+    
+    </summary>
+    
+      <category term="Knowledge of CS" scheme="http://liuqinh2s.github.io/blog/categories/Knowledge-of-CS/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>浮点数原理</title>
+    <link href="http://liuqinh2s.github.io/blog/2018/09/27/%E6%B5%AE%E7%82%B9%E6%95%B0%E5%8E%9F%E7%90%86/"/>
+    <id>http://liuqinh2s.github.io/blog/2018/09/27/浮点数原理/</id>
+    <published>2018-09-26T16:00:00.000Z</published>
+    <updated>2019-12-05T23:51:51.172Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;strong&gt;浮点数的作用&lt;/strong&gt;：区别于整形数，用来表示小数。可以用来表示很大的数，或者非常接近0的小数，或者近似的做实数计算，浮点数的一般形式：$x\times 2^y$。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;IEEE（pronounced “Eye-Triple-Eee”）浮点数标准&lt;/strong&gt; 是行业内公认的标准。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;rounding&lt;/strong&gt;：when a number cannot be represented exactly in the format and hence must be adjusted upward or downward。可以翻译为：&lt;strong&gt;舍入&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;十进制的小数表示：$d_m d_{m-1} \cdots d_1 d_0 . d_{-1} d_{-2} \cdots d_{-n}$，写成数学表达式：&lt;/p&gt;
+&lt;p&gt;$$&lt;br&gt;d = \sum_{i=-n}^m 10^i \times d_i&lt;br&gt;$$&lt;/p&gt;
+&lt;p&gt;相应的，二进制也可以写成这种形式：&lt;/p&gt;
+&lt;p&gt;$$&lt;br&gt;b = \sum_{i=-n}^m 2^i \times b_i&lt;br&gt;$$&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Knowledge of CS" scheme="http://liuqinh2s.github.io/blog/categories/Knowledge-of-CS/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>wsl oh my zsh 字符乱码问题</title>
+    <link href="http://liuqinh2s.github.io/blog/2018/09/20/wsl%20oh%20my%20zsh%20%E5%AD%97%E4%BD%93%E9%97%AE%E9%A2%98/"/>
+    <id>http://liuqinh2s.github.io/blog/2018/09/20/wsl oh my zsh 字体问题/</id>
+    <published>2018-09-19T16:00:00.000Z</published>
+    <updated>2019-12-08T05:19:06.649Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;安装-oh-my-zsh&quot;&gt;&lt;a href=&quot;#安装-oh-my-zsh&quot; class=&quot;headerlink&quot; title=&quot;安装 oh my zsh&quot;&gt;&lt;/a&gt;安装 oh my zsh&lt;/h2&gt;&lt;p&gt;首先检查自己有没有zsh：&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;cat /etc/shells&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;如果有的话就下载&lt;a href=&quot;https://github.com/robbyrussell/oh-my-zsh&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;oh my zsh&lt;/a&gt;&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="fixed issues" scheme="http://liuqinh2s.github.io/blog/categories/fixed-issues/"/>
+    
+      <category term="wsl" scheme="http://liuqinh2s.github.io/blog/categories/fixed-issues/wsl/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>wsl修改右键bash图标</title>
+    <link href="http://liuqinh2s.github.io/blog/2018/09/19/wsl%E4%BF%AE%E6%94%B9%E5%8F%B3%E9%94%AEbash%E5%9B%BE%E6%A0%87/"/>
+    <id>http://liuqinh2s.github.io/blog/2018/09/19/wsl修改右键bash图标/</id>
+    <published>2018-09-18T16:00:00.000Z</published>
+    <updated>2019-12-08T05:19:16.632Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;使用 windows subsystem for linux (简称：WSL) 的时候，遇到一个小问题，在文件管理器中右键，唤出bash，发现图标不对：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://i.loli.net/2018/09/19/5ba25208ca7de.png&quot; alt=&quot;截图1&quot;&gt;&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="fixed issues" scheme="http://liuqinh2s.github.io/blog/categories/fixed-issues/"/>
+    
+      <category term="wsl" scheme="http://liuqinh2s.github.io/blog/categories/fixed-issues/wsl/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>mathjax常用公式记录</title>
+    <link href="http://liuqinh2s.github.io/blog/2018/04/30/mathjax%E5%B8%B8%E7%94%A8%E5%85%AC%E5%BC%8F%E8%AE%B0%E5%BD%95/"/>
+    <id>http://liuqinh2s.github.io/blog/2018/04/30/mathjax常用公式记录/</id>
+    <published>2018-04-29T16:00:00.000Z</published>
+    <updated>2019-12-08T05:09:27.888Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;角度记法&quot;&gt;&lt;a href=&quot;#角度记法&quot; class=&quot;headerlink&quot; title=&quot;角度记法&quot;&gt;&lt;/a&gt;角度记法&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;度数：&lt;code&gt;$60^\circ$&lt;/code&gt;，$60^\circ$&lt;/li&gt;
+&lt;li&gt;度数分：&lt;code&gt;$60^\prime$&lt;/code&gt;，$60^\prime$&lt;/li&gt;
+&lt;li&gt;弧度：&lt;code&gt;$\frac{\pi}{2}$&lt;/code&gt;，$\frac{\pi}{2}$&lt;/li&gt;
+&lt;li&gt;角度记法：&lt;code&gt;$\angle A$&lt;/code&gt;，$\angle A$&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;三重环积分无法渲染的问题&quot;&gt;&lt;a href=&quot;#三重环积分无法渲染的问题&quot; class=&quot;headerlink&quot; title=&quot;三重环积分无法渲染的问题&quot;&gt;&lt;/a&gt;三重环积分无法渲染的问题&lt;/h2&gt;&lt;p&gt;在网上找了半天资料最终解决了，参考这个答案：&lt;a href=&quot;https://math.meta.stackexchange.com/questions/9973/how-do-you-render-a-closed-surface-double-integral&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;How do you render a closed surface double integral?&lt;/a&gt;，做法是直接使用Unicode编码：&lt;code&gt;\unicode{x222F}&lt;/code&gt;，三重环积分的编码，参考这里：&lt;a href=&quot;http://unicode-search.net/unicode-namesearch.pl?term=INTEGRAL&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;unicode-search.net&lt;/a&gt;，所以只要将&lt;code&gt;$\oiiint$&lt;/code&gt;换成&lt;code&gt;$\unicode{x2230}$&lt;/code&gt;即可正确显示三重环积分。如下：&lt;/p&gt;
+&lt;p&gt;$$\unicode{x2230}$$&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Skills of Tools" scheme="http://liuqinh2s.github.io/blog/categories/Skills-of-Tools/"/>
+    
+      <category term="Latex" scheme="http://liuqinh2s.github.io/blog/categories/Skills-of-Tools/Latex/"/>
+    
     
   </entry>
   

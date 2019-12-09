@@ -1,8 +1,6 @@
 ---
 title: wsl oh my zsh 字符乱码问题
-tags:
-	- fixed issues
-	- wsl
+categories: [fixed issues, wsl]
 comments: true
 ---
 
