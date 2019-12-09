@@ -152,7 +152,7 @@
     <link href="http://liuqinh2s.github.io/blog/2019/04/15/C++%20map%E7%9A%84remove%E5%87%BD%E6%95%B0%E5%AE%9E%E7%8E%B0/"/>
     <id>http://liuqinh2s.github.io/blog/2019/04/15/C++ map的remove函数实现/</id>
     <published>2019-04-14T16:00:00.000Z</published>
-    <updated>2019-12-05T23:51:51.188Z</updated>
+    <updated>2019-12-09T14:37:17.583Z</updated>
     
     <summary type="html">
     
@@ -160,8 +160,8 @@
     
     </summary>
     
+      <category term="C++" scheme="http://liuqinh2s.github.io/blog/categories/C/"/>
     
-      <category term="fixed issues" scheme="http://liuqinh2s.github.io/blog/tags/fixed-issues/"/>
     
   </entry>
   
@@ -283,7 +283,7 @@
     <link href="http://liuqinh2s.github.io/blog/2019/01/07/%E7%AC%AC%E4%B8%80%E4%B8%AA%E6%9E%81%E9%99%90%E7%9A%84%E8%AF%81%E6%98%8E/"/>
     <id>http://liuqinh2s.github.io/blog/2019/01/07/第一个极限的证明/</id>
     <published>2019-01-06T16:00:00.000Z</published>
-    <updated>2019-12-09T14:28:24.953Z</updated>
+    <updated>2019-12-09T14:36:53.682Z</updated>
     
     <summary type="html">
     
@@ -294,8 +294,6 @@
       <category term="Math" scheme="http://liuqinh2s.github.io/blog/categories/Math/"/>
     
     
-      <category term="Math" scheme="http://liuqinh2s.github.io/blog/tags/Math/"/>
-    
   </entry>
   
   <entry>
@@ -303,7 +301,7 @@
     <link href="http://liuqinh2s.github.io/blog/2018/11/04/%E7%B2%BE%E9%80%9A%E4%B8%80%E6%AC%BE%E7%BC%96%E8%BE%91%E5%99%A8%E4%B9%8Bsublime%20text%203/"/>
     <id>http://liuqinh2s.github.io/blog/2018/11/04/精通一款编辑器之sublime text 3/</id>
     <published>2018-11-03T16:00:00.000Z</published>
-    <updated>2019-12-09T14:29:11.723Z</updated>
+    <updated>2019-12-09T14:36:38.507Z</updated>
     
     <summary type="html">
     
@@ -319,8 +317,6 @@
       <category term="Tools" scheme="http://liuqinh2s.github.io/blog/categories/Tools/"/>
     
     
-      <category term="编辑器" scheme="http://liuqinh2s.github.io/blog/tags/%E7%BC%96%E8%BE%91%E5%99%A8/"/>
-    
   </entry>
   
   <entry>
@@ -328,7 +324,7 @@
     <link href="http://liuqinh2s.github.io/blog/2018/11/04/%E7%86%9F%E7%BB%83%E4%BD%BF%E7%94%A8JetBrains%E5%AE%B6%E7%9A%84IDE/"/>
     <id>http://liuqinh2s.github.io/blog/2018/11/04/熟练使用JetBrains家的IDE/</id>
     <published>2018-11-03T16:00:00.000Z</published>
-    <updated>2019-12-09T14:29:13.870Z</updated>
+    <updated>2019-12-09T14:36:43.435Z</updated>
     
     <summary type="html">
     
@@ -344,8 +340,6 @@
     
       <category term="Tools" scheme="http://liuqinh2s.github.io/blog/categories/Tools/"/>
     
-    
-      <category term="IDE" scheme="http://liuqinh2s.github.io/blog/tags/IDE/"/>
     
   </entry>
   

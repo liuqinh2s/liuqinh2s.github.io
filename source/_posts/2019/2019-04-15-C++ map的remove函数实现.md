@@ -1,6 +1,6 @@
 ---
 title: C++ map的remove函数实现
-tags: [fixed issues]
+categories: [C++]
 comments: true
 ---
 

@@ -2,7 +2,6 @@
 title: 熟练使用JetBrains家的IDE
 categories: [Tools]
 comments: true
-tags: [IDE]
 ---
 
 ## 通用快捷键
