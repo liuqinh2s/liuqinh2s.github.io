@@ -6,7 +6,7 @@
   <link href="/blog/atom.xml" rel="self"/>
   
   <link href="http://liuqinh2s.github.io/blog/"/>
-  <updated>2019-12-09T13:46:41.817Z</updated>
+  <updated>2021-05-27T06:40:57.137Z</updated>
   <id>http://liuqinh2s.github.io/blog/</id>
   
   <author>
@@ -17,11 +17,32 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>leetcode每日一题： 1190. 反转每对括号间的子串</title>
+    <link href="http://liuqinh2s.github.io/blog/2021/05/27/leetcode-1190-%E5%8F%8D%E8%BD%AC%E6%AF%8F%E5%AF%B9%E6%8B%AC%E5%8F%B7%E9%97%B4%E7%9A%84%E5%AD%90%E4%B8%B2/"/>
+    <id>http://liuqinh2s.github.io/blog/2021/05/27/leetcode-1190-反转每对括号间的子串/</id>
+    <published>2021-05-26T16:00:00.000Z</published>
+    <updated>2021-05-27T06:40:57.137Z</updated>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;写之前：&lt;br&gt;2020年整整一年没有写过博客了，沉痛的一年。&lt;br&gt;写博客还是继续下去吧，不管怎样。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&quot;1190-反转每对括号间的子串&quot;&gt;&lt;a href=&quot;#1190-反转每对括号间的子串&quot; class=&quot;headerlink&quot; title=&quot;1190. 反转每对括号间的子串&quot;&gt;&lt;/a&gt;&lt;a href=&quot;https://leetcode-cn.com/problems/reverse-substrings-between-each-pair-of-parentheses/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;1190. 反转每对括号间的子串&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;这道题一看就知道用栈来解决，但具体到怎么做却依旧不容易想通。直到看过答案后，才发现，实际上真的只需要遍历一遍就能解决问题。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="leetcode" scheme="http://liuqinh2s.github.io/blog/categories/leetcode/"/>
+    
+    
+  </entry>
+  
+  <entry>
     <title>图灵机</title>
     <link href="http://liuqinh2s.github.io/blog/2019/04/26/%E5%9B%BE%E7%81%B5%E6%9C%BA/"/>
     <id>http://liuqinh2s.github.io/blog/2019/04/26/图灵机/</id>
     <published>2019-04-25T16:00:00.000Z</published>
-    <updated>2019-12-09T13:46:41.817Z</updated>
+    <updated>2021-05-27T06:00:42.478Z</updated>
     
     <summary type="html">
     
@@ -43,7 +64,7 @@
     <link href="http://liuqinh2s.github.io/blog/2019/04/22/%E5%86%AF%C2%B7%E8%AF%BA%E4%BE%9D%E6%9B%BC%E7%BB%93%E6%9E%84/"/>
     <id>http://liuqinh2s.github.io/blog/2019/04/22/冯·诺依曼结构/</id>
     <published>2019-04-21T16:00:00.000Z</published>
-    <updated>2019-12-09T13:46:51.089Z</updated>
+    <updated>2021-05-27T06:00:42.478Z</updated>
     
     <summary type="html">
     
@@ -81,7 +102,7 @@
     <link href="http://liuqinh2s.github.io/blog/2019/04/21/%E4%BB%80%E4%B9%88%E6%98%AF%E5%AD%97%E7%AC%A6%E9%9B%86%E5%92%8C%E7%BC%96%E7%A0%81/"/>
     <id>http://liuqinh2s.github.io/blog/2019/04/21/什么是字符集和编码/</id>
     <published>2019-04-20T16:00:00.000Z</published>
-    <updated>2019-12-09T13:47:27.998Z</updated>
+    <updated>2021-05-27T06:00:42.478Z</updated>
     
     <summary type="html">
     
@@ -109,7 +130,7 @@
     <link href="http://liuqinh2s.github.io/blog/2019/04/20/%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%B8%AD%E7%9A%84%E4%BF%A1%E6%81%AF/"/>
     <id>http://liuqinh2s.github.io/blog/2019/04/20/计算机中的信息/</id>
     <published>2019-04-19T16:00:00.000Z</published>
-    <updated>2019-12-09T14:27:25.014Z</updated>
+    <updated>2021-05-27T06:00:42.477Z</updated>
     
     <summary type="html">
     
@@ -126,11 +147,29 @@
   </entry>
   
   <entry>
+    <title>C++ map的remove函数实现</title>
+    <link href="http://liuqinh2s.github.io/blog/2019/04/15/C++%20map%E7%9A%84remove%E5%87%BD%E6%95%B0%E5%AE%9E%E7%8E%B0/"/>
+    <id>http://liuqinh2s.github.io/blog/2019/04/15/C++ map的remove函数实现/</id>
+    <published>2019-04-14T16:00:00.000Z</published>
+    <updated>2021-05-27T06:00:42.477Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;今天同学群里面讨论了这样一段代码，说是产品出了bug，现场急着修复。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="C++" scheme="http://liuqinh2s.github.io/blog/categories/C/"/>
+    
+    
+  </entry>
+  
+  <entry>
     <title>hexo把英文引号渲染成中文引号的问题</title>
     <link href="http://liuqinh2s.github.io/blog/2019/04/15/hexo%E6%8A%8A%E8%8B%B1%E6%96%87%E5%BC%95%E5%8F%B7%E6%B8%B2%E6%9F%93%E6%88%90%E4%B8%AD%E6%96%87%E5%BC%95%E5%8F%B7%E7%9A%84%E9%97%AE%E9%A2%98/"/>
     <id>http://liuqinh2s.github.io/blog/2019/04/15/hexo把英文引号渲染成中文引号的问题/</id>
     <published>2019-04-14T16:00:00.000Z</published>
-    <updated>2019-12-09T14:31:40.677Z</updated>
+    <updated>2021-05-27T06:00:42.477Z</updated>
     
     <summary type="html">
     
@@ -148,29 +187,11 @@
   </entry>
   
   <entry>
-    <title>C++ map的remove函数实现</title>
-    <link href="http://liuqinh2s.github.io/blog/2019/04/15/C++%20map%E7%9A%84remove%E5%87%BD%E6%95%B0%E5%AE%9E%E7%8E%B0/"/>
-    <id>http://liuqinh2s.github.io/blog/2019/04/15/C++ map的remove函数实现/</id>
-    <published>2019-04-14T16:00:00.000Z</published>
-    <updated>2019-12-09T14:37:17.583Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;今天同学群里面讨论了这样一段代码，说是产品出了bug，现场急着修复。&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="C++" scheme="http://liuqinh2s.github.io/blog/categories/C/"/>
-    
-    
-  </entry>
-  
-  <entry>
     <title>动态数组的分摊分析</title>
     <link href="http://liuqinh2s.github.io/blog/2019/03/03/%E5%8A%A8%E6%80%81%E6%95%B0%E7%BB%84%E7%9A%84%E5%88%86%E6%91%8A%E5%88%86%E6%9E%90/"/>
     <id>http://liuqinh2s.github.io/blog/2019/03/03/动态数组的分摊分析/</id>
     <published>2019-03-02T16:00:00.000Z</published>
-    <updated>2019-12-09T14:27:55.566Z</updated>
+    <updated>2021-05-27T06:00:42.476Z</updated>
     
     <summary type="html">
     
@@ -193,7 +214,7 @@
     <link href="http://liuqinh2s.github.io/blog/2019/02/19/%E5%BF%AB%E9%80%9F%E6%8E%92%E5%BA%8F/"/>
     <id>http://liuqinh2s.github.io/blog/2019/02/19/快速排序/</id>
     <published>2019-02-18T16:00:00.000Z</published>
-    <updated>2019-12-09T14:28:01.007Z</updated>
+    <updated>2021-05-27T06:00:42.476Z</updated>
     
     <summary type="html">
     
@@ -212,7 +233,7 @@
     <link href="http://liuqinh2s.github.io/blog/2019/01/19/%E5%B9%B6%E6%9F%A5%E9%9B%86/"/>
     <id>http://liuqinh2s.github.io/blog/2019/01/19/并查集/</id>
     <published>2019-01-18T16:00:00.000Z</published>
-    <updated>2019-12-09T14:28:09.894Z</updated>
+    <updated>2021-05-27T06:00:42.475Z</updated>
     
     <summary type="html">
     
@@ -235,7 +256,7 @@
     <link href="http://liuqinh2s.github.io/blog/2019/01/17/KMP%E7%AE%97%E6%B3%95/"/>
     <id>http://liuqinh2s.github.io/blog/2019/01/17/KMP算法/</id>
     <published>2019-01-16T16:00:00.000Z</published>
-    <updated>2019-12-09T14:28:14.653Z</updated>
+    <updated>2021-05-27T06:00:42.473Z</updated>
     
     <summary type="html">
     
@@ -261,7 +282,7 @@
     <link href="http://liuqinh2s.github.io/blog/2019/01/15/%E8%93%84%E6%B0%B4%E6%B1%A0%E7%AE%97%E6%B3%95/"/>
     <id>http://liuqinh2s.github.io/blog/2019/01/15/蓄水池算法/</id>
     <published>2019-01-14T16:00:00.000Z</published>
-    <updated>2019-12-09T14:28:17.949Z</updated>
+    <updated>2021-05-27T06:00:42.472Z</updated>
     
     <summary type="html">
     
@@ -283,7 +304,7 @@
     <link href="http://liuqinh2s.github.io/blog/2019/01/07/%E7%AC%AC%E4%B8%80%E4%B8%AA%E6%9E%81%E9%99%90%E7%9A%84%E8%AF%81%E6%98%8E/"/>
     <id>http://liuqinh2s.github.io/blog/2019/01/07/第一个极限的证明/</id>
     <published>2019-01-06T16:00:00.000Z</published>
-    <updated>2019-12-09T14:36:53.682Z</updated>
+    <updated>2021-05-27T06:00:42.471Z</updated>
     
     <summary type="html">
     
@@ -297,34 +318,11 @@
   </entry>
   
   <entry>
-    <title>精通一款编辑器之sublime text 3</title>
-    <link href="http://liuqinh2s.github.io/blog/2018/11/04/%E7%B2%BE%E9%80%9A%E4%B8%80%E6%AC%BE%E7%BC%96%E8%BE%91%E5%99%A8%E4%B9%8Bsublime%20text%203/"/>
-    <id>http://liuqinh2s.github.io/blog/2018/11/04/精通一款编辑器之sublime text 3/</id>
-    <published>2018-11-03T16:00:00.000Z</published>
-    <updated>2019-12-09T14:36:38.507Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;编辑器常用功能&quot;&gt;&lt;a href=&quot;#编辑器常用功能&quot; class=&quot;headerlink&quot; title=&quot;编辑器常用功能&quot;&gt;&lt;/a&gt;编辑器常用功能&lt;/h2&gt;&lt;ol&gt;
-&lt;li&gt;格式化代码：格式化代码可以让你不用管代码的格式，可以放肆的写程序，你可以少敲很多空格，不用关心代码的格式问题，机器给出的代码格式风格统一且漂亮，一键解决你的格式问题，真是提高码代码效率的非常重要的功能。&lt;/li&gt;
-&lt;li&gt;查找文件：查找文件是在集成开发的时候非常重要的功能，当文件多起来的时候，快速定位到文件可以节省很多时间，甚至有时候文件实在太多，你只能通过查找的方式找到那个文件。&lt;/li&gt;
-&lt;li&gt;正则全文件查找和替换：轻松让你更改全局变量和配置，这是一个必须的功能，没有它简直无法想象工作量有多大。&lt;/li&gt;
-&lt;li&gt;代码收缩和扩展：代码太长怎么办，收缩和扩展啊。&lt;/li&gt;
-&lt;/ol&gt;
-    
-    </summary>
-    
-      <category term="Tools" scheme="http://liuqinh2s.github.io/blog/categories/Tools/"/>
-    
-    
-  </entry>
-  
-  <entry>
     <title>熟练使用JetBrains家的IDE</title>
     <link href="http://liuqinh2s.github.io/blog/2018/11/04/%E7%86%9F%E7%BB%83%E4%BD%BF%E7%94%A8JetBrains%E5%AE%B6%E7%9A%84IDE/"/>
     <id>http://liuqinh2s.github.io/blog/2018/11/04/熟练使用JetBrains家的IDE/</id>
     <published>2018-11-03T16:00:00.000Z</published>
-    <updated>2019-12-09T14:36:43.435Z</updated>
+    <updated>2021-05-27T06:00:42.470Z</updated>
     
     <summary type="html">
     
@@ -344,11 +342,34 @@
   </entry>
   
   <entry>
+    <title>精通一款编辑器之sublime text 3</title>
+    <link href="http://liuqinh2s.github.io/blog/2018/11/04/%E7%B2%BE%E9%80%9A%E4%B8%80%E6%AC%BE%E7%BC%96%E8%BE%91%E5%99%A8%E4%B9%8Bsublime%20text%203/"/>
+    <id>http://liuqinh2s.github.io/blog/2018/11/04/精通一款编辑器之sublime text 3/</id>
+    <published>2018-11-03T16:00:00.000Z</published>
+    <updated>2021-05-27T06:00:42.470Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;编辑器常用功能&quot;&gt;&lt;a href=&quot;#编辑器常用功能&quot; class=&quot;headerlink&quot; title=&quot;编辑器常用功能&quot;&gt;&lt;/a&gt;编辑器常用功能&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;格式化代码：格式化代码可以让你不用管代码的格式，可以放肆的写程序，你可以少敲很多空格，不用关心代码的格式问题，机器给出的代码格式风格统一且漂亮，一键解决你的格式问题，真是提高码代码效率的非常重要的功能。&lt;/li&gt;
+&lt;li&gt;查找文件：查找文件是在集成开发的时候非常重要的功能，当文件多起来的时候，快速定位到文件可以节省很多时间，甚至有时候文件实在太多，你只能通过查找的方式找到那个文件。&lt;/li&gt;
+&lt;li&gt;正则全文件查找和替换：轻松让你更改全局变量和配置，这是一个必须的功能，没有它简直无法想象工作量有多大。&lt;/li&gt;
+&lt;li&gt;代码收缩和扩展：代码太长怎么办，收缩和扩展啊。&lt;/li&gt;
+&lt;/ol&gt;
+    
+    </summary>
+    
+      <category term="Tools" scheme="http://liuqinh2s.github.io/blog/categories/Tools/"/>
+    
+    
+  </entry>
+  
+  <entry>
     <title>处理器体系结构</title>
     <link href="http://liuqinh2s.github.io/blog/2018/10/13/%E5%A4%84%E7%90%86%E5%99%A8%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84/"/>
     <id>http://liuqinh2s.github.io/blog/2018/10/13/处理器体系结构/</id>
     <published>2018-10-12T16:00:00.000Z</published>
-    <updated>2019-12-08T05:24:55.240Z</updated>
+    <updated>2021-05-27T06:00:42.469Z</updated>
     
     <summary type="html">
     
@@ -367,7 +388,7 @@
     <link href="http://liuqinh2s.github.io/blog/2018/10/08/%E7%A8%8B%E5%BA%8F%E7%9A%84%E6%9C%BA%E5%99%A8%E7%BA%A7%E8%A1%A8%E7%A4%BA/"/>
     <id>http://liuqinh2s.github.io/blog/2018/10/08/程序的机器级表示/</id>
     <published>2018-10-07T16:00:00.000Z</published>
-    <updated>2019-12-05T23:51:51.173Z</updated>
+    <updated>2021-05-27T06:00:42.468Z</updated>
     
     <summary type="html">
     
@@ -394,7 +415,7 @@
     <link href="http://liuqinh2s.github.io/blog/2018/09/27/%E6%B5%AE%E7%82%B9%E6%95%B0%E5%8E%9F%E7%90%86/"/>
     <id>http://liuqinh2s.github.io/blog/2018/09/27/浮点数原理/</id>
     <published>2018-09-26T16:00:00.000Z</published>
-    <updated>2019-12-05T23:51:51.172Z</updated>
+    <updated>2021-05-27T06:00:42.468Z</updated>
     
     <summary type="html">
     
@@ -420,7 +441,7 @@
     <link href="http://liuqinh2s.github.io/blog/2018/09/20/wsl%20oh%20my%20zsh%20%E5%AD%97%E4%BD%93%E9%97%AE%E9%A2%98/"/>
     <id>http://liuqinh2s.github.io/blog/2018/09/20/wsl oh my zsh 字体问题/</id>
     <published>2018-09-19T16:00:00.000Z</published>
-    <updated>2019-12-09T14:31:34.238Z</updated>
+    <updated>2021-05-27T06:00:42.467Z</updated>
     
     <summary type="html">
     
@@ -440,7 +461,7 @@
     <link href="http://liuqinh2s.github.io/blog/2018/09/19/wsl%E4%BF%AE%E6%94%B9%E5%8F%B3%E9%94%AEbash%E5%9B%BE%E6%A0%87/"/>
     <id>http://liuqinh2s.github.io/blog/2018/09/19/wsl修改右键bash图标/</id>
     <published>2018-09-18T16:00:00.000Z</published>
-    <updated>2019-12-09T14:31:27.735Z</updated>
+    <updated>2021-05-27T06:00:42.467Z</updated>
     
     <summary type="html">
     
@@ -450,31 +471,6 @@
     </summary>
     
       <category term="Fixed Issues" scheme="http://liuqinh2s.github.io/blog/categories/Fixed-Issues/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>mathjax常用公式记录</title>
-    <link href="http://liuqinh2s.github.io/blog/2018/04/30/mathjax%E5%B8%B8%E7%94%A8%E5%85%AC%E5%BC%8F%E8%AE%B0%E5%BD%95/"/>
-    <id>http://liuqinh2s.github.io/blog/2018/04/30/mathjax常用公式记录/</id>
-    <published>2018-04-29T16:00:00.000Z</published>
-    <updated>2019-12-09T14:29:31.563Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;角度记法&quot;&gt;&lt;a href=&quot;#角度记法&quot; class=&quot;headerlink&quot; title=&quot;角度记法&quot;&gt;&lt;/a&gt;角度记法&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;度数：&lt;code&gt;$60^\circ$&lt;/code&gt;，$60^\circ$&lt;/li&gt;
-&lt;li&gt;度数分：&lt;code&gt;$60^\prime$&lt;/code&gt;，$60^\prime$&lt;/li&gt;
-&lt;li&gt;弧度：&lt;code&gt;$\frac{\pi}{2}$&lt;/code&gt;，$\frac{\pi}{2}$&lt;/li&gt;
-&lt;li&gt;角度记法：&lt;code&gt;$\angle A$&lt;/code&gt;，$\angle A$&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&quot;三重环积分无法渲染的问题&quot;&gt;&lt;a href=&quot;#三重环积分无法渲染的问题&quot; class=&quot;headerlink&quot; title=&quot;三重环积分无法渲染的问题&quot;&gt;&lt;/a&gt;三重环积分无法渲染的问题&lt;/h2&gt;&lt;p&gt;在网上找了半天资料最终解决了，参考这个答案：&lt;a href=&quot;https://math.meta.stackexchange.com/questions/9973/how-do-you-render-a-closed-surface-double-integral&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;How do you render a closed surface double integral?&lt;/a&gt;，做法是直接使用Unicode编码：&lt;code&gt;\unicode{x222F}&lt;/code&gt;，三重环积分的编码，参考这里：&lt;a href=&quot;http://unicode-search.net/unicode-namesearch.pl?term=INTEGRAL&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;unicode-search.net&lt;/a&gt;，所以只要将&lt;code&gt;$\oiiint$&lt;/code&gt;换成&lt;code&gt;$\unicode{x2230}$&lt;/code&gt;即可正确显示三重环积分。如下：&lt;/p&gt;
-&lt;p&gt;$$\unicode{x2230}$$&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="Tools" scheme="http://liuqinh2s.github.io/blog/categories/Tools/"/>
     
     
   </entry>
