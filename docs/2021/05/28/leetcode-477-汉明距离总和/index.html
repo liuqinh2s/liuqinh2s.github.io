@@ -81,17 +81,17 @@
 
 
 
-<meta name="description" content="介绍动态数组在每次容量用尽时，重新申请2倍于当前数组的空间，并将原数组中的内容拷贝到新的空间，然后释放原数组的内存空间。对于动态数组，每次插入的花费有两种情况：  容量够用，我们只需要存储新的元素 容量不够用，创建新的空间，拷贝原数组进新的空间，再存储这个新的元素  分析方法有许多，统称为：amortized analysis（分摊分析）">
+<meta name="description" content="leetcode每日一题是leetcode中文版官方推出的活动，每日一题锻炼解决问题的思维能力。  477. 汉明距离总和这题初看上去特别简单，就是一个O(n^2)的遍历（组合），对每一组求汉明距离累加起来。不过我一开始就觉得可能会超时，提交后果然超时了。更优的做法是按位遍历，每一位上所有的数要么是0要么是1，把0和1的个数统计出来，相乘，就是这一位的汉明距离总和。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="动态数组的分摊分析">
-<meta property="og:url" content="http://liuqinh2s.github.io/blog/2019/03/03/动态数组的分摊分析/index.html">
+<meta property="og:title" content="leetcode每日一题： 477. 汉明距离总和">
+<meta property="og:url" content="http://liuqinh2s.github.io/blog/2021/05/28/leetcode-477-汉明距离总和/index.html">
 <meta property="og:site_name" content="liuqinh2s&#39; blog">
-<meta property="og:description" content="介绍动态数组在每次容量用尽时，重新申请2倍于当前数组的空间，并将原数组中的内容拷贝到新的空间，然后释放原数组的内存空间。对于动态数组，每次插入的花费有两种情况：  容量够用，我们只需要存储新的元素 容量不够用，创建新的空间，拷贝原数组进新的空间，再存储这个新的元素  分析方法有许多，统称为：amortized analysis（分摊分析）">
+<meta property="og:description" content="leetcode每日一题是leetcode中文版官方推出的活动，每日一题锻炼解决问题的思维能力。  477. 汉明距离总和这题初看上去特别简单，就是一个O(n^2)的遍历（组合），对每一组求汉明距离累加起来。不过我一开始就觉得可能会超时，提交后果然超时了。更优的做法是按位遍历，每一位上所有的数要么是0要么是1，把0和1的个数统计出来，相乘，就是这一位的汉明距离总和。">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2021-05-27T06:00:42.476Z">
+<meta property="og:updated_time" content="2021-05-28T06:01:58.800Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="动态数组的分摊分析">
-<meta name="twitter:description" content="介绍动态数组在每次容量用尽时，重新申请2倍于当前数组的空间，并将原数组中的内容拷贝到新的空间，然后释放原数组的内存空间。对于动态数组，每次插入的花费有两种情况：  容量够用，我们只需要存储新的元素 容量不够用，创建新的空间，拷贝原数组进新的空间，再存储这个新的元素  分析方法有许多，统称为：amortized analysis（分摊分析）">
+<meta name="twitter:title" content="leetcode每日一题： 477. 汉明距离总和">
+<meta name="twitter:description" content="leetcode每日一题是leetcode中文版官方推出的活动，每日一题锻炼解决问题的思维能力。  477. 汉明距离总和这题初看上去特别简单，就是一个O(n^2)的遍历（组合），对每一组求汉明距离累加起来。不过我一开始就觉得可能会超时，提交后果然超时了。更优的做法是按位遍历，每一位上所有的数要么是0要么是1，把0和1的个数统计出来，相乘，就是这一位的汉明距离总和。">
 
 
 
@@ -121,13 +121,13 @@
 
 
 
-  <link rel="canonical" href="http://liuqinh2s.github.io/blog/2019/03/03/动态数组的分摊分析/">
+  <link rel="canonical" href="http://liuqinh2s.github.io/blog/2021/05/28/leetcode-477-汉明距离总和/">
 
 
 
 
 
-  <title>动态数组的分摊分析 | liuqinh2s' blog</title>
+  <title>leetcode每日一题： 477. 汉明距离总和 | liuqinh2s' blog</title>
   
 
 
@@ -276,7 +276,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://liuqinh2s.github.io/blog/blog/2019/03/03/动态数组的分摊分析/">
+    <link itemprop="mainEntityOfPage" href="http://liuqinh2s.github.io/blog/blog/2021/05/28/leetcode-477-汉明距离总和/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="liuqinh2s">
@@ -293,7 +293,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">动态数组的分摊分析</h1>
+          <h1 class="post-title" itemprop="name headline">leetcode每日一题： 477. 汉明距离总和</h1>
         
 
         <div class="post-meta">
@@ -305,8 +305,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-03-03T00:00:00+08:00">
-                2019-03-03
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2021-05-28T00:00:00+08:00">
+                2021-05-28
               </time>
             
 
@@ -328,8 +328,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/blog/categories/Algorithm/" itemprop="url" rel="index">
-                    <span itemprop="name">Algorithm</span>
+                  <a href="/blog/categories/leetcode/" itemprop="url" rel="index">
+                    <span itemprop="name">leetcode</span>
                   </a>
                 </span>
 
@@ -364,7 +364,7 @@
                   <span class="post-meta-item-text">Words count in article&#58;</span>
                 
                 <span title="Words count in article">
-                  965
+                  237
                 </span>
               
 
@@ -389,49 +389,13 @@
       
 
       
-        <h2 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h2><p>动态数组在每次容量用尽时，重新申请2倍于当前数组的空间，并将原数组中的内容拷贝到新的空间，然后释放原数组的内存空间。对于动态数组，每次插入的花费有两种情况：</p>
-<ol>
-<li>容量够用，我们只需要存储新的元素</li>
-<li>容量不够用，创建新的空间，拷贝原数组进新的空间，再存储这个新的元素</li>
-</ol>
-<p>分析方法有许多，统称为：amortized analysis（分摊分析）</p>
+        <blockquote>
+<p>leetcode每日一题是leetcode中文版官方推出的活动，每日一题锻炼解决问题的思维能力。</p>
+</blockquote>
+<h2 id="477-汉明距离总和"><a href="#477-汉明距离总和" class="headerlink" title="477. 汉明距离总和"></a><a href="https://leetcode-cn.com/problems/total-hamming-distance/" target="_blank" rel="noopener">477. 汉明距离总和</a></h2><p>这题初看上去特别简单，就是一个O(n^2)的遍历（组合），对每一组求汉明距离累加起来。不过我一开始就觉得可能会超时，提交后果然超时了。更优的做法是按位遍历，每一位上所有的数要么是0要么是1，把0和1的个数统计出来，相乘，就是这一位的汉明距离总和。</p>
 <a id="more"></a>
-<p><a href="https://www.cs.cornell.edu/courses/cs3110/2013sp/lectures/lec21-amortized/lec21.html" target="_blank" rel="noopener">Lecture 21: Amortized Analysis</a></p>
-<h3 id="统计分析（aggregate-method）"><a href="#统计分析（aggregate-method）" class="headerlink" title="统计分析（aggregate method）"></a>统计分析（aggregate method）</h3><p>把n词操作花费求和，然后取平均值。</p>
-<p>每次扩容时，后半部分元素统一进行第一次移动，而这些元素之后的所有移动操作也是一起发生的，因而我们发现元素是以组为单位，组内的元素移动次数相同。那么有多少个这种组呢？第一组是单个元素，第二组也是单个元素，第三组是两个元素，第四组是四个元素，第五组是8个元素，... ，以此类推。而：</p>
-<p>$$<br>1 + 1 + 2+ 2^2 + \cdots + 2^i = n<br>$$</p>
-<p>$$<br>i = \log_2 n -1<br>$$</p>
-<p>而这些组的移动次数分别是多少呢？最后一组元素只移动一次，倒数第二组元素移动2次，以此类推。所以总的移动次数是：</p>
-<p>$$<br>1\times 2^i+2\times 2^{i-1}+3\times 2^{i-2}+\cdots+k\times 1<br>$$</p>
-<p>$$<br>k = \log_2n + 1<br>$$</p>
-<p>这个式子挺有规律的，我们可以将其分为很多个组，第一组是：</p>
-<p>$$<br>1 + 1 + 2+ 2^2 + \cdots + 2^i = n<br>$$</p>
-<p>第二组是：</p>
-<p>$$<br>1 + 1 + 2+ 2^2 + \cdots + 2^{i-1} = \frac{n}{2}<br>$$</p>
-<p>以此类推。</p>
-<p>于是我们得到上式的等价表示：</p>
-<p>$$<br>n + \frac{n}{2} + \cdots + 1 = 2n-1<br>$$</p>
-<p>所以移动的平均次数是：$\frac{2n-1}{n}$，也就是每个元素最多移动2次，加上插入操作，最多三个操作。</p>
-<h3 id="银行算法（banker-method）"><a href="#银行算法（banker-method）" class="headerlink" title="银行算法（banker method）"></a>银行算法（banker method）</h3><p>对动态数组的插入来说，大部分（后半部分）插入操作是不需要重新分配内存的，是廉价的操作。而少部分操作是需要重新分配内存的，是复杂的操作。我们可以试着想象在每次廉价操作的时候存储额外的费用，相当于存款，来支付复杂操作的费用。</p>
-<p>我们假设一次基本的操作费用是一个硬币，当我们插入了一个下标为n的元素时：</p>
-<ol>
-<li>我们要花费第一个硬币，作为基本的插入操作花费</li>
-<li>我们还要存储第二个硬币，作为新插入的n在重新分配内存时移动它的费用</li>
-<li>最后我们要存储第三个硬币，作为数组的前半部分的某个对应元素重新分配内存时移动费用</li>
-</ol>
-<p>这样来计算，每个插入操作最多需要付出三个硬币，而第一个元素是不需要第三个硬币的。所以费用总数是：3n-1。</p>
-<h3 id="势能算法（Potential-Method）"><a href="#势能算法（Potential-Method）" class="headerlink" title="势能算法（Potential Method）"></a>势能算法（Potential Method）</h3><p>首先说明一下，目前我对这个方法还是无法直观的理解。先祭出这个势能函数：</p>
-<p>$$<br>\Phi(h) = 2n-m<br>$$</p>
-<p>其中n是当前数组元素的个数，m是当前数组内存空间大小。</p>
-<p>每次插入的费用函数定义为：</p>
-<p>$$<br>c+\Phi(h&#39;)-\Phi(h)<br>$$</p>
-<p>c表示当前插入操作的总的花费，$\Phi(h&#39;)$是插入后的势能函数，$\Phi(h)$是插入前的势能函数。</p>
-<p>这里分为两种情况：</p>
-<ol>
-<li>如果<code>n&lt;m</code>，不必扩容，c=1，势能函数相差2，所以加起来是3</li>
-<li>如果<code>n=m</code>，那么就要扩容，c=n+1，$\Phi(h&#39;)=2(n+1)-2n$，$\Phi(h)=2n-n$，加起来还是3</li>
-</ol>
-<p>所以费用函数其实是一个等于3的常数函数。</p>
+<p>JavaScript代码：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * @param &#123;number[]&#125; nums</span></span><br><span class="line"><span class="comment"> * @return &#123;number&#125;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">var</span> totalHammingDistance = <span class="function"><span class="keyword">function</span>(<span class="params">nums</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">let</span> max = <span class="built_in">Math</span>.max(...nums)</span><br><span class="line">    <span class="keyword">let</span> count=<span class="number">0</span>;</span><br><span class="line">    <span class="keyword">while</span>(max&gt;<span class="number">0</span>)&#123;</span><br><span class="line">        count++;</span><br><span class="line">        max&gt;&gt;=<span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">let</span> res = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">let</span> i=<span class="number">0</span>;i&lt;count;i++)&#123;</span><br><span class="line">        <span class="keyword">let</span> zero = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">let</span> one = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">let</span> j=<span class="number">0</span>;j&lt;nums.length;j++)&#123;</span><br><span class="line">            <span class="keyword">let</span> temp = nums[j]&gt;&gt;i;</span><br><span class="line">            <span class="keyword">if</span>(temp%<span class="number">2</span>)&#123;</span><br><span class="line">                one++;</span><br><span class="line">            &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">                zero++;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        res += zero*one;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> res;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -456,8 +420,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/blog/2019/02/19/快速排序/" rel="next" title="快速排序">
-                <i class="fa fa-chevron-left"></i> 快速排序
+              <a href="/blog/2021/05/27/leetcode-1190-反转每对括号间的子串/" rel="next" title="leetcode每日一题： 1190. 反转每对括号间的子串">
+                <i class="fa fa-chevron-left"></i> leetcode每日一题： 1190. 反转每对括号间的子串
               </a>
             
           </div>
@@ -465,10 +429,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/blog/2019/04/15/hexo把英文引号渲染成中文引号的问题/" rel="prev" title="hexo把英文引号渲染成中文引号的问题">
-                hexo把英文引号渲染成中文引号的问题 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -637,7 +597,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#介绍"><span class="nav-number">1.</span> <span class="nav-text">介绍</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#统计分析（aggregate-method）"><span class="nav-number">1.1.</span> <span class="nav-text">统计分析（aggregate method）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#银行算法（banker-method）"><span class="nav-number">1.2.</span> <span class="nav-text">银行算法（banker method）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#势能算法（Potential-Method）"><span class="nav-number">1.3.</span> <span class="nav-text">势能算法（Potential Method）</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#477-汉明距离总和"><span class="nav-number">1.</span> <span class="nav-text">477. 汉明距离总和</span></a></li></ol></div>
             
 
           </div>

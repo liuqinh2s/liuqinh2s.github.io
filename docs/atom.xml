@@ -6,7 +6,7 @@
   <link href="/blog/atom.xml" rel="self"/>
   
   <link href="http://liuqinh2s.github.io/blog/"/>
-  <updated>2021-05-27T06:40:57.137Z</updated>
+  <updated>2021-05-28T06:01:58.800Z</updated>
   <id>http://liuqinh2s.github.io/blog/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>leetcode每日一题： 477. 汉明距离总和</title>
+    <link href="http://liuqinh2s.github.io/blog/2021/05/28/leetcode-477-%E6%B1%89%E6%98%8E%E8%B7%9D%E7%A6%BB%E6%80%BB%E5%92%8C/"/>
+    <id>http://liuqinh2s.github.io/blog/2021/05/28/leetcode-477-汉明距离总和/</id>
+    <published>2021-05-27T16:00:00.000Z</published>
+    <updated>2021-05-28T06:01:58.800Z</updated>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;leetcode每日一题是leetcode中文版官方推出的活动，每日一题锻炼解决问题的思维能力。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&quot;477-汉明距离总和&quot;&gt;&lt;a href=&quot;#477-汉明距离总和&quot; class=&quot;headerlink&quot; title=&quot;477. 汉明距离总和&quot;&gt;&lt;/a&gt;&lt;a href=&quot;https://leetcode-cn.com/problems/total-hamming-distance/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;477. 汉明距离总和&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;这题初看上去特别简单，就是一个O(n^2)的遍历（组合），对每一组求汉明距离累加起来。不过我一开始就觉得可能会超时，提交后果然超时了。更优的做法是按位遍历，每一位上所有的数要么是0要么是1，把0和1的个数统计出来，相乘，就是这一位的汉明距离总和。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="leetcode" scheme="http://liuqinh2s.github.io/blog/categories/leetcode/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>leetcode每日一题： 1190. 反转每对括号间的子串</title>
@@ -448,25 +469,6 @@
       &lt;h2 id=&quot;安装-oh-my-zsh&quot;&gt;&lt;a href=&quot;#安装-oh-my-zsh&quot; class=&quot;headerlink&quot; title=&quot;安装 oh my zsh&quot;&gt;&lt;/a&gt;安装 oh my zsh&lt;/h2&gt;&lt;p&gt;首先检查自己有没有zsh：&lt;/p&gt;
 &lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;cat /etc/shells&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;p&gt;如果有的话就下载&lt;a href=&quot;https://github.com/robbyrussell/oh-my-zsh&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;oh my zsh&lt;/a&gt;&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="Fixed Issues" scheme="http://liuqinh2s.github.io/blog/categories/Fixed-Issues/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>wsl修改右键bash图标</title>
-    <link href="http://liuqinh2s.github.io/blog/2018/09/19/wsl%E4%BF%AE%E6%94%B9%E5%8F%B3%E9%94%AEbash%E5%9B%BE%E6%A0%87/"/>
-    <id>http://liuqinh2s.github.io/blog/2018/09/19/wsl修改右键bash图标/</id>
-    <published>2018-09-18T16:00:00.000Z</published>
-    <updated>2021-05-27T06:00:42.467Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;使用 windows subsystem for linux (简称：WSL) 的时候，遇到一个小问题，在文件管理器中右键，唤出bash，发现图标不对：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://i.loli.net/2018/09/19/5ba25208ca7de.png&quot; alt=&quot;截图1&quot;&gt;&lt;/p&gt;
     
     </summary>
     
