@@ -6,7 +6,7 @@
   <link href="/blog/atom.xml" rel="self"/>
   
   <link href="http://liuqinh2s.github.io/blog/"/>
-  <updated>2021-05-28T06:01:58.800Z</updated>
+  <updated>2021-05-29T06:09:56.796Z</updated>
   <id>http://liuqinh2s.github.io/blog/</id>
   
   <author>
@@ -15,6 +15,49 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>leetcode： 560. 和为K的子数组</title>
+    <link href="http://liuqinh2s.github.io/blog/2021/05/29/leetcode-560-%E5%92%8C%E4%B8%BAK%E7%9A%84%E5%AD%90%E6%95%B0%E7%BB%84/"/>
+    <id>http://liuqinh2s.github.io/blog/2021/05/29/leetcode-560-和为K的子数组/</id>
+    <published>2021-05-28T16:00:00.000Z</published>
+    <updated>2021-05-29T06:09:56.796Z</updated>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;这题是在做每日一题中遇到的问题的子问题：&lt;a href=&quot;https://leetcode-cn.com/problems/number-of-submatrices-that-sum-to-target/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;1074. 元素和为目标值的子矩阵数量&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&quot;560-和为K的子数组&quot;&gt;&lt;a href=&quot;#560-和为K的子数组&quot; class=&quot;headerlink&quot; title=&quot;560. 和为K的子数组&quot;&gt;&lt;/a&gt;&lt;a href=&quot;https://leetcode-cn.com/problems/subarray-sum-equals-k/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;560. 和为K的子数组&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;遇到这类问题，首先想的是复杂度，然后复杂度天然是跟问题规模有关的。遍历一遍肯定是必要的，当我们遍历到第n这个位置，我们怎么判断从0到n中有多少个解，进一步的，我们还只要增量数据，n-1的解不应该去重复计算。第n这个位置上的数是一定要考虑进去的，所以我们从后往前寻找。具体代码如下：&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="leetcode" scheme="http://liuqinh2s.github.io/blog/categories/leetcode/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>leetcode： 1074. 元素和为目标值的子矩阵数量</title>
+    <link href="http://liuqinh2s.github.io/blog/2021/05/29/leetcode-1074-%E5%85%83%E7%B4%A0%E5%92%8C%E4%B8%BA%E7%9B%AE%E6%A0%87%E5%80%BC%E7%9A%84%E5%AD%90%E7%9F%A9%E9%98%B5%E6%95%B0%E9%87%8F/"/>
+    <id>http://liuqinh2s.github.io/blog/2021/05/29/leetcode-1074-元素和为目标值的子矩阵数量/</id>
+    <published>2021-05-28T16:00:00.000Z</published>
+    <updated>2021-05-29T08:12:59.800Z</updated>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;这个问题需要拆分出子问题才好解决，要不然没有思路。它的子问题是：&lt;a href=&quot;https://leetcode-cn.com/problems/subarray-sum-equals-k/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;560. 和为K的子数组&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&quot;1074-元素和为目标值的子矩阵数量&quot;&gt;&lt;a href=&quot;#1074-元素和为目标值的子矩阵数量&quot; class=&quot;headerlink&quot; title=&quot;1074. 元素和为目标值的子矩阵数量&quot;&gt;&lt;/a&gt;&lt;a href=&quot;https://leetcode-cn.com/problems/number-of-submatrices-that-sum-to-target/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;1074. 元素和为目标值的子矩阵数量&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;当你理解了子问题之后，我们来想想，怎么把这个问题转换到子问题上呢？也就是如何把二维问题变一维问题呢？&lt;/p&gt;
+&lt;p&gt;我们想象把一个矩阵的列上的元素全部加起来，不就是一个一维数组了吗。这个一维数组可以等效的应用在这个问题上。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="leetcode" scheme="http://liuqinh2s.github.io/blog/categories/leetcode/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>leetcode每日一题： 477. 汉明距离总和</title>
@@ -29,6 +72,31 @@
 &lt;p&gt;leetcode每日一题是leetcode中文版官方推出的活动，每日一题锻炼解决问题的思维能力。&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;h2 id=&quot;477-汉明距离总和&quot;&gt;&lt;a href=&quot;#477-汉明距离总和&quot; class=&quot;headerlink&quot; title=&quot;477. 汉明距离总和&quot;&gt;&lt;/a&gt;&lt;a href=&quot;https://leetcode-cn.com/problems/total-hamming-distance/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;477. 汉明距离总和&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;这题初看上去特别简单，就是一个O(n^2)的遍历（组合），对每一组求汉明距离累加起来。不过我一开始就觉得可能会超时，提交后果然超时了。更优的做法是按位遍历，每一位上所有的数要么是0要么是1，把0和1的个数统计出来，相乘，就是这一位的汉明距离总和。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="leetcode" scheme="http://liuqinh2s.github.io/blog/categories/leetcode/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>position sticky</title>
+    <link href="http://liuqinh2s.github.io/blog/2021/05/28/position-sticky/"/>
+    <id>http://liuqinh2s.github.io/blog/2021/05/28/position-sticky/</id>
+    <published>2021-05-27T16:00:00.000Z</published>
+    <updated>2021-05-29T06:11:11.561Z</updated>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;在做公司项目的过程中遇到一个问题：让表头固定，同时其宽度必须占满整个父元素。用fixed，可以固定但是宽度无法撑开。最终用&lt;code&gt;position: sticky&lt;/code&gt;解决了问题。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;参考资料：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.zhangxinxu.com/wordpress/2018/12/css-position-sticky/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;杀了个回马枪，还是说说position:sticky吧« 张鑫旭-鑫空间-鑫生活&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://developer.mozilla.org/zh-CN/docs/Web/CSS/position&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;position - CSS（层叠样式表） | MDN&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
     
     </summary>
     
@@ -400,79 +468,6 @@
     </summary>
     
       <category term="Knowledge of CS" scheme="http://liuqinh2s.github.io/blog/categories/Knowledge-of-CS/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>程序的机器级表示</title>
-    <link href="http://liuqinh2s.github.io/blog/2018/10/08/%E7%A8%8B%E5%BA%8F%E7%9A%84%E6%9C%BA%E5%99%A8%E7%BA%A7%E8%A1%A8%E7%A4%BA/"/>
-    <id>http://liuqinh2s.github.io/blog/2018/10/08/程序的机器级表示/</id>
-    <published>2018-10-07T16:00:00.000Z</published>
-    <updated>2021-05-27T06:00:42.468Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;从编译C语言文件说起&quot;&gt;&lt;a href=&quot;#从编译C语言文件说起&quot; class=&quot;headerlink&quot; title=&quot;从编译C语言文件说起&quot;&gt;&lt;/a&gt;从编译C语言文件说起&lt;/h2&gt;&lt;figure class=&quot;highlight c&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ gcc &lt;span class=&quot;number&quot;&gt;-01&lt;/span&gt; -o p p1.c p2.c&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;使用了gcc命令来编译，也可以简单写作：&lt;code&gt;cc&lt;/code&gt;。&lt;/p&gt;
-&lt;p&gt;优化层级为1，1级是最低的，层级越高程序优化越好，但增加了编译时间，也使调试变得更难，且跟源程序差异很大不便于理解。&lt;/p&gt;
-&lt;p&gt;编译的流程是：&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;预处理器（preprocessor）把诸如：&lt;code&gt;#include&lt;/code&gt;、&lt;code&gt;#define&lt;/code&gt;、&lt;code&gt;#if&lt;/code&gt;、&lt;code&gt;#else&lt;/code&gt;、&lt;code&gt;#elif&lt;/code&gt;、&lt;code&gt;#ifdef&lt;/code&gt;、&lt;code&gt;#endif&lt;/code&gt;等预编译指令替换掉。&lt;/li&gt;
-&lt;li&gt;编译器（compiler）把&lt;code&gt;.c&lt;/code&gt;源文件编译成&lt;code&gt;.s&lt;/code&gt;的汇编代码文件。&lt;/li&gt;
-&lt;li&gt;汇编器（assembler）把汇编代码文件转换成相应的二进制目标文件&lt;code&gt;.o&lt;/code&gt;，目标文件已经是机器码了，只是没有填入全局变量的地址。&lt;/li&gt;
-&lt;li&gt;链接器（linker），把多目标文件和库函数链接在一起，形成可执行文件。&lt;/li&gt;
-&lt;/ol&gt;
-    
-    </summary>
-    
-      <category term="Knowledge of CS" scheme="http://liuqinh2s.github.io/blog/categories/Knowledge-of-CS/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>浮点数原理</title>
-    <link href="http://liuqinh2s.github.io/blog/2018/09/27/%E6%B5%AE%E7%82%B9%E6%95%B0%E5%8E%9F%E7%90%86/"/>
-    <id>http://liuqinh2s.github.io/blog/2018/09/27/浮点数原理/</id>
-    <published>2018-09-26T16:00:00.000Z</published>
-    <updated>2021-05-27T06:00:42.468Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;strong&gt;浮点数的作用&lt;/strong&gt;：区别于整形数，用来表示小数。可以用来表示很大的数，或者非常接近0的小数，或者近似的做实数计算，浮点数的一般形式：$x\times 2^y$。&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;&lt;strong&gt;IEEE（pronounced “Eye-Triple-Eee”）浮点数标准&lt;/strong&gt; 是行业内公认的标准。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;&lt;strong&gt;rounding&lt;/strong&gt;：when a number cannot be represented exactly in the format and hence must be adjusted upward or downward。可以翻译为：&lt;strong&gt;舍入&lt;/strong&gt;。&lt;/p&gt;
-&lt;p&gt;十进制的小数表示：$d_m d_{m-1} \cdots d_1 d_0 . d_{-1} d_{-2} \cdots d_{-n}$，写成数学表达式：&lt;/p&gt;
-&lt;p&gt;$$&lt;br&gt;d = \sum_{i=-n}^m 10^i \times d_i&lt;br&gt;$$&lt;/p&gt;
-&lt;p&gt;相应的，二进制也可以写成这种形式：&lt;/p&gt;
-&lt;p&gt;$$&lt;br&gt;b = \sum_{i=-n}^m 2^i \times b_i&lt;br&gt;$$&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="Knowledge of CS" scheme="http://liuqinh2s.github.io/blog/categories/Knowledge-of-CS/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>wsl oh my zsh 字符乱码问题</title>
-    <link href="http://liuqinh2s.github.io/blog/2018/09/20/wsl%20oh%20my%20zsh%20%E5%AD%97%E4%BD%93%E9%97%AE%E9%A2%98/"/>
-    <id>http://liuqinh2s.github.io/blog/2018/09/20/wsl oh my zsh 字体问题/</id>
-    <published>2018-09-19T16:00:00.000Z</published>
-    <updated>2021-05-27T06:00:42.467Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;安装-oh-my-zsh&quot;&gt;&lt;a href=&quot;#安装-oh-my-zsh&quot; class=&quot;headerlink&quot; title=&quot;安装 oh my zsh&quot;&gt;&lt;/a&gt;安装 oh my zsh&lt;/h2&gt;&lt;p&gt;首先检查自己有没有zsh：&lt;/p&gt;
-&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;cat /etc/shells&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;如果有的话就下载&lt;a href=&quot;https://github.com/robbyrussell/oh-my-zsh&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;oh my zsh&lt;/a&gt;&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="Fixed Issues" scheme="http://liuqinh2s.github.io/blog/categories/Fixed-Issues/"/>
     
     
   </entry>
