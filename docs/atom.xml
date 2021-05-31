@@ -6,7 +6,7 @@
   <link href="/blog/atom.xml" rel="self"/>
   
   <link href="http://liuqinh2s.github.io/blog/"/>
-  <updated>2021-05-29T06:09:56.796Z</updated>
+  <updated>2021-05-31T05:54:27.123Z</updated>
   <id>http://liuqinh2s.github.io/blog/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>leetcode每日一题： 342. 4的幂</title>
+    <link href="http://liuqinh2s.github.io/blog/2021/05/31/leetcode-342-4%E7%9A%84%E5%B9%82/"/>
+    <id>http://liuqinh2s.github.io/blog/2021/05/31/leetcode-342-4的幂/</id>
+    <published>2021-05-30T16:00:00.000Z</published>
+    <updated>2021-05-31T05:54:27.123Z</updated>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;这个问题看起来是个简单题，其实可以从中学到位运算和一些数学知识。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&quot;342-4的幂&quot;&gt;&lt;a href=&quot;#342-4的幂&quot; class=&quot;headerlink&quot; title=&quot;342. 4的幂&quot;&gt;&lt;/a&gt;&lt;a href=&quot;https://leetcode-cn.com/problems/power-of-four/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;342. 4的幂&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;我自己的解法很简单易懂，但是不够高效：&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="leetcode" scheme="http://liuqinh2s.github.io/blog/categories/leetcode/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>leetcode： 560. 和为K的子数组</title>
@@ -449,25 +470,6 @@
     </summary>
     
       <category term="Tools" scheme="http://liuqinh2s.github.io/blog/categories/Tools/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>处理器体系结构</title>
-    <link href="http://liuqinh2s.github.io/blog/2018/10/13/%E5%A4%84%E7%90%86%E5%99%A8%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84/"/>
-    <id>http://liuqinh2s.github.io/blog/2018/10/13/处理器体系结构/</id>
-    <published>2018-10-12T16:00:00.000Z</published>
-    <updated>2021-05-27T06:00:42.469Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;阅读这篇文章必须要对汇编码有足够的了解，如果你对IA32汇编码还不够了解，可以先看看这篇文章：&lt;a href=&quot;../../08/程序的机器级表示&quot;&gt;程序的机器级表示&lt;/a&gt;&lt;/p&gt;
-&lt;h2 id=&quot;Y86指令集体系结构&quot;&gt;&lt;a href=&quot;#Y86指令集体系结构&quot; class=&quot;headerlink&quot; title=&quot;Y86指令集体系结构&quot;&gt;&lt;/a&gt;Y86指令集体系结构&lt;/h2&gt;&lt;p&gt;Y86指令集基本上是IA32指令集的一个子集。这个指令集就是我们处理器实现的目标。如下图：&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="Knowledge of CS" scheme="http://liuqinh2s.github.io/blog/categories/Knowledge-of-CS/"/>
     
     
   </entry>
