@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[leetcode每日一题：525. 连续数组]]></title>
+    <url>%2Fblog%2F2021%2F06%2F03%2Fleetcode-525-%E8%BF%9E%E7%BB%AD%E6%95%B0%E7%BB%84%2F</url>
+    <content type="text"><![CDATA[凡是涉及到连续子数组的，都可以用前缀和+哈希表来解 525. 连续数组这题要注意的就是，因为要统计元素个数，所以要使用i+1。 哈希表的key的含义是：当前遍历到的1与符合标准（一半是1）之间的差距，而记录的位置则必须是最小位置。所以只在初始化的时候赋值。 JavaScript代码： 123456789101112131415161718192021222324/** * @param &#123;number[]&#125; nums * @return &#123;number&#125; */var findMaxLength = function(nums) &#123; let sum = 0; let hashmap = &#123;&#125; let max = 0; for(let i=0;i&lt;nums.length;i++)&#123; sum += nums[i]; if(i+1==sum*2)&#123; max = i+1; continue; &#125; if(hashmap.hasOwnProperty(i+1-sum*2))&#123; if(max&lt;(i-hashmap[i+1-sum*2]))&#123; max = (i-hashmap[i+1-sum*2]) &#125; &#125;else&#123; hashmap[i+1-sum*2] = i; &#125; &#125; return max;&#125;;]]></content>
+      <categories>
+        <category>leetcode</category>
+      </categories>
+  </entry>
+  <entry>
     <title><![CDATA[leetcode每日一题： 342. 4的幂]]></title>
     <url>%2Fblog%2F2021%2F05%2F31%2Fleetcode-342-4%E7%9A%84%E5%B9%82%2F</url>
     <content type="text"><![CDATA[这个问题看起来是个简单题，其实可以从中学到位运算和一些数学知识。 342. 4的幂我自己的解法很简单易懂，但是不够高效： JavaScript代码： 1234567891011121314/** * @param &#123;number&#125; n * @return &#123;boolean&#125; */var isPowerOfFour = function(n) &#123; let i = 1; while(i&lt;n)&#123; i = i*4; &#125; if(i==n)&#123; return true; &#125; return false;&#125;; 这个解法的效率很差，只战胜了55%的选手。说明肯定有更优解，我翻了一下答案。主要是2种角度的解法： 位运算 数学 位运算如果是2的幂，那么位中只能出现一个1。如果是4的，那么肯定也只有一个1，且出现的位置是每隔一位出现。那么问题来了，怎么判断位上只有一个1呢？操作是：减去1，然后与。得到的结果必然应该是0。那如何判断1在哪一位上呢？好像只能遍历了。但其实我们不需要知道具体是哪一位，只需要知道是否分布在正确的位上，可以通过mask解决：mask=$(01010101010101010101010101010101)_2$，因为1分布在奇数位。也可以写成更简短的16进制形式：mask=$(55555555)_16$ JavaScript代码： 1234567/** * @param &#123;number&#125; n * @return &#123;boolean&#125; */var isPowerOfFour = function(n) &#123; return n&gt;0 &amp;&amp; (n &amp; (n-1)) == 0 &amp;&amp; (n &amp; 0x55555555)&#125;; 奇怪的是这个代码的运行时间居然比上面那个还长，感觉不科学。 数学角度首先依然是按照上面的两个条件： n&gt;0 n只有一个0 我们观察到所有偶数分为：$4^x \times 2 \times 2$也就是$4^x$，和$4^x \times 2 \times 1$。而4的幂次除以3的余数必然是1，而$4^x \times 2$这种除以3的余数必然是2。 我们增加这个条件筛选出$4^x$ JavaScript代码： 1234567/** * @param &#123;number&#125; n * @return &#123;boolean&#125; */var isPowerOfFour = function(n) &#123; return n&gt;0 &amp;&amp; (n &amp; (n-1)) == 0 &amp;&amp; (n % 3)==1&#125;;]]></content>

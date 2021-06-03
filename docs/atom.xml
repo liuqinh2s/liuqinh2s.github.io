@@ -6,7 +6,7 @@
   <link href="/blog/atom.xml" rel="self"/>
   
   <link href="http://liuqinh2s.github.io/blog/"/>
-  <updated>2021-05-31T05:54:27.123Z</updated>
+  <updated>2021-06-03T02:50:49.723Z</updated>
   <id>http://liuqinh2s.github.io/blog/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>leetcode每日一题：525. 连续数组</title>
+    <link href="http://liuqinh2s.github.io/blog/2021/06/03/leetcode-525-%E8%BF%9E%E7%BB%AD%E6%95%B0%E7%BB%84/"/>
+    <id>http://liuqinh2s.github.io/blog/2021/06/03/leetcode-525-连续数组/</id>
+    <published>2021-06-02T16:00:00.000Z</published>
+    <updated>2021-06-03T02:50:49.723Z</updated>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;凡是涉及到连续子数组的，都可以用前缀和+哈希表来解&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&quot;525-连续数组&quot;&gt;&lt;a href=&quot;#525-连续数组&quot; class=&quot;headerlink&quot; title=&quot;525. 连续数组&quot;&gt;&lt;/a&gt;&lt;a href=&quot;https://leetcode-cn.com/problems/contiguous-array/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;525. 连续数组&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;这题要注意的就是，因为要统计元素个数，所以要使用i+1。&lt;/p&gt;
+&lt;p&gt;哈希表的key的含义是：当前遍历到的1与符合标准（一半是1）之间的差距，而记录的位置则必须是最小位置。所以只在初始化的时候赋值。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="leetcode" scheme="http://liuqinh2s.github.io/blog/categories/leetcode/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>leetcode每日一题： 342. 4的幂</title>
@@ -442,29 +464,6 @@
 &lt;li&gt;善用代码自动补全功能，变量名和方法名等可以用 enter 补全。导入包可以用 alt + enter。&lt;/li&gt;
 &lt;li&gt;上下移动代码，ctrl+shift+上下键&lt;/li&gt;
 &lt;li&gt;Android Studio 生成函数注释：你在方法前输入/**然后一回车，自动帮你生成方法和参数的注释。&lt;/li&gt;
-&lt;/ol&gt;
-    
-    </summary>
-    
-      <category term="Tools" scheme="http://liuqinh2s.github.io/blog/categories/Tools/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>精通一款编辑器之sublime text 3</title>
-    <link href="http://liuqinh2s.github.io/blog/2018/11/04/%E7%B2%BE%E9%80%9A%E4%B8%80%E6%AC%BE%E7%BC%96%E8%BE%91%E5%99%A8%E4%B9%8Bsublime%20text%203/"/>
-    <id>http://liuqinh2s.github.io/blog/2018/11/04/精通一款编辑器之sublime text 3/</id>
-    <published>2018-11-03T16:00:00.000Z</published>
-    <updated>2021-05-27T06:00:42.470Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;编辑器常用功能&quot;&gt;&lt;a href=&quot;#编辑器常用功能&quot; class=&quot;headerlink&quot; title=&quot;编辑器常用功能&quot;&gt;&lt;/a&gt;编辑器常用功能&lt;/h2&gt;&lt;ol&gt;
-&lt;li&gt;格式化代码：格式化代码可以让你不用管代码的格式，可以放肆的写程序，你可以少敲很多空格，不用关心代码的格式问题，机器给出的代码格式风格统一且漂亮，一键解决你的格式问题，真是提高码代码效率的非常重要的功能。&lt;/li&gt;
-&lt;li&gt;查找文件：查找文件是在集成开发的时候非常重要的功能，当文件多起来的时候，快速定位到文件可以节省很多时间，甚至有时候文件实在太多，你只能通过查找的方式找到那个文件。&lt;/li&gt;
-&lt;li&gt;正则全文件查找和替换：轻松让你更改全局变量和配置，这是一个必须的功能，没有它简直无法想象工作量有多大。&lt;/li&gt;
-&lt;li&gt;代码收缩和扩展：代码太长怎么办，收缩和扩展啊。&lt;/li&gt;
 &lt;/ol&gt;
     
     </summary>
