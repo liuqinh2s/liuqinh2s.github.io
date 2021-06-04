@@ -6,7 +6,7 @@
   <link href="/blog/atom.xml" rel="self"/>
   
   <link href="http://liuqinh2s.github.io/blog/"/>
-  <updated>2021-06-03T02:50:49.723Z</updated>
+  <updated>2021-06-04T03:37:28.903Z</updated>
   <id>http://liuqinh2s.github.io/blog/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>leetcode每日一题：160. 相交链表</title>
+    <link href="http://liuqinh2s.github.io/blog/2021/06/04/leetcode-160-%E7%9B%B8%E4%BA%A4%E9%93%BE%E8%A1%A8/"/>
+    <id>http://liuqinh2s.github.io/blog/2021/06/04/leetcode-160-相交链表/</id>
+    <published>2021-06-03T16:00:00.000Z</published>
+    <updated>2021-06-04T03:37:28.903Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;160-相交链表&quot;&gt;&lt;a href=&quot;#160-相交链表&quot; class=&quot;headerlink&quot; title=&quot;160. 相交链表&quot;&gt;&lt;/a&gt;&lt;a href=&quot;https://leetcode-cn.com/problems/intersection-of-two-linked-lists/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;160. 相交链表&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;这题有两种解法：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;哈希表记录指针&lt;/li&gt;
+&lt;li&gt;双指针&lt;/li&gt;
+&lt;/ol&gt;
+    
+    </summary>
+    
+      <category term="leetcode" scheme="http://liuqinh2s.github.io/blog/categories/leetcode/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>leetcode每日一题：525. 连续数组</title>
@@ -445,30 +467,6 @@
     </summary>
     
       <category term="Math" scheme="http://liuqinh2s.github.io/blog/categories/Math/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>熟练使用JetBrains家的IDE</title>
-    <link href="http://liuqinh2s.github.io/blog/2018/11/04/%E7%86%9F%E7%BB%83%E4%BD%BF%E7%94%A8JetBrains%E5%AE%B6%E7%9A%84IDE/"/>
-    <id>http://liuqinh2s.github.io/blog/2018/11/04/熟练使用JetBrains家的IDE/</id>
-    <published>2018-11-03T16:00:00.000Z</published>
-    <updated>2021-05-27T06:00:42.470Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;通用快捷键&quot;&gt;&lt;a href=&quot;#通用快捷键&quot; class=&quot;headerlink&quot; title=&quot;通用快捷键&quot;&gt;&lt;/a&gt;通用快捷键&lt;/h2&gt;&lt;ol&gt;
-&lt;li&gt;格式化代码（reformat code）:&lt;br&gt;win: ctrl+alt+L&lt;br&gt;mac: command+option+L&lt;/li&gt;
-&lt;li&gt;在一行的任意位置使用： shift + enter，新建下一行并跳到下一行。&lt;/li&gt;
-&lt;li&gt;善用代码自动补全功能，变量名和方法名等可以用 enter 补全。导入包可以用 alt + enter。&lt;/li&gt;
-&lt;li&gt;上下移动代码，ctrl+shift+上下键&lt;/li&gt;
-&lt;li&gt;Android Studio 生成函数注释：你在方法前输入/**然后一回车，自动帮你生成方法和参数的注释。&lt;/li&gt;
-&lt;/ol&gt;
-    
-    </summary>
-    
-      <category term="Tools" scheme="http://liuqinh2s.github.io/blog/categories/Tools/"/>
     
     
   </entry>
