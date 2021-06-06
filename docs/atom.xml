@@ -6,7 +6,7 @@
   <link href="/blog/atom.xml" rel="self"/>
   
   <link href="https://liuqinh2s.github.io/blog/"/>
-  <updated>2021-06-06T02:52:49.179Z</updated>
+  <updated>2021-06-05T15:23:30.865Z</updated>
   <id>https://liuqinh2s.github.io/blog/</id>
   
   <author>
@@ -15,6 +15,24 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>leetcode每日一题：203. 移除链表元素</title>
+    <link href="https://liuqinh2s.github.io/blog/2021/06/05/leetcode-230-%E7%A7%BB%E9%99%A4%E9%93%BE%E8%A1%A8%E5%85%83%E7%B4%A0/"/>
+    <id>https://liuqinh2s.github.io/blog/2021/06/05/leetcode-230-移除链表元素/</id>
+    <published>2021-06-04T16:00:00.000Z</published>
+    <updated>2021-06-05T15:23:30.865Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;203-移除链表元素&quot;&gt;&lt;a href=&quot;#203-移除链表元素&quot; class=&quot;headerlink&quot; title=&quot;203. 移除链表元素&quot;&gt;&lt;/a&gt;&lt;a href=&quot;https://leetcode-cn.com/problems/remove-linked-list-elements/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;203. 移除链表元素&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;很简单的一道删除单链表节点题&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="leetcode" scheme="https://liuqinh2s.github.io/blog/categories/leetcode/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>leetcode每日一题：160. 相交链表</title>
@@ -449,24 +467,6 @@
     </summary>
     
       <category term="Algorithm" scheme="https://liuqinh2s.github.io/blog/categories/Algorithm/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>$\lim\limits_{x\rightarrow 0} \frac{\sin x}{x} = 1$的证明</title>
-    <link href="https://liuqinh2s.github.io/blog/2019/01/07/%E7%AC%AC%E4%B8%80%E4%B8%AA%E6%9E%81%E9%99%90%E7%9A%84%E8%AF%81%E6%98%8E/"/>
-    <id>https://liuqinh2s.github.io/blog/2019/01/07/第一个极限的证明/</id>
-    <published>2019-01-06T16:00:00.000Z</published>
-    <updated>2021-06-06T02:52:49.174Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;高数中的第一个证明，可能就是这个$\lim\limits_{x\rightarrow 0} \frac{\sin x}{x} = 1$的证明了。下面给出这个极限的证明，用到了解析几何（作图法）。&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="Math" scheme="https://liuqinh2s.github.io/blog/categories/Math/"/>
     
     
   </entry>
