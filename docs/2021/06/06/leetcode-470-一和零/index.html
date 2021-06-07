@@ -81,16 +81,17 @@
 
 
 
-<meta name="description" content="Computer Science is not a magic  To be a hacker">
-<meta property="og:type" content="website">
-<meta property="og:title" content="liuqinh2s&#39; blog">
-<meta property="og:url" content="https://liuqinh2s.github.io/blog/page/6/index.html">
+<meta name="description" content="474. 一和零一道动态规划题目。 首先要明白这是一道背包问题，而且是双维度的，可以装0和1。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="leetcode每日一题：474. 一和零">
+<meta property="og:url" content="https://liuqinh2s.github.io/blog/2021/06/06/leetcode-470-一和零/index.html">
 <meta property="og:site_name" content="liuqinh2s&#39; blog">
-<meta property="og:description" content="Computer Science is not a magic  To be a hacker">
+<meta property="og:description" content="474. 一和零一道动态规划题目。 首先要明白这是一道背包问题，而且是双维度的，可以装0和1。">
 <meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2021-06-07T03:35:27.453Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="liuqinh2s&#39; blog">
-<meta name="twitter:description" content="Computer Science is not a magic  To be a hacker">
+<meta name="twitter:title" content="leetcode每日一题：474. 一和零">
+<meta name="twitter:description" content="474. 一和零一道动态规划题目。 首先要明白这是一道背包问题，而且是双维度的，可以装0和1。">
 
 
 
@@ -120,13 +121,13 @@
 
 
 
-  <link rel="canonical" href="https://liuqinh2s.github.io/blog/page/6/">
+  <link rel="canonical" href="https://liuqinh2s.github.io/blog/2021/06/06/leetcode-470-一和零/">
 
 
 
 
 
-  <title>liuqinh2s' blog</title>
+  <title>leetcode每日一题：474. 一和零 | liuqinh2s' blog</title>
   
 
 
@@ -145,8 +146,7 @@
     
   
 
-  <div class="container sidebar-position-left 
-  page-home">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -261,9 +261,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
 
@@ -276,7 +276,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://liuqinh2s.github.io/blog/blog/2018/10/08/程序的机器级表示/">
+    <link itemprop="mainEntityOfPage" href="https://liuqinh2s.github.io/blog/blog/2021/06/06/leetcode-470-一和零/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="liuqinh2s">
@@ -293,9 +293,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/blog/2018/10/08/程序的机器级表示/" itemprop="url">程序的机器级表示</a></h1>
+          <h1 class="post-title" itemprop="name headline">leetcode每日一题：474. 一和零</h1>
         
 
         <div class="post-meta">
@@ -307,8 +305,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-10-08T00:00:00+08:00">
-                2018-10-08
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2021-06-06T00:00:00+08:00">
+                2021-06-06
               </time>
             
 
@@ -330,8 +328,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/blog/categories/Knowledge-of-CS/" itemprop="url" rel="index">
-                    <span itemprop="name">Knowledge of CS</span>
+                  <a href="/blog/categories/leetcode/" itemprop="url" rel="index">
+                    <span itemprop="name">leetcode</span>
                   </a>
                 </span>
 
@@ -349,6 +347,11 @@
           
 
           
+            <span class="post-meta-divider">|</span>
+            <span class="page-pv"><i class="fa fa-eye"></i>
+            <span class="busuanzi-value" id="busuanzi_value_page_pv"></span>
+            </span>
+          
 
           
             <div class="post-wordcount">
@@ -361,7 +364,7 @@
                   <span class="post-meta-item-text">Words count in article&#58;</span>
                 
                 <span title="Words count in article">
-                  6,247
+                  427
                 </span>
               
 
@@ -386,25 +389,18 @@
       
 
       
-        
-          <h2 id="从编译C语言文件说起"><a href="#从编译C语言文件说起" class="headerlink" title="从编译C语言文件说起"></a>从编译C语言文件说起</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ gcc <span class="number">-01</span> -o p p1.c p2.c</span><br></pre></td></tr></table></figure>
-<p>使用了gcc命令来编译，也可以简单写作：<code>cc</code>。</p>
-<p>优化层级为1，1级是最低的，层级越高程序优化越好，但增加了编译时间，也使调试变得更难，且跟源程序差异很大不便于理解。</p>
-<p>编译的流程是：</p>
+        <h2 id="474-一和零"><a href="#474-一和零" class="headerlink" title="474. 一和零"></a><a href="https://leetcode-cn.com/problems/ones-and-zeroes/" target="_blank" rel="noopener">474. 一和零</a></h2><p>一道动态规划题目。</p>
+<p>首先要明白这是一道背包问题，而且是双维度的，可以装0和1。</p>
+<a id="more"></a>
+<p>那么我们就需要一个三维数组dp来记录动态规划的子过程的结果，第一个维度代表遍历到第i个字符串，第二个维度代表第j个0的问题规模，第三个维度代表第k个1的问题规模，依次扩展到我们的目标字符串个数，目标问题规模。</p>
+<p>状态转移方程：</p>
 <ol>
-<li>预处理器（preprocessor）把诸如：<code>#include</code>、<code>#define</code>、<code>#if</code>、<code>#else</code>、<code>#elif</code>、<code>#ifdef</code>、<code>#endif</code>等预编译指令替换掉。</li>
-<li>编译器（compiler）把<code>.c</code>源文件编译成<code>.s</code>的汇编代码文件。</li>
-<li>汇编器（assembler）把汇编代码文件转换成相应的二进制目标文件<code>.o</code>，目标文件已经是机器码了，只是没有填入全局变量的地址。</li>
-<li>链接器（linker），把多目标文件和库函数链接在一起，形成可执行文件。</li>
+<li>如果加入当前字符串，导致背包溢出，则不加：dp[i][j][k] = dp[i-1][j][k]</li>
+<li>如果不溢出，则有两种可能，取最优解：dp[i][j][k] = Math.max(dp[i-1][j][k], dp[i-1][j-zeros][k-ones]+1)</li>
 </ol>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/blog/2018/10/08/程序的机器级表示/#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
+<p>这里还需要考虑一些边界问题，比如i=0的时候，dp[0][any][any]应该是0，同理m=0和n=0也是如此。所以我们的数组空间需要每个维度上都加1来存放这些初始值。</p>
+<p>JavaScript代码：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * @param &#123;string[]&#125; strs</span></span><br><span class="line"><span class="comment"> * @param &#123;number&#125; m</span></span><br><span class="line"><span class="comment"> * @param &#123;number&#125; n</span></span><br><span class="line"><span class="comment"> * @return &#123;number&#125;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">var</span> findMaxForm = <span class="function"><span class="keyword">function</span>(<span class="params">strs, m, n</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">let</span> dp = <span class="keyword">new</span> <span class="built_in">Array</span>(strs.length+<span class="number">1</span>).fill(<span class="number">0</span>).map(<span class="function"><span class="params">()</span>=&gt;</span><span class="keyword">new</span> <span class="built_in">Array</span>(m+<span class="number">1</span>).fill(<span class="number">0</span>).map(<span class="function"><span class="params">()</span>=&gt;</span><span class="keyword">new</span> <span class="built_in">Array</span>(n+<span class="number">1</span>).fill(<span class="number">0</span>)))</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">let</span> i=<span class="number">1</span>;i&lt;=strs.length;i++)&#123;</span><br><span class="line">        <span class="keyword">let</span> [zeros, ones] = getZeros(strs[i<span class="number">-1</span>])</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">let</span> j=<span class="number">0</span>;j&lt;=m;j++)&#123;</span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">let</span> k=<span class="number">0</span>;k&lt;=n;k++)&#123;</span><br><span class="line">                dp[i][j][k] = dp[i<span class="number">-1</span>][j][k]</span><br><span class="line">                <span class="keyword">if</span>(j&gt;=zeros &amp;&amp; k&gt;=ones)&#123;</span><br><span class="line">                    dp[i][j][k] = <span class="built_in">Math</span>.max(dp[i<span class="number">-1</span>][j][k], dp[i<span class="number">-1</span>][j-zeros][k-ones]+<span class="number">1</span>)</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> dp[strs.length][m][n]</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">getZeros</span>(<span class="params">str</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">let</span> zeros = [<span class="number">0</span>, <span class="number">0</span>]</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">let</span> i=<span class="number">0</span>;i&lt;str.length;i++)&#123;</span><br><span class="line">        zeros[str[i]-<span class="string">'0'</span>]++;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> zeros</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
       
     </div>
     
@@ -421,185 +417,28 @@
       
 
       
-
-      
-
       
       
-        <div class="post-eof"></div>
+
       
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://liuqinh2s.github.io/blog/blog/2018/09/27/浮点数原理/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="liuqinh2s">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="https://i.loli.net/2019/05/20/5ce257002370387784.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="liuqinh2s' blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/blog/2018/09/27/浮点数原理/" itemprop="url">浮点数原理</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
             
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-09-27T00:00:00+08:00">
-                2018-09-27
-              </time>
+              <a href="/blog/2021/06/05/leetcode-230-移除链表元素/" rel="next" title="leetcode每日一题：203. 移除链表元素">
+                <i class="fa fa-chevron-left"></i> leetcode每日一题：203. 移除链表元素
+              </a>
             
+          </div>
 
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
             
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/blog/categories/Knowledge-of-CS/" itemprop="url" rel="index">
-                    <span itemprop="name">Knowledge of CS</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">Words count in article&#58;</span>
-                
-                <span title="Words count in article">
-                  3,459
-                </span>
-              
-
-              
-
-              
-            </div>
-          
-
-          
-
+          </div>
         </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
       
 
       
-        
-          <p><strong>浮点数的作用</strong>：区别于整形数，用来表示小数。可以用来表示很大的数，或者非常接近0的小数，或者近似的做实数计算，浮点数的一般形式：$x\times 2^y$。</p>
-<blockquote>
-<p><strong>IEEE（pronounced “Eye-Triple-Eee”）浮点数标准</strong> 是行业内公认的标准。</p>
-</blockquote>
-<p><strong>rounding</strong>：when a number cannot be represented exactly in the format and hence must be adjusted upward or downward。可以翻译为：<strong>舍入</strong>。</p>
-<p>十进制的小数表示：$d_m d_{m-1} \cdots d_1 d_0 . d_{-1} d_{-2} \cdots d_{-n}$，写成数学表达式：</p>
-<p>$$<br>d = \sum_{i=-n}^m 10^i \times d_i<br>$$</p>
-<p>相应的，二进制也可以写成这种形式：</p>
-<p>$$<br>b = \sum_{i=-n}^m 2^i \times b_i<br>$$</p>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/blog/2018/09/27/浮点数原理/#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </div>
@@ -609,526 +448,27 @@
   </article>
 
 
-    
-      
 
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://liuqinh2s.github.io/blog/blog/2018/09/20/wsl oh my zsh 字体问题/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="liuqinh2s">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="https://i.loli.net/2019/05/20/5ce257002370387784.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="liuqinh2s' blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/blog/2018/09/20/wsl oh my zsh 字体问题/" itemprop="url">wsl oh my zsh 字符乱码问题</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-09-20T00:00:00+08:00">
-                2018-09-20
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/blog/categories/Fixed-Issues/" itemprop="url" rel="index">
-                    <span itemprop="name">Fixed Issues</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">Words count in article&#58;</span>
-                
-                <span title="Words count in article">
-                  153
-                </span>
-              
-
-              
-
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h2 id="安装-oh-my-zsh"><a href="#安装-oh-my-zsh" class="headerlink" title="安装 oh my zsh"></a>安装 oh my zsh</h2><p>首先检查自己有没有zsh：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cat /etc/shells</span><br></pre></td></tr></table></figure>
-<p>如果有的话就下载<a href="https://github.com/robbyrussell/oh-my-zsh" target="_blank" rel="noopener">oh my zsh</a></p>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/blog/2018/09/20/wsl oh my zsh 字体问题/#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
+    <div class="post-spread">
       
     </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
   </div>
-  
-  
-  
-  </article>
 
 
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://liuqinh2s.github.io/blog/blog/2018/09/19/wsl修改右键bash图标/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="liuqinh2s">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="https://i.loli.net/2019/05/20/5ce257002370387784.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="liuqinh2s' blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/blog/2018/09/19/wsl修改右键bash图标/" itemprop="url">wsl修改右键bash图标</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-09-19T00:00:00+08:00">
-                2018-09-19
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/blog/categories/Fixed-Issues/" itemprop="url" rel="index">
-                    <span itemprop="name">Fixed Issues</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">Words count in article&#58;</span>
-                
-                <span title="Words count in article">
-                  240
-                </span>
-              
-
-              
-
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <p>使用 windows subsystem for linux (简称：WSL) 的时候，遇到一个小问题，在文件管理器中右键，唤出bash，发现图标不对：</p>
-<p><img src="https://i.loli.net/2018/09/19/5ba25208ca7de.png" alt="截图1"></p>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/blog/2018/09/19/wsl修改右键bash图标/#more" rel="contents">
-              Read more &raquo;
-            </a>
           </div>
-          <!--/noindex-->
-        
-      
+          
+
+
+          
+
+  
+    <div class="comments" id="comments">
+      <div id="lv-container" data-id="city" data-uid="MTAyMC8zNTc5MC8xMjMyNg=="></div>
     </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
 
   
 
-  
-  
-  
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://liuqinh2s.github.io/blog/blog/2018/04/30/mathjax常用公式记录/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="liuqinh2s">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="https://i.loli.net/2019/05/20/5ce257002370387784.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="liuqinh2s' blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/blog/2018/04/30/mathjax常用公式记录/" itemprop="url">mathjax常用公式记录</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-04-30T00:00:00+08:00">
-                2018-04-30
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/blog/categories/Tools/" itemprop="url" rel="index">
-                    <span itemprop="name">Tools</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">Words count in article&#58;</span>
-                
-                <span title="Words count in article">
-                  194
-                </span>
-              
-
-              
-
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h2 id="角度记法"><a href="#角度记法" class="headerlink" title="角度记法"></a>角度记法</h2><ul>
-<li>度数：<code>$60^\circ$</code>，$60^\circ$</li>
-<li>度数分：<code>$60^\prime$</code>，$60^\prime$</li>
-<li>弧度：<code>$\frac{\pi}{2}$</code>，$\frac{\pi}{2}$</li>
-<li>角度记法：<code>$\angle A$</code>，$\angle A$</li>
-</ul>
-<h2 id="三重环积分无法渲染的问题"><a href="#三重环积分无法渲染的问题" class="headerlink" title="三重环积分无法渲染的问题"></a>三重环积分无法渲染的问题</h2><p>在网上找了半天资料最终解决了，参考这个答案：<a href="https://math.meta.stackexchange.com/questions/9973/how-do-you-render-a-closed-surface-double-integral" target="_blank" rel="noopener">How do you render a closed surface double integral?</a>，做法是直接使用Unicode编码：<code>\unicode{x222F}</code>，三重环积分的编码，参考这里：<a href="http://unicode-search.net/unicode-namesearch.pl?term=INTEGRAL" target="_blank" rel="noopener">unicode-search.net</a>，所以只要将<code>$\oiiint$</code>换成<code>$\unicode{x2230}$</code>即可正确显示三重环积分。如下：</p>
-<p>$$\unicode{x2230}$$</p>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/blog/2018/04/30/mathjax常用公式记录/#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-  </section>
-
-  
-  <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/blog/page/5/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/blog/">1</a><span class="space">&hellip;</span><a class="page-number" href="/blog/page/5/">5</a><span class="page-number current">6</span><a class="page-number" href="/blog/page/7/">7</a><a class="extend next" rel="next" href="/blog/page/7/"><i class="fa fa-angle-right"></i></a>
-  </nav>
-
-
-
-          </div>
-          
-
-
-          
 
         </div>
         
@@ -1149,8 +489,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -1242,6 +591,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#474-一和零"><span class="nav-number">1.</span> <span class="nav-text">474. 一和零</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -1411,6 +776,10 @@
 
 
   
+  <script type="text/javascript" src="/blog/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/blog/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
@@ -1439,6 +808,17 @@
 
 
 
+  
+    <script type="text/javascript">
+      (function(d, s) {
+        var j, e = d.getElementsByTagName(s)[0];
+        if (typeof LivereTower === 'function') { return; }
+        j = d.createElement(s);
+        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+        j.async = true;
+        e.parentNode.insertBefore(j, e);
+      })(document, 'script');
+    </script>
   
 
 
